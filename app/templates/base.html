@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Veritas Annotator</title>
+	</head>
+	<body>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+		{%if session['logged_in']%}
+		<div><a href="/">Annotator</a> | Logged in as "{{ session['username'] }}" | <a href="/logout">Logout</a></div>
+		<hr>
+		{%else%}
+		<div><a href="/register">Register</a> | <a href="/login">Login</a></div>
+		<hr>
+		{%endif%}
+		{% block content %}{% endblock %}
+	</body>
+</html>

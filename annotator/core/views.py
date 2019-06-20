@@ -139,13 +139,10 @@ def home(request):
 		name = user.username
 		alphaFromSession = session.get('alpha')
 		if request.method == 'POST':
-			data = request.POST.copy()
-			op = data.get('op')
-			alphaFromClient = data.get('alpha')
-			if op and not (alphaFromSession == alphaFromClient):
+			op = request.POST.copy().get('op')
+			if op:
 				if op in ['1', '2', '3', '4']:
 					save_annotation(session.get('claim'),session.get('origin'), op, name)
-					session['alpha']=alphaFromClient
 					a_url, o_url, src_lst, a_done, a_total, t_done = get_least_annotated_page(name, session.get('claim'))
 					# Turn string representation of a list to a list
 					src_lst = ast.literal_eval(src_lst)
@@ -153,9 +150,9 @@ def home(request):
 				a_url = session.get('claim')
 				o_url = session.get('origin')
 				src_lst = session.get('src_lst')
-				a_done = session.get('doneP')
-				a_total = session.get('totalP')
-				t_done = session.get('doneT')
+				a_done = session.get('a_done')
+				a_total = session.get('a_total')
+				t_done = session.get('t_done')
 		else:
 			a_url, o_url, src_lst, a_done, a_total, t_done = get_least_annotated_page(name)
 			# Turn string representation of a list to a list
@@ -191,9 +188,9 @@ def home(request):
 			a.insert(1,words)
 
 		decomposers = [s for s in soup.find_all(["span","div"]) if "Snopes Needs Your Help" in s.text]
-		parents = [s.parent for s in decomposers if ("w-div" in s.parent.parent.get("class"))]
-		parents2 = [s.parent.parent.parent for s in decomposers if ("w-div" in s.parent.parent.get("class"))]
-		[p.decompose() for p in (parents+parents2)]
+		parents = []
+		[parents.extend(s.find_parents('w-div')) for s in decomposers]
+		[p.decompose() for p in parents if p is not None]
 
 		a_html=str(soup)
 
@@ -219,13 +216,12 @@ def home(request):
 		print("FIXING LOCALLY REFERENCED SRCs")
 		soup = BeautifulSoup(o_html, 'lxml')
 		domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urlparse(o_url))
-		for img in soup.findAll('img'):
-
-			if img.has_attr('src'):
-				src = img['src']
+		for elem in soup.findAll(['img', 'script']):
+			if elem.has_attr('src'):
+				src = elem['src']
 				if not src.startswith("http"):
 					src.lstrip("/")
-					img['src'] = domain+src
+					elem['src'] = domain+src
 
 		o_html = soup.prettify()
 
@@ -235,21 +231,21 @@ def home(request):
 		session['src_lst'] = src_lst
 		session['a_done'] = a_done
 		session['a_total'] = a_total
-		session['t_done'] = t_done	
-
-		alpha=session.get('alpha')
+		session['t_done'] = t_done
 
 		#Render home page (annotator)
-		# print(a_html[:10])
-		# print(o_html[:10])
-		# print(a_url)
-		# print(o_url)
-		# print(a_done)
-		# print(a_total)
-		# print(t_done)
-		# print(alpha)
+		assert a_html is not None, "A_HTML IS NONE"
+		assert o_html is not None, "O_HTML IS NONE"
+		assert a_url is not None, "A_URL IS NONE"
+		assert o_url is not None, "O_URL IS NONE"
+		assert a_done is not None, "A_DONE IS NONE"
+		assert a_total is not None, "A_TOTAL IS NONE"
+		assert t_done is not None, "T_DONE IS NONE"
+
+		print(a_url)
+		print(o_url)
 		
-		return render(request, 'home.html', {'t1':a_html, 't2':o_html, 't3':a_url, 't4':o_url, 'a_done':a_done, 'a_total':a_total, 't_done':t_done, 'alpha':alpha})
+		return render(request, 'home.html', {'t1':a_html, 't2':o_html, 't3':a_url, 't4':o_url, 'a_done':a_done, 'a_total':a_total, 't_done':t_done})
 
 def signup(request):
 	if request.method == 'POST':

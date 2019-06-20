@@ -38,35 +38,18 @@
 							<table align="center" style="width: 100%;" border="1" style="background-color: antiquewhite; margin: 0; padding: 0;">
 						        <tr>
 						            <td rowspan="2"><h3>Is this an <i>origin</i> for the <i>claim?</i></h3></td>
-						            <td><input type="radio" name="op" id="op1" onchange="incAlpha();" value="1" >Yes</td>
-						            <td><input type="radio" name="op" id="op2" onchange="incAlpha();" value="2" >No</td>
+						            <td><input type="radio" name="op" id="op1" value="1" >Yes</td>
+						            <td><input type="radio" name="op" id="op2" value="2" >No</td>
 						            <td rowspan="2"><input type="submit" value=Next></td>
 						        </tr>
 						        <tr>
-						            <td><input type="radio" name="op" id="op3" onchange="incAlpha();" value="3" >Invalid Input</td>
-						            <td><input type="radio" name="op" id="op4" onchange="incAlpha();" value="4" >Don't Know</td>
+						            <td><input type="radio" name="op" id="op3" value="3" >Invalid Input</td>
+						            <td><input type="radio" name="op" id="op4" value="4" >Don't Know</td>
 							    </tr>
 							</table>
-							<input type="hidden" id="alpha" name="alpha" value={{alpha}}>
 						</form>
 					</div>
 				</div>
-			
-			<script type="text/javascript">
-			    var globFlag=true;
-			    function incAlpha()
-			    {
-			        if(globFlag)
-			        {
-			            let value= document.getElementById("alpha").value;
-			            console.log(value);
-			            document.getElementById("alpha").value = (parseInt(value)+1)%10;
-			            globFlag=false;
-			            console.log(document.getElementById("alpha").value);
-			        }
-			    }
-			</script>				
-
 		{% else %}
 			<h4>Error in the form</h4>
 	    {% endif %}

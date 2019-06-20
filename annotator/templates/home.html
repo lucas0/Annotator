@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+	{% if not user.is_authenticated %}
+		<h4>Please <a href="accounts/login">log in</a>to annotate.</h4>
+	{% else %}
+		{% if t1 %}
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+			<div class="container-fluid container-head justify-content-center">
+				<div class="row row-an ">
+					<p align="center">Annotated Origins: {{a_done}} / {{a_total}} for this page and {{t_done}} in total</p>
+				</div>
+				<div class="row row-head">
+					<div class="col col-head col-md-6 justify-content-center">
+						<p style="margin: 0;"><a id="cLink" href="{{t3}}" target="_blank">Fact Checking Article: </a></p>
+					</div>
+					<div class="col col-head col-md-6 justify-content-center">
+						<p style="margin: 0;"><a id="oLink" href={{t4}} target="_blank">Origin Candidate: </a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid container-main no-gutters text-center p-0">
+				<div class="row no-gutters row-first justify-content-center">
+					<div class="col col-md-6 left">				 
+				        <!-- <h4><a id="cLink" href="{{t3}}" target="_blank">Fact Checking Article: </a></h4> -->
+				      <iframe id="cframe" style="display: block; margin: 0; padding: 0; position:absolute;"  width="100%" height="100%"srcdoc="{{t1}}"></iframe>
+				    </div>
+				    <div class="col col-md-6 right">				  
+				      <!-- <h4><a id="oLink" href={{t4}} target="_blank">Origin Candidate: </a></h4> -->
+				      <iframe id="oframe" style="display: block; margin: 0; padding: 0; position:absolute;" width="100%" height="100%" srcdoc="{{t2}}"></iframe>
+				    </div>
+				</div>
+				<div class="row no-gutters row-second">
+					<div class="offset-md-3 col-md-6">
+					    <form method="post" action="" style="background-color: antiquewhite; margin: 0; padding: 0;">
+					    	{% csrf_token %}
+							<table align="center" style="width: 100%;" border="1" style="background-color: antiquewhite; margin: 0; padding: 0;">
+						        <tr>
+						            <td rowspan="2"><h3>Is this an <i>origin</i> for the <i>claim?</i></h3></td>
+						            <td><input type="radio" name="op" id="op1" onchange="incAlpha();" value="1" >Yes</td>
+						            <td><input type="radio" name="op" id="op2" onchange="incAlpha();" value="2" >No</td>
+						            <td rowspan="2"><input type="submit" value=Next></td>
+						        </tr>
+						        <tr>
+						            <td><input type="radio" name="op" id="op3" onchange="incAlpha();" value="3" >Invalid Input</td>
+						            <td><input type="radio" name="op" id="op4" onchange="incAlpha();" value="4" >Don't Know</td>
+							    </tr>
+							</table>
+							<input type="hidden" id="alpha" name="alpha" value={{alpha}}>
+						</form>
+					</div>
+				</div>
+			
+			<script type="text/javascript">
+			    var globFlag=true;
+			    function incAlpha()
+			    {
+			        if(globFlag)
+			        {
+			            let value= document.getElementById("alpha").value;
+			            console.log(value);
+			            document.getElementById("alpha").value = (parseInt(value)+1)%10;
+			            globFlag=false;
+			            console.log(document.getElementById("alpha").value);
+			        }
+			    }
+			</script>				
+
+		{% else %}
+			<h4>Error in the form</h4>
+	    {% endif %}
+	{% endif %}
+{% endblock %}

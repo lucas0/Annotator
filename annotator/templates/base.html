@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}{% endblock %}</title>
+	<style>
+		html{
+			height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+		body{
+			height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .base{
+        	height: 5%;
+        }
+        .container-head {
+        	height: 5%;
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		.container-main {
+			height: 90%;
+			min-height: 800px;
+		}
+		.row-an {
+			height:43%;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+		.row-head {
+			height:57%;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+		.row-first {
+			height:90%;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+		.row-second {
+			height:10%;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+		.col-first {
+			height:10%;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+		.col-head {
+			height:100%;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			display:block;
+			text-align:center
+		}
+		iframe{
+			width:100%;
+			border: 2px solid #f056ff;
+			border-radius:3px;
+		}
+	</style>
+</head>
+<body>
+	<span class="base">
+		<h4 style=" margin: 0; padding: 2;">Annotator</h4>
+		<a href="{% url 'home' %}">Home</a> /
+		{% if user.is_authenticated %}
+		<a href="{% url 'logout' %}">Log Out</a>
+		You are logged in as <strong>{{user.username}}</strong>
+		{% else %}
+		<a href="{% url 'signup' %}">Sign Up</a> /
+		<a href="{% url 'login' %}">Log In</a> /
+		{% endif %}
+		<hr style=" margin: 0; padding: 2;">
+	</span>
+		{% block content %}
+		{% endblock %}
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	
+</body>
+</html>
+
+

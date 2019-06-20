@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.contrib.auth import login, authenticate
 
 import os, sys
 import pandas as pd
@@ -126,7 +127,8 @@ def home(request):
 	print("GOT INTO INDEX")
 	user = request.user
 	session = request.session
-
+	print(user)
+	print(user.username)
 	if not user.is_authenticated:
 		print("NOT LOGGED IN")
 		return render(request, 'home.html')
@@ -218,13 +220,12 @@ def home(request):
 		soup = BeautifulSoup(o_html, 'lxml')
 		domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urlparse(o_url))
 		for img in soup.findAll('img'):
+
 			if img.has_attr('src'):
 				src = img['src']
 				if not src.startswith("http"):
+					src.lstrip("/")
 					img['src'] = domain+src
-				print(img)
-			# print(new_img)
-			# img.replace_with(new_link)
 
 		o_html = soup.prettify()
 
@@ -254,11 +255,10 @@ def signup(request):
 	if request.method == 'POST':
 		form = UserCreationForm(request.POST)
 		if form.is_valid():
-			user = form.save()
+			user = form.save()	
 			return redirect('home')
 	else:
 		form = UserCreationForm();
 	return render(request, 'registration/signup.html', {
 			'form' : form
 		})
-

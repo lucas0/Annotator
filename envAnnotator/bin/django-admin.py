@@ -1,4 +1,4 @@
-#!/Users/lucas/Developer/AnnotatorDjango/envAnnotator/bin/python3
+#!/Users/lucas/Developer/Annotator/envAnnotator/bin/python
 from django.core import management
 
 if __name__ == "__main__":

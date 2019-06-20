@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'p=z4t#-t1fg8)*#-d3d6bbgc@1do9f&&(uzvctt&y_!@_7v1=1'
+SECRET_KEY = '2_jc_06-o6i+nh_@xj+-f*hq1-3=h&s5g@j@sr^*^hjswbhy+y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,9 +40,6 @@ INSTALLED_APPS = [
     'annotator.core',
 ]
 
-SESSION_COOKIE_SECURE = True
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -59,7 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'annotator/templates')
+            os.path.join(BASE_DIR, 'annotator/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {

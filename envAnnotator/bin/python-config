@@ -1,4 +1,4 @@
-#!/Users/lucas/Developer/AnnotatorDjango/envAnnotator/bin/python
+#!/Users/lucas/Developer/Annotator/envAnnotator/bin/python
 
 import sys
 import getopt

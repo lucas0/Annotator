@@ -20,9 +20,9 @@ chrome_options.add_argument("--window-size=1920x1080")
 chrome_driver = cwd+"/chromedriver"
 
 #Change paths
-samples_path = cwd+"/sam.csv"
-output_path = cwd+"/sam_html.csv"
-log_path = cwd+"/sam_error.csv"
+samples_path = cwd+"/samples.csv"
+output_path = cwd+"/samples_html.csv"
+log_path = cwd+"/samples_error.csv"
 
 samples = pd.read_csv(samples_path, sep='\t', encoding="latin1")
 
@@ -32,7 +32,7 @@ header = list(samples.columns.values).extend(['page_html','source_html'])
 #Change delimitter
 def logError(url, message):
     with open(log_path, "a+") as log:
-        to_write_to_file = url+"\t"+str(message) #using comma in .write() function gives error
+        to_write_to_file = url+"<|>"+str(message) #using comma in .write() function gives error
         log.write(to_write_to_file)
 
 def get_html(url):
@@ -141,6 +141,7 @@ for idx, e in samples.iterrows():
                     elem['src'] = domain+src
         
         #Will turn list into dictionary then append to dataframe
+        #NEEDS TO BE RE-WRITTEN. DOES NOT WORK PROPERLY
         samples_html = pd.DataFrame(columns=header)
         
         entry = e.values.tolist()

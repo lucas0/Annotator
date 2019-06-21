@@ -11,7 +11,7 @@ from seleniumwire import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup as bs
 import lxml
 import ast
 import requests
@@ -58,8 +58,6 @@ def save_annotation(page, origin, value, name):
             results = pd.DataFrame(columns=res_header)
         oldEntry = results.loc[(results["page"] == page) & (results["source_url"] == origin)]
         if oldEntry.empty:
-            print(n_entry)
-            print(len(n_entry))
             results.loc[len(results)] = n_entry
         results.to_csv(results_filename, sep=',', index=False)
         # keeps track of how many times page was annotated
@@ -92,6 +90,8 @@ def get_least_annotated_page(name,aPage=None):
     #Get pages not done by current annotator
     count_file = count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)]
     
+
+    print(">>",aPage)
     if aPage is not None:
         remOrigins = count_file.loc[count_file['page'] == aPage]
         if len(remOrigins)==0:
@@ -119,6 +119,13 @@ def get_least_annotated_page(name,aPage=None):
 
     a_total = len(s_p.loc[s_p['page'] == entry.page])
     a_done  = a_total - len(remOrigins)
+
+    soup = bs(a_html, "lxml")
+    decomposers = [s for s in soup.find_all(["span","div"]) if "Snopes Needs Your Help" in s.text]
+    parents = []
+    [parents.extend(s.find_parents('w-div')) for s in decomposers]
+    [p.decompose() for p in parents if p is not None]
+    body = str(soup)
 
     return a_page, o_page, a_html, o_html, src_lst, a_done, a_total, len(done_by_annotator)
 

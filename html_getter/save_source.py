@@ -20,9 +20,9 @@ chrome_options.add_argument("--window-size=1920x1080")
 chrome_driver = cwd+"/chromedriver"
 
 #Change paths
-samples_path = cwd+"/samples.csv"
-output_path = cwd+"/samples_html.csv"
-log_path = cwd+"/samples_error.csv"
+samples_path = cwd+"/sam.csv"
+output_path = cwd+"/sam_html.csv"
+log_path = cwd+"/sam_error.csv"
 
 samples = pd.read_csv(samples_path, sep='\t', encoding="latin1")
 
@@ -88,7 +88,7 @@ for idx, e in samples.iterrows():
             if a.has_attr("href"):
                 if not (a['href'] in ast.literal_eval(e.source_list)):
                     del a['href']
-                    a.name='span'
+                    a.name='b'
                 else:
                     a['id']=a['href']
                     #Remove tags inside link, to leave only text
@@ -103,36 +103,38 @@ for idx, e in samples.iterrows():
                             old_parent = curr_parent
                             curr_parent = curr_parent.parent
                         old_parent.replace_with(a)
-
-        if len(soup.find_all('span')) > 0:
-            soup.span.unwrap()
-        '''
-        for img in soup.find_all('img'):
-            if a.has_attr("class"):
-                if a["class"]=="lazy-resource":
-                    a.decompose()
-        '''
+            
         #removes the overlay
         decomposers = [s for s in soup.find_all(["span","div"]) if "Snopes Needs Your Help" in s.text]
         parents = []
         [parents.extend(s.find_parents('w-div')) for s in decomposers]
         [p.decompose() for p in parents if p is not None]
         body = str(soup)
-
+        
         #Add code to higlight hyperlink of current origin and scroll to it
         injectionPoint=body.split("</body>")
+        
         highlightFnc = '<script> function highlight(){ let link = parent.document.getElementById("oLink").href; document.getElementById(link).style.backgroundColor="yellow"; } if (window.attachEvent) {window.attachEvent("onload", highlight);} else if (window.addEventListener) {window.addEventListener("load", highlight, false);} else {document.addEventListener("load", highlight, false);} </script>'
-        highlightLnkFnc = '<script> function highlightLnk(newLnk,oldLnk){document.getElementById(oldLnk).style.backgroundColor="white"; document.getElementById(newLnk).style.backgroundColor="yellow"; } </script></body>'
+        
         scrollFnc = '<script> function scrollDown(){ let link = parent.document.getElementById("oLink").href; var elmnt = document.getElementById(link); elmnt.scrollIntoView({ behavior: "smooth", block: "nearest"  }); } if (window.attachEvent) {window.attachEvent("onload", scrollDown);} else if (window.addEventListener) {window.addEventListener("load", scrollDown, false);} else {document.addEventListener("load", scrollDown, false);} </script>'
+		
+        highlightLnkFnc = '<script> function highlightLnk(newLnk,oldLnk){document.getElementById(oldLnk).style.backgroundColor="white"; document.getElementById(newLnk).style.backgroundColor="yellow"; } </script></body>'
+
         body=injectionPoint[0]+highlightFnc+scrollFnc+highlightLnkFnc+injectionPoint[1]
 
         #Add JQuery CDN and event-handler
         injectionPoint=body.split("</body>")
+		
         jqueryCode='<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>'
-        jqEvnt = '<script> $("a").on("click", function(e){ e.preventDefault(); if(e.target.href){ if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oframe").srcdoc="<p>LOADING..PLEASE WAIT</p>"; let link = e.target.href; let claim = parent.document.getElementById("cLink").href; $.ajax({ url: "/newOrigin", data: {"link":link, "claim":claim}, type: "POST", success: function(response) { if(response.st=="ok"){ parent.document.getElementById("oframe").srcdoc=response.site; parent.document.getElementById("oLink").href=response.link; highlightLnk(response.link, response.oldLnk); } else if (response.st=="bad"){ alert("Broken link :/");       parent.document.getElementById("oframe").srcdoc=response.site; } else{ alert("Link already annotated!");      parent.document.getElementById("oframe").srcdoc=response.site; } }, error:function(error) { console.log(error); } }); }}}); </script></body>'
+		
+        jqEvnt = '<script> $("a").on("click", function(e){ e.preventDefault(); if(e.target.href){ if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oframe").srcdoc="<p>LOADING..PLEASE WAIT</p>";  let claim = parent.document.getElementById("cLink").href; let curr_source = parent.document.getElementById("oLink").href; let clicked_source = e.target.href;$.ajax({ url: "/newOrigin/", data: {"claim":claim, "curr_source":curr_source, clicked_source":clicked_source}, type: "POST", success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oframe").srcdoc=response.html; parent.document.getElementById("oLink").href=response.url;  } else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oframe").srcdoc=response.html; } else{ alert("Link already annotated!"); parent.document.getElementById("oframe").srcdoc=response.html;  } }, error:function(error) { console.log(error); } }); } } }); </script></body>'
+		
         body=injectionPoint[0]+jqueryCode+jqEvnt+injectionPoint[1]
+		
+        a_html = bs(body,'lxml').prettify()
         print("DONE WITH PAGE HTML")
-        a_html = bs(body,"lxml").prettify()
+        
+        
         print("")
         print("PROCESSING SOURCE HTML")
         domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urllib.parse.urlparse(o_html))
@@ -144,6 +146,7 @@ for idx, e in samples.iterrows():
                 if not src.startswith("http"):
                     src.lstrip("/")
                     elem['src'] = domain+src
+                    
         o_html = soup.prettify()
         
         #Steps for appending new row:

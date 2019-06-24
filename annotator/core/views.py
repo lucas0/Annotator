@@ -2,33 +2,19 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
+from django.http import JsonResponse
 
 import os, sys
 import pandas as pd
-from urllib.parse import urlparse
-
-from seleniumwire import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.common.exceptions import TimeoutException
 
 from bs4 import BeautifulSoup as bs
 import lxml
 import ast
-import requests
 
 cwd = os.path.abspath(__file__+"/..")
 datadir = os.path.abspath(cwd+"/../data")
 html_dir = os.path.abspath(cwd+"/../../html_getter")
 samples_path = html_dir+"/samples_html_no_err.csv"
-
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--disable-dev-shm-usage')
-chrome_options.add_argument("--window-size=1920x1080")
-chrome_driver = cwd+"/chromedriver"
-
-browser = webdriver.Chrome(chrome_options=chrome_options, executable_path=chrome_driver)
 
 res_header = ["page", "claim", "verdict", "tags", "date", "author", "source_list", "source_url", "value", "name"]
 samples_path = datadir+"/samples.csv"
@@ -38,14 +24,14 @@ count_path = datadir+"/count.csv"
 # AUX FUNCTIONS
 
 def increase_page_annotation_count(page, origin):
-    count_file = pd.read_csv(count_path, sep=',', encoding="latin1")
+    count_file = pd.read_csv(count_path, sep=',', encoding="utf_8")
     count_file.loc[(count_file['page'] == page) & (count_file['source_url'] == origin), 'count'] += 1
     count_file.to_csv(count_path, sep=',', index=False)
 
 def save_annotation(page, origin, value, name):
     # Read samples file
     print("SAVING ANNOTATION")
-    s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1")
+    s_p = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
     entry = s_p.loc[(s_p["page"] == page) & (s_p["source_url"] == origin)]
     if not (entry.empty):
         entry = entry.drop(columns=['page_html','source_html'])
@@ -53,7 +39,7 @@ def save_annotation(page, origin, value, name):
         n_entry.extend([value, name])
         results_filename = results_path+name+".csv"
         if os.path.exists(results_filename):
-            results = pd.read_csv(results_filename, sep=',', encoding="latin1")
+            results = pd.read_csv(results_filename, sep=',', encoding="utf_8")
         else:
             results = pd.DataFrame(columns=res_header)
         oldEntry = results.loc[(results["page"] == page) & (results["source_url"] == origin)]
@@ -67,13 +53,13 @@ def get_least_annotated_page(name,aPage=None):
     # creates a list of pages that have been already annotated by the current annotator
     results_filename = results_path+name+".csv"
     if os.path.exists(results_filename):
-        results = pd.read_csv(results_filename, sep=',', encoding="latin1")
+        results = pd.read_csv(results_filename, sep=',', encoding="utf_8")
         done_by_annotator = (results["page"]+results["source_url"]).unique()
     else:
         done_by_annotator = []
     
     #Print number of annotated pages and total number of pages
-    s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1")
+    s_p = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
     print("done: ", len(done_by_annotator), " | total: ", len(s_p))
     
     if len(done_by_annotator) == len(s_p.page.unique()):
@@ -81,7 +67,7 @@ def get_least_annotated_page(name,aPage=None):
 
     #Creates or reads countfile:
     if os.path.exists(count_path):
-        count_file = pd.read_csv(count_path, sep=',', encoding="latin1").sample(frac=1)
+        count_file = pd.read_csv(count_path, sep=',', encoding="utf_8").sample(frac=1)
     else:
         count_file = s_p[['page','source_url']].copy()
         count_file['count'] = 0
@@ -144,7 +130,6 @@ def home(request):
 		# return render(request, 'home.html', {'t1':"<html></html>", 't2':"<html></html>", 't3':"asda", 't4':"asdas", 'a_done':0, 'a_total':0, 't_done':0, 'alpha':0})
 		print("USER LOGGED IN")
 		name = user.username
-		alphaFromSession = session.get('alpha')
 		if request.method == 'POST':
 			op = request.POST.copy().get('op')
 			if op:
@@ -202,3 +187,34 @@ def signup(request):
 	return render(request, 'registration/signup.html', {
 			'form' : form
 		})
+
+#Needs testing to work with Django, but logic is present
+#Remember to check if path is correct in urls.py
+def newOrigin(request):
+    page = request.body.get('claim')
+    curr_source = request.body.get('curr_source')
+    clicked_source = request.body.get('clicked_source')
+    
+    s_p = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
+    nxt = s_p.loc[(s_p["page"] == page) & (s_p["source_url"] == clicked_source)]
+    #Check if page+source are in samples (ie valid link)
+    if not nxt:
+        curr = s_p.loc[(s_p["page"] == page) & (s_p["source_url"] == curr_source)]
+        return JsonResponse({'msg': "bad", 'html': curr.source_html, 'url':curr_source})
+    
+    results_filename = results_path+request.user.username+".csv"
+    #If new user, then nothing is annotated
+    if not os.path.exists(results_filename):
+        session["origin"] = nxt.source_url
+        session['o_html'] = nxt.source_html
+        return JsonResponse({'msg': "ok", 'html': nxt.source_html, 'url':nxt.source_url})
+    else:
+        results = pd.read_csv(results_filename, sep=',', encoding="utf_8")
+        target_row = results.loc[(results["page"] == page) & (results["source_url"] == clicked_source)]
+        #Check if page+source are in results (ie already annotated link)
+        if target_row:
+            return JsonResponse({'msg': "done", 'html': curr.source_html, 'url':curr_source})
+        #Means this is an old user who didnt annotate clicked link
+        session["origin"] = nxt.source_url
+        session['o_html'] = nxt.source_html
+        return JsonResponse({'msg': "ok", 'html': nxt.source_html, 'url':nxt.source_url})

@@ -43,12 +43,6 @@ def get_html(url):
         for req in browser.requests:
             if req.response:
                 st = req.response.status_code
-                if st == 301:
-                    #redirection, we need to get the status-code of the next request
-                    #note: html retrieved from such sites CAN be valid, some snopes links give this code
-                    continue
-                else:
-                    break #Only need first code after the final 301 (redirect) if any
         print("MOHAMED, STATUS CODE: ",st)
         if st == 404 or st == 301:
             return "error"
@@ -67,8 +61,12 @@ def get_html(url):
         return "error"
     finally:
         browser.quit()
+        
 #Used to check whether or not this will be the first write to samples_html.csv
-first_entry=True
+if os.path.exists(output_path):
+    first_entry=False
+else:
+    first_entry=True
 
 for idx, e in samples.iterrows():
     print("TRYING NEW ROW")
@@ -76,12 +74,14 @@ for idx, e in samples.iterrows():
     o_html = get_html(e.source_url)
     if "error" in [a_html,o_html]:
         print("GOT ERROR")
-        print("MOHAMED, a_html:",a_html)
-        print("MOHAMED, o_html:",o_html)
+        print("MOHAMED, a_html: BAD")
+        print("MOHAMED, o_html: BAD")
         continue
     else:
+        print("")
         print("PROCEEDING")
         print("PROCESS PAGE HTML")
+        
         #Disable non-origin links
         soup = bs(a_html, 'lxml')
         for a in soup.find_all('a'):
@@ -106,7 +106,12 @@ for idx, e in samples.iterrows():
 
         if len(soup.find_all('span')) > 0:
             soup.span.unwrap()
-
+        '''
+        for img in soup.find_all('img'):
+            if a.has_attr("class"):
+                if a["class"]=="lazy-resource":
+                    a.decompose()
+        '''
         #removes the overlay
         decomposers = [s for s in soup.find_all(["span","div"]) if "Snopes Needs Your Help" in s.text]
         parents = []
@@ -128,7 +133,7 @@ for idx, e in samples.iterrows():
         body=injectionPoint[0]+jqueryCode+jqEvnt+injectionPoint[1]
         print("DONE WITH PAGE HTML")
         a_html = bs(body,"lxml").prettify()
-
+        print("")
         print("PROCESSING SOURCE HTML")
         domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urllib.parse.urlparse(o_html))
         soup = bs(o_html, 'lxml')
@@ -139,16 +144,18 @@ for idx, e in samples.iterrows():
                 if not src.startswith("http"):
                     src.lstrip("/")
                     elem['src'] = domain+src
+        o_html = soup.prettify()
         
-        #Will turn list into dictionary then append to dataframe
-        #NEEDS TO BE RE-WRITTEN. DOES NOT WORK PROPERLY
-        samples_html = pd.DataFrame(columns=header)
+        #Steps for appending new row:
+        #Create a dict out of e (the series)
+        #Append a_html and o_html
+        #Turn dictionary to dataframe
+        #Append that dataframe to the samples_html.csv file
         
-        entry = e.values.tolist()
-        entry.extend([a_html, o_html])
-        
-        dict_entry = dict(zip(header, entry))
-        samples_html = samples_html.append(dict_entry, ignore_index=True)
-        
-        samples_html.to_csv(output_path, sep='\t', index=False, columns=header,header=first_entry,mode='a')
+        entry = e.to_dict()
+        entry["page_html"] = a_html
+        entry["source_html"] = o_html
+
+        df_entry = pd.DataFrame([entry], columns=entry.keys())
+        df_entry.to_csv(output_path, sep='\t', index=False, columns=header,header=first_entry,mode='a')
         first_entry=False

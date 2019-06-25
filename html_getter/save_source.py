@@ -87,8 +87,8 @@ for idx, e in samples.iterrows():
         for a in soup.find_all('a'):
             if a.has_attr("href"):
                 if not (a['href'] in ast.literal_eval(e.source_list)):
-                    del a['href']
-                    a.name='b'
+                    a.unwrap()
+                    
                 else:
                     a['id']=a['href']
                     #Remove tags inside link, to leave only text

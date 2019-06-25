@@ -10,7 +10,6 @@ import lxml
 import urllib
 import ast
 
-
 cwd = os.path.abspath(__file__+"/..")
 parent_path = os.path.abspath(__file__+"/../../")
 data_dir = os.path.abspath(cwd+"/../data/")
@@ -23,9 +22,8 @@ chrome_options.add_argument("--window-size=1920x1080")
 chrome_driver = parent_path+"/chromedriver"
 
 #Change paths
-samples_path = cwd+"/sam.csv"
-output_path = cwd+"/sam_html.csv"
-log_path = cwd+"/sam_error.csv"
+samples_path = cwd+"/samples.csv"
+log_path = cwd+"/log_error.csv"
 html_path = data_dir+"/html_snopes/"
 
 samples = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
@@ -66,13 +64,15 @@ def get_html(url):
 #Used to check whether or not this will be the first write to samples_html.csv
 for idx, e in samples.iterrows():
     print("TRYING NEW ROW")
+    a_dir_name = html_path+e.page.strip("/").split("/")[-1]+"/"
+    src_list =  ast.literal_eval(e.source_list)
+    o_idx = src_list.index(e.source_url)
 
-    a_dir_name = html_path+e.page.strip("/").split("/")[-1]
-    print(a_dir_name)
-    sys.exit(1)
+    a_html_filename = a_dir_name+"page.html"
+    o_html_filename = a_dir_name+o_idx
 
-    a_html = "done" if os.path.exists(a_html_path+a_name) else get_html(e.page)
-    o_html = "done" if os.path.exists(o_html_path+o_name) else get_html(e.source_url)
+    a_html = "done" if os.path.exists(a_html_filename) else get_html(e.page)
+    o_html = "done" if os.path.exists(o_html_filename) else get_html(e.source_url)
 
     if "error" in [a_html,o_html]:
         print("GOT ERROR")
@@ -133,7 +133,7 @@ for idx, e in samples.iterrows():
             print("DONE WITH PAGE HTML")
 
             # save
-            with open(a_html_path+e.page+".html", "w+") as f:
+            with open(a_html_filename, "w+") as f:
                 f.write(a_html)
         
         if o_html is not "done":
@@ -151,5 +151,5 @@ for idx, e in samples.iterrows():
                         
             o_html = soup.prettify()
 
-            with open(o_html_path+e.source_url+".html", "w+") as f:
+            with open(o_html_filename, "w+") as f:
                 f.write(o_html)

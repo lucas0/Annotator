@@ -12,15 +12,18 @@ import lxml
 import ast
 
 cwd = os.path.abspath(__file__+"/..")
-datadir = os.path.abspath(cwd+"/../data")
+data_dir = os.path.abspath(cwd+"/../data")
 html_dir = os.path.abspath(cwd+"/../../html_getter")
 samples_path = html_dir+"/samples_html_no_err.csv"
 
 res_header = ["page", "claim", "verdict", "tags", "date", "author", "source_list", "source_url", "value", "name"]
-samples_path = datadir+"/samples.csv"
-samples_path = html_dir+"/samples_html.csv"
-results_path = datadir+"/results/"
-count_path = datadir+"/count.csv"
+
+samples_path = data_dir+"/samples.csv"
+samples_path = html_dir+"/samples_html_no_err.csv"
+results_path = data_dir+"/results/"
+a_html_path = data_dir+"/pages_html/"
+o_html_path = data_dir+"/sources_html/"
+count_path = data_dir+"/count.csv"
 # AUX FUNCTIONS
 
 def increase_page_annotation_count(page, origin):
@@ -99,19 +102,22 @@ def get_least_annotated_page(name,aPage=None):
     entry = s_p[(s_p.page.isin([entry.page]) & s_p.source_url.isin([entry.source_url]))].iloc[0]
     a_page = entry.page.strip()
     o_page = entry.source_url.strip()
-    a_html = entry.page_html.strip()
-    o_html = entry.source_html.strip()
     src_lst = entry.source_list.strip()
+
+    with open(a_html_path+a_page+".html", "r+") as f:
+        a_html = bs(f.read(),"lxml")
+    with open(o_html_path+o_page+".html", "r+") as f:
+        o_html = bs(f.read(),"lxml")
 
     a_total = len(s_p.loc[s_p['page'] == entry.page])
     a_done  = a_total - len(remOrigins)
 
-    soup = bs(a_html, "lxml")
-    decomposers = [s for s in soup.find_all(["span","div"]) if "Snopes Needs Your Help" in s.text]
-    parents = []
-    [parents.extend(s.find_parents('w-div')) for s in decomposers]
-    [p.decompose() for p in parents if p is not None]
-    body = str(soup)
+    # soup = bs(a_html, "lxml")
+    # decomposers = [s for s in soup.find_all(["span","div"]) if "Snopes Needs Your Help" in s.text]
+    # parents = []
+    # [parents.extend(s.find_parents('w-div')) for s in decomposers]
+    # [p.decompose() for p in parents if p is not None]
+    # body = str(soup)
 
     return a_page, o_page, a_html, o_html, src_lst, a_done, a_total, len(done_by_annotator)
 

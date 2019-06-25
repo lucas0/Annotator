@@ -18,7 +18,7 @@ samples_path = html_dir+"/samples_html_no_err.csv"
 
 res_header = ["page", "claim", "verdict", "tags", "date", "author", "source_list", "source_url", "value", "name"]
 samples_path = datadir+"/samples.csv"
-samples_path = html_dir+"/samples_html_no_err.csv"
+samples_path = html_dir+"/samples_html.csv"
 results_path = datadir+"/results/"
 count_path = datadir+"/count.csv"
 # AUX FUNCTIONS
@@ -62,7 +62,7 @@ def get_least_annotated_page(name,aPage=None):
     s_p = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
     print("done: ", len(done_by_annotator), " | total: ", len(s_p))
     
-    if len(done_by_annotator) == len(s_p.page.unique()):
+    if len(done_by_annotator) == len(s_p):
         return "Last annotation done! Thank you!", None, None, None, None, None, None, None
 
     #Creates or reads countfile:
@@ -137,7 +137,16 @@ def home(request):
 					save_annotation(session.get('claim'),session.get('origin'), op, name)
 					a_url, o_url, a_html, o_html, src_lst, a_done, a_total, t_done = get_least_annotated_page(name, session.get('claim'))
 					# Turn string representation of a list to a list
-					src_lst = ast.literal_eval(src_lst)
+					print("")
+					print(a_url)
+					print("")
+					print("")
+					print(o_url)
+					print("")
+					print("")
+					print(src_lst)
+					print("")
+					#src_lst = ast.literal_eval(src_lst)
 			else:
 				a_url = session.get('claim')
 				o_url = session.get('origin')
@@ -150,7 +159,16 @@ def home(request):
 		else:
 			a_url, o_url, a_html, o_html, src_lst, a_done, a_total, t_done = get_least_annotated_page(name)
 			# Turn string representation of a list to a list
-			src_lst = ast.literal_eval(src_lst)
+			print("")
+			print(a_url)
+			print("")
+			print("")
+			print(o_url)
+			print("")
+			print("")
+			print(src_lst)
+			print("")
+			#src_lst = ast.literal_eval(src_lst)
 		
 		#Save claim and origin links and list of origins in session
 		session['claim'] = a_url

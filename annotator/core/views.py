@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from django.http import JsonResponse
+import json
 
 import os, sys
 import pandas as pd
@@ -200,6 +201,9 @@ def home(request):
 		
 		return render(request, 'home.html', {'t1':a_html, 't2':o_html, 't3':a_url, 't4':o_url, 'a_done':a_done, 'a_total':a_total, 't_done':t_done})
 
+def test(request):
+	return render(request, 'test.html')
+
 def signup(request):
 	if request.method == 'POST':
 		form = UserCreationForm(request.POST)
@@ -215,30 +219,36 @@ def signup(request):
 #Needs testing to work with Django, but logic is present
 #Remember to check if path is correct in urls.py
 def newOrigin(request):
-    page = request.body.get('claim')
-    curr_source = request.body.get('curr_source')
-    clicked_source = request.body.get('clicked_source')
-    
-    s_p = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
-    nxt = s_p.loc[(s_p["page"] == page) & (s_p["source_url"] == clicked_source)]
-    #Check if page+source are in samples (ie valid link)
-    if not nxt:
-        curr = s_p.loc[(s_p["page"] == page) & (s_p["source_url"] == curr_source)]
-        return JsonResponse({'msg': "bad", 'html': curr.source_html, 'url':curr_source})
-    
-    results_filename = results_path+request.user.username+".csv"
-    #If new user, then nothing is annotated
-    if not os.path.exists(results_filename):
-        session["origin"] = nxt.source_url
-        session['o_html'] = nxt.source_html
-        return JsonResponse({'msg': "ok", 'html': nxt.source_html, 'url':nxt.source_url})
-    else:
-        results = pd.read_csv(results_filename, sep=',', encoding="utf_8")
-        target_row = results.loc[(results["page"] == page) & (results["source_url"] == clicked_source)]
-        #Check if page+source are in results (ie already annotated link)
-        if target_row:
-            return JsonResponse({'msg': "done", 'html': curr.source_html, 'url':curr_source})
-        #Means this is an old user who didnt annotate clicked link
-        session["origin"] = nxt.source_url
-        session['o_html'] = nxt.source_html
-        return JsonResponse({'msg': "ok", 'html': nxt.source_html, 'url':nxt.source_url})
+	if request.method == 'POST':
+		
+		received = ast.literal_eval(request.body.decode())
+		
+		page = received['claim']
+		curr_source = received['curr_source']
+		clicked_source = received['clicked_source']
+
+		s_p = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
+		nxt = s_p.loc[(s_p["page"] == page) & (s_p["source_url"] == clicked_source)]
+		#Check if page+source are in samples (ie valid link)
+		if not nxt:
+			curr = s_p.loc[(s_p["page"] == page) & (s_p["source_url"] == curr_source)]
+			return JsonResponse({'msg': "bad", 'source': curr.source_html, 'link':curr_source})
+
+		results_filename = results_path+request.user.username+".csv"
+		#If new user, then nothing is annotated
+		if not os.path.exists(results_filename):
+			session["origin"] = nxt.source_url
+			session['o_html'] = nxt.source_html
+			return JsonResponse({'msg': "ok", 'html': nxt.source_html, 'url':nxt.source_url})
+		else:
+			results = pd.read_csv(results_filename, sep=',', encoding="utf_8")
+			target_row = results.loc[(results["page"] == page) & (results["source_url"] == clicked_source)]
+			#Check if page+source are in results (ie already annotated link)
+			if target_row:
+				return JsonResponse({'msg': "done", 'html': curr.source_html, 'url':curr_source})
+			#Means this is an old user who didnt annotate clicked link
+			session["origin"] = nxt.source_url
+			session['o_html'] = nxt.source_html
+			return JsonResponse({'msg': "ok", 'html': nxt.source_html, 'url': nxt.source_url})
+	else:
+		return JsonResponse({'msg': "ok", "name" : "mohamed"})

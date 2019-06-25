@@ -1,4 +1,4 @@
-import os
+import os, sys
 import pandas as pd
 
 from seleniumwire import webdriver
@@ -10,10 +10,9 @@ import lxml
 import urllib
 import ast
 
-
 cwd = os.path.abspath(__file__+"/..")
 parent_path = os.path.abspath(__file__+"/../../")
-data_dir = os.path.abspath(cwd+"/../data/")
+data_dir = os.path.abspath(cwd+"/../annotator/data/")
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
@@ -22,13 +21,13 @@ chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument("--window-size=1920x1080")
 chrome_driver = parent_path+"/chromedriver"
 
-#Change paths
-samples_path = cwd+"/sam.csv"
-log_path = cwd+"/sam_error.csv"
-a_html_path = data_dir+"/pages_html/"
-o_html_path = data_dir+"/sources_html/"
 
-samples = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
+samples_path = cwd+"/samples.csv"
+samples_test_path = cwd+"/sam.csv"
+log_path = cwd+"/log_error.csv"
+html_path = data_dir+"/html_snopes/"
+
+samples = pd.read_csv(samples_path, sep='\t', encoding="latin1")
 
 #Change delimitter
 def logError(url, message):
@@ -66,9 +65,17 @@ def get_html(url):
 #Used to check whether or not this will be the first write to samples_html.csv
 for idx, e in samples.iterrows():
     print("TRYING NEW ROW")
+    a_dir_name = html_path+e.page.strip("/").split("/")[-1]+"/"
+    if not os.path.exists(a_dir_name):
+        os.makedirs(a_dir_name)
+    src_list =  ast.literal_eval(e.source_list)
+    o_idx = src_list.index(e.source_url)
 
-    a_html = "done" if os.path.exists(a_html_path+e.page) else get_html(e.page)
-    o_html = "done" if os.path.exists(o_html_path+e.source_url) else get_html(e.source_url)
+    a_html_filename = a_dir_name+"page.html"
+    o_html_filename = a_dir_name+str(o_idx)+".html"
+
+    a_html = "done" if os.path.exists(a_html_filename) else get_html(e.page)
+    o_html = "done" if os.path.exists(o_html_filename) else get_html(e.source_url)
 
     if "error" in [a_html,o_html]:
         print("GOT ERROR")
@@ -121,15 +128,19 @@ for idx, e in samples.iterrows():
 
             #Add JQuery CDN and event-handler
             injectionPoint=body.split("</body>")
-            jqueryCode='<script> $("a").on("click", function(e){ e.preventDefault();if(e.target.href){if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oframe").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let claim = parent.document.getElementById("cLink").href; let curr_source = parent.document.getElementById("oLink").href; let clicked_source = e.target.href; $.ajax({ url: "/newOrigin/", data: JSON.stringify({ "claim":claim, "curr_source":curr_source, "clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oframe").srcdoc=response.source; parent.document.getElementById("oLink").href=response.link; } else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oframe").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oframe").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } }}); </script></body>'
+            jqueryCode='<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>'
+            jqEvnt='<script> $("a").on("click", function(e){ e.preventDefault();if(e.target.href){if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oframe").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let claim = parent.document.getElementById("cLink").href; let curr_source = parent.document.getElementById("oLink").href; let clicked_source = e.target.href; $.ajax({ url: "/newOrigin/", data: JSON.stringify({ "claim":claim, "curr_source":curr_source, "clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oframe").srcdoc=response.source; parent.document.getElementById("oLink").href=response.link; } else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oframe").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oframe").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } }}); </script></body>'
             body=injectionPoint[0]+jqueryCode+jqEvnt+injectionPoint[1]
-    		body =  body.replace("overflow: hidden;", "overflow: scroll;")
-            a_html = bs(body,'lxml').prettify()
+			
+            body = body.replace("overflow: hidden", "overflow: scroll")
+
+            a_html = bs(body,'lxml')
             print("DONE WITH PAGE HTML")
 
             # save
-            with open(a_html_path+e.page+".html", "w+") as f:
-                f.write(a_html)
+            with open(a_html_filename, "w+", encoding='utf-8') as f:
+                f.write(str(a_html))
+                #f.write(a_html)
         
         if o_html is not "done":
             print("")
@@ -144,7 +155,8 @@ for idx, e in samples.iterrows():
                         src.lstrip("/")
                         elem['src'] = domain+src
                         
-            o_html = soup.prettify()
+            o_html = soup
 
-            with open(o_html_path+e.source_url+".html", "w+") as f:
-                f.write(o_html)
+            with open(o_html_filename, "w+", encoding='utf-8') as f:
+                f.write(str(o_html))
+                #f.write(o_html)

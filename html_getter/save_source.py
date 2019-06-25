@@ -1,4 +1,4 @@
-import os
+import os, sys
 import pandas as pd
 
 from seleniumwire import webdriver
@@ -26,8 +26,7 @@ chrome_driver = parent_path+"/chromedriver"
 samples_path = cwd+"/sam.csv"
 output_path = cwd+"/sam_html.csv"
 log_path = cwd+"/sam_error.csv"
-a_html_path = data_dir+"/pages_html/"
-o_html_path = data_dir+"/sources_html/"
+html_path = data_dir+"/html_snopes/"
 
 samples = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
 
@@ -68,8 +67,12 @@ def get_html(url):
 for idx, e in samples.iterrows():
     print("TRYING NEW ROW")
 
-    a_html = "done" if os.path.exists(a_html_path+e.page) else get_html(e.page)
-    o_html = "done" if os.path.exists(o_html_path+e.source_url) else get_html(e.source_url)
+    a_dir_name = html_path+e.page.strip("/").split("/")[-1]
+    print(a_dir_name)
+    sys.exit(1)
+
+    a_html = "done" if os.path.exists(a_html_path+a_name) else get_html(e.page)
+    o_html = "done" if os.path.exists(o_html_path+o_name) else get_html(e.source_url)
 
     if "error" in [a_html,o_html]:
         print("GOT ERROR")
@@ -125,7 +128,7 @@ for idx, e in samples.iterrows():
             jqueryCode='<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>'
             jqEvnt = '<script> $("a").on("click", function(e){ e.preventDefault(); if(e.target.href){ if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oframe").srcdoc="<p>LOADING..PLEASE WAIT</p>";  let claim = parent.document.getElementById("cLink").href; let curr_source = parent.document.getElementById("oLink").href; let clicked_source = e.target.href; $.ajax({ url: "/newOrigin/", csrfmiddlewaretoken: {% csrf_token %}, data: { "claim":claim, "curr_source":curr_source, "clicked_source":clicked_source}, headers: { "Accept": "application/json", "Content-Type": "application/json" }, type: "POST", success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oframe").srcdoc=response.html; parent.document.getElementById("oLink").href=response.url;  } else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oframe").srcdoc=response.html; } else{ alert("Link already annotated!"); parent.document.getElementById("oframe").srcdoc=response.html;  } }, error:function(error) { console.log(error); } }); } } }); </script></body>'
             body=injectionPoint[0]+jqueryCode+jqEvnt+injectionPoint[1]
-    		body = body.replace("hidden", "scroll")
+            body = body.replace("overflow: hidden;", "overflow: scroll;")
             a_html = bs(body,'lxml').prettify()
             print("DONE WITH PAGE HTML")
 

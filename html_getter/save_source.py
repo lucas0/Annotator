@@ -12,6 +12,7 @@ import ast
 
 
 cwd = os.path.abspath(__file__+"/..")
+parent_path = os.path.abspath(__file__+"/../../")
 data_dir = os.path.abspath(cwd+"/../data/")
 
 chrome_options = Options()
@@ -19,7 +20,7 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument("--window-size=1920x1080")
-chrome_driver = cwd+"/chromedriver"
+chrome_driver = parent_path+"/chromedriver"
 
 #Change paths
 samples_path = cwd+"/sam.csv"
@@ -67,8 +68,8 @@ def get_html(url):
 for idx, e in samples.iterrows():
     print("TRYING NEW ROW")
 
-    a_html = "done" if os.path.exits(html_path+e.page) else a_html = get_html(e.page)
-    o_html = "done" if os.path.exits(html_path+e.source_url) else o_html = get_html(e.source_url)
+    a_html = "done" if os.path.exists(a_html_path+e.page) else get_html(e.page)
+    o_html = "done" if os.path.exists(o_html_path+e.source_url) else get_html(e.source_url)
 
     if "error" in [a_html,o_html]:
         print("GOT ERROR")
@@ -81,7 +82,7 @@ for idx, e in samples.iterrows():
         print("PROCEEDING")
         print("PROCESS PAGE HTML")
         
-        if a_html not "done":
+        if a_html is not "done":
             #Disable non-origin links
             soup = bs(a_html, 'lxml')
             for a in soup.find_all('a'):
@@ -129,10 +130,10 @@ for idx, e in samples.iterrows():
             print("DONE WITH PAGE HTML")
 
             # save
-            with open(a_html_path+a_html+".html", "w+") as f:
+            with open(a_html_path+e.page+".html", "w+") as f:
                 f.write(a_html)
         
-        if o_html not "done":
+        if o_html is not "done":
             print("")
             print("PROCESSING SOURCE HTML")
             domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urllib.parse.urlparse(o_html))
@@ -147,5 +148,5 @@ for idx, e in samples.iterrows():
                         
             o_html = soup.prettify()
 
-            with open(o_html_path+o_html+".html", "w+") as f:
+            with open(o_html_path+e.source_url+".html", "w+") as f:
                 f.write(o_html)

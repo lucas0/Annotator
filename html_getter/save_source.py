@@ -12,7 +12,7 @@ import ast
 
 cwd = os.path.abspath(__file__+"/..")
 parent_path = os.path.abspath(__file__+"/../../")
-data_dir = os.path.abspath(cwd+"/../data/")
+data_dir = os.path.abspath(cwd+"/../annotator/data/")
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
@@ -26,7 +26,7 @@ samples_path = cwd+"/samples.csv"
 log_path = cwd+"/log_error.csv"
 html_path = data_dir+"/html_snopes/"
 
-samples = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
+samples = pd.read_csv(samples_path, sep='\t', encoding="latin1")
 
 #Change delimitter
 def logError(url, message):
@@ -65,11 +65,13 @@ def get_html(url):
 for idx, e in samples.iterrows():
     print("TRYING NEW ROW")
     a_dir_name = html_path+e.page.strip("/").split("/")[-1]+"/"
+    if not os.path.exists(a_dir_name):
+        os.makedirs(a_dir_name)
     src_list =  ast.literal_eval(e.source_list)
     o_idx = src_list.index(e.source_url)
 
     a_html_filename = a_dir_name+"page.html"
-    o_html_filename = a_dir_name+o_idx
+    o_html_filename = a_dir_name+str(o_idx)+".html"
 
     a_html = "done" if os.path.exists(a_html_filename) else get_html(e.page)
     o_html = "done" if os.path.exists(o_html_filename) else get_html(e.source_url)

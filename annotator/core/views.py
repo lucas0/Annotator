@@ -3,9 +3,11 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from django.http import JsonResponse
-import json
+import codecs
 
 import os, sys
+from os import listdir
+from os.path import isfile, join
 import pandas as pd
 
 from bs4 import BeautifulSoup as bs
@@ -15,35 +17,52 @@ import ast
 cwd = os.path.abspath(__file__+"/..")
 data_dir = os.path.abspath(cwd+"/../data")
 html_dir = os.path.abspath(cwd+"/../../html_getter")
-samples_path = html_dir+"/samples_html_no_err.csv"
 
 res_header = ["page", "claim", "verdict", "tags", "date", "author", "source_list", "source_url", "value", "name"]
 
 samples_path = data_dir+"/samples.csv"
-samples_path = html_dir+"/samples_html_no_err.csv"
+#samples_path = html_dir+"/sam.csv"
 results_path = data_dir+"/results/"
-a_html_path = data_dir+"/pages_html/"
-o_html_path = data_dir+"/sources_html/"
+snopes_path = data_dir+"/html_snopes/"
 count_path = data_dir+"/count.csv"
 # AUX FUNCTIONS
 
+def get_done_by_annotator(name):
+    # creates a list of pages that have been already annotated by the current annotator
+    results_filename = results_path+name+".csv"
+    if os.path.exists(results_filename):
+        results = pd.read_csv(results_filename, sep=',', encoding="latin1")
+        done_by_annotator = (results["page"]+results["source_url"]).unique()
+    else:
+        done_by_annotator = []
+    return done_by_annotator
+
+def get_count_file(s_p):
+    #Creates or reads countfile:
+    if os.path.exists(count_path):
+        count_file = pd.read_csv(count_path, sep=',', encoding="latin1").sample(frac=1)
+    else:
+        count_file = s_p[['page','source_url']].copy()
+        count_file['count'] = 0
+        count_file.to_csv(count_path, sep=',', index=False)
+    return count_file
+
 def increase_page_annotation_count(page, origin):
-    count_file = pd.read_csv(count_path, sep=',', encoding="utf_8")
+    count_file = pd.read_csv(count_path, sep=',', encoding="latin1")
     count_file.loc[(count_file['page'] == page) & (count_file['source_url'] == origin), 'count'] += 1
     count_file.to_csv(count_path, sep=',', index=False)
 
 def save_annotation(page, origin, value, name):
     # Read samples file
     print("SAVING ANNOTATION")
-    s_p = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
+    s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1")
     entry = s_p.loc[(s_p["page"] == page) & (s_p["source_url"] == origin)]
     if not (entry.empty):
-        entry = entry.drop(columns=['page_html','source_html'])
         n_entry = entry.values.tolist()[0]
         n_entry.extend([value, name])
         results_filename = results_path+name+".csv"
         if os.path.exists(results_filename):
-            results = pd.read_csv(results_filename, sep=',', encoding="utf_8")
+            results = pd.read_csv(results_filename, sep=',', encoding="latin1")
         else:
             results = pd.DataFrame(columns=res_header)
         oldEntry = results.loc[(results["page"] == page) & (results["source_url"] == origin)]
@@ -54,73 +73,83 @@ def save_annotation(page, origin, value, name):
         increase_page_annotation_count(page, origin)
 
 def get_least_annotated_page(name,aPage=None):
-    # creates a list of pages that have been already annotated by the current annotator
-    results_filename = results_path+name+".csv"
-    if os.path.exists(results_filename):
-        results = pd.read_csv(results_filename, sep=',', encoding="utf_8")
-        done_by_annotator = (results["page"]+results["source_url"]).unique()
-    else:
-        done_by_annotator = []
+    done_by_annotator = get_done_by_annotator(name)
     
     #Print number of annotated pages and total number of pages
-    s_p = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
+    s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1")
     print("done: ", len(done_by_annotator), " | total: ", len(s_p))
     
     if len(done_by_annotator) == len(s_p):
         return "Last annotation done! Thank you!", None, None, None, None, None, None, None
 
     #Creates or reads countfile:
-    if os.path.exists(count_path):
-        count_file = pd.read_csv(count_path, sep=',', encoding="utf_8").sample(frac=1)
-    else:
-        count_file = s_p[['page','source_url']].copy()
-        count_file['count'] = 0
-        count_file.to_csv(count_path, sep=',', index=False)
+    count_file = get_count_file(s_p)
         
     #Get pages not done by current annotator
-    count_file = count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)]
+    not_done_count = count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)]
     
 
     print(">>",aPage)
     if aPage is not None:
-        remOrigins = count_file.loc[count_file['page'] == aPage]
+        remOrigins = not_done_count.loc[not_done_count['page'] == aPage]
         if len(remOrigins)==0:
             return get_least_annotated_page(name)
     else:
-        twice_annotated = count_file.loc[count_file['count'] == 2]
+        twice_annotated = not_done_count.loc[not_done_count['count'] == 2]
         if len(twice_annotated) > 0:
             page = twice_annotated.iloc[0]['page']
         else:    
-            once_annotated = count_file.loc[count_file['count'] == 1]
+            once_annotated = not_done_count.loc[not_done_count['count'] == 1]
             if len(once_annotated) > 0:
                 page = once_annotated.iloc[0]['page']
             else:
-                index = count_file['count'].idxmin(axis=0, skipna=True)
-                page = count_file.loc[index]['page']
-        remOrigins = count_file.loc[count_file['page'] == page]
-        
+                index = not_done_count['count'].idxmin(axis=0, skipna=True)
+                page = not_done_count.loc[index]['page']
+        remOrigins = not_done_count.loc[not_done_count['page'] == page]
+    
+    page = remOrigins.iloc[0].page
+    #Automatically annotate broken links of this page as invalid input (op = 3)
+    src_lst = s_p.loc[s_p['page'] == page]
+    src_lst = ast.literal_eval(src_lst.iloc[0].source_list)
+    for idx, e in remOrigins.iterrows():
+        src_idx_num = src_lst.index(e.source_url)
+        if not (os.path.exists(snopes_path+(e.page.strip("/").split("/")[-1]+"/")+str(src_idx_num)+".html")):
+            save_annotation(e.page, e.source_url, "3", name)
+			
+	#Update done_by_annotator, count_file, and not_done_count
+    done_by_annotator = get_done_by_annotator(name)
+    count_file = get_count_file(s_p)
+    not_done_count = count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)]
+
+    remOrigins = not_done_count.loc[not_done_count['page'] == page]
+    if len(remOrigins)==0:
+        return get_least_annotated_page(name)
+
     entry = remOrigins.iloc[0]
     entry = s_p[(s_p.page.isin([entry.page]) & s_p.source_url.isin([entry.source_url]))].iloc[0]
     a_page = entry.page.strip()
     o_page = entry.source_url.strip()
     src_lst = entry.source_list.strip()
+    
+    #To avoid "deformed node" ast error
+    try :
+        src_lst = ast.literal_eval(src_lst)
+    except:
+        src_lst = ast.literal_eval(src_lst.decode())
 
-    with open(a_html_path+a_page+".html", "r+") as f:
-        a_html = bs(f.read(),"lxml")
-    with open(o_html_path+o_page+".html", "r+") as f:
-        o_html = bs(f.read(),"lxml")
+    a_page_path = a_page.strip("/").split("/")[-1]+"/"
+    src_idx_num = src_lst.index(o_page)
+    o_page_path = a_page_path+str(src_idx_num)+".html"
 
-    a_total = len(s_p.loc[s_p['page'] == entry.page])
-    a_done  = a_total - len(remOrigins)
+    f = codecs.open(snopes_path+a_page_path+"page.html", encoding='utf-8')
+    a_html = bs(f.read(),"lxml")
+    f = codecs.open(snopes_path+o_page_path, encoding='utf-8')
+    o_html = bs(f.read(),"lxml")
+    filenames = [f for f in listdir(snopes_path+a_page_path)]
+    a_total = len(filenames)
+    a_done  = a_total - len(remOrigins) - 1
 
-    # soup = bs(a_html, "lxml")
-    # decomposers = [s for s in soup.find_all(["span","div"]) if "Snopes Needs Your Help" in s.text]
-    # parents = []
-    # [parents.extend(s.find_parents('w-div')) for s in decomposers]
-    # [p.decompose() for p in parents if p is not None]
-    # body = str(soup)
-
-    return a_page, o_page, a_html, o_html, src_lst, a_done, a_total, len(done_by_annotator)
+    return a_page, o_page, str(a_html), str(o_html), src_lst, a_done, a_total, len(done_by_annotator)
 
 # VIEWS
 def home(request):
@@ -153,7 +182,6 @@ def home(request):
 					print("")
 					print(src_lst)
 					print("")
-					#src_lst = ast.literal_eval(src_lst)
 			else:
 				a_url = session.get('claim')
 				o_url = session.get('origin')
@@ -175,7 +203,6 @@ def home(request):
 			print("")
 			print(src_lst)
 			print("")
-			#src_lst = ast.literal_eval(src_lst)
 		
 		#Save claim and origin links and list of origins in session
 		session['claim'] = a_url
@@ -218,37 +245,44 @@ def signup(request):
 
 #Needs testing to work with Django, but logic is present
 #Remember to check if path is correct in urls.py
-def newOrigin(request):
+def change_origin(request):
 	if request.method == 'POST':
-		
-		received = ast.literal_eval(request.body.decode())
-		
-		page = received['claim']
-		curr_source = received['curr_source']
-		clicked_source = received['clicked_source']
+		session = request.session
+		page = session.get('claim')
+		curr_source_url = session.get('origin')
+		src_lst = session.get('src_lst')
+		clicked_source_url = received['clicked_source']
+		src_idx_num = src_lst.index(clicked_source_url)
 
-		s_p = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
-		nxt = s_p.loc[(s_p["page"] == page) & (s_p["source_url"] == clicked_source)]
-		#Check if page+source are in samples (ie valid link)
-		if not nxt:
-			curr = s_p.loc[(s_p["page"] == page) & (s_p["source_url"] == curr_source)]
-			return JsonResponse({'msg': "bad", 'source': curr.source_html, 'link':curr_source})
+		#Check if path to source exists (ie valid link)
+		if not os.path.exists(snopes_path+(page.strip("/").split("/")[-1]+"/")+str((src_idx_num))+".html"):
+			return JsonResponse({'msg': "bad", 'source': session.get('o_html'), 'n_link':curr_source_url, 'o_link':clicked_source_url})
 
 		results_filename = results_path+request.user.username+".csv"
 		#If new user, then nothing is annotated
 		if not os.path.exists(results_filename):
-			session["origin"] = nxt.source_url
-			session['o_html'] = nxt.source_html
-			return JsonResponse({'msg': "ok", 'html': nxt.source_html, 'url':nxt.source_url})
+			path_to_new_source = snopes_path+(page.strip("/").split("/")[-1]+"/")+str((src_idx_num))+".html"
+			session["origin"] = clicked_source_url
+			f = codecs.open(path_to_new_source, encoding='utf-8')
+			o_html = bs(f.read(),"lxml")
+			session['o_html'] = o_html
+			return JsonResponse({'msg': "ok", 'source': session.get('o_html'), 'n_link':clicked_source_url, 'o_link':curr_source_url})
 		else:
-			results = pd.read_csv(results_filename, sep=',', encoding="utf_8")
-			target_row = results.loc[(results["page"] == page) & (results["source_url"] == clicked_source)]
+			results = pd.read_csv(results_filename, sep=',', encoding="latin1")
+			target_row = results.loc[(results["page"] == page) & (results["source_url"] == clicked_source_url)]
 			#Check if page+source are in results (ie already annotated link)
 			if target_row:
-				return JsonResponse({'msg': "done", 'html': curr.source_html, 'url':curr_source})
+				return JsonResponse({'msg': "done", 'source': session.get('o_html'), 'n_link':curr_source_url, 'o_link':curr_source_url})
 			#Means this is an old user who didnt annotate clicked link
-			session["origin"] = nxt.source_url
-			session['o_html'] = nxt.source_html
-			return JsonResponse({'msg': "ok", 'html': nxt.source_html, 'url': nxt.source_url})
+			path_to_new_source = snopes_path+(page.strip("/").split("/")[-1]+"/")+str((src_idx_num))+".html"
+			session["origin"] = clicked_source_url
+			'''
+			with open(path_to_new_source, "r+") as f:
+				o_html = bs(f.read(),"lxml")
+			'''
+			f = codecs.open(path_to_new_source, encoding='utf-8')
+			o_html = bs(f.read(),"lxml")
+			session['o_html'] = o_html
+			return JsonResponse({'msg': "ok", 'source': session.get('o_html'), 'n_link':clicked_source_url, 'o_link':curr_source_url})
 	else:
-		return JsonResponse({'msg': "ok", "name" : "mohamed"})
+		return JsonResponse({'msg': "error", "why" : "dont GET this page, only POST"})

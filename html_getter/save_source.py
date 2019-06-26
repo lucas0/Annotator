@@ -27,12 +27,12 @@ samples_test_path = cwd+"/sam.csv"
 log_path = cwd+"/log_error.csv"
 html_path = data_dir+"/html_snopes/"
 
-samples = pd.read_csv(samples_path, sep='\t', encoding="latin1")
+samples = pd.read_csv(samples_test_path, sep='\t', encoding="latin1")
 
 #Change delimitter
 def logError(url, message):
     with open(log_path, "a+") as log:
-        to_write_to_file = url+"<|>"+str(message) #using comma in .write() function gives error
+        to_write_to_file = url+"<|>"+str(message)+"\n" #using comma in .write() function gives error
         log.write(to_write_to_file)
 
 def get_html(url):
@@ -66,8 +66,10 @@ def get_html(url):
 for idx, e in samples.iterrows():
     print("TRYING NEW ROW")
     a_dir_name = html_path+e.page.strip("/").split("/")[-1]+"/"
+
     if not os.path.exists(a_dir_name):
         os.makedirs(a_dir_name)
+        
     src_list =  ast.literal_eval(e.source_list)
     o_idx = src_list.index(e.source_url)
 
@@ -118,6 +120,15 @@ for idx, e in samples.iterrows():
             [p.decompose() for p in parents if p is not None]
             body = str(soup)
             
+            b = soup.find("body")
+            if b.has_attr("style"):
+                b["style"] = b["style"] + " overflow: scroll; overflow-x: scroll; overflow-y: scroll;"
+            else:
+                b["style"] = "overflow: scroll; overflow-x: scroll; overflow-y: scroll;"
+            
+            #Try this
+            soup.find("b").replace_with(b)
+
             #Add code to higlight hyperlink of current origin and scroll to it
             injectionPoint=body.split("</body>")
             
@@ -129,10 +140,11 @@ for idx, e in samples.iterrows():
             #Add JQuery CDN and event-handler
             injectionPoint=body.split("</body>")
             jqueryCode='<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>'
-            jqEvnt='<script> $("a").on("click", function(e){ e.preventDefault();if(e.target.href){if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oframe").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let claim = parent.document.getElementById("cLink").href; let curr_source = parent.document.getElementById("oLink").href; let clicked_source = e.target.href; $.ajax({ url: "/newOrigin/", data: JSON.stringify({ "claim":claim, "curr_source":curr_source, "clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oframe").srcdoc=response.source; parent.document.getElementById("oLink").href=response.nlink; highlightLnk(response.nlink,response.olink)} else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oframe").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oframe").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } } }); </script></body>'
+            jqEvnt='<script> $("a").on("click", function(e){ e.preventDefault(); if(e.target.href){ if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oFrame").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let clicked_source = e.target.href; let csrf_tok = parent.document.getElementById("csrf_tok").value; $.ajax({ url: "/change_origin/", data: JSON.stringify({"clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", csrf_tok );}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oFrame").srcdoc=response.source; parent.document.getElementById("oLink").href=response.n_link; highlightLnk(response.n_link,response.o_link)} else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oFrame").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oFrame").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } } }); </script></body>'
+            #jqEvnt='<script> $("a").on("click", function(e){ e.preventDefault(); if(e.target.href){ if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oFrame").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let clicked_source = e.target.href; $.ajax({ url: "/change_origin/", data: JSON.stringify({"clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oFrame").srcdoc=response.source; parent.document.getElementById("oLink").href=response.n_link; highlightLnk(response.n_link,response.o_link)} else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oFrame").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oFrame").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } } }); </script></body>'
             body=injectionPoint[0]+jqueryCode+jqEvnt+injectionPoint[1]
 			
-            body = body.replace("overflow: hidden", "overflow: scroll")
+            #body = body.replace("overflow: hidden", "overflow: scroll").replace("overflow-x: hidden", "overflow-x: scroll").replace("overflow-y: hidden", "overflow-y: scroll")
 
             a_html = bs(body,'lxml')
             print("DONE WITH PAGE HTML")

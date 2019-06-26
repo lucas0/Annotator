@@ -103,10 +103,10 @@ for idx, e in samples.iterrows():
                         a.clear()
                         a.insert(1,words)
                         #Make the link a child tag of the paragraph (ie remove all tags between link and paragraph) <p><nobr><a></a></nobr></p> becomes <p><a></a></p>. Important for injected Javascript functions.
-                        if a.parent.name != "p":
+                        if a.parent.name not in ["p","div"]:
                             curr_parent = a.parent
                             old_parent = curr_parent
-                            while curr_parent.name != "p":
+                            while curr_parent.name not in ["p","div"]:
                                 old_parent = curr_parent
                                 curr_parent = curr_parent.parent
                             old_parent.replace_with(a)
@@ -129,7 +129,7 @@ for idx, e in samples.iterrows():
             #Add JQuery CDN and event-handler
             injectionPoint=body.split("</body>")
             jqueryCode='<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>'
-            jqEvnt='<script> $("a").on("click", function(e){ e.preventDefault();if(e.target.href){if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oframe").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let claim = parent.document.getElementById("cLink").href; let curr_source = parent.document.getElementById("oLink").href; let clicked_source = e.target.href; $.ajax({ url: "/newOrigin/", data: JSON.stringify({ "claim":claim, "curr_source":curr_source, "clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oframe").srcdoc=response.source; parent.document.getElementById("oLink").href=response.link; } else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oframe").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oframe").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } }}); </script></body>'
+            jqEvnt='<script> $("a").on("click", function(e){ e.preventDefault();if(e.target.href){if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oframe").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let claim = parent.document.getElementById("cLink").href; let curr_source = parent.document.getElementById("oLink").href; let clicked_source = e.target.href; $.ajax({ url: "/newOrigin/", data: JSON.stringify({ "claim":claim, "curr_source":curr_source, "clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oframe").srcdoc=response.source; parent.document.getElementById("oLink").href=response.nlink; highlightLnk(response.nlink,response.olink)} else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oframe").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oframe").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } } }); </script></body>'
             body=injectionPoint[0]+jqueryCode+jqEvnt+injectionPoint[1]
 			
             body = body.replace("overflow: hidden", "overflow: scroll")

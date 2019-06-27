@@ -118,22 +118,27 @@ for idx, e in samples.iterrows():
 
             #body = body.replace("overflow: hidden", "overflow: scroll").replace("overflow-x: hidden", "overflow-x: scroll").replace("overflow-y: hidden", "overflow-y: scroll")
             b = soup.find("body")
+            #in-line style
             if b.has_attr("style"):
                 s = b["style"]
-                s = re.sub(r'overflow:.+?;','overflow: scroll;',s)
-                s = re.sub(r'overflow-y:.+?;','overflow-y: scroll;',s)
-                s = re.sub(r'overflow-x:.+?;','overflow-x: scroll;',s)
-                print(s)
+                #print(s)
+                s = re.sub(r'overflow:.+?(?=[;}])','overflow: scroll',s)
+                s = re.sub(r'overflow-y:.+?(?=[;}])','overflow-y: scroll',s)
+                s = re.sub(r'overflow-x:.+?(?=[;}])','overflow-x: scroll',s)
                 b["style"] = s
-            else:
-                b["style"] = "overflow: scroll; overflow-x: scroll; overflow-y: scroll;"
+                #print(soup.find("body")["style"])
 
-            #Try this
-            soup.find("body").replace_with(b)
-            print(soup.find("body")["style"])
+            #style is a tag
+            if b.find("style") is not None:
+                s = b.style.string
+                s = re.sub(r'overflow:.+?(?=[;}])','overflow: scroll',s)
+                s = re.sub(r'overflow-y:.+?(?=[;}])','overflow-y: scroll',s)
+                s = re.sub(r'overflow-x:.+?(?=[;}])','overflow-x: scroll',s)
+                #print(s)
+                soup.find("body").style.string.replace_with(s)
+                #print(b.style.prettify())
 
             body = str(soup)
-
             #Add code to higlight hyperlink of current origin and scroll to it
             injectionPoint=body.split("</body>")
 

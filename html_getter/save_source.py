@@ -32,9 +32,12 @@ num_samples = len(samples)
 
 #Change delimitter
 def logError(url, message):
-    with open(log_path, "a+") as log:
-        message = url+"<|>"+str(message)+"\n" #using comma in .write() function gives error
-        log.write(message)
+    message = url+"<|>"+str(message)+"\n" #using comma in .write() function gives error
+    with open(log_path, "r+") as log:
+        lines = log.readlines()
+    if message not in lines:
+        with open(log_path, "a+") as log:
+            log.write(message)
 
 def get_html(url):
     try:

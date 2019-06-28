@@ -6,4 +6,4 @@
 
 2) Unwrap the new samples file (folded_snopes.csv) and run save_source.py to obtain the new html files. Remember to shuffle the samples.csv before starting the main loop in save_sources.py
 
-3)make the service available on the VM
+3) make the service available on the VM

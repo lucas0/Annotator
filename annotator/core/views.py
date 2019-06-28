@@ -21,7 +21,6 @@ html_dir = os.path.abspath(cwd+"/../../html_getter")
 res_header = ["page", "claim", "verdict", "tags", "date", "author", "source_list", "source_url", "value", "name"]
 
 samples_path = data_dir+"/samples.csv"
-#samples_path = html_dir+"/sam.csv"
 results_path = data_dir+"/results/"
 snopes_path = data_dir+"/html_snopes/"
 count_path = data_dir+"/count.csv"
@@ -146,8 +145,8 @@ def get_least_annotated_page(name,aPage=None):
     f = codecs.open(snopes_path+o_page_path, encoding='utf-8')
     o_html = bs(f.read(),"lxml")
     filenames = [f for f in listdir(snopes_path+a_page_path)]
-    a_total = len(filenames)
-    a_done  = a_total - len(remOrigins) - 1
+    a_total = len(filenames) - 1
+    a_done  = a_total - len(remOrigins)
 
     return a_page, o_page, str(a_html), str(o_html), src_lst, a_done, a_total, len(done_by_annotator)
 
@@ -248,6 +247,17 @@ def signup(request):
 def change_origin(request):
 	if request.method == 'POST':
 		session = request.session
+		
+		print("")
+		print(request.body)
+		print("")
+		
+		received = ast.literal_eval(request.body.decode())
+		
+		print("")
+		print(received)
+		print("")
+
 		page = session.get('claim')
 		curr_source_url = session.get('origin')
 		src_lst = session.get('src_lst')
@@ -256,6 +266,7 @@ def change_origin(request):
 
 		#Check if path to source exists (ie valid link)
 		if not os.path.exists(snopes_path+(page.strip("/").split("/")[-1]+"/")+str((src_idx_num))+".html"):
+			print("bad link")
 			return JsonResponse({'msg': "bad", 'source': session.get('o_html'), 'n_link':curr_source_url, 'o_link':clicked_source_url})
 
 		results_filename = results_path+request.user.username+".csv"
@@ -265,24 +276,23 @@ def change_origin(request):
 			session["origin"] = clicked_source_url
 			f = codecs.open(path_to_new_source, encoding='utf-8')
 			o_html = bs(f.read(),"lxml")
-			session['o_html'] = o_html
+			session['o_html'] = str(o_html)
+			print("new user")
 			return JsonResponse({'msg': "ok", 'source': session.get('o_html'), 'n_link':clicked_source_url, 'o_link':curr_source_url})
 		else:
 			results = pd.read_csv(results_filename, sep=',', encoding="latin1")
 			target_row = results.loc[(results["page"] == page) & (results["source_url"] == clicked_source_url)]
 			#Check if page+source are in results (ie already annotated link)
-			if target_row:
+			if len(target_row) != 0:
+				print("already done")
 				return JsonResponse({'msg': "done", 'source': session.get('o_html'), 'n_link':curr_source_url, 'o_link':curr_source_url})
 			#Means this is an old user who didnt annotate clicked link
 			path_to_new_source = snopes_path+(page.strip("/").split("/")[-1]+"/")+str((src_idx_num))+".html"
 			session["origin"] = clicked_source_url
-			'''
-			with open(path_to_new_source, "r+") as f:
-				o_html = bs(f.read(),"lxml")
-			'''
 			f = codecs.open(path_to_new_source, encoding='utf-8')
 			o_html = bs(f.read(),"lxml")
-			session['o_html'] = o_html
+			session['o_html'] = str(o_html)
+			print("old user, not done")
 			return JsonResponse({'msg': "ok", 'source': session.get('o_html'), 'n_link':clicked_source_url, 'o_link':curr_source_url})
 	else:
 		return JsonResponse({'msg': "error", "why" : "dont GET this page, only POST"})

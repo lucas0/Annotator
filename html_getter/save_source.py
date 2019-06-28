@@ -20,10 +20,11 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument("--window-size=1920x1080")
-chrome_driver = parent_path+"/chromedriver"
+chrome_driver = parent_path+"/chromedriver.exe"
 
 
-samples_path = data_dir+"/samples.csv"
+#samples_path = data_dir+"/samples.csv"
+samples_path = data_dir+"samples.csv"
 log_path = cwd+"/log_error.csv"
 html_path = data_dir+"/html_snopes/"
 
@@ -111,7 +112,14 @@ for idx, e in samples.iterrows():
                             while curr_parent.name not in ["p","div"]:
                                 old_parent = curr_parent
                                 curr_parent = curr_parent.parent
-                            old_parent.replace_with(a)
+                            old_parent.replace_with(a) 
+           
+            #Remove snopes top banner
+            for d in soup.find_all('div'):
+                if str(d) != "<None></None>":
+                    if d.has_attr("class"):
+                        if ("theme-header-wrapper" in d["class"] or "theme-header" in d["class"]):
+                            d.decompose()
 
             #removes the overlay
             decomposers = [s for s in soup.find_all(["span","div"]) if "Snopes Needs Your Help" in s.text]
@@ -119,7 +127,6 @@ for idx, e in samples.iterrows():
             [parents.extend(s.find_parents('w-div')) for s in decomposers]
             [p.decompose() for p in parents if p is not None]
 
-            #body = body.replace("overflow: hidden", "overflow: scroll").replace("overflow-x: hidden", "overflow-x: scroll").replace("overflow-y: hidden", "overflow-y: scroll")
             b = soup.find("body")
             #in-line style
             if b.has_attr("style"):
@@ -129,7 +136,6 @@ for idx, e in samples.iterrows():
                 s = re.sub(r'overflow-y:.+?(?=[;}])','overflow-y: scroll',s)
                 s = re.sub(r'overflow-x:.+?(?=[;}])','overflow-x: scroll',s)
                 b["style"] = s
-                #print(soup.find("body")["style"])
 
             #style is a tag
             if b.find("style") is not None:
@@ -139,20 +145,21 @@ for idx, e in samples.iterrows():
                 s = re.sub(r'overflow-x:.+?(?=[;}])','overflow-x: scroll',s)
                 #print(s)
                 soup.find("body").style.string.replace_with(s)
-                #print(b.style.prettify())
 
+            h = soup.find("html")
+            h = re.sub(r'overflow:.+?(?=[;}])','overflow: scroll',str(h))
+            soup.find("html").replace_with(bs(h))
             body = str(soup)
             #Add code to higlight hyperlink of current origin and scroll to it
             injectionPoint=body.split("</body>")
 
             highlightFnc = '<script> function highlight(){ let link = parent.document.getElementById("oLink").href; document.getElementById(link).style.backgroundColor="yellow"; } if (window.attachEvent) {window.attachEvent("onload", highlight);} else if (window.addEventListener) {window.addEventListener("load", highlight, false);} else {document.addEventListener("load", highlight, false);} </script>'
-            scrollFnc = '<script> function scrollDown(){ let link = parent.document.getElementById("oLink").href; var elmnt = document.getElementById(link); elmnt.scrollIntoView({ behavior: "smooth", block: "nearest"  }); } if (window.attachEvent) {window.attachEvent("onload", scrollDown);} else if (window.addEventListener) {window.addEventListener("load", scrollDown, false);} else {document.addEventListener("load", scrollDown, false);} </script>'
+            scrollFnc = '<script> function scrollDown(){ let link = parent.document.getElementById("oLink").href; var elmnt = document.getElementById(link); elmnt.scrollIntoView({ behavior: "smooth", block: "center"  }); } if (window.attachEvent) {window.attachEvent("onload", scrollDown);} else if (window.addEventListener) {window.addEventListener("load", scrollDown, false);} else {document.addEventListener("load", scrollDown, false);} </script>'
             highlightLnkFnc = '<script> function highlightLnk(newLnk,oldLnk){document.getElementById(oldLnk).style.backgroundColor="white"; document.getElementById(newLnk).style.backgroundColor="yellow"; } </script>'
 
             #Add JQuery CDN and event-handler
             jqueryCode='<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>'
             jqEvnt='<script> $("a").on("click", function(e){ e.preventDefault(); if(e.target.href){ if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oFrame").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let clicked_source = e.target.href; let csrf_tok = parent.document.getElementById("csrf_tok").value; $.ajax({ url: "/change_origin/", data: JSON.stringify({"clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", csrf_tok );}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oFrame").srcdoc=response.source; parent.document.getElementById("oLink").href=response.n_link; highlightLnk(response.n_link,response.o_link)} else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oFrame").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oFrame").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } } }); </script></body>'
-            #jqEvnt='<script> $("a").on("click", function(e){ e.preventDefault(); if(e.target.href){ if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oFrame").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let clicked_source = e.target.href; $.ajax({ url: "/change_origin/", data: JSON.stringify({"clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oFrame").srcdoc=response.source; parent.document.getElementById("oLink").href=response.n_link; highlightLnk(response.n_link,response.o_link)} else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oFrame").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oFrame").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } } }); </script></body>'
 
             body=injectionPoint[0]+highlightFnc+scrollFnc+highlightLnkFnc+jqueryCode+jqEvnt+injectionPoint[1]
 
@@ -162,26 +169,32 @@ for idx, e in samples.iterrows():
             # save
             with open(a_html_filename, "w+", encoding='utf-8') as f:
                 f.write(str(a_html))
-                #f.write(a_html)
         else:
             print("PAGE ALREADY SAVED")
 
         if o_html is not "done":
             print("SOURCE HTML")
-            domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urllib.parse.urlparse(o_html))
+            domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urllib.parse.urlparse(e.source_url))
+            print("")
+            print("DOMAIN: ",domain)
+            print("")
             soup = bs(o_html, 'lxml')
 
-            for elem in soup.find_all(['img', 'script']):
+            for elem in soup.find_all(['img', 'script', 'link', 'input']):
                 if elem.has_attr('src'):
                     src = elem['src']
                     if not src.startswith("http"):
                         src.lstrip("/")
                         elem['src'] = domain+src
+                if elem.has_attr('href'):
+                    src = elem['href']
+                    if not src.startswith("http"):
+                        src.lstrip("/")
+                        elem['href'] = domain+src
 
             o_html = soup
 
             with open(o_html_filename, "w+", encoding='utf-8') as f:
                 f.write(str(o_html))
-                #f.write(o_html)
         else:
             print("SOURCE ALREADY SAVED")

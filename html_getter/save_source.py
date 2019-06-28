@@ -32,9 +32,12 @@ num_samples = len(samples)
 
 #Change delimitter
 def logError(url, message):
-    with open(log_path, "a+") as log:
-        message = url+"<|>"+str(message)+"\n" #using comma in .write() function gives error
-        log.write(message)
+    message = url+"<|>"+str(message)+"\n" #using comma in .write() function gives error
+    with open(log_path, "r+") as log:
+        lines = log.readlines()
+    if message not in lines:
+        with open(log_path, "a+") as log:
+            log.write(message)
 
 def get_html(url):
     try:
@@ -144,7 +147,7 @@ for idx, e in samples.iterrows():
 
             highlightFnc = '<script> function highlight(){ let link = parent.document.getElementById("oLink").href; document.getElementById(link).style.backgroundColor="yellow"; } if (window.attachEvent) {window.attachEvent("onload", highlight);} else if (window.addEventListener) {window.addEventListener("load", highlight, false);} else {document.addEventListener("load", highlight, false);} </script>'
             scrollFnc = '<script> function scrollDown(){ let link = parent.document.getElementById("oLink").href; var elmnt = document.getElementById(link); elmnt.scrollIntoView({ behavior: "smooth", block: "nearest"  }); } if (window.attachEvent) {window.attachEvent("onload", scrollDown);} else if (window.addEventListener) {window.addEventListener("load", scrollDown, false);} else {document.addEventListener("load", scrollDown, false);} </script>'
-            highlightLnkFnc = '<script> function highlightLnk(newLnk,oldLnk){document.getElementById(oldLnk).style.backgroundColor="white"; document.getElementById(newLnk).style.backgroundColor="yellow"; } </script></body>'
+            highlightLnkFnc = '<script> function highlightLnk(newLnk,oldLnk){document.getElementById(oldLnk).style.backgroundColor="white"; document.getElementById(newLnk).style.backgroundColor="yellow"; } </script>'
 
             #Add JQuery CDN and event-handler
             jqueryCode='<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>'

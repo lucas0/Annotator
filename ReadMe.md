@@ -2,10 +2,8 @@
 
 ## save_source.py
 
-1) Changing the overflow to scroll on the style tag and on the style attribute of <body> doesnt solve the problem. Every page doesnt scroll now.
+1) Solve the icon-size on snopes. Ideally, to solve a problem you find its causes and act on them, try avoiding acting on the consequences.
 
-2) Need to store the csrf_token sent by django so that the ajax jqEvnt function in the iframe can access it for POST requests.
+2) Unwrap the new samples file (folded_snopes.csv) and run save_source.py to obtain the new html files. Remember to shuffle the samples.csv before starting the main loop in save_sources.py
 
-## views.py:
-
-1) TEST on some examples before commiting and make sure the commited version can be run without the need of any modifications, that is the point of having a repository.
+3) make the service available on the VM

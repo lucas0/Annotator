@@ -17,9 +17,15 @@ in_header = ["page", "claim", "verdict", "tags", "date", "author","source_list"]
 out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list","source_url"]
 
 for idx, e in snopes.iterrows():
+    print("entry")
+    print(entry)
+    print("entry")
     entry = e.values.tolist()
     src_lst = ast.literal_eval(entry[6])
     for src in src_lst:
+        print("src")
+        print(src)
+        print("src")
         n_entry = entry.extend([src])
         if os.path.exists(output_path):
             output = pd.read_csv(output_path, sep='\t', encoding="latin1")

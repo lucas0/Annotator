@@ -27,7 +27,7 @@ samples_path = data_dir+"/samples.csv"
 log_path = cwd+"/log_error.csv"
 html_path = data_dir+"/html_snopes/"
 
-samples = pd.read_csv(samples_path, sep='\t', encoding="latin1")
+samples = pd.read_csv(samples_path, sep='\t', encoding="latin1").sample(frac=1, random_state=3)
 num_samples = len(samples)
 
 #Change delimitter

@@ -15,18 +15,16 @@ output_path = cwd+"/samples.csv"
 
 out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list","source_url"]
 count = len(snopes)
+is_first = True
+
 for idx, e in snopes.iterrows():
     print("Row ",idx," out of ",count)
     entry = e.values.tolist()
     src_lst = ast.literal_eval(entry[6])
-
+    output = pd.DataFrame(columns=out_header)
     for src in src_lst:
         n_entry = entry + [src]
-        if os.path.exists(output_path):
-            output = pd.read_csv(output_path, sep='\t', encoding="latin1")
-        else:
-            output = pd.DataFrame(columns=out_header)
-
         output.loc[len(output)] = n_entry
-        with open(output_path, 'w+') as f:
-            output.to_csv(f, index=False, header=True, sep='\t') 
+
+    output.to_csv(output_path, sep='\t', header=is_first, index=False, mode='a')
+    is_first = False

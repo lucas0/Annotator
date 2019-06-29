@@ -20,11 +20,10 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument("--window-size=1920x1080")
-chrome_driver = parent_path+"/chromedriver.exe"
+chrome_driver = parent_path+"/chromedriver"
 
 
-#samples_path = data_dir+"/samples.csv"
-samples_path = data_dir+"samples.csv"
+samples_path = data_dir+"/samples.csv"
 log_path = cwd+"/log_error.csv"
 html_path = data_dir+"/html_snopes/"
 

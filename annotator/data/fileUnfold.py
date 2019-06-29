@@ -18,15 +18,15 @@ in_header = ["page", "claim", "verdict", "tags", "date", "author","source_list"]
 out_header = "page\tclaim\tverdict\ttags\tdate\tauthor\tsource_list\tsource_url\n"
 
 output.write(out_header)
-in_data=snopes.readlines()
+in_data=snopes.readlines()[:800]
 
 for i in range(1,len(in_data)):
-	try:
-		sourceList=ast.literal_eval(in_data[i].split("\t")[6])
-		for j in range(0,len(sourceList)):
-		output.write(in_data[i].rstrip()+"\t"+sourceList[j]+"\n")
-	except:
-		error_log.write(in_data[i])	
+    try:
+    	sourceList=ast.literal_eval(in_data[i].split("\t")[6])
+    	for j in range(0,len(sourceList)):
+        	output.write(in_data[i].rstrip()+"\t"+sourceList[j]+"\n")
+    except:
+    	error_log.write(in_data[i]+"\n")
 
 snopes.close()
 output.close()

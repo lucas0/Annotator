@@ -16,16 +16,32 @@ output_path = cwd+"/samples.csv"
 out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list","source_url"]
 count = len(snopes)
 for idx, e in snopes.iterrows():
-    print("Row ",idx," out of ",count)
-    entry = e.values.tolist()
-    src_lst = ast.literal_eval(entry[6])
+    if idx >= 95:
+        print("Row ",idx," out of ",count)
+        entry = e.values.tolist()
+        src_lst = ast.literal_eval(entry[6])
 
-    for src in src_lst:
-        n_entry = entry + [src]
-        if os.path.exists(output_path):
-            output = pd.read_csv(output_path, sep='\t', encoding="latin1")
-        else:
-            output = pd.DataFrame(columns=out_header)
+        for src in src_lst:
+            n_entry = entry + [src]
+            if os.path.exists(output_path):
+                output = pd.read_csv(output_path, sep='\t', encoding="latin1")
+            else:
+                output = pd.DataFrame(columns=out_header)
 
-        output.loc[len(output)] = n_entry
-        output.to_csv(output_path, sep='\t', index=False)
+            output.loc[len(output)] = n_entry
+            import ipdb;ipdb.set_trace()
+            output.to_csv(output_path, sep='\t', index=False)
+    else:
+        print("Row ",idx," out of ",count)
+        entry = e.values.tolist()
+        src_lst = ast.literal_eval(entry[6])
+
+        for src in src_lst:
+            n_entry = entry + [src]
+            if os.path.exists(output_path):
+                output = pd.read_csv(output_path, sep='\t', encoding="latin1")
+            else:
+                output = pd.DataFrame(columns=out_header)
+
+            output.loc[len(output)] = n_entry
+            output.to_csv(output_path, sep='\t', index=False)

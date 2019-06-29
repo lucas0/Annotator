@@ -17,10 +17,10 @@ in_header = ["page", "claim", "verdict", "tags", "date", "author","source_list"]
 out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list","source_url"]
 
 for idx, e in snopes.iterrows():
+    entry = e.values.tolist()
     print("entry")
     print(entry)
     print("entry")
-    entry = e.values.tolist()
     src_lst = ast.literal_eval(entry[6])
     for src in src_lst:
         print("src")

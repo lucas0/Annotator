@@ -11,7 +11,7 @@ import pandas as pd
 
 cwd = os.path.abspath(__file__+"/..")
 snopes = pd.read_csv(cwd+"/folded_snopes.csv", sep='\t', encoding="utf_8")
-output_path = cwd+"/samples_utf_8.csv"
+output_path = cwd+"/samples.csv"
 
 out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list","source_url"]
 count = len(snopes)

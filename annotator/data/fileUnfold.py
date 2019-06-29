@@ -7,27 +7,23 @@ Created on Wed Jun  5 11:04:12 2019
 
 import ast
 import os
+import pandas as pd
 
 cwd = os.path.abspath(__file__+"/..")
-
-snopes = open(cwd+"/folded_snopes.csv","r")
-output = open(cwd+"/samples.csv","a+")
-error_log = open(cwd+"/error_log.csv","a+")
+snopes = pd.read_csv(cwd+"/folded_snopes.csv", sep='\t', encoding="latin1")
+output_path = cwd+"/samples.csv"
 
 in_header = ["page", "claim", "verdict", "tags", "date", "author","source_list"]
-out_header = "page\tclaim\tverdict\ttags\tdate\tauthor\tsource_list\tsource_url\n"
+out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list","source_url"]
 
-output.write(out_header)
-in_data=snopes.readlines()[:800]
-
-for i in range(1,len(in_data)):
-    try:
-    	sourceList=ast.literal_eval(in_data[i].split("\t")[6])
-    	for j in range(0,len(sourceList)):
-        	output.write(in_data[i].rstrip()+"\t"+sourceList[j]+"\n")
-    except:
-    	error_log.write(in_data[i]+"\n")
-
-snopes.close()
-output.close()
-        
+for idx, e in snopes.iterrows():
+    entry = e.values.tolist()
+    src_lst = ast.literal_eval(entry[6])
+    for src in src_lst:
+        n_entry = entry.extend([src])
+        if os.path.exists(output_path):
+            output = pd.read_csv(output_path, sep='\t', encoding="latin1")
+        else:
+            output = pd.DataFrame(columns=out_header)
+        output.loc[len(output)] = n_entry
+        output.to_csv(output_path, sep='\t', index=False)

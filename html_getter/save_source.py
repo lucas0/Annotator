@@ -94,24 +94,25 @@ for idx, e in samples.iterrows():
             #Disable non-origin links
             soup = bs(a_html, 'lxml')
             for a in soup.find_all('a'):
-                if a.has_attr("href"):
-                    if not (a['href'] in ast.literal_eval(e.source_list)):
-                        a.unwrap()
+            	if str(a) != "<None></None>":
+                    if a.has_attr("href"):
+                        if not (a['href'] in ast.literal_eval(e.source_list)):
+                            a.unwrap()
 
-                    else:
-                        a['id']=a['href']
-                        #Remove tags inside link, to leave only text
-                        words=a.get_text()
-                        a.clear()
-                        a.insert(1,words)
-                        #Make the link a child tag of the paragraph (ie remove all tags between link and paragraph) <p><nobr><a></a></nobr></p> becomes <p><a></a></p>. Important for injected Javascript functions.
-                        if a.parent.name not in ["p","div"]:
-                            curr_parent = a.parent
-                            old_parent = curr_parent
-                            while curr_parent.name not in ["p","div"]:
+                        else:
+                            a['id']=a['href']
+                            #Remove tags inside link, to leave only text
+                            words=a.get_text()
+                            a.clear()
+                            a.insert(1,words)
+                            #Make the link a child tag of the paragraph (ie remove all tags between link and paragraph) <p><nobr><a></a></nobr></p> becomes <p><a></a></p>. Important for injected Javascript functions.
+                            if a.parent.name not in ["p","div"]:
+                                curr_parent = a.parent
                                 old_parent = curr_parent
-                                curr_parent = curr_parent.parent
-                            old_parent.replace_with(a) 
+                                while curr_parent.name not in ["p","div"]:
+                                    old_parent = curr_parent
+                                    curr_parent = curr_parent.parent
+                                old_parent.replace_with(a) 
            
             #Remove snopes top banner
             for d in soup.find_all('div'):
@@ -180,16 +181,17 @@ for idx, e in samples.iterrows():
             soup = bs(o_html, 'lxml')
 
             for elem in soup.find_all(['img', 'script', 'link', 'input']):
-                if elem.has_attr('src'):
-                    src = elem['src']
-                    if not src.startswith("http"):
-                        src.lstrip("/")
-                        elem['src'] = domain+src
-                if elem.has_attr('href'):
-                    src = elem['href']
-                    if not src.startswith("http"):
-                        src.lstrip("/")
-                        elem['href'] = domain+src
+                if str(elem) != "<None></None>":
+                    if elem.has_attr('src'):
+                        src = elem['src']
+                        if not src.startswith("http"):
+                            src.lstrip("/")
+                            elem['src'] = domain+src
+                    if elem.has_attr('href'):
+                        src = elem['href']
+                        if not src.startswith("http"):
+                            src.lstrip("/")
+                            elem['href'] = domain+src
 
             o_html = soup
 

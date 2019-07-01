@@ -93,9 +93,6 @@ for idx, e in samples.iterrows():
             print("PAGE HTML")
             
             soup = bs(a_html, 'lxml')
-            #Remove comments
-            comments = soup.find_all(text=lambda text:isinstance(text, Comment))
-            [comment.extract() for comment in comments]
             
             #Disable non-origin links
             for a in soup.find_all('a'):

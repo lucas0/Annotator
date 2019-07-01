@@ -91,8 +91,13 @@ for idx, e in samples.iterrows():
 
         if a_html is not "done":
             print("PAGE HTML")
-            #Disable non-origin links
+            
             soup = bs(a_html, 'lxml')
+            #Remove comments
+            comments = soup.find_all(text=lambda text:isinstance(text, Comment))
+            [comment.extract() for comment in comments]
+            
+            #Disable non-origin links
             for a in soup.find_all('a'):
             	if str(a) != "<None></None>":
                     if a.has_attr("href"):
@@ -109,10 +114,14 @@ for idx, e in samples.iterrows():
                             if a.parent.name not in ["p","div"]:
                                 curr_parent = a.parent
                                 old_parent = curr_parent
-                                while curr_parent.name not in ["p","div"]:
-                                    old_parent = curr_parent
-                                    curr_parent = curr_parent.parent
-                                old_parent.replace_with(a) 
+                                if curr_parent is not None:
+                                    while curr_parent.name not in ["p","div"]:
+                                        old_parent = curr_parent
+                                        curr_parent = curr_parent.parent
+                                        if curr_parent is None:
+                                            break
+                                    if curr_parent is not None:
+                                        old_parent.replace_with(a) 
            
             #Remove snopes top banner
             for d in soup.find_all('div'):

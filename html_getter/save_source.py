@@ -24,6 +24,7 @@ chrome_driver = parent_path+"/chromedriver"
 
 
 samples_path = data_dir+"/samples.csv"
+#samples_path = data_dir+"/sam.csv"
 log_path = cwd+"/log_error.csv"
 html_path = data_dir+"/html_snopes/"
 
@@ -59,7 +60,7 @@ def get_html(url):
             logError(url, "size")
             return "error"
         else:
-            return html.strip()
+            return html
     except Exception as e:
         print("GET HTML EXCEPTION")
         logError(url, e)
@@ -91,7 +92,7 @@ for idx, e in samples.iterrows():
 
         if a_html is not "done":
             print("PAGE HTML")
-            
+            a_html = re.sub("(<!--.*?-->)", "", a_html)
             soup = bs(a_html, 'lxml')
             
             #Disable non-origin links
@@ -180,6 +181,7 @@ for idx, e in samples.iterrows():
 
         if o_html is not "done":
             print("SOURCE HTML")
+            o_html = re.sub("(<!--.*?-->)", "", o_html)
             domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urllib.parse.urlparse(e.source_url))
             print("")
             print("DOMAIN: ",domain)

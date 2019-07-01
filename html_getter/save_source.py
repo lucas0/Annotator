@@ -59,7 +59,7 @@ def get_html(url):
             logError(url, "size")
             return "error"
         else:
-            return html
+            return html.strip()
     except Exception as e:
         print("GET HTML EXCEPTION")
         logError(url, e)

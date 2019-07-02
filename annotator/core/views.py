@@ -105,24 +105,6 @@ def get_least_annotated_page(name,aPage=None):
                 index = not_done_count['count'].idxmin(axis=0, skipna=True)
                 page = not_done_count.loc[index]['page']
         remOrigins = not_done_count.loc[not_done_count['page'] == page]
-    
-    page = remOrigins.iloc[0].page
-    #Automatically annotate broken links of this page as invalid input (op = 3)
-    src_lst = s_p.loc[s_p['page'] == page]
-    src_lst = ast.literal_eval(src_lst.iloc[0].source_list)
-    for idx, e in remOrigins.iterrows():
-        src_idx_num = src_lst.index(e.source_url)
-        if not (os.path.exists(snopes_path+(e.page.strip("/").split("/")[-1]+"/")+str(src_idx_num)+".html")):
-            save_annotation(e.page, e.source_url, "3", name)
-			
-	#Update done_by_annotator, count_file, and not_done_count
-    done_by_annotator = get_done_by_annotator(name)
-    count_file = get_count_file(s_p)
-    not_done_count = count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)]
-
-    remOrigins = not_done_count.loc[not_done_count['page'] == page]
-    if len(remOrigins)==0:
-        return get_least_annotated_page(name)
 
     entry = remOrigins.iloc[0]
     entry = s_p[(s_p.page.isin([entry.page]) & s_p.source_url.isin([entry.source_url]))].iloc[0]
@@ -137,13 +119,22 @@ def get_least_annotated_page(name,aPage=None):
         src_lst = ast.literal_eval(src_lst.decode())
 
     a_page_path = a_page.strip("/").split("/")[-1]+"/"
+    a_page_path = snopes_path+a_page_path+"page.html"
     src_idx_num = src_lst.index(o_page)
     o_page_path = a_page_path+str(src_idx_num)+".html"
+    o_page_path = snopes_path+o_page_path
+    
+    # If page has a broken link, get another page (instead of looping over all sources)
+    if not (os.path.exists(o_page_path) and os.path.exists(a_page_path)):
+            save_annotation(a_page, o_page, "3", name)
+            return get_least_annotated_page(name)
 
-    f = codecs.open(snopes_path+a_page_path+"page.html", encoding='utf-8')
+    f = codecs.open(a_page_path, encoding='utf-8')
     a_html = bs(f.read(),"lxml")
-    f = codecs.open(snopes_path+o_page_path, encoding='utf-8')
+
+    f = codecs.open(o_page_path, encoding='utf-8')
     o_html = bs(f.read(),"lxml")
+
     filenames = [f for f in listdir(snopes_path+a_page_path)]
     a_total = len(filenames) - 1
     a_done  = a_total - len(remOrigins)

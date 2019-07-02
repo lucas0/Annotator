@@ -23,13 +23,14 @@ chrome_options.add_argument("--window-size=1920x1080")
 chrome_driver = parent_path+"/chromedriver"
 
 samples_path = data_dir+"/samples.csv"
-#samples_path = data_dir+"/sam.csv"
 log_path = cwd+"/log_error.csv"
 html_path = data_dir+"/html_snopes/"
+error_path = data_dir+"/bad_links.csv"
 
 #samples = pd.read_csv(samples_path, sep='\t', encoding="utf_8").sample(frac=1, random_state=3)
 samples = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
 num_samples = len(samples)
+out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list","source_url"]
 
 #Change delimitter
 def logError(url, message):
@@ -68,6 +69,8 @@ def get_html(url):
     finally:
         browser.quit()
 
+is_first = not (os.path.exists(error_path))
+
 #Used to check whether or not this will be the first write to samples_html.csv
 for idx, e in samples.iterrows():
     print("\n|> ROW: ",idx,"/",num_samples)
@@ -86,12 +89,17 @@ for idx, e in samples.iterrows():
     o_html = "done" if os.path.exists(o_html_filename) else get_html(e.source_url)
 
     if "error" in [a_html,o_html]:
-        continue
+        output = pd.DataFrame(columns=out_header)
+        entry = e.values.tolist()
+        output.loc[len(output)] = entry
+        output.to_csv(error_path, sep='\t', header=is_first, index=False, mode='a')
+        is_first = False
 
     else:
 
         if a_html is not "done":
             print("PAGE HTML")
+            # Remove all comments from html
             a_html = re.sub("(<!--.*?-->)", "", a_html)
             soup = bs(a_html, 'lxml')
 
@@ -101,7 +109,6 @@ for idx, e in samples.iterrows():
                     if a.has_attr("href"):
                         if not (a['href'] in ast.literal_eval(e.source_list)):
                             a.unwrap()
-
                         else:
                             a['id']=a['href']
                             #Remove tags inside link, to leave only text
@@ -134,18 +141,20 @@ for idx, e in samples.iterrows():
             [parents.extend(s.find_parents('w-div')) for s in decomposers]
             [p.decompose() for p in parents if p is not None]
 
-            #get all body classes
-
 
             b = soup.find("body")
             #in-line style
             if b.has_attr("style"):
                 s = b["style"]
-                #print(s)
                 s = re.sub(r'overflow:.+?(?=[;}])','overflow: scroll',s)
                 s = re.sub(r'overflow-y:.+?(?=[;}])','overflow-y: scroll',s)
                 s = re.sub(r'overflow-x:.+?(?=[;}])','overflow-x: scroll',s)
                 b["style"] = s
+            
+            '''
+            REASON FOR COMMENT : the commented code changes overflow in all style tags inside 
+            body even if they arent affecting the body. The new code added below targets 
+            styles that affect body directly or through classes
 
             #style is a tag
             if b.find("style") is not None:
@@ -155,11 +164,36 @@ for idx, e in samples.iterrows():
                 s = re.sub(r'overflow-x:.+?(?=[;}])','overflow-x: scroll',s)
                 #print(s)
                 soup.find("body").style.string.replace_with(s)
+            '''
 
-            h = soup.find("html")
-            h = re.sub(r'overflow:.+?(?=[;}])','overflow: scroll',str(h))
-            soup.find("html").replace_with(bs(h,"lxml"))
+            # List intitally only has body as we always want to change body style
+            class_list = ["body"]
+            # Get body tag
+            b = soup.find("body")
+            # if statement is for error checking, nothing more
+            if b:
+                if b.has_attr("class"):
+                    classes = b["class"]
+                    if type(classes) == list:
+                        print("true is list")
+                        class_list = class_list + classes
+                    else:
+                        print("false isnt list")
+                        class_list.append(classes)
+
             body = str(soup)
+            # Go over all styles affecting body (bode + classes) and change overflow
+            for body_class in class_list:
+                # Get css rule affecting body
+                pattern = body_class +'{.+?(})'
+                class_style = re.search(str(pattern), body) 
+                if class_style:
+                    # Turn to string and substitute value of overflow with scroll
+                    class_style = class_style.group(0)
+                    changed_style = re.sub(r'overflow:.+?(?=[;}])','overflow: scroll',class_style)
+                    # Replace in body string
+                    body = body.replace(class_style, changed_style)
+
             #Add code to higlight hyperlink of current origin and scroll to it
             injectionPoint=body.split("</body>")
 
@@ -207,3 +241,11 @@ for idx, e in samples.iterrows():
                 f.write(str(o_html))
         else:
             print("SOURCE ALREADY SAVED")
+
+if os.path.exists(error_path):
+    error_df = pd.read_csv(error_path, sep='\t', encoding="utf_8")
+    cleaned_samples = pd.concat([samples, error_df], sort=True).drop_duplicates(keep=False)
+    cleaned_samples.to_csv(samples_path, sep='\t', header=True, index=False)
+    
+    error_df = error_df.drop_duplicates(keep=False)
+    error_df.to_csv(error_path, sep='\t', header=True, index=False)

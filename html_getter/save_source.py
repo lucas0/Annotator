@@ -22,13 +22,13 @@ chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument("--window-size=1920x1080")
 chrome_driver = parent_path+"/chromedriver"
 
-
 samples_path = data_dir+"/samples.csv"
 #samples_path = data_dir+"/sam.csv"
 log_path = cwd+"/log_error.csv"
 html_path = data_dir+"/html_snopes/"
 
-samples = pd.read_csv(samples_path, sep='\t', encoding="utf_8").sample(frac=1, random_state=3)
+#samples = pd.read_csv(samples_path, sep='\t', encoding="utf_8").sample(frac=1, random_state=3)
+samples = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
 num_samples = len(samples)
 
 #Change delimitter
@@ -43,7 +43,7 @@ def logError(url, message):
 def get_html(url):
     try:
         browser = webdriver.Chrome(chrome_options=chrome_options, executable_path=chrome_driver)
-        browser.header_overrides = {'User-Agent': 'Custom user agent'}
+        browser.header_overrides = {'User-Agent': 'Custom user agent', 'ORG_UNIT':'IT'}
         browser.get(url)
         for req in browser.requests:
             if req.response:
@@ -94,7 +94,7 @@ for idx, e in samples.iterrows():
             print("PAGE HTML")
             a_html = re.sub("(<!--.*?-->)", "", a_html)
             soup = bs(a_html, 'lxml')
-            
+
             #Disable non-origin links
             for a in soup.find_all('a'):
             	if str(a) != "<None></None>":
@@ -119,8 +119,8 @@ for idx, e in samples.iterrows():
                                         if curr_parent is None:
                                             break
                                     if curr_parent is not None:
-                                        old_parent.replace_with(a) 
-           
+                                        old_parent.replace_with(a)
+
             #Remove snopes top banner
             for d in soup.find_all('div'):
                 if str(d) != "<None></None>":
@@ -133,6 +133,9 @@ for idx, e in samples.iterrows():
             parents = []
             [parents.extend(s.find_parents('w-div')) for s in decomposers]
             [p.decompose() for p in parents if p is not None]
+
+            #get all body classes
+
 
             b = soup.find("body")
             #in-line style
@@ -155,7 +158,7 @@ for idx, e in samples.iterrows():
 
             h = soup.find("html")
             h = re.sub(r'overflow:.+?(?=[;}])','overflow: scroll',str(h))
-            soup.find("html").replace_with(bs(h))
+            soup.find("html").replace_with(bs(h,"lxml"))
             body = str(soup)
             #Add code to higlight hyperlink of current origin and scroll to it
             injectionPoint=body.split("</body>")
@@ -183,9 +186,6 @@ for idx, e in samples.iterrows():
             print("SOURCE HTML")
             o_html = re.sub("(<!--.*?-->)", "", o_html)
             domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urllib.parse.urlparse(e.source_url))
-            print("")
-            print("DOMAIN: ",domain)
-            print("")
             soup = bs(o_html, 'lxml')
 
             for elem in soup.find_all(['img', 'script', 'link', 'input']):

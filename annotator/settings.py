@@ -25,7 +25,7 @@ SECRET_KEY = '2_jc_06-o6i+nh_@xj+-f*hq1-3=h&s5g@j@sr^*^hjswbhy+y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['veritas.annotator.insight-centre.org']
 
 
 # Application definition

@@ -226,7 +226,7 @@ for idx, e in samples.iterrows():
                 if str(elem) != "<None></None>":
                     if elem.has_attr('src'):
                         src = elem['src']
-                        if not src.startswith("http"):
+                        if not( src.startswith("http") or src.startswith("https")):
                             src.lstrip("/")
                             elem['src'] = domain+src
                     if elem.has_attr('href'):

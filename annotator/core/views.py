@@ -39,7 +39,7 @@ def get_done_by_annotator(name):
 def get_count_file(s_p):
     #Creates or reads countfile:
     if os.path.exists(count_path):
-        count_file = pd.read_csv(count_path, sep=',', encoding="latin1").sample(frac=1)
+        count_file = pd.read_csv(count_path, sep=',', encoding="latin1")
     else:
         count_file = s_p[['page','source_url']].copy()
         count_file['count'] = 0
@@ -118,15 +118,25 @@ def get_least_annotated_page(name,aPage=None):
     except:
         src_lst = ast.literal_eval(src_lst.decode())
 
-    a_page_path = a_page.strip("/").split("/")[-1]+"/"
-    a_page_path = snopes_path+a_page_path+"page.html"
+    path_of_both = snopes_path + (a_page.strip("/").split("/")[-1]+"/") 
+    
+    a_page_path = path_of_both+"page.html"
+    
     src_idx_num = src_lst.index(o_page)
-    o_page_path = a_page_path+str(src_idx_num)+".html"
-    o_page_path = snopes_path+o_page_path
+    o_page_path = path_of_both+str(src_idx_num)+".html"
     
     # If page has a broken link, get another page (instead of looping over all sources)
     if not (os.path.exists(o_page_path) and os.path.exists(a_page_path)):
             save_annotation(a_page, o_page, "3", name)
+            print("")
+            print("a page")
+            print(a_page_path)
+            print("a page")
+            print("")
+            print("o page")
+            print(o_page_path)
+            print("o pgae")
+            print("")
             return get_least_annotated_page(name)
 
     f = codecs.open(a_page_path, encoding='utf-8')
@@ -135,9 +145,10 @@ def get_least_annotated_page(name,aPage=None):
     f = codecs.open(o_page_path, encoding='utf-8')
     o_html = bs(f.read(),"lxml")
 
-    filenames = [f for f in listdir(snopes_path+a_page_path)]
+    filenames = [f for f in listdir(path_of_both)]
     a_total = len(filenames) - 1
-    a_done  = a_total - len(remOrigins)
+    a_done  = sum(entry.page in s for s in done_by_annotator)
+    print("WORKS")
 
     return a_page, o_page, str(a_html), str(o_html), src_lst, a_done, a_total, len(done_by_annotator)
 

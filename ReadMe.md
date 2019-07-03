@@ -16,7 +16,7 @@ Happened once. I pressed a link with its src having the characters ```%20```, bu
 
 ## In the source_html, some images are not found (due to src being improperly changed). 
 
-Why are we only adding the domain instead of the entire source_url to the src of the images/links/etc ?
+In ```save_source.py```, why are we only adding the domain instead of the entire source_url to the src of the images/links/etc ?
 
 ## If you submit too fast, csrf token might not have enough time to load into form. 
 

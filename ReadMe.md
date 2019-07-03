@@ -16,6 +16,6 @@ Happened once. I pressed a link with its src having the characters ```%20```, bu
 
 **Proposed solution:** send a string instead of a JSON Object inside the ajax request. The reason this might work is because, when a JSON Object is sent to Django, it must be decoded first (as it is receieved as a byte-like Object) then data can be retrieved from it. So this change in characters might be due to the usage of ```.decode()``` in ```change_origin()```.
 
-3) In the source_html, some images are not found (due to src being improperly changed). Why are we only adding the domain instead of the entire source_url to the src of the images/links/etc ?
+### In the source_html, some images are not found (due to src being improperly changed). Why are we only adding the domain instead of the entire source_url to the src of the images/links/etc ?
 
-4) If you submit too fast, csrf token might not have enough time to load into form. Pretty unlikely to happen normally as users would take atleast a couple of seconds to look over the right-hand side iframe. But I thought it was worth mentioning.
+### If you submit too fast, csrf token might not have enough time to load into form. Pretty unlikely to happen normally as users would take atleast a couple of seconds to look over the right-hand side iframe. But I thought it was worth mentioning.

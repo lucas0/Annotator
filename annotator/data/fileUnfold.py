@@ -10,7 +10,7 @@ import os
 import pandas as pd
 
 cwd = os.path.abspath(__file__+"/..")
-snopes = pd.read_csv(cwd+"/folded_snopes.csv", sep='\t', encoding="utf_8").sample(frac=1).reset_index(drop=True)
+snopes = pd.read_csv(cwd+"/new_folded.csv", sep='\t', encoding="utf_8").sample(frac=1).reset_index(drop=True)
 output_path = cwd+"/samples.csv"
 
 out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list","source_url"]

@@ -8,7 +8,7 @@ cwd = os.path.abspath(__file__+"/..")
 data_dir = os.path.abspath(cwd+"/../annotator/data/")
 html_dir = data_dir+"/html_snopes"
 
-sources = pd.read_csv(data_dir+"/samples.csv", sep="\t")
+#sources = pd.read_csv(data_dir+"/samples.csv", sep="\t")
 sources = pd.read_csv(data_dir+"/folded_snopes.csv", sep="\t")
 
 invalid_domains = ["facebook, twitter"]
@@ -35,4 +35,5 @@ for idx,e in sources.iterrows():
                 os.remove(html_filename)
 
 sources.index = range(len(sources))
+sources.to_csv(data_dir+"/new_folded.csv", sep="\t", index=False)
 print(len(sources))

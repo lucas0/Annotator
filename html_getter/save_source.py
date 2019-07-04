@@ -12,6 +12,7 @@ import lxml
 import urllib
 import ast
 import time
+
 cwd = os.path.abspath(__file__+"/..")
 parent_path = os.path.abspath(__file__+"/../../")
 data_dir = os.path.abspath(cwd+"/../annotator/data/")
@@ -21,7 +22,7 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument("--window-size=1920x1080")
-chrome_driver = parent_path+"/chromedriver.exe"
+chrome_driver = parent_path+"/chromedriver"
 
 samples_path = data_dir+"/samples.csv"
 log_path = cwd+"/log_error.csv"
@@ -32,6 +33,29 @@ samples = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
 num_samples = len(samples)
 out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list","source_url"]
 req_header = {'User-Agent': 'a user agent'}
+
+def get_correct_path(lst, d, src):
+	list_for_this_elem = lst
+	dom = d
+	while True:
+        try:
+            start=time.time()	
+            r = requests.get(dom + src, headers=req_header, timeout=5)
+            end = time.time()
+            print("TIME TAKEN")
+            print(end - start)
+            print("TIME TAKEN")
+            if r.status_code == requests.codes.ok:
+                break
+        except requests.exceptions.RequestException as e:
+            print("REQUESTS EXCEPTION")
+            print(e)
+            print("REQUESTS EXCEPTION")
+        if not (list_for_this_elem):
+            break
+        dom = dom + list_for_this_elem[0] + "/"
+        list_for_this_elem.pop(0)
+    return dom
 
 #Change delimitter
 def logError(url, message):
@@ -218,52 +242,14 @@ for idx, e in samples.iterrows():
                         src = elem['src']
                         if not src.startswith("http"):
                             list_for_this_elem = without_domain.split("/")
-                            dom = domain
                             src.lstrip("/")
-                            while True:
-                                try:
-                                    start = time.time()
-                                    r = requests.get(dom + src, headers=req_header, timeout=5)
-                                    end = time.time()
-                                    print("TIME TAKEN")
-                                    print(end - start)
-                                    print("TIME TAKEN")
-                                    if r.status_code == requests.codes.ok:
-                                        break
-                                except requests.exceptions.RequestException as e:
-                                    print("REQUESTS EXCEPTION")
-                                    print(e)
-                                    print("REQUESTS EXCEPTION")
-                                if not (list_for_this_elem):
-                                    break
-                                dom = dom + "/" + list_for_this_elem[0]
-                                list_for_this_elem = list_for_this_elem.remove(list_for_this_elem[0])
-                            elem['src'] = dom+src
+                            elem['src'] = get_correct_path(list_for_this_elem, domain, src) + src
                     if elem.has_attr('href'):
                         src = elem['href']
                         if not src.startswith("http"):
                             list_for_this_elem = without_domain.split("/")
-                            dom = domain
                             src.lstrip("/")
-                            while True:
-                                try:
-                                    start=time.time()	
-                                    r = requests.get(dom + src, headers=req_header, timeout=5)
-                                    end = time.time()
-                                    print("TIME TAKEN")
-                                    print(end - start)
-                                    print("TIME TAKEN")
-                                    if r.status_code == requests.codes.ok:
-                                        break
-                                except requests.exceptions.RequestException as e:
-                                    print("REQUESTS EXCEPTION")
-                                    print(e)
-                                    print("REQUESTS EXCEPTION")
-                                if not (list_for_this_elem):
-                                    break
-                                dom = dom + "/" + list_for_this_elem[0]
-                                list_for_this_elem = list_for_this_elem.remove(list_for_this_elem[0])
-                            elem['href'] = dom+src
+                            elem['href'] = get_correct_path(list_for_this_elem, domain, src) + src
             o_html = soup
 
             with open(o_html_filename, "w+", encoding='utf-8') as f:

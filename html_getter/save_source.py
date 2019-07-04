@@ -23,7 +23,7 @@ chrome_options.add_argument("--window-size=1920x1080")
 chrome_driver = parent_path+"/chromedriver.exe"
 
 samples_path = data_dir+"/samples.csv"
-samples_path = data_dir+"/sam.csv"
+#samples_path = data_dir+"/sam.csv"
 log_path = cwd+"/log_error.csv"
 html_path = data_dir+"/html_snopes/"
 error_path = data_dir+"/bad_links.csv"

@@ -9,7 +9,7 @@ data_dir = os.path.abspath(cwd+"/../annotator/data/")
 html_dir = data_dir+"/html_snopes"
 
 sources = pd.read_csv(data_dir+"/samples.csv", sep="\t")
-sources = pd.read_csv(data_dir+"/samples.csv", sep="\t")
+sources = pd.read_csv(data_dir+"/folded_snopes.csv", sep="\t")
 
 invalid_domains = ["facebook, twitter"]
 valid_verdicts = ["true", "false", "legend", "mostly true", "mostly false"]

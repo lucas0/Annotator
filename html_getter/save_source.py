@@ -20,9 +20,10 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument("--window-size=1920x1080")
-chrome_driver = parent_path+"/chromedriver"
+chrome_driver = parent_path+"/chromedriver.exe"
 
 samples_path = data_dir+"/samples.csv"
+samples_path = data_dir+"/sam.csv"
 log_path = cwd+"/log_error.csv"
 html_path = data_dir+"/html_snopes/"
 error_path = data_dir+"/bad_links.csv"
@@ -149,7 +150,13 @@ for idx, e in samples.iterrows():
                 s = re.sub(r'overflow:.+?(?=[;}])','overflow: scroll',s)
                 s = re.sub(r'overflow-y:.+?(?=[;}])','overflow-y: scroll',s)
                 s = re.sub(r'overflow-x:.+?(?=[;}])','overflow-x: scroll',s)
+                # If original style didnt have overflow in it, add it
+                if (s == b["style"]):
+                	s = s + " overflow: scroll;"
                 b["style"] = s
+            else:
+            	# If there was no style attribute
+            	b["style"] = "overflow: scroll;"
             
             '''
             REASON FOR COMMENT : the commented code changes overflow in all style tags inside 
@@ -197,15 +204,16 @@ for idx, e in samples.iterrows():
             #Add code to higlight hyperlink of current origin and scroll to it
             injectionPoint=body.split("</body>")
 
-            highlightFnc = '<script> function highlight(){ let link = parent.document.getElementById("oLink").href; document.getElementById(link).style.backgroundColor="yellow"; } if (window.attachEvent) {window.attachEvent("onload", highlight);} else if (window.addEventListener) {window.addEventListener("load", highlight, false);} else {document.addEventListener("load", highlight, false);} </script>'
-            scrollFnc = '<script> function scrollDown(){ let link = parent.document.getElementById("oLink").href; var elmnt = document.getElementById(link); elmnt.scrollIntoView({ behavior: "smooth", block: "center"  }); } if (window.attachEvent) {window.attachEvent("onload", scrollDown);} else if (window.addEventListener) {window.addEventListener("load", scrollDown, false);} else {document.addEventListener("load", scrollDown, false);} </script>'
+            #highlightFnc = '<script> function highlight(){ let link = parent.document.getElementById("oLink").href; document.getElementById(link).style.backgroundColor="yellow"; } if (window.attachEvent) {window.attachEvent("onload", highlight);} else if (window.addEventListener) {window.addEventListener("load", highlight, false);} else {document.addEventListener("load", highlight, false);} </script>'
+            #scrollFnc = '<script> function scrollDown(){ let link = parent.document.getElementById("oLink").href; var elmnt = document.getElementById(link); elmnt.scrollIntoView({ behavior: "smooth", block: "center"  }); } if (window.attachEvent) {window.attachEvent("onload", scrollDown);} else if (window.addEventListener) {window.addEventListener("load", scrollDown, false);} else {document.addEventListener("load", scrollDown, false);} </script>'
             highlightLnkFnc = '<script> function highlightLnk(newLnk,oldLnk){document.getElementById(oldLnk).style.backgroundColor="white"; document.getElementById(newLnk).style.backgroundColor="yellow"; } </script>'
 
             #Add JQuery CDN and event-handler
             jqueryCode='<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>'
             jqEvnt='<script> $("a").on("click", function(e){ e.preventDefault(); if(e.target.href){ if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oFrame").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let clicked_source = e.target.href; let csrf_tok = parent.document.getElementById("csrf_tok").value; $.ajax({ url: "/change_origin/", data: JSON.stringify({"clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", csrf_tok );}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oFrame").srcdoc=response.source; parent.document.getElementById("oLink").href=response.n_link; highlightLnk(response.n_link,response.o_link)} else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oFrame").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oFrame").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } } }); </script></body>'
 
-            body=injectionPoint[0]+highlightFnc+scrollFnc+highlightLnkFnc+jqueryCode+jqEvnt+injectionPoint[1]
+            #body=injectionPoint[0]+highlightFnc+scrollFnc+highlightLnkFnc+jqueryCode+jqEvnt+injectionPoint[1]
+            body=injectionPoint[0]+highlightLnkFnc+jqueryCode+jqEvnt+injectionPoint[1]
 
 
             a_html = bs(body,'lxml')
@@ -220,6 +228,7 @@ for idx, e in samples.iterrows():
             print("SOURCE HTML")
             o_html = re.sub("(<!--.*?-->)", "", o_html)
             domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urllib.parse.urlparse(e.source_url))
+            without_domain = (e.source_url).replace(domain, "")
             soup = bs(o_html, 'lxml')
 
             for elem in soup.find_all(['img', 'script', 'link', 'input']):
@@ -241,7 +250,7 @@ for idx, e in samples.iterrows():
                 f.write(str(o_html))
         else:
             print("SOURCE ALREADY SAVED")
-
+'''
 if os.path.exists(error_path):
     error_df = pd.read_csv(error_path, sep='\t', encoding="utf_8")
     cleaned_samples = pd.concat([samples, error_df], sort=True).drop_duplicates(keep=False)
@@ -249,3 +258,4 @@ if os.path.exists(error_path):
     
     error_df = error_df.drop_duplicates(keep=False)
     error_df.to_csv(error_path, sep='\t', header=True, index=False)
+'''

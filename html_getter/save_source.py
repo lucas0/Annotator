@@ -35,9 +35,9 @@ out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list"
 req_header = {'User-Agent': 'a user agent'}
 
 def get_correct_path(lst, d, src):
-	list_for_this_elem = lst
-	dom = d
-	while True:
+    list_for_this_elem = lst
+    dom = d
+    while True:
         try:
             start=time.time()	
             r = requests.get(dom + src, headers=req_header, timeout=5)
@@ -130,7 +130,7 @@ for idx, e in samples.iterrows():
 
             #Disable non-origin links
             for a in soup.find_all('a'):
-            	if str(a) != "<None></None>":
+                if str(a) != "<None></None>":
                     if a.has_attr("href"):
                         if not (a['href'] in ast.literal_eval(e.source_list)):
                             a.unwrap()

@@ -3,12 +3,14 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from django.http import JsonResponse
+import json
 import codecs
 
 import os, sys
 from os import listdir
 from os.path import isfile, join
 import pandas as pd
+import re
 
 from bs4 import BeautifulSoup as bs
 import lxml
@@ -25,6 +27,20 @@ results_path = data_dir+"/results/"
 snopes_path = data_dir+"/html_snopes/"
 count_path = data_dir+"/count.csv"
 # AUX FUNCTIONS
+
+def highlight_link(a_html, o_url):
+	for a in a_html.find_all("a"):
+		if a.has_attr("href"):
+			if a["href"] == o_url:
+				if a.has_attr("style"):
+					s = a["style"]
+					if "background-color" in s:
+						changed_style = re.sub(r'background-color:.+?(?=[;}])','background-color: yellow',s)
+						a["style"] = changed_style
+				else:
+					a["style"] = "background-color: yellow;"
+				break
+	return str(a_html)
 
 def get_done_by_annotator(name):
     # creates a list of pages that have been already annotated by the current annotator
@@ -128,16 +144,7 @@ def get_least_annotated_page(name,aPage=None):
     # If page has a broken link, get another page (instead of looping over all sources)
     if not (os.path.exists(o_page_path) and os.path.exists(a_page_path)):
             save_annotation(a_page, o_page, "3", name)
-            print("")
-            print("a page")
-            print(a_page_path)
-            print("a page")
-            print("")
-            print("o page")
-            print(o_page_path)
-            print("o pgae")
-            print("")
-            return get_least_annotated_page(name)
+            return get_least_annotated_page(a_page, name)
 
     f = codecs.open(a_page_path, encoding='utf-8')
     a_html = bs(f.read(),"lxml")
@@ -150,7 +157,7 @@ def get_least_annotated_page(name,aPage=None):
     a_done  = sum(entry.page in s for s in done_by_annotator)
     print("WORKS")
 
-    return a_page, o_page, str(a_html), str(o_html), src_lst, a_done, a_total, len(done_by_annotator)
+    return a_page, o_page, a_html, str(o_html), src_lst, a_done, a_total, len(done_by_annotator)
 
 # VIEWS
 def home(request):
@@ -204,6 +211,10 @@ def home(request):
 			print("")
 			print(src_lst)
 			print("")
+
+		# Highlight link with scr == source_url
+		if a_html:
+			a_html = highlight_link(a_html, o_url)
 		
 		#Save claim and origin links and list of origins in session
 		session['claim'] = a_url
@@ -226,7 +237,7 @@ def home(request):
 
 		print(a_url)
 		print(o_url)
-		
+
 		return render(request, 'home.html', {'t1':a_html, 't2':o_html, 't3':a_url, 't4':o_url, 'a_done':a_done, 'a_total':a_total, 't_done':t_done})
 
 def test(request):
@@ -254,7 +265,7 @@ def change_origin(request):
 		print(request.body)
 		print("")
 		
-		received = ast.literal_eval(request.body.decode())
+		received = json.loads(request.body)
 		
 		print("")
 		print(received)
@@ -264,7 +275,10 @@ def change_origin(request):
 		curr_source_url = session.get('origin')
 		src_lst = session.get('src_lst')
 		clicked_source_url = received['clicked_source']
-		src_idx_num = src_lst.index(clicked_source_url)
+		try:
+			src_idx_num = src_lst.index(clicked_source_url)
+		except:
+			return JsonResponse({'msg': "bad", 'source': session.get('o_html'), 'n_link':curr_source_url, 'o_link':clicked_source_url})
 
 		#Check if path to source exists (ie valid link)
 		if not os.path.exists(snopes_path+(page.strip("/").split("/")[-1]+"/")+str((src_idx_num))+".html"):

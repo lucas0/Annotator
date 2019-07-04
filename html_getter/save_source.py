@@ -5,12 +5,13 @@ import pandas as pd
 from seleniumwire import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException
+import requests
 
 from bs4 import BeautifulSoup as bs
 import lxml
 import urllib
 import ast
-
+import time
 cwd = os.path.abspath(__file__+"/..")
 parent_path = os.path.abspath(__file__+"/../../")
 data_dir = os.path.abspath(cwd+"/../annotator/data/")
@@ -23,15 +24,14 @@ chrome_options.add_argument("--window-size=1920x1080")
 chrome_driver = parent_path+"/chromedriver.exe"
 
 samples_path = data_dir+"/samples.csv"
-#samples_path = data_dir+"/sam.csv"
 log_path = cwd+"/log_error.csv"
 html_path = data_dir+"/html_snopes/"
 error_path = data_dir+"/bad_links.csv"
 
-#samples = pd.read_csv(samples_path, sep='\t', encoding="utf_8").sample(frac=1, random_state=3)
 samples = pd.read_csv(samples_path, sep='\t', encoding="utf_8")
 num_samples = len(samples)
 out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list","source_url"]
+req_header = {'User-Agent': 'a user agent'}
 
 #Change delimitter
 def logError(url, message):
@@ -157,21 +157,6 @@ for idx, e in samples.iterrows():
             else:
             	# If there was no style attribute
             	b["style"] = "overflow: scroll;"
-            
-            '''
-            REASON FOR COMMENT : the commented code changes overflow in all style tags inside 
-            body even if they arent affecting the body. The new code added below targets 
-            styles that affect body directly or through classes
-
-            #style is a tag
-            if b.find("style") is not None:
-                s = b.style.string
-                s = re.sub(r'overflow:.+?(?=[;}])','overflow: scroll',s)
-                s = re.sub(r'overflow-y:.+?(?=[;}])','overflow-y: scroll',s)
-                s = re.sub(r'overflow-x:.+?(?=[;}])','overflow-x: scroll',s)
-                #print(s)
-                soup.find("body").style.string.replace_with(s)
-            '''
 
             # List intitally only has body as we always want to change body style
             class_list = ["body"]
@@ -201,18 +186,15 @@ for idx, e in samples.iterrows():
                     # Replace in body string
                     body = body.replace(class_style, changed_style)
 
-            #Add code to higlight hyperlink of current origin and scroll to it
+            
             injectionPoint=body.split("</body>")
-
-            #highlightFnc = '<script> function highlight(){ let link = parent.document.getElementById("oLink").href; document.getElementById(link).style.backgroundColor="yellow"; } if (window.attachEvent) {window.attachEvent("onload", highlight);} else if (window.addEventListener) {window.addEventListener("load", highlight, false);} else {document.addEventListener("load", highlight, false);} </script>'
-            #scrollFnc = '<script> function scrollDown(){ let link = parent.document.getElementById("oLink").href; var elmnt = document.getElementById(link); elmnt.scrollIntoView({ behavior: "smooth", block: "center"  }); } if (window.attachEvent) {window.attachEvent("onload", scrollDown);} else if (window.addEventListener) {window.addEventListener("load", scrollDown, false);} else {document.addEventListener("load", scrollDown, false);} </script>'
+            # Code to higlight the pressed link
             highlightLnkFnc = '<script> function highlightLnk(newLnk,oldLnk){document.getElementById(oldLnk).style.backgroundColor="white"; document.getElementById(newLnk).style.backgroundColor="yellow"; } </script>'
 
-            #Add JQuery CDN and event-handler
+            # JQuery CDN and event-handler
             jqueryCode='<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>'
-            jqEvnt='<script> $("a").on("click", function(e){ e.preventDefault(); if(e.target.href){ if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oFrame").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let clicked_source = e.target.href; let csrf_tok = parent.document.getElementById("csrf_tok").value; $.ajax({ url: "/change_origin/", data: JSON.stringify({"clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", csrf_tok );}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oFrame").srcdoc=response.source; parent.document.getElementById("oLink").href=response.n_link; highlightLnk(response.n_link,response.o_link)} else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oFrame").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oFrame").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } } }); </script></body>'
-
-            #body=injectionPoint[0]+highlightFnc+scrollFnc+highlightLnkFnc+jqueryCode+jqEvnt+injectionPoint[1]
+            jqEvnt='<script> $("a").on("click", function(e){ e.preventDefault(); if(e.target.href){ if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oFrame").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let clicked_source = e.target.href; console.log(clicked_source); let csrf_tok = parent.document.getElementById("csrf_tok").value; $.ajax({ url: "/change_origin/", data: JSON.stringify({"clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", csrf_tok );}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oFrame").srcdoc=response.source; parent.document.getElementById("oLink").href=response.n_link; highlightLnk(response.n_link,response.o_link)} else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oFrame").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oFrame").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } } }); </script></body>'
+            
             body=injectionPoint[0]+highlightLnkFnc+jqueryCode+jqEvnt+injectionPoint[1]
 
 
@@ -230,32 +212,61 @@ for idx, e in samples.iterrows():
             domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urllib.parse.urlparse(e.source_url))
             without_domain = (e.source_url).replace(domain, "")
             soup = bs(o_html, 'lxml')
-
             for elem in soup.find_all(['img', 'script', 'link', 'input']):
                 if str(elem) != "<None></None>":
                     if elem.has_attr('src'):
                         src = elem['src']
-                        if not( src.startswith("http") or src.startswith("https")):
+                        if not src.startswith("http"):
+                            list_for_this_elem = without_domain.split("/")
+                            dom = domain
                             src.lstrip("/")
-                            elem['src'] = domain+src
+                            while True:
+                                try:
+                                    start = time.time()
+                                    r = requests.get(dom + src, headers=req_header, timeout=5)
+                                    end = time.time()
+                                    print("TIME TAKEN")
+                                    print(end - start)
+                                    print("TIME TAKEN")
+                                    if r.status_code == requests.codes.ok:
+                                        break
+                                except requests.exceptions.RequestException as e:
+                                    print("REQUESTS EXCEPTION")
+                                    print(e)
+                                    print("REQUESTS EXCEPTION")
+                                if not (list_for_this_elem):
+                                    break
+                                dom = dom + "/" + list_for_this_elem[0]
+                                list_for_this_elem = list_for_this_elem.remove(list_for_this_elem[0])
+                            elem['src'] = dom+src
                     if elem.has_attr('href'):
                         src = elem['href']
                         if not src.startswith("http"):
+                            list_for_this_elem = without_domain.split("/")
+                            dom = domain
                             src.lstrip("/")
-                            elem['href'] = domain+src
-
+                            while True:
+                                try:
+                                    start=time.time()	
+                                    r = requests.get(dom + src, headers=req_header, timeout=5)
+                                    end = time.time()
+                                    print("TIME TAKEN")
+                                    print(end - start)
+                                    print("TIME TAKEN")
+                                    if r.status_code == requests.codes.ok:
+                                        break
+                                except requests.exceptions.RequestException as e:
+                                    print("REQUESTS EXCEPTION")
+                                    print(e)
+                                    print("REQUESTS EXCEPTION")
+                                if not (list_for_this_elem):
+                                    break
+                                dom = dom + "/" + list_for_this_elem[0]
+                                list_for_this_elem = list_for_this_elem.remove(list_for_this_elem[0])
+                            elem['href'] = dom+src
             o_html = soup
 
             with open(o_html_filename, "w+", encoding='utf-8') as f:
                 f.write(str(o_html))
         else:
             print("SOURCE ALREADY SAVED")
-'''
-if os.path.exists(error_path):
-    error_df = pd.read_csv(error_path, sep='\t', encoding="utf_8")
-    cleaned_samples = pd.concat([samples, error_df], sort=True).drop_duplicates(keep=False)
-    cleaned_samples.to_csv(samples_path, sep='\t', header=True, index=False)
-    
-    error_df = error_df.drop_duplicates(keep=False)
-    error_df.to_csv(error_path, sep='\t', header=True, index=False)
-'''

@@ -1,0 +1,994 @@
+<html class="js" dir="ltr" lang="en" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "><head>
+<meta charset="utf-8"/><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="//siteimproveanalytics.com/js/siteanalyze_6018802.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-122568003-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("set", "page", "/404.html?page=" + document.location.pathname + document.location.search + "&from=" + document.referrer);ga("send", "pageview");</script>
+<meta content="Page not found | DEA" name="title"/>
+<link href="https://www.dea.gov/" rel="shortlink"/>
+<link href="https://www.dea.gov/" rel="canonical"/>
+<meta content="Drupal 8 (https://www.drupal.org)" name="Generator"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="http://www.usdoj.gov/dea//themes/custom/cog_dea/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<title>Page not found | DEA</title>
+<link href="http://www.usdoj.gov/dea//sites/default/files/css/css_PXKyJUac5CjOsyl7xA6aCmq51JomRky41Sc9wSdnkNM.css?pu3dd3" media="all" rel="stylesheet"/>
+<link href="http://www.usdoj.gov/dea/pubs/pressrel/pr031300.htm//themes/custom/cog_dea/assets/font-awesome/4.5.0/font-awesome.min.css" media="all" rel="stylesheet"/>
+<link href="http://www.usdoj.gov/dea//sites/default/files/css/css_rnJnyzh7obk4bI5_lYPdVzacbb_0sG8-NlKLrcCXjEU.css?pu3dd3" media="all" rel="stylesheet"/>
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
+<link href="http://www.usdoj.gov/dea//sites/default/files/css/css_sL_U4TcIfVGnyLZmU17dQGqLBzksJCIxA0vI0uwFH3w.css?pu3dd3" media="all" rel="stylesheet"/>
+<link href="//fonts.googleapis.com/css?family=Merriweather:400,700|Source+Sans+Pro:400,600,700" media="all" rel="stylesheet"/>
+<link href="http://www.usdoj.gov/dea//sites/default/files/css/css_f84silYT5emO1RzXhX1RBNpRvKik35j_NBbWEyizWOI.css?pu3dd3" media="all" rel="stylesheet"/>
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<link href="//search.usa.gov/assets/sayt.css" media="screen" rel="stylesheet" type="text/css"/><script src="//search.usa.gov/assets/sayt_loader_libs.js" type="text/javascript"></script></head>
+<body class="path--pubs alias--pubs-pressrel-pr031300htm logged-out">
+<div id="skip">
+<a class="visually-hidden focusable skip-link" href="#content">
+        Skip to content
+      </a>
+</div>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+<div class="page-standard" id="pg__c">
+<div class="area-wrapper area-wrapper--capital">
+<div class="area area--capital" id="capital">
+<div class="cog--mq mq-capital">
+</div>
+</div>
+</div>
+<div id="skiptonavigation"><a href="#block-cog-dea-main-menu">skip to main navigation</a></div>
+<div class="area-wrapper area-wrapper--header">
+<header class="area area--header" id="header">
+<div class="cog--mq mq-header">
+<div id="header-region">
+<div class="region region-header-nav">
+<div class="header--branding--wrapper">
+<div class="header--logo--wrapper">
+<a class="logo" href="/" rel="home" title="DEA"> <img alt="Home" src="http://www.usdoj.gov/dea//themes/custom/cog_dea/logo.svg" typeof="foaf:Image"/>
+</a>
+</div>
+<div class="header--sitename--wrapper">
+<span class="header--slogan">United States  Drug Enforcement Administration</span>
+</div>
+</div>
+<nav aria-labelledby="block-cog-dea-main-menu-menu" class="block block-menu navigation block-system-menublock menu--main" data-block-plugin-id="system_menu_block:main" id="block-cog-dea-main-menu" role="navigation">
+<ul class="menu menu--level-0 megamenu">
+<li>
+<a data-drupal-link-system-path="&lt;front&gt;" href="/">            Who We Are <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-1 collapse">
+<li>
+<a data-drupal-link-system-path="node/42121" href="/about">            About 
+          </a>
+<ul class="menu menu--level-2">
+<li class="terminal">
+<a data-drupal-link-system-path="node/36196" href="/mission">            Mission  
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/36201" href="/history" title="DEA History">            History 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/101" href="/dea-leadership" title="Leadership">            Leadership 
+          </a>
+</li>
+<li class="terminal">
+<a class="ext" href="https://deamuseum.org">            DEA Museum 
+          <span aria-label="" class="ext"></span></a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/43621" href="/dea-wall-honor">            Wall of Honor 
+          </a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/44481" href="/dea-offices">            Office Locations 
+          </a>
+<ul class="menu menu--level-2">
+<li class="terminal">
+<a data-drupal-link-system-path="node/43656" href="/domestic-divisions">            Domestic Divisions 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/43661" href="/foreign-office-locations">            Foreign Offices 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/43666" href="/operational-divisions">            Operational Divisions 
+          </a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/42116" href="/contact-us-0">            Contact 
+          </a>
+<ul class="menu menu--level-2">
+<li class="terminal">
+<a data-drupal-link-system-path="webform/tips" href="/submit-tip">            Submit a Tip 
+          </a>
+</li>
+<li class="terminal">
+<a class="ext" href="https://www.deadiversion.usdoj.gov/pubs/pressreleases/extortion_scam.htm" title="DEA warns public of extortion scams">            Extortion Scam 
+          <span aria-label="" class="ext"></span></a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/42111" href="/social-media-directory">            Media Contacts 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/197491" href="/congressional-affairs">            Congressional Affairs 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/44251" href="/domestic-division-contacts">            Domestic Division Contacts 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/44066" href="/doing-business-dea">            Doing Business with DEA 
+          </a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/106" href="/careers">            Careers 
+          </a>
+<ul class="menu menu--level-2">
+<li class="terminal">
+<a data-drupal-link-system-path="node/36551" href="/special-agent-careers">            Special Agent 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/111" href="/diversion-investigator-careers">            Diversion Investigator 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/42126" href="/forensic-sciences-careers">            Forensic Sciences 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/36581" href="/intelligence-research-specialists-careers">            Intelligence Research Specialists 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/42131" href="/professional-administrative-careers">            Professional &amp; Administrative 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/42136" href="/student-entry-level-careers">            Student &amp; Entry Level 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/44236" href="/veterans-and-people-disabilities">            Veterans and People with Disabilities 
+          </a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="&lt;front&gt;" href="/">            What We Do <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-1 collapse">
+<li>
+<a data-drupal-link-system-path="node/44271" href="/law-enforcement">            Law Enforcement 
+          </a>
+<ul class="menu menu--level-2">
+<li class="terminal">
+<a data-drupal-link-system-path="node/44266" href="/el-paso-intelligence-center-epic">            El Paso Intelligence Center (EPIC) 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/116" href="/diversion-control-division">            Diversion Control Division 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/44476" href="/forensic-sciences">            Forensic Sciences 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/611" href="/intelligence">            Intelligence 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/44496" href="/operations">            Operations 
+          </a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/44486" href="/drug-prevention">            Education and Prevention 
+          </a>
+<ul class="menu menu--level-2">
+<li class="terminal">
+<a data-drupal-link-system-path="node/621" href="/community-outreach">            Community Outreach 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/36656" href="/360-strategy">            DEA 360 Strategy 
+          </a>
+</li>
+<li class="terminal">
+<a class="ext" href="https://www.campusdrugprevention.gov">            CampusDrugPrevention 
+          <span aria-label="" class="ext"></span></a>
+</li>
+<li class="terminal">
+<a class="ext" href="https://getsmartaboutdrugs.gov">            GetSmartAboutDrugs 
+          <span aria-label="" class="ext"></span></a>
+</li>
+<li class="terminal">
+<a class="ext" href="https://www.justthinktwice.gov">            JustThinkTwice 
+          <span aria-label="" class="ext"></span></a>
+</li>
+<li class="terminal">
+<a class="ext" href="https://www.operationprevention.com">            OperationPrevention 
+          <span aria-label="" class="ext"></span></a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/124536" href="/news">            News 
+          </a>
+<ul class="menu menu--level-2">
+<li class="terminal">
+<a data-drupal-link-system-path="press-releases" href="/press-releases">            Press Releases 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="fugitives" href="/fugitives">            Most Wanted Fugitives 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="stories" href="/stories">            Stories 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="events" href="/events">            Events 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-query='{"field_document_document_type_value":"Speech"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Speech">            Speeches  
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-query='{"field_document_document_type_value":"Testimony"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Testimony">            Testimony 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/42111" href="/social-media-directory">            Social Media Directory 
+          </a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/43681" href="/drug-information">            Drug Information 
+          </a>
+<ul class="menu menu--level-2">
+<li class="terminal">
+<a data-drupal-link-system-path="factsheets" href="/factsheets">            Drug Facts 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/43686" href="/drug-scheduling">            Drug Scheduling 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/43691" href="/drug-policy-information">            Drug Policy Information 
+          </a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="&lt;front&gt;" href="/">            Resources <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-1 collapse">
+<li>
+<a data-drupal-link-system-path="node/124551" href="/data-and-statistics">            Data &amp; Statistics 
+          </a>
+<ul class="menu menu--level-2">
+<li class="terminal">
+<a data-drupal-link-system-path="clan-lab" href="/clan-lab">            Drug Labs in the United States 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/43696" href="/domestic-arrests">            Domestic Arrests 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/44061" href="/freedom-information-act">            FOIA/Privacy Act 
+          </a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-query='{"field_document_document_type_value":"Publication"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Publication">            Publications 
+          </a>
+<ul class="menu menu--level-2">
+<li class="terminal">
+<a data-drupal-link-query='{"field_document_document_type_value":"Publication","field_document_publication_type_value":"Intelligence"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Publication&amp;field_document_publication_type_value=Intelligence">            Intelligence 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-query='{"field_document_document_type_value":"Publication","field_document_publication_type_value":"Forensics"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Publication&amp;field_document_publication_type_value=Forensics">            Forensics 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-query='{"field_document_document_type_value":"Publication","field_document_publication_type_value":"Drug Prevention"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Publication&amp;field_document_publication_type_value=Drug%20Prevention">            Education and Prevention 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-query='{"field_document_document_type_value":"Microgram","field_document_drug_categories_target_id":"All","field_document_publication_type_value":"All","field_document_topics_target_id":"All","sort_bef_combine":"field_document_date_value DESC"}' data-drupal-link-system-path="documents" href="/documents?sort_bef_combine=field_document_date_value%20DESC&amp;field_document_document_type_value=Microgram&amp;field_document_publication_type_value=All&amp;field_document_drug_categories_target_id=All&amp;field_document_topics_target_id=All">            Micrograms 
+          </a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/124511" href="/media-gallery">            Media Galleries 
+          </a>
+<ul class="menu menu--level-2">
+<li class="terminal">
+<a href="/drug-images">            Drug Photo Gallery 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/201201" href="/education-and-outreach-media">            Education and Outreach Multimedia 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/83666" href="/galleries/events/events">            Media Events 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="galleries/press-conferences" href="/galleries/press-conferences">            Press Conferences 
+          </a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/124571" href="/galleries/public-service-announcements-psas/public-service-announcements-psas">            Public Service Announcements (PSA) 
+          </a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="megamenu-toggle">
+<a href="#">Menu <button aria-expanded="false" class="menu-toggle"></button></a>
+<ul class="menu menu--level-1 collapse">
+<li class="megamenu-mobile-search">
+<div class="dea-search-form block block-dea-search block-dea-search-search-form-block" data-block-plugin-id="dea_search_search_form_block" data-drupal-selector="dea-search-form" id="block-deasearchform">
+<form accept-charset="UTF-8" action="https://search.dea.gov/search" id="dea-search-form" method="GET">
+<div class="js-form-item form-item js-form-type-search form-type-search form-item-query form-no-label">
+<label class="visually-hidden" for="mobile-search">Search</label>
+<input aria-autocomplete="list" aria-haspopup="" autocomplete="off" class="usagov-search-autocomplete form-search ui-autocomplete-input" data-drupal-selector="edit-query" id="mobile-search" maxlength="128" name="query" placeholder="Search" size="60" title="Enter the terms you wish to search for." type="search" value=""/>
+</div>
+<input data-drupal-selector="edit-affiliate" name="affiliate" type="hidden" value="justice-dea"/>
+<div class="form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"><input class="button js-form-submit form-submit" data-drupal-selector="edit-submit" id="edit-submit" type="submit" value="Search"/>
+</div>
+</form>
+</div>
+</li>
+<li>
+<a data-drupal-link-system-path="&lt;front&gt;" href="/">            Who We Are <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-2 collapse">
+<li>
+<a data-drupal-link-system-path="node/42121" href="/about">            About <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-3 collapse">
+<li class="terminal">
+<a data-drupal-link-system-path="node/36196" href="/mission">            Mission  <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/36201" href="/history" title="DEA History">            History <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/101" href="/dea-leadership" title="Leadership">            Leadership <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a class="ext" href="https://deamuseum.org">            DEA Museum <button aria-expanded="false" class="menu-toggle"></button>
+<span aria-label="" class="ext"></span></a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/43621" href="/dea-wall-honor">            Wall of Honor <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/44481" href="/dea-offices">            Office Locations <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-3 collapse">
+<li class="terminal">
+<a data-drupal-link-system-path="node/43656" href="/domestic-divisions">            Domestic Divisions <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/43661" href="/foreign-office-locations">            Foreign Offices <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/43666" href="/operational-divisions">            Operational Divisions <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/42116" href="/contact-us-0">            Contact <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-3 collapse">
+<li class="terminal">
+<a data-drupal-link-system-path="webform/tips" href="/submit-tip">            Submit a Tip <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a class="ext" href="https://www.deadiversion.usdoj.gov/pubs/pressreleases/extortion_scam.htm" title="DEA warns public of extortion scams">            Extortion Scam <button aria-expanded="false" class="menu-toggle"></button>
+<span aria-label="" class="ext"></span></a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/42111" href="/social-media-directory">            Media Contacts <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/197491" href="/congressional-affairs">            Congressional Affairs <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/44251" href="/domestic-division-contacts">            Domestic Division Contacts <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/44066" href="/doing-business-dea">            Doing Business with DEA <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/106" href="/careers">            Careers <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-3 collapse">
+<li class="terminal">
+<a data-drupal-link-system-path="node/36551" href="/special-agent-careers">            Special Agent <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/111" href="/diversion-investigator-careers">            Diversion Investigator <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/42126" href="/forensic-sciences-careers">            Forensic Sciences <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/36581" href="/intelligence-research-specialists-careers">            Intelligence Research Specialists <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/42131" href="/professional-administrative-careers">            Professional &amp; Administrative <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/42136" href="/student-entry-level-careers">            Student &amp; Entry Level <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/44236" href="/veterans-and-people-disabilities">            Veterans and People with Disabilities <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="&lt;front&gt;" href="/">            What We Do <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-2 collapse">
+<li>
+<a data-drupal-link-system-path="node/44271" href="/law-enforcement">            Law Enforcement <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-3 collapse">
+<li class="terminal">
+<a data-drupal-link-system-path="node/44266" href="/el-paso-intelligence-center-epic">            El Paso Intelligence Center (EPIC) <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/116" href="/diversion-control-division">            Diversion Control Division <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/44476" href="/forensic-sciences">            Forensic Sciences <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/611" href="/intelligence">            Intelligence <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/44496" href="/operations">            Operations <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/44486" href="/drug-prevention">            Education and Prevention <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-3 collapse">
+<li class="terminal">
+<a data-drupal-link-system-path="node/621" href="/community-outreach">            Community Outreach <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/36656" href="/360-strategy">            DEA 360 Strategy <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a class="ext" href="https://www.campusdrugprevention.gov">            CampusDrugPrevention <button aria-expanded="false" class="menu-toggle"></button>
+<span aria-label="" class="ext"></span></a>
+</li>
+<li class="terminal">
+<a class="ext" href="https://getsmartaboutdrugs.gov">            GetSmartAboutDrugs <button aria-expanded="false" class="menu-toggle"></button>
+<span aria-label="" class="ext"></span></a>
+</li>
+<li class="terminal">
+<a class="ext" href="https://www.justthinktwice.gov">            JustThinkTwice <button aria-expanded="false" class="menu-toggle"></button>
+<span aria-label="" class="ext"></span></a>
+</li>
+<li class="terminal">
+<a class="ext" href="https://www.operationprevention.com">            OperationPrevention <button aria-expanded="false" class="menu-toggle"></button>
+<span aria-label="" class="ext"></span></a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/124536" href="/news">            News <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-3 collapse">
+<li class="terminal">
+<a data-drupal-link-system-path="press-releases" href="/press-releases">            Press Releases <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="fugitives" href="/fugitives">            Most Wanted Fugitives <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="stories" href="/stories">            Stories <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="events" href="/events">            Events <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-query='{"field_document_document_type_value":"Speech"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Speech">            Speeches  <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-query='{"field_document_document_type_value":"Testimony"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Testimony">            Testimony <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/42111" href="/social-media-directory">            Social Media Directory <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/43681" href="/drug-information">            Drug Information <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-3 collapse">
+<li class="terminal">
+<a data-drupal-link-system-path="factsheets" href="/factsheets">            Drug Facts <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/43686" href="/drug-scheduling">            Drug Scheduling <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/43691" href="/drug-policy-information">            Drug Policy Information <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="&lt;front&gt;" href="/">            Resources <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-2 collapse">
+<li>
+<a data-drupal-link-system-path="node/124551" href="/data-and-statistics">            Data &amp; Statistics <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-3 collapse">
+<li class="terminal">
+<a data-drupal-link-system-path="clan-lab" href="/clan-lab">            Drug Labs in the United States <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/43696" href="/domestic-arrests">            Domestic Arrests <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/44061" href="/freedom-information-act">            FOIA/Privacy Act <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-query='{"field_document_document_type_value":"Publication"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Publication">            Publications <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-3 collapse">
+<li class="terminal">
+<a data-drupal-link-query='{"field_document_document_type_value":"Publication","field_document_publication_type_value":"Intelligence"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Publication&amp;field_document_publication_type_value=Intelligence">            Intelligence <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-query='{"field_document_document_type_value":"Publication","field_document_publication_type_value":"Forensics"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Publication&amp;field_document_publication_type_value=Forensics">            Forensics <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-query='{"field_document_document_type_value":"Publication","field_document_publication_type_value":"Drug Prevention"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Publication&amp;field_document_publication_type_value=Drug%20Prevention">            Education and Prevention <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-query='{"field_document_document_type_value":"Microgram","field_document_drug_categories_target_id":"All","field_document_publication_type_value":"All","field_document_topics_target_id":"All","sort_bef_combine":"field_document_date_value DESC"}' data-drupal-link-system-path="documents" href="/documents?sort_bef_combine=field_document_date_value%20DESC&amp;field_document_document_type_value=Microgram&amp;field_document_publication_type_value=All&amp;field_document_drug_categories_target_id=All&amp;field_document_topics_target_id=All">            Micrograms <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a data-drupal-link-system-path="node/124511" href="/media-gallery">            Media Galleries <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+<ul class="menu menu--level-3 collapse">
+<li class="terminal">
+<a href="/drug-images">            Drug Photo Gallery <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/201201" href="/education-and-outreach-media">            Education and Outreach Multimedia <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/83666" href="/galleries/events/events">            Media Events <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="galleries/press-conferences" href="/galleries/press-conferences">            Press Conferences <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+<li class="terminal">
+<a data-drupal-link-system-path="node/124571" href="/galleries/public-service-announcements-psas/public-service-announcements-psas">            Public Service Announcements (PSA) <button aria-expanded="false" class="menu-toggle"></button>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="megamenu-mobile-footer">
+<div class="block-social-media-links block block-social-media-links-block" data-block-plugin-id="social_media_links_block" id="block-socialmedialinks-2">
+<ul class="social-media-links--platforms platforms inline horizontal">
+<li>
+<a href="https://www.facebook.com/DEAHQ/">
+<span class="fa fa-facebook fa-2x"></span>
+</a>
+</li>
+<li>
+<a href="https://www.twitter.com/DEAHQ">
+<span class="fa fa-twitter fa-2x"></span>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/company/drug-enforcement-administration">
+<span class="fa fa-linkedin fa-2x"></span>
+</a>
+</li>
+<li>
+<a aria-label="Subscribe to Emails" href="https://service.govdelivery.com/accounts/USDOJDEA/subscriber/new" title="Subscribe to Emails">
+<span class="fa fa-tumblr fa-2x"></span>
+</a>
+</li>
+<li>
+<a aria-label="Submit a Tip" href="/submit-tip" title="Submit a Tip">
+<span class="fa fa-envelope fa-2x"></span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</nav><div class="block-social-media-links block block-social-media-links-block" data-block-plugin-id="social_media_links_block" id="block-socialmedialinks-2">
+<ul class="social-media-links--platforms platforms inline horizontal">
+<li>
+<a href="https://www.facebook.com/DEAHQ/">
+<span class="fa fa-facebook fa-2x"></span>
+</a>
+</li>
+<li>
+<a href="https://www.twitter.com/DEAHQ">
+<span class="fa fa-twitter fa-2x"></span>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/company/drug-enforcement-administration">
+<span class="fa fa-linkedin fa-2x"></span>
+</a>
+</li>
+<li>
+<a aria-label="Subscribe to Emails" href="https://service.govdelivery.com/accounts/USDOJDEA/subscriber/new" title="Subscribe to Emails">
+<span class="fa fa-tumblr fa-2x"></span>
+</a>
+</li>
+<li>
+<a aria-label="Submit a Tip" href="/submit-tip" title="Submit a Tip">
+<span class="fa fa-envelope fa-2x"></span>
+</a>
+</li>
+</ul>
+</div>
+<div class="dea-search-form block block-dea-search block-dea-search-search-form-block" data-block-plugin-id="dea_search_search_form_block" data-drupal-selector="dea-search-form" id="block-deasearchform-desktop">
+<form accept-charset="UTF-8" action="https://search.dea.gov/search" id="dea-search-form-desktop" method="GET">
+<div class="js-form-item form-item js-form-type-search form-type-search form-item-query form-no-label">
+<label class="visually-hidden" for="query">Search</label>
+<input aria-autocomplete="list" aria-haspopup="" autocomplete="off" class="usagov-search-autocomplete form-search ui-autocomplete-input" data-drupal-selector="edit-query" id="query" maxlength="128" name="query" placeholder="Search" size="60" tabindex="-1" title="Enter the terms you wish to search for." type="search" value=""/>
+</div>
+<input data-drupal-selector="edit-affiliate" name="affiliate" type="hidden" value="justice-dea"/>
+<div class="form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"><input class="button js-form-submit form-submit" data-drupal-selector="edit-submit" id="edit-submit" tabindex="-1" type="submit" value="Search"/>
+</div>
+</form>
+<button class="desktop-search-button" id="desktop-search-toggle">Search<i aria-hidden="true" class="fa fa-search"></i></button></div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="area-wrapper area-wrapper--info">
+<div class="area area--info" id="info">
+<div class="cog--mq mq-info">
+<div id="info-region">
+<div class="region region-info">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="area-wrapper area-wrapper--crumbs">
+<div class="area area--crumbs" id="crumbs">
+<div class="cog--mq mq-crumbs">
+<div id="crumbs-region">
+<div class="region region-crumbs">
+<div class="block block-system block-system-breadcrumb-block" data-block-plugin-id="system_breadcrumb_block" id="block-cog-dea-breadcrumbs">
+<nav aria-labelledby="system-breadcrumb" class="breadcrumb" role="navigation">
+<h2 class="visually-hidden" id="system-breadcrumb">Breadcrumb</h2>
+<ul>
+<li class="link last-link">
+<a href="/">Home</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="area-wrapper area-wrapper--main">
+<div class="area area--main clearfix" id="main">
+<div class="cog--mq mq-main mq-main--no-sidebars">
+<section class="content" id="content">
+<div id="content-area">
+<div class="region region-content">
+<h1>We are sorry, the page you're looking for can't be found on the DEA.gov website.</h1>
+<h2>Please try the following:</h2>
+<ul>
+<li>Use the <a href="https://search.dea.gov/search?query=&amp;affiliate=justice-dea">Search</a> function to search for words or phrases.</li>
+<li>Check the URL you entered for possible errors, including the use of upper and lower case letters.</li>
+</ul> </div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div class="area-wrapper area-wrapper--footer">
+<script type="text/javascript">
+/*<![CDATA[*/
+(function() {
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+sz.src = '//siteimproveanalytics.com/js/siteanalyze_6018802.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+})();
+/*]]>*/
+</script>
+<footer class="area area--footer" id="footer">
+<div class="cog--mq mq-footer">
+<div class="footer--nav">
+<nav aria-labelledby="block-cog-dea-footer-menu" class="block block-menu navigation block-system-menublock menu--footer" data-block-plugin-id="system_menu_block:footer" id="block-cog-dea-footer" role="navigation">
+<ul class="menu">
+<li class="has-submenu">
+<a data-drupal-link-system-path="&lt;front&gt;" href="/">Who We Are</a>
+<ul class="submenu">
+<li>
+<a data-drupal-link-system-path="node/42121" href="/about">About</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/42116" href="/contact-us-0">Contact</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/44481" href="/dea-offices">Office Locations</a>
+</li>
+<li>
+<a class="ext" href="https://deamuseum.org/">DEA Museum<span aria-label="" class="ext"></span></a>
+</li>
+</ul>
+</li>
+<li class="has-submenu">
+<a data-drupal-link-system-path="&lt;front&gt;" href="/">What We Do</a>
+<ul class="submenu">
+<li>
+<a data-drupal-link-system-path="node/44486" href="/drug-prevention">Drug Prevention</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/44271" href="/law-enforcement">Law Enforcement</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/124536" href="/news">News</a>
+</li>
+</ul>
+</li>
+<li class="has-submenu">
+<a data-drupal-link-system-path="&lt;front&gt;" href="/">Resources</a>
+<ul class="submenu">
+<li>
+<a data-drupal-link-system-path="node/43681" href="/drug-information">Drug Information</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/124551" href="/data-and-statistics">Data &amp; Statistics</a>
+</li>
+<li>
+<a data-drupal-link-query='{"field_document_document_type_value":"Publication"}' data-drupal-link-system-path="documents" href="/documents?field_document_document_type_value=Publication">Publications</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/124511" href="/media-gallery">Media Galleries</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/42246" href="/employee-assistance-program-eap">Employee Assistance Program</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/42161" href="/victim-witness-assistance-program">Victim Witness Assistance Program</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/44241" href="/equal-opportunity-employer" title="EEO and Disability Information">EEO and Disability Information</a>
+</li>
+</ul>
+</li>
+<li class="has-submenu">
+<a data-drupal-link-system-path="node/106" href="/careers">Careers</a>
+<ul class="submenu">
+<li>
+<a data-drupal-link-system-path="node/106" href="/careers">Overview</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/36551" href="/special-agent-careers">Special Agent</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/111" href="/diversion-investigator-careers">Diversion Investigator</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/42126" href="/forensic-sciences-careers">Forensic Sciences</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/36581" href="/intelligence-research-specialists-careers">Intelligence Research Specialist</a>
+</li>
+</ul>
+</li>
+<li class="has-submenu">
+<a data-drupal-link-system-path="node/44066" href="/doing-business-dea">Doing Business with the DEA</a>
+<ul class="submenu">
+<li>
+<a data-drupal-link-system-path="node/44066" href="/doing-business-dea">Overview</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/44071" href="/current-vendors">Current Vendors</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/44076" href="/prospective-vendors">Prospective Vendors</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/44081" href="/security-clauses">Security Clauses</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/44091" href="/security-forms">Security Forms</a>
+</li>
+<li>
+<a data-drupal-link-system-path="node/44086" href="/small-business-program">Small Business Program</a>
+</li>
+</ul>
+</li>
+<li class="has-submenu">
+<a data-drupal-link-system-path="&lt;front&gt;" href="/">Policies</a>
+<ul class="submenu">
+<li>
+<a data-drupal-link-system-path="node/44461" href="/accessibility-information-plug-ins">Accessibility &amp; Plug-ins</a>
+</li>
+<li>
+<a class="ext" href="https://www.justice.gov/doj/privacy-policy">Privacy Policy<span aria-label="" class="ext"></span></a>
+</li>
+<li>
+<a class="ext" href="https://www.justice.gov/legalpolicies#disclaimer">Legal Policies &amp; Disclaimers<span aria-label="" class="ext"></span></a>
+</li>
+<li>
+<a class="ext" href="https://www.justice.gov/jmd/eeo-program-status-report">No FEAR Act<span aria-label="" class="ext"></span></a>
+</li>
+<li>
+<a class="ext" href="https://oig.justice.gov/hotline/whistleblower-protection.htm">Whistleblower Protection<span aria-label="" class="ext"></span></a>
+</li>
+<li>
+<a class="ext" href="https://www.justice.gov/jmd/file/790081/download" title="DOJ EEO Policy">U.S. Department of Justice Equal Employment Opportunity  (EEO) Policy<span aria-label="" class="ext"></span></a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</footer>
+</div>
+<div class="area-wrapper area-wrapper--base">
+<div class="area area--base" id="base">
+<div class="cog--mq mq-base">
+<div class="base--branding">
+<div class="base--branding--image">
+<img alt="DEA US Badge" src="http://www.usdoj.gov/dea//themes/custom/cog_dea/images/logos/DEAUSBadge-gold.png"/>
+</div>
+<div class="base--branding--content">
+<span class="base--slogan">United States Drug Enforcement Administration</span>
+<span class="base--copyright">DEA.gov is an official site of the <a class="ext" href="https://www.justice.gov/">U.S. Department of Justice<span aria-label="" class="ext"></span></a></span>
+</div>
+</div>
+<div class="base--contact">
+<div class="block-social-media-links block block-social-media-links-block" data-block-plugin-id="social_media_links_block" id="block-socialmedialinks">
+<ul class="social-media-links--platforms platforms inline horizontal">
+<li>
+<a href="https://www.facebook.com/DEAHQ/">
+<span class="fa fa-facebook fa-2x"></span>
+</a>
+</li>
+<li>
+<a href="https://www.twitter.com/DEAHQ">
+<span class="fa fa-twitter fa-2x"></span>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/company/drug-enforcement-administration">
+<span class="fa fa-linkedin fa-2x"></span>
+</a>
+</li>
+<li>
+<a aria-label="Subscribe to Emails" href="https://service.govdelivery.com/accounts/USDOJDEA/subscriber/new" title="Subscribe to Emails">
+<span class="fa fa-tumblr fa-2x"></span>
+</a>
+</li>
+</ul>
+</div>
+<div class="block block-dea-custom block-dea-contact" data-block-plugin-id="dea_contact" id="block-deacontactblock">
+<a href="/contact-us">Contact the Webmaster</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script data-drupal-selector="drupal-settings-json" type="application/json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":true},"data":{"extlink":{"extTarget":false,"extTargetNoOverride":false,"extNofollow":false,"extFollowNoOverride":false,"extClass":"ext","extLabel":"","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"","extCssExclude":"ul.social-media-links--platforms","extCssExplicit":"","extAlert":false,"extAlertText":{"value":"\u003Ch2\u003EYou are now leaving the Drug Enforcement Administration Website.\u003C\/h2\u003E\r\n\r\n\u003Cp\u003EYou are about to access:\u003Cbr \/\u003E\r\n\u003Cstrong\u003E[extlink:external-url]\u003C\/strong\u003E\u003C\/p\u003E\r\n\r\n\u003Cp\u003EThe Drug Enforcement Administration does not endorse the organizations or views represented by this site, and takes no responsibility for, and exercises no control over, the accuracy, accessibility, copyright or trademark compliance or legality of the material contained on this site.\u003C\/p\u003E\r\n\r\n\u003Cp\u003EThank you for visiting our site.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cbr \/\u003E\r\nAutomatically redirecting to site in\u003C\/p\u003E\r\n\r\n\u003Cp\u003E[extlink:timer]\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u0026nbsp;\u003C\/p\u003E\r\n","format":"rich_text"},"mailtoClass":"0","mailtoLabel":""}},"ajaxTrustedUrl":{"https:\/\/search.dea.gov\/search":true},"ajax":[],"user":{"uid":0,"permissionsHash":"da30b08d385a582510b5a008a460df3b84b0ed8a6818743b353bb4f7241d0370"}}</script>
+<script src="http://www.usdoj.gov/dea//sites/default/files/js/js_jR_BHHBiA0F7KDmPyuhW3LKcpcD7r3f7cefkEa9UqRU.js"></script>
+<script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DEA&amp;pua=0"></script>
+<script src="http://www.usdoj.gov/dea//sites/default/files/js/js_4XEyIOwrZy3PITiuvNdQFL69npzSlFKm3F_mUvSzZSA.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="http://www.usdoj.gov/dea//sites/default/files/js/js_V4zQH33OmylWuxy-6BcAFmcCnrus672myCOEuVVcGaY.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"10fd64e163","applicationID":"160974656","transactionName":"blQHNUJWWEQDUEVQWFceJAJEXllZTXdDTEdYXTkiX0VTay9WX0xrfVQDAEVbQnoHXUR1XldaMRNVUntWDFpBTFtYRQoTQxoIUAddVEtWTVQsD1RSTnYMV2JWRU0=","queueTime":0,"applicationTime":595,"atts":"QhMEQwpMS0o=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script src="//search.usa.gov/javascripts/remote.loader.js" type="text/javascript"></script><div id="usasearch_sayt" style="background: none; border: 0px; display: block; float: none; height: 0px; line-height: 0; margin: 0px; padding: 0px; position: static; width: 0px;"><ul class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" id="ui-id-1" style="display: none;" tabindex="0"></ul><ul class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" id="ui-id-2" style="display: none;" tabindex="0"></ul></div><div aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible" role="status"></div><div aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible" role="status"></div></body></html>

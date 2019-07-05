@@ -1,0 +1,859 @@
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://ssl.google-analytics.com/ga.js" type="text/javascript"></script><script src="https://www.fws.gov/scripts/js/serviceInclude.js" type="text/javascript"></script><script src="http://www.fws.gov//scripts/js/GoogleAnalytics.js" type="text/javascript"></script><script async="" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOI&amp;subagency=FWS" type="text/javascript"></script>
+<link href="https://www.fws.gov/css/serviceStyles.css" rel="stylesheet" type="text/css"/>
+<link href="https://www.fws.gov/css/servicePrint.css" media="print" rel="stylesheet" type="text/css"/>
+<link href="http://www.fws.gov/css/endangeredStyles.css" rel="stylesheet" type="text/css"/>
+<link href="https://www.fws.gov/css/serviceHandheld.css" media="handheld" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 7]>
+<link href="/endangered/css/ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script src="http://www.fws.gov/endangered/scripts/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script type="text/javascript"> 
+	$(document).ready(function(){
+		$("div#navigation ul li").click(function() {
+			$(this).find("div.menu").slideDown('fast').show(); //show the submenu
+			$(this).find("div.menu").css({'z-index' : '20'});
+			$(this).hover(function() { //while hovering, don't do anything
+			}, function(){
+				$(this).find("div.menu").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
+			});
+		});
+	});
+</script>
+<script src="http://www.fws.gov/endangered/scripts/searchbar.js" type="text/javascript"></script>
+<title>Endangered Species | Home Page</title>
+<meta content="Web site of the Ecolocical Services Program, a program within the Fish &amp; Wildlife Service." name="Description"/>
+<meta content="U.S. Fish and Wildlife Service/Endangered Species, Sarah Leon" name="author"/>
+<meta content="04/23/2012" name="Last Reviewed Date:"/>
+<link href="http://www.fws.gov/endangered/css/stye5.css" rel="stylesheet" type="text/css"/>
+<script src="http://www.fws.gov/endangered/jQuery.js" type="text/javascript"></script>
+<script language="javascript" src="https://www.fws.gov/endangered/js/ecosAjaxSearch-Andrew.js" type="text/javascript"></script>
+<script charset="utf-8" src="http://www.fws.gov/endangered/Slideshow.js" type="text/javascript"></script>
+<link href="http://www.fws.gov/endangered/css/slider-inner.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.fws.gov/endangered/css/styelNew.css" rel="stylesheet" type="text/css"/>
+<script src="http://www.fws.gov/endangered/js/js.schuman.js" type="text/javascript"></script>
+<script src="http://www.fws.gov/endangered/js/cycle.js" type="text/javascript"></script>
+<script type="text/javascript"> 
+ 
+  jQuery(document).ready( function($) {
+ 
+    $('#slider').cycle({
+ 
+      fx: 'scrollHorz',
+ 
+      speed: 1500,
+ 
+      pause: 1,
+ 
+      timeout: 777000,
+ 
+      delay: 500,
+ 
+      prev: '#slider_prev',
+ 
+      next: '#slider_next'
+ 
+    });
+ 
+  });
+ 
+</script>
+<link href="http://www.fws.gov/endangered/css/multimedia.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="http://www.fws.gov/endangered/css/estilos.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.fws.gov/endangered/css/inner-styles.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.fws.gov/endangered/css/superfish.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.fws.gov/endangered/css/slider.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="http://www.fws.gov/endangered/css/slide.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.fws.gov/endangered/css/tab.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript"> 
+ 
+ var jQ = jQuery.noConflict();
+ 
+</script>
+<style type="text/css"> 
+ 
+ 
+ 
+#dhtmltooltip{
+ 
+position: absolute;
+ 
+width: 150px;
+ 
+border: 2px solid black;
+ 
+padding: 2px;
+ 
+background-color: yellow;
+ 
+visibility: hidden;
+ 
+z-index: 100;
+ 
+/*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+ 
+filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
+ 
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+.sf-menu * {  font-size:12px; }
+ 
+ 
+ 
+ 
+ 
+#organizationName {
+ 
+	font-family: Arial, Helvetica, sans-serif;
+ 
+	font-size: 16px;
+ 
+	font-weight: bold;
+ 
+	text-align: right;
+ 
+	height: 18px;
+ 
+	vertical-align: top;
+ 
+	border-bottom-width: 2px;
+ 
+	border-bottom-style: solid;
+ 
+	border-bottom-color: #000000;
+ 
+	
+ 
+	position: relative;
+ 
+	top: 0px;
+ 
+	*top: 35px;
+ 
+	z-index: 5;
+ 
+	background: #6489AE; /*you can change this. It should be lighter than the fws bar but still dark enough for the region or organization name to stand out.*/
+ 
+	
+ 
+	*margin:0 0 45px 0;
+ 
+	overflow: hidden;
+ 
+	width: 100%;
+ 
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</style>
+<script type="text/javascript"> 
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26435805-1']);
+  _gaq.push(['_setDomainName', '.fws.gov']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+<!--[if lte IE 7]>
+<link href="css/ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+<div id="logo">
+<a href="https://www.fws.gov" target="_blank"><img alt="Official Web page of the U.S. Fish and Wildlife Service" border="0" height="95" src="https://www.fws.gov/home/graphics/logo2005.gif" width="79"/></a> </div>
+<div id="fwsBar">
+<a href="https://www.fws.gov"> </a>
+</div>
+<div id="siteName">
+		Endangered Species 	</div>
+<div id="organizationName">
+<span class="organizationText"><a href="https://www.fws.gov/ecological-services/" target="_blank">Ecological Services</a>
+</span>
+</div>
+<div id="mainBody">
+<div id="navigation">
+<ul>
+<li><a href="https://www.fws.gov/endangered/index.html" id="n1">ES Home</a></li>
+<li><a class="down-species" href="#" id="n2" onclick="javascript:return false;">Species</a>
+<div class="menu species">
+<div class="col1">
+<ul>
+<li><a href="https://www.fws.gov/endangered/species/index.html">Species Search/Map</a></li>
+</ul>
+<ul>
+<li><a href="https://ecos.fws.gov/ecp/" target="_blank">Environmental Conservation Online System (ECOS)</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/species/us-species.html">U.S. Species</a></li>
+</ul>
+<ul>
+<li><a href="https://ecos.fws.gov/ecp/report/table/candidate-species.html" target="_blank">Candidate Species</a></li>
+</ul>
+<ul>
+<li><a href="https://ecos.fws.gov/ecp0/reports/ad-hoc-species-report?status=E&amp;status=T&amp;status=EmE&amp;status=EmT&amp;lead=10&amp;header=Foreign+Species&amp;fleadreg=on&amp;fstatus=on&amp;finvpop=on" target="_blank">Foreign Species</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/critical-habitats.html">Critical Habitat</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/species/recovery-plans.html">Recovery Plans</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/species/why-save-species.html">Why Save Species?</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/species/faq.html">Frequently Asked Questions</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a class="down-do" href="#" id="n3" onclick="javascript:return false;">What We Do</a>
+<div class="menu do">
+<div class="col1">
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/index.html">Candidate Conservation</a>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/candidate-conservation-process.html">Candidate Assessment Process</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/cnor.html">Candidate Notice of Review (CNOR)</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/how-you-can-help.html">How You Can Help</a></li>
+<li><a href="https://www.fws.gov/endangered/esa-library/index.html#candidate_conservation">Documents</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/consultations-overview.html">Consultations</a>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/consultation-stories.html">Consultation Stories</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/faq.html">FAQs</a></li>
+<li><a href="https://www.fws.gov/endangered/esa-library/index.html#consultations">Documents</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/grants/index.html">Grants</a>
+<ul>
+<li><a href="https://www.fws.gov/endangered/grants/grant-programs.html">Grant Programs</a></li>
+<li><a href="https://www.fws.gov/endangered/grants/how-to-apply.html">How To Apply</a></li>
+<li><a href="https://www.fws.gov/endangered/esa-library/index.html#grants">Documents</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/hcp-overview.html">Habitat Conservation Plans (HCPs)</a>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/learn-more.html">Learn More</a></li>
+<li><a href="https://www.fws.gov/endangered/regions/index.html">Contact</a></li>
+<li><a href="https://www.fws.gov/endangered/esa-library/index.html#hcp">Documents</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/foreign-species.html">Foreign Species</a>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/foreign-species-faq.html">FAQs</a></li>
+<li><a href="https://www.fws.gov/endangered/esa-library/index.html#international_activities">Documents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col2">
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/listing-overview.html">Listing and Critical Habitat</a>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/candidate-conservation-process.html">Candidate Assessment Process</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/listing-petition-process.html">Petition Process</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/listing-workplan.html">National Listing Workplan</a></li>
+<li><a href="https://www.fws.gov/endangered/species/index.html">Species Counts and Information</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/critical-habitats.html">Critical Habitat</a></li>
+<li><a href="https://www.fws.gov/endangered/esa-library/index.html#listing">Documents</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/recovery-overview.html">Recovery</a>
+<ul>
+<li><a href="https://www.fws.gov/endangered/species/recovery-plans.html">Recovery Plans Search</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/downlisting-delisting-workplan.html">National Downlisting and Delisting Workplan</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/recovery-champions/index.html">Recovery Champions</a></li>
+<li><a href="https://www.fws.gov/endangered/esa-library/index.html#recovery">Documents</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/partners.html">Partnerships In Conservation</a>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/fws-programs.html">FWS Programs</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/federal-agency-programs.html">Federal Agencies</a></li>
+<li><a href="https://www.fws.gov/endangered/grants/index.html">States</a></li>
+<li><a href="https://www.fws.gov/endangered/landowners/safe-harbor-agreements.html">Non-Federal Landowners</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/ngo-programs.html">Non Governmental Organizations (NGOs)</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/tribes-overview.html">American Indian Tribes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li><a class="down-landowners" href="#" id="n4" onclick="javascript:return false;">For Landowners</a>
+<div class="menu landowners">
+<div class="col1">
+<ul>
+<li><a href="https://www.fws.gov/endangered/landowners/index.html">Landowner Tools Overview</a>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/hcp-overview.html">Habitat Conservation Plans (HCPs)</a></li>
+<li><a href="https://www.fws.gov/endangered/landowners/safe-harbor-agreements.html">Safe Harbor Agreements</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/cca.html">Candidate Conservation Agreements</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/cca.html#ccaa">Candidate Conservation Agreements with Assurances</a></li>
+<li><a href="https://www.fws.gov/endangered/landowners/conservation-banking.html">Conservation Banking</a></li>
+<li><a href="https://www.fws.gov/endangered/landowners/recovery-credits.html">Recovery Credits and Tax Deductions</a></li>
+</ul>
+</li>
+<li><a href="https://ecos.fws.gov/ecp0/conservationPlan/" target="_blank">Conservation Plans Database</a></li>
+</ul>
+<ul>
+<li><a href="https://ecos.fws.gov/ipac/" target="_blank">Information, Planning and Conservation System (IPaC)</a></li>
+</ul>
+<ul>
+<li><a href="https://ecos.fws.gov/roar/pub/ConfigureRecActionReport.do?path=ROAR%20Custom%20Queries.Public%20Actions%20AdHoc" target="_blank">Recovery Online Activity Reporting System (ROAR)</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a class="down-permits" href="#" id="n5" onclick="javascript:return false;">Permits</a>
+<div class="menu permits">
+<div class="col1">
+<ul>
+<li><a href="https://www.fws.gov/endangered/permits/index.html">Permits</a>
+<ul>
+<li><a href="https://www.fws.gov/endangered/permits/how-to-apply.html">How to Apply</a></li>
+<li><a href="https://www.fws.gov/endangered/permits/faq.html">Frequently Asked Questions</a></li>
+<li><a href="https://www.fws.gov/endangered/esa-library/index.html#permits">Documents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li><a class="down-grants" href="#" id="n6" onclick="javascript:return false;">Grants</a>
+<div class="menu grants">
+<div class="col1">
+<ul>
+<li><a href="https://www.fws.gov/endangered/grants/index.html">Grants</a>
+<ul>
+<li><a href="https://www.fws.gov/endangered/grants/grant-programs.html">Grant Programs</a></li>
+<li><a href="https://www.fws.gov/endangered/grants/how-to-apply.html">How to Apply</a></li>
+<li><a href="https://www.fws.gov/endangered/esa-library/index.html#grants">Documents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li><a class="down-news" href="#" id="n7" onclick="javascript:return false;">News</a>
+<div class="menu news">
+<div class="col1">
+<ul>
+<li><a href="https://www.fws.gov/endangered/news/index.html">News Stories</a>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/about/multimedia.html">Featured Species</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/recovery-stories.html">Recovery Success Stories</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/news/bulletin.html">Endangered Species Bulletin</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/partners.html">Partnership Stories</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a class="down-about" href="#" id="n8" onclick="javascript:return false;">About Us</a>
+<div class="menu about">
+<div class="col1">
+<ul>
+<li><a href="https://www.fws.gov/endangered/about/index.html">Overview</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/about/multimedia.html">Featured Species</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/news/bulletin.html">Endangered Species Bulletin</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/about/glossary.html">Glossary</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/about/faq.html">Frequently Asked Questions</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/regions/index.html">Contacts</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a class="down-regions" href="#" id="n9" onclick="javascript:return false;">FWS Regions</a>
+<div class="menu regions">
+<div class="col1">
+<ul>
+<li><a href="https://www.fws.gov/endangered/regions/index.html">Region Map</a></li>
+</ul>
+<ul>
+<li><a class="tabs-1" href="https://www.fws.gov/endangered/regions/index.html#tabs-1">Pacific <span class="unbold">(Region 1)</span></a></li>
+</ul>
+<ul>
+<li><a class="tabs-2" href="https://www.fws.gov/endangered/regions/index.html#tabs-2">Southwest <span class="unbold">(Region 2)</span></a></li>
+</ul>
+<ul>
+<li><a class="tabs-3" href="https://www.fws.gov/endangered/regions/index.html#tabs-3">Great Lakes-Big Rivers <span class="unbold">(Region 3)</span></a></li>
+</ul>
+<ul>
+<li><a class="tabs-4" href="https://www.fws.gov/endangered/regions/index.html#tabs-4">Southeast <span class="unbold">(Region 4)</span></a></li>
+</ul>
+<ul>
+<li><a class="tabs-5" href="https://www.fws.gov/endangered/regions/index.html#tabs-5">Northeast <span class="unbold">(Region 5)</span></a></li>
+</ul>
+<ul>
+<li><a class="tabs-6" href="https://www.fws.gov/endangered/regions/index.html#tabs-6">Mountain-Prairie <span class="unbold">(Region 6)</span></a></li>
+</ul>
+<ul>
+<li><a class="tabs-7" href="https://www.fws.gov/endangered/regions/index.html#tabs-7">Alaska <span class="unbold">(Region 7)</span></a></li>
+</ul>
+<ul>
+<li><a class="tabs-8" href="https://www.fws.gov/endangered/regions/index.html#tabs-8">Pacific Southwest <span class="unbold">(Region 8)</span></a></li>
+</ul>
+<ul>
+<li><a class="tabs-head" href="https://www.fws.gov/endangered/regions/index.html#head">Headquarters <span class="unbold"></span></a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a class="down-laws" href="#" id="n10" onclick="javascript:return false;">Laws &amp; Policies</a>
+<div class="menu laws">
+<div class="col1">
+<ul>
+<li><a href="https://www.fws.gov/endangered/laws-policies/index.html">Endangered Species Act</a>
+<ul>
+<li><a href="https://www.fws.gov/endangered/laws-policies/esa-history.html">History</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/laws-policies/regulations-and-policies.html">Endangered Species Regulations and Policies</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/laws-policies/federal-register-notices.html">Federal Register Notices</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a class="down-library" href="#" id="n11" onclick="javascript:return false;">Library</a>
+<div class="menu library">
+<div class="col1">
+<ul>
+<li><a href="https://www.fws.gov/endangered/esa-library/index.html">ESA Related Documents</a></li>
+</ul>
+<ul>
+<li><a href="https://www.fws.gov/endangered/laws-policies/federal-register-notices.html">Federal Register Notices</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a class="down-news" href="#" id="n12" onclick="javascript:return false;">For Kids</a>
+<div class="menu kids">
+<div class="col1">
+<ul>
+<li><a href="https://www.fws.gov/endangered/education/index.html">Homework Help</a>
+<ul>
+<li><a href="https://ecos.fws.gov/ecp/">Species Information</a></li>
+<li><a href="https://digitalmedia.fws.gov/cdm/search/collection/natdiglib/searchterm/threatened%20endangered!threatened%20endangered!threatened%20endangered!threatened%20endangered/field/subjec!subjec!subjec!subjec/mode/any!any!any!any/conn/and!and!and!and">Images</a></li>
+<li><a href="https://www.fws.gov/endangered/education/wonderful.html">Weird &amp; Wonderful Wildlife</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div id="siteContent">
+<div id="endangeredWrapper">
+<div id="breadcrumb">
+<span class="intro">You Are Here:</span> Endangered Species Home    » 
+				</div>
+<div class="wrapper">
+<div class="banner">
+<div class="special">
+<h1>Find Endangered Species</h1>
+<form action="https://ecos.fws.gov/tess_public/pub/stateListingAndOccurrenceIndividual.jsp" autocomplete="Off" method="get">
+<label for="home_state_search">Species in Your State and U.S. Territories:</label>
+<select id="home_state_search" name="state">
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+<option value="AS">American Samoa</option>
+<option value="GU">Guam</option>
+<option value="MP">Northern Mariana Islands</option>
+<option value="PR">Puerto Rico </option>
+<option value="VI">Virgin Islands  </option>
+<option value="T4">Outlying Caribbean Islands </option>
+<option value="T1">Outlying Pacific Islands </option>
+</select>
+<input class="button" title="" type="submit" value="go"/>
+<input name="s8fid" type="hidden" value="112761032792"/>
+<input name="s8fid" type="hidden" value="112762573902"/>
+<div class="clean"></div>
+</form>
+<form action="https://ecos.fws.gov/ecp0/pub/SpeciesReport.do" autocomplete="Off" class="species" method="get" style=" padding: 0 0 0 20px;">
+<label for="home_species_search">Species Search:</label>
+<input name="dcomname" type="hidden" value="1"/>
+<input class="text" id="home_species_search" name="searchstring" onblur="if(this.value=='')this.value='Species common/scientific name';" onfocus="if(this.value=='Species common/scientific name')this.value='';" type="text" value="Species common/scientific name"/>
+<input class="button iefix" title="" type="submit" value="go"/>
+<input name="action" type="hidden" value="generate"/>
+<input name="outgrouped" type="hidden" value="false"/>
+<input name="outformat" type="hidden" value="html"/>
+<input name="outtype" type="hidden" value="species"/>
+<input name="dsciname" type="hidden" value="0"/>
+<input name="dgroup" type="hidden" value="2"/>
+<input name="dstatus" type="hidden" value="3"/>
+<input name="dinvname" type="hidden" value="-1"/>
+<input name="dspcode" type="hidden" value="-1"/>
+<input name="dfamily" type="hidden" value="-1"/>
+<input name="ddate" type="hidden" value="-1"/>
+<input name="dleadreg" type="hidden" value="-1"/>
+<input name="drange" type="hidden" value="-1"/>
+<input name="dregions" type="hidden" value="-1"/>
+<input name="dmapstatus" type="hidden" value="-1"/>
+<input name="dvip" type="hidden" value="-1"/>
+<input name="dinvpop" type="hidden" value="-1"/>
+<input name="dcrithab" type="hidden" value="-1"/>
+<input name="dspecrule" type="hidden" value="-1"/>
+<input name="dstates" type="hidden" value="-1"/>
+<input name="dwl" type="hidden" value="-1"/>
+<input name="sgroup" type="hidden" value="0"/>
+<input name="ssciname" type="hidden" value="1"/>
+<input name="scomname" type="hidden" value="2"/>
+<input name="sinvname" type="hidden" value="-1"/>
+<input name="sspcode" type="hidden" value="-1"/>
+<input name="sfamily" type="hidden" value="-1"/>
+<input name="sdate" type="hidden" value="-1"/>
+<input name="searchkey" type="hidden" value="comname"/>
+<input name="searchkey" type="hidden" value="sciname"/>
+<input name="header" type="hidden" value="Results of Species Search"/>
+<input name="s8fid2" type="hidden" value="24012698821181"/>
+<input name="s8fid2" type="hidden" value="112761032791"/>
+<input name="s8fid2" type="hidden" value="112762573891"/>
+</form>
+<form autocomplete="Off" id="county_search" style=" padding: 0 0 0 20px;">
+<input name="s8fid" type="hidden" value="112761032793"/>
+<input name="s8fid" type="hidden" value="112762573903"/>
+<label for="countyName">Species in Your County: </label><input class="text" id="countyName" name="countyName" type="text"/><div class="instructions" style="display: none;">Type your county and select from menu.</div></form>
+</div>
+<div class="search">
+<h1>Quick Searches</h1>
+<ul>
+<li><a href="http://ecos.fws.gov/ecp0/reports/ad-hoc-species-report?kingdom=V&amp;kingdom=I&amp;status=E&amp;status=T&amp;status=EmE&amp;status=EmT&amp;status=EXPE&amp;status=EXPN&amp;status=SAE&amp;status=SAT&amp;fcrithab=on&amp;fstatus=on&amp;fspecrule=on&amp;finvpop=on&amp;fgroup=on&amp;header=Listed+Animals" target="_blank">Threatened and endangered animals</a></li>
+<li><a href="http://ecos.fws.gov/ecp0/reports/ad-hoc-species-report?kingdom=P&amp;status=E&amp;status=T&amp;status=EmE&amp;status=EmT&amp;status=EXPE&amp;status=EXPN&amp;status=SAE&amp;status=SAT&amp;fcrithab=on&amp;fstatus=on&amp;fspecrule=on&amp;finvpop=on&amp;fgroup=on&amp;ffamily=on&amp;header=Listed+Plants" target="_blank">Threatened and endangered plants</a></li>
+<li><a href="http://ecos.fws.gov/ecp/report/table/petitions-received.html" target="_blank">ESA petitions under review</a></li>
+<li><a href="http://ecos.fws.gov/ecp0/reports/ad-hoc-species-report?status=P&amp;header=Species+Proposed+for+Listing&amp;fleadreg=on&amp;fstatus=on&amp;finvpop=on" target="_blank">Species proposed for listing</a></li>
+<li><a href="http://ecos.fws.gov/ecp/report/table/candidate-species.html" target="_blank">Species that are candidates for listing</a></li>
+<li><a class="pdf-icon" href="https://www.fws.gov/endangered/esa-library/pdf/5-Year Listing Workplan May Version.pdf" target="_blank">5-year Species Listing Workplan</a></li>
+<li><a href="http://ecos.fws.gov/ecp0/reports/ad-hoc-species-report?status=A*&amp;header=Species+Proposed+for+Status+Change+or+Delisting&amp;fleadreg=on&amp;fstatus=on&amp;finvpop=on" target="_blank">Species proposed for a status change or delisting </a></li>
+</ul>
+<p><a href="http://ecos.fws.gov/ecp/species-reports" target="_blank">More species searches...</a></p>
+</div>
+<div class="current">
+<div class="blue-bar">
+<p><a href="http://ecos.fws.gov/ecp0/reports/box-score-report" target="_blank">The number of endangered and threatened species changes as we add or remove species from the list. See how many are currently listed.</a></p>
+</div>
+</div>
+<div id="tmpSlideshow">
+<div class="tmpSlide" id="tmpSlide-1" style="display: none;"> <img alt="Houston toad" src="http://www.fws.gov/endangered/images/banner-bg.jpg"/> </div>
+<div class="tmpSlide" id="tmpSlide-2" style="display: block;"> <img alt="Greater sage grouse" src="http://www.fws.gov/endangered/images/banner-bg1.jpg"/> </div>
+<div class="tmpSlide" id="tmpSlide-3"> <img alt="Karner blue butterfly" src="http://www.fws.gov/endangered/images/banner-bg2.jpg"/></div>
+<div class="tmpSlide" id="tmpSlide-4"> <img alt="Loggerhead sea turtle hatchling" src="http://www.fws.gov/endangered/images/banner-bg3.jpg"/></div>
+<div class="tmpSlide" id="tmpSlide-5"> <img alt="Valley elderberry longhorn beetle" src="http://www.fws.gov/endangered/images/banner-bg4.jpg"/></div>
+</div>
+</div>
+<div class="catagory-area">
+<div class="catagory-area-iner gap">
+<h1>ESA Implementation</h1>
+<img alt="California tiger salamander. Credit: Adam G. Clause" src="http://www.fws.gov/endangered/images/California tiger salamander_Adam G.jpg"/>
+<h2>Ensuring an Effective Endangered Species Act</h2>
+<p>The ESA provides a broad and flexible framework to facilitate conservation with a variety of stakeholders. Learn about the tools in place that help us work with our diverse network of partners to deliver meaningful conservation.</p>
+<div class="clear"> </div>
+<p><span></span></p>
+<a class="more-button" href="improving_esa/index.html" target="_blank"><img alt="More info button" class="more-news" onmouseout="this.src='images/more-info.jpg'" onmouseover="this.src='images/more-info-hover.jpg'" src="http://www.fws.gov/endangered/images/more-info.jpg"/></a></div>
+<div class="catagory-area-iner">
+<div class="catagory-area-iner">
+<div class="catagory-area-iner">
+<h1>News</h1>
+<span class="photo left" style="width: 200px; height:259px"><img alt="Gray wolf looking into camera." src="http://www.fws.gov/endangered/images/wolf_Gary KramerUSFWS.jpg" width="200"/></span>
+<h2>Service to Host Public Hearing in Minnesota on Proposed Gray Wolf Delisting</h2>
+<p>The Service is hosting a public hearing to take comments on the agency's proposal to remove the gray wolf from the List of Endangered and Threatened Wildlife. The hearing is scheduled for June 25, 2019, in Brainerd, Minnesota...<br/>
+<a href="https://www.fws.gov/news/ShowNews.cfm?ref=service-to-host-public-hearing-in-minnesota-on-proposed-gray-wolf-&amp;_ID=36421" target="_blank">News Bulletin »</a><br/>
+<a href="https://www.fws.gov/home/wolfrecovery/" target="_blank">Learn More »</a></p>
+<div class="clear"> </div>
+<a class="more-button" href="news/index.html" target="_blank"><img alt="More News button" class="more-news" onmouseout="this.src='images/more-news.jpg'" onmouseover="this.src='images/more-news-hover.jpg'" src="http://www.fws.gov/endangered/images/more-news.jpg"/></a>
+</div>
+<div class="catagory-area-iner gap">
+<h1>Get to Know Your Species</h1>
+<a href="map/index.html" target="_blank"><img alt="Species map" src="http://www.fws.gov/endangered/images/get_to_know-map.jpg"/></a>
+<h2>What's in Your Backyard?</h2>
+<p>Learn about the endangered and threatened species in your area and what is being done to help recover them.</p>
+<div class="clear"> </div>
+<p><span></span></p>
+<a class="more-button" href="map/index.html" target="_blank"><img alt="More info button" class="more-news" onmouseout="this.src='images/more-info.jpg'" onmouseover="this.src='images/more-info-hover.jpg'" src="http://www.fws.gov/endangered/images/more-info.jpg"/></a></div>
+</div>
+</div>
+<div class="catagory-area-iner">
+<h1>Species Status Assessment</h1>
+<img alt="New Mexico meadow jumping mouse. Courtesy of Jennifer Frey" src="http://www.fws.gov/endangered/images/New Mexico meadow jumping mouse-200_courtesy of Jennifer Frey.jpg"/>
+<h2>An Integrated Framework for Conservation</h2>
+<p>The Species Status Assessment was developed to enhance conservation success under the ESA. This framework is based on the best available scientific and commercial information, and it delivers the foundational science for informing all ESA decisions...</p>
+<div class="clear"> </div>
+<p><span></span></p>
+<a class="more-button" href="https://www.fws.gov/endangered/improving_esa/ssa.html" target="_blank"><img alt="More info button" class="more-news" onmouseout="this.src='images/more-info.jpg'" onmouseover="this.src='images/more-info-hover.jpg'" src="http://www.fws.gov/endangered/images/more-info.jpg"/></a></div>
+<div class="clear"> </div>
+</div>
+<div class="wrapper-bottom">
+<div class="wrapper-bottom-left">
+<img align="left" alt="Connect With Us" border="0" height="269" src="http://www.fws.gov/endangered/images/code3-SK.jpg" usemap="#Map" width="162"/>
+<map id="Map" name="Map">
+<area alt="podcasts" coords="65,70,93,96" href="https://www.fws.gov/endangered/about/multimedia.html" shape="rect" target="_blank"/>
+<area alt="Facebook" coords="65,108,87,135" href="http://www.facebook.com/USFWSEndangeredSpecies" shape="rect" target="_blank"/>
+<area alt="Youtube" coords="65,146,94,174" href="http://www.youtube.com/usfws#p/c/7E8264DA432377C9" shape="rect" target="_blank"/>
+<area alt="Flickr" coords="61,179,93,209" href="http://www.flickr.com/photos/usfwshq/collections/72157629000041201" shape="rect" target="_blank"/>
+</map>
+<div align="center" class="newsletter">
+<div class="top-link1">
+<h4 align="center">E-newsletter Sign Up</h4>
+</div>
+<div class="bottom-link1">
+<p>Enter your email address to receive the latest news and announcements for endangered and threatened species:</p>
+<form action="http://visitor.r20.constantcontact.com/d.jsp" method="post" name="ccoptin" style="margin-bottom:2;" target="_blank">
+<input name="llr" type="hidden" value="o48eevhab"/>
+<input name="m" type="hidden" value="1107736817646"/>
+<input name="p" type="hidden" value="oi"/>
+<input class="txtarea" name="ea" placeholder="Email Address" size="20" type="text" value=""/>
+<input alt="E-newsletter sign up form" class="submit sign-up-button" name="go" style="font-family:Verdana,Geneva,Arial,Helvetica,sans-serif; font-size:10pt;" type="submit" value="E-newsletter sign up form"/>
+</form>
+</div>
+</div>
+</div>
+<div class="wrapper-bottom-right"><img alt="" border="0" src="http://www.fws.gov/endangered/images/poster13.jpg" usemap="#Map2"/>
+<map id="Map2" name="Map2"><area alt="ES Bulletin" coords="318,1,438,120" href="news/bulletin.html" shape="rect" target="_blank"/>
+<map id="Map2" name="Map2"><area alt="ES Bulletin" coords="-3,0,310,117" href="news/bulletin.html" shape="rect" target="_blank"/>
+<area alt="Partnership Stories" coords="1,145,308,241" href="what-we-do/partners.html" shape="rect" target="_blank"/>
+<area alt="ES Day" coords="321,146,439,243" href="esday/index.html" shape="rect" target="_blank"/>
+</map>
+</map></div>
+</div>
+<div class="clear"> </div>
+</div>
+</div>
+</div>
+<div id="lastUpdated">
+			Last updated:
+			June 12, 2019
+		</div>
+<div style="clear: both;">
+</div>
+<div id="shadowFooter">
+<div class="col-first">
+<h4 class="toplevel">Species</h4>
+<ul>
+<li><a href="https://www.fws.gov/endangered/species/index.html">Species Search/Map</a></li>
+<li><a href="https://ecos.fws.gov/ecp/" target="_blank">Environmental Conservation Online System (ECOS)</a></li>
+<li><a href="https://www.fws.gov/endangered/species/us-species.html">U.S. Species</a></li>
+<li><a href="https://ecos.fws.gov/ecp/report/table/candidate-species.html" target="_blank">Candidate Species</a></li>
+<li><a href="https://ecos.fws.gov/ecp0/reports/ad-hoc-species-report?status=E&amp;status=T&amp;status=EmE&amp;status=EmT&amp;lead=10&amp;header=Foreign+Species&amp;fleadreg=on&amp;fstatus=on&amp;finvpop=on" target="_blank">Foreign Species</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/critical-habitats.html">Critical Habitat</a></li>
+<li><a href="https://www.fws.gov/endangered/species/recovery-plans.html">Recovery Plans</a></li>
+<li><a href="https://www.fws.gov/endangered/species/why-save-species.html">Why Save Species?</a></li>
+<li><a href="https://www.fws.gov/endangered/species/faq.html">Frequently Asked Questions</a></li>
+</ul>
+</div>
+<div class="col">
+<h4 class="toplevel">What We Do</h4>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/index.html">Candidate Conservation</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/consultations-overview.html">Consultations</a></li>
+<li><a href="https://www.fws.gov/endangered/grants/index.html">Grants</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/hcp-overview.html">Habitat Conservation Plans (HCPs)</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/foreign-species.html">Foreign Species</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/listing-overview.html">Listing and Critical Habitat</a> </li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/recovery-overview.html">Recovery</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/tribes-overview.html">Working With Tribes</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/partners.html">Partnerships In Conservation</a></li>
+</ul>
+</div>
+<div class="col">
+<h4 class="toplevel"><a href="https://www.fws.gov/endangered/landowners/index.html">For Landowners</a></h4>
+<ul>
+<li><a href="https://www.fws.gov/endangered/what-we-do/hcp-overview.html">Habitat Conservation Plans (HCPs)</a></li>
+<li><a href="https://www.fws.gov/endangered/landowners/safe-harbor-agreements.html">Safe Harbor Agreements</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/cca.html">Candidate Conservation Agreements</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/cca.html#ccaa">Candidate Conservation Agreements with Assurances</a></li>
+<li><a href="https://www.fws.gov/endangered/landowners/recovery-credits.html">Recovery Credits and Tax Deductions</a></li>
+<li><a href="https://www.fws.gov/endangered/landowners/conservation-banking.html">Conservation Banking</a></li>
+<li><a href="https://ecos.fws.gov/ecp0/conservationPlan/" target="_blank">Conservation Plans Database</a></li>
+<li><a href="https://ecos.fws.gov/ipac/" target="_blank">Information for Planning and Consultation (IPaC)</a></li>
+<li><a href="https://ecos.fws.gov/ecp0/ore-input/ad-hoc-recovery-actions-public-report-input" target="_blank">Recovery Online Activity Reporting System (ROAR)</a></li>
+</ul>
+</div>
+<div class="col">
+<h4 class="toplevel"><a href="https://www.fws.gov/endangered/permits/index.html">Permits</a></h4>
+<h4 class="toplevel"><a href="https://www.fws.gov/endangered/grants/index.html">Grants</a></h4>
+<h4 class="toplevel">News</h4>
+<ul>
+<li><a href="https://www.fws.gov/endangered/news/">News Stories</a></li>
+<li><a href="https://www.fws.gov/endangered/about/multimedia.html">Featured Species</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/recovery-stories.html">Recovery Success Stories</a></li>
+<li><a href="https://www.fws.gov/endangered/news/bulletin.html">Endangered Species Bulletin</a></li>
+<li><a href="https://www.fws.gov/endangered/what-we-do/partners.html">Partnership Stories </a></li>
+</ul>
+<h4 class="toplevel">About Us</h4>
+<ul>
+<li><a href="https://www.fws.gov/endangered/about/index.html">Overview</a></li>
+<li><a href="https://www.fws.gov/endangered/about/multimedia.html">Featured Species</a></li>
+<li><a href="https://www.fws.gov/endangered/news/bulletin.html">Endangered Species Bulletin</a></li>
+<li><a href="https://www.fws.gov/endangered/about/glossary.html">Glossary</a></li>
+<li><a href="https://www.fws.gov/endangered/about/faq.html">Frequently Asked Questions</a></li>
+<li><a href="https://www.fws.gov/endangered/regions/index.html">Contacts</a></li>
+</ul>
+</div>
+<div class="col">
+<h4 class="toplevel">FWS Regions</h4>
+<ul>
+<li><a href="https://www.fws.gov/endangered/regions/index.html">Region Map</a></li>
+<li><a class="tabs-1" href="https://www.fws.gov/endangered/regions/index.html#tabs-1">Pacific <span class="unbold">(Region 1)</span></a></li>
+<li><a class="tabs-2" href="https://www.fws.gov/endangered/regions/index.html#tabs-2">Southwest <span class="unbold">(Region 2)</span></a></li>
+<li><a class="tabs-3" href="https://www.fws.gov/endangered/regions/index.html#tabs-3">Great Lakes-Big Rivers <span class="unbold">(Region 3)</span></a></li>
+<li><a class="tabs-4" href="https://www.fws.gov/endangered/regions/index.html#tabs-4">Southeast <span class="unbold">(Region 4)</span></a></li>
+<li><a class="tabs-5" href="https://www.fws.gov/endangered/regions/index.html#tabs-5">Northeast <span class="unbold">(Region 5)</span></a></li>
+<li><a class="tabs-6" href="https://www.fws.gov/endangered/regions/index.html#tabs-6">Mountain-Prairie <span class="unbold">(Region 6)</span></a></li>
+<li><a class="tabs-7" href="https://www.fws.gov/endangered/regions/index.html#tabs-7">Alaska <span class="unbold">(Region 7)</span></a></li>
+<li><a class="tabs-8" href="https://www.fws.gov/endangered/regions/index.html#tabs-8">Pacific Southwest <span class="unbold">(Region 8)</span></a></li>
+<li><a class="tabs-head" href="https://www.fws.gov/endangered/regions/index.html#head">Headquarters <span class="unbold"></span></a></li>
+</ul>
+</div>
+<ul>
+<li></li>
+</ul>
+<div class="col">
+<h4 class="toplevel">Laws &amp; Policies</h4>
+<ul>
+<li><a href="https://www.fws.gov/endangered/laws-policies/index.html">Endangered Species Act</a></li>
+<li><a href="https://www.fws.gov/endangered/laws-policies/regulations-and-policies.html">Endangered Species Regulations and Policies</a></li>
+<li><a href="https://www.fws.gov/endangered/laws-policies/federal-register-notices.html">Federal Register Notices</a></li>
+</ul>
+<h4 class="toplevel">Library</h4>
+<ul>
+<li><a href="https://www.fws.gov/endangered/esa-library/index.html">ESA Related Documents</a></li>
+<li><a href="https://www.fws.gov/endangered/laws-policies/federal-register-notices.html">Federal Register Notices</a></li>
+</ul>
+<h4 class="toplevel">For Kids</h4>
+<ul>
+<li><a href="https://www.fws.gov/endangered/education/index.html">Homework Help</a></li>
+</ul>
+</div>
+</div>
+<div id="siteFooter">
+<div id="siteFooter">
+</div>
+<div id="serviceFooter">
+<p class="endangeredFooter"> <a href="regions/index.html">Contact Us</a> | <a href="sitemap.html">Site Map</a> </p>
+<a href="https://www.fws.gov" target="_blank">U.S. Fish and Wildlife Service Home Page</a> | <a href="http://www.doi.gov/" non-fws="" site="" target="_blank" to="">Department of the Interior</a> | <a href="http://www.usa.gov/" non-fws="" site="" target="_blank" to="">USA.gov</a> | <a href="https://www.fws.gov/help/about_us.html" target="_blank">About the U.S. Fish and Wildlife Service</a><br/>
+<a href="https://www.fws.gov/help/accessibility.html" target="_blank">Accessibility</a> | <a href="https://www.fws.gov/help/policies.html" target="_blank">Privacy</a> | <a href="https://www.fws.gov/help/notices.html" target="_blank">Notices</a> | <a href="https://www.fws.gov/help/disclaimer.html" target="_blank">Disclaimer</a> | <a href="http://www.doi.gov/foia/" non-fws="" site="" target="_blank" to="">FOIA</a> </div>
+</div>
+<div id="headerBack">
+<div>
+<div id="searchBar">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td align="left" class="search-cell" valign="middle">
+<form action="http://ecos.fws.gov/tess_public/pub/SpeciesReport.do" id="usagov_search" method="get">
+<label for="query-field"></label>
+<input id="query-field" name="searchstring" size="32" type="text" value="Search the Endangered Species Site"/><input checked="checked" class="search_source" id="search_source_species" name="search_source" type="radio" value="species"/> <label class="search_source" for="search_source_species">Species </label> <input class="search_source" id="search_source_endangered" name="search_source" type="radio" value="endangered"/> <label class="search_source" for="search_source_endangered">Endangered Species </label> <input class="search_source" id="search_source_fws" name="search_source" type="radio" value="fws"/> <label class="search_source" for="search_source_fws">USFWS</label>
+<input name="action" type="hidden" value="generate"/> <input name="outgrouped" type="hidden" value="false"/> <input name="outformat" type="hidden" value="html"/> <input name="outtype" type="hidden" value="species"/> <input name="dsciname" type="hidden" value="0"/> <input name="dcomname" type="hidden" value="1"/> <input name="dgroup" type="hidden" value="2"/> <input name="dstatus" type="hidden" value="3"/> <input name="dcurrdist" type="hidden" value="4"/> <input name="dinvname" type="hidden" value="-1"/> <input name="dspcode" type="hidden" value="-1"/> <input name="dfamily" type="hidden" value="-1"/> <input name="ddate" type="hidden" value="-1"/> <input name="dleadreg" type="hidden" value="-1"/> <input name="drange" type="hidden" value="-1"/> <input name="dregions" type="hidden" value="-1"/> <input name="dmapstatus" type="hidden" value="-1"/> <input name="dvip" type="hidden" value="-1"/> <input name="dinvpop" type="hidden" value="-1"/> <input name="dcrithab" type="hidden" value="-1"/> <input name="dspecrule" type="hidden" value="-1"/> <input name="dstates" type="hidden" value="-1"/> <input name="dwl" type="hidden" value="-1"/> <input name="sgroup" type="hidden" value="0"/> <input name="ssciname" type="hidden" value="1"/> <input name="scomname" type="hidden" value="2"/> <input name="sinvname" type="hidden" value="-1"/> <input name="sspcode" type="hidden" value="-1"/> <input name="sfamily" type="hidden" value="-1"/> <input name="sdate" type="hidden" value="-1"/> <input name="searchkey" type="hidden" value="comname"/> <input name="searchkey" type="hidden" value="sciname"/> <input name="header" type="hidden" value="Results of Species Search"/> <input name="s8fid" type="hidden" value="24012698821181"/></form>
+</td>
+<td align="right" valign="top"><div align="right" class="search-cell">
+</div></td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+</div></body></html>

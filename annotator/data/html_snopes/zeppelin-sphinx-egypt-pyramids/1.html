@@ -1,0 +1,3286 @@
+<html class="js canvas canvastext geolocation crosswindowmessaging websqldatabase indexeddb hashchange historymanagement draganddrop websocket rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache svg smil svgclippaths fontface" lang="en" prefix="lc: http://loc.gov/#"><head class="at-element-marker">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="$Revision: 81937 $" name="version"/>
+<meta content="5C89FB9D99590AB2F55BD95C3A59BD81" name="msvalidate.01"/>
+<link href="http://purl.org/dc/elements/1.1/" rel="schema.dc" title="schema(DC)"/>
+<meta content="eng" name="dc.language"/>
+<meta content="Library of Congress, Washington, D.C. 20540 USA" name="dc.source"/>
+<link href="https://www.loc.gov/item/2002712108/?fo=json" rel="alternate" type="application/json"/>
+<meta content="libraryofcongress" property="fb:admins"/>
+<meta content="The Library of Congress" property="og:site_name"/>
+<meta content="article" property="og:type"/>
+<title>The Graf Zeppelin's rendezvous with the eternal desert and the more than 4,000 year old pyraminds of Gizeh, Egypt  | Library of Congress</title>
+<meta content="The Graf Zeppelin's rendezvous with the eternal desert and the more than 4,000 year old pyraminds of Gizeh, Egypt" name="dc.title"/>
+<meta content="The Graf Zeppelin's rendezvous with the eternal desert and the more than 4,000 year old pyraminds of Gizeh, Egypt" property="og:title"/>
+<meta content="1 photograph : print on card mount ; mount 9 x 18 cm (stereograph format) | Three men probably on the Pyramid of Khufu, looking towards the Pyramid of Khafre, with desert in background and the Graf Zeppelin in the sky, Jīzah, Egypt." name="description"/>
+<meta content="1 photograph : print on card mount ; mount 9 x 18 cm (stereograph format) | Three men probably on the Pyramid of Khufu, looking towards the Pyramid of Khafre, with desert in background and the Graf Zeppelin in the sky, Jīzah, Egypt." property="og:description"/>
+<meta content="image" name="dc.type"/>
+<meta content="stereograph cards" name="dc.relation.isPartOf"/>
+<meta content="prints and photographs division" name="dc.relation.isPartOf"/>
+<meta content="catalog" name="dc.relation.isPartOf"/>
+<meta content="https://www.loc.gov/item/2002712108/" name="dc.identifier"/>
+<meta content="https://www.loc.gov/item/2002712108/" property="og:url"/>
+<meta content="http://cdn.loc.gov/service/pnp/stereo/1s20000/1s21000/1s21300/1s21301_150px.jpg#h=77&amp;w=150" property="og:image"/>
+<meta content="https://cdn.loc.gov/service/pnp/stereo/1s20000/1s21000/1s21300/1s21301_150px.jpg#h=77&amp;w=150" property="og:image:secure_url"/>
+<meta content="http://www.loc.gov/static/images/favicons/open-graph-logo.png?81937.86251" property="og:image"/>
+<meta content="https://www.loc.gov/static/images/favicons/open-graph-logo.png?81937.86251" property="og:image:secure_url"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<link href="https://www.loc.gov//static/stylesheets/base.css?81937.86251" rel="stylesheet" type="text/css"/>
+<script src="https://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script><script src="https://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/mbox-contents-e2a45417e8445bb936e5d6673a0cdb8a4dfe9bfc.js"></script><style class="at-flicker-control" id="at-makers-style">
+.mboxDefault {visibility: hidden;}
+</style>
+<script src="https://www.loc.gov/static/js/lib/jquery-1.8.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+/**
+ * Timing.js 1.0.4
+ * Copyright 2015 Addy Osmani
+ */
+(function(window) {
+    'use strict';
+
+    /**
+     * Navigation Timing API helpers
+     * timing.getTimes();
+     **/
+    window.timing = window.timing || {
+        /**
+         * Outputs extended measurements using Navigation Timing API
+         * @param  Object opts Options (simple (bool) - opts out of full data view)
+         * @return Object      measurements
+         */
+        getTimes: function(opts) {
+            var performance = window.performance || window.webkitPerformance || window.msPerformance || window.mozPerformance;
+
+            if (performance === undefined) {
+                return false;
+            }
+
+            var timing = performance.timing;
+            var api = {};
+            opts = opts || {};
+
+            if (timing) {
+                if(opts && !opts.simple) {
+                    for (var k in timing) {
+                        // hasOwnProperty does not work because properties are
+                        // added by modifying the object prototype
+                        if(isNumeric(timing[k])) {
+                            api[k] = parseFloat(timing[k]);
+                        }
+                    }
+                }
+
+
+                // Time to first paint
+                if (api.firstPaint === undefined) {
+                    // All times are relative times to the start time within the
+                    // same objects
+                    var firstPaint = 0;
+
+                    // Chrome
+                    if (window.chrome && window.chrome.loadTimes) {
+                        // Convert to ms
+                        firstPaint = window.chrome.loadTimes().firstPaintTime * 1000;
+                        api.firstPaintTime = firstPaint - (window.chrome.loadTimes().startLoadTime*1000);
+                    }
+                    // IE
+                    else if (typeof window.performance.timing.msFirstPaint === 'number') {
+                        firstPaint = window.performance.timing.msFirstPaint;
+                        api.firstPaintTime = firstPaint - window.performance.timing.navigationStart;
+                    }
+                    // Firefox
+                    // This will use the first times after MozAfterPaint fires
+                    //else if (window.performance.timing.navigationStart && typeof InstallTrigger !== 'undefined') {
+                    //    api.firstPaint = window.performance.timing.navigationStart;
+                    //    api.firstPaintTime = mozFirstPaintTime - window.performance.timing.navigationStart;
+                    //}
+                    if (opts && !opts.simple) {
+                        api.firstPaint = firstPaint;
+                    }
+                }
+
+                // Total time from start to load
+                api.loadTime = timing.loadEventEnd - timing.fetchStart;
+                // Time spent constructing the DOM tree
+                api.domReadyTime = timing.domComplete - timing.domInteractive;
+                // Time consumed preparing the new page
+                api.readyStart = timing.fetchStart - timing.navigationStart;
+                // Time spent during redirection
+                api.redirectTime = timing.redirectEnd - timing.redirectStart;
+                // AppCache
+                api.appcacheTime = timing.domainLookupStart - timing.fetchStart;
+                // Time spent unloading documents
+                api.unloadEventTime = timing.unloadEventEnd - timing.unloadEventStart;
+                // DNS query time
+                api.lookupDomainTime = timing.domainLookupEnd - timing.domainLookupStart;
+                // TCP connection time
+                api.connectTime = timing.connectEnd - timing.connectStart;
+                // Time spent during the request
+                api.requestTime = timing.responseEnd - timing.requestStart;
+                // Request to completion of the DOM loading
+                api.initDomTreeTime = timing.domInteractive - timing.responseEnd;
+                // Load event time
+                api.loadEventTime = timing.loadEventEnd - timing.loadEventStart;
+            }
+
+            return api;
+        },
+        /**
+         * Uses console.table() to print a complete table of timing information
+         * @param  Object opts Options (simple (bool) - opts out of full data view)
+         */
+        printTable: function(opts) {
+            var table = {};
+            var data  = this.getTimes(opts) || {};
+            Object.keys(data).sort().forEach(function(k) {
+                table[k] = {
+                    ms: data[k],
+                    s: +((data[k] / 1000).toFixed(2))
+                };
+            });
+            console.table(table);
+        },
+        /**
+         * Uses console.table() to print a summary table of timing information
+         */
+        printSimpleTable: function() {
+            this.printTable({simple: true});
+        }
+    };
+
+    function isNumeric(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
+    // Expose as a commonjs module
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = window.timing;
+    }
+
+})(typeof window !== 'undefined' ? window : {});
+;;
+</script>
+<script type="text/javascript">
+// Stub window.loc_ux_tracking so we dont have to riddle the pages
+// with if(window.loc_ux_tracking) everywhere.  Also create an alias
+// `UX`
+jQuery(function($){
+    if(!window.loc_ux_tracking){
+        window.loc_ux_tracking = {
+            trackFileDownloadEvent: function(){},
+            trackUserInteractionEvent: function(){},
+            trackUserInterfaceAction: function(){},
+        }
+    }
+    window.UX = window.loc_ux_tracking;
+    UX.download = UX.trackFileDownloadEvent;
+    UX.interaction = UX.trackUserInteractionEvent;
+    UX.interface = UX.trackUserInterfaceAction;
+
+    function getMediaPosition(player) {
+        /*
+         * To support the two media players (JW Player and mediaElement) a facade function 
+         * wwas created in order to get the current position in a video.
+         *
+         * getMediaPosition() returns the current position in the video.
+         * @param {playerObject} player
+         * @return {currentPosition} number
+         */
+        switch(player.type) {
+            case 'jwPlayer': {
+                return player.getPosition();
+            }
+            case 'mediaElement': {
+                return player.getCurrentTime();
+            }
+        }
+        return null;
+    }
+
+
+    function getMediaDuration(player) {
+        /*
+         * To support the two media players (JW Player and mediaElement) a facade function 
+         * wwas created in order to get the length of a video.
+         *
+         * getMediaPosition() returns the length of the video.
+         * @param {playerObject} player
+         * @return {currentPosition} number
+         */
+        switch(player.type) {
+            case 'jwPlayer': {
+                return player.getDuration();
+            }
+            case 'mediaElement': {
+                return player.duration;
+            }
+        }
+        return null;
+    }
+
+    /*
+    function mediaPlayerInterface(player, playerType) {
+        // given the media player type, this function will modify the objects such that the methods
+        // called in track_player are the same for both jwPlayer and mediaElement
+        switch(playerType) {
+            case 'jwPlayer': {
+                // Want to mimic the jwPlayers functions so if jwPlayer do nothing
+                break;
+            }
+            case 'mediaElement': {
+                player.getPosition = function() {
+                    return player.getCurrentTime();
+                }
+
+                player.getDuration = function() {
+                    return player.duration;
+                }
+                break;
+            }
+        }
+        return player;
+    }
+    */
+
+    // Register calls to Adobe for metrics tracking
+    $.omniture = UX.track_player = function(player, playerType, shortName, isVideo) {
+        
+        player.type = playerType; 
+        var eventData = {
+            player: player,
+            shortName: shortName
+        };
+        eventData.mediaType = isVideo ? 'video' : 'audio';
+
+
+        switch(playerType) {
+            case 'jwPlayer': {
+                player.on('pause', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('buffer', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('idle', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('complete', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('play', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('seeked', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('seeking', function(event) {handleMediaEvent(event, eventData)}, this);
+                break;
+            }
+            case 'mediaElement': {
+                player.addEventListener('pause', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('buffer', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('idle', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('complete', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('play', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('seeked', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('seeking', function(event) {handleMediaEvent(event, eventData)}, this);
+                break;
+            }
+            default:
+                break;
+        }
+
+    };
+
+    //Handle various media events and send data to Adobe. This also sends data to the legacy locjukebox reporting suite
+    function handleMediaEvent(event, eventData) {
+        if (typeof s != "undefined") {
+            var player = eventData.player;
+            var mediaName = eventData.shortName;
+            var mediaType = eventData.mediaType;
+            var mediaPlayerName = "LOC JW Player";
+            var mediaOffset = 0;
+            var legacyTracking = s_gi('locjukebox');
+
+            legacyTracking.trackingServer = s.trackingServer;
+            legacyTracking.prop4 = mediaName;
+
+            if (getMediaPosition(player) > 0) {
+                mediaOffset = Math.floor(getMediaPosition(player));
+            }
+            switch (event.type) {
+                case 'play':
+                    if (mediaOffset == 0) {
+                        setTimeout(function() {
+                            s.Media.open(mediaName, getMediaDuration(player), mediaPlayerName);
+                            s.Media.play(mediaName, mediaOffset);
+                            legacyTracking.prop8 = "[Button Click] - Start " + mediaType;
+                            legacyTracking.tl();
+                            console.log('play event fired off');
+                        }, 500);
+                    }
+                    else {
+                        s.Media.play(mediaName, mediaOffset);
+                        legacyTracking.prop8 = "[Button Click] - Resume " + mediaType;
+                        legacyTracking.tl();
+                    }
+                    break;
+
+                case 'seeked':
+                    s.Media.stop(mediaName, mediaOffset);
+                    s.Media.play(mediaName, mediaOffset);
+                    legacyTracking.prop8 = "[Scrub] - Specific Point in " + mediaType + " Clip";
+                    legacyTracking.tl();
+                    console.log('seek event fired off');
+                    break;
+
+                case 'pause':
+                    s.Media.stop(mediaName, mediaOffset);
+                    legacyTracking.prop8 = "[Button Click] - Pause " + mediaType;
+                    legacyTracking.tl();
+                    console.log('pause event fired off');
+                    break;
+                case 'seeking':
+                    s.Media.stop(mediaName, mediaOffset);
+                    console.log('seeking event fired off');
+                    break;
+                case 'buffer':
+                case 'idle':
+                    break;
+
+                case 'complete':
+                    s.Media.stop(mediaName, mediaOffset);
+                    s.Media.close(mediaName);
+                    mediaOffset = 0;
+                    legacyTracking.prop8 = "[End Clip] - " + mediaType;
+                    legacyTracking.tl();
+                    break;
+            }
+        }
+    }
+});
+
+// General analytics properties.  Adobe will inspect the global scope
+// and execute this function if it finds it.
+var doPageMetricsPlugin = function(s){
+
+    // window.UX = window.loc_ux_tracking;  // This resets the UX object removing track_player causing a bug for the video player
+    UX.download = UX.trackFileDownloadEvent;
+    UX.interaction = UX.trackUserInteractionEvent;
+    UX.interface = UX.trackUserInterfaceAction;
+
+    /* application title: prop10 */
+    s.prop10 = "Project One";
+
+    /* error page report */
+    
+
+    s.prop15 = "";
+    s.prop16 = "";
+    s.prop18 = ""; // Start Date
+    s.prop19 = ""; // End Date
+    s.prop20 = false; // Front page only
+    /* page title: prop21 */
+    
+    //Primary source item/resource title
+        s.prop21 = 'The Graf Zeppelin&#39;s rendezvous with the eternal desert and the more than 4,000 year old pyraminds of Gizeh, Egypt';
+    
+    // Basic or Advanced
+    
+        s.prop15 = 'basic';
+    
+    //Start date
+    
+    //End Date
+    
+    //Front page only
+    
+        s.prop20 = false;
+    
+    /* system identifier: prop20 */
+    /*
+    
+        
+        s.prop20 = '2002712108/';
+        
+    
+    */
+    /* page identifier: prop11 */
+    // metrics item page identifier is unique id plus readable title.  This
+    // needs help getting cleaned up using site_type/site_id/resource/title?
+    // - from item/metrics.html
+    // - from managed_content/metrics.html
+    
+        
+        s.prop11 = '2002712108/ - The Graf Zeppelin&#39;s rendezvous with the eternal desert and the more than 4,000 year old pyraminds of Gizeh, Egypt';
+        
+    
+
+    //Set title, same across supporting material like about-this-thing, search
+    //results within the set as the content, articles and essays etc.
+    
+
+    s.prop22 = 0.279222011566;//backend duration
+
+
+    // Assigning specific search options for selected search facets
+    s.prop23 = "";// suggested
+    s.prop24 = "";// digitized
+    s.prop25 = "";// original format
+    s.prop26 = "";// online format
+    s.prop27 = "";// date
+    s.prop28 = "";// part of
+    s.prop29 = "";// contributor
+    s.prop30 = "";// subject
+    s.prop31 = "";// site_id -> picked up by prop62
+    s.prop32 = "";// location
+    s.prop33 = "";// site_type -> picked up by prop61
+    s.prop34 = "";// site_path (options.resource) can be longer than 2 segments
+    s.prop35 = "";// language
+    s.prop36 = "";// results view type
+    
+    s.prop37 = '';// searchIn
+    s.prop38 = "/item/2002712108/";// path_info
+    s.prop39 = "";//truncated query string
+    s.prop40 = '';// count
+    s.prop41 = "";// sort
+    s.prop44 = "";// searchTerms
+    s.prop45 = "";
+    s.prop46 = "";// qs-adv-search-kw
+    s.prop47 = '';// startPage
+    s.prop67 = "";// access condition
+
+    /* original format: prop49 */
+    
+    s.prop49 = 'Photo, Print, Drawing';
+    
+    s.prop50 = "";
+    // The following two props aren't needed currently
+    //s.prop51 = "";// facetLimits
+    //s.prop52 = "";// field
+    s.prop53 = "";// facetPrefix
+    s.prop54 = "";// fullText
+    s.prop55 = "";// download
+    s.prop56 = ""; // partof_collection
+    s.prop57 = ""; // number_page
+    s.prop60 = 81937;//release_id
+    s.prop69 = ""; // location_state
+    s.prop70 = ""; //location_county
+    s.prop71 = ""; //language
+    // Combined Facets - yuck, should be deprecated soon
+    // TODO: This means we need a s.prop for "digitized"
+    //       aka "available online".
+    s.prop48 = "Facet[Digitized]-(false) ";
+    /*
+    /* Advanced Search display level */
+    
+        s.prop16 = "None";
+    
+
+    /* Advanced Search Parameter */
+    
+    /* Query String */
+    
+
+    /* Partof Title */
+    
+
+    /* Partof_Division */
+    
+    /* Partof_Collection */
+    
+    /* number_page */
+    
+
+    /* Location country */
+    
+
+    /* Location state */
+    
+
+    /* Language */
+    
+
+    
+        s.prop24 = 'available online';// digitized
+
+        
+        s.prop25 += 'photo, print, drawing|';// original format
+        
+
+        s.prop26 = 'image|';// online format
+
+        
+        s.prop27 += '1931|';// date
+        
+
+        
+        s.prop28 += 'stereograph cards|';// part of
+        
+        s.prop28 += 'prints and photographs division|';// part of
+        
+        s.prop28 += 'catalog|';// part of
+        
+
+        
+        s.prop29 += 'keystone view company|';// contributor
+        
+
+        
+        s.prop30 += 'airships|';// subject
+        
+        s.prop30 += 'egypt|';// subject
+        
+        s.prop30 += 'german|';// subject
+        
+        s.prop30 += 'graf zeppelin (airship)|';// subject
+        
+        s.prop30 += 'jīzah|';// subject
+        
+        s.prop30 += 'photographic prints|';// subject
+        
+        s.prop30 += 'pyramids|';// subject
+        
+        s.prop30 += 'stereographs|';// subject
+        
+
+        
+        s.prop32 += 'egypt|';// location
+        
+        s.prop32 += 'jizah|';// location
+        
+        s.prop32 += 'jīzah|';// location
+        
+
+        
+        s.prop35 += 'english|';// language
+        
+
+        s.prop67 += 'available at LOC campus'; //access condition
+
+    
+
+
+    return s;
+};
+</script>
+<meta content="#ffffff" name="msapplication-TileColor"/>
+<meta content="ms-icon-144x144.png?81937.86251" name="msapplication-TileImage"/>
+<link href="https://www.loc.gov/item/2002712108/" rel="alternate" type="text/html"/>
+<link href="https://www.loc.gov/item/2002712108/?fo=json" rel="alternate" type="application/json"/>
+<link href="https://www.loc.gov/search/opensearch.xml" rel="search" title="Library of Congress Search" type="application/opensearchdescription+xml"/>
+<script src="https://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/s-code-contents-3574d41e6d652a4a2fd4cec83336d32662a2ffa8.js"></script><link href="//cdn.loc.gov/loader/css/style.css" media="all" rel="stylesheet" type="text/css"/></head>
+<body>
+<div id="body">
+<a class="skip-nav" href="#skip-to-content">Skip to main content</a>
+<style>.header-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 998;
+  background-color: #000000;
+  /* fallback */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.header {
+  background-color: #fff;
+  border-top: 4px solid #FC4C02;
+  border-bottom: 1px solid #bfbfbf;
+  position: relative;
+  z-index: 999;
+}
+.header-container {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .header-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.header-row {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+}
+@media (min-width: 993px) {
+  .header-row {
+    align-items: flex-end;
+  }
+}
+</style>
+<header class="header" role="banner">
+<div class="header-container">
+<div class="header-row">
+<style>.header-logo {
+  width: 161px;
+}
+@media (min-width: 993px) {
+  .header-logo {
+    width: 363px;
+    padding: 25px 0;
+  }
+}
+.header-logo > a {
+  display: block;
+  width: 363px;
+  height: 90px;
+}
+.header-logo > a > img {
+  width: 100%;
+  height: auto;
+}
+.header-logo > a > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 992px) {
+  .header-logo > a {
+    width: 161px;
+    height: 40px;
+  }
+}
+@media print {
+  .header-logo > a {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .header-logo {
+    padding: 0;
+  }
+}
+@media print {
+  .header-logo {
+    padding: 1rem 0;
+    height: 68px;
+    display: block;
+  }
+  .header-logo:after {
+    content: url("/static/images/logo-loc-new-branding.svg?74629");
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
+<script>jQuery(function($) {
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-logo a').live('click', function() {
+        UX.interaction($(this), 'LC Logo', 'Click', '');
+    });
+
+});
+</script>
+<div class="header-logo">
+<a href="/">
+<img alt="" src="https://www.loc.gov//static/images/logo-loc-new-branding.svg"/>
+<span>Library of Congress</span>
+</a>
+</div>
+<style>.header-search {
+  flex: 1 1 0%;
+  padding-left: 30px;
+}
+@media (min-width: 993px) {
+  .header-search {
+    padding: 25px 0 25px 210px;
+  }
+}
+.header-search > form {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #000;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 768px) {
+  .header-search > form {
+    flex: 1 0 100%;
+  }
+}
+.header-search > form .header-search-formats {
+  position: relative;
+  color: #000;
+  border-bottom: 1px solid #000;
+  flex: 0 0 100%;
+}
+@media (min-width: 481px) {
+  .header-search > form .header-search-formats {
+    flex: none;
+    border: none;
+  }
+}
+.header-search > form .header-search-formats:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 6px;
+  font-size: 12px;
+}
+.header-search > form .header-search-formats .header-search-format-select {
+  border: none;
+  height: 30px;
+  width: 100%;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+@media (max-width: 480px) {
+  .header-search > form .header-search-formats .header-search-format-select {
+    font-size: 16px;
+  }
+}
+.header-search > form .header-search-formats .header-search-format-select::-ms-expand {
+  display: none;
+}
+.header-search > form .header-search-formats .header-search-format-select:hover,
+.header-search > form .header-search-formats .header-search-format-select:focus {
+  box-shadow: inset 0 0 3px #000 !important;
+}
+.header-search > form .header-search-input-wrapper {
+  flex: 1 1 1%;
+  position: relative;
+}
+.header-search > form .header-search-input-wrapper .header-search-input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  border-left: 1px solid #000;
+  height: 30px;
+  line-height: 30px;
+}
+@media (max-width: 480px) {
+  .header-search > form .header-search-input-wrapper .header-search-input {
+    font-size: 16px;
+    border: none;
+  }
+}
+.header-search > form .header-search-input-wrapper .header-search-input:focus {
+  box-shadow: inset 0 0 3px #999 !important;
+}
+.header-search > form .header-search-button {
+  height: 30px;
+  font-size: 18px;
+  padding: 0 10px;
+  background-color: #000;
+  border-color: #000;
+}
+.header-search > form .header-search-button > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.header-search > form .header-search-button .icon {
+  line-height: inherit;
+}
+@media (max-width: 768px) {
+  .header-search > form {
+    display: none;
+  }
+  .header-search > form.header-search-form-active {
+    display: flex;
+  }
+}
+.header-search .header-search-toggle {
+  display: none;
+  height: 32px;
+  font-size: 1.25rem;
+  padding: 0 10px;
+  background-color: #000;
+  border-color: #000;
+}
+.header-search .header-search-toggle span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 768px) {
+  .header-search .header-search-toggle {
+    display: inline-block;
+    float: right;
+  }
+  .header-search .header-search-toggle.header-search-toggle-close {
+    background-color: transparent;
+    border-color: transparent;
+    color: #00618e;
+    font-size: 36px;
+    color: #FC4C02;
+    height: auto;
+    flex: none;
+  }
+  .header-search .header-search-toggle.header-search-toggle-close:hover,
+  .header-search .header-search-toggle.header-search-toggle-close:focus {
+    background-color: transparent;
+    border-color: transparent;
+    color: #002347;
+  }
+}
+@media (max-width: 768px) {
+  .header-search {
+    min-height: 32px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 !important;
+  }
+  .header-search.header-search-close {
+    padding: 0 55px 0 1rem !important;
+    z-index: 2;
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+@media print {
+  .header-search {
+    display: none;
+  }
+}
+/* autocomplete */
+.autocomplete-w1 {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  margin: 0;
+  width: 100% !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.autocomplete {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-top-color: transparent;
+  background-color: #fff;
+  cursor: default;
+  text-align: left;
+  max-height: 350px;
+  overflow: auto;
+  margin: 0;
+}
+.autocomplete .selected {
+  background: #efefef;
+}
+.autocomplete div {
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+.autocomplete strong {
+  font-weight: normal;
+  color: #00618e;
+}
+.autocomplete-status {
+  font-weight: normal;
+  font-size: 10px;
+  float: right;
+  text-align: right;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+</style>
+<script>jQuery(function($) {
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-search-format-select').change(function() {
+        var label;
+        $('.header-search-format-select option:selected').each(function() {
+            label = $(this).text().trim();
+        });
+        UX.interaction($(this), 'Search', 'Select Format', label);
+    });
+    // search toggle
+    function searchActive() {
+        $('.header-search > form').addClass('header-search-form-active');
+        $('.header-search .header-search-input').focus();
+        $('.header-search-toggle i').switchClass('icon-search', 'icon-times', 50);
+        $('.header-search-toggle').addClass('header-search-toggle-close');
+        $('.header-search').addClass('header-search-close');
+    };
+    function searchInactive() {
+        $('.header-search > form').removeClass('header-search-form-active');
+        $('.header-search-toggle i').switchClass('icon-times', 'icon-search', 50);
+        $('.header-search-toggle').removeClass('header-search-toggle-close');
+        $('.header-search').removeClass('header-search-close');
+    };
+
+    $('.header-search-toggle').live('click', function() {
+        if ($('.header-search > form').hasClass('header-search-form-active')) {
+            searchInactive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Search', 'Hide', '');
+        } else {
+            searchActive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Search', 'Show', '');
+        }
+    });
+
+    $(window).on("load resize",function(e){
+        $('.autocomplete-w1').parent().css('width', '100%');
+    });
+
+});
+</script>
+<div class="header-search">
+<label class="test screen-readers-only" for="search">Search</label>
+<form action="/search/" method="get" role="search">
+<div class="header-search-formats">
+<select aria-label="search" class="header-search-format-select" id="searchFormat" name="in">
+<option value="">Everything</option>
+<option value="original-format:sound recording">Audio Recordings</option>
+<option value="original-format:book">Books/Printed Material</option>
+<option value="original-format:film, video">Films, Videos</option>
+<option value="original-format:legislation">Legislation</option>
+<option value="original-format:manuscript/mixed material">Manuscripts/Mixed Material</option>
+<option value="original-format:map">Maps</option>
+<option value="original-format:notated music">Notated Music</option>
+<option value="original-format:newspaper">Newspapers</option>
+<option value="original-format:periodical">Periodicals</option>
+<option value="original-format:personal narrative">Personal Narratives</option>
+<option value="original-format:photo, print, drawing">Photos, Prints, Drawings</option>
+<option value="original-format:software, e-resource">Software, E-Resources</option>
+<option value="original-format:archived web site">Archived Web Sites</option>
+<option value="original-format:web page">Web Pages</option>
+<option value="original-format:3d object">3D Objects</option>
+</select>
+</div>
+<div class="header-search-input-wrapper">
+<input accesskey="/" aria-autocomplete="list" aria-haspopup="true" aria-multiline="false" aria-owns="Autocomplete_65ac7" autocomplete="off" class="locsuggest header-search-input" id="search" maxlength="250" name="q" onfocus="this.select();" placeholder="Search Loc.gov" role="textbox" title="Search the Library of Congress" type="search" value=""/><div id="AutocompleteContainter_65ac7" style="position: absolute; z-index: 9999; width: 100%;"><div class="autocomplete-w1"><span aria-live="polite" class="autocomplete-status" id="Autocomplete_65ac7_status" role="status" style="width: 269px;">Suggestions enabled.</span><div aria-hidden="true" aria-owner="search" class="autocomplete" id="Autocomplete_65ac7" style="display: none; width: 289px; max-height: 300px;"></div></div></div>
+<div class="searchtarget">
+<input id="search_within_default" name="new" type="hidden" value="true"/>
+</div>
+</div>
+<button class="header-search-button" type="submit" value="submit"><span>Search</span><i class="icon icon-search"></i></button>
+<input name="st" type="hidden" value=""/>
+</form>
+<button class="header-search-toggle"><span>Search toggle</span><i class="icon icon-search"></i></button>
+</div>
+<style>.header-menu {
+  position: relative;
+}
+@media (min-width: 769px) {
+  .header-menu {
+    padding-left: 15px;
+  }
+}
+.header-menu .header-menu-button {
+  color: #000;
+  border: 0;
+  background: none;
+  font-size: 36px;
+  width: 31px;
+  height: 70px;
+  line-height: 1;
+  padding: 0 15px;
+  margin-right: -15px;
+  box-sizing: content-box;
+}
+.header-menu .header-menu-button .icon-times {
+  color: #FC4C02;
+}
+.header-menu .header-menu-button > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (min-width: 993px) {
+  .header-menu .header-menu-button {
+    height: auto;
+    line-height: normal;
+    padding: 9px 15px 18px;
+  }
+}
+.header-menu.header-menu-active .header-menu-button {
+  background: #efefef;
+}
+.header-menu .header-menu-container {
+  display: none;
+  background: #efefef;
+  position: absolute;
+  top: auto;
+  right: -15px;
+  z-index: 999;
+}
+@media (min-width: 993px) {
+  .header-menu .header-menu-container {
+    top: auto;
+  }
+}
+.header-menu .header-menu-container.header-menu-container-active {
+  display: block;
+  height: auto;
+  overflow: auto;
+  opacity: 1;
+}
+.header-menu .header-menu-container > ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0 53px 0 2rem;
+}
+ul .header-menu .header-menu-container > ul {
+  padding-left: 40px;
+}
+@media (min-width: 481px) {
+  .header-menu .header-menu-container > ul {
+    padding: 0 153px 0 2rem;
+  }
+}
+.header-menu .header-menu-container > ul a {
+  color: #333;
+}
+.header-menu .header-menu-container > ul > li {
+  padding: 0.5rem 50px 0.5rem 0;
+  white-space: nowrap;
+}
+.header-menu .header-menu-container > ul > li:first-child {
+  padding-top: 1rem;
+}
+.header-menu .header-menu-container > ul > li:last-child {
+  padding-bottom: 1rem;
+}
+.header-menu .header-menu-container > ul.header-menu-tertiary > li:first-child,
+.header-menu .header-menu-container > ul.header-menu-external > li:first-child {
+  border-top: 1px solid #999;
+}
+@media print {
+  .header-menu {
+    display: none;
+  }
+}
+</style>
+<script>jQuery(function($) {
+    $('.header-menu-link a.menu-link').live('click', function () {
+        $('.header-submenu, .header-menu, .header-menu-link').toggleClass('on-off');
+    });
+    var delay = 800,
+        global_nav_header_timeout;
+    $('.header-menu li').live('hover', function(event) {
+        $('.header-dropdown img').each(function(index, image){
+            var data_source = $(image).attr('data-src');
+            if(data_source){
+                $(image).attr({src: data_source, 'data-src': null});
+            }
+        });
+
+        if( $(event.target).parents('.hover').length ){
+            return;
+        }
+
+        $('.header-menu li.hover').removeClass('hover');
+        $(event.target).closest('li').addClass('hover');
+        global_nav_header_timeout = setTimeout(function(){
+            $('.header-dropdown').hide();
+            $('.header-dropdown', $(event.target).closest('li')).show();
+        }, delay);
+    }, function(event){
+        clearTimeout( global_nav_header_timeout );
+        $(event.target).closest('li').removeClass('hover');
+        $('.header-dropdown', $(event.target).closest('li')).hide();
+    });
+
+    $('.header-menu').live('hover',  function(event) {/*
+        do nothing on hover over, only on hover out
+    */}, function(event){
+        $('.header-menu li.hover').removeClass('hover');
+        $(event.target).parents('.header-dropdown').hide();
+    });
+
+    //Metrics tracking how users are using the new header
+    $('.header-menu a, .intersite-navigation a, .locfoot a').live('click', function(event){
+        s.linkTrackVars = s.linkTrackVar + ",prop57";
+        var label = $(this).attr('name');
+        if ( !label ){
+            label = $(this).text().trim();
+        }
+        s.prop57 = label;
+        s.tl(this,'o',label);
+    });
+
+    function headerMenuActive() {
+        $('.header-menu-container').removeClass('header-menu-container-active').attr('aria-hidden', 'true');
+        $('.header-menu').removeClass('header-menu-active');
+        $('.header-menu-button').attr('aria-expanded', 'false');
+        $('.header-menu-button i').switchClass('icon-times', 'icon-bars', 50);
+        //$('.header-overlay').hide();
+    };
+    function headerMenuInactive() {
+        $('.header-menu-container').addClass('header-menu-container-active').attr('aria-hidden', 'false');
+        $('.header-menu').addClass('header-menu-active');
+        $('.header-menu-button').attr('aria-expanded', 'true');
+        $('.header-menu-button i').switchClass('icon-bars', 'icon-times', 50);
+        //$('.header-overlay').show();
+    };
+    $('.header-menu-button').live('click', function() {
+        if ($('.header-menu-container').hasClass('header-menu-container-active')) {
+            headerMenuActive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Hamburger Menu', 'Close', '');
+        } else {
+            headerMenuInactive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Hamburger Menu', 'Open', '');
+        }
+    });
+    $("html").live("click touchstart keydown",function(event) {
+        headerMenuActive();
+    });
+    $(".header-menu").live("click touchstart keydown",function(event) {
+        event.stopPropagation();
+        // allow escape key to close for accessibility
+        if (event.which == 27) {
+            headerMenuActive();
+        }
+    });
+    // menu position and height
+    $(window).live("load resize scroll",function(e){
+        var headerHeight = $('.header-menu').outerHeight();
+        $('.header-menu-container').css({"top": headerHeight});
+    });
+
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-menu-container ul li').live('click', function() {
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Hamburger Menu', 'Click', label);
+    });
+});
+</script>
+<div class="header-menu">
+<button aria-controls="header-menu-container" class="header-menu-button" id="header-menu-button"><span>menu </span><i class="icon icon-bars"></i></button>
+<nav aria-labelledby="header-menu-button" class="header-menu-container" id="header-menu-container">
+<ul class="">
+<li class=""><a href="/discover/">Discover</a></li>
+<li class=""><a href="/services-and-programs/">Services</a></li>
+<li class=""><a href="/visit/">Visit</a></li>
+<li class=""><a href="/education/">Education</a></li>
+<li class=""><a href="/connect/">Connect</a></li>
+<li class=""><a href="/about/">About</a></li>
+</ul>
+<ul class="header-menu-tertiary">
+<li class=""><a href="http://www.loc.gov/rr/askalib/">Ask a Librarian</a></li>
+<li class=""><a href="/help/">Help</a></li>
+<li class=""><a href="/contact/">Contact</a></li>
+</ul>
+<ul class="header-menu-external">
+<li class=""><a href="https://catalog.loc.gov/">Search Online Catalog</a></li>
+<li class=""><a href="http://copyright.gov/">Copyright.gov</a></li>
+<li class=""><a href="https://www.congress.gov/">Congress.gov</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<style>.breadcrumbs-wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.breadcrumbs-container {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 12px;
+}
+@media (max-width: 768px) {
+  .breadcrumbs-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .breadcrumbs-container {
+    display: none;
+  }
+}
+.breadcrumbs-row {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: -moz-box;
+  display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin: 0 0;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.header-breadcrumbs {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -webkit-flex: 1;
+  /* Safari 6.1+. iOS 7.1+, BB10 */
+  -ms-flex: 1;
+  /* IE 10 */
+  -moz-box-flex: 1;
+  flex: 1;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  min-width: 0;
+  /* firefox fix */
+  margin: 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 2rem;
+}
+</style>
+<script>jQuery(function($) {
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-breadcrumbs a').live('click', function(event){
+        var label = $(this).attr('name');
+        if ( !label ){
+            label = $(this).text().trim();
+        }
+        UX.interaction($(this), 'Breadcrumbs', 'click', label);
+    });
+
+});
+</script>
+<div class="breadcrumbs-wrapper">
+<div class="breadcrumbs-container">
+<div class="breadcrumbs-row">
+<div class="sharetool_wrapper h_adjust">
+<div class="locshare-toolbar right" id="share-this"> <span class="locshare-print-button"> <a accesskey="5" href="#locshare/print">                        Print                    </a> </span> <span class="locshare-subscribe-button"> <a accesskey="6" href="#locshare/subscribe">                        Subscribe                    </a> </span> <span class="locshare-share-button"> <a accesskey="7" href="#locshare/share">                        Share/Save                    </a> </span> <span class="locshare-survey-button"> <a accesskey="8" href="#locshare/survey">                        Give Feedback                    </a> </span> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="content">
+<a id="skip-to-content" name="skip-to-content"></a>
+<main class="item-container hello" role="main">
+<div class="item-title">
+<h1>
+<small>
+<a class="format-label" href="https://www.loc.gov/search/?fa=original_format:photo,+print,+drawing">
+                    Photo, Print, Drawing
+                    </a>
+</small>
+<cite>The Graf Zeppelin's rendezvous with the eternal desert and the more than 4,000 year old pyraminds of Gizeh, Egypt</cite>
+</h1>
+</div>
+<div class="resources" id="resources">
+<div class="focused-resource">
+<div class="resource">
+<figure class="has-caption">
+<div class="preview" data-caption="digital file from original">
+<img alt="" class="iconic screen-dependent-image" data-image-tablet="//cdn.loc.gov/service/pnp/stereo/1s20000/1s21000/1s21300/1s21301_150px.jpg#h=77&amp;w=150" onerror="this.onerror=null;this.src='https://www.loc.gov/static/images/original-format/photo-print-drawing.png?81937.86251'" src="//cdn.loc.gov/service/pnp/stereo/1s20000/1s21000/1s21300/1s21301_150px.jpg#h=77&amp;w=150" style=""/>
+<script>
+jQuery(function($){
+    var HEIGHT = /.*h=(\d+).*/,
+        WIDTH = /.*w=(\d+).*/,
+        PHONE_LARGE = 650;
+    $('img.screen-dependent-image').each(function(index, image){
+        var height, width, url;
+        url = $(image).attr('src');
+        if(String(url).indexOf("original-format") < 0 && $(document).width() > PHONE_LARGE){
+            url = $(image).attr('data-image-tablet');
+            if (!url) {
+                return true; //just want to continue -- not break.
+            }
+            height = url.match(HEIGHT);
+            width = url.match(WIDTH);
+            if( height && width ){
+                height = height[1];
+                width = width[1];
+                $(image).css({
+                    height: height > 570 ? 570 : height,
+                    width: 'auto'
+                });
+            }
+            $(image).attr('src', url).load(function(){
+                $(image).css({height: '', width: ''});
+            });
+        }
+    });
+});
+</script>
+</div>
+<figcaption class="resource-caption">
+<span>[ digital file from original ]</span>
+</figcaption>
+</figure>
+<p>Full online access to this resource is only available at the Library of Congress.</p>
+<script>
+
+
+jQuery(function($) {
+
+    function setFileDownloadEventInfo($form) {
+        var target_url = "",
+            mime_type = "",
+            division = "",
+            collection = "",
+            item_name = "";
+
+        target_url = $form.attr('action');
+        mime_type = $form.data('file-download');
+
+        
+            
+                
+                    collection += "Stereograph Cards, ";
+                
+            
+                
+                    division += "Prints and Photographs Division, ";
+                
+            
+                
+                    collection += "Library of Congress Online Catalog, ";
+                
+            
+        
+
+        if (division.lastIndexOf(",") == division.length-2) {
+            division = division.substr(0, division.length-2);
+        }
+
+        if (collection.lastIndexOf(",") == collection.length-2) {
+            collection = collection.substr(0, collection.length-2);
+        }
+
+        item_name = "The Graf Zeppelin&#39;s rendezvous with the eternal desert and the more than 4,000 year old pyraminds of Gizeh, Egypt";
+
+        return [target_url, mime_type, division, collection, item_name];
+    }
+
+    // Single resource viewer
+    $('.files button').each(function(index, obj) {
+        obj.onclick = function(e) {
+            var $form = $(e.target).closest('.resource-download-form'),
+                value = $form.find('select').val();
+
+            // File Download tracking
+            $form.attr('action', value);
+            $form.find('option:selected').each(function() {
+                $form.data('file-download', $(this).data('file-download'));
+            });
+            var fileDownloadEventInfo = setFileDownloadEventInfo($form);
+
+            // UX Tracking
+            UX.download($(this), fileDownloadEventInfo);
+
+            e.preventDefault();
+            window.open(value, '_blank');
+        };
+    });
+
+    // Multi-image viewer
+    $('.control-section-download form select').each(function(index, obj) {
+        if(0 == index){
+            var $form = $(obj).closest('.control-section-download form'),
+                value = $form.find('select').val();
+            $form.attr('action', value);
+
+            // File Download tracking
+            $(obj).find('option:selected').each(function() {
+                $form.data('file-download', $(this).data('file-download'));
+            });
+        }
+        $(obj).on('change', function(e) {
+            var $form = $(e.target).closest('.control-section-download form'),
+                value = $form.find('select').val();
+                $form.attr('action', value);
+
+            $(e.target).find('option:selected').each(function() {
+                $form.data('file-download', $(this).data('file-download'));
+            });
+        });
+    });
+
+    $('.control-section-download form').submit(function(e) {
+        var $form = $(e.target).closest('.control-section-download form'),
+            fileDownloadEventInfo = setFileDownloadEventInfo($form);
+        UX.download($(this), fileDownloadEventInfo);
+    });
+});
+
+</script>
+</div>
+</div>
+<div class="additional-resources">
+<h3>More Resources</h3>
+<div class="resource selected">
+<figure class="has-caption">
+<div class="preview" data-caption="b&amp;w film copy neg.">
+<img alt="" class="iconic" onerror="this.onerror=null;this.src='https://www.loc.gov/static/images/original-format/photo-print-drawing.png?81937.86251'" src="//cdn.loc.gov/service/pnp/cph/3c30000/3c30000/3c30800/3c30867_150px.jpg"/>
+</div>
+<figcaption class="resource-caption">
+<span>[ b&amp;w film copy neg. ]</span>
+</figcaption>
+</figure>
+<p>Full online access to this resource is only available at the Library of Congress.</p>
+</div>
+<div class="clear-block"></div>
+</div>
+</div>
+<div class="about-this-item" id="about-this-item">
+<h2>About this Item</h2>
+<div class="about-this-item-row">
+<div class="about-this-item-content">
+<dl class="item-cataloged-data" id="item-cataloged-data">
+<dt>
+        
+            
+                Title
+            
+        
+        </dt>
+<dd>The Graf Zeppelin's rendezvous with the eternal desert and the more than 4,000 year old pyraminds of Gizeh, Egypt</dd>
+<dt>
+        
+            
+                Summary
+            
+        
+        </dt>
+<dd>Three men probably on the Pyramid of Khufu, looking towards the Pyramid of Khafre, with desert in background and the Graf Zeppelin in the sky, Jīzah, Egypt.</dd>
+<dt>
+        
+            
+                Contributor Names
+            
+        
+        </dt>
+<dd>
+                
+                
+                    
+                        Keystone View Company.
+                    
+                
+                </dd>
+<dt>
+        
+            
+                Created / Published
+            
+        
+        </dt>
+<dd>
+                
+                
+                    
+                        Meadville, Pa. : Keystone View Company, c1931.
+                    
+                
+                </dd>
+<dt>
+        
+            
+                Subject Headings
+            
+        
+        </dt>
+<dd>
+                - 
+                
+                    
+                        Graf Zeppelin (Airship)--German--Egypt--Jīzah--1930-1940
+                    
+                
+                </dd>
+<dd>
+                - 
+                
+                    
+                        Airships--Egypt--Jīzah--1930-1940
+                    
+                
+                </dd>
+<dd>
+                - 
+                
+                    
+                        Pyramids--Egypt--Jīzah--1930-1940
+                    
+                
+                </dd>
+<dt>
+        
+            
+                Format Headings
+            
+        
+        </dt>
+<dd>
+                
+                
+                    
+                        Photographic prints--1930-1940.
+                    
+                
+                </dd>
+<dd>
+                
+                
+                    
+                        Stereographs--1930-1940.
+                    
+                
+                </dd>
+<dt>
+        
+            
+                Genre
+            
+        
+        </dt>
+<dd>
+                
+                
+                    
+                        Stereographs--1930-1940
+                    
+                
+                </dd>
+<dd>
+                
+                
+                    
+                        Photographic prints--1930-1940
+                    
+                
+                </dd>
+<dt>
+        
+            
+                Notes
+            
+        
+        </dt>
+<dd>
+                - 
+                
+                    
+                        J9960 U.S. Copyright Office.
+                    
+                
+                </dd>
+<dd>
+                - 
+                
+                    
+                        Copyright by Keystone View Company.
+                    
+                
+                </dd>
+<dd>
+                - 
+                
+                    
+                        No. 8627.
+                    
+                
+                </dd>
+<dt>
+        
+            
+                Medium
+            
+        
+        </dt>
+<dd>
+                
+                
+                    
+                        1 photograph : print on card mount ; mount 9 x 18 cm (stereograph format)
+                    
+                
+                </dd>
+<dt>
+        
+            
+                Call Number/Physical Location
+            
+        
+        </dt>
+<dd>STEREO FOREIGN GEOG FILE - Egypt--Giza [item] [P&amp;P]</dd>
+<dt>
+        
+            
+                Repository
+            
+        
+        </dt>
+<dd>
+                
+                
+                    
+                        Library of Congress Prints and Photographs Division Washington, D.C. 20540 USA <a href="http://hdl.loc.gov/loc.pnp/pp.print">http://hdl.loc.gov/loc.pnp/pp.print</a>
+</dd>
+<dt>
+        
+            
+                Digital Id
+            
+        
+        </dt>
+<dd>
+                
+                
+                    
+                        stereo 1s21301 //hdl.loc.gov/loc.pnp/stereo.1s21301
+                    
+                
+                </dd>
+<dd>
+                
+                
+                    
+                        cph 3c30867 //hdl.loc.gov/loc.pnp/cph.3c30867
+                    
+                
+                </dd>
+<dt>
+        
+            
+                Library of Congress Control Number
+            
+        
+        </dt>
+<dd>2002712108</dd>
+<dt>
+        
+            
+                Reproduction Number
+            
+        
+        </dt>
+<dd>LC-DIG-stereo-1s21301 (digital file from original)
+LC-USZ62-130867 (b&amp;w film copy neg.)</dd>
+<dt>
+        
+            
+                Rights Advisory
+            
+        
+        </dt>
+<dd>Rights status not evaluated. For general information see: " Copyright and Other Restrictions...," <a href="http://www.loc.gov/rr/print/195_copr.html">http://www.loc.gov/rr/print/195_copr.html</a></dd>
+<dt>
+        
+            
+                Language
+            
+        
+        </dt>
+<dd>
+</dd><dd>English</dd>
+<dt>
+        
+            
+                Online Format
+            
+        
+        </dt>
+<dd>
+                
+                
+                    
+                        image
+                    
+                
+                </dd>
+<dt>
+        
+            
+                Description
+            
+        
+        </dt>
+<dd>
+                
+                
+                    
+                        1 photograph : print on card mount ; mount 9 x 18 cm (stereograph format) | Three men probably on the Pyramid of Khufu, looking towards the Pyramid of Khafre, with desert in background and the Graf Zeppelin in the sky, Jīzah, Egypt.
+                    
+                
+                </dd>
+<dt class="dedup right">
+        LCCN Permalink
+    </dt>
+<dd>
+<a href="https://lccn.loc.gov/2002712108" target="_blank">https://lccn.loc.gov/2002712108</a>
+</dd>
+<dt class="dedup right">
+    Additional Metadata Formats
+</dt>
+<dd>
+<a href="https://lccn.loc.gov/2002712108/marcxml" target="_blank">MARCXML Record</a>
+</dd>
+<dd>
+<a href="https://lccn.loc.gov/2002712108/mods" target="_blank">MODS Record</a>
+</dd>
+<dd>
+<a href="https://lccn.loc.gov/2002712108/dc" target="_blank">Dublin Core Record</a>
+</dd>
+</dl>
+</div>
+<div class="item-facets about-this-item-facets" id="item-facets" role="complementary">
+<div class="item-facet" id="part-of">
+<h3>Part of</h3>
+<ul class="long-list">
+<li>
+<a href="https://www.loc.gov/collections/stereograph-cards/">Stereograph Cards
+                <span>(25,785)</span></a>
+</li>
+<li>
+<a href="https://www.loc.gov/search/?fa=partof:prints+and+photographs+division">Prints and Photographs Division
+                <span>(855,442)</span></a>
+</li>
+<li>
+<a href="https://www.loc.gov/search/?fa=partof:catalog">Library of Congress Online Catalog
+                <span>(990,262)</span></a>
+</li>
+</ul>
+</div>
+<div class="item-facet" id="facets-box">
+<h3>Format</h3>
+<ul class="short-list">
+<li>
+<a data-field-label="Format" href="https://www.loc.gov/search/?fa=original_format:photo,+print,+drawing">Photo, Print, Drawing</a>
+</li>
+</ul>
+<h3>Contributors</h3>
+<ul class="short-list">
+<li>
+<a data-field-label="Contributors" href="https://www.loc.gov/search/?fa=contributor:keystone+view+company">Keystone View Company</a>
+</li>
+</ul>
+<h3>Dates</h3>
+<ul class="short-list">
+<li>
+<a data-field-label="Dates" href="https://www.loc.gov/search/?dates=1931/1931">1931</a>
+</li>
+</ul>
+<h3>Location</h3>
+<ul class="short-list">
+<li>
+<a data-field-label="Location" href="https://www.loc.gov/search/?fa=location:egypt">Egypt</a>
+</li>
+<li>
+<a data-field-label="Location" href="https://www.loc.gov/search/?fa=location:jizah">Jizah</a>
+</li>
+<li>
+<a data-field-label="Location" href="https://www.loc.gov/search/?fa=location:j%C4%ABzah">Jīzah</a>
+</li>
+</ul>
+<h3>Language</h3>
+<ul class="short-list">
+<li>
+<a data-field-label="Language" href="https://www.loc.gov/search/?fa=language:english">English</a>
+</li>
+</ul>
+<h3>Subjects</h3>
+<ul class="short-list">
+<li>
+<a data-field-label="Subjects" href="https://www.loc.gov/search/?fa=subject:airships">Airships</a>
+</li>
+<li>
+<a data-field-label="Subjects" href="https://www.loc.gov/search/?fa=subject:egypt">Egypt</a>
+</li>
+<li>
+<a data-field-label="Subjects" href="https://www.loc.gov/search/?fa=subject:german">German</a>
+</li>
+<li>
+<a data-field-label="Subjects" href="https://www.loc.gov/search/?fa=subject:graf+zeppelin+%28airship%29">Graf Zeppelin (Airship)</a>
+</li>
+<li>
+<a data-field-label="Subjects" href="https://www.loc.gov/search/?fa=subject:j%C4%ABzah">Jīzah</a>
+</li>
+<li>
+<a data-field-label="Subjects" href="https://www.loc.gov/search/?fa=subject:photographic+prints">Photographic Prints</a>
+</li>
+<li>
+<a data-field-label="Subjects" href="https://www.loc.gov/search/?fa=subject:pyramids">Pyramids</a>
+</li>
+<li>
+<a data-field-label="Subjects" href="https://www.loc.gov/search/?fa=subject:stereographs">Stereographs</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="clear-block" id="rights-and-access">
+<div class="rights-and-access">
+<h2><a href="#rights-and-access"><i class="icon icon-plus-square"></i> 
+           Rights &amp; Access<span class="icon accordion-down"></span></a></h2>
+<div class="rights-and-access-content" id="rights-and-access-content">
+<p>The Library of Congress does not own rights to material  in its collections. Therefore, it does not license or charge permission fees  for use of such material and cannot grant or deny permission to publish or  otherwise distribute the material. </p>
+<p>Ultimately, it is the researcher's obligation to assess copyright or other use restrictions and  obtain permission from third parties when necessary before publishing or  otherwise distributing materials found in the Library's collections. </p>
+<p>For information about reproducing,  publishing, and citing material from this collection, as well as access to the  original items, see: <a href="//www.loc.gov/rr/print/res/493_ster.html">Stereographs - Rights and Restrictions Information</a> </p>
+<ul>
+<li><strong>Rights Advisory</strong>:
+        <span>Rights status not evaluated. For general information see: " Copyright and Other Restrictions...," <a href="http://www.loc.gov/rr/print/195_copr.html" rel="nofollow">http://www.loc.gov/rr/print/195_copr.html</a></span>
+</li>
+<li><strong>Reproduction Number</strong>:
+        
+            
+            <span>LC-DIG-stereo-1s21301 (digital file from original)
+LC-USZ62-130867 (b&amp;w film copy neg.)</span>
+</li>
+<li><strong>Call Number</strong>:
+        
+            
+            <span>STEREO FOREIGN GEOG FILE - Egypt--Giza [item] [P&amp;P]</span>
+</li>
+<li><strong>Access Advisory</strong>:
+        
+            <span> --- </span>
+</li>
+</ul>
+<h3>Obtaining Copies</h3>
+<p>
+        If an image is displaying, you can download it yourself. (Some images display only as thumbnails outside
+        the Library of Congress because of rights considerations, but you have access to larger size images on
+        site.)
+    </p>
+<p>
+        Alternatively, you can purchase copies of various types through
+        <a href="//www.loc.gov/duplicationservices/">Library of Congress Duplication Services</a>.
+    </p>
+<ol>
+<li>
+<strong>If a digital image is displaying:</strong> The qualities of the digital image partially
+            depend on whether it was made from the original or an intermediate such as a copy negative or
+            transparency. If the Reproduction Number field above includes a reproduction number that starts
+            with LC-DIG..., then there is a digital image that was made directly from the original
+            and is of sufficient resolution for most publication purposes.
+
+        </li>
+<li>
+<strong>If there is information listed in the Reproduction Number field above:</strong>
+            You can use the reproduction number to purchase a copy from Duplication Services.  It will be
+            made from the source listed in the parentheses after the number.
+            <p>
+                If only black-and-white ("b&amp;w") sources are listed and you desire a copy showing
+                color or tint (assuming the original has any), you can generally purchase a quality copy of
+                the original in color by citing the Call Number listed above and including the catalog
+                record ("About This Item") with your request.
+            </p>
+</li>
+<li>
+<strong>If there is no information listed in the Reproduction Number field above:</strong>
+            You can generally purchase a quality copy through Duplication Services. Cite the Call Number
+            listed above and include the catalog record ("About This Item") with your request.
+        </li>
+</ol>
+<p>
+        Price lists, contact information, and order forms are available on the
+        <a href="//www.loc.gov/duplicationservices/">Duplication Services Web site</a>.
+    </p>
+<h3>Access to Originals</h3>
+<p>
+<strong>Please use the following steps to determine whether you need to fill out a call slip in the Prints
+    and Photographs Reading Room to view the original item(s). In some cases, a surrogate (substitute image) is
+    available, often in the form of a digital image, a copy print, or microfilm.
+    </strong>
+</p>
+<ol>
+<li>
+<p>
+<em>Is the item digitized? (A thumbnail (small) image will be visible on the left.)</em>
+</p>
+<ul>
+<li>
+<strong>Yes, the item is digitized.</strong>
+                Please use the digital image in preference to requesting the original. All images can be
+                viewed at a large size when you are in any reading room at the Library of Congress.  In some
+                cases, only thumbnail (small) images are available when you are outside the Library of
+                Congress because the item is rights restricted or has not been evaluated for rights
+                restrictions.
+                <br/>
+                As a preservation measure, we generally do not serve an original item when a digital image
+                is available.  If you have a compelling reason to see the original, consult with a reference
+                librarian.  (Sometimes, the original is simply too fragile to serve. For example, glass and
+                film photographic negatives are particularly subject to damage. They are also easier to see
+                online where they are presented as positive images.)
+            </li>
+<li>
+<strong>No, the item is not digitized.</strong> Please go to #2.
+            </li>
+</ul>
+</li>
+<li>
+<p>
+<em>Do the Access Advisory or Call Number fields above indicate that a non-digital surrogate exists,
+            such as microfilm or copy prints?</em>
+</p>
+<ul>
+<li>
+<strong>Yes, another surrogate exists.</strong> Reference staff can direct you to this
+                surrogate.
+            </li>
+<li>
+<strong>No, another surrogate does not exist.</strong> Please go to #3.
+            </li>
+</ul>
+</li>
+<li>
+        If you do not see a thumbnail image or a reference to another surrogate, please fill out a call slip in
+        the Prints and Photographs Reading Room. In many cases, the originals can be served in a few minutes.
+        Other materials require appointments for later the same day or in the future.  Reference staff can
+        advise you in both how to fill out a call slip and when the item can be served.
+    </li>
+</ol>
+<p>
+    To contact Reference staff in the Prints and Photographs Reading Room, please use our
+    <a href="//www.loc.gov/rr/askalib/">Ask A Librarian</a> service or call the reading room between 8:30 and
+    5:00 at 202-707-6394, and Press 3.
+</p>
+</div>
+</div>
+<noscript>
+<style scoped="">
+.rights-and-access{ display: block; }
+</style>
+</noscript>
+<script defer="defer">
+jQuery(function($) {
+    $(".rights-and-access > h2").click(function(event){
+        $('.icon', event.delegateTarget)
+            .andSelf()
+            .toggleClass('accordion-down accordion-up');
+        $('#rights-and-access-content').toggle();
+        if ($('.rights-and-access h2 a > i.icon').hasClass('accordion-down')) {
+            $('.rights-and-access h2 a > i.icon').addClass('icon-minus-square');
+        } else {
+            $('.rights-and-access h2 a > i.icon').removeClass('icon-minus-square');
+        }
+        return false;
+    });
+});
+</script>
+</div>
+<div class="clear-block" id="cite-this">
+<div class="cite-this">
+<h2><a href="#cite-this"><i class="icon icon-plus-square"></i> Cite This Item<span class="icon accordion-down"></span></a></h2>
+<div class="cite-this-content" id="cite-this-content">
+<p class="cite-this-disclaimer">
+<i class="icon icon-exclamation-circle"></i> 
+        Citations are generated automatically from bibliographic data as
+        a convenience, and may not be complete or accurate.
+        </p>
+<div class="chicago-citation">
+<h3>Chicago citation style:</h3>
+<p>Keystone View Company. <cite>The Graf Zeppelin's rendezvous with the eternal desert and the more than 4,000 year old pyraminds of Gizeh, Egypt</cite>. Egypt Jizah Jīzah, ca. 1931. Meadville, Pa.: Keystone View Company. Photograph. https://www.loc.gov/item/2002712108/.</p>
+</div>
+<div class="apa-citation">
+<h3>APA citation style:</h3>
+<p>Keystone View Company. (ca. 1931) <cite>The Graf Zeppelin's rendezvous with the eternal desert and the more than 4,000 year old pyraminds of Gizeh, Egypt</cite>. Egypt Jizah Jīzah, ca. 1931. Meadville, Pa.: Keystone View Company. [Photograph] Retrieved from the Library of Congress, https://www.loc.gov/item/2002712108/.</p>
+</div>
+<div class="mla-citation">
+<h3>MLA citation style:</h3>
+<p>Keystone View Company. <cite>The Graf Zeppelin's rendezvous with the eternal desert and the more than 4,000 year old pyraminds of Gizeh, Egypt</cite>. Meadville, Pa.: Keystone View Company. Photograph. Retrieved from the Library of Congress, &lt;www.loc.gov/item/2002712108/&gt;.</p>
+</div>
+</div>
+</div>
+<noscript>
+<style scoped="">
+#cite-this{ display: block; }
+</style>
+</noscript>
+<script defer="defer">
+jQuery(function($) {
+    $(".cite-this > h2").click(function(event){
+        $('.icon', event.delegateTarget)
+            .andSelf()
+            .toggleClass('accordion-down accordion-up');
+        $('#cite-this-content').toggle();
+        if ($('.cite-this h2 a > i.icon').hasClass('accordion-down')) {
+            $('.cite-this h2 a > i.icon').addClass('icon-minus-square');
+        } else {
+            $('.cite-this h2 a > i.icon').removeClass('icon-minus-square');
+        }
+        return false;
+    });
+});
+</script>
+</div>
+<div class="clear-block" id="results">
+<div class="related-items" id="more-like-this">
+<h2>More Photos, Prints, Drawings like this</h2>
+<ul class="search-results gallery-view no-facets">
+<li class="item first">
+<figure>
+<div class="iconic-container" style="position:relative; height:100%; width:100%;">
+<a aria-hidden="true" href="https://www.loc.gov/item/90713678/" rel="http://www.loc.gov/item/90713678/">
+<div style="position:relative; height:100%; width:100%;">
+<img alt="" class="iconic" onerror="this.onerror=null;this.src='https://www.loc.gov/static/images/original-format/photo-print-drawing.png?81937.86251'" src="//cdn.loc.gov/service/pnp/stereo/1s20000/1s21000/1s21300/1s21397_150px.jpg#h=79&amp;w=150"/>
+</div>
+</a>
+</div>
+</figure>
+<div class="description">
+<span class="original-format">
+        
+        Photo, Print, Drawing
+        
+            
+        </span>
+<div class="item-description">
+<span class="item-description-title">
+<a href="https://www.loc.gov/item/90713678/" rel="http://www.loc.gov/item/90713678/">
+        
+
+	
+            
+                A baby of the desert, Egypt
+            
+        
+
+        
+        </a>
+</span>
+<span class="item-description-abstract">
+
+        
+            
+
+              
+                  
+                      1 photographic print on stereo card : stereograph. | Baby camel feeding, pyramid in background.
+                  
+              
+
+            
+        
+        </span>
+<ul>
+<li class="contributor">
+<strong class="search-results-label">Contributor:</strong>
+<span>
+                            Keystone View Company
+                            </span>
+</li>
+<li class="date">
+<strong class="search-results-label">Date:</strong>
+<span>1899</span>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="item">
+<figure>
+<div class="iconic-container" style="position:relative; height:100%; width:100%;">
+<a aria-hidden="true" href="https://www.loc.gov/item/95502862/" rel="http://www.loc.gov/item/95502862/">
+<div style="position:relative; height:100%; width:100%;">
+<img alt="" class="iconic" onerror="this.onerror=null;this.src='https://www.loc.gov/static/images/original-format/photo-print-drawing.png?81937.86251'" src="//cdn.loc.gov/service/pnp/stereo/1s20000/1s21000/1s21300/1s21308_150px.jpg#h=79&amp;w=150"/>
+</div>
+</a>
+</div>
+</figure>
+<div class="description">
+<span class="original-format">
+        
+        Photo, Print, Drawing
+        
+            
+        </span>
+<div class="item-description">
+<span class="item-description-title">
+<a href="https://www.loc.gov/item/95502862/" rel="http://www.loc.gov/item/95502862/">
+        
+
+	
+            
+                Four pyramids of Gizeh, Egypt
+            
+        
+
+        
+        </a>
+</span>
+<span class="item-description-abstract">
+
+        
+            
+
+              
+                  
+                      1 photograph : print on card mount ; mount 9 x 18 cm (stereograph format) | Men and women on camels in front of pyramids.
+                  
+              
+
+            
+        
+        </span>
+<ul>
+<li class="contributor">
+<strong class="search-results-label">Contributor:</strong>
+<span>
+                            Keystone View Company
+                            </span>
+</li>
+<li class="date">
+<strong class="search-results-label">Date:</strong>
+<span>1906</span>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="item">
+<figure>
+<div class="iconic-container" style="position:relative; height:100%; width:100%;">
+<a aria-hidden="true" href="https://www.loc.gov/item/97502523/" rel="http://www.loc.gov/item/97502523/">
+<div style="position:relative; height:100%; width:100%;">
+<img alt="" class="iconic" onerror="this.onerror=null;this.src='https://www.loc.gov/static/images/original-format/photo-print-drawing.png?81937.86251'" src="//cdn.loc.gov/service/pnp/stereo/1s20000/1s21000/1s21300/1s21383_150px.jpg#h=78&amp;w=150"/>
+</div>
+</a>
+</div>
+</figure>
+<div class="description">
+<span class="original-format">
+        
+        Photo, Print, Drawing
+        
+            
+        </span>
+<div class="item-description">
+<span class="item-description-title">
+<a href="https://www.loc.gov/item/97502523/" rel="http://www.loc.gov/item/97502523/">
+        
+
+	
+            
+                Grand Gallery in the heart of the Great Pyramid, Egypt
+            
+        
+
+        
+        </a>
+</span>
+<span class="item-description-abstract">
+
+        
+            
+
+              
+                  
+                      1 photographic print on stereo card : stereograph. | Two people inside narrow passageway of the Great Pyramid.
+                  
+              
+
+            
+        
+        </span>
+<ul>
+<li class="contributor">
+<strong class="search-results-label">Contributor:</strong>
+<span>
+                            Keystone View Company
+                            </span>
+</li>
+<li class="date">
+<strong class="search-results-label">Date:</strong>
+<span>1926</span>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="item">
+<figure>
+<div class="iconic-container" style="position:relative; height:100%; width:100%;">
+<a aria-hidden="true" href="https://www.loc.gov/item/97502527/" rel="http://www.loc.gov/item/97502527/">
+<div style="position:relative; height:100%; width:100%;">
+<img alt="" class="iconic" onerror="this.onerror=null;this.src='https://www.loc.gov/static/images/original-format/photo-print-drawing.png?81937.86251'" src="//cdn.loc.gov/service/pnp/stereo/1s20000/1s21000/1s21300/1s21384_150px.jpg#h=77&amp;w=150"/>
+</div>
+</a>
+</div>
+</figure>
+<div class="description">
+<span class="original-format">
+        
+        Photo, Print, Drawing
+        
+            
+        </span>
+<div class="item-description">
+<span class="item-description-title">
+<a href="https://www.loc.gov/item/97502527/" rel="http://www.loc.gov/item/97502527/">
+        
+
+	
+            
+                Cheops Pyramid, Egypt
+            
+        
+
+        
+        </a>
+</span>
+<span class="item-description-abstract">
+
+        
+            
+
+              
+                  
+                      1 photographic print on stereo card : stereograph. | Camels and men at base of pyramid.
+                  
+              
+
+            
+        
+        </span>
+<ul>
+<li class="contributor">
+<strong class="search-results-label">Contributor:</strong>
+<span>
+                            Keystone View Company
+                            </span>
+</li>
+<li class="date">
+<strong class="search-results-label">Date:</strong>
+<span>1926</span>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="item">
+<figure>
+<div class="iconic-container" style="position:relative; height:100%; width:100%;">
+<a aria-hidden="true" href="https://www.loc.gov/item/95502859/" rel="http://www.loc.gov/item/95502859/">
+<div style="position:relative; height:100%; width:100%;">
+<img alt="" class="iconic" onerror="this.onerror=null;this.src='https://www.loc.gov/static/images/original-format/photo-print-drawing.png?81937.86251'" src="//cdn.loc.gov/service/pnp/stereo/1s20000/1s21000/1s21300/1s21307_150px.jpg#h=79&amp;w=150"/>
+</div>
+</a>
+</div>
+</figure>
+<div class="description">
+<span class="original-format">
+        
+        Photo, Print, Drawing
+        
+            
+        </span>
+<div class="item-description">
+<span class="item-description-title">
+<a href="https://www.loc.gov/item/95502859/" rel="http://www.loc.gov/item/95502859/">
+        
+
+	
+            
+                The Sphinx and pyramid of Khufu, Gizeh, Egypt
+            
+        
+
+        
+        </a>
+</span>
+<span class="item-description-abstract">
+
+        
+            
+
+              
+                  
+                      1 photograph : print on card mount ; mount 9 x 18 cm (stereograph format) | Man on camel and man on donkey, in front of Sphinx and the Great Pyramid.
+                  
+              
+
+            
+        
+        </span>
+<ul>
+<li class="contributor">
+<strong class="search-results-label">Contributor:</strong>
+<span>
+                            Keystone View Company
+                            </span>
+</li>
+<li class="date">
+<strong class="search-results-label">Date:</strong>
+<span>1906</span>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<script>
+jQuery(function($) {
+    $('.more-less-toggle').click(function(){
+        if($(this).parent().children('.full-result').is(':hidden')) {
+            $(this).html('Less <i class="icon icon-angle-up"></i>');
+            $(this).parent().children('.truncated-result').hide();
+            $(this).parent().children('.full-result').show();
+        } else {
+            $(this).html('More <i class="icon icon-angle-down"></i>');
+            $(this).parent().children('.full-result').hide();
+            $(this).parent().children('.truncated-result').show();
+        }
+        return false;
+    });
+});
+</script>
+</div>
+<div class="related-items" id="you-might-like">
+<h2>You might also like</h2>
+<div class="link-list">
+<ul class="search-results gallery-view no-facets">
+<li class="item first">
+<figure>
+<div class="iconic-container" style="position:relative; height:100%; width:100%;">
+<a aria-hidden="true" href="//lccn.loc.gov/33034415" rel="http://www.loc.gov/item/33034415/" target="_blank">
+<div style="position:relative; height:100%; width:100%;">
+<img alt="" class="iconic" onerror="this.onerror=null;this.src='https://www.loc.gov/static/images/original-format/book.png?81937.86251'" src="https://www.loc.gov/static/images/original-format/book.png?81937.86251"/>
+</div>
+</a>
+</div>
+</figure>
+<div class="description">
+<span class="original-format">
+        
+        Book/Printed Material
+        
+            
+        </span>
+<div class="item-description">
+<span class="item-description-title">
+<a href="//lccn.loc.gov/33034415" rel="http://www.loc.gov/item/33034415/" target="_blank">
+        
+
+	
+            
+                The Egyptian pyramids: an analysis of a great mystery.
+            
+        
+
+        
+        </a>
+</span>
+<span class="item-description-abstract">
+
+        
+            
+
+              
+                  
+                      Also available in digital form.
+                  
+              
+
+            
+        
+        </span>
+<ul>
+<li class="contributor">
+<strong class="search-results-label">Contributor:</strong>
+<span>
+                            Fish, Everett W.
+                            </span>
+</li>
+<li class="date">
+<strong class="search-results-label">Date:</strong>
+<span>1880</span>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="item">
+<figure>
+<div class="iconic-container" style="position:relative; height:100%; width:100%;">
+<a aria-hidden="true" href="//lccn.loc.gov/05009470" rel="http://www.loc.gov/item/05009470/" target="_blank">
+<div style="position:relative; height:100%; width:100%;">
+<img alt="" class="iconic" onerror="this.onerror=null;this.src='https://www.loc.gov/static/images/original-format/book.png?81937.86251'" src="https://www.loc.gov/static/images/original-format/book.png?81937.86251"/>
+</div>
+</a>
+</div>
+</figure>
+<div class="description">
+<span class="original-format">
+        
+        Book/Printed Material
+        
+            
+        </span>
+<div class="item-description">
+<span class="item-description-title">
+<a href="//lccn.loc.gov/05009470" rel="http://www.loc.gov/item/05009470/" target="_blank">
+        
+
+	
+            
+                A dissertation on the antiquity, origin, and design of the principal pyramids of Egypt,
+            
+        
+
+        
+        </a>
+</span>
+<span class="item-description-abstract">
+
+        
+            
+
+              
+                  
+                      Also available in digital form on the Library of Congress Web site.
+                  
+              
+
+            
+        
+        </span>
+<ul>
+<li class="contributor">
+<strong class="search-results-label">Contributor:</strong>
+<span>
+                            Yeates, Thomas
+                            </span>
+</li>
+<li class="date">
+<strong class="search-results-label">Date:</strong>
+<span>1833</span>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="item">
+<figure>
+<div class="iconic-container" style="position:relative; height:100%; width:100%;">
+<a aria-hidden="true" href="//lccn.loc.gov/05009475" rel="http://www.loc.gov/item/05009475/" target="_blank">
+<div style="position:relative; height:100%; width:100%;">
+<img alt="" class="iconic" onerror="this.onerror=null;this.src='https://www.loc.gov/static/images/original-format/book.png?81937.86251'" src="https://www.loc.gov/static/images/original-format/book.png?81937.86251"/>
+</div>
+</a>
+</div>
+</figure>
+<div class="description">
+<span class="original-format">
+        
+        Book/Printed Material
+        
+            
+        </span>
+<div class="item-description">
+<span class="item-description-title">
+<a href="//lccn.loc.gov/05009475" rel="http://www.loc.gov/item/05009475/" target="_blank">
+        
+
+	
+            
+                A miracle in stone:
+            
+        
+
+        
+        </a>
+</span>
+<span class="item-description-abstract">
+
+        
+            
+
+              
+                  
+                      Also available in digital form.
+                  
+              
+
+            
+        
+        </span>
+<ul>
+<li class="contributor">
+<strong class="search-results-label">Contributor:</strong>
+<span>
+                            Seiss, Joseph Augustus
+                            </span>
+</li>
+<li class="date">
+<strong class="search-results-label">Date:</strong>
+<span>1877</span>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="item">
+<figure>
+<div class="iconic-container" style="position:relative; height:100%; width:100%;">
+<a aria-hidden="true" href="//lccn.loc.gov/07036726" rel="http://www.loc.gov/item/07036726/" target="_blank">
+<div style="position:relative; height:100%; width:100%;">
+<img alt="" class="iconic" onerror="this.onerror=null;this.src='https://www.loc.gov/static/images/original-format/book.png?81937.86251'" src="https://www.loc.gov/static/images/original-format/book.png?81937.86251"/>
+</div>
+</a>
+</div>
+</figure>
+<div class="description">
+<span class="original-format">
+        
+        Book/Printed Material
+        
+            
+        </span>
+<div class="item-description">
+<span class="item-description-title">
+<a href="//lccn.loc.gov/07036726" rel="http://www.loc.gov/item/07036726/" target="_blank">
+        
+
+	
+            
+                The great pyramid Jeezeh,
+            
+        
+
+        
+        </a>
+</span>
+<span class="item-description-abstract">
+
+        
+            
+
+              
+                  
+                      Also available in digital form.
+                  
+              
+
+            
+        
+        </span>
+<ul>
+<li class="contributor">
+<strong class="search-results-label">Contributor:</strong>
+<span>
+                            McCarty, Louis Philippe
+                            </span>
+</li>
+<li class="date">
+<strong class="search-results-label">Date:</strong>
+<span>1907</span>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="item">
+<figure>
+<div class="iconic-container" style="position:relative; height:100%; width:100%;">
+<a aria-hidden="true" href="//lccn.loc.gov/05009478" rel="http://www.loc.gov/item/05009478/" target="_blank">
+<div style="position:relative; height:100%; width:100%;">
+<img alt="" class="iconic" onerror="this.onerror=null;this.src='https://www.loc.gov/static/images/original-format/book.png?81937.86251'" src="https://www.loc.gov/static/images/original-format/book.png?81937.86251"/>
+</div>
+</a>
+</div>
+</figure>
+<div class="description">
+<span class="original-format">
+        
+        Book/Printed Material
+        
+            
+        </span>
+<div class="item-description">
+<span class="item-description-title">
+<a href="//lccn.loc.gov/05009478" rel="http://www.loc.gov/item/05009478/" target="_blank">
+        
+
+	
+            
+                The Great pyramid of Egypt : the historic, geographic, scientific, prophetic, and eschatologic disclosures of the ...
+            
+        
+
+        
+        </a>
+</span>
+<span class="item-description-abstract">
+
+        
+            
+
+              
+                  
+                      Also available in digital form.
+                  
+              
+
+            
+        
+        </span>
+<ul>
+<li class="contributor">
+<strong class="search-results-label">Contributor:</strong>
+<span>
+                            Ford, S. H. (Samuel Howard)
+                            </span>
+</li>
+<li class="date">
+<strong class="search-results-label">Date:</strong>
+<span>1882</span>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<script>
+jQuery(function($) {
+    $('.more-less-toggle').click(function(){
+        if($(this).parent().children('.full-result').is(':hidden')) {
+            $(this).html('Less <i class="icon icon-angle-up"></i>');
+            $(this).parent().children('.truncated-result').hide();
+            $(this).parent().children('.full-result').show();
+        } else {
+            $(this).html('More <i class="icon icon-angle-down"></i>');
+            $(this).parent().children('.full-result').hide();
+            $(this).parent().children('.truncated-result').show();
+        }
+        return false;
+    });
+});
+</script>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</main>
+</div>
+<style>.footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #999;
+  padding-top: 35px;
+}
+.footer a {
+  color: #666;
+}
+@media print {
+  .footer {
+    display: none;
+  }
+}
+.footer-container {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.footer-social-links-wrapper {
+  border-bottom: 1px solid #999;
+  padding-bottom: 21px;
+  margin-bottom: 21px;
+  text-align: center;
+}
+.footer-social-title {
+  font-size: 18px;
+  font-weight: normal;
+  color: #666;
+  display: inline-block;
+  margin: 0 28px 0 0;
+}
+@media (max-width: 992px) {
+  .footer-social-title {
+    display: block;
+    margin: 0 0 7px;
+  }
+}
+.footer-social-links {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 -7px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.footer-social-links > li {
+  display: inline-block;
+  margin: 0 7px;
+}
+.footer-social-links > li i {
+  font-size: 17.5px;
+}
+.footer-social-links > li span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.footer-social-links > li a .icon-external-link {
+  font-size: 12.6px;
+  color: #666;
+}
+.footer-social-links > li.footer-social-link-rss a {
+  color: #f47f65;
+}
+.footer-social-links > li.footer-social-link-email a {
+  color: #00618e;
+}
+.footer-social-links > li.footer-social-link-survey {
+  border-left: 1px solid #999;
+  padding-left: 28px;
+  margin-left: 14px;
+  font-size: 13px;
+}
+.footer-social-links > li.footer-social-link-survey a {
+  color: #00618e;
+}
+@media (max-width: 992px) {
+  .footer-social-links > li.footer-social-link-survey {
+    border: none;
+    padding: 0;
+    display: block;
+    margin-top: 10.5px;
+  }
+}
+.footer-social-links > li.footer-social-link-itunesu {
+  font-size: 13px;
+}
+.footer-social-links > li.footer-social-link-itunesu a {
+  color: #00618e;
+}
+@media (max-width: 992px) {
+  .footer-social-links {
+    display: block;
+  }
+}
+@media (min-width: 993px) {
+  .footer-row {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: -moz-box;
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-flex-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    margin: 0 -1rem;
+  }
+}
+.footer-links-wrapper .footer-links {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 -8.75px;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.footer-links-wrapper .footer-links > li {
+  display: inline-block;
+  margin: 0 8.75px;
+}
+.footer-links-wrapper .footer-links > li {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+@media (max-width: 992px) {
+  .footer-links-wrapper {
+    text-align: center;
+    margin-bottom: 21px;
+  }
+}
+@media (min-width: 993px) {
+  .footer-links-wrapper {
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 1;
+    /* IE 10 */
+    -moz-box-flex: 1;
+    flex: 1;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    min-width: 0;
+    /* firefox fix */
+    margin: 0 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+.intersites-links-wrapper {
+  margin: 0 14px;
+}
+@media (max-width: 992px) {
+  .intersites-links-wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0 28px;
+  }
+}
+.intersites-links {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 -1rem;
+}
+.intersites-links > li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+.intersites-links > li > a {
+  display: block;
+}
+.intersites-links > li > a span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 992px) {
+  .intersites-links > li > a {
+    margin: 5px 0;
+  }
+}
+.intersites-links > li.intersites-link-congress > a {
+  width: 125px;
+  height: 30px;
+  background-size: 125px 30px;
+  background: url("/static/images/congress-gov.svg?72026") no-repeat;
+}
+.intersites-links > li.intersites-link-copyright > a {
+  width: 175px;
+  height: 30px;
+  background-size: 175px 30px;
+  background: url("/static/images/copyright-gov.svg?72026") no-repeat;
+}
+@media (max-width: 992px) {
+  .intersites-links {
+    text-align: center;
+  }
+}
+</style>
+<script>//UX Interaction Tracking
+jQuery(function($){
+    $('.footer-social-links li a').click(function(e){
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Follow', 'Click', label);
+    });
+    $('.footer-links li a').click(function(e){
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Footer', 'Click', label);
+    });
+});
+</script>
+<footer class="footer" role="contentinfo">
+<div class="footer-container">
+<div class="footer-social-links-wrapper">
+<span class="footer-social-title"><a href="/connect/">Follow Us</a></span>
+<ul class="footer-social-links">
+<li class="footer-social-link-email"><a href="//loc.gov/subscribe/" title="Email"><i class="icon icon-envelope-square"></i><span> Email</span></a></li>
+<li class="footer-social-link-facebook"><a href="https://www.facebook.com/libraryofcongress/" title="Facebook"><i class="image-icon facebook"></i><span> Facebook</span></a></li>
+<li class="footer-social-link-twitter"><a href="https://www.twitter.com/librarycongress" title="Twitter"><i class="image-icon twitter"></i><span> Twitter</span></a></li>
+<li class="footer-social-link-youtube"><a href="https://www.youtube.com/libraryofcongress/" title="Youtube"><i class="image-icon youtube"></i><span> Youtube</span></a></li>
+<li class="footer-social-link-pinterest"><a href="https://www.pinterest.com/LibraryCongress/" title="Pinterest"><i class="image-icon pinterest"></i><span> Pinterest</span></a></li>
+<li class="footer-social-link-flickr"><a href="https://www.flickr.com/photos/library_of_congress/" title="Flickr"><i class="image-icon flickr"></i><span> Flickr</span></a></li>
+<li class="footer-social-link-instagram"><a href="https://instagram.com/librarycongress/" title="Instagram"><i class="image-icon instagram"></i><span> Instagram</span></a></li>
+<li class="footer-social-link-itunes"><a href="https://itunes.apple.com/us/artist/library-of-congress/id1280713133?mt=2" title="iTunes"> <i class="image-icon itunes"></i><span> iTunes</span></a></li>
+<li class="footer-social-link-survey"><a href="https://www.research.net/r/libraryofcongress" title="Take our survey">Take our survey <i class="icon icon-external-link"><span>External</span></i></a></li>
+</ul>
+</div>
+<div class="footer-row">
+<div class="footer-links-wrapper">
+<ul class="footer-links">
+<li><a href="/accessibility/">Accessibility</a></li>
+<li><a href="/legal/">Legal</a></li>
+<li><a href="/about/office-of-the-inspector-general/">Inspector General</a></li>
+<li><a href="/legal/standard-disclaimer-for-external-links/">External Link Disclaimer</a></li>
+<li><a href="//www.usa.gov/">USA.gov</a></li>
+<li><a href="/careers/">Careers</a></li>
+<li><a href="/contact/">Contact</a></li>
+<li><a href="http://www.loc.gov/pressroom/">Media</a></li>
+<li><a href="http://www.loc.gov/philanthropy/index.php">Donate</a></li>
+<li><a href="http://library-of-congress-shop.myshopify.com/">Shop</a></li>
+</ul>
+</div>
+<div class="intersites-links-wrapper">
+<ul class="intersites-links">
+<li class="intersites-link-congress"><a href="//www.congress.gov/"><span>Congress.gov</span></a></li>
+<li class="intersites-link-copyright"><a href="http://copyright.gov"><span>United States Copyright Office</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<style></style>
+<script>jQuery(function ($) {
+    var scroll_timer,
+        displayed = false,
+        $message = $('.back-to-top a').hide(),
+        $window = $(window),
+        top = $(document.body).children(0).position().top;
+
+    $("#back-to-top").click(function(event){
+        $window.scrollTop(0);
+        event.preventDefault();
+        return false;
+    });
+
+    $window.scroll(function () {
+        window.clearTimeout(scroll_timer);
+        scroll_timer = window.setTimeout(function () {
+            if($window.scrollTop() <= top){
+                displayed = false;
+                $message.fadeOut(800);
+            }else if(!displayed){
+                displayed = true;
+                $message.stop(true, true).show().click(function(){
+                    $message.fadeOut(800);
+                });
+            }
+        }, 100);
+    });
+
+    $("#back-to-top").click(function(e){
+        UX.interaction($(this), 'Footer', 'click', 'Back to top');
+    });
+});
+
+</script>
+<div class="back-to-top">
+<a href="#" id="back-to-top" style="display: none;"><i class="icon icon-arrow-up"></i> <span>Back to top</span></a>
+</div>
+<script defer="defer">
+LOCSuggest = {
+	serviceUrl: 'https://www.loc.gov/search/suggest/'
+};
+MEDIA_URL = 'https://media.loc.gov';
+</script>
+<script defer="defer" src="https://www.loc.gov/static/javascript/base.js?81937.86251" type="text/javascript"></script>
+<script defer="defer" src="https://www.loc.gov/static/javascript/share.js?81937.86251" type="text/javascript"></script>
+<!--[if lt IE 9]>
+    <script src='https://www.loc.gov/static/js/lib/html5shiv.js?81937.86251'></script>
+    <script src='https://www.loc.gov/static/js/lib/selectivizr.js?81937.86251'></script>
+<![endif]-->
+<script defer="defer">
+PORTAL_FORM_KEY = '8246a5f984663770e1627e85af068ef6';
+</script>
+<script defer="defer">
+
+jQuery(function($) {
+    /*
+        Grid and gallery layouts
+     */
+
+    var isotope_options = {
+        itemSelector: '.item'
+    };
+    // If in the grid or gallery style then make sure the
+    // pages are in order and there are no blank spaces
+    
+    isotope_options['layoutMode'] = 'fitRows';
+    
+    
+
+    
+    $('.search-results.grid-view').isotope(isotope_options);
+    imagesLoaded( $('#results'), function() {
+        $('.search-results.grid-view').isotope(isotope_options);
+    });
+    
+
+    var $iconic = $(".iconic");
+    if ($iconic.length > 0) {
+        var loaded_count = 0;
+        $iconic.on("load", function() {
+            loaded_count++;
+            // trigger isotope every once in a while as the images are loading:
+            if (loaded_count % 5 === 0) {
+                $('.search-results.grid-view').isotope(isotope_options);
+            }
+        });
+    }
+});
+
+jQuery(function($) {
+    
+    
+    var slider;
+    function create_slideshow($selector) {
+        slider = $selector.royalSlider({
+            fullscreen: {
+                enabled: true,
+                nativeFS: true
+            },
+            controlNavigation: 'thumbnails',
+            imageAlignCenter: true,
+            autoScaleSlider: false,
+            //autoScaleSliderHeight: 800,
+            loop: false,
+            navigateByClick: false,
+            numImagesToPreload: 2,
+            arrowsNav: true,
+            arrowsNavAutoHide: true,
+            arrowsNavHideOnTouch: true,
+            keyboardNavEnabled: true,
+            fadeinLoadedSlide: true,
+            //globalCaption: false,
+            //globalCaptionInside: true,
+            thumbs: {
+                appendSpan: true,
+                firstMargin: true,
+                spacing: 10
+            },
+            deeplinking: {
+                // deep linking options go here
+                enabled: true,
+                change: true,
+                prefix: 'slide-'
+            }
+        }).data("royalSlider");
+
+        $('.royalSlider').royalSlider("updateSliderSize", true);
+
+        
+        slider.ev.on('rsAfterContentSet', function (e, slideObject) {
+            var img = slideObject.holder.find('img').eq(0);
+            if (img && img.length && slideObject.caption) {
+                img.attr('alt', slideObject.caption.text());
+            }
+        });
+        return slider;
+    }
+
+    function create_overlay(highlight_id, left, top, width, height) {
+        return $('<div id="' + highlight_id + '" class="hit-highlight image-highlight" />')
+        .css({
+            'left': left + '%',
+            'top': top + '%',
+            'width': width + '%',
+            'height': height + '%',
+            'position': 'absolute',
+            'z-index': 10
+        });
+    }
+
+    function position_overlays(page_id, page_width, page_height, coords_list, 
+            $image, $container, fudge) {
+        if (!($container.length)) {
+            // no actual search result for this page -- exit this function
+            return true;
+        }
+        $container.find('div.image-highlight').remove();
+        if (!coords_list) {
+            // coords data doesn't exist -- exit this function
+            return true;
+        }
+        var container_width = $container.width();
+        var container_height = $container.height();
+        
+        var image_marginLeft = $image[0].offsetLeft;
+        var image_marginTop = $image[0].offsetTop;
+        var image_width = $image.width();
+        var image_height = $image.height();
+
+        // The overlays are positioned relative to their parent, the
+        // $container, but they need to show up in the right place relative
+        // to the image.
+        // The $container can be larger than the image,
+        // so we take the ratio of the sizes and use it to scale the
+        // positions, widths, and heights of the highlight overlays.
+        // We also make the overlays a little larger so they're more visible
+        // and we shift them a little using the "fudge" numbers.
+        var marginLeft = image_marginLeft / container_width;
+        var marginTop = image_marginTop / container_height;
+        var scaleWidth = image_width / container_width;
+        var scaleHeight = image_height / container_height;
+
+        $.each(coords_list, function (index, coords) {
+            // word coordinates: [left, top, width, height]
+            var highlight_id = "highlight-" + page_id + '-' + index;
+
+            var overlay_left = 100 * (marginLeft + scaleWidth * coords[0] / page_width) + fudge.left;
+            var overlay_top = 100 * (marginTop + scaleHeight * coords[1] / page_height) + fudge.top;
+            var overlay_width = 100 * coords[2] / page_width * scaleWidth + fudge.width;
+            var overlay_height = 100 * coords[3] / page_height * scaleHeight + fudge.height;
+
+            var $highlight_overlay = create_overlay(highlight_id,
+                overlay_left, overlay_top, overlay_width, overlay_height);
+
+            $container.append($highlight_overlay);
+        });
+    }
+
+    var word_coordinates_pages;
+    
+    word_coordinates_pages = {};
+    
+
+    var get_$container;
+    var get_$image;
+    var fudge_numbers;
+
+    
+    
+    get_$container = function(page_id) {
+        return $("#highlights-container-" + page_id);
+    };
+    get_$image = function(page_id) {
+        return $("#iconic-segment-image-" + page_id);
+    };
+    fudge_numbers = {
+        left: -1.3,
+        top: -0.5,
+        width: 2.5,
+        height: 1.3
+    };
+    
+    
+        if (!$.isEmptyObject(word_coordinates_pages)) {
+            var $iconic = $(".iconic");
+            var loaded = 0;
+            var loaded_total = $iconic.length;
+            // make sure we wait til all the images are loaded before we try to position the highlights on them:
+            $iconic.one("load", function() {
+                loaded++;
+                if (loaded === loaded_total) {
+                    $.each(word_coordinates_pages, function(page_id, page) {
+                        var $image = get_$image(page_id);
+                        var $container = get_$container(page_id);
+                        position_overlays(page_id, page.width, page.height, page.coords_list,
+                            $image, $container, fudge_numbers);
+                    });
+                }
+            }).each(function() {
+                // to make sure the "on load" event occurs even if the
+                // images are already cached:
+                if (this.complete) {
+                    $(this).load();
+                }
+            });
+        }
+        
+     
+
+
+    
+    $(window).resize(function() {
+        setTimeout(function() {
+            $.each(word_coordinates_pages, function(page_id, page) {
+                var $container = get_$container(page_id);
+                var $image = get_$image(page_id, $container);
+                position_overlays(page_id, page.width, page.height, page.coords_list,
+                    $image, $container, fudge_numbers);
+            });
+        }, 300);
+    });
+});
+</script>
+</div>
+<script type="text/javascript">
+if(window['_satellite']){
+    _satellite.pageBottom();
+}
+</script>
+</body></html>

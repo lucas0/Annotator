@@ -1,0 +1,1491 @@
+<html class="js no-touch history rgba hsla multiplebgs backgroundsize borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions generatedcontent video audio svg svgclippaths" lang="en-US" style=""><head>
+<meta charset="utf-8"/><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="no" http-equiv="imagetoolbar"/>
+<title>ABC EXECUTIVES | ABC Press</title>
+<link href="http://gmpg.org/xfn/11" rel="profile"/>
+<link href="https://www.wdtvpress.com/abc/xmlrpc.php" rel="pingback"/>
+<link href="//www.wdtvpress.com" rel="dns-prefetch"/>
+<link href="//code.jquery.com" rel="dns-prefetch"/>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="https://www.wdtvpress.com/abc/feed/" rel="alternate" title="ABC Press » Feed" type="application/rss+xml"/>
+<link href="https://www.wdtvpress.com/abc/comments/feed/" rel="alternate" title="ABC Press » Comments Feed" type="application/rss+xml"/>
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.wdtvpress.com\/abc\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.10"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script defer="" src="https://www.wdtvpress.com/abc/wp-includes/js/wp-emoji-release.min.js?ver=4.9.10" type="text/javascript"></script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/css/dap.css?ver=1562105021" id="dap-style-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/customscrollbar/jquery.mCustomScrollbar.min.css?ver=4.9.10" id="custom-scrollbar-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css?ver=4.9.10" id="jquery-ui-smoothness-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/sweetalert/sweetalert.min.css?ver=4.9.10" id="sweetalert-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.wdtvpress.com/abc/wp-content/uploads/sites/11/dap-custom.css?ver=20190626.220816" id="dap-custom-css" media="all" rel="stylesheet" type="text/css"/>
+<script src="https://www.wdtvpress.com/abc/wp-includes/js/jquery/jquery.js?ver=1.12.4" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/clamp.min.js?ver=20141003" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/jquery.attrchange.js?ver=20140804" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/chosen/chosen.jquery.js?ver=20140721" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/chosenImage/chosenImage.jquery.js?ver=20170828" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/jquery.justifiedGallery.min.js?ver=20160524" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/gallery.js?ver=20170420.1240" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/jquery-validation/jquery.validate.min.js?ver=20140725" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/jquery-validation/additional-methods.min.js?ver=20140725" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/placeholders.js?ver=20140721" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/modernizr.custom.js?ver=20140721" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var DAPDrawersSettings = {"translations":{"loading_text":"Content Loading...","loading_images":"Loading images","loading_videos":"Loading videos","loading_assets":"Loading assets","load_more":"Load more"},"ajaxurl":"https:\/\/www.wdtvpress.com\/abc\/wp-admin\/admin-ajax.php","spinnerUrl":"https:\/\/www.wdtvpress.com\/abc\/wp-content\/themes\/dap\/assets\/images\/loading.gif"};
+/* ]]> */
+</script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/elements-drawers-check.js?ver=20180223.1145" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/jquery.viewport.mini.js?ver=20160314" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/load-more-check.js?ver=20180215.1453" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/sweetalert/sweetalert.min.js?ver=20141205" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/moment.min.js?ver=20160627" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/mu-plugins/cf-dap-twitter-feed/assets/vendor/js/jquery.marquee.js?ver=20141027" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var DAPTwitterFeedSettings = {"ajaxurl":"https:\/\/www.wdtvpress.com\/abc\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script src="https://www.wdtvpress.com/abc/wp-content/mu-plugins/cf-dap-twitter-feed/assets/js/cf-dap-twitter-feed.js?ver=20141009" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var dap_om = {"account":"wdgabcb2bdisneyabcpress","pageName":"ABC EXECUTIVES","server":"","channel":"ABC Press","pageType":"page","prop1":"","prop2":"","prop3":"","prop4":"","prop5":"","prop27":"","campaign":"","state":"","zip":"","events":"","products":"","purchaseID":"","eVar1":"","eVar2":"","eVar3":"","eVar4":"","eVar5":"","list1":""};
+/* ]]> */
+</script>
+<script src="https://www.wdtvpress.com/abc/wp-content/mu-plugins/cf-dap-omniture/assets/js/AppMeasurement.js?ver=20170202" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/mu-plugins/cf-dap-omniture/assets/js/AppMeasurement-tracking.js?ver=20170202" type="text/javascript"></script>
+<link href="https://www.wdtvpress.com/abc/wp-json/" rel="https://api.w.org/"/>
+<link href="https://www.wdtvpress.com/abc/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<link href="https://www.wdtvpress.com/abc/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+<meta content="WordPress 4.9.10" name="generator"/>
+<link href="https://www.wdtvpress.com/abc/abc-executives/" rel="canonical"/>
+<link href="https://www.wdtvpress.com/abc/?p=629739" rel="shortlink"/>
+<link href="https://www.wdtvpress.com/abc/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.wdtvpress.com%2Fabc%2Fabc-executives%2F" rel="alternate" type="application/json+oembed"/>
+<link href="https://www.wdtvpress.com/abc/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.wdtvpress.com%2Fabc%2Fabc-executives%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+<link href="https://www.wdtvpress.com/wp-content/uploads/2017/05/site-11-favicon-1493640302.png" rel="icon" type="image/png"/>
+<style id="wp-custom-css" type="text/css">
+			body {
+	background-color: #ffffff;
+}
+
+button.searchsubmit {
+	color: #fff;
+	opacity: 1;
+}
+
+button.searchsubmit:hover {
+	color: #3F75BC;
+	opacity: 1;
+}
+
+.slider-search fieldset .searchsubmit {
+	color: #fff;
+	opacity: 1;
+}
+
+.slider-search fieldset .searchsubmit:hover {
+	color: #3F75BC;
+	opacity: 1;
+    background-color: #143157;
+}
+
+
+.nav-category-bg, .nav-categories, .nav-calendar {
+    box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, .3) inset, 0px 0px 0px 0px rgba(0, 0, 0, 0) inset;
+    box-sizing: border-box;
+    background: #f2f2f2 none repeat scroll 0% 0%;
+    border-bottom: 1px solid #ccc;
+}
+
+/*
+Executive Bio colors
+*/
+
+.exec.item-box {
+    background: #e3e3e3;
+    border: 1px solid #999;
+    display: inline-block;
+}
+
+.show-pages-header {
+background: #245699
+; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#245699, #132F53
+); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#245699, #132F53
+); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#245699, #132F53
+); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#245699, #132F53
+); /* Standard syntax */
+}
+
+.single-episode .has-synopsis {
+    box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, .3) inset, 0px 0px 0px 0px rgba(0, 0, 0, 0) inset;
+    box-sizing: border-box;
+    background: #f2f2f2 none repeat scroll 0% 0%;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.menu-toggle {
+    background-color: transparent;
+    color: #aaaaaa;
+    font-size: 1rem;
+    padding: 0 0 0 18px;
+    position: relative;
+}
+
+.menu-toggle a:hover {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0 0 0 18px;
+    position: relative;
+}
+
+.menu-toggle:hover {
+    color: #cccccc;
+}
+
+.menu-toggle a:hover {
+    color: #bbbbbb;
+}
+
+.main-navigation.toggled a {
+    color: #000000;
+}
+
+item-box .over-layer .item-filename, .item-box .over-layer .item-updated, .item-box .over-layer .item-date, .item-box .over-layer .item-episode-title, .item-box-in-drawer .over-layer .item-filename, .item-box-in-drawer .over-layer .item-updated, .item-box-in-drawer .over-layer .item-date, .item-box-in-drawer .over-layer .item-episode-title {
+    color: #47b5ff;
+}
+
+.drawer-content {
+    background-color: #eee;
+}
+
+.drawer-content-load {
+    color: #000000;
+}
+
+.has-newest-episode has-synopsis-excerpt, .has-hero, .has-newest-episode {
+    background: #eeeeee;
+}
+
+.episode-tile .schedule-details a:hover {
+    color: #ffffff;
+}
+
+.under-logo {
+    display: none;
+}
+
+h3.drawer-title {
+    color: #666666;
+}
+
+
+
+
+
+
+.synopsis-excerpt .site-main a:visited {
+    color: #2a6bb9;
+}
+
+.has-synopsis a:visited{
+    color: #2a6bb9;
+}
+
+.site-main a:hover, .site-main a:active, .site-main a:focus {
+	color: #2a6bb9;
+}
+
+.has-synopsis .site-main a:active {
+    color: #ccc;
+}
+
+.site-main a:hover {
+    color: #ccc;
+}
+
+.site-main a:visited {
+    color: #2a6bb9;
+}
+
+.site-main a:active {
+    color: #ccc;
+}
+
+.single-episode .has-newest-episode .synopsis-excerpt {
+    color: #000000;
+}
+
+.single-episode .has-newest-episode .synopsis-excerpt a:hover{
+    color: #fff;
+}
+
+
+
+/*
+* === MOBILE RESPONSIVE BEGIN ===
+*/
+@media only screen and (max-width: 736px) {
+.under-logo {
+    display: block;
+}
+.bx-wrapper {
+display: none;
+}
+.slider-search fieldset .searchsubmit {
+border: 1px solid #cccccc;
+border-left: none;
+}
+.slider-search fieldset #search2 {
+border: 1px solid #cccccc;
+border-right: none;
+}
+
+.item-date, .item-box .over-layer .item-airtime {
+	display: none;
+}
+
+.item-box .over-layer .info-button {
+	display: none;
+}
+}
+
+
+@media only screen and (max-width: 1200px) and (min-width: 721px){
+.under-logo {
+    display: block;
+}
+
+.bx-wrapper {
+display: none;
+}
+
+.slider-search fieldset .searchsubmit {
+	border: 1px solid #cccccc;
+	border-left: none;
+}
+
+.slider-search fieldset #search2 {
+border: 1px solid #cccccc;
+border-right: none;
+}
+
+.slider-search {
+    display: block;
+    left: 0;
+    margin: 0 auto 0 auto;
+    position: relative;
+    right: 0;
+    width: 40%;
+    z-index: 52;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+}
+
+
+.synopsis-excerpt {
+    color: #000;
+}
+
+.has-synopsis {
+	background-color: white;
+}
+
+.synopsis {
+    color: #000000;
+    float: left;
+    padding: 35px 10px 0;
+} 
+
+.upfronts_center {
+	margin: 0 auto;
+     width: 630px; 
+}
+
+.special-template-a header .over-layer {
+	margin: 0 auto;
+	width:1260px;
+}
+
+
+@media only screen and (max-width: 812px) {
+
+.alignright .special-event-links {
+	float: right;
+}
+
+.dap-video-upfront {
+	max-width: 240px;
+	max-height: 180px
+}
+}
+
+
+@media only screen and (max-width: 820px) {
+
+.sherpadmStreamEmbed{
+	max-width: 360px;
+	max-height: 270px
+}
+}
+
+
+
+.special-template-a header .over-layer {
+    background: rgba(0,0,0,0.5);
+
+}
+
+
+.nav-categories li a.active {
+    background: none;
+    background-color: none;
+}
+
+
+
+
+
+
+
+.special-template-a #masthead {
+    background: rgba(255,255,255, 1);
+}
+
+.special-template-a #masthead .main-navigation a {
+    color: #666666;
+}
+
+
+.special-template-a #masthead a:visited {
+    color: #000;
+}
+
+.special-template-a #masthead a {
+    color: #000;
+    text-decoration: none;
+}
+
+.special-template-a #masthead a:link{
+   color: #000;
+}
+
+.special-template-a #masthead input#search {
+    color: #ffffff;
+}
+
+.special-template-a #masthead 
+ input#search {
+    background-color: #1a3f70;
+}
+
+
+
+
+
+
+
+.content-offset {
+    max-width: 1200px;
+}
+
+
+h5.upfrontFixH5 {
+	padding-bottom: 2px;
+	margin-bottom: 2px;
+}
+
+
+.show-pic-wrapper-Upfront  {
+	height: 222px;
+}
+
+#upfrontLinks {
+	margin-top: -60px;
+	padding-left: 20px;
+	margin-bottom: 70px;
+}
+
+.upfrontLink a{
+	color: #47b5ff;
+}
+
+.upfrontLink a:link{
+    color: #47b5ff;
+}
+
+.upfrontLink a:hover{
+    color: #47b5ff;
+	text-decoration: underline;
+}
+
+.upfrontLink a:visited{
+    color: #47b5ff;
+}
+
+.site-main a:visited {
+	color: #47b5ff;
+}
+
+
+#upfrontVideoPadding {
+	padding-top: 100px;
+}
+
+#upfrontPhotoPadding{
+	padding-top: 160px;
+}
+
+
+#upfrontLinksPhoto {
+	position: absolute;
+	top: 10px;}
+
+#photoTitle {
+	position: absolute;
+	top: 30px;
+}
+
+.show-photos-page-entry-content {
+	padding-top: 100px;
+}
+
+
+
+.site-description {
+	display: none;
+}
+
+
+
+/*
+* === special template START ===
+*/ 
+
+.special-template-a ul.special-event-links li a {
+	color: #fff;
+	font-size: 1.2rem;
+	padding: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-transform: uppercase;
+}
+
+.special-template-a ul.special-event-links li a
+{
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+.special-template-a header .over-layer {
+	background: none;
+}
+
+.special-template-a .post-title-wrapper {
+    background: none;
+    padding-top: 0px;
+}
+
+.post-title-wrapper h1 {
+	line-height: 0rem;
+}
+
+
+.special-template-c .post-title-wrapper, .special-template-c-day .post-title-wrapper {
+	background: #000;
+}
+
+.special-template-c .post-title-wrapper .pos-relative h2.basic-heading-light {
+	padding-top: 10px;
+}
+
+.special-template-c .cal-day-row p, .special-template-c-day .cal-day-row p
+{
+margin-bottom: 4px;
+}
+
+
+
+
+.special-template-c .post-title-wrapper .pos-relative h2.basic-heading-light
+{
+	font-size: 0px;
+}
+
+
+/*
+* === special template END ===
+*/ 
+
+
+.site-header-top .iconmediabox .cart-count:after {
+    background: #1a3f70;
+}
+
+.desktop-only-navigation .main-navigation a {
+    color: #ffffff;
+}
+
+.desktop-only-navigation {
+    background-color: #1a3f70;
+}
+
+.desktop-only-navigation .main-navigation a svg {
+    fill: #ffffff;
+}
+
+.desktop-only-navigation .main-navigation .menu-item.current_page_item>a {
+	color: #a0bfe9;
+}
+
+.special-template-a #masthead a:link {
+    color: #ffffff;
+}
+
+.special-template-a #masthead a:hover {
+    color: #a0bfe9;
+}
+
+.special-template-a #masthead a:visited {
+    color: #ffffff;
+}
+
+
+
+.special-template-a #masthead a:visited {
+    color: #000000;
+}
+.special-template-a #masthead a:link {
+    color: #000000;
+}
+
+
+.special-template-a .desktop-only-navigation .main-navigation a svg {
+    fill: #000000;
+}
+
+.special-template-a .desktop-only-navigation {
+    background-color: #70a0df;
+}
+
+.special-template-a #masthead input#search {
+    background-color: #ffffff;
+}
+
+.special-template-a button.searchsubmit {
+    color: #000000;
+    opacity: 1;
+}
+
+
+.error404 .site-header {
+    background-color: #ffffff;
+}
+
+.logo-dap-disneyabctv img {
+	display: none;
+}		</style>
+<!--[if lte IE 9]>
+	<script type="text/javascript"
+			src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/css3-multi-column.min.js?ver=20140711"></script>
+	<![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.11/jquery.mousewheel.min.js"></script></head>
+<body class="page-template page-template-templates page-template-executives-grouped page-template-templatesexecutives-grouped-php page page-id-629739 site-abc">
+<div class="breakpoint-context"></div>
+<div class="hfeed site" id="page">
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+<header class="site-header" id="masthead" role="banner">
+<div class="site-header-top">
+<div class="container">
+<div class="site-header-top-row">
+<div class="top-left-box">
+<form action="https://www.wdtvpress.com/abc" class="top-search" method="get">
+<input id="search" name="s" placeholder="Search" type="text" value=""/>
+<button class="searchsubmit" name="searchsubmit">s</button>
+</form>
+</div>
+<div class="top-center-box">
+<a href="https://www.wdtvpress.com/waltdisneytelevision">
+<img alt="Walt Disney Television" src="https://www.wdtvpress.com/wp-content/uploads/2019/03/site-5-corporate_landing_page_logo-1553105824.png"/>
+</a>
+</div>
+<div class="top-right-box">
+<div class="form-hline fhline1">
+<a href="#" id="js-login-trigger" title="Log In">LOG IN</a>
+<a href="https://www.wdtvpress.com/members/register" title="Register">REGISTER</a>
+<div class="login-popup" id="js-login-popup">
+<form action="https://www.wdtvpress.com/abc/wp-login.php" id="loginform" method="post" name="loginform">
+<p class="login-username">
+<label for="user_login">Username or Email Address</label>
+<input class="input" id="user_login" name="log" size="20" type="text" value=""/>
+</p>
+<p class="login-password">
+<label for="user_pass">Password</label>
+<input class="input" id="user_pass" name="pwd" size="20" type="password" value=""/>
+</p>
+<p class="login-remember"><label><input id="rememberme" name="rememberme" type="checkbox" value="forever"/> Remember Me</label></p>
+<p class="login-submit">
+<input class="button button-primary" id="wp-submit" name="wp-submit" type="submit" value="Log In"/>
+<input name="redirect_to" type="hidden" value="https://www.wdtvpress.com/abc/abc-executives/"/>
+</p>
+<a class="login-error" href="https://www.wdtvpress.com/members/password-reset">Lost Password?</a> <a class="login-error" href="https://www.wdtvpress.com/members/forgot-username">Lost Username?</a>
+</form> </div>
+<a class="cart-link" href="https://www.wdtvpress.com/abc/mediabox/">
+<div class="iconmediabox">
+<div class="cart-count"><span id="main_cart_count_wrap">0</span>  </div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header-wrap">
+<h2 class="site-description">
+											Walt Disney Television									</h2>
+<div class="top-right-box has-cart-button">
+<div class="form-hline fhline1">
+<a href="#" id="js-login-trigger" title="Log In">LOG IN</a>
+<a href="https://www.wdtvpress.com/members/register" title="Register">REGISTER</a>
+<div class="login-popup" id="js-login-popup">
+<form action="https://www.wdtvpress.com/abc/wp-login.php" id="loginform" method="post" name="loginform">
+<p class="login-username">
+<label for="user_login">Username or Email Address</label>
+<input class="input" id="user_login" name="log" size="20" type="text" value=""/>
+</p>
+<p class="login-password">
+<label for="user_pass">Password</label>
+<input class="input" id="user_pass" name="pwd" size="20" type="password" value=""/>
+</p>
+<p class="login-remember"><label><input id="rememberme" name="rememberme" type="checkbox" value="forever"/> Remember Me</label></p>
+<p class="login-submit">
+<input class="button button-primary" id="wp-submit" name="wp-submit" type="submit" value="Log In"/>
+<input name="redirect_to" type="hidden" value="https://www.wdtvpress.com/abc/abc-executives/"/>
+</p>
+<a class="login-error" href="https://www.wdtvpress.com/members/password-reset">Lost Password?</a> <a class="login-error" href="https://www.wdtvpress.com/members/forgot-username">Lost Username?</a>
+</form> </div>
+<a class="cart-link" href="https://www.wdtvpress.com/abc/mediabox/">
+<div class="iconmediabox">
+<div class="cart-count"><span id="main_cart_count_wrap">0</span>  </div>
+</div>
+</a>
+</div>
+<form action="https://www.wdtvpress.com/abc" class="top-search" method="get">
+<div class="form-group">
+<input id="search" name="s" placeholder="" type="text" value=""/>
+<button class="searchsubmit" name="searchsubmit">s</button>
+</div>
+</form>
+<div class="form-hline fhline2">
+<a class="link-download" href="#" target="_blank" title="THE DAILY BUNDLE">THE DAILY BUNDLE <span class="font-dap">a</span></a>
+</div>
+</div>
+<div class="header-site-branding">
+<h1 class="site-title">
+<a href="https://www.wdtvpress.com/abc/" rel="home">ABC Press</a>
+</h1>
+</div>
+<div class="other-networks active" id="js-other-networks">
+<ul class="clearfix">
+<li><a class="logo-dap-disneyabctv" href="https://www.wdtvpress.com/waltdisneytelevision" style="background: transparent url(https://www.wdtvpress.com/wp-content/uploads/2019/03/site-5-nav_logo-1553095407.png) no-repeat center center;" target="_self" title="Walt Disney Television"><img alt="Walt Disney Television" src="https://www.wdtvpress.com/wp-content/uploads/2019/03/site-5-nav_logo-1553095407.png" style="display: inline; opacity: 0;"/></a></li><li><a class="logo-dap-freeform" href="https://www.wdtvpress.com/freeform" style="background: transparent url(https://www.wdtvpress.com/wp-content/uploads/2018/05/site-6-nav_logo-1525224987.png) no-repeat center center;" target="_self" title="Freeform"><img alt="Freeform" src="https://www.wdtvpress.com/wp-content/uploads/2018/05/site-6-nav_logo-1525224987.png"/></a></li><li><a class="logo-fx" href="https://www.fxnetworkspressroom.com/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link1-nav_logo-1553095215.png) no-repeat center center;" target="_blank" title="FX"><img alt="FX" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link1-nav_logo-1553095215.png"/></a></li><li><a class="logo-national-geographic" href="https://www.nationalgeographicpartners.com/press/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link2-nav_logo-1553095215.png) no-repeat center center;" target="_blank" title="National Geographic"><img alt="National Geographic" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link2-nav_logo-1553095215.png"/></a></li><li><a class="logo-dap-disneychannel" href="https://www.wdtvpress.com/disneychannel" style="background: transparent url(https://www.wdtvpress.com/wp-content/uploads/2017/06/site-9-nav_logo-1496822402.png) no-repeat center center;" target="_self" title="Disney Channel Press"><img alt="Disney Channel Press" src="https://www.wdtvpress.com/wp-content/uploads/2017/06/site-9-nav_logo-1496822402.png"/></a></li><li><a class="logo-dap-disneyjunior" href="https://www.wdtvpress.com/disneyjunior" style="background: transparent url(https://www.wdtvpress.com/wp-content/uploads/2017/02/site-10-nav_logo-1485980622.png) no-repeat center center;" target="_self" title="Disney Junior Press"><img alt="Disney Junior Press" src="https://www.wdtvpress.com/wp-content/uploads/2017/02/site-10-nav_logo-1485980622.png"/></a></li><li><a class="logo-dap-disneyxd" href="https://www.wdtvpress.com/disneyxd" style="background: transparent url(https://www.wdtvpress.com/wp-content/uploads/2017/02/site-8-nav_logo-1485979925.png) no-repeat center center;" target="_self" title="Disney XD Press"><img alt="Disney XD Press" src="https://www.wdtvpress.com/wp-content/uploads/2017/02/site-8-nav_logo-1485979925.png"/></a></li><li><a class="logo-dap-radiodisney" href="https://www.wdtvpress.com/radiodisney" style="background: transparent url(https://www.wdtvpress.com/wp-content/uploads/2017/02/site-7-nav_logo-1485979981.png) no-repeat center center;" target="_self" title="Radio Disney Press"><img alt="Radio Disney Press" src="https://www.wdtvpress.com/wp-content/uploads/2017/02/site-7-nav_logo-1485979981.png"/></a></li><li><a class="logo-abc-studios" href="https://abcstudios.go.com/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2018/05/site-abc_studios_custom_link-nav_logo-1527802982.png) no-repeat center center;" target="_self" title="ABC Studios"><img alt="ABC Studios" src="https://www.wdtvpress.com/abc/wp-content/uploads/2018/05/site-abc_studios_custom_link-nav_logo-1527802982.png"/></a></li><li><a class="logo-fox21-television-studios" href="https://www.21cf.com/businesses/filmed-entertainment/fox-21-television-studios/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link3-nav_logo-1553095215.png) no-repeat center center;" target="_blank" title="fox21 television studios"><img alt="fox21 television studios" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link3-nav_logo-1553095215.png"/></a></li><li><a class="logo-fox-studios" href="https://www.foxstudios.com/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link4-nav_logo-1553095215.png) no-repeat center center;" target="_blank" title="Fox Studios"><img alt="Fox Studios" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link4-nav_logo-1553095215.png"/></a></li><li><a class="logo-fxp" href="https://www.21cf.com/businesses/cable-network-programming/fx-networks-and-productions/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link5-nav_logo-1553095215.png) no-repeat center center;" target="_blank" title="FXP"><img alt="FXP" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link5-nav_logo-1553095215.png"/></a></li><li><a class="logo-abc-owned-television-stations" href="https://www.wdtvpress.com/waltdisneytelevision/abc-owned-television-stations/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link6-nav_logo-1553095215.png) no-repeat center center;" target="_blank" title="ABC Owned Television Stations"><img alt="ABC Owned Television Stations" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link6-nav_logo-1553095215.png"/></a></li><li><a class="logo-abc-news" href="https://abcnews.go.com/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link7-nav_logo-1553095216.png) no-repeat center center;" target="_blank" title="ABC News"><img alt="ABC News" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link7-nav_logo-1553095216.png"/></a></li> </ul>
+</div>
+<div class="desktop-other-networks">
+<ul class="clearfix">
+<li><a class="logo-dap-disneyabctv" href="https://www.wdtvpress.com/waltdisneytelevision" style="background: transparent url(https://www.wdtvpress.com/wp-content/uploads/2019/03/site-5-nav_logo-1553095407.png) no-repeat center center;" target="_self" title="Walt Disney Television"><img alt="Walt Disney Television" src="https://www.wdtvpress.com/wp-content/uploads/2019/03/site-5-nav_logo-1553095407.png"/></a></li><li><a class="logo-dap-freeform" href="https://www.wdtvpress.com/freeform" style="background: transparent url(https://www.wdtvpress.com/wp-content/uploads/2018/05/site-6-nav_logo-1525224987.png) no-repeat center center;" target="_self" title="Freeform"><img alt="Freeform" src="https://www.wdtvpress.com/wp-content/uploads/2018/05/site-6-nav_logo-1525224987.png"/></a></li><li><a class="logo-fx" href="https://www.fxnetworkspressroom.com/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link1-nav_logo-1553095215.png) no-repeat center center;" target="_blank" title="FX"><img alt="FX" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link1-nav_logo-1553095215.png"/></a></li><li><a class="logo-national-geographic" href="https://www.nationalgeographicpartners.com/press/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link2-nav_logo-1553095215.png) no-repeat center center;" target="_blank" title="National Geographic"><img alt="National Geographic" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link2-nav_logo-1553095215.png"/></a></li><li><a class="logo-dap-disneychannel" href="https://www.wdtvpress.com/disneychannel" style="background: transparent url(https://www.wdtvpress.com/wp-content/uploads/2017/06/site-9-nav_logo-1496822402.png) no-repeat center center;" target="_self" title="Disney Channel Press"><img alt="Disney Channel Press" src="https://www.wdtvpress.com/wp-content/uploads/2017/06/site-9-nav_logo-1496822402.png"/></a></li><li><a class="logo-dap-disneyjunior" href="https://www.wdtvpress.com/disneyjunior" style="background: transparent url(https://www.wdtvpress.com/wp-content/uploads/2017/02/site-10-nav_logo-1485980622.png) no-repeat center center;" target="_self" title="Disney Junior Press"><img alt="Disney Junior Press" src="https://www.wdtvpress.com/wp-content/uploads/2017/02/site-10-nav_logo-1485980622.png"/></a></li><li><a class="logo-dap-disneyxd" href="https://www.wdtvpress.com/disneyxd" style="background: transparent url(https://www.wdtvpress.com/wp-content/uploads/2017/02/site-8-nav_logo-1485979925.png) no-repeat center center;" target="_self" title="Disney XD Press"><img alt="Disney XD Press" src="https://www.wdtvpress.com/wp-content/uploads/2017/02/site-8-nav_logo-1485979925.png"/></a></li><li><a class="logo-dap-radiodisney" href="https://www.wdtvpress.com/radiodisney" style="background: transparent url(https://www.wdtvpress.com/wp-content/uploads/2017/02/site-7-nav_logo-1485979981.png) no-repeat center center;" target="_self" title="Radio Disney Press"><img alt="Radio Disney Press" src="https://www.wdtvpress.com/wp-content/uploads/2017/02/site-7-nav_logo-1485979981.png"/></a></li> </ul>
+<ul class="clearfix">
+<li><a class="logo-abc-studios" href="https://abcstudios.go.com/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2018/05/site-abc_studios_custom_link-nav_logo-1527802982.png) no-repeat center center;" target="_self" title="ABC Studios"><img alt="ABC Studios" src="https://www.wdtvpress.com/abc/wp-content/uploads/2018/05/site-abc_studios_custom_link-nav_logo-1527802982.png"/></a></li><li><a class="logo-fox21-television-studios" href="https://www.21cf.com/businesses/filmed-entertainment/fox-21-television-studios/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link3-nav_logo-1553095215.png) no-repeat center center;" target="_blank" title="fox21 television studios"><img alt="fox21 television studios" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link3-nav_logo-1553095215.png"/></a></li><li><a class="logo-fox-studios" href="https://www.foxstudios.com/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link4-nav_logo-1553095215.png) no-repeat center center;" target="_blank" title="Fox Studios"><img alt="Fox Studios" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link4-nav_logo-1553095215.png"/></a></li><li><a class="logo-fxp" href="https://www.21cf.com/businesses/cable-network-programming/fx-networks-and-productions/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link5-nav_logo-1553095215.png) no-repeat center center;" target="_blank" title="FXP"><img alt="FXP" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link5-nav_logo-1553095215.png"/></a></li><li><a class="logo-abc-owned-television-stations" href="https://www.wdtvpress.com/waltdisneytelevision/abc-owned-television-stations/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link6-nav_logo-1553095215.png) no-repeat center center;" target="_blank" title="ABC Owned Television Stations"><img alt="ABC Owned Television Stations" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link6-nav_logo-1553095215.png"/></a></li><li><a class="logo-abc-news" href="https://abcnews.go.com/" style="background: transparent url(https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link7-nav_logo-1553095216.png) no-repeat center center;" target="_blank" title="ABC News"><img alt="ABC News" src="https://www.wdtvpress.com/abc/wp-content/uploads/2019/03/site-custom_link7-nav_logo-1553095216.png"/></a></li> </ul>
+</div>
+<nav class="main-navigation" id="site-navigation" role="navigation">
+<button class="menu-toggle">Menu</button>
+<div class="menu-main-menu-container"><ul class="menu nav-menu" id="menu-main-menu"><li class="js-mega-parent mega-parent menu-item menu-item-type-post_type menu-item-object-page menu-item-776534" id="menu-item-776534"><a href="https://www.wdtvpress.com/abc/shows/">Shows</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19" id="menu-item-19"><a href="https://www.wdtvpress.com/abc/videos/">New Videos</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837370" id="menu-item-837370"><a href="https://www.wdtvpress.com/abc/screeners/">Screeners</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-629739 current_page_item menu-item-779229" id="menu-item-779229"><a href="https://www.wdtvpress.com/abc/abc-executives/">ABC EXECUTIVES</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21" id="menu-item-21"><a href="https://www.wdtvpress.com/abc/bios/">Bios</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18" id="menu-item-18"><a href="https://www.wdtvpress.com/abc/releases/">Releases</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11003" id="menu-item-11003"><a href="https://www.wdtvpress.com/abc/contacts/">Contacts</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-776536" id="menu-item-776536"><a href="https://www.wdtvpress.com/abc/calendar/">Calendar</a></li>
+</ul></div> </nav>
+<div class="under-logo">
+<a class="more-networks-link" href="#" id="js-more-networks-link" title="MORE NETWORKS">MORE NETWORKS</a>
+</div>
+</div>
+<div class="desktop-only-navigation">
+<div class="container">
+<nav class="main-navigation" id="desktop-site-navigation" role="navigation">
+<ul>
+<li class="js-mega-parent mega-parent menu-item menu-item-type-post_type menu-item-object-page menu-item-776534"><a href="https://www.wdtvpress.com/abc/shows/">Shows</a><div class="mega-menu" id="js-mega-menu">
+<div class="mega-menu-column">
+<div class="mega-wrapper corporate">
+<h5 class="mega-cat-name">Corporate</h5>
+<ul class="mega-link-list">
+<li>
+<a href="https://www.wdtvpress.com/abc/fyc2019/" title="ABC FYC Day 2019">
+							ABC FYC Day 2019						</a>
+</li>
+</ul>
+</div>
+<div class="mega-wrapper primetime">
+<h5 class="mega-cat-name">Prime Time</h5>
+<ul class="mega-link-list">
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/a-million-little-things/" title="A Million Little Things">
+							A Million Little Things						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/americanhousewife/" title="American Housewife">
+							American Housewife						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/the-baker-and-the-beauty/" title="The Baker and the Beauty">
+							The Baker and the Beauty						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/blackish/" title="black-ish">
+							black-ish						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/bless-this-mess/" title="Bless This Mess">
+							Bless This Mess						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/the-conners/" title="The Conners">
+							The Conners						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/emergence/" title="Emergence">
+							Emergence						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/for-life/" title="For Life">
+							For Life						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/freshofftheboat/" title="Fresh Off the Boat">
+							Fresh Off the Boat						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/thegoldbergs/" title="The Goldbergs">
+							The Goldbergs						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/thegooddoctor/" title="The Good Doctor">
+							The Good Doctor						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/grand-hotel/" title="Grand Hotel">
+							Grand Hotel						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/greysanatomy/" title="Grey's Anatomy">
+							Grey's Anatomy						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/howtogetawaywithmurder/" title="How to Get Away with Murder">
+							How to Get Away with Murder						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/marvelsagentsofshield/" title="Marvel's Agents of S.H.I.E.L.D.">
+							Marvel's Agents of S.H.I.E.L.D.						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/mixed-ish/" title="mixed-ish">
+							mixed-ish						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/modernfamily/" title="Modern Family">
+							Modern Family						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/reef-break/" title="Reef Break">
+							Reef Break						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/the-rookie/" title="The Rookie">
+							The Rookie						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/schooled/" title="Schooled">
+							Schooled						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/single-parents/" title="Single Parents">
+							Single Parents						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/station19/" title="Station 19">
+							Station 19						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/stumptown/" title="Stumptown">
+							Stumptown						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/united-we-fall/" title="United We Fall">
+							United We Fall						</a>
+</li>
+</ul>
+</div>
+<div class="mega-wrapper alterative">
+<h5 class="mega-cat-name">Alternative</h5>
+<ul class="mega-link-list">
+</ul>
+</div>
+</div>
+<div class="mega-menu-column">
+<div class="mega-wrapper alterative">
+<ul class="mega-link-list">
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/100000-pyramid/" title="The $100,000 Pyramid">
+							The $100,000 Pyramid						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/americas-funniest-home-videos/" title="America's Funniest Home Videos">
+							America's Funniest Home Videos						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/american-idol/" title="American Idol">
+							American Idol						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/the-bachelor/" title="The Bachelor">
+							The Bachelor						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/bachelor-in-paradise/" title="Bachelor in Paradise">
+							Bachelor in Paradise						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/the-bachelorette/" title="The Bachelorette">
+							The Bachelorette						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/card-sharks/" title="Card Sharks">
+							Card Sharks						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/celebrity-family-feud/" title="Celebrity Family Feud">
+							Celebrity Family Feud						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/dancing-with-the-stars/" title="Dancing with the Stars">
+							Dancing with the Stars						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/dont/" title="Don’t">
+							Don’t						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/family-food-fight/" title="Family Food Fight">
+							Family Food Fight						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/holey-moley/" title="Holey Moley">
+							Holey Moley						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/kids-say-the-darndest-things/" title="Kids Say the Darndest Things">
+							Kids Say the Darndest Things						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/match-game/" title="Match Game">
+							Match Game						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/press-your-luck/" title="Press Your Luck">
+							Press Your Luck						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/shark-tank/" title="Shark Tank">
+							Shark Tank						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/to-tell-the-truth/" title="To Tell the Truth">
+							To Tell the Truth						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/videos-after-dark/" title="Videos After Dark">
+							Videos After Dark						</a>
+</li>
+</ul>
+</div>
+<div class="mega-wrapper specials">
+<h5 class="mega-cat-name">Specials</h5>
+<ul class="mega-link-list">
+<li>
+<a href="https://www.wdtvpress.com/abc/2019-american-music-awards/" title="2019 American Music Awards">
+							2019 American Music Awards						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/the-2019-espys/" title="The 2019 ESPYs">
+							The 2019 ESPYs						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/the-52nd-annual-cma-awards/" title="The 52nd Annual CMA Awards">
+							The 52nd Annual CMA Awards						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/abc-celebrates-pride-month/" title="ABC Celebrates Pride Month">
+							ABC Celebrates Pride Month						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/cma-music-festival-countrys-night-to-rock/" title="CMA Fest">
+							CMA Fest						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/highwire-live-in-times-square-with-nik-wallenda/" title="Highwire Live in Times Square with Nik Wallenda">
+							Highwire Live in Times Square with Nik Wallenda						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/the-last-defense/" title="The Last Defense">
+							The Last Defense						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/live-in-front-of-a-studio-audience-norman-lears-all-in-the-family-and-the-jeffersons/" title="Live in Front of a Studio Audience: Norman Lear’s ‘All in the Family’ and ‘The Jeffersons’">
+							Live in Front of a Studio Audience: Norman Lear’s ‘All in the Family’ and ‘The Jeffersons’						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/the-oscars/" title="The Oscars">
+							The Oscars						</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="mega-menu-column">
+<div class="mega-wrapper specials">
+<ul class="mega-link-list">
+<li>
+<a href="https://www.wdtvpress.com/abc/tgif/" title="TGIF on ABC">
+							TGIF on ABC						</a>
+</li>
+</ul>
+</div>
+<div class="mega-wrapper late-night">
+<h5 class="mega-cat-name">Late-Night</h5>
+<ul class="mega-link-list">
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/jimmykimmellive/" title="Jimmy Kimmel Live!">
+							Jimmy Kimmel Live!						</a>
+</li>
+</ul>
+</div>
+<div class="mega-wrapper daytime">
+<h5 class="mega-cat-name">Daytime</h5>
+<ul class="mega-link-list">
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/generalhospital/" title="General Hospital">
+							General Hospital						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/theview/" title="The View">
+							The View						</a>
+</li>
+</ul>
+</div>
+<div class="mega-wrapper abc-news">
+<h5 class="mega-cat-name">ABC News</h5>
+<ul class="mega-link-list">
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/1969/" title="1969">
+							1969						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/2020/" title="20/20">
+							20/20						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/americathismorning/" title="America This Morning">
+							America This Morning						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/goodmorningamerica/" title="Good Morning America">
+							Good Morning America						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/goodmorningamericaweekendedition/" title="Good Morning America: Weekend Edition">
+							Good Morning America: Weekend Edition						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/harry-and-meghan-the-royal-wedding/" title="Harry and Meghan: The Royal Wedding">
+							Harry and Meghan: The Royal Wedding						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/inaninstant/" title="In An Instant">
+							In An Instant						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/im-coming-home/" title="I’m Coming Home">
+							I’m Coming Home						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/nightline/" title="Nightline">
+							Nightline						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/the-show-must-go-on-the-queen-adam-lambert-story/" title="The Show Must Go On: The Queen + Adam Lambert Story">
+							The Show Must Go On: The Queen + Adam Lambert Story						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/strahanandsara/" title="Strahan &amp; Sara">
+							Strahan &amp; Sara						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/thisweekwithgeorgestephanopoulos/" title="This Week with George Stephanopoulos">
+							This Week with George Stephanopoulos						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/whatwouldyoudo/" title="What Would You Do?">
+							What Would You Do?						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/worldnewsnow/" title="World News Now">
+							World News Now						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/abcworldnewstonightsaturdayandsunday/" title="World News Tonight Saturday and Sunday">
+							World News Tonight Saturday and Sunday						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/abcworldnewswithdavidmuir/" title="World News Tonight with David Muir">
+							World News Tonight with David Muir						</a>
+</li>
+</ul>
+</div>
+<div class="mega-wrapper sports">
+<h5 class="mega-cat-name">Sports</h5>
+<ul class="mega-link-list">
+<li>
+<a href="https://www.wdtvpress.com/abc/shows/2019-nfl-draft/" title="2019 NFL Draft on ABC">
+							2019 NFL Draft on ABC						</a>
+</li>
+</ul>
+</div>
+<div class="mega-wrapper _uncategorized_">
+<h5 class="mega-cat-name">Uncategorized</h5>
+<ul class="mega-link-list">
+<li>
+<a href="https://www.wdtvpress.com/abc/the-2019-espys/" title="The 2019 ESPYs">
+							The 2019 ESPYs						</a>
+</li>
+<li>
+<a href="https://www.wdtvpress.com/abc/fyc2019/" title="ABC FYC Day 2019">
+							ABC FYC Day 2019						</a>
+</li>
+</ul>
+</div>
+</div>
+</div></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="https://www.wdtvpress.com/abc/videos/">New Videos</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837370"><a href="https://www.wdtvpress.com/abc/screeners/">Screeners</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-629739 current_page_item menu-item-779229"><a href="https://www.wdtvpress.com/abc/abc-executives/">ABC EXECUTIVES</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="https://www.wdtvpress.com/abc/bios/">Bios</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="https://www.wdtvpress.com/abc/releases/">Releases</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11003"><a href="https://www.wdtvpress.com/abc/contacts/">Contacts</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-776536"><a href="https://www.wdtvpress.com/abc/calendar/">Calendar</a></li>
+<li class="menu-item">
+<a class="link-download" href="#" target="_blank" title="THE DAILY BUNDLE">
+									THE DAILY BUNDLE									<svg viewbox="0 0 29.978 29.978" width="10" xmlns="http://www.w3.org/2000/svg">
+<path d="M25.462 19.105v6.848H4.515v-6.848H.489v8.861c0 1.111.9 2.012 2.016 2.012h24.967c1.115 0 2.016-.9 2.016-2.012v-8.861h-4.026zM14.62 18.426l-5.764-6.965s-.877-.828.074-.828h3.248V9.217.494S12.049 0 12.793 0h4.572c.536 0 .524.416.524.416V10.424h2.998c1.154 0 .285.867.285.867s-4.904 6.51-5.588 7.193c-.492.495-.964-.058-.964-.058z"></path>
+</svg>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<div class="site-content" id="content">
+<div class="content-area" id="primary">
+<main class="site-main" id="main" role="main">
+<article class="post-629739 page type-page status-publish hentry" id="post-629739">
+<header class="post-title-wrapper">
+<div class="container">
+<h1 class="post-title">ABC EXECUTIVES</h1> </div>
+<nav class="nav-categories active" id="nav-categories">
+<div class="container">
+<h3 class="categories-heading">Category</h3>
+<ul>
+<li>
+<a class="js-generic-filter category-filter active" data-category="all" data-data='{"action":"dap_network_executives_grouped_content","id":629739}' data-nohide="true" data-pcontent="generic" data-target="#executives">
+							All						</a>
+</li>
+<li>
+<a class="js-generic-filter category-filter" data-category="2" data-data='{"action":"dap_network_executives_grouped_content","id":629739}' data-nohide="true" data-pcontent="generic" data-target="#executives">
+								Executives							</a>
+</li>
+<li>
+<a class="js-generic-filter category-filter" data-category="9" data-data='{"action":"dap_network_executives_grouped_content","id":629739}' data-nohide="true" data-pcontent="generic" data-target="#executives">
+								Studios Executives							</a>
+</li>
+<li>
+<a class="js-generic-filter category-filter" data-category="8" data-data='{"action":"dap_network_executives_grouped_content","id":629739}' data-nohide="true" data-pcontent="generic" data-target="#executives">
+								News Executives							</a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="container">
+<div class="entry-content">
+<div id="executives">
+<h4 id="executives">
+				ABC -				Executives			</h4>
+<div class="items-line drawer-container clearfix">
+<div class="exec item-box js-item-box" data-id="7596  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="7596" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/12/3C/123C47EA-1375-04B6-90C5-B47F4E9A318A/DANAWALDEN_BIO_151811_Walden-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="7596" data-type="executive">
+<div class="exec-name">Dana Walden</div>
+<div class="exec-position">Chairman, Disney Television Studios and ABC Entertainment</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="668  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="668" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/23/99/23991C2D-8FB9-6FAD-28C9-114DF0E3395B/KAREYBURKE_ABC_BIO_137228_0251-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="668" data-type="executive">
+<div class="exec-name">Karey Burke</div>
+<div class="exec-position">President, ABC Entertainment</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="341  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="341" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/18/88/18889D61-B16C-1A06-8BE1-5589E4555F9F/JORIARANCIO_ABC_BIO_104060_3258-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="341" data-type="executive">
+<div class="exec-name">Jori Arancio</div>
+<div class="exec-position">Senior Vice President, Communications, ABC Entertainment &amp; ABC Studios</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="7610  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="7610" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/5E/67/5E674CB0-F2A0-C5BF-CE9F-4133E3A75F22/WILLIAMBURTON_BIO_124817_0831-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="7610" data-type="executive">
+<div class="exec-name">William Burton</div>
+<div class="exec-position">Senior Vice President, Daytime, Sports and Syndicated Development/Production, ABC Entertainment</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="5681  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="5681" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/9A/E4/9AE47ADA-D767-F0FD-4C18-8869BA3C40C8/REBECCADAUGHERTY_BIO_147232_0001pg-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="5681" data-type="executive">
+<div class="exec-name">Rebecca Daugherty</div>
+<div class="exec-position">Executive Vice President, ABC Marketing, ABC Entertainment &amp; ABC Studios</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="1084  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="1084" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/20/A6/20A654DC-69B7-B96D-07FB-75B123D6F413/AYODAVIS_BIO_152335_0927-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="1084" data-type="executive">
+<div class="exec-name">Ayo Davis</div>
+<div class="exec-position">Executive Vice President, Talent and Casting, ABC Entertainment and Disney+</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="7472  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="7472" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/C0/05/C00572ED-12AF-FEBF-06A8-F5E87A211DCB/PETERDICECCO_BIO_151674_DiCecco-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="7472" data-type="executive">
+<div class="exec-name">Peter DiCecco</div>
+<div class="exec-position">Senior Vice President, Business and Legal Affairs, Music, Disney|ABC Television Group</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="279  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="279" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/77/36/77363C6A-A505-CBC3-5C5D-A2A204291960/BIO_VICKI_DUMMER_111048_0416-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="279" data-type="executive">
+<div class="exec-name">Vicki Dummer</div>
+<div class="exec-position">Head of Current Series Programming, ABC Entertainment</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="5682  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="5682" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/A4/31/A4314252-1340-20FF-0509-CF8D419659F9/JILLGERSHMAN_BIO_147232_0002-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="5682" data-type="executive">
+<div class="exec-name">Jill Gershman</div>
+<div class="exec-position">Senior Vice President, Marketing Creative, ABC Entertainment</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="282  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="282" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/75/0D/750D703F-48E6-2A9C-4C75-B39BA4115EA4/ANDYKUBITZ_BIO_147380_8880r-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="282" data-type="executive">
+<div class="exec-name">Andy Kubitz</div>
+<div class="exec-position">Executive Vice President, Programming Strategy, ABC Entertainment</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="741  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="741" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/1D/31/1D31E0C1-F08A-2B5D-BC5C-FD45850A72D2/ROBERTMILLS_EXECUTIVEBIO_138784_0068cr-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="741" data-type="executive">
+<div class="exec-name">Robert Mills</div>
+<div class="exec-position">Senior Vice President, Alternative Series, Specials &amp; Late-Night Programming, ABC Entertainment</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="1170  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="1170" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/9E/C3/9EC3A8D5-88CB-E753-D985-1A7C86175D12/142907_7963-130x170.jpeg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="1170" data-type="executive">
+<div class="exec-name">Brian Morewitz</div>
+<div class="exec-position">Senior Vice President, Head of Drama Development, ABC Entertainment</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="7623  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="7623" data-type="executive" src="https://www.wdtvpress.com/abc/wp-content/uploads/sites/11/2018/07/cropped-ABC_Meatball_Header_CLR-2.png"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="7623" data-type="executive">
+<div class="exec-name">Shannon Ryan</div>
+<div class="exec-position">President, Marketing, ABC Entertainment and Disney Television Studios</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="7592  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="7592" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/56/27/562737A7-CB47-C237-350C-02F4B88C124D/ERINGOUGHWEHRENBERG_BIO_151622_2974-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="7592" data-type="executive">
+<div class="exec-name">Erin Wehrenberg</div>
+<div class="exec-position">Senior Vice President, Network Comedy, ABC Entertainment</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="5683  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="5683" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/A5/C8/A5C86252-691B-41F4-7CDD-DABEE50CB685/ERINWEIR_BIO__140015_1063-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="5683" data-type="executive">
+<div class="exec-name">Erin Weir</div>
+<div class="exec-position">Senior Vice President, Marketing Strategy, ABC Entertainment.</div>
+</div>
+</div>
+</div>
+<h4 id="studio-executives">
+				ABC -				Studios Executives			</h4>
+<div class="items-line drawer-container clearfix">
+<div class="exec item-box js-item-box" data-id="579  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="579" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/F6/FF/F6FFCA52-1CB4-BC59-83B7-287855620F38/HOWARDDAVINE_BIO_148118_2023r1-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="579" data-type="executive">
+<div class="exec-name">Howard M. Davine</div>
+<div class="exec-position">Executive Vice President, Business Operations, ABC Studios</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="609  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="609" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/6B/03/6B0345F4-47F4-BA05-970F-B79571DF154C/AMYHARTWICK_EXECBIO_132775_0282-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="609" data-type="executive">
+<div class="exec-name">Amy Hartwick</div>
+<div class="exec-position">Senior Vice President, Comedy Development, ABC Studios</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="7595  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="7595" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/D3/B4/D3B4AD6F-2F9F-52F0-C290-0CC856A62481/CRAIGHUNEGS_BIO_151646_5885c_Hunegs-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="7595" data-type="executive">
+<div class="exec-name">Craig Hunegs</div>
+<div class="exec-position">President, Disney Television Studios</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="1349  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="1349" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/9C/4A/9C4A43E6-8B89-50AF-81EC-81CD27B0BF3C/KELILEE_BIO_136386_001-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="1349" data-type="executive">
+<div class="exec-name">Keli Lee</div>
+<div class="exec-position">Managing Director, International Content, Platforms and Talent, ABC Studios International</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="283  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="283" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/4E/F0/4EF0E248-1BA7-6591-1EF3-4CC701097667/BIO_STEPHANIE_LEIFER_65931_60-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="283" data-type="executive">
+<div class="exec-name">Stephanie Leifer</div>
+<div class="exec-position">Senior Vice President, Current Programming, ABC Studios</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="7470  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="7470" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/36/6F/366F9597-A5AA-3657-A544-198FE61EC13B/PATRICKMAGURIE_BIO_150143_2655r1%5B2%5D-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="7470" data-type="executive">
+<div class="exec-name">Patrick Maguire</div>
+<div class="exec-position">Senior Vice President, Drama Development, ABC Studios</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="284  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="284" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/EF/CC/EFCC70D8-F58E-CC60-DC52-4D2598CE068F/BIO_PATRICKMORAN_133964_041-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="284" data-type="executive">
+<div class="exec-name">Patrick Moran</div>
+<div class="exec-position">President, ABC Studios</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="610  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="610" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/7C/73/7C735235-DE1B-03EC-6389-EBE1E980D3CD/DAWNSOLER_BIO_144008_3397-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="610" data-type="executive">
+<div class="exec-name">Dawn Solér</div>
+<div class="exec-position">Senior Vice President, TV Music, ABC Studios</div>
+</div>
+</div>
+</div>
+<h4 id="news-executives">
+				ABC -				News Executives			</h4>
+<div class="items-line drawer-container clearfix">
+<div class="exec item-box js-item-box" data-id="792  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="792" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/ED/90/ED906A43-A975-F471-FF7B-C193C48D6BA0/132037_3436R-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="792" data-type="executive">
+<div class="exec-name">Barbara Fedida</div>
+<div class="exec-position">Senior Vice President, Talent and Business, ABC News</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="288  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="288" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/18/C9/18C932FE-0BED-2FB2-4CC9-2EBC68706893/GOLDSTON_BIO_148190_11697RT-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="288" data-type="executive">
+<div class="exec-name">James Goldston</div>
+<div class="exec-position">President, ABC News</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="794  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="794" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/37/CC/37CC41EA-3CDA-E3F8-0575-9D24B650AF8F/STEVEJONES_BIO_Jones_Steve_2014-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="794" data-type="executive">
+<div class="exec-name">Steve Jones</div>
+<div class="exec-position">Vice President and General Manager, ABC News Radio</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="779  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="779" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/35/D1/35D193F1-D2BB-8445-DF90-2A9F7F6FAE22/ROBERTMURPHY_BIO_108547_010-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="779" data-type="executive">
+<div class="exec-name">Robert Murphy</div>
+<div class="exec-position">Vice President, Administration, ABC News</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="781  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="781" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/2E/87/2E87E08A-A18C-F249-1C3C-1BD3699CA968/148879_029-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="781" data-type="executive">
+<div class="exec-name">Colby Smith</div>
+<div class="exec-position">Vice President, ABC News Digital</div>
+</div>
+</div>
+<div class="exec item-box js-item-box" data-id="795  info-link-one-row" data-type="executive">
+<div class="exec-pic-wrapper">
+<img alt="" class="exec-pic js-tile-trigger" data-id="795" data-type="executive" src="https://www.wdtvpress.com/storage/uploads/09/6A/096A62E9-B273-19F3-B2F4-751CE0A4B901/KERRYSMITH_BIO_148490_053-130x170.jpg"/>
+</div>
+<div class="exec-text js-tile-trigger" data-id="795" data-type="executive">
+<div class="exec-name">Kerry Smith</div>
+<div class="exec-position">Senior Vice President, Editorial Quality, ABC News</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</main>
+</div>
+</div>
+<footer class="site-footer" id="colophon" role="contentinfo">
+<div class="footer-wrap">
+<div class="site-branding">
+<div class="site-title"><a href="https://www.wdtvpress.com/abc/" rel="home">ABC Press</a></div>
+</div>
+<div class="footer-content">
+<nav class="footer-navigation" id="footer-navigation" role="navigation">
+<div class="menu-footer-container"><ul class="menu" id="menu-footer"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3615" id="menu-item-3615"><a href="https://www.wdtvpress.com/abc/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5008" id="menu-item-5008"><a href="https://www.wdtvpress.com/abc/terms-of-use/">Terms of Use</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5009" id="menu-item-5009"><a href="http://disneyprivacycenter.com/">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5010" id="menu-item-5010"><a href="https://disneyprivacycenter.com/notice-to-california-residents/">Your California Privacy Rights</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5011" id="menu-item-5011"><a href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children’s Online Privacy Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5012" id="menu-item-5012"><a href="https://www.wdtvpress.com/abc/abc-press-help/">Help</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5013" id="menu-item-5013"><a href="https://www.wdtvpress.com/abc/mediabox/">Mediabox</a></li>
+</ul></div> </nav>
+<div class="site-social"><ul class="social-links"><li class="social-links-li facebook"><a href="https://www.facebook.com/ABCNetwork" target="_blank" title="ABC Press">Facebook</a></li><li class="social-links-li instagram"><a href="https://www.instagram.com/abcpublicity/" target="_blank" title="ABC Press">Instagram</a></li><li class="social-links-li twitter"><a href="https://twitter.com/ABC_Publicity" target="_blank" title="ABC Press">Twitter</a></li></ul></div>
+<div class="site-copyright">
+					© 2019 <span class="company">Disney | ABC Television.</span> <span class="allrights">All rights reserved.</span> </div>
+</div>
+</div>
+</footer>
+</div>
+<link href="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/css/dap-last.min.css?ver=20170325.1145" id="dap-style-last-css" media="all" rel="stylesheet" type="text/css"/>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/navigation.js?ver=1562105021" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/skip-link-focus-fix.js?ver=20130115" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.vendor/customscrollbar/jquery.mCustomScrollbar.js?ver=20141024" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-includes/js/underscore.min.js?ver=1.8.3" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var urls = {"home_url":"https:\/\/www.wdtvpress.com\/abc","stylesheet_url":"https:\/\/www.wdtvpress.com\/abc\/wp-content\/themes\/dap","template_url":"https:\/\/www.wdtvpress.com\/abc\/wp-content\/themes\/dap","ajax_url":"https:\/\/www.wdtvpress.com\/abc\/wp-admin\/admin-ajax.php"};
+var js_translations = {"loading_text":"Content Loading...","loading_images":"Loading images","loading_videos":"Loading videos","loading_assets":"Loading assets","load_more":"Load more"};
+/* ]]> */
+</script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/general.js?ver=20181019.1930" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.custom/copy-to-clipboard/clipboard.min.js?ver=20170929" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-includes/js/jquery/ui/tooltip.min.js?ver=1.11.4" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var DAPCopyToClipboardSettings = {"successMessage":"Content copied."};
+/* ]]> */
+</script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/lib.custom/copy-to-clipboard/dap-copy-to-clipboard.js?ver=20171025.0930" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var DAPSearcherSettings = {"ajaxurl":"https:\/\/www.wdtvpress.com\/abc\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script src="https://www.wdtvpress.com/abc/wp-content/themes/dap/assets/js/dap-searcher.js?ver=20170202" type="text/javascript"></script>
+<script src="https://www.wdtvpress.com/abc/wp-includes/js/wp-embed.min.js?ver=4.9.10" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var dapCartSettings = {"ajaxUrl":"https:\/\/www.wdtvpress.com\/abc\/wp-admin\/admin-ajax.php","sentToEmail":"The download link has been sent to . Please wait for the mediabox to be archived. The download will be triggered once the archive is ready... this might take a while, depending on how many items you added to mediabox.","notSentToEmail":"The download link has not been sent to . Please wait for the mediabox to be archived.","notLoggedIn":"You must be logged in to add this item to your cart.","notPermitted":"You are not permitted to add this item to your cart.","cartArchived":"The mediabox has been archived. Click to go to mediabox download page.","cartEmpty":"The cart is empty.","pleaseWaitForResponse":"Your archive is in progress... this might take a while, depending on how many items you added to mediabox.","pleaseWaitTitle":"PLEASE WAIT !","successTitle":"DONE !","errorTitle":"OOPS !","mediaboxUrl":"https:\/\/www.wdtvpress.com\/abc\/mediabox\/","mediaboxToArchiveUrl":"https:\/\/www.wdtvpress.com\/abc\/mediabox\/?request_archive=1","archiveTestUrl":"https:\/\/www.wdtvpress.com\/abc\/mediabox\/?verify_archive=1"};
+/* ]]> */
+</script>
+<script src="https://www.wdtvpress.com/abc/wp-content/mu-plugins/cf-dmd-dap-cart/assets/js/cart.min.js?ver=20180808.1537" type="text/javascript"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"14918396f1","applicationID":"77945421","transactionName":"ZFdaNUdRCEEDAhEMX10deQJBWQlcTQQdAFNGRlEXUENLVRAOEBVVVw==","queueTime":0,"applicationTime":292,"atts":"SBBZQw9LG08=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<a id="copy-to-clipboard-tooltip" title="Content copied."></a></body></html>

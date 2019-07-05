@@ -1,0 +1,518 @@
+<html class="has-js wf-utopiastd-i4-active wf-utopiastd-i7-active wf-utopiastd-n7-active wf-utopiastd-n4-active wf-active"><head><script async="" src="https://connect.facebook.net/en_US/sdk.js"></script><script async="" src="https://platform.twitter.com/widgets.js"></script><script async="" src="https://assets.documentcloud.org/note_embed/note_embed.js"></script>
+<!--
+  _____ _   _ ____  ____  _   _ _   _
+ | ____| \ | |  _ \|  _ \| | | | \ | |
+ |  _| |  \| | | | | |_) | | | |  \| |
+ | |___| |\  | |_| |  _ <| |_| | |\  |
+ |_____|_| \_|____/|_| \_\\___/|_| \_|
+
+-->
+<link href="https://d1n0c1ufntxbvh.cloudfront.net" rel="dns-prefetch"/>
+<link href="https://d63kb4t2ifcex.cloudfront.net" rel="dns-prefetch"/>
+<link href="https://use.typekit.net" rel="dns-prefetch"/>
+<link href="https://www.themarshallproject.org/favicon.ico?v=2" rel="icon"/>
+<meta content="IE=Edge;chrome=1" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://cdn.amplitude.com/libs/amplitude-5.2.2-min.gz.js" type="text/javascript"></script><script async="" src="https://cdn.segment.com/analytics.js/v1/f2sRk3N1xMextHXyltqrQLhSquk4Kq8B/analytics.min.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c751a71187","applicationID":"5052876","transactionName":"eltZFkQNWFpSExcWE1tYXgEZEUBXQwhbORZYU1I=","queueTime":3,"applicationTime":19,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport"/>
+<title>About | The Marshall Project</title>
+<meta content="The Marshall Project is a nonprofit news organization covering the U.S. criminal justice system." name="description"/>
+<link href="https://www.themarshallproject.org//assets/app/app-1b6261a4ccf2a7ef3d7202026ea2a69303c60e08b483c2e1d591c6d1c37ebf9f.css" media="all" rel="stylesheet"/>
+<script type="text/javascript">
+  var _sf_startpt=(new Date()).getTime();
+  var _sf_async_config = _sf_async_config || {};
+  /** CONFIGURATION START **/
+  _sf_async_config.uid = 58316;
+  _sf_async_config.domain = 'themarshallproject.org';
+  _sf_async_config.flickerControl = false;
+  _sf_async_config.useCanonical = true;
+  /** CONFIGURATION END **/
+</script>
+<script async="" src="//static.chartbeat.com/js/chartbeat_mab.js"></script>
+<script src="https://www.themarshallproject.org//assets/app/head-f6fcb7e7fb54fc9a5caf7a1ca4a53ce76c6e1d07a2a9db2a77f7c81c1e1297b6.js"></script>
+<link href="https://www.themarshallproject.org/about" rel="canonical"/>
+<link href="https://www.themarshallproject.org//assets/touch-icon-iphone-b762727f442edfaad00859926e7e8f0aa1df825b0921b52832b3d64366ebf365.png" rel="apple-touch-icon"/>
+<link href="https://www.themarshallproject.org//assets/touch-icon-ipad-5495d97cdd9d32e0bc6196c87a0312505b4b6d9a0fd51642166f9941c4bcb70d.png" rel="apple-touch-icon" sizes="76x76"/>
+<link href="https://www.themarshallproject.org//assets/touch-icon-iphone-retina-5cc0ac14b233c1d79bc417219bb11e76abe68f0442e6647633de304a21d683a9.png" rel="apple-touch-icon" sizes="120x120"/>
+<link href="https://www.themarshallproject.org//assets/touch-icon-ipad-retina-16d4244f81ee09f18bcf84080506806f2522c58b24f69e6f440aa8984ce5194b.png" rel="apple-touch-icon" sizes="152x152"/>
+<link href="https://www.themarshallproject.org/rss/recent.rss" rel="alternate" title="RSS" type="application/rss+xml"/>
+<script src="https://use.typekit.net/jqg7jec.js" type="text/javascript"></script>
+<style type="text/css">.tk-utopia-std{font-family:"utopia-std",sans-serif;}</style><style type="text/css">@font-face{font-family:tk-utopia-std-n4;src:url(https://use.typekit.net/af/9ff5df/0000000000000000000131a3/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/9ff5df/0000000000000000000131a3/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/9ff5df/0000000000000000000131a3/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:tk-utopia-std-i4;src:url(https://use.typekit.net/af/aeaf25/0000000000000000000131a2/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/aeaf25/0000000000000000000131a2/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/aeaf25/0000000000000000000131a2/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:tk-utopia-std-n7;src:url(https://use.typekit.net/af/6ebf8d/0000000000000000000131a0/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/6ebf8d/0000000000000000000131a0/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/6ebf8d/0000000000000000000131a0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:tk-utopia-std-i7;src:url(https://use.typekit.net/af/4bab48/0000000000000000000131a1/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/4bab48/0000000000000000000131a1/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/4bab48/0000000000000000000131a1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}</style><script type="text/javascript">try{Typekit.load({ async: true });}catch(e){}</script>
+<style>
+@font-face {
+  font-family: "PressuraLight";
+  src: url("/assets/GT-Pressura-Mono-Light-302e4f172aa71b2aa81f00790a68ff35cadfd12ed7e812f683718ae40ead7b6c.woff") format("woff"),
+  url("/assets/GT-Pressura-Mono-Light-2fc41e7ca5227700993d26afcd87f1e84961ef0ffc87cd4f8f0d6a6bb8321fd0.ttf")  format("truetype"),
+  url("/assets/GT-Pressura-Mono-Light-092e8f7ef068293bce1bde9e38a41396c909204a61e6257cb1c7329da517e64e.eot")  format("eot");
+}
+@font-face {
+  font-family: "GTPressuraMonoLight";
+  src: url("/assets/GT-Pressura-Mono-Light-302e4f172aa71b2aa81f00790a68ff35cadfd12ed7e812f683718ae40ead7b6c.woff") format("woff"),
+  url("/assets/GT-Pressura-Mono-Light-2fc41e7ca5227700993d26afcd87f1e84961ef0ffc87cd4f8f0d6a6bb8321fd0.ttf")  format("truetype"),
+  url("/assets/GT-Pressura-Mono-Light-092e8f7ef068293bce1bde9e38a41396c909204a61e6257cb1c7329da517e64e.eot")  format("eot");
+}
+@font-face {
+  font-family: "PressuraLightItalic";
+  src: url("/assets/GT-Pressura-Mono-Light-Italic-421ebb96d8d2deab01af849b30a607040fb78bdf06d3155235014730bb8b6897.woff") format("woff"),
+  url("/assets/GT-Pressura-Mono-Light-Italic-94d04ad1958b4249d4011570daa9003bce563320aa8b246226557eb500d79e44.ttf")  format("truetype"),
+  url("/assets/GT-Pressura-Mono-Light-Italic-a330c9827c7ad285d7957c64af97677222ab601648c1c9cad9a6b031c9ac7d97.eot")  format("eot");
+}
+@font-face {
+  font-family: "Pressura";
+  src: url("/assets/GT-Pressura-Mono-Regular-5879e653ec677e862e6a33ba04d10e6994f7435384054a02e95fc7f18e99dcc1.woff") format("woff"),
+  url("/assets/GT-Pressura-Mono-Regular-c2bce89de1d7379823e3aa302f0c451a46e1b32ac717e31cddf4f7007e047e77.ttf") format("truetype"),
+  url("/assets/GT-Pressura-Mono-Regular-183da9c40ab401f6e00ecb40ffbaacb53b4648a4c5bf24f4077a7c62032cb4f9.eot")  format("eot");
+}
+@font-face {
+  font-family: "GTPressuraMono";
+  src: url("/assets/GT-Pressura-Mono-Regular-5879e653ec677e862e6a33ba04d10e6994f7435384054a02e95fc7f18e99dcc1.woff") format("woff"),
+  url("/assets/GT-Pressura-Mono-Regular-c2bce89de1d7379823e3aa302f0c451a46e1b32ac717e31cddf4f7007e047e77.ttf") format("truetype"),
+  url("/assets/GT-Pressura-Mono-Regular-183da9c40ab401f6e00ecb40ffbaacb53b4648a4c5bf24f4077a7c62032cb4f9.eot")  format("eot");
+}
+@font-face {
+  font-family: "PressuraItalic";
+  src: url("/assets/GT-Pressura-Mono-Regular-Italic-1892a168a84718e57412313e9ce03eb6352af4ae6c67a8ac6ce41f984a350a43.woff") format("woff"),
+  url("/assets/GT-Pressura-Mono-Regular-Italic-e16c840e863c77d40988021e3e90dfb1319e057e5db07953596ece0c0fbe2f96.ttf") format("truetype"),
+  url("/assets/GT-Pressura-Mono-Regular-Italic-8138d27b7502996b25aac073a752ca5566296758913e59ade3ae4d8669052b34.eot")  format("eot");
+}
+@font-face {
+  font-family: "Miller";
+  src: url("/assets/51c73f94-824c-4ef7-afa2-8b9f1573c336-3-ab6df46a5fd4e7a58bd54dbc2bdb5a9988f45e8d1e675b7c0f609e342efce9ab.woff") format("woff"),
+  url("/assets/51c73f94-824c-4ef7-afa2-8b9f1573c336-1-4f6992c10e03104b13545029ce8fee388093001a68e6100c96ac1277d582f267.ttf") format("truetype"),
+  url("/assets/51c73f94-824c-4ef7-afa2-8b9f1573c336-2-150dc66658a4d09460be191baf26142d43ebfafca41a328974c87bfc8a1e491c.eot") format("eot");
+}
+@font-face {
+  font-family: "MillerBold";
+  src: url("/assets/e72a4c9d-ac2d-4477-9859-2fa8ecef8ee3-3-680b04abe52cd3af5d19173dac0921c912e34eccbb013b6fa538126af46a3bfe.woff") format("woff"),
+  url("/assets/e72a4c9d-ac2d-4477-9859-2fa8ecef8ee3-1-7234f752cd17dd0f503a2cb1ff3336d8c785ae1d44bb1c4b4fec0c5af6563292.ttf") format("truetype"),
+  url("/assets/e72a4c9d-ac2d-4477-9859-2fa8ecef8ee3-2-12efabc88f86cf1e36d0c59dd9415215564b334ad860778c26cdf73de0548031.eot") format("eot");
+}
+@font-face {
+  font-family: "MillerItalic";
+  src: url("/assets/3ef8a749-0910-4ca2-ba14-c4a1070680aa-3-1facc41b2e3f250867b112606fe4213c658a6e59b5b2aea9debc0dffae966c18.woff") format("woff"),
+  url("/assets/3ef8a749-0910-4ca2-ba14-c4a1070680aa-1-af396c05d064f262eee8b59e13776016e017417d5fcca67a65729a4d6fe425a5.ttf") format("truetype"),
+  url("/assets/3ef8a749-0910-4ca2-ba14-c4a1070680aa-2-ca5af5c02a9a9485d94e324287aeb46bc82d125b4c2f18034bf7f96b0ef3099f.eot") format("eot");
+}
+</style>
+<meta content="article" property="og:type"/>
+<meta content="The Marshall Project" property="og:site_name"/>
+<meta content="https://www.facebook.com/TheMarshallProject.org" property="article:publisher"/>
+<meta content="About" property="og:title"/>
+<meta content="The Marshall Project is a nonprofit news organization covering the U.S. criminal justice system." property="og:description"/>
+<meta content="https://s3.amazonaws.com/tmp-uploads-1/social/mp-fb-og.png" property="og:image"/>
+<script>
+window.endrun_config = {
+  post_id: "",
+  path: "/about",
+  template: "public#static_page",
+  lovestory_zero_endpoint: "https://lovestory.herokuapp.com/api/v2/boot",
+  lovestory_url: "https://d18glvfsbyiquw.cloudfront.net/i.gif",
+  lovestory_ws: "https://lovestory-ws.herokuapp.com",
+  lovestory_rt: "https://lovestory-rt.herokuapp.com/i.gif",
+  lovestory_bq: "https://secure-escarpment-2707.herokuapp.com",
+  lovestory_si: "https://d1ce9cuexq46rp.cloudfront.net",
+  env: "production"
+}
+window.stream_config = {
+  except_posts: []
+}
+window.$mcGoal = {'settings':{'uuid':'a92567c13cca06b470824aead','dc':'us3'}};
+
+
+window.TMPBootstrapData = {"csrfToken":"bxTIi+8uTbv3PfXvnYX61seUsCPiTFHiA+4ulmYbcX8vbmFi7u655RpJS1F6oRzf3+EUkCCFBz77JLkumuXy6A=="}
+</script><style type="text/css">@font-face{font-family:utopia-std;src:url(https://use.typekit.net/af/9ff5df/0000000000000000000131a3/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/9ff5df/0000000000000000000131a3/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/9ff5df/0000000000000000000131a3/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:utopia-std;src:url(https://use.typekit.net/af/aeaf25/0000000000000000000131a2/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/aeaf25/0000000000000000000131a2/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/aeaf25/0000000000000000000131a2/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:utopia-std;src:url(https://use.typekit.net/af/6ebf8d/0000000000000000000131a0/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/6ebf8d/0000000000000000000131a0/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/6ebf8d/0000000000000000000131a0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:utopia-std;src:url(https://use.typekit.net/af/4bab48/0000000000000000000131a1/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/4bab48/0000000000000000000131a1/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/4bab48/0000000000000000000131a1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}</style>
+</head>
+<body class="light-on-dark desktop">
+<header class="header-v2">
+<div class="header-menu-trigger" tabindex="0">
+<a class="header-menu-button" href="#" tabindex="-1"><span></span></a>
+</div>
+<div class="header-logo">
+<a href="/?ref=nav">
+<svg aria-labelledby="tmp-logo-title" aria-role="image" class="tmp-logo" viewbox="0 0 360 47.68" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+      .logo-fill {
+        fill: #fff;
+      }
+    </style>
+</defs>
+<title id="tmp-logo-title">The Marshall Project</title>
+<g>
+<g>
+<path class="logo-fill" d="M63.55,42.94l0-37.39H57.14V2.31H73.4V5.55H67l0,37.39Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M76.53,1.71h3.31V13.9c1.68-1.39,3.3-2.5,5.74-2.5h.18c3.48,0,5.22,1.91,5.22,5.34l0,26.18H87.7V17.38c0-1.92-1-2.84-2.91-2.84h-.06c-1.56,0-3,.58-4.87,2V42.93h-3.3Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M98.84,28.63v8c0,2.32,1.17,3.48,3.55,3.48h.69c2.32,0,3.54-1.17,3.54-3.49V33h3.25v3.48c0,4.47-2.32,6.8-6.79,6.8h-.81c-4.53,0-6.79-2.32-6.79-6.79l0-18.28c0-4.47,2.26-6.8,6.79-6.8h.81c4.47,0,6.8,2.32,6.8,6.79V28.63Zm0-3.19h7.66V18.06c0-2.32-1.16-3.54-3.48-3.53h-.64c-2.38,0-3.54,1.22-3.54,3.54Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M124.71,8.36l.19,26.41V42.9H121.6l0-40.63h5.11l6.7,34.48L140,2.25h5.05l0,40.63h-3.42V34.64l.1-26.29L135,42.89h-3.42Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M149.75,32.2c0-3.6,1.27-5.11,4.64-6.39l6.15-2.27V17.8c0-2.15-1.11-3.31-3.37-3.31h-.41c-2.26,0-3.42,1.17-3.42,3.31v4h-3.25V17.92c0-4.29,2.26-6.56,6.67-6.56h.46c4.41,0,6.62,2.26,6.62,6.55l0,25h-3.31V40.79c-1.62,1.33-3.25,2.44-5.63,2.44h-.12c-3.36,0-5.05-1.86-5.05-5.28Zm10.8,6V26.68l-4.76,1.8c-2,.82-2.67,1.75-2.67,3.78v5.05A2.4,2.4,0,0,0,155.85,40h.06C157.36,40,158.69,39.45,160.55,38.23Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M168.6,11.7h3.31v3.13c1.39-2.26,2.9-3.37,5.34-3.43v3.77a7.71,7.71,0,0,0-5.34,2.27l0,25.43h-3.31Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M190.43,17.6c0-2.09-1.05-3.19-3.31-3.19h-.82c-2.2,0-3.3,1.11-3.3,3.2v2.84A3.68,3.68,0,0,0,185,24l5.28,3.25c2.5,1.57,3.54,3.13,3.55,6.09v3.31c0,4.24-2.2,6.56-6.62,6.57h-.92c-4.42,0-6.57-2.32-6.57-6.5V32H183v5c0,2.09,1.11,3.13,3.31,3.13h1c2.21,0,3.25-1,3.25-3.13v-3.2a3.62,3.62,0,0,0-2-3.48L183.24,27c-2.44-1.57-3.49-3.08-3.49-6.1v-3c0-4.29,2.14-6.56,6.61-6.56h.81c4.42,0,6.51,2.26,6.51,6.49v4.53h-3.25Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M198.31,1.64h3.31V13.82c1.68-1.39,3.31-2.49,5.75-2.5h.17c3.48,0,5.22,1.92,5.23,5.34V42.84h-3.3l0-25.54c0-1.91-1-2.84-2.91-2.84h-.05c-1.57,0-3,.58-4.88,2l0,26.41h-3.31Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M217.08,32.16c0-3.6,1.28-5.11,4.64-6.39l6.15-2.27V17.76c0-2.15-1.11-3.31-3.37-3.31h-.41c-2.26,0-3.42,1.16-3.42,3.31v4h-3.25V17.88c0-4.3,2.26-6.56,6.67-6.57h.47c4.41,0,6.62,2.26,6.62,6.56v25h-3.3V40.74a8.53,8.53,0,0,1-5.63,2.45h-.11c-3.37,0-5-1.86-5.06-5.29Zm10.8,6V26.64l-4.75,1.8c-2,.81-2.67,1.74-2.67,3.77v5A2.41,2.41,0,0,0,223.18,40h.06C224.69,40,226,39.41,227.88,38.19Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M236,1.61h3.37l0,41.22h-3.37Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M244.52,1.61h3.36l0,41.22h-3.37Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M263.58,42.81H260.1l0-40.63h7.38c4.76,0,7.31,2.38,7.32,7.08V19.7c0,4.88-2.49,7.31-7.36,7.32h-3.84Zm3.75-37.39h-3.77v18.4h3.72c2.67,0,4-1.34,4-4V9.08C271.28,6.58,269.89,5.42,267.33,5.42Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M279,11.63h3.3v3.14c1.39-2.27,2.9-3.37,5.34-3.43V15.1a7.71,7.71,0,0,0-5.34,2.27V42.8H279Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M297,43.14c-4.53,0-6.79-2.32-6.8-6.79V18.06q0-6.78,6.79-6.79h1.22c4.47,0,6.73,2.26,6.74,6.78V36.34c0,4.47-2.26,6.79-6.73,6.8Zm0-28.74c-2.32,0-3.48,1.17-3.48,3.54V36.46c0,2.38,1.16,3.49,3.49,3.48h1.1c2.32,0,3.48-1.1,3.48-3.48V17.94c0-2.38-1.16-3.54-3.49-3.54Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M313.16,43.88c0,3.6-1.51,5.4-5.11,5.4h-.64V46.21h.17c1.63,0,2.21-.82,2.21-2.44l0-32.16h3.37Zm-3.45-40.4h3.48V7.89h-3.48Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M321.21,28.49v8c0,2.32,1.16,3.48,3.54,3.48h.7c2.32,0,3.54-1.17,3.54-3.49v-3.6h3.25v3.48c0,4.47-2.32,6.8-6.79,6.8h-.81c-4.53,0-6.79-2.32-6.8-6.79V18.05c0-4.47,2.26-6.8,6.79-6.8h.81c4.47,0,6.79,2.32,6.8,6.79V28.48Zm0-3.19h7.66V17.92c0-2.32-1.16-3.54-3.49-3.54h-.63c-2.38,0-3.54,1.23-3.54,3.55Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M347.62,17.91c0-2.38-1.16-3.54-3.49-3.54h-.81c-2.32,0-3.48,1.17-3.48,3.54V36.43c0,2.38,1.17,3.49,3.49,3.48h.87c2.32,0,3.48-1.1,3.48-3.48V30.51H351v5.81c0,4.47-2.26,6.79-6.73,6.8h-1c-4.53,0-6.79-2.32-6.79-6.79l0-18.29q0-6.78,6.79-6.79h1c4.47,0,6.68,2.26,6.68,6.67v4.93h-3.31Z" transform="translate(-3.29 -1.6)"></path>
+<path class="logo-fill" d="M359.71,42.75h-3.37l0-28.1h-2.26V11.58h2.26V6.35h3.37v5.23h3.6v3.08h-3.6Z" transform="translate(-3.29 -1.6)"></path>
+</g>
+<g>
+<polygon class="logo-fill" points="10.86 11.49 10.86 41.34 13.57 41.34 13.57 14.2 10.86 11.49"></polygon>
+<polygon class="logo-fill" points="0 0.63 0 41.34 2.71 41.34 2.71 3.35 0 0.63"></polygon>
+<polygon class="logo-fill" points="5.43 6.06 5.43 41.34 8.14 41.34 8.14 8.77 5.43 6.06"></polygon>
+<polygon class="logo-fill" points="16.28 16.91 16.28 41.34 19 41.34 19 19.63 16.28 16.91"></polygon>
+<polygon class="logo-fill" points="27.14 14.2 27.14 41.34 29.85 41.34 29.85 11.49 27.14 14.2"></polygon>
+<polygon class="logo-fill" points="37.99 3.35 37.99 41.34 40.71 41.34 40.71 0.63 37.99 3.35"></polygon>
+<polygon class="logo-fill" points="32.56 8.77 32.56 41.34 35.28 41.34 35.28 6.06 32.56 8.77"></polygon>
+<polygon class="logo-fill" points="21.71 19.63 21.71 41.34 24.42 41.34 24.42 16.91 21.71 19.63"></polygon>
+</g>
+</g>
+</svg>
+</a>
+<div class="header-tagline">
+      Nonprofit journalism about criminal justice
+    </div>
+</div>
+<div class="header-items">
+<a href="/search?via=navright">Search</a>
+<a href="/about?via=navright">About</a>
+<a class="header-donate-button" href="/donate?via=navright">Donate</a>
+<a class="header-link" href="https://bit.ly/fbmp-topnav">
+<svg height="20px" id="Layer_1" style="enable-background:new 0 0 14 14;" version="1.1" viewbox="0 0 14 14" width="20px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"><g><path d="M5.17,10.46C5.168,9.649,5.159,8.838,5.171,8.027C5.18,7.459,5.128,6.949,4.375,6.988c-0.948,0.048-0.96-0.564-0.956-1.257c0.003-0.641,0.043-1.161,0.894-1.13c1.183,0.044,0.806-0.886,0.862-1.494c0.228-2.444,0.965-3.124,3.433-3.097c0.685,0.008,1.424-0.141,1.391,0.985c-0.024,0.821,0.007,1.492-1.133,1.415c-0.83-0.056-1.023,0.506-1.032,1.256C7.824,4.48,8.234,4.638,8.917,4.616c0.513-0.017,1.165-0.064,0.975,0.766C9.756,5.98,10.086,6.979,9,6.948C7.887,6.916,7.813,7.51,7.835,8.362c0.038,1.505-0.031,3.014,0.021,4.518c0.036,1.045-0.588,1.074-1.343,1.07c-0.743-0.003-1.415-0.002-1.351-1.058C5.212,12.084,5.173,11.271,5.17,10.46z" style="fill:#FFFFFF;"></path></g></svg>
+</a>
+<a class="header-link" href="https://bit.ly/twittermp-topnav">
+<svg enable-background="new 0 0 21 21" height="20px" id="Layer_1" version="1.1" viewbox="0 0 21 21" width="20px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"><g><path d="M1.2,16.9c1.9-0.2,3.4-0.4,5.1-1.8c-3.2-0.2-3.3-3.2-3.9-4.9C1.7,8.4,0.7,5.8,2,3.3
+    c1.9,1.8,3.9,3.2,6.2,3.8c1.3,0.3,2,0.4,2.3-1.4c0.4-2.7,3-3.9,5.5-2.9c0.7,0.3,1.3,0.7,2.3,0.7c1.1,0,1.8,1.2,1,2.1
+    c-0.8,0.9-0.9,1.9-1,2.9C17.4,16.6,8.5,21.2,1.2,16.9z" fill="#111111"></path></g></svg>
+</a>
+</div>
+</header>
+<div class="menu-wrapper menu-hidden">
+<div class="mobile-only menu-section explanation-section">
+    A nonprofit news organization covering the U.S. criminal justice system
+  </div>
+<div class="menu-section search-section menu-search-js">
+<div class="menu-section-heading">
+<span class="search-text">Search</span>
+<input class="menu-search-input" type="text"/>
+<div aria-role="button" class="menu-search-button" tabindex="0">
+<div class="magnifying-glass-icon">
+<svg style="enable-background:new 0 0 18.1 18.1;" version="1.1" viewbox="0 0 18.1 18.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<line class="magnifying-glass-handle" x1="1.8" x2="6.3" y1="16.2" y2="11.6"></line>
+<circle class="magnifying-glass-lens" cx="10" cy="8" r="5.3"></circle>
+</g>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<div class="menu-section projects-section">
+<div class="menu-section-left">
+<div class="menu-section-heading">
+        Projects
+      </div>
+</div>
+<div class="menu-section-right">
+<div class="menu-item">
+<a class="menu-item-link" href="/tag/life-inside">Life Inside</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/2019/03/28/introducing-news-inside">News Inside</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/next-to-die">The Next to Die</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/records">The Record</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/southside">Southside</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/we-are-witnesses/immigration">We Are Witnesses</a>
+</div>
+</div>
+</div>
+<div class="menu-section topics-section">
+<div class="menu-section-left">
+<div class="menu-section-heading">
+        Topics
+      </div>
+</div>
+<div class="menu-section-right">
+<div class="menu-item">
+<a class="menu-item-link" href="/the-california-experiment">The California Experiment</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/records/4-death-penalty">Death Penalty</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/records/31-immigration">Immigration</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/records/2-juvenile-justice">Juvenile Justice</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/records/42-mental-health">Mental Health</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/records/48-policing">Policing</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/records/611-politics-of-criminal-justice">Politics and Reform</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/records/411-race">Race</a>
+</div>
+</div>
+</div>
+<div class="menu-section about-section">
+<div class="menu-section-left">
+<div class="menu-section-heading">
+        About
+      </div>
+</div>
+<div class="menu-section-right">
+<div class="menu-item menu-links">
+<a class="menu-item-link" href="/about">About Us</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/tag/news-and-awards">News &amp; Awards</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/people">People</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/funders">Supporters</a>
+</div>
+<div class="menu-item">
+<a class="menu-item-link" href="/jobs">Jobs</a>
+</div>
+</div>
+</div>
+<div class="menu-section menu-section-single">
+<div class="menu-section-heading">
+<a class="menu-item-link" href="/subscribe">Newsletters</a>
+</div>
+</div>
+<div class="menu-section menu-section-single">
+<div class="menu-section-heading">
+<a class="menu-item-link" href="/events">Events</a>
+</div>
+</div>
+<div class="menu-section menu-section-single">
+<div class="menu-section-heading">
+<a class="menu-item-link menu-item-red" href="/donate?via=menu">Donate</a>
+</div>
+</div>
+<div class="menu-section feedback-section">
+    Feedback?
+    <svg class="svg-arrow" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><polyline class="arrow-line" points="5.69 0 11.75 6 5.69 12"></polyline><line class="arrow-line" x1="11.75" x2="-0.25" y1="6.03" y2="6.03"></line></svg>
+<a class="feedback-link" href="mailto:support@themarshallproject.org">support@themarshallproject.org</a>
+</div>
+</div>
+<div class="container page-margin static-page">
+<article>
+<aside class="col4">
+<div class="inner">
+<div class="static-logo">
+<img alt="Static m" src="https://www.themarshallproject.org//assets/static-m-2b0df77cb971feea470391f0403d68539456dee0ff3b716fa939a500592ece74.svg"/>
+</div>
+<h1 class="static-title">
+          About
+        </h1>
+<div class="static-desc">
+<style>
+
+.thurgood-inline-container {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #353535;
+    max-width: 400px;
+    height: 110px;
+    position: relative;
+}
+
+
+.thurgood-inline-container span {
+        webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        -webkit-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+}
+
+
+.thurgood-inline-photo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 65%;
+}
+.thurgood-inline-photo img {
+    vertical-align: bottom;
+}
+
+.thurgood-inline-head {
+    font-family: Pressura;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.1em;
+    color: #fff !important;
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    width: 100px;
+}
+
+</style>
+<a class="thurgood-inline-container" href="https://www.themarshallproject.org/about/thurgood-marshall?via=about">
+<div class="thurgood-inline-head">
+      Why The <span style="color: #ff0b3a;">Marshall</span> Project?
+    </div>
+<div class="thurgood-inline-photo">
+<img src="https://d1wi625l5vebzv.cloudfront.net/assets/thurgood-menu.png" width="100%"/>
+</div>
+</a>
+<div class="static-anchor">
+<a href="#mission">Mission Statement</a>
+<a href="https://www.themarshallproject.org/2019/01/03/the-marshall-project-diversity-and-inclusion">Diversity Report</a>
+<a href="/about/thurgood-marshall">Why The “Marshall” Project?</a>
+<a href="/about/our-founder">A Letter from Our Founder</a>
+<a href="/about/our-editor">A Letter from Our Editor</a>
+<a href="#contact">Contact Us</a>
+<a href="/about/reports">Reports</a>
+<a href="/about/code-of-ethics">Code of Ethics</a>
+<a href="/about/privacy">Privacy Policy</a>
+</div>
+</div>
+<div class="share-tools-container">
+</div>
+</div>
+</aside>
+<div class="static-content">
+<div class="static-anchor-shim">
+<a class="static-anchor-land" name="mission"></a>
+</div>
+<h1>Mission Statement</h1>
+<p>The Marshall Project is a nonpartisan, nonprofit news organization that seeks to create and sustain a sense of national urgency about the U.S. criminal justice system.  We achieve this through award-winning journalism, partnerships with other news outlets and public forums. In all of our work we strive to educate and enlarge the audience of people who care about the state of criminal justice.</p>
+<iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="422" src="https://www.youtube.com/embed/8TmHWIZFDZc?rel=0&amp;modestbranding=1" style="margin-top: 50px" width="100%"></iframe>
+<h1>Diversity and The Marshall Project</h1>
+<p>The Marshall Project is committed to building and maintaining a diverse workforce, and not only because our name is a tribute to a hero of equal justice. We best serve our audience by bringing a variety of experiences and vantage points to bear on the issues we cover. We regard diversity as integral to our overall responsibility, which is to produce the best possible journalism about the U.S. criminal justice system, with its disproportionate impacts on communities of color. Read our most recent <a href="https://www.themarshallproject.org/2019/01/03/the-marshall-project-diversity-and-inclusion">annual diversity report</a>.</p>
+<div class="static-anchor-shim">
+<a class="static-anchor-land" name="contact"></a>
+</div>
+<h1>Contact Us</h1>
+<p>
+</p><h3>General inquiries</h3>
+<p>Inquiries can be addressed to <a href="mailto:info@themarshallproject.org">info@themarshallproject.org</a> or mailed to:<br/><br/>
+The Marshall Project<br/>
+156 West 56th Street, Suite 701<br/>
+New York, NY 10019<br/>
+212-803-5200<br/>
+</p>
+<div class="static-anchor-shim">
+<a class="static-anchor-land" name="media"></a>
+</div>
+<p>
+</p><h3>Story Ideas and Tips</h3>
+<p>Read this quick bit of advice on <a href="https://www.themarshallproject.org/2017/02/05/how-to-leak-stories-to-the-marshall-project">how to leak information on potential stories to us, safely</a>.</p>
+<p>To pitch a story idea to our editors, please email: <a href="mailto:pitches@themarshallproject.org"> pitches@themarshallproject.org</a>.
+</p>
+<p>To pitch opinions, essays, analysis or other commentary pieces, please email: <a href="mailto:commentary@themarshallproject.org">commentary@themarshallproject.org</a>.
+</p>
+<p>
+</p><h3>Media Inquiries</h3>
+<p>All media and interview requests should contact Ruth Baldwin, director of communications at <a href="mailto:rbaldwin@themarshallproject.org">rbaldwin@themarshallproject.org</a> or 212-803-5270.
+</p>
+<p>
+</p><h3>Contact a staffer</h3>
+<p>Staff members can be reached <a href="/people">here.</a>
+</p>
+</div>
+</article>
+</div>
+<div class="footer">
+<div class="footer-content">
+<div class="footer-item">
+<a href="/about">About</a>
+</div>
+<div class="footer-item">
+<a href="/people">People</a>
+</div>
+<div class="footer-item">
+<a href="/jobs">Jobs</a>
+</div>
+<div class="footer-item">
+<a href="/sitemap">Sitemap</a>
+</div>
+<div class="footer-item">
+<a href="/funders">Funders</a>
+</div>
+</div>
+<div class="footer-logo">
+<a href="/">
+<svg enable-background="new 0 0 223.2 223.2" height="20px" id="Layer_1" version="1.1" viewbox="0 0 223.2 223.2" width="20px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"><g><g><polygon fill="#1A1A1A" points="3.6,3.6 3.6,219.6 34.5,219.6 34.5,34.5    "></polygon><polygon fill="#1A1A1A" points="65.3,65.3 65.3,219.6 96.2,219.6 96.2,96.2    "></polygon><polygon fill="#1A1A1A" points="188.7,34.5 188.7,219.6 219.6,219.6 219.6,3.6     "></polygon><polygon fill="#1A1A1A" points="127,96.2 127,219.6 157.9,219.6 157.9,65.3    "></polygon></g></g></svg>
+</a>
+</div>
+</div>
+<div class="lights-out" style="display: inline; z-index: -999;"></div>
+<script src="https://www.themarshallproject.org//assets/app/app-16233b145c14a6747f8694086631bc2ef56911dfb57c00de27e22fa84fadd7ea.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('set', 'forceSSL', true);
+    ga('create', "UA-47849981-1", 'auto');
+    var ga_pageview = {};
+    
+    ga('send', 'pageview', ga_pageview);
+  </script>
+<script type="text/javascript">
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+      analytics.load("f2sRk3N1xMextHXyltqrQLhSquk4Kq8B");
+    }}();
+  </script>
+<script type="text/javascript">
+  var _sf_async_config = _sf_async_config || {};
+
+  
+
+  (function() {
+    function loadChartbeat() {
+      window._sf_endpt = (new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+      document.body.appendChild(e);
+    }
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+      loadChartbeat : function() {
+        oldonload();
+        loadChartbeat();
+      };
+  })();
+</script>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({ appId: 260005144189129, xfbml: true, version: 'v2.10' });
+};
+
+$(window).load(function() {
+  window.requestAnimationFrame(function() {
+    $.getScript("https://assets.documentcloud.org/note_embed/note_embed.js");
+    $.getScript("https://platform.twitter.com/widgets.js");
+    $.getScript("https://connect.facebook.net/en_US/sdk.js");
+  });
+});
+</script>
+<script language="javascript" src="//static.chartbeat.com/js/chartbeat.js" type="text/javascript"></script></body></html>

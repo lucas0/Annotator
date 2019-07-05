@@ -16,24 +16,28 @@
         }
         .base{
         	height: 5%;
+            text-align: center;
         }
         .container-head {
         	height: 5%;
 			padding-left: 0px;
 			padding-right: 0px;
+            min-height: 60px;
 		}
 		.container-main {
 			height: 90%;
 			min-height: 800px;
 		}
 		.row-an {
-			height:43%;
+			height:50%;
+            min-height: 30px;
 			overflow: hidden;
 			margin: 0;
 			padding: 0;
 		}
 		.row-head {
-			height:57%;
+			height:50%;
+            min-height: 40px;
 			overflow: hidden;
 			margin: 0;
 			padding: 0;
@@ -69,10 +73,16 @@
 			border: 2px solid #f056ff;
 			border-radius:3px;
 		}
+        .signup_form{
+            margin-left: 20%;
+        }
+        .login_form{
+            margin-left: 40%;
+        }
 	</style>
 </head>
 <body>
-	<span class="base">
+	<div class="base">
 		<h4 style=" margin: 0; padding: 2;">Annotator</h4>
 		<a href="{% url 'home' %}">Home</a> /
 		{% if user.is_authenticated %}
@@ -83,7 +93,7 @@
 		<a href="{% url 'login' %}">Log In</a> /
 		{% endif %}
 		<hr style=" margin: 0; padding: 2;">
-	</span>
+	</div>
 		<script>
 		function aux_func(_this){
 			let link = document.getElementById("oLink").href;
@@ -91,6 +101,7 @@
 			elmnt.scrollIntoView({ behavior: "smooth", block: "center"  });
 		}
 		</script>
+    <br>
 		{% block content %}
 		{% endblock %}
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">

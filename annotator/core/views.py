@@ -214,7 +214,8 @@ def home(request):
 
 		# Highlight link with scr == source_url
 		if a_html:
-			a_html = highlight_link(a_html, o_url)
+			if not (type(a_html) == str):
+				a_html = highlight_link(a_html, o_url)
 		
 		#Save claim and origin links and list of origins in session
 		session['claim'] = a_url

@@ -144,7 +144,7 @@ def get_least_annotated_page(name,aPage=None):
     # If page has a broken link, get another page (instead of looping over all sources)
     if not (os.path.exists(o_page_path) and os.path.exists(a_page_path)):
             save_annotation(a_page, o_page, "3", name)
-            return get_least_annotated_page(a_page, name)
+            return get_least_annotated_page(name, a_page)
 
     f = codecs.open(a_page_path, encoding='utf-8')
     a_html = bs(f.read(),"lxml")
@@ -152,8 +152,8 @@ def get_least_annotated_page(name,aPage=None):
     f = codecs.open(o_page_path, encoding='utf-8')
     o_html = bs(f.read(),"lxml")
 
-    filenames = [f for f in listdir(path_of_both)]
-    a_total = len(filenames) - 1
+    #filenames = [f for f in listdir(path_of_both)]
+    a_total = len(ast.literal_eval(entry.source_list))
     a_done  = sum(entry.page in s for s in done_by_annotator)
     print("WORKS")
 
@@ -265,7 +265,7 @@ def change_origin(request):
 		print(request.body)
 		print("")
 		
-		received = json.loads(request.body)
+		received = json.loads(request.body.decode())
 		
 		print("")
 		print(received)

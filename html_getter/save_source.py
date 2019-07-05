@@ -240,13 +240,13 @@ for idx, e in samples.iterrows():
                 if str(elem) != "<None></None>":
                     if elem.has_attr('src'):
                         src = elem['src']
-                        if not src.startswith("http"):
+                        if not ( src.startswith("http") or src.startswith("//")):
                             list_for_this_elem = without_domain.split("/")
                             src.lstrip("/")
                             elem['src'] = get_correct_path(list_for_this_elem, domain, src) + src
                     if elem.has_attr('href'):
                         src = elem['href']
-                        if not src.startswith("http"):
+                        if not ( src.startswith("http") or src.startswith("//")):
                             list_for_this_elem = without_domain.split("/")
                             src.lstrip("/")
                             elem['href'] = get_correct_path(list_for_this_elem, domain, src) + src

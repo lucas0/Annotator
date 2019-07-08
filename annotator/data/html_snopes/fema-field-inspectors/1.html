@@ -1,0 +1,424 @@
+<html class="js"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>TX VOAD Membership | CommunityOS</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="https://txvoad.communityos.org//cms/themes/tapestry/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script><script src="https://txvoad.communityos.org//zf/public/js/fallbacks/jquery-fallback.js" type="text/javascript"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/2.3.5/highcharts.min.js" type="text/javascript"></script><script src="https://txvoad.communityos.org//zf/public/js/fallbacks/highcharts-fallback.js" type="text/javascript"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/2.3.5/adapters/prototype-adapter.min.js" type="text/javascript"></script><script src="https://txvoad.communityos.org//zf/public/js/fallbacks/highcharts-fallback.js" type="text/javascript"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/2.3.5/modules/exporting.min.js" type="text/javascript"></script><script src="https://txvoad.communityos.org//zf/public/js/fallbacks/highcharts-fallback.js" type="text/javascript"></script><script src="//ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js" type="text/javascript"></script><script src="https://txvoad.communityos.org//zf/public/js/fallbacks/jquery-datatables-fallback.js" type="text/javascript"></script><script src="https://txvoad.communityos.org//zf/public/js/jquery-plugins/jquery.dataTables.min.js"></script><link href="https://txvoad.communityos.org//zf/public/js/jquery-ui/css/tapestry/jquery-ui-1.8.17.custom.css" media="all" rel="stylesheet" type="text/css"/><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js" type="text/javascript"></script><script src="https://txvoad.communityos.org//zf/public/js/fallbacks/jqueryui-fallback.js" type="text/javascript"></script><link href="https://txvoad.communityos.org//cms/modules/node/node.css?y" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/modules/system/defaults.css?y" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/modules/system/system.css?y" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/modules/system/system-menus.css?y" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/modules/user/user.css?y" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/sites/all/modules/ckeditor/ckeditor.css?y" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/sites/all/modules/nice_menus/nice_menus.css?y" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/sites/all/modules/nice_menus/nice_menus_default.css?y" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/sites/all/modules/simplenews/simplenews.css?y" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/modules/forum/forum.css?y" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/themes/tapestry/style.css?y" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/themes/tapestry/nice_menus_override.css" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//include/tap_default/styles/minicalendar.css" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//include/tap_default/styles/minicalendar_custom.css" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/themes/tapestry/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://txvoad.communityos.org//cms/themes/tapestry/styles/1/color.css" media="all" rel="stylesheet" type="text/css"/>
+<script src="https://txvoad.communityos.org//include/js/yui/yahoo-dom-event.js" type="text/javascript"></script>
+<script src="https://txvoad.communityos.org//include/js/yui/calendar-min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function blurPWField() {
+      document.authForm.password.blur()
+    }
+    function submitOnReturn(keypressed) {
+      var charCode  = (navigator.appName == "Netscape") ? keypressed.which : keypressed.keyCode
+      if (charCode==13) {
+        blurPWField()
+        document.authForm.Login_js.value='Login'
+        document.authForm.submit()
+      }
+    }
+</script>
+<script src="https://txvoad.communityos.org//cms/misc/drupal.js?y" type="text/javascript"></script>
+<script src="https://txvoad.communityos.org//cms/sites/all/modules/nice_menus/superfish/js/superfish.js?y" type="text/javascript"></script>
+<script src="https://txvoad.communityos.org//cms/sites/all/modules/nice_menus/superfish/js/jquery.bgiframe.min.js?y" type="text/javascript"></script>
+<script src="https://txvoad.communityos.org//cms/sites/all/modules/nice_menus/superfish/js/jquery.hoverIntent.minified.js?y" type="text/javascript"></script>
+<script src="https://txvoad.communityos.org//cms/sites/all/modules/nice_menus/nice_menus.js?y" type="text/javascript"></script>
+<script type="text/javascript">
+<![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/cms/", "nice_menus_options": { "delay": 800, "speed": 1 } });
+//--><!]]>
+</script>
+</head>
+<body class="not-front not-logged-in page-node node-type-page one-sidebar sidebar-right sidebar-right">
+<div id="page">
+<div id="header">
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+<td height="77" valign="top">
+<div id="header_left"> </div>
+<a href="/zf/sysadmin">
+</a><a href="/zf/sysadmin"><img alt="Home" class="logo" id="logo" src="https://txvoad.communityos.org//posting_area/logos/p461/logo.png"/></a>
+</td>
+<td valign="top" width="30">
+<div id="header_transition"> </div></td>
+<td align="right" valign="top" width="370">
+<div id="header_right">
+<form action="https://txvoad.communityos.org/zf/auth/login" id="login_form" method="post" name="authForm" onsubmit="jQuery('input[type=\'submit\']').prop('disabled',true);">
+<input name="goto" type="hidden" value="%2Fcms%2Fnode%2F104"/>
+<table border="0" cellpadding="0"><tbody><tr><td nowrap="">
+<div id="login_form_layout">
+Agency and Staff Login:
+<input alt="user name" class="username_input" maxlength="255" name="username" size="12" type="TEXT" value=""/>
+Password:<input alt="password" class="password_input" maxlength="255" name="password" onkeypress="submitOnReturn(event)" size="12" type="PASSWORD" value=""/>
+<input name="Login_js" type="hidden" value="Login"/></div></td><td>
+<div id="login_arrow_layout"><input alt="submit login" class="login_arrow" name="login" src="https://txvoad.communityos.org//cms/themes/tapestry/styles/1/arrow_button.png" type="image" value=""/></div>
+</td></tr></tbody></table>
+</form>
+</div>
+</td>
+</tr></tbody></table>
+</div>
+<div id="logo-title">
+<div id="name-and-slogan">
+</div>
+</div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td class="nav1_left" width="5">
+<img alt="" src="https://txvoad.communityos.org//images/shim.gif"/>
+</td>
+<td class="nav1_middle">
+<div class="menu withprimary" id="nav1">
+<div id="primary">
+<ul class="nice-menu nice-menu-down sf-js-enabled" id="nice-menu-0"><li class="menu-222 menu-path-front first odd"><a href="/cms/" title="Welcome to the Texas VOAD">Home</a></li>
+<li class="menu-225 menu-path-node-102 even"><a href="/cms/contact_tx" title="Contact TX VOAD">Contact</a></li>
+<li class="menu-227 menu-path-node-104 active-trail odd"><a class="active" href="/cms/node/104" title="TX VOAD Membership">Membership</a></li>
+<li class="menu-224 menu-path-node-101 even"><a href="/cms/leadership" title="Leadership">Leadership</a></li>
+<li class="menu-228 menuparent menu-path-node-105 odd last"><a href="/cms/resources" title="Resources">Resources</a><ul style="display: none; visibility: hidden;"><li class="menu-244 menu-path-https--voadcommunityosorg-disaster-volunteer-registration first odd last"><a href="https://voad.communityos.org/disaster-volunteer-registration" title="">Volunteer Registration</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</td>
+<td class="nav1_right" width="5">
+<img alt="" src="https://txvoad.communityos.org//images/shim.gif"/>
+</td>
+</tr>
+</tbody></table>
+<div id="header-region">
+</div>
+<div class="round_layout">
+<table border="0" cellpadding="0" cellspacing="0" id="round_layout_table" width="100%">
+<tbody><tr>
+<td height="4" width="4"><img alt="" src="https://txvoad.communityos.org//cms/themes/tapestry/styles/1/round_top_left.gif"/></td>
+<td background="/cms/themes/tapestry/styles/1/round_top_middle.gif" height="4"><img alt="" src="https://txvoad.communityos.org//images/shim.gif"/></td>
+<td><img alt="" src="https://txvoad.communityos.org//cms/themes/tapestry/styles/1/round_top_right.gif"/></td>
+</tr>
+<tr>
+<td background="/cms/themes/tapestry/styles/1/round_side_left.gif" height="4"><img alt="" src="https://txvoad.communityos.org//images/shim.gif"/></td>
+<td valign="top">
+<div class="round_interior"> <div class="clear-block" id="container">
+<div class="column" id="main">
+<div id="squeeze">
+<h1 class="title" id="title_h1">TX VOAD Membership</h1> <div class="" id="node-104">
+<span class="submitted">Posted July 10th, 2017 by Anonymous</span>
+<div class="content">
+<table border="0" cellpadding="10" cellspacing="10" width="800">
+<tbody>
+<tr>
+<td align="left" valign="top" width="266">
+<strong><u>Partner Members</u></strong></td>
+</tr>
+<tr>
+<td align="left" valign="top" width="266">
+<p><span style="font-size:12px;"><span style="font-family:verdana,geneva,sans-serif;"><a href="http://txsda.org">Adventist Community Services</a></span></span></p>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.redcross.org">American Red Cross</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.us.tzuchi.org">Buddhist Tzu Chi Foundation</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.catholiccharitiesusa.org">Catholic Charities</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.convoyofhope.org">Convoy of Hope</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://crmtexas.org/">Crisis Response Ministry</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.feedingtexas.org">Feeding Texas</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://hopeaacr.org/">Hope Animal Assisted Crisis Response</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.irusa.org">Islamic Relief</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.lsss.org">Upbring Disaster Response</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://mds.mennonite.net">Mennonite Disaster Services</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.disasterresponseoktx.com">Presbyterian Church in America Disaster Response</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.pcusa.org/pda">Presbyterian Disaster Assistance</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.reachoutamerica.org/">Reach Out America</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.savethechildren.org">Save the Children</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.svdpusa.org">Society of St. Vincent de Paul</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.sbtexas.com/dr">Southern Baptist of Texas Convention Disaster Relief</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.texasbaptistmen.org">Texas Baptist Men Disaster Relief</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.texascrisisresiliencyteam.org">Texas Crisis Resiliency Team </a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.texsar.org/">TEXSAR</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.lds.org">The Church of Jesus Christ of Latter-Day Saints</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.salvationarmytexas.org">The Salvation Army</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="https://trustedworld.org/">Trusted World</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+				United Methodist Committee on Relief (UMCOR)</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<p class="rteindent1"><span style="font-size:12px;"><a href="http://www.ctcumc.org/">Central Texas Conference (Fort Worth)</a></span></p>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<p class="rteindent1"><a href="http://www.nmconfum.com/Engaging/Disaster-Response-Program/"><span style="font-size:12px;">New Mexico Conference (El Paso)</span></a></p>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<p class="rteindent1"><a href="http://www.ntcumc.org/page.asp?PKValue=1041"><span style="font-size:12px;">North Texas Conference (Dallas)</span></a></p>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<p class="rteindent1"><span style="font-size:12px;"><a href="http://www.nwtxconf.org">Northwest Texas Conference (Lubbock)</a></span></p>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<p class="rteindent1"><a href="http://www.umcswtx.org/umc-disaster-response.html"><span style="font-size:12px;">Southwest Texas Conference (San Antonio)</span></a></p>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<p class="rteindent1"><a href="http://www.txcumc.org/"><span style="font-size:12px;">Texas Conference (Houston)</span></a></p>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<p class="rteindent1"><span style="font-size:12px;"><a href="http://www.umcor.org">United Methodist Committee on Relief (UMCOR)</a></span></p>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.victimrelief.org">Victim Relief Ministries</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.greenshirts.org">World Renew</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+				 </td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<u><strong>Associate Members</strong></u></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.americares.org/">AmeriCares</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://billygraham.org/what-we-do/evangelism-outreach/rapid-response-team/about/">Billy Graham Rapid Reponse Team</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.centraltxvoad.org">Central Texas VOAD</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="https://cwsglobal.org/">Church World Service</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.co.guadalupe.tx.us/voad/">Guadalupe County VOAD</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://habitattexas.org/">Habitat for Humanity Texas</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.ifoc.org/">International Fellowship of Chaplains</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.onestarfoundation.org">OneStar Foundation</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="https://www.ob.org/disaster-relief/">Operation Blessing</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.samaritanspurse.org/">Samaritan's Purse </a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+				Southeast Texas VOAD</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+				Tarrant County VOAD</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.teamrubiconusa.org/">Team Rubicon</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+				Texas Gulf Coast VOAD</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.uwtexas.org/">United Ways of Texas</a></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<a href="http://www.cookeuw.org/#!disaster-relief/cyc0">VOAD in Cooke County Texas</a></td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p> </p>
+<p> </p>
+</div>
+</div>
+</div>
+</div>
+<div class="column sidebar" id="sidebar-right">
+<div class="block block-block" id="block-block-5">
+<div class="blockinner">
+<h2 class="title"> National VOAD Links </h2>
+<div class="content">
+<ul>
+<li><a href="http://www.nvoad.org" target="_blank"><font face="Verdana" size="1">National VOAD Website</font></a></li>
+<li><a href="http://www.nvoad.org/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=91" target="_blank"><font face="Verdana" size="1">NVOAD State Directory</font></a></li>
+<li><font size="1"><a href="/cms/files/os114/p75/National VOAD Bylaws - upd2008.pdf" target="_blank"><font><font face="Verdana">Download the NVOAD Bylaws<br/>
+</font></font></a></font></li>
+<li><font face="Verdana" size="1"><a href="/cms/files/os114/p75/Articles of Incorporation.pdf" target="_blank"><font>Download the NVOAD Articles of Incorporation</font></a></font></li>
+<li><a href="http://nvoad.communityos.org" target="_blank"><font face="Verdana" size="1">National VOAD Community</font><font face="Verdana" size="1">OS</font></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="block block-block" id="block-block-8">
+<div class="blockinner">
+<h2 class="title"> External Links </h2>
+<div class="content">
+<ul>
+<li><a href="http://www.fema.gov/" target="_blank"><font face="Verdana" size="1">FEMA</font></a></li>
+<li><a href="http://www.weather.com/" target="_blank"><font face="Verdana" size="1">Weather Channel</font></a></li>
+<li><a href="http://weather.gov/" target="_blank"><font face="Verdana" size="1">NOAA's National Weather Service</font></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="block block-block" id="block-block-7">
+<div class="blockinner">
+<h2 class="title"> Find National VOAD on Your Favorite Sites </h2>
+<div class="content">
+<p align="center"><a href="http://www.facebook.com/?ref=logo#!/pages/National-Voluntary-Organizations-Active-in-Disaster-National-VOAD/445077945050?ref=ts" target="_blank"><img alt="" height="35" src="https://txvoad.communityos.org//cms/files/os114/p75/facebook_36x36.png" width="36"/></a>   <a href="http://www.twitter.com/nationalvoad" target="_blank"><img alt="" height="36" src="https://txvoad.communityos.org//cms/files/os114/p75/twitter_36x36.png" width="36"/></a>   <a href="http://www.youtube.com/user/NationalVOAD?feature=mhum" target="_blank"><img alt="" height="35" src="https://txvoad.communityos.org//cms/files/os114/p75/youtube_36x36.png" width="36"/></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</td>
+<td background="/cms/themes/tapestry/styles/1/round_side_right.gif" width="4"><img alt="" src="https://txvoad.communityos.org//images/shim.gif"/></td>
+</tr>
+<tr>
+<td height="4"><img alt="" src="https://txvoad.communityos.org//cms/themes/tapestry/styles/1/round_bottom_left.gif"/></td>
+<td background="/cms/themes/tapestry/styles/1/round_bottom_middle.gif"><img alt="" src="https://txvoad.communityos.org//images/shim.gif"/></td>
+<td><img alt="" src="https://txvoad.communityos.org//cms/themes/tapestry/styles/1/round_bottom_right.gif"/></td>
+</tr>
+</tbody></table>
+</div> <div id="footer">
+<table border="0" cellpadding="0" cellspacing="0" valign="middle" width="100%">
+<tbody><tr>
+<td class="footer_left" height="50" width="5">
+<img alt="" src="https://txvoad.communityos.org//images/shim.gif"/>
+</td>
+<td class="footer_middle">
+<div id="footer_nav">
+<ul>
+<li><a href="/cms/menutree">Site Map</a> | </li>
+<li><a href="/cms/terms_of_service">Terms of Service</a> | </li>
+<li><a href="/cms/contact">Contact Us</a></li>
+</ul>
+</div>
+</td>
+<td align="left" class="footer_right" width="200">
+<div id="copyright">
+<a href="http://www.visionlink.org">©2019 VisionLink, Inc.</a>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div id="footer_message">
+</div>
+</div>
+</body></html>

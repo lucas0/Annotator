@@ -1,0 +1,230 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>B.C. Catholic Online Newspaper Log-In</title>
+<link href="http://digital.bccatholic.ca/css/main.css" rel="stylesheet" type="text/css"/>
+<link href="http://digital.bccatholic.ca/css/forms.css" rel="stylesheet" type="text/css"/>
+<link href="http://digital.bccatholic.ca/css/form_validate.css" rel="stylesheet" type="text/css"/>
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://digital.bccatholic.ca/app.asp?RelId=5.5.7p1.18/scripts/jquery.form.checkboxes.js" type="text/javascript"></script>
+<script charset="utf-8" src="http://digital.bccatholic.ca/app.asp?RelId=5.5.7p1.18/scripts/jquery.form.validationEngine-en.js" type="text/javascript"></script>
+<script charset="utf-8" src="http://digital.bccatholic.ca/app.asp?RelId=5.5.7p1.18/scripts/jquery.form.validationEngine.js" type="text/javascript"></script>
+<script src="http://digital.bccatholic.ca/app.asp?RelId=5.5.7p1.18/scripts/jquery.nyroModal-custom.js" type="text/javascript"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="scripts/jquery.nyroModal-ie6.js"></script>
+<![endif]-->
+<link href="http://digital.bccatholic.ca/css/modalwindow.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+<!--
+$(function()
+{
+	// modal windows
+	$('.nyroModal').nyroModal();
+	$('.nyroModal').click(function() {
+		$('#memberPasswordForm').validationEngine('hideAll');
+	});
+	
+	// make the checkbox/radio look pretty
+	$('input[type=checkbox],input[type=radio]').prettyCheckboxes({
+		checkboxWidth: 22, // The width of your custom checkbox
+		checkboxHeight: 25, // The height of your custom checkbox
+		className : 'prettyCheckbox', // The classname of your custom checkbox
+		display: 'list' // The style you want it to be display (inline or list)
+	});
+	
+	// validate form
+	$('#memberLoginForm').validationEngine();
+	$('#memberPasswordForm').validationEngine();
+	
+	// forgot password
+	$('#linkForgot a').click(function() {
+		$('#memberLoginForm').validationEngine('hideAll');
+		$('#formLogin').slideUp(200, function(){
+			setTimeout(function(){
+				$('#formPassword').slideDown(200);
+			}, 200);
+		});
+	});
+	$('#linkRemember a').click(function() {
+		$('#memberPasswordForm').validationEngine('hideAll');
+		$('#formPassword').slideUp(200, function(){
+			setTimeout(function(){
+				$('#formLogin').slideDown(200);
+			}, 200);
+		});
+	});
+});
+
+function helpToFAQ() {
+	$.nmTop().close();
+	
+	$.nmManual({
+		url: 'faq.php'
+	});
+}
+//-->
+</script>
+</head>
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-15714879-17', 'dirxion.com');
+  ga('send', 'pageview');
+
+</script><div id="container">
+<div id="headerContainer">
+<div id="header">
+<div class="left" id="companyLogo">
+<a href="https://www.bccatholic.ca/" target="_blank"><img alt="Company Logo" src="http://digital.bccatholic.ca/app.asp?RelId=5.5.7p1.18/image/company_logo.png"/></a> </div> <div class="clear"></div>
+</div>
+<div id="subheader"><img src="http://digital.bccatholic.ca/app.asp?RelId=5.5.7p1.18/image/header/subheader_eEdition.png"/></div>
+<div><img src="http://digital.bccatholic.ca/app.asp?RelId=5.5.7p1.18/image/header/header_shadow.png"/></div>
+</div>
+<div id="priceContainer">
+<div id="prices">
+<ul>
+<li>
+<h2>$3.99</h2><p><span>1 Month (4 issues)</span></p>
+</li>
+<li class="vr"></li>
+<li>
+<h2>$9.99</h2><p><span>3 months (12 issues)</span></p>
+</li>
+<li class="vr"></li>
+<li>
+<h2>$15.99</h2><p><span>6 months (24 issues)</span></p>
+</li>
+<li class="vr"></li>
+<li>
+<h2>$24.99</h2><p><span>12 months (48 issues)</span></p>
+</li>
+<li class="vr"></li>
+<li>
+<h2>$9.99 1 Year</h2><p><span>Existing Print Subscribers<br/>(60% Savings)</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="left" id="left">
+<div><img src="http://digital.bccatholic.ca/app.asp?RelId=5.5.7p1.18/image/content/title_login.png"/></div>
+<div class="boxLeft" id="boxLogin">
+<div class="left boxcontent" id="formLogin">
+<form action="check_login.php" id="memberLoginForm" method="post">
+<input id="formsubmit" name="formsubmit" type="hidden" value="Login"/>
+<ul>
+<li>
+<label class="label" for="loginID">Email:</label>
+<input class="validate[required,custom[email]]" id="loginID" maxlength="60" name="loginID" type="text"/>
+</li>
+<li>
+<label class="label" for="password">Password:</label>
+<input class="validate[required]" id="password" maxlength="40" name="password" type="password"/>
+</li>
+<li>
+<div class="left labelBlank"> </div>
+<p class="label">Passwords are case-sensitive</p>
+<div class="right"><input class="btn_submit" id="btnsubmit" type="submit" value="Login"/></div>
+</li>
+<div class="left inputarea buttonarea">
+<div class="left linkpassword" id="linkForgot"><a href="javascript:void(0)">Forgot your password?</a></div>
+</div>
+<li>
+<div class="hr"></div>
+</li>
+<li>
+<div class="left labelBlank"> </div>
+<div class="left inputarea">
+<div class="left setuparea"><span>Need an account?</span><span><a href="account_setup.php">Sign Up</a></span></div>
+<div class="right helparea"><span>Trouble logging in?</span><span><a class="nyroModal" href="https://www.askusnow.net/newspaperfaq/" target="_blank" title="Help">Get Help</a></span></div>
+</div>
+</li>
+<li></li>
+</ul></form></div>
+<div class="left boxcontent hide" id="formPassword">
+<form action="account_login.php" id="memberPasswordForm" method="post">
+<input class="hiddenInput" id="formsubmit" name="formsubmit" type="hidden" value="password"/>
+<ul>
+<li>
+<div class="left labelBlank"> </div>
+<div class="left inputarea">
+<div class="formTitle">Lost Password Form</div>
+<div class="formText">When you fill in your registered email address, you will be sent instructions on how to reset your password.</div>
+</div>
+</li>
+<li>
+<label class="label" for="Email">Email:</label>
+<input class="validate[required,custom[email]]" id="Email" maxlength="60" name="Email" type="text"/>
+</li>
+<li>
+<div class="left labelBlank"> </div>
+<div class="left inputarea buttonarea">
+<div class="left linkpassword" id="linkRemember"><a href="javascript:void(0)">&lt; Go back to login</a></div>
+<div class="right"><input class="btn_submit" id="btnsubmit" type="submit" value="Submit"/></div>
+</div>
+</li>
+<li>
+<div class="hr"></div>
+</li>
+<li>
+<div class="left labelBlank"> </div>
+<div class="left inputarea">
+<div class="left setuparea"><span>Need an account?</span><span><a href="account_setup.php">Sign Up</a></span></div>
+<div class="right helparea"><span>View our FAQs</span><span><a class="nyroModal" href="https://www.askusnow.net/newspaperfaq/" target="_blank" title="FAQs">Get Help</a></span></div>
+</div>
+</li>
+<div class="clear"></div>
+</ul>
+</form>
+</div>
+<div class="clear"></div>
+</div>
+<div id="boxDemo"><a href="http://newspaperdemo.dirxion.com/bccatholic" target="_blank"><img src="http://digital.bccatholic.ca/app.asp?RelId=5.5.7p1.18/image/content/viewdemo.png" title="click to view a free demo"/></a></div>
+</div>
+<div class="right" id="right">
+<script type="text/javascript">
+<!--
+$(function() {
+	// stretch rightTop shadows
+	$('#rightTop .boxStretch img').height( $('#rightTop .boxRightContent').innerHeight() );
+});
+//-->
+</script>
+<div class="boxRight rightNoshadow"> <div class="boxRightContent" id="rightSetup">Need an account? <a href="account_setup.php">Sign Up</a></div>
+<div class="hr"></div>
+<div class="boxRightContent" id="rightFAQ">Having trouble on the site? <a class="nyroModal" href="https://www.askusnow.net/newspaperfaq/" target="_blank" title="FAQs">View our FAQs</a></div>
+</div>
+<div id="rightTop">
+<div class="left boxStretch"><img class="stretch" src="http://digital.bccatholic.ca/app.asp?RelId=5.5.7p1.18/image/right/shadow_left.png" style="height: 316px;"/></div>
+<div class="left boxRight">
+<div class="boxRightContent">
+<img alt="Benefits Title" src="http://digital.bccatholic.ca/app.asp?RelId=5.5.7p1.18/image/right/title_eEdition.png"/>
+<div class="hr"></div>
+<h2>Easy Access</h2>
+<p>Can be read from anywhere with an internet connection.</p>
+<h2>Simple To Use</h2>
+<p>Fullscreen mode, single-click zoom, simple navigation.</p>
+<h2>Search</h2>
+<p>Quickly find articles by keyword or phrase in the current issue, and through back issues.</p>
+<h2>Share Information</h2>
+<p>Email articles to friends and family, or post to social networking sites such as Twitter and Facebook.</p>
+<h2>Past Issues</h2>
+<p>With our calendar archive, you can read past issues.</p>
+</div>
+</div>
+<div class="left boxStretch"><img class="stretch" src="http://digital.bccatholic.ca/app.asp?RelId=5.5.7p1.18/image/right/shadow_right.png" style="height: 316px;"/></div>
+<div class="clear"></div>
+</div>
+<div class="boxRight" id="rightBottom">
+<div class="boxRightContent">
+<p>This online e-Edition is produced by Dirxion, LLC. <a href="http://dirxion.com" target="_blank">Dirxion</a> makes various look and feel products for publishers on the internet.</p>
+<p>For more information about this product, see <a href="http://dirxion.com/newspapers/" target="_blank">Dirxion Newspaper e-Editions</a>. For help with your subscription, <a class="nyroModal" href="https://www.askusnow.net/newspaperfaq/" target="_blank" title="FAQs">please click here</a>.</p>
+</div>
+</div><div id="footer">© B.C. Catholic</div> </div>
+<div class="clear"></div>
+</div>
+</div>
+<div></div></body></html>

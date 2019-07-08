@@ -1,0 +1,47 @@
+<html><head>
+<title>Jan and Dean's Web Site</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<script language="JavaScript">
+<!--
+<!-- Begin
+
+function NewWindow(mypage, myname, w, h, scroll) { 
+var winl = (screen.width - w) / 2; 
+var wint = (screen.height - h) / 2; 
+winprops = 'height='+h+',width='+w+',top='+wint+',left='+winl+',scrollbars='+scroll+'' 
+win = window.open(mypage, myname, winprops) 
+if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); } 
+}
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+myPix = new Array("images/enter-pool-girl.jpg","images/enter-telescope.jpg","images/enter-aloha-shirt.jpg","images/enter-magnavox.jpg","images/enter-moscosso.jpg","images/enter-blues.jpg","images/enter-orientalchick.jpg","images/enter-oriental.jpg","images/enter-oz.jpg")
+
+imgCt = myPix.length
+
+function choosePic() {
+	if (document.images) {
+		randomNum = Math.floor ((Math.random() * imgCt))
+		document.myPicture.src = myPix[randomNum]
+	}
+}
+
+//  End -->
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+<body bgcolor="#000000" leftmargin="0" marginheight="0" marginwidth="0" onload="choosePic();MM_preloadImages('images/enter-pool-girl.jpg','images/enter-telescope.jpg')" topmargin="0">
+<table height="99%" width="99%">
+<tbody><tr>
+<td align="center" valign="middle"><a href="#" onclick="NewWindow('entryb/entryb.html','Site','1074','795','no')"><img border="0" height="439" id="myPicture" name="myPicture" src="http://www.jananddean.com/images/enter-pool-girl.jpg" width="581"/></a></td>
+</tr>
+</tbody></table>
+</body></html>

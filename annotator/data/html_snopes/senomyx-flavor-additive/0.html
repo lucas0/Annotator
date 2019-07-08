@@ -1,0 +1,455 @@
+<html><head>
+<base target="_top"/>
+<title>Patent Database Search Results: Senomyx in US Patent Collection</title>
+<script language="javascript">
+var clicked = false;
+// Shamelessly adapted from http://www.randomsnippets.com/2008/02/21/how-to-dynamically-add-form-elements-via-javascript/ 09-04-14. jh
+function addInput(divName,btnName,btnLabel) {
+   var newdiv = document.createElement('div');
+   newdiv.innerHTML = "<input type='hidden' name='" + btnName +
+			"' value='" + btnLabel + "'>";
+   divName.appendChild(newdiv);
+}
+// -- 09-04-14.
+function check(form1,formBtn) {
+   // if submitted by <enter> key, add a submit button lookalike to prevent
+   // 1003 errs from BRS. 9-4-14 jh
+   if (!clicked)
+      addInput (form1,formBtn.name,formBtn.value);
+   return true;
+}
+function unesc(){
+   srchForm.Srch1.value = unescape(srchForm.Srch1.value);
+   if (srchForm.Srch2)
+      srchForm.Srch2.value = unescape(srchForm.Srch2.value);
+}
+function unesc2(){
+   srchForm2.Srch1.value = unescape(srchForm2.Srch1.value);
+   if (srchForm2.Srch2)
+      srchForm2.Srch2.value = unescape(srchForm2.Srch2.value);
+}
+function decod(){
+   document.title = decodeURIComponent(document.title);
+   refine.Query.value = decodeURIComponent(refine.Query.value);
+   var x = document.getElementById("srchtext").childNodes[0];
+   x.data = decodeURIComponent(x.data);
+}
+</script>
+</head>
+<body bgcolor="#FFFFFF" onload="decod()">
+<center>
+<img alt="[US Patent &amp; Trademark Office, Patent Full Text and Image Database]" src="http://patft.uspto.gov//netaicon/PTO/patfthdr.gif"/>
+<br/>
+<a name="top">
+</a><table>
+<tbody><tr><td>
+<a href="/netahtml/PTO/index.html"><img alt="[Home]" border="0" src="http://patft.uspto.gov//netaicon/PTO/home.gif"/></a>
+<a href="/netahtml/PTO/search-bool.html"><img alt="[Boolean Search]" border="0" src="http://patft.uspto.gov//netaicon/PTO/boolean.gif"/></a>
+<a href="/netahtml/PTO/search-adv.htm"><img alt="[Manual Search]" border="0" src="http://patft.uspto.gov//netaicon/PTO/manual.gif"/></a>
+<a href="/netahtml/PTO/srchnum.htm"><img alt="[Number Search]" border="0" src="http://patft.uspto.gov//netaicon/PTO/number.gif"/></a>
+<a href="/netahtml/PTO/help/help.htm"><img alt="[Help]" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/help.gif"/></a>
+</td></tr>
+</tbody></table>
+<a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=2&amp;S1=Senomyx&amp;Page=Next&amp;OS=Senomyx&amp;RS=Senomyx"><img align="MIDDLE" alt="[NEXT_LIST]" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/nextlist.gif"/></a>
+<a href="#bottom"><img align="middle" alt="[Bottom]" border="0" src="http://patft.uspto.gov//netaicon/PTO/bottom.gif"/></a>
+<a href="https://certifiedcopycenter.uspto.gov/other/patft/view.html?backUrl1=http%3A//patft.uspto.gov/netacgi/nph-Parser?Sect1%3DPTO2%26Sect2%3DHITOFF%26u%3D%252Fnetahtml%252FPTO%252Fsearch-adv.htm%26r%3D0%26f%3DS%26l%3D50%26d%3DPTXT%26RS%3D%2528HEK-293%252BAND%252BSenomyx%2529%26Refine%3DRefine%252BSearch%26Refine%3DRefine%252BSearch%26Query%3DSenomyx&amp;backLabel1=Back%20to%20Document%3A%20Senomyx"><img align="middle" alt="[View Shopping Cart]" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/cart.gif"/></a>
+</center>
+<p>
+<i>Searching US Patent Collection...</i><br/></p>
+<b>Results of Search in US Patent Collection db for:<br/> <span id="srchtext">Senomyx</span></b>: 208 patents.
+<br/><i>Hits <strong>1</strong> through <strong>50
+</strong> out of <strong>208</strong>
+</i><p>
+<br/>
+</p><form action="/netacgi/nph-Parser" method="GET" name="srchForm" onsubmit="unesc()">
+<input name="Sect1" type="HIDDEN" value="PTO2"/>
+<input name="Sect2" type="HIDDEN" value="HITOFF"/>
+<input name="u" type="HIDDEN" value="/netahtml/PTO/search-adv.htm"/>
+<input name="r" type="HIDDEN" value="0"/>
+<input name="f" type="HIDDEN" value="S"/>
+<input name="l" type="HIDDEN" value="50"/>
+<input name="d" type="HIDDEN" value="PTXT"/>
+<input name="OS" type="HIDDEN" value="Senomyx"/>
+<input name="RS" type="HIDDEN" value="Senomyx"/>
+<input name="Query" type="HIDDEN" value="Senomyx"/>
+<input name="TD" type="HIDDEN" value="208"/>
+<input name="Srch1" type="HIDDEN" value="Senomyx"/>
+<input name="NextList1" type="submit" value="Next 50 Hits"/><br/><br/>
+</form>
+<form action="/netacgi/nph-Parser" method="GET" name="srchForm2" onsubmit="unesc2();check(this,this.StartAt)">
+<input name="Sect1" type="HIDDEN" value="PTO2"/>
+<input name="Sect2" type="HIDDEN" value="HITOFF"/>
+<input name="u" type="HIDDEN" value="/netahtml/PTO/search-adv.htm"/>
+<input name="r" type="HIDDEN" value="0"/>
+<input name="f" type="HIDDEN" value="S"/>
+<input name="l" type="HIDDEN" value="50"/>
+<input name="d" type="HIDDEN" value="PTXT"/>
+<input name="RS" type="HIDDEN" value="Senomyx"/>
+<input name="Query" type="HIDDEN" value="Senomyx"/>
+<input name="TD" type="HIDDEN" value="208"/>
+<input name="Srch1" type="HIDDEN" value="Senomyx"/>
+<input name="StartAt" onclick="clicked=true;" type="submit" value="Jump To"/>
+ 
+<input name="StartNum" size="6" title="Record Number"/>
+</form>
+<br/><br/>
+<form action="/netacgi/nph-Parser" method="GET" name="refine" onsubmit="check(this,this.Refine)">
+<input name="Sect1" type="HIDDEN" value="PTO2"/>
+<input name="Sect2" type="HIDDEN" value="HITOFF"/>
+<input name="u" type="HIDDEN" value="/netahtml/PTO/search-adv.htm"/>
+<input name="r" type="HIDDEN" value="0"/>
+<input name="f" type="HIDDEN" value="S"/>
+<input name="l" type="HIDDEN" value="50"/>
+<input name="d" type="HIDDEN" value="PTXT"/>
+<input name="RS" type="HIDDEN" value="Senomyx"/>
+<input name="Refine" onclick="clicked=true;" type="submit" value="Refine Search"/>
+<input name="Query" size="50" title="Query" value="Senomyx"/>
+</form>
+<docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><docs:>
+</docs:><table><tbody><tr><td></td><th scope="col">PAT. NO.</th><td></td><th scope="col">Title</th></tr>
+<tr><td valign="top">1</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=1&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,324,098</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=1&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">T2R taste receptors and genes encoding same
+</a></td>
+</tr><tr><td valign="top">2</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=2&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,308,621</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=2&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Processes and intermediates for making sweet taste enhancers
+</a></td>
+</tr><tr><td valign="top">3</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=3&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,281,467</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=3&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Screening assays to identify compounds which modulate T1R associated taste
+     modalities which eliminate false positives
+</a></td>
+</tr><tr><td valign="top">4</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=4&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,244,779</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=4&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Method of improving stability of sweet enhancer and composition containing
+     stabilized sweet enhancer
+</a></td>
+</tr><tr><td valign="top">5</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=5&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,215,759</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=5&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Electrophysiological assays using oocytes that express human ENaC and the
+     use of phenamil to improve the effect of ENaC enhancers in assays using
+     membrane potential reporting dyes
+</a></td>
+</tr><tr><td valign="top">6</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=6&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,191,050</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=6&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Rationale, methods, and assays for identifying human and non-human primate
+     taste specific genes and use thereof in taste modulator and therapeutic
+     screening assays
+</a></td>
+</tr><tr><td valign="top">7</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=7&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,182,584</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=7&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Cooling preparations
+</a></td>
+</tr><tr><td valign="top">8</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=8&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,114,009</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=8&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Methods of detecting T1R hetero-oligomeric taste receptor expression to
+     identify cells that are potentially sensitive to sweet tastants
+</a></td>
+</tr><tr><td valign="top">9</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=9&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,093,718</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=9&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">T1R taste receptors and genes encoding same
+</a></td>
+</tr><tr><td valign="top">10</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=10&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,088,472</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=10&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Methods of using TIR hetero-oligomeric receptors for screening compounds
+     that modulate sweet or umami taste
+</a></td>
+</tr><tr><td valign="top">11</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=11&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,087,154</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=11&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Processes and intermediates for making sweet taste enhancers
+</a></td>
+</tr><tr><td valign="top">12</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=12&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,078,087</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=12&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Assays and enhancers of the human delta ENaC sodium channel
+</a></td>
+</tr><tr><td valign="top">13</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=13&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,060,909</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=13&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Flavors, flavor modifiers, tastants, taste enhancers, umami or sweet
+     tastants, and/or enhancers and use thereof
+</a></td>
+</tr><tr><td valign="top">14</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=14&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,048,274</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=14&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Electrophysiological assays using oocytes that express human ENaC and the
+     use of phenamil to improve the effect of ENaC enhancers in assays using
+     membrane potential reporting dyes
+</a></td>
+</tr><tr><td valign="top">15</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=15&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">10,016,418</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=15&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Compounds useful as modulators of TRPM8
+</a></td>
+</tr><tr><td valign="top">16</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=16&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,936,723</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=16&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Process for the synthesis of substituted
+     1-benzyl-3-(1-(isoxazol-4-ylmethyl)-1h-pyrazol-4-yl)imidazolidine-2,4-dio-
+    nes
+</a></td>
+</tr><tr><td valign="top">17</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=17&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,902,737</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=17&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Sweet flavor modifier
+</a></td>
+</tr><tr><td valign="top">18</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=18&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,894,921</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=18&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Use of cinnamic acid derivatives containing nitrogen as flavouring agents
+</a></td>
+</tr><tr><td valign="top">19</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=19&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,840,471</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=19&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Compounds useful as modulators of TRPM8
+</a></td>
+</tr><tr><td valign="top">20</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=20&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,834,544</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=20&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Sweet flavor modifier
+</a></td>
+</tr><tr><td valign="top">21</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=21&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,804,157</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=21&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Screening assays to identify compounds which modulate T1R associated taste
+     modalities which eliminate false positives
+</a></td>
+</tr><tr><td valign="top">22</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=22&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,790,265</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=22&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">T1R taste receptors and genes encoding same
+</a></td>
+</tr><tr><td valign="top">23</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=23&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,778,270</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=23&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">T2R taste receptors and genes encoding same
+</a></td>
+</tr><tr><td valign="top">24</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=24&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,778,258</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=24&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Identification of bitter ligands that specifically activate human T2R
+     receptors and related assays for identifying human bitter taste
+     modulators
+</a></td>
+</tr><tr><td valign="top">25</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=25&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,745,293</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=25&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Sweet flavor modifier
+</a></td>
+</tr><tr><td valign="top">26</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=26&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,739,776</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=26&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Rationale, methods, and assays for identifying human and non-human primate
+     taste specific genes and use thereof in taste modulator and therapeutic
+     screening assays
+</a></td>
+</tr><tr><td valign="top">27</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=27&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,732,071</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=27&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Compounds useful as modulators of TRPM8
+</a></td>
+</tr><tr><td valign="top">28</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=28&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,732,052</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=28&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Processes and intermediates for making sweet taste enhancers
+</a></td>
+</tr><tr><td valign="top">29</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=29&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,701,530</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=29&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">System, method, and apparatus for purchasing, dispensing, or sampling of
+     products
+</a></td>
+</tr><tr><td valign="top">30</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=30&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,695,162</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=30&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Sweet flavor modifier
+</a></td>
+</tr><tr><td valign="top">31</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=31&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,687,015</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=31&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Sweet flavor modifier
+</a></td>
+</tr><tr><td valign="top">32</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=32&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,671,390</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=32&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">In vitro method using hetero-oligomeric T1R1/T1R3 taste receptors to
+     identify umami tastants
+</a></td>
+</tr><tr><td valign="top">33</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=33&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,637,536</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=33&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">T1R taste receptors and genes encoding same
+</a></td>
+</tr><tr><td valign="top">34</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=34&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,603,848</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=34&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Modulation of chemosensory receptors and ligands associated therewith
+</a></td>
+</tr><tr><td valign="top">35</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=35&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,481,722</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=35&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">T1R taste receptors and genes encoding same
+</a></td>
+</tr><tr><td valign="top">36</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=36&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,476,869</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=36&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Methods of screening T1R hetero-oligomeric taste receptors for sweet taste
+     modulators
+</a></td>
+</tr><tr><td valign="top">37</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=37&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,475,803</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=37&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Sweet flavor modifier
+</a></td>
+</tr><tr><td valign="top">38</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=38&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,459,259</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=38&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Electrophysiological assays using oocytes that express human enac and the
+     use of phenamil to improve the effect of enac enhancers in assays using
+     membrane potential reporting dyes
+</a></td>
+</tr><tr><td valign="top">39</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=39&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,459,250</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=39&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Use of T1R3 venus flytrap region polypeptide to screen for taste
+     modulators
+</a></td>
+</tr><tr><td valign="top">40</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=40&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,420,814</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=40&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Sweet flavor modifier
+</a></td>
+</tr><tr><td valign="top">41</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=41&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,394,287</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=41&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Compounds useful as modulators of TRPM8
+</a></td>
+</tr><tr><td valign="top">42</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=42&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,382,196</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=42&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Processes and intermediates for making sweet taste enhancers
+</a></td>
+</tr><tr><td valign="top">43</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=43&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,371,317</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=43&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Sweet flavor modifier
+</a></td>
+</tr><tr><td valign="top">44</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=44&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,247,759</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=44&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Identification of human T2R receptors that respond to bitter compounds
+     that elicit the bitter taste in compositions, and the use thereof in
+     assays to identify compounds that inhibit (block) bitter taste in
+     compositions and use thereof
+</a></td>
+</tr><tr><td valign="top">45</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=45&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,244,081</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=45&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Cell-based fluorescent assays for identifying alpha and delta ENaC
+     modulators
+</a></td>
+</tr><tr><td valign="top">46</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=46&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,181,276</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=46&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Modulation of chemosensory receptors and ligands associated therewith
+</a></td>
+</tr><tr><td valign="top">47</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=47&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,176,130</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=47&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Methods of screening T1R1/T1R3 receptors for compounds that modulate umami
+     taste signaling
+</a></td>
+</tr><tr><td valign="top">48</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=48&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,170,254</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=48&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Identification of bitter ligands that specifically activate human T2R
+     receptors and related assays for identifying human bitter taste
+     modulators
+</a></td>
+</tr><tr><td valign="top">49</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=49&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,163,074</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=49&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Human T2R nucleic acid sequences
+</a></td>
+</tr><tr><td valign="top">50</td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=50&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">9,139,867</a></td>
+<td valign="baseline"><img alt="Full-Text" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/ftext.gif"/></td>
+<td valign="top"><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=50&amp;f=G&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=1&amp;S1=Senomyx&amp;OS=Senomyx&amp;RS=Senomyx">Rationale, methods, and assays for identifying human and non-human primate
+     taste specific genes and use thereof in taste modulator and therapeutic
+     screening assays
+</a></td>
+</tr></tbody></table><hr/><br/>
+<center>
+<table>
+<tbody><tr><td><a href="/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;p=1&amp;p=2&amp;S1=Senomyx&amp;Page=Next&amp;OS=Senomyx&amp;RS=Senomyx"><img align="MIDDLE" alt="[NEXT_LIST]" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/nextlist.gif"/></a>
+<a name="bottom"></a><a href="#top"><img align="middle" alt="[Top]" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/top.gif"/></a>
+<a href="https://certifiedcopycenter.uspto.gov/other/patft/view.html?backUrl1=http%3A//patft.uspto.gov/netacgi/nph-Parser?Sect1%3DPTO2%26Sect2%3DHITOFF%26u%3D%252Fnetahtml%252FPTO%252Fsearch-adv.htm%26r%3D0%26f%3DS%26l%3D50%26d%3DPTXT%26RS%3D%2528HEK-293%252BAND%252BSenomyx%2529%26Refine%3DRefine%252BSearch%26Refine%3DRefine%252BSearch%26Query%3DSenomyx&amp;backLabel1=Back%20to%20Document%3A%20Senomyx"><img align="middle" alt="[View Shopping Cart]" border="0" src="http://patft.uspto.gov//netaicon/PTO/cart.gif"/></a>
+</td></tr>
+</tbody></table>
+<a href="/netahtml/PTO/index.html"><img alt="[Home]" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/home.gif" valign="baseline"/></a>
+<a href="/netahtml/PTO/search-bool.html"><img alt="[Boolean Search]" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/boolean.gif" valign="baseline"/></a>
+<a href="/netahtml/PTO/search-adv.htm"><img alt="[Manual Search]" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/manual.gif" valign="baseline"/></a>
+<a href="/netahtml/PTO/srchnum.htm"><img alt="[Number Search]" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/number.gif" valign="baseline"/></a>
+<a href="/netahtml/PTO/help/help.htm"><img alt="[Help]" border="0" src="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;f=S&amp;l=50&amp;d=PTXT&amp;RS=%28HEK-293+AND+Senomyx%29&amp;Refine=Refine+Search&amp;Refine=Refine+Search&amp;Query=Senomyx//netaicon/PTO/help.gif" valign="baseline"/></a>
+</center>
+</body></html>

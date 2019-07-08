@@ -1,0 +1,505 @@
+<html><head><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-WTVZN7"></script><script src="http://www.ucrdatatool.gov//CFIDE/scripts/cfform.js" type="text/javascript"></script>
+<script src="http://www.ucrdatatool.gov//CFIDE/scripts/masks.js" type="text/javascript"></script>
+<title>Uniform Crime Reporting Statistics</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="http://www.ucrdatatool.gov//Templates/bjsonline.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.ucrdatatool.gov//inc/leftnav.css" rel="STYLESHEET" type="text/css"/>
+<style type="text/css">
+<!--
+.unchanged {  font-family: Arial, Helvetica, sans-serif; color: #3300CC; font-weight: bold}
+
+.new {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: bold; color: #FF6666; background-color: #FFFFCC}
+.style4 {font-size: 10px}
+.style5 {font-size: 10pt}
+.style7 {font-weight: bold}
+.style13 {
+	color: #0033CC;
+	font-weight: bold;
+}
+.style14 {font-weight: bold}
+.style15 {color: #000066}
+-->
+</style>
+<script type="text/javascript">
+<!--
+    _CF_checkCFForm_1 = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+<script async="true" data-role="gateway" data-vendor="acs" src="//gateway.answerscloud.com/bjs-gov/production/gateway.min.js" type="text/javascript"></script></head>
+<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" rightmargin="0" text="#000066" topmargin="0">
+<noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-WTVZN7" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WTVZN7');</script>
+<table border="0" cellpadding="0" cellspacing="0" class="tblMain">
+<tbody><tr>
+<td background="/images/background.gif" colspan="2" width="20"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td colspan="2"><a href="https://ucr.fbi.gov/" target="_blank" title="Uniform Crime Reporting (UCR)"><img alt="FBI kiosk banner" height="138" src="http://www.ucrdatatool.gov//images/banner.gif" width="700"/></a></td>
+</tr>
+</tbody></table></td>
+</tr>
+</tbody></table>
+<table align="default" bgcolor="#330099" border="0" cellpadding="0" cellspacing="0" class="tblMain">
+<tbody><tr bgcolor="#FFFFFF">
+<td bgcolor="#FFFFFF" height="23" valign="BOTTOM" width="42"> </td>
+<td bgcolor="#FFFFFF" class="text" colspan="2" height="23" valign="BOTTOM">
+<a href="https://www.fbi.gov/front-page"><b><font size="2">FBI Home</font></b></a>
+<font size="2"><b>
+<img alt="right arrow" border="0" height="14" src="http://www.ucrdatatool.gov//images/Rarrow.gif" width="10"/> <a href="https://ucr.fbi.gov/word/">UCR</a>
+<img alt="right arrow" border="0" height="14" src="http://www.ucrdatatool.gov//images/Rarrow.gif" width="10"/> <a href="/index.cfm">UCR Data Online</a> <img alt="right arrow" border="0" height="14" src="http://www.ucrdatatool.gov//images/Rarrow.gif" width="10"/>
+<a href="/Search/Crime/Crime.cfm">Estimated Crime</a>
+<img alt="right arrow" border="0" height="14" src="http://www.ucrdatatool.gov//images/Rarrow.gif" width="10"/>
+<a href="/Search/Crime/State/StateCrime.cfm">State 
+        Level</a> <img alt="right arrow" border="0" height="14" src="http://www.ucrdatatool.gov//images/Rarrow.gif" width="10"/> 
+        Data with One Variable </b></font> </td>
+<td align="right" bgcolor="#FFFFFF" height="23" nowrap="nowrap" valign="BOTTOM" width="100">
+<a href="/contact.cfm">
+<font size="2"><b>Contact Us</b></font> </a> </td>
+</tr>
+</tbody></table>
+<a name="top"></a>
+<blockquote>
+<h2>
+<div class="subhead">Crime - National or State Level</div>
+    Data with One Variable  </h2>
+<form action="RunCrimeTrendsInOneVar.cfm" id="CFForm_1" method="post" name="CFForm_1" onsubmit="return _CF_checkCFForm_1(this)">
+<table border="0" cellpadding="2" cellspacing="3" width="90%">
+<tbody><tr nowrap="">
+<td valign="top"> <font class="text"><b>
+<label for="states">a. Choose one or more states:</label>
+</b><br/>
+<br/>
+<select id="states" multiple="" name="StateId" size="5">
+<option value="52">United 
+            States-Total</option>
+<option value="1">Alabama</option>
+<option value="2">Alaska</option>
+<option value="3">Arizona</option>
+<option value="4">Arkansas</option>
+<option value="5">California</option>
+<option value="6">Colorado</option>
+<option value="7">Connecticut</option>
+<option value="8">Delaware</option>
+<option value="9">District of Columbia</option>
+<option value="10">Florida</option>
+<option value="11">Georgia</option>
+<option value="12">Hawaii</option>
+<option value="13">Idaho</option>
+<option value="14">Illinois</option>
+<option value="15">Indiana</option>
+<option value="16">Iowa</option>
+<option value="17">Kansas</option>
+<option value="18">Kentucky</option>
+<option value="19">Louisiana</option>
+<option value="20">Maine</option>
+<option value="21">Maryland</option>
+<option value="22">Massachusetts</option>
+<option value="23">Michigan</option>
+<option value="24">Minnesota</option>
+<option value="25">Mississippi</option>
+<option value="26">Missouri</option>
+<option value="27">Montana</option>
+<option value="28">Nebraska</option>
+<option value="29">Nevada</option>
+<option value="30">New Hampshire</option>
+<option value="31">New Jersey</option>
+<option value="32">New Mexico</option>
+<option value="33">New York</option>
+<option value="34">North Carolina</option>
+<option value="35">North Dakota</option>
+<option value="36">Ohio</option>
+<option value="37">Oklahoma</option>
+<option value="38">Oregon</option>
+<option value="39">Pennsylvania</option>
+<option value="40">Rhode Island</option>
+<option value="41">South Carolina</option>
+<option value="42">South Dakota</option>
+<option value="43">Tennessee</option>
+<option value="44">Texas</option>
+<option value="45">Utah</option>
+<option value="46">Vermont</option>
+<option value="47">Virginia</option>
+<option value="48">Washington</option>
+<option value="49">West Virginia</option>
+<option value="50">Wisconsin</option>
+<option value="51">Wyoming</option>
+</select>
+<br/>
+<br/>
+</font> <table align="left" bgcolor="#FFFFCC" border="1" bordercolor="#999999" cellpadding="4" cellspacing="0">
+<tbody><tr>
+<td align="center" nowrap=""> <div align="left"><font class="text" color="#330099">
+<b>Hold down the control<br/>
+                  key to select more<br/>
+                  than one option.</b></font></div></td>
+</tr>
+</tbody></table> </td>
+<td nowrap="" valign="top">
+<p> <font class="text"><b>
+<label for="variable">
+            b. Choose one variable:</label>*
+                        </b></font><br/>
+<font class="text">
+<select id="variable" name="DataType" size="1">
+<option value="1"> 
+              Violent crime total  
+              </option><option value="2"> 
+              Murder and nonnegligent manslaughter  
+              </option><option value="3"> 
+              Rape (Legacy &amp; Revised)  
+              </option><option value="4"> 
+              Robbery  
+              </option><option value="5"> 
+              Aggravated assault  
+              </option><option value="6"> 
+              Property crime total  
+              </option><option value="7"> 
+              Burglary  
+              </option><option value="8"> 
+              Larceny-theft  
+              </option><option value="9"> 
+              Motor vehicle theft  
+              </option><option value="10"> 
+              Violent crime rate  
+              </option><option value="11"> 
+              Murder rate  
+              </option><option value="12"> 
+              Rape rate (Legacy &amp; Revised)  
+              </option><option value="13"> 
+              Robbery rate  
+              </option><option value="14"> 
+              Aggravated assault rate  
+              </option><option value="15"> 
+              Property crime rate  
+              </option><option value="16"> 
+              Burglary rate  
+              </option><option value="17"> 
+              Larceny-theft rate  
+              </option><option value="18"> 
+              Motor vehicle theft rate  
+            </option></select>
+</font> </p></td>
+<td nowrap="" valign="top"><font class="text"><b>
+<label for="years">c. Choose years to include:</label>
+</b><br/>
+<br/>
+          From: 
+          <select id="years" name="YearStart" size="1">
+<option selected="" value="1960"> 
+                  1960 </option>
+<option value="1961"> 
+                  1961 </option>
+<option value="1962"> 
+                  1962 </option>
+<option value="1963"> 
+                  1963 </option>
+<option value="1964"> 
+                  1964 </option>
+<option value="1965"> 
+                  1965 </option>
+<option value="1966"> 
+                  1966 </option>
+<option value="1967"> 
+                  1967 </option>
+<option value="1968"> 
+                  1968 </option>
+<option value="1969"> 
+                  1969 </option>
+<option value="1970"> 
+                  1970 </option>
+<option value="1971"> 
+                  1971 </option>
+<option value="1972"> 
+                  1972 </option>
+<option value="1973"> 
+                  1973 </option>
+<option value="1974"> 
+                  1974 </option>
+<option value="1975"> 
+                  1975 </option>
+<option value="1976"> 
+                  1976 </option>
+<option value="1977"> 
+                  1977 </option>
+<option value="1978"> 
+                  1978 </option>
+<option value="1979"> 
+                  1979 </option>
+<option value="1980"> 
+                  1980 </option>
+<option value="1981"> 
+                  1981 </option>
+<option value="1982"> 
+                  1982 </option>
+<option value="1983"> 
+                  1983 </option>
+<option value="1984"> 
+                  1984 </option>
+<option value="1985"> 
+                  1985 </option>
+<option value="1986"> 
+                  1986 </option>
+<option value="1987"> 
+                  1987 </option>
+<option value="1988"> 
+                  1988 </option>
+<option value="1989"> 
+                  1989 </option>
+<option value="1990"> 
+                  1990 </option>
+<option value="1991"> 
+                  1991 </option>
+<option value="1992"> 
+                  1992 </option>
+<option value="1993"> 
+                  1993 </option>
+<option value="1994"> 
+                  1994 </option>
+<option value="1995"> 
+                  1995 </option>
+<option value="1996"> 
+                  1996 </option>
+<option value="1997"> 
+                  1997 </option>
+<option value="1998"> 
+                  1998 </option>
+<option value="1999"> 
+                  1999 </option>
+<option value="2000"> 
+                  2000 </option>
+<option value="2001"> 
+                  2001 </option>
+<option value="2002"> 
+                  2002 </option>
+<option value="2003"> 
+                  2003 </option>
+<option value="2004"> 
+                  2004 </option>
+<option value="2005"> 
+                  2005 </option>
+<option value="2006"> 
+                  2006 </option>
+<option value="2007"> 
+                  2007 </option>
+<option value="2008"> 
+                  2008 </option>
+<option value="2009"> 
+                  2009 </option>
+<option value="2010"> 
+                  2010 </option>
+<option value="2011"> 
+                  2011 </option>
+<option value="2012"> 
+                  2012 </option>
+<option value="2013"> 
+                  2013 </option>
+<option value="2014"> 
+                  2014 </option>
+</select>
+</font> <font class="text">To: 
+          <select id="years" name="YearEnd" size="1">
+<option value="1960"> 
+                  1960 </option>
+<option value="1961"> 
+                  1961 </option>
+<option value="1962"> 
+                  1962 </option>
+<option value="1963"> 
+                  1963 </option>
+<option value="1964"> 
+                  1964 </option>
+<option value="1965"> 
+                  1965 </option>
+<option value="1966"> 
+                  1966 </option>
+<option value="1967"> 
+                  1967 </option>
+<option value="1968"> 
+                  1968 </option>
+<option value="1969"> 
+                  1969 </option>
+<option value="1970"> 
+                  1970 </option>
+<option value="1971"> 
+                  1971 </option>
+<option value="1972"> 
+                  1972 </option>
+<option value="1973"> 
+                  1973 </option>
+<option value="1974"> 
+                  1974 </option>
+<option value="1975"> 
+                  1975 </option>
+<option value="1976"> 
+                  1976 </option>
+<option value="1977"> 
+                  1977 </option>
+<option value="1978"> 
+                  1978 </option>
+<option value="1979"> 
+                  1979 </option>
+<option value="1980"> 
+                  1980 </option>
+<option value="1981"> 
+                  1981 </option>
+<option value="1982"> 
+                  1982 </option>
+<option value="1983"> 
+                  1983 </option>
+<option value="1984"> 
+                  1984 </option>
+<option value="1985"> 
+                  1985 </option>
+<option value="1986"> 
+                  1986 </option>
+<option value="1987"> 
+                  1987 </option>
+<option value="1988"> 
+                  1988 </option>
+<option value="1989"> 
+                  1989 </option>
+<option value="1990"> 
+                  1990 </option>
+<option value="1991"> 
+                  1991 </option>
+<option value="1992"> 
+                  1992 </option>
+<option value="1993"> 
+                  1993 </option>
+<option value="1994"> 
+                  1994 </option>
+<option value="1995"> 
+                  1995 </option>
+<option value="1996"> 
+                  1996 </option>
+<option value="1997"> 
+                  1997 </option>
+<option value="1998"> 
+                  1998 </option>
+<option value="1999"> 
+                  1999 </option>
+<option value="2000"> 
+                  2000 </option>
+<option value="2001"> 
+                  2001 </option>
+<option value="2002"> 
+                  2002 </option>
+<option value="2003"> 
+                  2003 </option>
+<option value="2004"> 
+                  2004 </option>
+<option value="2005"> 
+                  2005 </option>
+<option value="2006"> 
+                  2006 </option>
+<option value="2007"> 
+                  2007 </option>
+<option value="2008"> 
+                  2008 </option>
+<option value="2009"> 
+                  2009 </option>
+<option value="2010"> 
+                  2010 </option>
+<option value="2011"> 
+                  2011 </option>
+<option value="2012"> 
+                  2012 </option>
+<option value="2013"> 
+                  2013 </option>
+<option selected="" value="2014"> 
+                  2014 </option>
+</select>
+</font></td>
+</tr>
+</tbody></table>
+<p>
+<font class="text" size="2"><b>
+				You must select at least one state.  Please try again</b>
+</font>
+</p>
+<p><br/>
+<input name="NextPage" type="submit" value="Get Table"/>
+<input name="Cancel" type="reset" value="Reset Form"/>
+</p>
+</form>
+<p><font class="text"><b>*</b> See <b><a href="/offenses.cfm">UCR Offense Definitions</a></b> 
+    for the crimes included in each category.<br/>
+<br/>
+</font>
+</p><hr/>
+<font class="text">Please note that cookies may be set on your computer to assist 
+  you in selecting data of interest. These are used only during the session and 
+  are not used for any other purpose.</font> </blockquote>
+<div class="indent">
+<table align="default" border="0" classs="tblMain">
+<tbody><tr>
+<td colspan="4" width="3%">  
+      
+    </td>
+</tr>
+<tr>
+<td align="CENTER" colspan="4" width="3%">
+<a class="unchanged" href="/index.cfm">Home page</a> 
+      | <a class="unchanged" href="#top">Top of this page</a>
+</td>
+</tr>
+<tr>
+<td colspan="4" width="3%">  
+      
+    </td>
+</tr>
+</tbody></table>
+</div>
+<table bgcolor="#990000" border="0" cellpadding="0" cellspacing="0" classs="tblMain">
+<tbody><tr><td><img alt="  " border="0" height="2" src="http://www.ucrdatatool.gov//images/spacer.gif" width="2"/><br/></td></tr>
+</tbody></table>
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td><table align="right" border="0" cellpadding="1" cellspacing="2">
+<tbody><tr>
+<td>
+<div align="center"><span class="footer"><font face="Arial, Helvetica, sans-serif" size="-2"><a href="http://www.regulations.gov">eRulemaking</a> | <a href="https://www.fbi.gov/services/records-management/foia">Freedom 
+              of Information Act/Privacy</a><font face="Arial, Helvetica, sans-serif" size="-2"> 
+              | </font><a href="https://www.justice.gov/legalpolicies">Legal 
+              Policies and Disclaimers</a> |<font face="Arial, Helvetica, sans-serif" size="-2"> <a href="https://www.usa.gov/">USA.gov</a> |</font> <a href="https://www.whitehouse.gov/">White House</a><br/>
+            UCRDATATOOL.gov is an official site of the U.S. Federal Government, <a href="https://www.justice.gov/">U.S. Department of Justice</a>.        </font></span><br/>
+<br/>
+</div></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody></table></td>
+</tr>
+</tbody></table>
+<p></p>
+<script id="" type="text/javascript">(function(c){var a=document,d,e=a.createElement("script"),a=a.head||a.getElementsByTagName("head")[0],f={src:"//gateway.answerscloud.com/bjs-gov/production/gateway.min.js",type:"text/javascript",async:"true","data-vendor":"acs","data-role":"gateway"},b;for(b in f)e.setAttribute(b,f[b]);a.appendChild(e);c.acsReady=function(){var a="__acsReady__",b=Array.prototype.slice.call(arguments,0),e=setInterval(function(){if("function"===typeof c[a])for(clearInterval(e),d=0;d<b.length;d++)c[a].call(c,function(a){return function(){setTimeout(a,
+1)}}(b[d]))},50)}})(window);</script></body></html>

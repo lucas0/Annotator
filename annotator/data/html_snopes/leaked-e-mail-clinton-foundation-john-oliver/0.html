@@ -1,0 +1,214 @@
+<html class="js flexbox flexboxlegacy webgl no-touch geolocation rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent svg inlinesvg smil svgclippaths responsejs pc chrome" dir="ltr" lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#" style=""><head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta charset="utf-8"/><script async="" src="//www.googleadservices.com/pagead/conversion_async.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MW2TKG"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<link href="https://www.clintonfoundation.org/sites/all/themes/custom/cf/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<link href="https://www.clintonfoundation.org/blog/feed" rel="alternate" title="Close Up: The official Clinton Foundation Blog" type="application/rss+xml"/>
+<meta content="More than 20 years of global data compiled by No Ceilings shows that while progress is possible, more must be done to achieve ‘full and equal …" name="description"/>
+<meta content="Drupal 7 (http://drupal.org)" name="generator"/>
+<link href="https://www.clintonfoundation.org/sites/default/files/cf-pr-twitter-9.png" rel="image_src"/>
+<link href="https://www.clintonfoundation.org/press-releases/hillary-rodham-clinton-melinda-gates-and-chelsea-clinton-join-international-and" rel="canonical"/>
+<link href="https://www.clintonfoundation.org/node/6274" rel="shortlink"/>
+<meta content="Clinton Foundation" property="og:site_name"/>
+<meta content="article" property="og:type"/>
+<meta content="https://www.clintonfoundation.org/press-releases/hillary-rodham-clinton-melinda-gates-and-chelsea-clinton-join-international-and" property="og:url"/>
+<meta content="Hillary Rodham Clinton, Melinda Gates, and Chelsea Clinton Join International and Community Leaders for Official Release of the No Ceilings Full Participation Report on Status of Women and Girls" property="og:title"/>
+<meta content="https://www.clintonfoundation.org/sites/default/files/cf-pr-twitter-9.png" property="og:image"/>
+<meta content="https://www.clintonfoundation.org/sites/default/files/cf-pr-twitter-9.png" property="og:image:url"/>
+<meta content="https://www.clintonfoundation.org/sites/default/files/cf-pr-twitter-9.png" property="og:image:secure_url"/>
+<title>Hillary Rodham Clinton, Melinda Gates, and Chelsea Clinton Join International and Community Leaders for Official Release of the No Ceilings Full Participation Report on Status of Women and Girls | Clinton Foundation</title>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width" name="viewport"/>
+<meta content="on" http-equiv="cleartype"/>
+<link href="https://www.clintonfoundation.org/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" rel="stylesheet"/>
+<link href="https://www.clintonfoundation.org/sites/default/files/css/css_TNbm4Z0zIjGDE1_JNtNMuwoJ2DfzhxX9_YIBNS-NQQE.css" media="all" rel="stylesheet"/>
+<link href="https://www.clintonfoundation.org/sites/default/files/css/css_UNOrpBE8O7WlgbKGqyicqgGOc8Mzb-jqePXSxPnwhys.css" media="all" rel="stylesheet"/>
+<link href="https://www.clintonfoundation.org/sites/default/files/css/css_OGAMgnsr0MRqJ7DyshL3uCQMBJCtMrfDbhBmIpROIGo.css" media="all" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700,700italic,800,800italic|Open+Sans+Condensed:300,700&amp;subset=latin" media="all" rel="stylesheet"/>
+<link href="https://www.clintonfoundation.org/sites/all/themes/custom/cf/css/styles.css?pq47rb" media="all" rel="stylesheet"/>
+<link href="https://www.clintonfoundation.org/sites/all/themes/custom/cf/css/styles2.css?pq47rb" media="all" rel="stylesheet"/>
+<link href="https://www.clintonfoundation.org/sites/all/themes/custom/cf/css/styles3.css?pq47rb" media="all" rel="stylesheet"/>
+<link href="https://www.clintonfoundation.org/sites/default/files/css/css_AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs.css" media="all" rel="stylesheet"/>
+<script src="https://www.clintonfoundation.org/sites/all/libraries/modernizr/modernizr.min.js?pq47rb"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/jquery/1.7/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.clintonfoundation.org/sites/default/files/js/js_bT3dsSpP6ggrYBcYLAPBSRgcI-3F97Hqmm8RTQX6K_4.js"></script>
+<script src="https://www.clintonfoundation.org/sites/default/files/js/js_QVMy4A7kn5LGpAO16Hxnc7Yz51psmuD0GqdvjyGBEKY.js"></script>
+<script src="https://www.clintonfoundation.org/sites/default/files/js/js_9Dut6aRm25dlBWg6j2giz7HruArdnwyKO5bOp3PFD08.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-855260-1", {"cookieDomain":".clintonfoundation.org"});(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MW2TKG');ga("send", "pageview");</script>
+<script src="https://www.clintonfoundation.org/sites/default/files/js/js_elY-dJSUo6ctb2bODF8VpvuW04iXka86GuWCPjbDzHA.js"></script>
+<script src="https://www.clintonfoundation.org/sites/default/files/js/js_AqYyDdH92aAoGvjPd891Yc_MiTHncno5OAIuLUaa5tc.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"cf","theme_token":"sifG3FvIyLmcSOH--C7_5jqbj95_FWIq3mR0vKjWKAo","js":{"sites\/all\/libraries\/equalheights\/jQuery.equalHeights.js":1,"sites\/all\/modules\/contrib\/chosen\/chosen.js":1,"sites\/all\/modules\/contrib\/clientside_validation\/js\/clientside_validation.ie8.js":1,"sites\/all\/modules\/contrib\/clientside_validation\/js\/clientside_validation.js":1,"sites\/all\/libraries\/modernizr\/modernizr.min.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.7.2\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/jquery-throttle-debounce\/jquery.ba-throttle-debounce.min.js":1,"sites\/all\/libraries\/response\/response.min.js":1,"sites\/all\/modules\/custom\/cf_lightbox\/js\/cf_lightbox.js":1,"sites\/all\/modules\/contrib\/cs_adaptive_image\/cs_adaptive_image.js":1,"sites\/all\/modules\/contrib\/media_colorbox\/media_colorbox.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"sites\/all\/modules\/custom\/features\/cf_common\/js\/analytics.js":1,"sites\/all\/modules\/custom\/cf_misc\/js\/cf_misc.placeholder.js":1,"sites\/all\/libraries\/chosen\/chosen.jquery.min.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"1":1,"sites\/all\/libraries\/jquery.validate\/dist\/jquery.validate.js":1,"sites\/all\/libraries\/jquery.validate\/dist\/additional-methods.js":1,"sites\/all\/themes\/custom\/cf\/js\/jquery.mCustomScrollbar.concat.min.js":1,"sites\/all\/themes\/custom\/cf\/js\/jquery.uniform.min.js":1,"sites\/all\/themes\/custom\/cf\/js\/responsive.js":1,"sites\/all\/themes\/custom\/cf\/js\/search-collapse.js":1,"sites\/all\/themes\/custom\/cf\/js\/jquery.actual.min.js":1,"sites\/all\/themes\/custom\/cf\/js\/script.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/libraries\/chosen\/chosen.css":1,"sites\/all\/modules\/contrib\/chosen\/css\/chosen-drupal.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/themes\/custom\/cf\/layouts\/cf_head_3col_split_lower\/cf_head_3col_split_lower.css":1,"sites\/all\/themes\/custom\/cf\/system.menus.css":1,"sites\/all\/themes\/custom\/cf\/system.messages.css":1,"sites\/all\/themes\/custom\/cf\/system.theme.css":1,"sites\/all\/themes\/custom\/cf\/css\/jquery.mCustomScrollbar.css":1,"sites\/all\/themes\/custom\/cf\/css\/uniform.default.min.css":1,"https:\/\/fonts.googleapis.com\/css?family=Open+Sans:300,300italic,600,600italic,700,700italic,800,800italic|Open+Sans+Condensed:300,700\u0026subset=latin":1,"sites\/all\/themes\/custom\/cf\/css\/styles.css":1,"sites\/all\/themes\/custom\/cf\/css\/styles2.css":1,"sites\/all\/themes\/custom\/cf\/css\/styles3.css":1,"sites\/all\/themes\/custom\/cf\/css\/uncompiled.css":1}},"chosen":{"selector":"none","minimum":"10","minimum_width":"350","search_contains":true,"placeholder_text_multiple":"Choose some options","placeholder_text_single":"Choose an option","no_results_text":"No results match"},"colorbox":{"transition":"elastic","speed":"350","opacity":"0.85","slideshow":false,"slideshowAuto":true,"slideshowSpeed":"2500","slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":true,"returnFocus":true,"maxWidth":"800px","maxHeight":"98%","initialWidth":"300","initialHeight":"250","fixed":true,"scrolling":false,"mobiledetect":true,"mobiledevicewidth":"480px"},"extlink":{"extTarget":0,"extClass":"ext","extLabel":"(link is external)","extImgClass":0,"extSubdomains":1,"extExclude":"","extInclude":"","extCssExclude":".pane-our-work-at-a-glance-mini-panel .share-this,\r\n.cta","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":"mailto","mailtoLabel":"(link sends e-mail)"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip","trackDomainMode":"1"},"clientsideValidation":{"forms":{"search-block-form":{"rules":{"search_block_form":{"maxlength":128}},"messages":{"search_block_form":{"maxlength":"Search field has a maximum length of 128."}},"errorPlacement":"2","general":{"errorClass":"error","wrapper":"li","validateTabs":0,"scrollTo":1,"scrollSpeed":"1000","disableHtml5Validation":"1","validateOnBlur":"1","validateOnBlurAlways":"1","validateOnKeyUp":"1","validateBeforeAjax":"0","validateOnSubmit":"1","showMessages":"0","errorElement":"div"}}},"general":{"usexregxp":0,"months":{"January":1,"Jan":1,"February":2,"Feb":2,"March":3,"Mar":3,"April":4,"Apr":4,"May":5,"June":6,"Jun":6,"July":7,"Jul":7,"August":8,"Aug":8,"September":9,"Sep":9,"October":10,"Oct":10,"November":11,"Nov":11,"December":12,"Dec":12}},"groups":{"search-block-form":{}}},"urlIsAjaxTrusted":{"\/press-releases\/hillary-rodham-clinton-melinda-gates-and-chelsea-clinton-join-international-and":true}});</script>
+<!--[if lt IE 9]>
+      <script src="/sites/all/themes/contrib/zen/js/html5-respond.js"></script>
+      <![endif]-->
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-6274 node-type-press-release section-press-releases page-panels panel-layout panel-layout-cf-head-3col-split-lower no-right left no-header-full-bleed no-header is-not-cgi-front without-hero-image">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-MW2TKG" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<a name="top"></a>
+<p id="skip-link">
+<a class="element-invisible element-focusable" href="#main-menu">Jump to navigation</a>
+</p>
+<div id="page">
+<header class="header" id="header" role="banner">
+<div class="inner">
+<div class="region region-masthead">
+<div class="block block-search first odd search-form-collapse" id="block-search-form" role="search">
+<h2 class="block__title block-title">Search</h2>
+<div class="block-content">
+</div>
+</div>
+<div class="block block-menu-block last even" id="block-menu-block-5" role="navigation">
+<div class="block-content">
+<div class="menu-block-wrapper menu-block-5 menu-name-menu-utility-menu parent-mlid-0 menu-level-1">
+<div class="wrap-menu-tree"><ul class="menu"><li class="menu__item is-parent is-leaf first leaf has-children menu-mlid-1542"><a class="menu__link" href="/about">About</a></li>
+<li class="menu__item is-parent is-leaf leaf has-children menu-mlid-5395"><a class="menu__link" href="/media-center">Media Center</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2321"><a class="menu__link" href="/careers">Careers</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2985"><a class="menu__link" href="/contact-us">Contact Us</a></li>
+</ul></div></div>
+</div>
+</div>
+<div class="block block-mobile-menu">
+<a class="mobile-masthead-menu-processed" href="#" id="mobile-masthead-menu">Menu</a>
+</div>
+</div><form accept-charset="UTF-8" action="/press-releases/hillary-rodham-clinton-melinda-gates-and-chelsea-clinton-join-international-and" id="search-block-form" method="post" novalidate="novalidate"><div><div class="container-inline">
+<div class="form-item form-type-searchfield form-item-search-block-form">
+<label class="element-invisible" for="edit-search-block-form--2">Search </label>
+<input class="form-text form-search" id="edit-search-block-form--2" maxlength="128" name="search_block_form" placeholder="Enter Search Terms" size="15" title="Enter the terms you wish to search for." type="search" value=""/>
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input class="form-submit" id="edit-submit" name="op" type="submit" value="Search"/></div><input name="form_build_id" type="hidden" value="form-ubpw8a6uY57f1JrZbn0W51gTsZGnUNFWo-W2p_zk4ZU"/>
+<input name="form_id" type="hidden" value="search_block_form"/>
+</div>
+</div></form>
+</div>
+</header>
+<div id="main">
+<div id="navigation">
+<div class="inner">
+<div class="region region-navigation"><div class="block block-blockify first odd" id="block-blockify-blockify-site-name">
+<div class="block-content">
+<span id="site-name"><a href="/" rel="home" title="Return to the Clinton Foundation home page"><span>Clinton Foundation</span></a></span> </div>
+</div>
+<div class="block block-menu-block last even" id="block-menu-block-3" role="navigation">
+<div class="block-content">
+<div class="menu-block-wrapper menu-block-3 menu-name-main-menu parent-mlid-0 menu-level-1">
+<div class="wrap-menu-tree"><ul class="menu jquery-once-1-processed"><li class="filler"></li><li class="menu__item is-expanded first expanded menu-mlid-1545 megamenu parent closed"><a class="menu__link">Our Work</a><div class="wrap-menu-tree menu-tree-with-view-all"><ul class="menu"><li class="menu__item is-expanded first expanded menu-mlid-1547"><span class="menu__link nolink">Initiatives</span><div class="wrap-menu-tree"><ul class="menu"><li class="menu__item is-parent is-leaf first leaf has-children menu-mlid-1630"><a class="menu__link" href="/our-work/clinton-climate-initiative">Clinton Climate Initiative</a></li>
+<li class="menu__item is-parent is-leaf leaf has-children menu-mlid-2842"><a class="menu__link" href="/our-work/clinton-development-initiative">Clinton Development Initiative</a></li>
+<li class="menu__item is-parent is-leaf leaf has-children menu-mlid-1634"><a class="menu__link" href="/our-work/clinton-giustra-enterprise-partnership">Clinton Giustra Enterprise Partnership</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-3040"><a class="menu__link" href="/our-work/clinton-global-initiative">Clinton Global Initiative</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6058"><a class="menu__link" href="https://www.clintonfoundation.org/clinton-global-initiative/meetings/cgi-university">Clinton Global Initiative University</a></li>
+<li class="menu__item is-parent is-leaf leaf has-children menu-mlid-1637"><a class="menu__link" href="/our-work/clinton-health-matters-initiative">Clinton Health Matters Initiative</a></li>
+<li class="menu__item is-parent is-leaf leaf has-children menu-mlid-1544"><a class="menu__link" href="/clinton-presidential-center">Clinton Presidential Center</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2850"><a class="menu__link" href="/our-work/too-small-fail">Too Small to Fail</a></li>
+</ul></div></li>
+<li class="menu__item is-expanded last expanded menu-mlid-4269"><span class="menu__link nolink">Affiliated Entities</span><div class="wrap-menu-tree"><ul class="menu"><li class="menu__item is-parent is-leaf first leaf has-children menu-mlid-1629"><a class="menu__link" href="/our-work/alliance-healthier-generation">Alliance for a Healthier Generation</a></li>
+<li class="menu__item is-parent is-leaf last leaf has-children menu-mlid-1636"><a class="menu__link" href="/our-work/clinton-health-access-initiative">Clinton Health Access Initiative</a></li>
+</ul></div></li>
+</ul><div class="view-all"><div class="pad"></div><div class="view-all-link"><a href="/our-work">View all Our Work</a></div></div></div></li>
+<li class="menu__item is-expanded expanded menu-mlid-6052 no-megamenu"><a class="menu__link" href="/get-involved">Get Involved</a></li>
+<li class="menu__item is-expanded expanded menu-mlid-1687 no-megamenu"><a class="menu__link" href="/blog">Blog</a></li>
+<li class="menu__item is-expanded expanded menu-mlid-2849 no-megamenu"><a class="menu__link" href="/support-us">Support Us</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2373 no-megamenu"><a class="menu__link" href="https://bbis.clintonfoundation.org/donate_now" target="_blank">Donate</a></li>
+</ul></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="column" id="content" role="main">
+<div class="panel-display panel-cf-head-3col-split-lower">
+<div class="center-wrapper center-wrapper-1 clearfix">
+<div class="panel-panel panel-left">
+<div class="panel-pane pane-entity-field-extra pane-node-circle-date">
+<div class="pane-content">
+<div class="circle-date single"><div class="day">Wednesday</div><div class="date">Feb 25</div><div class="year">2015</div></div> </div>
+</div>
+</div>
+<div class="panel-panel panel-main">
+<div class="panel-pane pane-node-title">
+<div class="pane-content">
+<h2 class="node-title">Hillary Rodham Clinton, Melinda Gates, and Chelsea Clinton Join International and Community Leaders for Official Release of the  No Ceilings Full Participation Report on Status of Women and Girls </h2>
+</div>
+</div><div class="panel-pane pane-entity-field pane-node-field-publish-date">
+<div class="pane-content">
+<div class="field-publish-date">
+<span class="date-display-single" content="2015-02-25T17:00:00-05:00" datatype="xsd:dateTime" property="dc:date">February 25, 2015</span> </div>
+</div>
+</div>
+<div class="panel-pane pane-entity-field pane-node-field-pr-location">
+<div class="pane-content">
+<div class="field-pr-location">
+    New York, NY  </div>
+</div>
+</div>
+<div class="panel-pane pane-entity-field pane-node-field-pr-type">
+<div class="pane-content">
+<div class="field-pr-type">
+    Press Release  </div>
+</div>
+</div>
+<div class="panel-pane pane-entity-field pane-node-body">
+<div class="pane-content">
+<div class="field-body">
+<p align="center"><em>More than 20 years of global data compiled by No Ceilings shows that while progress is possible, more must be done to achieve ‘full and equal participation’ of women and girls worldwide</em></p><p><strong>New York, NY –</strong> Former Secretary of State Hillary Rodham Clinton, Gates Foundation Co-Chair Melinda Gates and Clinton Foundation Vice Chair Chelsea Clinton will join global and community leaders for the official release of the <em>No Ceilings Full Participation Report</em> on Monday, March 9, in New York City. The event will coincide with the start of the 59<sup>th</sup> session of the United Nations’ Commission on the Status of Women.<br/><br/>The <em>No Ceilings Full Participation Report</em> is the culmination of a year-long, global data aggregation effort by the Bill, Hillary &amp; Chelsea Clinton Foundation and the Bill &amp; Melinda Gates Foundation, in collaboration with The Economist Intelligence Unit, UCLA WORLD Policy Analysis Center and Fathom Information Design. The report identifies the significant gains women and girls have made – and the gaps that still remain – since the U.N. Fourth World Conference on Women in Beijing in 1995, when Secretary Clinton called on the international community to ensure “women’s rights are human rights.” Benchmarking process since that landmark event, <em>No Ceilings</em> is making the data open and accessible, and is pairing the report with an interactive, shareable collection of data visualizations. The data visualizations will highlight key findings from the data through interactive stories, as well as allow users the ability to explore the data on their own.<br/><br/>More event details:  <br/><br/><strong>Who: </strong>Former Secretary of State Hillary Rodham Clinton<br/>Melinda Gates, Co-Chair, Bill &amp; Melinda Gates Foundation<br/>Chelsea Clinton, Vice Chair, Clinton Foundation<br/>Additional participants to be announced</p><p><strong>What</strong>: The <em>No Ceilings Full Participation Report</em> Release<br/><br/><strong>When: </strong>Monday, March 9, 2015 at 11:00 AM ET<br/><br/><strong>Where</strong>: Best Buy Theater<br/>1515 Broadway (side entrance on 44th Street)<br/>New York, NY</p><p>Livestream of this event can also be found at <a href="//www.clintonfoundation.org/noceilings">www.clintonfoundation.org/noceilings</a>. The hashtag for the event and report release is #NoCeilings.<br/><br/><strong>Press registration is now open to the members of the media. To apply, please complete this </strong><a href="//www.clintonfoundation.org/press-rsvp-no-ceilings-full-participation-report-release"><strong>form</strong></a><strong>. The deadline to apply is Wednesday, March 4, by 5:00 PM ET.</strong> <strong>Only press who have received confirmation of credentials will be guaranteed entry into the event. </strong>Media will receive an email confirmation from <a class="mailto" href="mailto:press@clintonfoundation.org">press@clintonfoundation.org<span class="mailto"><span class="element-invisible"> (link sends e-mail)</span></span></a> with details about picking up your credential. To pick up your credential, a valid government-issued ID is required.<br/><br/>For questions regarding registration, please email <a class="mailto" href="mailto:press@clintonfoundation.org">press@clintonfoundation.org<span class="mailto"><span class="element-invisible"> (link sends e-mail)</span></span></a>.  <br/><br/>Follow <a class="ext" href="https://twitter.com/clintonfdn">@ClintonFdn<span class="ext"><span class="element-invisible"> (link is external)</span></span></a> and <a class="ext" href="https://twitter.com/gatesfoundation">@GatesFoundation<span class="ext"><span class="element-invisible"> (link is external)</span></span></a> on Twitter for live updates, event news, and highlights. More details can also be found on Facebook at <a class="ext" href="https://www.facebook.com/ClintonFoundation">facebook.com/clintonfoundation<span class="ext"><span class="element-invisible"> (link is external)</span></span></a> and <a class="ext" href="https://www.facebook.com/billmelindagatesfoundation">www.facebook.com/billmelindagatesfoundation<span class="ext"><span class="element-invisible"> (link is external)</span></span></a>.</p><p align="center"># # #</p><p>Learn more about our work at <a href="//www.clintonfoundation.org/about">http://www.clintonfoundation.org/about</a>, on Facebook at <a class="ext" href="https://facebook.com/ClintonFoundation" target="_blank">Facebook.com/ClintonFoundation</a> and on Twitter <a class="ext" href="https://twitter.com/clintonfdn" target="_blank">@ClintonFdn</a>.</p><p><strong>About the Bill &amp; Melinda Gates Foundation </strong><br/>Guided by the belief that every life has equal value, the Bill &amp; Melinda Gates Foundation works to help all people lead healthy, productive lives. In developing countries, it focuses on improving people’s health and giving them the chance to lift themselves out of hunger and extreme poverty. In the United States, it seeks to ensure that all people—especially those with the fewest resources—have access to the opportunities they need to succeed in school and life. Based in Seattle, Washington, the foundation is led by CEO Sue Desmond-Hellmann and Co-chair William H. Gates Sr., under the direction of Bill and Melinda Gates and Warren Buffett.</p> </div>
+</div>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
+<footer id="footer">
+<div class="region region-footer-upper" id="footer-upper">
+<div class="inner">
+<div class="block block-cf-social first odd" id="block-cf-social-social-media-links">
+<div class="block-content">
+<h2 class="site-name"><a href="/" title="Clinton Foundation">Clinton Foundation</a></h2><div class="address"><span class="street">1633 Broadway </span><span class="floor">5th Floor </span><span class="city-state-zip">New York, NY 10019 </span><span class="phone">212-397-2255</span></div><div class="social-media-links"><span class="cf-common-social-accounts-facebook"><a class="ext" href="https://www.facebook.com/ClintonFoundation" title="Facebook">Facebook<span class="ext"><span class="element-invisible"> (link is external)</span></span></a></span><span class="cf-common-social-accounts-twitter"><a class="ext" href="https://twitter.com/ClintonFdn" title="Twitter">Twitter<span class="ext"><span class="element-invisible"> (link is external)</span></span></a></span><span class="cf-common-social-accounts-youtube"><a class="ext" href="https://www.youtube.com/user/clintonfoundationorg" title="YouTube">YouTube<span class="ext"><span class="element-invisible"> (link is external)</span></span></a></span><span class="cf-common-social-accounts-instagram"><a class="ext" href="https://instagram.com/ClintonFoundation" title="Instagram">Instagram<span class="ext"><span class="element-invisible"> (link is external)</span></span></a></span></div><div class="charity-navigator"><a href="https://www.charitynavigator.org/index.cfm?bay=search.summary&amp;orgid=16680" target="_blank"><img src="https://www.clintonfoundation.org/sites/all/modules/custom/cf_social/images/CN-4starBanner.jpg"/></a></div> </div>
+</div>
+<div class="block block-menu-block even" id="block-menu-block-1" role="navigation">
+<a class="link-back-to-top mobile-backtotop-processed" href="#top">Back to top</a>
+<div class="block-content">
+<div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-1">
+<div class="wrap-menu-tree"><ul class="menu"><li class="menu__item is-parent is-leaf first leaf has-children menu-mlid-1545"><a class="menu__link" href="/our-work">Our Work</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6052"><a class="menu__link" href="/get-involved">Get Involved</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-1687"><a class="menu__link" href="/blog">Blog</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2849"><a class="menu__link" href="/support-us">Support Us</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2373"><a class="menu__link" href="https://bbis.clintonfoundation.org/donate_now" target="_blank">Donate</a></li>
+</ul></div></div>
+</div>
+</div>
+<div class="block block-menu last odd" id="block-menu-menu-footer-upper-menu" role="navigation">
+<div class="block-content">
+<div class="wrap-menu-tree"><ul class="menu"><li class="menu__item is-leaf first leaf"><a class="menu__link" href="/about">About</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="/media-center">Press</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="/clinton-presidential-center">Presidential Center</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="/about/contact-us">Contact Us</a></li>
+<li class="menu__item is-leaf last leaf"><a class="menu__link" href="/careers">Careers</a></li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+<div class="region region-footer-lower" id="footer-lower">
+<div class="inner">
+<div class="block block-menu first odd" id="block-menu-menu-footer-menu" role="navigation">
+<div class="block-content">
+<div class="wrap-menu-tree"><ul class="menu"><li class="menu__item is-leaf first leaf"><a class="menu__link" href="https://www.clintonfoundation.org/sitemap">Site Map</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="/fraud-alert">Fraud Alert</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="/terms-use">Terms of Use</a></li>
+<li class="menu__item is-leaf last leaf"><a class="menu__link" href="/privacy-policy">Privacy Policy</a></li>
+</ul></div> </div>
+</div>
+<div class="block block-block last even" id="block-block-1">
+<div class="block-content">
+<p>The Clinton Foundation is a 501(c)(3) not-for-profit <span>organization</span></p> </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="https://www.clintonfoundation.org/sites/default/files/js/js_WG_xInLOYnT2x7TgRiscK-QXV_SC2mbQLlLfGq1i4zQ.js"></script>
+<script src="https://www.clintonfoundation.org/sites/default/files/js/js_npnM-0RaTVfjWAiZJDLaULF9JQnqGg68L1uBuadjBaA.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a9bdb745e1","applicationID":"77661180","transactionName":"M1BTbUsAVhdTW0FRCwoacFpNCFcKHUhUXwE7WFBXWAZdFm1WWlwBO0NYXE4+SAVVXQ==","queueTime":0,"applicationTime":604,"atts":"HxdQGwMaRRk=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<div id="cboxOverlay" style="display: none;"></div><div class="" id="colorbox" role="dialog" style="display: none;" tabindex="-1"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button id="cboxPrevious" type="button"></button><button id="cboxNext" type="button"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

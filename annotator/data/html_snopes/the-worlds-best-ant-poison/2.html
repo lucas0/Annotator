@@ -1,0 +1,356 @@
+<html class="js js no-touch cssanimations csstransitions" dir="ltr" lang="en" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#" style=""><head>
+<meta charset="utf-8"/><script async="" id="pxscrpt" src="https://t.sharethis.com/1/d/t.dhj?rnd=1562482466101&amp;cid=c010&amp;dmn=lemelson.mit.edu"></script><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflPBjLfx/www-widgetapi.js" type="text/javascript"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script id="async-buttons" src="https://ws.sharethis.com/button/async-buttons.js" type="text/javascript"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<link href="http://lemelson.mit.edu/sites/default/files/lemelson-favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<link href="http://web.mit.edu/invent//node/1" rel="shortlink"/>
+<link href="http://web.mit.edu/invent//home" rel="canonical"/>
+<meta content="Drupal 7 (http://drupal.org)" name="Generator"/>
+<title>Lemelson-MIT Program</title>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<meta content="on" http-equiv="cleartype"/>
+<link href="http://lemelson.mit.edu/sites/default/files/css/css_kShW4RPmRstZ3SpIC-ZvVGNFVAi0WEMuCnI0ZkYIaFw.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://lemelson.mit.edu/sites/default/files/css/css_9nIoSveUPwlBrdyxfxzH-5zp2Bq8PPl9nYrtkoB4xLI.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://lemelson.mit.edu/sites/default/files/css/css_FTekvRbB6-HMyMkbN3liA45AInhkS0YOF9VESEIpxaM.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://lemelson.mit.edu/sites/default/files/css/css_Mb_4IKFTXxqUi-SBm1guN4bTyewMuJY9PPMeyva_QhQ.css" media="all" rel="stylesheet" type="text/css"/>
+<script src="http://lemelson.mit.edu/sites/default/files/js/js_0RyHJ63yYLuaWsodCPCgSD8dcTIA0dqcDf8-7c2XdBw.js"></script>
+<script src="http://lemelson.mit.edu/sites/default/files/js/js_aV84p04ZybobNAWRu9PCuCYIhlL-RG3YLDBpEDlqxw4.js"></script>
+<script src="http://lemelson.mit.edu/sites/default/files/js/js_NpX2cwCeepkWZZ194B6-ViyVBHleaYLOx5R9EWBOMRU.js"></script>
+<script src="http://lemelson.mit.edu/sites/default/files/js/js_Lq69disZ80cukJQNxSHnwmMcWNkNZ5mRWyLWdSv4mg8.js"></script>
+<script>var switchTo5x = true;</script>
+<script src="http://w.sharethis.com/button/buttons.js"></script>
+<script>if (stLight !== undefined) { stLight.options({"publisher":"dr-77fb3310-d841-993e-e0ec-ebf66d41f39a","version":"5x"}); }</script>
+<script src="http://lemelson.mit.edu/sites/default/files/js/js_gPqjYq7fqdMzw8-29XWQIVoDSWTmZCGy9OqaHppNxuQ.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-5283201-13", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="http://lemelson.mit.edu/sites/default/files/js/js_tcveoyeb4zocTlyZEs_rqu7iMlBIp1CEiju1uhmPAN8.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"invent","theme_token":"N3a4XgwcgeWOMkKRM5u0im_4M_LW4INevCtuwFPAM6s","jquery_version":"1.7","js":{"profiles\/lemelson\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/lemelson\/libraries\/jquery.bgiframe\/jquery.bgiframe.js":1,"profiles\/lemelson\/libraries\/jquery.hoverIntent\/jquery.hoverIntent.js":1,"profiles\/lemelson\/modules\/contrib\/nice_menus\/js\/superfish.js":1,"profiles\/lemelson\/modules\/contrib\/nice_menus\/js\/nice_menus.js":1,"profiles\/lemelson\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"profiles\/lemelson\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"profiles\/lemelson\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"profiles\/lemelson\/modules\/contrib\/extlink\/extlink.js":1,"profiles\/lemelson\/libraries\/colorbox\/jquery.colorbox-min.js":1,"profiles\/lemelson\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"profiles\/lemelson\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"profiles\/lemelson\/modules\/contrib\/colorbox\/js\/colorbox_load.js":1,"profiles\/lemelson\/modules\/contrib\/colorbox\/js\/colorbox_inline.js":1,"profiles\/lemelson\/modules\/contrib\/quickbar\/js\/quickbar.js":1,"profiles\/lemelson\/modules\/contrib\/views_load_more\/views_load_more.js":1,"profiles\/lemelson\/modules\/contrib\/views\/js\/base.js":1,"misc\/progress.js":1,"profiles\/lemelson\/modules\/contrib\/views\/js\/ajax_view.js":1,"0":1,"http:\/\/w.sharethis.com\/button\/buttons.js":1,"1":1,"profiles\/lemelson\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"profiles\/lemelson\/themes\/custom\/invent\/js\/equalize.min.js":1,"profiles\/lemelson\/themes\/custom\/invent\/js\/modernizr.custom.js":1,"profiles\/lemelson\/themes\/custom\/invent\/js\/jquery.dlmenu.js":1,"profiles\/lemelson\/themes\/custom\/invent\/js\/jquery.flexslider-min.js":1,"profiles\/lemelson\/themes\/custom\/invent\/js\/waypoints.min.js":1,"profiles\/lemelson\/themes\/custom\/invent\/js\/waypoints-sticky.min.js":1,"profiles\/lemelson\/themes\/custom\/invent\/js\/ga-youtube-video.js":1,"profiles\/lemelson\/themes\/custom\/invent\/js\/script.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"profiles\/lemelson\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/lemelson\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"profiles\/lemelson\/modules\/contrib\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"profiles\/lemelson\/modules\/contrib\/extlink\/extlink.css":1,"profiles\/lemelson\/modules\/contrib\/views\/css\/views.css":1,"profiles\/lemelson\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"profiles\/lemelson\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"profiles\/lemelson\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/lemelson\/modules\/contrib\/quickbar\/theme\/quickbar.css":1,"profiles\/lemelson\/modules\/contrib\/nice_menus\/css\/nice_menus.css":1,"profiles\/lemelson\/modules\/contrib\/nice_menus\/css\/nice_menus_default.css":1,"profiles\/lemelson\/themes\/custom\/invent\/system.menus.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/1-normalize.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/2-layout.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/3-default.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/4-forms.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/5-blocks.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/6-header-footer-nav.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/7-content-types.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/8-views.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/9-special-pages-and-elements.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/10-homepage.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/11-controls.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/12-ie.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/13-print.css":1,"profiles\/lemelson\/themes\/custom\/invent\/css\/flexslider.css":1,"profiles\/lemelson\/themes\/custom\/invent\/nice_menus_default.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"nice_menus_options":{"delay":"200","speed":"fast"},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:5a5ba534568424a71f6abe0778ac7560":{"view_name":"news","view_display_id":"news_stream","view_args":"","view_path":"node\/1","view_base_path":null,"view_dom_id":"5a5ba534568424a71f6abe0778ac7560","pager_element":0}}},"urlIsAjaxTrusted":{"\/views\/ajax":true,"\/":true},"better_exposed_filters":{"views":{"news":{"displays":{"news_stream":{"filters":[]}}},"tweets":{"displays":{"block":{"filters":[]}}}}},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extSubdomains":0,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1,"trackCrossDomains":["lemelson.mit.edu"]}});</script>
+<script src="//www.youtube.com/iframe_api" type="text/javascript"></script>
+<!--[if lt IE 9]>
+    <script src="/profiles/lemelson/themes/contrib/zen/js/html5-respond.js"></script>
+    <![endif]-->
+<link href="https://ws.sharethis.com/button/css/buttons-secure.css" rel="stylesheet" type="text/css"/></head>
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-1 node-type-page">
+<p id="skip-link">
+<a class="element-invisible element-focusable" href="#main-menu">Jump to navigation</a>
+</p>
+<div class="clearfix" id="page">
+<header id="header" role="banner">
+<div class="wrapper">
+<div id="header-content"><div class="dl-menuwrapper" id="dl-menu"><button class="dl-trigger">Open Menu</button><ul class="dl-menu"><li class="menu__item menu-1050 menuparent menu-path-node-49 first odd menu-1050"><a class="menu__link" href="/prize" title="">Awards</a><ul class="dl-submenu"><li class="dl-back"><a href="#">back</a></li><li class="menu__item menu-1026 menu-path-node-49 first odd menu-1026"><a class="menu__link" href="/prize">Lemelson-MIT Prize</a></li>
+<li class="menu__item menu-1031 menu-path-node-50 even menu-1031"><a class="menu__link" href="/studentprize">Lemelson-MIT Student Prize</a></li>
+<li class="menu__item menu-1093 menu-path-winners-circle odd last menu-1093"><a class="menu__link" href="/winners_circle" title="">Award Winners</a></li>
+</ul></li>
+<li class="menu__item menu-1330 menuparent menu-path-node-99 even menu-1330"><a class="menu__link" href="/inventeams">Grants</a><ul class="dl-submenu"><li class="dl-back"><a href="#">back</a></li><li class="menu__item menu-1331 menu-path-node-99 first odd menu-1331"><a class="menu__link" href="/inventeams" title="">InvenTeams</a></li>
+<li class="menu__item menu-1332 menu-path-node-100 even last menu-1332"><a class="menu__link" href="/jv-inventeams">JV InvenTeams</a></li>
+</ul></li>
+<li class="menu__item menu-1032 menu-path-node-54 odd menu-1032"><a class="menu__link" href="/events">Events</a></li>
+<li class="menu__item menu-3721 menuparent menu-path-node-1874 even menu-3721"><a class="menu__link" href="/resources" title="">Resources</a><ul class="dl-submenu"><li class="dl-back"><a href="#">back</a></li><li class="menu__item menu-1409 menu-path-search-inventors first odd menu-1409"><a class="menu__link" href="/search-inventors" title="">Inventor Archive</a></li>
+<li class="menu__item menu-1411 menu-path-search-resources-43 even menu-1411"><a class="menu__link" href="/resources/howtoons" title="">HowToons</a></li>
+<li class="menu__item menu-1413 menu-path-search-resources-42 odd menu-1413"><a class="menu__link" href="/search-resources/42" title="">JV InvenTeams Activity Guides</a></li>
+<li class="menu__item menu-1412 menu-path-lemelsonmitedu-search-resources-45 even menu-1412"><a class="menu__link" href="http://lemelson.mit.edu/search-resources/45" title="">Inventor Handbook</a></li>
+<li class="menu__item menu-1428 menu-path-search-resources-44 odd menu-1428"><a class="menu__link" href="/search-resources/44" title="">Case Studies</a></li>
+<li class="menu__item menu-2627 menu-path-lemelsonmitedu-search-resources-817 even last menu-2627"><a class="menu__link" href="http://lemelson.mit.edu/search-resources/817" title="more resources for invention inspiration">Invention Resources</a></li>
+</ul></li>
+<li class="menu__item menu-241 menuparent menu-path-node-87 odd last menu-241"><a class="menu__link" href="/overview">About</a><ul class="dl-submenu"><li class="dl-back"><a href="#">back</a></li><li class="menu__item menu-1323 menu-path-node-87 first odd menu-1323"><a class="menu__link" href="/overview">Overview</a></li>
+<li class="menu__item menu-1324 menu-path-node-88 even menu-1324"><a class="menu__link" href="/frequently-asked-questions">FAQs</a></li>
+<li class="menu__item menu-1039 menu-path-node-60 odd menu-1039"><a class="menu__link" href="/leadership-staff">Leadership &amp; Staff</a></li>
+<li class="menu__item menu-1326 menu-path-node-90 even menu-1326"><a class="menu__link" href="/partners">Partners</a></li>
+<li class="menu__item menu-1375 menu-path-node-146 odd menu-1375"><a class="menu__link" href="/get-involved">Get Involved</a></li>
+<li class="menu__item menu-1237 menu-path-inventors-map even menu-1237"><a class="menu__link" href="/inventors-map" title="">Inventors Map</a></li>
+<li class="menu__item menu-1426 menu-path-node-500 odd last menu-1426"><a class="menu__link" href="/job-opportunities">Job Opportunities</a></li>
+</ul></li>
+<ul class="menu dl2-menu"><li class="menu__item is-leaf first leaf menu-1059"><a class="menu__link" href="/login" title="">Log In</a></li>
+<li class="menu__item is-leaf leaf menu-3499"><a class="menu__link" href="https://www.youtube.com/user/LemelsonMITProgram" target="_blank" title="">Videos</a></li>
+<li class="menu__item is-leaf leaf menu-3497"><a class="menu__link" href="http://lemelson.mit.edu/get-involved" title="">Give</a></li>
+<li class="menu__item is-leaf leaf menu-1408"><a class="menu__link" href="/sign" title="">Subscribe</a></li>
+<li class="menu__item is-leaf leaf menu-1061"><a class="menu__link" href="/contact" title="">Contact Us</a></li>
+<li class="menu__item is-leaf last leaf menu-1062"><a class="menu__link" href="http://www.mit.edu" target="_blank" title="">MIT</a></li>
+</ul></ul></div>
+<a class="ilink" href="/" id="logo" rel="home" title="Home"><img alt="Home" src="http://lemelson.mit.edu/profiles/lemelson/themes/custom/invent/logo.png"/></a>
+<a class="ilink" href="/" id="logo-mobile" rel="home" title="Home"><img alt="Home" src="http://web.mit.edu/invent//profiles/lemelson/themes/custom/invent/images/logo-mobile.png"/></a>
+<hgroup id="name-and-slogan">
+<h1 id="site-name">
+<a href="/" rel="home" title="Home"><span>Lemelson-MIT Program</span></a>
+</h1>
+</hgroup>
+<div class="header__region region region-header">
+<div class="block block-menu plain first last odd" id="block-menu-menu-utility-nav" role="navigation">
+<div class="block-wrapper">
+<div class="content">
+<ul class="menu"><li class="menu__item is-leaf first leaf menu-1059"><a class="menu__link" href="/login" title="">Log In</a></li>
+<li class="menu__item is-leaf leaf menu-3499"><a class="menu__link" href="https://www.youtube.com/user/LemelsonMITProgram" target="_blank" title="">Videos</a></li>
+<li class="menu__item is-leaf leaf menu-3497"><a class="menu__link" href="http://lemelson.mit.edu/get-involved" title="">Give</a></li>
+<li class="menu__item is-leaf leaf menu-1408"><a class="menu__link" href="/sign" title="">Subscribe</a></li>
+<li class="menu__item is-leaf leaf menu-1061"><a class="menu__link" href="/contact" title="">Contact Us</a></li>
+<li class="menu__item is-leaf last leaf menu-1062"><a class="menu__link" href="http://www.mit.edu" target="_blank" title="">MIT</a></li>
+</ul> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="sticky-wrapper"><div id="navigation">
+<div class="wrapper">
+<div id="navigation-content">
+<div class="region region-navigation">
+<div class="block block-nice-menus plain first odd" id="block-nice-menus-1">
+<div class="block-wrapper">
+<div class="content">
+<ul class="nice-menu nice-menu-down nice-menu-main-menu nice-menus-processed sf-js-enabled" id="nice-menu-1"><li class="menu__item menu-1050 menuparent menu-path-node-49 first odd menu-1050"><a class="menu__link" href="/prize" title="">Awards</a><ul style="display: none; visibility: hidden;"><li class="menu__item menu-1026 menu-path-node-49 first odd menu-1026"><a class="menu__link" href="/prize">Lemelson-MIT Prize</a></li>
+<li class="menu__item menu-1031 menu-path-node-50 even menu-1031"><a class="menu__link" href="/studentprize">Lemelson-MIT Student Prize</a></li>
+<li class="menu__item menu-1093 menu-path-winners-circle odd last menu-1093"><a class="menu__link" href="/winners_circle" title="">Award Winners</a></li>
+</ul></li>
+<li class="menu__item menu-1330 menuparent menu-path-node-99 even menu-1330"><a class="menu__link" href="/inventeams">Grants</a><ul style="display: none; visibility: hidden;"><li class="menu__item menu-1331 menu-path-node-99 first odd menu-1331"><a class="menu__link" href="/inventeams" title="">InvenTeams</a></li>
+<li class="menu__item menu-1332 menu-path-node-100 even last menu-1332"><a class="menu__link" href="/jv-inventeams">JV InvenTeams</a></li>
+</ul></li>
+<li class="menu__item menu-1032 menu-path-node-54 odd menu-1032"><a class="menu__link" href="/events">Events</a></li>
+<li class="menu__item menu-3721 menuparent menu-path-node-1874 even menu-3721"><a class="menu__link" href="/resources" title="">Resources</a><ul style="display: none; visibility: hidden;"><li class="menu__item menu-1409 menu-path-search-inventors first odd menu-1409"><a class="menu__link" href="/search-inventors" title="">Inventor Archive</a></li>
+<li class="menu__item menu-1411 menu-path-search-resources-43 even menu-1411"><a class="menu__link" href="/resources/howtoons" title="">HowToons</a></li>
+<li class="menu__item menu-1413 menu-path-search-resources-42 odd menu-1413"><a class="menu__link" href="/search-resources/42" title="">JV InvenTeams Activity Guides</a></li>
+<li class="menu__item menu-1412 menu-path-lemelsonmitedu-search-resources-45 even menu-1412"><a class="menu__link" href="http://lemelson.mit.edu/search-resources/45" title="">Inventor Handbook</a></li>
+<li class="menu__item menu-1428 menu-path-search-resources-44 odd menu-1428"><a class="menu__link" href="/search-resources/44" title="">Case Studies</a></li>
+<li class="menu__item menu-2627 menu-path-lemelsonmitedu-search-resources-817 even last menu-2627"><a class="menu__link" href="http://lemelson.mit.edu/search-resources/817" title="more resources for invention inspiration">Invention Resources</a></li>
+</ul></li>
+<li class="menu__item menu-241 menuparent menu-path-node-87 odd last menu-241"><a class="menu__link" href="/overview">About</a><ul style="display: none; visibility: hidden;"><li class="menu__item menu-1323 menu-path-node-87 first odd menu-1323"><a class="menu__link" href="/overview">Overview</a></li>
+<li class="menu__item menu-1324 menu-path-node-88 even menu-1324"><a class="menu__link" href="/frequently-asked-questions">FAQs</a></li>
+<li class="menu__item menu-1039 menu-path-node-60 odd menu-1039"><a class="menu__link" href="/leadership-staff">Leadership &amp; Staff</a></li>
+<li class="menu__item menu-1326 menu-path-node-90 even menu-1326"><a class="menu__link" href="/partners">Partners</a></li>
+<li class="menu__item menu-1375 menu-path-node-146 odd menu-1375"><a class="menu__link" href="/get-involved">Get Involved</a></li>
+<li class="menu__item menu-1237 menu-path-inventors-map even menu-1237"><a class="menu__link" href="/inventors-map" title="">Inventors Map</a></li>
+<li class="menu__item menu-1426 menu-path-node-500 odd last menu-1426"><a class="menu__link" href="/job-opportunities">Job Opportunities</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="toggle-search-button"><img src="http://web.mit.edu/invent//profiles/lemelson/themes/custom/invent/images/btn-search-icon.png"/></div><div class="block block-search plain last even" id="block-search-form" role="search">
+<div class="block-wrapper">
+<div class="content">
+<form accept-charset="UTF-8" action="/" id="search-block-form" method="post"><div><div class="container-inline">
+<h2 class="element-invisible">Search form</h2>
+<div class="form-item form-type-textfield form-item-search-block-form">
+<label class="element-invisible" for="edit-search-block-form--2">Search </label>
+<input class="form-text" id="edit-search-block-form--2" maxlength="128" name="search_block_form" onblur="if (this.value == '') {this.value = 'Search';}" onfocus="if (this.value == 'Search') {this.value = '';}" size="15" type="text" value="Search"/>
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input class="form-submit" id="edit-submit" name="submit" src="http://web.mit.edu/invent//profiles/lemelson/themes/custom/invent/images/btn-search-icon.png" type="image"/></div><input name="form_build_id" type="hidden" value="form-1xH3tnzEXI4fe4FWSMzj8JyqBqt3-xowz1i7D_ZzTSU"/>
+<input name="form_id" type="hidden" value="search_block_form"/>
+</div>
+</div></form> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div id="main">
+<div class="wrapper">
+<div id="main-content">
+<div id="banner"><div class="region region-banner">
+<div class="block block-ds-extras plain first last odd flexslider" id="block-ds-extras-page-banner">
+<div class="block-wrapper">
+</div>
+<div class="flex-viewport" style="overflow: hidden; position: relative;"><div class="content" style="width: 2000%; margin-left: -1158px;"><div about="/field-collection/field-slideshow-slides/60" aria-hidden="true" class="slide ds-1col entity entity-field-collection-item field-collection-item-field-slideshow-slides view-mode-slideshow clearfix clone" style="width: 1158px; float: left; display: block;" typeof="">
+<div class="field field-name-field-2-3-width-slideshow-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 740px;"><img alt="" draggable="false" height="376" src="http://lemelson.mit.edu/sites/default/files/files/images/3_4_width_slideshow/JV%20Main_New_0.png" typeof="foaf:Image" width="740"/></div></div></div><div class="field field-name-field-slideshow-image-text field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><h1>
+	JV InvenTeams Curriculum</h1>
+<p>
+	Free downloadable invention activity guides to build students' hands-on and minds-on skills.</p>
+<p>
+<span class="button-link"><a href="https://lemelson.mit.edu/search-resources/42">Learn More</a></span></p>
+</div></div></div></div>
+<div about="/field-collection/field-slideshow-slides/9" class="slide ds-1col entity entity-field-collection-item field-collection-item-field-slideshow-slides view-mode-slideshow clearfix flex-active-slide" style="width: 1158px; float: left; display: block;" typeof="">
+<div class="field field-name-field-2-3-width-slideshow-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 740px;"><img alt="" draggable="false" height="376" src="http://lemelson.mit.edu/sites/default/files/files/images/3_4_width_slideshow/EurekaFest%20Banner_2019.png" typeof="foaf:Image" width="740"/></div></div></div><div class="field field-name-field-slideshow-image-text field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><h1>
+	EurekaFest 2019</h1>
+<p>
+	A two-day invention celebration designed to empower young inventors through activities that inspire youth, honor role models, and encourage creativity and problem solving. </p>
+<p>
+<span class="button-link"><a href="https://lemelson.mit.edu/events/eurekafest-2019">Learn more</a></span></p>
+</div></div></div></div>
+<div about="/field-collection/field-slideshow-slides/110" class="slide ds-1col entity entity-field-collection-item field-collection-item-field-slideshow-slides view-mode-slideshow clearfix" style="width: 1158px; float: left; display: block;" typeof="">
+<div class="field field-name-field-2-3-width-slideshow-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 740px;"><img alt="" draggable="false" height="376" src="http://lemelson.mit.edu/sites/default/files/files/images/3_4_width_slideshow/Student%20Prize%20winner%20collage.png" typeof="foaf:Image" width="740"/></div></div></div><div class="field field-name-field-slideshow-image-text field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><h1>
+	Congratulations 2019 Student Prize Winners!</h1>
+<p>
+<span class="button-link"><a href="https://lemelson.mit.edu/news/top-collegiate-inventors-awarded-lemelson-mit-student-prize">Learn More</a>      <a href="https://youtu.be/ocdcFA1LmMQ" target="_blank">Watch Video of all the Winners</a></span></p>
+</div></div></div></div>
+<div about="/field-collection/field-slideshow-slides/107" class="slide ds-1col entity entity-field-collection-item field-collection-item-field-slideshow-slides view-mode-slideshow clearfix" style="width: 1158px; float: left; display: block;" typeof="">
+<div class="field field-name-field-2-3-width-slideshow-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 740px;"><img alt="" draggable="false" height="376" src="http://lemelson.mit.edu/sites/default/files/files/images/3_4_width_slideshow/SP%20Banner-2.jpg" typeof="foaf:Image" width="740"/></div></div></div><div class="field field-name-field-slideshow-image-text field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><h1>
+<strong>2020 Lemelson-MIT Student Prize </strong><strong>applications open in May 2019!</strong></h1>
+</div></div></div></div>
+<div about="/field-collection/field-slideshow-slides/112" class="slide ds-1col entity entity-field-collection-item field-collection-item-field-slideshow-slides view-mode-slideshow clearfix" style="width: 1158px; float: left; display: block;" typeof="">
+<div class="field field-name-field-2-3-width-slideshow-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 740px;"><img alt="" draggable="false" height="376" src="http://lemelson.mit.edu/sites/default/files/files/images/3_4_width_slideshow/PD_2019_v5%20copy_0.png" typeof="foaf:Image" width="740"/></div></div></div><div class="field field-name-field-slideshow-image-text field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><h1>
+	Summer Workshops</h1>
+<p>
+<span style="font-size: 16px;">Teach STEM to K-12 students through problem solving and inventing this summer in Cambridge, MA or Tustin, CA.<br/><span class="button-link"> </span></span><br/><span class="button-link"><a href="https://lemelson.mit.edu/events/invention-education-summer-workshop-california">Learn more</a></span></p>
+</div></div></div></div>
+<div about="/field-collection/field-slideshow-slides/108" class="slide ds-1col entity entity-field-collection-item field-collection-item-field-slideshow-slides view-mode-slideshow clearfix" style="width: 1158px; float: left; display: block;" typeof="">
+<div class="field field-name-field-2-3-width-slideshow-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 740px;"><img alt="" draggable="false" height="376" src="http://lemelson.mit.edu/sites/default/files/files/images/3_4_width_slideshow/NAI%20April%202019%20Report%20Image.jpeg" typeof="foaf:Image" width="740"/></div></div></div><div class="field field-name-field-slideshow-image-text field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><h1>
+	Advancing Invention Education and Creating the Next Generation of Innovators</h1>
+<p>
+	In the latest issue of Technology and Innovation, Journal of the National Academy of Inventors®, Lemelson-MIT's Executive Director, Stephanie Couch, coedits &amp; explains how unique problems can be solved with inventiveness, a skill that can be nurtured in people of all ages &amp; from all walks of life. <a href="https://lemelson.mit.edu/resources/research-reports">Read more</a>. </p>
+</div></div></div></div>
+<div about="/field-collection/field-slideshow-slides/10" class="slide ds-1col entity entity-field-collection-item field-collection-item-field-slideshow-slides view-mode-slideshow clearfix" style="width: 1158px; float: left; display: block;" typeof="">
+<div class="field field-name-field-2-3-width-slideshow-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 740px;"><img alt="" draggable="false" height="376" src="http://lemelson.mit.edu/sites/default/files/files/images/3_4_width_slideshow/Luis%20homepage%20banner.png" typeof="foaf:Image" width="740"/></div></div></div><div class="field field-name-field-slideshow-image-text field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><h1>
+	Celebrating Invention</h1>
+<p>
+	Annual awards for collegiate and mid-career inventors</p>
+<p>
+<span class="button-link"><a href="https://lemelson.mit.edu/prize">Learn More</a></span></p>
+</div></div></div></div>
+<div about="/field-collection/field-slideshow-slides/41" class="slide ds-1col entity entity-field-collection-item field-collection-item-field-slideshow-slides view-mode-slideshow clearfix" style="width: 1158px; float: left; display: block;" typeof="">
+<div class="field field-name-field-2-3-width-slideshow-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 740px;"><img alt="" draggable="false" height="376" src="http://lemelson.mit.edu/sites/default/files/files/images/3_4_width_slideshow/150619_Eureka_Fest_InvenTeams_HiRes-1474.jpg" typeof="foaf:Image" width="740"/></div></div></div><div class="field field-name-field-slideshow-image-text field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><h1>
+	Inspiring Youth</h1>
+<p>
+	Annual grants to invent technological solutions to real-world problems.</p>
+<p>
+<span class="button-link"><a href="/node/99">Learn More</a>  </span></p>
+</div></div></div><div class="field field-name-field-video-link field-type-video-embed-field field-label-hidden"><div class="field-items"><div class="field-item even"><span class="button-link"><a class="colorbox-load init-colorbox-load-processed cboxElement" href="/?q=vef/load/f0df66ec8ab00e36e27662f11bbeb9d8&amp;width=640px&amp;height=363">Watch the video</a></span></div></div></div></div>
+<div about="/field-collection/field-slideshow-slides/60" class="slide ds-1col entity entity-field-collection-item field-collection-item-field-slideshow-slides view-mode-slideshow clearfix" style="width: 1158px; float: left; display: block;" typeof="">
+<div class="field field-name-field-2-3-width-slideshow-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 740px;"><img alt="" draggable="false" height="376" src="http://lemelson.mit.edu/sites/default/files/files/images/3_4_width_slideshow/JV%20Main_New_0.png" typeof="foaf:Image" width="740"/></div></div></div><div class="field field-name-field-slideshow-image-text field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><h1>
+	JV InvenTeams Curriculum</h1>
+<p>
+	Free downloadable invention activity guides to build students' hands-on and minds-on skills.</p>
+<p>
+<span class="button-link"><a href="https://lemelson.mit.edu/search-resources/42">Learn More</a></span></p>
+</div></div></div></div>
+<div about="/field-collection/field-slideshow-slides/9" aria-hidden="true" class="slide ds-1col entity entity-field-collection-item field-collection-item-field-slideshow-slides view-mode-slideshow clearfix clone" style="width: 1158px; float: left; display: block;" typeof="">
+<div class="field field-name-field-2-3-width-slideshow-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 740px;"><img alt="" draggable="false" height="376" src="http://lemelson.mit.edu/sites/default/files/files/images/3_4_width_slideshow/EurekaFest%20Banner_2019.png" typeof="foaf:Image" width="740"/></div></div></div><div class="field field-name-field-slideshow-image-text field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><h1>
+	EurekaFest 2019</h1>
+<p>
+	A two-day invention celebration designed to empower young inventors through activities that inspire youth, honor role models, and encourage creativity and problem solving. </p>
+<p>
+<span class="button-link"><a href="https://lemelson.mit.edu/events/eurekafest-2019">Learn more</a></span></p>
+</div></div></div></div></div></div><ol class="flex-control-nav flex-control-paging"><li><a class="flex-active">1</a></li><li><a>2</a></li><li><a>3</a></li><li><a>4</a></li><li><a>5</a></li><li><a>6</a></li><li><a>7</a></li><li><a>8</a></li></ol><ul class="flex-direction-nav"><li><a class="flex-prev" href="#">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul></div>
+</div></div>
+<a id="main-content"></a>
+<h1 class="title" id="page-title">Home</h1>
+<div id="content-top"> <div class="region region-content-top">
+<div class="block block-block plain first odd" id="block-block-14" style="height: 233px;">
+<div class="block-wrapper">
+<h2 class="block__title block-title">Inspiring, encouraging, and honoring inventors</h2>
+<div class="content">
+<p>
+<a href="/overview">About us</a></p>
+</div>
+</div>
+</div>
+<div class="block block-menu plain last even" id="block-menu-menu-i-d-like-to-" role="navigation" style="height: 233px;">
+<div class="content">
+<h2 class="block__title block-title">I'd like to...</h2>
+<select><option class="redirect" value="node/167">Get help developing or manufacturing my invention</option>
+<option class="redirect" value="node/166">Get funding for my invention or idea</option>
+<option class="redirect" value="node/169">Apply for the Lemelson-MIT Student Prize </option>
+<option class="redirect" value="node/170">Nominate an inventor for the Lemelson-MIT Prize</option>
+<option class="redirect" value="node/171">Correct a mistake written about a historical inventor</option>
+<option class="redirect" value="node/172">Get invention resources for students</option>
+</select> </div>
+</div>
+</div>
+</div>
+<div class="column" id="content" role="main">
+<div class="wrapper">
+<section class="region region-content">
+<div about="/home" class="ds-1col node node-page view-mode-full clearfix" typeof="sioc:Item foaf:Document">
+</div>
+</section>
+</div>
+</div>
+<div class="region region-content-bottom">
+<div class="block block-views plain first odd" id="block-views-news-news-stream">
+<div class="block-wrapper">
+<div class="content">
+<div class="view view-news view-id-news view-display-id-news_stream view-dom-id-5a5ba534568424a71f6abe0778ac7560 jquery-once-1-processed">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first">
+<div about="/news/13th-annual-eurekafest-event-celebrates-student-inventors-across-us" class="ds-1col node node-news view-mode-news_feed clearfix" typeof="sioc:Item foaf:Document">
+<div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 350px;"><img alt="" height="185" src="http://lemelson.mit.edu/sites/default/files/files/images/news/EurekaFest%20Banner_2019.png" typeof="foaf:Image" width="350"/></div></div></div><div class="date"><span class="date-display-single" content="2019-06-19T00:00:00-04:00" datatype="xsd:dateTime" property="dc:date">Jun 19, 2019</span></div><div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h2><a href="/news/13th-annual-eurekafest-event-celebrates-student-inventors-across-us">13th Annual EurekaFest Event Celebrates Student Inventors from Across the U.S. </a></h2></div></div></div></div>
+</div>
+<div class="views-row views-row-2 views-row-even">
+<div about="/news/lemelson-mit-executive-director-gives-public-testimony-uspto-success-act-hearing" class="ds-1col node node-news view-mode-news_feed clearfix" typeof="sioc:Item foaf:Document">
+<div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 350px;"><img alt="" height="185" src="http://lemelson.mit.edu/sites/default/files/files/images/news/_LemelsonMIT_SC_Headshot_Web.jpg" typeof="foaf:Image" width="350"/></div></div></div><div class="date"><span class="date-display-single" content="2019-06-03T00:00:00-04:00" datatype="xsd:dateTime" property="dc:date">Jun 3, 2019</span></div><div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h2><a href="/news/lemelson-mit-executive-director-gives-public-testimony-uspto-success-act-hearing">Lemelson-MIT Executive Director Gives Public Testimony at  USPTO SUCCESS Act Hearing</a></h2></div></div></div></div>
+</div>
+<div class="views-row views-row-3 views-row-odd views-row-last">
+<div about="/news/top-collegiate-inventors-awarded-lemelson-mit-student-prize" class="ds-1col node node-news view-mode-news_feed clearfix" typeof="sioc:Item foaf:Document">
+<div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" style="max-width: 350px;"><img alt="" height="185" src="http://lemelson.mit.edu/sites/default/files/files/images/news/2019%20SP%20Winners_LMITNewsPage.png" typeof="foaf:Image" width="350"/></div></div></div><div class="date"><span class="date-display-single" content="2019-04-23T00:00:00-04:00" datatype="xsd:dateTime" property="dc:date">Apr 23, 2019</span></div><div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h2><a href="/news/top-collegiate-inventors-awarded-lemelson-mit-student-prize">Top Collegiate Inventors Awarded Lemelson-MIT Student Prize</a></h2></div></div></div></div>
+</div>
+</div>
+</div> </div>
+</div>
+</div>
+<div class="block block-views plain last even" id="block-views-tweets-block">
+<div class="block-wrapper">
+<div class="content">
+<div class="view view-tweets view-id-tweets view-display-id-block view-dom-id-e13b6651c822ac6192f51fd9a054103e">
+<div class="view-header">
+<h2 class="block__title"><a href="https://twitter.com/LemelsonMIT" target="_blank">@LemelsonMIT</a></h2>
+</div>
+<div class="view-content">
+<div class="views-row views-row-1">
+<div class="views-field views-field-created-time-1"> <span class="field-content">July 5, 2019</span> </div>
+<span class="views-field views-field-text"> <span class="field-content">If you plan to have some fun in the water this weekend, you might end up using one of this young inventor’s water t… <a href="https://t.co/Ch8bvgPq90" target="_blank">https://t.co/Ch8bvgPq90</a></span> </span>
+<div class="views-field views-field-nothing"> <span class="field-content"></span> </div>
+<span class="views-field views-field-created-time"> <span class="field-content"><em class="placeholder">1 day 15 hours</em> ago</span> </span> </div>
+<div class="views-row views-row-2">
+<div class="views-field views-field-created-time-1"> <span class="field-content">July 4, 2019</span> </div>
+<span class="views-field views-field-text"> <span class="field-content">From all of us at the Lemelson-MIT Program, we hope you have a very happy and safe <a class="twitter-timeline-link" href="http://search.twitter.com/search?q=%234thOfJuly" rel="nofollow" target="_blank">#4thOfJuly</a>! Here’s some history… <a href="https://t.co/W3nUGhAL9F" target="_blank">https://t.co/W3nUGhAL9F</a></span> </span>
+<div class="views-field views-field-nothing"> <span class="field-content"></span> </div>
+<span class="views-field views-field-created-time"> <span class="field-content"><em class="placeholder">2 days 16 hours</em> ago</span> </span> </div>
+<div class="views-row views-row-3">
+<div class="views-field views-field-created-time-1"> <span class="field-content">July 3, 2019</span> </div>
+<span class="views-field views-field-text"> <span class="field-content">RT <a class="twitter-timeline-link" href="http://twitter.com/MITEECS" rel="nofollow" target="_blank">@MITEECS</a>: DiThe Carnegie Corporation of New York has included Professor Dina Katabi on its 2019 list of Great Immigrants who… <a href="https://t.co/Wd8NzZov35" target="_blank">https://t.co/Wd8NzZov35</a></span> </span>
+<div class="views-field views-field-nothing"> <span class="field-content"></span> </div>
+<span class="views-field views-field-created-time"> <span class="field-content"><em class="placeholder">3 days 17 hours</em> ago</span> </span> </div>
+</div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="region region-share">
+<div class="block block-sharethis plain first last odd" id="block-sharethis-sharethis-block">
+<div class="block-wrapper">
+<h2 class="block__title block-title">Share</h2>
+<div class="content">
+<div class="sharethis-wrapper"><span class="st_twitter_large" displaytext="twitter" st_processed="yes" st_title="Home" st_url="http://lemelson.mit.edu/"><span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;"><span class="stLarge" style='background-image: url("https://ws.sharethis.com/images/2017/twitter_32.png");'></span></span></span>
+<span class="st_facebook_large" displaytext="facebook" st_processed="yes" st_title="Home" st_url="http://lemelson.mit.edu/"><span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;"><span class="stLarge" style='background-image: url("https://ws.sharethis.com/images/2017/facebook_32.png");'></span></span></span>
+<span class="st_email_large" displaytext="email" st_processed="yes" st_title="Home" st_url="http://lemelson.mit.edu/"><span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;"><span class="stLarge" style='background-image: url("https://ws.sharethis.com/images/2017/email_32.png");'></span></span></span>
+<span class="st_pinterest_large" displaytext="pinterest" st_processed="yes" st_title="Home" st_url="http://lemelson.mit.edu/"><span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;"><span class="stLarge" style='background-image: url("https://ws.sharethis.com/images/2017/pinterest_32.png");'></span></span></span>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<footer id="footer">
+<div class="wrapper">
+<div class="region region-footer-content">
+<div class="block block-block plain first odd" id="block-block-4">
+<div class="block-wrapper">
+<div class="content">
+<p>
+<span class="address1">Lemelson-MIT Program</span> 222 Third Street, Suite 0300 <span class="address3">Cambridge, MA 02142</span></p>
+<p>
+	© Massachusetts Institute of Technology</p>
+<p>
+<a href="/login">Login</a></p>
+</div>
+</div>
+</div>
+<div class="block block-menu plain last even" id="block-menu-menu-follow-us" role="navigation">
+<div class="block-wrapper">
+<h2 class="block__title block-title">Follow us</h2>
+<div class="content">
+<ul class="menu"><li class="menu__item is-leaf first leaf menu-1089"><a class="menu__link" href="https://www.facebook.com/LemelsonMITProgram" target="_blank" title="">FaceBook</a></li>
+<li class="menu__item is-leaf leaf menu-1090"><a class="menu__link" href="https://twitter.com/LemelsonMIT" target="_blank" title="">Twitter</a></li>
+<li class="menu__item is-leaf leaf menu-1091"><a class="menu__link" href="http://www.youtube.com/LemelsonMITProgram" target="_blank" title="">YouTube</a></li>
+<li class="menu__item is-leaf last leaf menu-1399"><a class="menu__link" href="http://www.flickr.com/photos/40959143@N05/" target="_blank" title="">Flickr</a></li>
+</ul> </div>
+</div>
+</div>
+</div>
+<div id="bottom-content">
+</div>
+</div>
+</footer>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e5f441833f","applicationID":"9589295","transactionName":"b10ANkADXBFZURdeDlYXNxBbTR0LVlYGT09IUBI=","queueTime":0,"applicationTime":16,"atts":"QxoDQAgZTx8=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<div id="cboxOverlay" style="display: none;"></div><div class="" id="colorbox" role="dialog" style="display: none;" tabindex="-1"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button id="cboxPrevious" type="button"></button><button id="cboxNext" type="button"></button><button id="cboxSlideshow" type="button"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><iframe id="st_gdpr_iframe" src="https://c.sharethis.mgr.consensu.org/v1.0/cmp/portal.html" style="width: 0px; height: 0px; position: absolute; left: -5000px;" title="GDPR Consent Management"></iframe><div id="stcpDiv" style="position: absolute; top: -1999px; left: -1988px;">ShareThis Copy and Paste</div></body></html>

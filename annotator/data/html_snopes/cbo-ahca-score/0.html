@@ -1,0 +1,312 @@
+<html class="js" dir="ltr" lang="en"><head>
+<meta charset="utf-8"/><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-23136790-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta content="American Health Care Act | Congressional Budget Office" name="title"/>
+<link href="https://www.cbo.gov/publication/52486" rel="canonical"/>
+<meta content="CBO and JCT estimate that enacting the American Health Care Act would reduce federal deficits by $337 billion over the coming decade and increase the number of people who are uninsured by 24 million in 2026 relative to current law." name="description"/>
+<meta content="Drupal 8 (https://www.drupal.org)" name="Generator"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://www.cbo.gov//themes/custom/cbo/apple-touch-icon.png" rel="shortcut icon" type="image/png"/>
+<link href="https://www.cbo.gov//publication/52486" rel="revision"/>
+<title>American Health Care Act | Congressional Budget Office</title>
+<link href="https://www.cbo.gov//sites/default/files/css/css_JzQbbLpbjpCn2tDKdwhjYTj9jgiFthgCRzt6OLBJUJA.css?pu732c" media="all" rel="stylesheet"/>
+<link href="https://www.cbo.gov//sites/default/files/css/css_k-HrnB0aPpPtDpAhy2bLAUS6HFnl1coF-c9rImPGvX8.css?pu732c" media="all" rel="stylesheet"/>
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+</head>
+<body class="no-sidebars page-node-52486 path-node page-node-type-cost-estimate js">
+<a class="visually-hidden focusable skip-link" href="#main-content">
+    Skip to main content
+  </a>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+<div class="page" role="document">
+<header id="site-header">
+<div class="outer-wrapper">
+<a class="home-link" href="/" rel="home" title="Congressional Budget Office">
+<picture>
+<source media="(max-width: 900px)" srcset="/themes/custom/cbo/images/cbo_logo_white.svg" type="image/svg+xml">
+<source srcset="/themes/custom/cbo/images/cbo_logo_white_desktop.svg" type="image/svg+xml">
+<img alt="Congressional Budget Office logo" class="logo" src="https://www.cbo.gov//themes/custom/cbo/images/cbo_logo_white_desktop.png" title="Congressional Budget Office Home" typeof="foaf:Image"/>
+</source></source></picture>
+</a>
+<div class="main-navigation">
+<a class="menu-link" href="#menu">
+<span class="icon-bar-block">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</span>
+<span class="menu-btn-text">menu</span>
+</a>
+<a class="search-link" href="#search">
+<picture>
+<source srcset="/themes/custom/cbo/images/search-icon.svg" type="image/svg+xml">
+<img alt="Search" class="" src="https://www.cbo.gov//themes/custom/cbo/images/search-icon.png" title="Search" typeof="foaf:Image"/>
+</source></picture>
+</a>
+<section class="block block-system block-system-branding-block" id="block-cbo-branding">
+</section>
+<nav aria-labelledby="block-mainmenu-menu" class="block block-menu navigation menu--main" id="block-mainmenu" role="navigation">
+<h2 class="visually-hidden" id="block-mainmenu-menu">Main menu</h2>
+<ul class="menu">
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/104" href="/about/overview">About CBO</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="topics" href="/topics" title="">Topics</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="cost-estimates" href="/cost-estimates">Cost Estimates</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="interactives" href="/interactives">Interactives</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/49835" href="/faqs">FAQs</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="blog" href="/blog">Blog</a>
+</li>
+</ul>
+</nav>
+<section class="views-exposed-form bef-exposed-form search-exposed" data-drupal-selector="views-exposed-form-general-solr-page-1" id="block-exposedformgeneral-solrpage-1-2">
+<form accept-charset="UTF-8" action="/search" data-drupal-form-fields="edit-search-api-fulltext,edit-sort-by-search-api-relevance,edit-sort-by-field-display-date" id="views-exposed-form-general-solr-page-1" method="get">
+<div class="form--inline clearfix">
+<div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search-api-fulltext form-item-search-api-fulltext">
+<label for="edit-search-api-fulltext">Enter your keywords</label>
+<input class="form-text" data-drupal-selector="edit-search-api-fulltext" id="edit-search-api-fulltext" maxlength="128" name="search_api_fulltext" size="30" type="text" value=""/>
+<a alt="Cancel Search" class="search-cancel"></a></div>
+<fieldset class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-sort-by" id="edit-sort-by--wrapper">
+<legend>
+<span class="fieldset-legend">Sort by</span>
+</legend>
+<div class="fieldset-wrapper">
+<div class="form-radios" id="edit-sort-by"><div class="fieldgroup form-composite form-radios" data-drupal-selector="edit-sort-by" id="edit-sort-by--wrapper">
+<div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-sort-by form-item-sort-by">
+<input checked="checked" class="form-radio" data-drupal-selector="edit-sort-by-search-api-relevance" id="edit-sort-by-search-api-relevance" name="sort_by" type="radio" value="search_api_relevance"/>
+<label class="option" for="edit-sort-by-search-api-relevance">Relevancy</label>
+</div>
+<div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-sort-by form-item-sort-by">
+<input class="form-radio" data-drupal-selector="edit-sort-by-field-display-date" id="edit-sort-by-field-display-date" name="sort_by" type="radio" value="field_display_date"/>
+<label class="option" for="edit-sort-by-field-display-date">Publication Date</label>
+</div>
+</div>
+</div>
+</div>
+</fieldset>
+<input class="button js-form-submit form-submit" data-drupal-selector="edit-submit-general-solr" id="edit-submit-general-solr" type="submit" value="Apply"/>
+</div>
+</form>
+</section>
+</div>
+</div></header>
+<main class="outer-wrapper" role="main">
+<a id="main-content" tabindex="-1"></a>
+<section id="content">
+<section class="block block-core block-page-title-block" id="block-cbo-page-title">
+<h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">American Health Care Act</span>
+</h1>
+</section>
+<section class="block block-system block-system-main-block" id="block-cbo-cbo-system-main">
+<article role="article">
+<div>
+<div class="top-section">
+<div class="meta">
+<div class="field field--name-field-display-date field--type-datetime field--label-hidden field__item"><time class="datetime" datetime="2017-03-13T12:00:00Z">March 13, 2017</time>
+</div>
+<div class="content-type">
+             Cost Estimate
+          </div>
+</div>
+<div class="summary">
+<div class="view view-summary view-id-summary view-display-id-meta_summary js-view-dom-id-ad50b8e29b8ae17fb8e30636ea5a2c83a268fc30964c187a8a47a351e4c4c3b0">
+<div class="view-content">
+<div class="views-row"><p>CBO and JCT estimate that enacting the American Health Care Act would reduce federal deficits by $337 billion over the coming decade and increase the number of people who are uninsured by 24 million in 2026 relative to current law.</p></div>
+</div>
+</div>
+</div>
+<div class="documents">
+<div class="view view-view-document view-id-view_document view-display-id-cost_estimates js-view-dom-id-2cd1ef6062aaead6fd548ff617cf4e2959b99b61f294dec35e8717eafc63f256">
+<div class="view-content">
+<div class="views-row"><a href="https://www.cbo.gov/system/files/115th-congress-2017-2018/costestimate/americanhealthcareact.pdf">View Document</a>1.62 MB</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-section">
+<section class="summary">
+<header aria-controls="content-panel" aria-expanded="false" class="head-section" role="button">
+<h2>Summary</h2>
+</header>
+<div aria-hidden="true" class="content" id="content-panel">
+<article>
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>The Concurrent Resolution on the Budget for Fiscal Year 2017 directed the House Committees on Ways and Means and Energy and Commerce to develop legislation to reduce the deficit. The Congressional Budget Office and the staff of the Joint Committee on Taxation (JCT) have produced an estimate of the budgetary effects of the American Health Care Act, which combines the pieces of legislation approved by the two committees pursuant to that resolution. In consultation with the budget committees, CBO used its March 2016 baseline with adjustments for subsequently enacted legislation, which underlies the resolution, as the benchmark to measure the cost of the legislation.</p>
+<h2 class="pubsummary">Effects on the Federal Budget</h2>
+<p>CBO and JCT estimate that enacting the legislation would reduce federal deficits by $337 billion over the 2017-2026 period. That total consists of $323 billion in on-budget savings and $13 billion in off-budget savings. Outlays would be reduced by $1.2 trillion over the period, and revenues would be reduced by $0.9 trillion.</p>
+<p>The largest savings would come from reductions in outlays for Medicaid and from the elimination of the Affordable Care Act’s (ACA’s) subsidies for nongroup health insurance. The largest costs would come from repealing many of the changes the ACA made to the Internal Revenue Code—including an increase in the Hospital Insurance payroll tax rate for high-income taxpayers, a surtax on those taxpayers’ net investment income, and annual fees imposed on health insurers—and from the establishment of a new tax credit for health insurance.</p>
+<p>Pay-as-you-go procedures apply because enacting the legislation would affect direct spending and revenues. CBO and JCT estimate that enacting the legislation would not increase net direct spending or on-budget deficits by more than $5 billion in any of the four consecutive 10-year periods beginning in 2027.</p>
+<h2 class="pubsummary">Effects on Health Insurance Coverage</h2>
+<p>To estimate the budgetary effects, CBO and JCT projected how the legislation would change the number of people who obtain federally subsidized health insurance through Medicaid, the nongroup market, and the employment-based market, as well as many other factors.</p>
+<p>CBO and JCT estimate that, in 2018, 14 million more people would be uninsured under the legislation than under current law. Most of that increase would stem from repealing the penalties associated with the individual mandate. Some of those people would choose not to have insurance because they chose to be covered by insurance under current law only to avoid paying the penalties, and some people would forgo insurance in response to higher premiums.</p>
+<p>Later, following additional changes to subsidies for insurance purchased in the nongroup market and to the Medicaid program, the increase in the number of uninsured people relative to the number under current law would rise to 21 million in 2020 and then to 24 million in 2026. The reductions in insurance coverage between 2018 and 2026 would stem in large part from changes in Medicaid enrollment—because some states would discontinue their expansion of eligibility, some states that would have expanded eligibility in the future would choose not to do so, and per-enrollee spending in the program would be capped. In 2026, an estimated 52 million people would be uninsured, compared with 28 million who would lack insurance that year under current law.</p>
+<h2 class="pubsummary">Stability of the Health Insurance Market</h2>
+<p>Decisions about offering and purchasing health insurance depend on the stability of the health insurance market—that is, on having insurers participating in most areas of the country and on the likelihood of premiums’ not rising in an unsustainable spiral. The market for insurance purchased individually (that is, nongroup coverage) would be unstable, for example, if the people who wanted to buy coverage at any offered price would have average health care expenditures so high that offering the insurance would be unprofitable. In CBO and JCT’s assessment, however, the nongroup market would probably be stable in most areas under either current law or the legislation.</p>
+<p>Under current law, most subsidized enrollees purchasing health insurance coverage in the nongroup market are largely insulated from increases in premiums because their out-of-pocket payments for premiums are based on a percentage of their income; the government pays the difference. The subsidies to purchase coverage combined with the penalties paid by uninsured people stemming from the individual mandate are anticipated to cause sufficient demand for insurance by people with low health care expenditures for the market to be stable.</p>
+<p>Under the legislation, in the agencies’ view, key factors bringing about market stability include subsidies to purchase insurance, which would maintain sufficient demand for insurance by people with low health care expenditures, and grants to states from the Patient and State Stability Fund, which would reduce the costs to insurers of people with high health care expenditures. Even though the new tax credits would be structured differently from the current subsidies and would generally be less generous for those receiving subsidies under current law, the other changes would, in the agencies’ view, lower average premiums enough to attract a sufficient number of relatively healthy people to stabilize the market.</p>
+<h2 class="pubsummary">Effects on Premiums</h2>
+<p>The legislation would tend to increase average premiums in the nongroup market prior to 2020 and lower average premiums thereafter, relative to projections under current law. In 2018 and 2019, according to CBO and JCT’s estimates, average premiums for single policyholders in the nongroup market would be 15 percent to 20 percent higher than under current law, mainly because the individual mandate penalties would be eliminated, inducing fewer comparatively healthy people to sign up.</p>
+<p>Starting in 2020, the increase in average premiums from repealing the individual mandate penalties would be more than offset by the combination of several factors that would decrease those premiums: grants to states from the Patient and State Stability Fund (which CBO and JCT expect to largely be used by states to limit the costs to insurers of enrollees with very high claims); the elimination of the requirement for insurers to offer plans covering certain percentages of the cost of covered benefits; and a younger mix of enrollees. By 2026, average premiums for single policyholders in the nongroup market under the legislation would be roughly 10 percent lower than under current law, CBO and JCT estimate.</p>
+<p>Although average premiums would increase prior to 2020 and decrease starting in 2020, CBO and JCT estimate that changes in premiums relative to those under current law would differ significantly for people of different ages because of a change in age-rating rules. Under the legislation, insurers would be allowed to generally charge five times more for older enrollees than younger ones rather than three times more as under current law, substantially reducing premiums for young adults and substantially raising premiums for older people.</p>
+<h2 class="pubsummary">Uncertainty Surrounding the Estimates</h2>
+<p>The ways in which federal agencies, states, insurers, employers, individuals, doctors, hospitals, and other affected parties would respond to the changes made by the legislation are all difficult to predict, so the estimates in this report are uncertain. But CBO and JCT have endeavored to develop estimates that are in the middle of the distribution of potential outcomes.</p>
+<h2 class="pubsummary">Macroeconomic Effects</h2>
+<p>Because of the magnitude of its budgetary effects, this legislation is “major legislation,” as defined in the rules of the House of Representatives. Hence, it triggers the requirement that the cost estimate, to the greatest extent practicable, include the budgetary impact of its macroeconomic effects. However, because of the very short time available to prepare this cost estimate, quantifying and incorporating those macroeconomic effects have not been practicable.</p>
+<h2 class="pubsummary">Intergovernmental and Private-Sector Mandates</h2>
+<p>JCT and CBO have reviewed the provisions of the legislation and determined that they would impose no intergovernmental mandates as defined in the Unfunded Mandates Reform Act (UMRA).</p>
+<p>JCT and CBO have determined that the legislation would impose private-sector mandates as defined in UMRA. On the basis of information from JCT, CBO estimates the aggregate cost of the mandates would exceed the annual threshold established in UMRA for private-sector mandates ($156 million in 2017, adjusted annually for inflation).</p>
+</div>
+</article>
+</div>
+</section>
+<section class="documents">
+<header class="head-section">
+<h2 id="">Data and Supplemental Information</h2>
+</header>
+<div class="content">
+<div class="view view-supplemental-attachments view-id-supplemental_attachments view-display-id-block_3 js-view-dom-id-0c24bab80667c4fa1050e0b8a66e579289b2d616c5cdc5f3846cff573926f576">
+<div class="view-content">
+<div class="item-list">
+<ul>
+<li><div class="views-field views-field-field-display-name"><div class="field-content"><a href="https://www.cbo.gov/system/files/115th-congress-2017-2018/costestimate/52486-ahcasupplementaldata.xlsx">Data Underlying Figures</a></div></div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="related-publications">
+<header class="head-section" role="button">
+<h2 id="">Related Publications</h2>
+</header>
+<div class="content">
+<div class="view view-related view-id-related view-display-id-publications js-view-dom-id-ebccc41b0177ebb284a0e01db9d8bd2c51f318c42bfae7a1832548b5cd418848">
+<div class="view-content">
+<div class="item-list">
+<ul>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/53232" hreflang="und">Bipartisan Health Care Stabilization Act of 2017</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2017-10-25T12:00:00Z">October 25, 2017</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/53126" hreflang="und">Preliminary Analysis of Legislation That Would Replace Subsidies for Health Care With Block Grants</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2017-09-25T12:00:00Z">September 25, 2017</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/52941" hreflang="und">H.R. 1628, the Better Care Reconciliation Act of 2017: An Amendment in the Nature of a Substitute</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2017-07-20T12:00:00Z">July 20, 2017</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/52939" hreflang="und">H.R. 1628, Obamacare Repeal Reconciliation Act of 2017</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2017-07-19T12:00:00Z">July 19, 2017</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/52849" hreflang="und">H.R. 1628, Better Care Reconciliation Act of 2017</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2017-06-26T12:00:00Z">June 26, 2017</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/52752" hreflang="und">H.R. 1628, American Health Care Act of 2017</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2017-05-24T12:00:00Z">May 24, 2017</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/52516" hreflang="und">H.R. 1628, the American Health Care Act, incorporating manager's amendments 4, 5, 24, and 25</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2017-03-23T12:00:00Z">March 23, 2017</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/52371" hreflang="und">How Repealing Portions of the Affordable Care Act Would Affect Health Insurance Coverage and Premiums</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2017-01-17T12:00:00Z">January 17, 2017</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/52352" hreflang="und">How Does CBO Define and Estimate Health Insurance Coverage for People Under Age 65?</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2016-12-20T12:00:00Z">December 20, 2016</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/51385" hreflang="und">Federal Subsidies for Health Insurance Coverage for People Under Age 65:  2016 to 2026</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2016-03-24T12:00:00Z">March 24, 2016</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/51130" hreflang="und">Private Health Insurance Premiums and Federal Policy</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2016-02-11T12:00:00Z">February 11, 2016</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/51090" hreflang="und">Budgetary Effects of H.R. 3762, the Restoring Americans’ Healthcare Freedom Reconciliation Act, as Passed by the Senate on December 3, 2015</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2015-12-11T12:00:00Z">December 11, 2015</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/50948" hreflang="und">Microsimulation of Demand for Health Insurance</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2015-11-03T12:00:00Z">November 3, 2015</time>
+</div></div></li>
+<li><div class="views-field views-field-title"><span class="field-content"><a href="/publication/50252" hreflang="und">Budgetary and Economic Effects of Repealing the Affordable Care Act</a></span></div><div class="views-field views-field-field-display-date"><div class="field-content"><time class="datetime" datetime="2015-06-19T12:00:00Z">June 19, 2015</time>
+</div></div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</article>
+</section>
+</section>
+</main>
+<footer id="site-footer" role="contentinfo">
+<div class="footer-top-wrapper">
+<section class="footer-top">
+<section class="block block-block-content block-block-content121d8e86-2c04-4907-8bda-853870ff58b5" id="block-stayconnected">
+<h2>Stay Connected</h2>
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><form action="https://www.feedblitz.com/f/f.fbz?AddNewUserDirect" data-drupal-form-fields="email-updates-signup-input" id="email-updates-signup" method="POST" name="FeedBlitz_06f6221b03f911e29f67003005ce8903">
+<fieldset><legend>Get CBO’s Email Updates</legend></fieldset>
+<ol>
+<li><label class="structural" for="email-updates-signup-input">Email Address</label> <input id="email-updates-signup-input" maxlength="64" name="EMAIL" placeholder="email address" size="25" style="display: block;" type="email" value=""/> <input maxlength="64" name="EMAIL_" size="25" type="hidden" value=""/> <input maxlength="64" name="EMAIL_ADDRESS" size="25" type="hidden" value=""/> <input name="SiteScope" type="hidden" value="812526"/> <input name="PUBLISHER" type="hidden" value="25590652"/></li>
+<li class="butt"><button id="email-updates-signup-submit" onclick="FeedBlitz_06f6221b03f911e29f67003005ce8903s(this.form);" type="submit" value="Submit">Submit</button></li>
+</ol>
+</form>
+<script type="text/javascript">function FeedBlitz_06f6221b03f911e29f67003005ce8903i(){var x=document.getElementsByName('FeedBlitz_06f6221b03f911e29f67003005ce8903');for(i=0;i<x.length;i++){x[i].EMAIL.style.display='block';
+x[i].action='https://www.feedblitz.com/f/f.fbz?AddNewUserDirect';}}
+function FeedBlitz_06f6221b03f911e29f67003005ce8903s(v){v.submit();}FeedBlitz_06f6221b03f911e29f67003005ce8903i();</script>
+<div class="social-links"><a class="twitter-home" href="http://twitter.com/uscbo" rel="noopener" target="_blank"><picture> <source srcset="/themes/custom/cbo/images/social-icons/twitter-icon.svg" type="image/svg+xml"> <img alt="CBO Twitter" class="logo" data-entity-type="" data-entity-uuid="" src="https://www.cbo.gov//themes/custom/cbo/images/social-icons/twitter-icon.png" title="CBO Twitter" typeof="foaf:Image"/> </source></picture></a> <a class="twitter-home" href="http://www.youtube.com/uscbo" rel="noopener" target="_blank"><picture> <source srcset="/themes/custom/cbo/images/social-icons/youtube-icon.svg" type="image/svg+xml"> <img alt="CBO Youtube" class="logo" data-entity-type="" data-entity-uuid="" src="https://www.cbo.gov//themes/custom/cbo/images/social-icons/youtube-icon.png" title="CBO Youtube" typeof="foaf:Image"/> </source></picture></a> <a class="twitter-home" href="http://www.slideshare.net/cbo" rel="noopener" target="_blank"><picture> <source srcset="/themes/custom/cbo/images/social-icons/slideshare-icon.svg" type="image/svg+xml"> <img alt="CBO Slideshare" class="logo" data-entity-type="" data-entity-uuid="" src="https://www.cbo.gov//themes/custom/cbo/images/social-icons/slideshare-icon.png" title="CBO Slideshare" typeof="foaf:Image"/> </source></picture></a> <a class="rss-home" href="/publications/all/rss.xml"><picture> <source srcset="/themes/custom/cbo/images/social-icons/rss-icon.svg" type="image/svg+xml"> <img alt="CBO RSS" class="logo" data-entity-type="" data-entity-uuid="" src="https://www.cbo.gov//themes/custom/cbo/images/social-icons/rss-icon.png" title="CBO RSS" typeof="foaf:Image"/> </source></picture></a></div>
+</div>
+</section>
+</section>
+</div>
+<div class="footer-bottom-wrapper">
+<section class="footer-bottom">
+<nav aria-labelledby="block-footermenu-menu" class="block block-menu navigation menu--menu-footer-menu" id="block-footermenu" role="navigation">
+<h2 class="visually-hidden" id="block-footermenu-menu">Footer Menu</h2>
+<ul class="menu">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/104" href="/about/overview" title="">About</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="topics" href="/topics" title="">Topics</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="cost-estimates" href="/cost-estimates">Cost Estimates</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/49835" href="/faqs" title="">FAQs</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="blog" href="/blog">Blog</a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="block-footermenuutility-menu" class="block block-menu navigation menu--menu-footer-menu---utility" id="block-footermenuutility" role="navigation">
+<h2 class="visually-hidden" id="block-footermenuutility-menu">Footer Menu - Utility</h2>
+<ul class="menu">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/367" href="/about/careers" title="">Work at CBO</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/5048" href="/about/business-opportunities" title="">Business Opportunities</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/255" href="/about/contact" title="">Contact CBO</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/51141" href="/about/press-center" title="">Press Center</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/5049" href="/about/privacy" title="">Privacy, Security, and Copyright Policies</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="sitemap" href="/sitemap">Sitemap</a>
+</li>
+</ul>
+</nav>
+</section>
+</div>
+</footer>
+</div>
+</div>
+<script data-drupal-selector="drupal-settings-json" type="application/json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/52486","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"ajaxTrustedUrl":{"\/search":true},"user":{"uid":0,"permissionsHash":"5cfe839c248a370b8729c016217dfdd6e1597af457a1083e576b843ee80e4fde"}}</script>
+<script src="https://www.cbo.gov//sites/default/files/js/js_P-YJRYnHu1YBSSAGu6CcoAtHzCV48LG_LmOFBqW79qg.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8e1767b7cc","applicationID":"75648876","transactionName":"ZFQAMBNYDEADWkxaXV0eIwcVUA1dTUlZVFdsUgMHCVw=","queueTime":0,"applicationTime":31,"atts":"SBMDRltCH04=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+</body></html>

@@ -1,0 +1,276 @@
+<html><head>
+<title>Piano - White House Museum</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="http://www.whitehousemuseum.org//styles.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+<!--
+
+
+
+td     {
+	font-family: Arial, Verdana, Helvetica;
+	font-size: 9pt;
+	color: #000000;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	text-align: justify;
+}
+
+-->
+</style>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="http://www.whitehousemuseum.org//styles.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+
+#dropmenudiv{
+position:absolute;
+border:1px solid darkgray;
+border-bottom-width: 0;
+font:normal 12px Verdana;
+line-height:18px;
+z-index:100;
+}
+
+#dropmenudiv a{
+width: 100%;
+display: block;
+text-indent: 3px;
+border-bottom: 1px solid darkgray;
+padding: 1px 0;
+text-decoration: none;
+font-weight: bold;
+}
+
+#dropmenudiv a:hover{ /*hover background color*/
+background-color: white;
+}
+
+</style>
+<script type="text/javascript">
+
+/***********************************************
+* AnyLink Drop Down Menu- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+//Contents for menu 0
+var menu0=new Array()
+menu0[0]='<a href="/overview.htm">White House Overview</a>'
+menu0[1]='<a href="/grounds.htm">White House Grounds</a>'
+menu0[2]='<a href="/furnishings/">White House Furnishings</a>'
+menu0[3]='<a href="/special/about.htm">About the Museum</a>'
+menu0[4]='<a href="/special/questions.htm">Questions & Answers</a>'
+menu0[5]='<a href="/special/sitemap.htm">WHM Site Map</a>'
+
+//Contents for menu 1
+var menu1=new Array()
+menu1[0]='<a href="/residence.htm">Residence Overview</a>'
+menu1[1]='<a href="/FloorB.htm">Sub-Basements</a>'
+menu1[2]='<a href="/Floor0.htm">Ground Floor</a>'
+menu1[3]='<a href="/Floor1.htm">First Floor</a>'
+menu1[4]='<a href="/Floor2.htm">Second Floor</a>'
+menu1[5]='<a href="/Floor3.htm">Third Floor</a>'
+
+//Contents for menu 2
+var menu2=new Array()
+menu2[0]='<a href="/east-wing.htm">East Wing Overview</a>'
+menu2[1]='<a href="/ew1.htm">First Floor</a>'
+menu2[2]='<a href="/ew2.htm">Second Floor</a>'
+
+//Contents for menu 3
+var menu3=new Array()
+menu3[0]='<a href="/west-wing.htm">West Wing Overview</a>'
+menu3[1]='<a href="/ww0.htm">Ground Floor</a>'
+menu3[2]='<a href="/ww1.htm">First Floor</a>'
+menu3[3]='<a href="/ww2.htm">Second Floor</a>'
+
+//Contents for menu 4
+var menu4=new Array()
+menu4[0]='<a href="/index.htm">Home</a>'
+menu4[1]='<a href="/special/AF1/index.htm">Air Force One</a>'
+menu4[2]='<a href="/special/1oc/index.htm">VP&#8217;s Residence</a>'
+menu4[3]='<a href="/model/index.htm">3-D Models</a>'
+menu4[4]='<a href="/special/lesson.htm">Lesson Plans</a>'
+menu4[5]='<a href="/special/movies.htm">White House Movies & TV</a>'
+menu4[6]='<a href="/special/resources.htm">Research Resources</a>'
+menu4[7]='<a href="http://whitehousemuseum.wordpress.com/">WHM weblog</a>'
+menu4[8]='<a href="/special/new.htm">What&#8217;s New</a>'
+
+var menuwidth='165px' //default menu width
+var menubgcolor='lightgrey'  //menu bgcolor
+var disappeardelay=250  //menu disappear speed onMouseout (in miliseconds)
+var hidemenu_onclick="yes" //hide menu when user clicks within menu?
+
+/////No further editing needed
+
+var ie4=document.all
+var ns6=document.getElementById&&!document.all
+
+if (ie4||ns6)
+document.write('<div id="dropmenudiv" style="visibility:hidden;width:'+menuwidth+';background-color:'+menubgcolor+'" onMouseover="clearhidemenu()" onMouseout="dynamichide(event)"></div>')
+
+function getposOffset(what, offsettype){
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+var parentEl=what.offsetParent;
+while (parentEl!=null){
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+parentEl=parentEl.offsetParent;
+}
+return totaloffset;
+}
+
+
+function showhide(obj, e, visible, hidden, menuwidth){
+if (ie4||ns6)
+dropmenuobj.style.left=dropmenuobj.style.top="-500px"
+if (menuwidth!=""){
+dropmenuobj.widthobj=dropmenuobj.style
+dropmenuobj.widthobj.width=menuwidth
+}
+if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover")
+obj.visibility=visible
+else if (e.type=="click")
+obj.visibility=hidden
+}
+
+function iecompattest(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function clearbrowseredge(obj, whichedge){
+var edgeoffset=0
+if (whichedge=="rightedge"){
+var windowedge=ie4 && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-15 : window.pageXOffset+window.innerWidth-15
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetWidth
+}
+else{
+var topedge=ie4 && !window.opera? iecompattest().scrollTop : window.pageYOffset
+var windowedge=ie4 && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure){ //move up?
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetHeight
+if ((dropmenuobj.y-topedge)<dropmenuobj.contentmeasure) //up no good either?
+edgeoffset=dropmenuobj.y+obj.offsetHeight-topedge
+}
+}
+return edgeoffset
+}
+
+function populatemenu(what){
+if (ie4||ns6)
+dropmenuobj.innerHTML=what.join("")
+}
+
+
+function dropdownmenu(obj, e, menucontents, menuwidth){
+if (window.event) event.cancelBubble=true
+else if (e.stopPropagation) e.stopPropagation()
+clearhidemenu()
+dropmenuobj=document.getElementById? document.getElementById("dropmenudiv") : dropmenudiv
+populatemenu(menucontents)
+
+if (ie4||ns6){
+showhide(dropmenuobj.style, e, "visible", "hidden", menuwidth)
+
+dropmenuobj.x=getposOffset(obj, "left")
+dropmenuobj.y=getposOffset(obj, "top")
+dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+"px"
+dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+"px"
+}
+
+return clickreturnvalue()
+}
+
+function clickreturnvalue(){
+if (ie4||ns6) return false
+else return true
+}
+
+function contains_ns6(a, b) {
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function dynamichide(e){
+if (ie4&&!dropmenuobj.contains(e.toElement))
+delayhidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+delayhidemenu()
+}
+
+function hidemenu(e){
+if (typeof dropmenuobj!="undefined"){
+if (ie4||ns6)
+dropmenuobj.style.visibility="hidden"
+}
+}
+
+function delayhidemenu(){
+if (ie4||ns6)
+delayhide=setTimeout("hidemenu()",disappeardelay)
+}
+
+function clearhidemenu(){
+if (typeof delayhide!="undefined")
+clearTimeout(delayhide)
+}
+
+if (hidemenu_onclick=="yes")
+document.onclick=hidemenu
+
+</script></head><body background="/images/page_bkgd.jpg" bgcolor="#FFFFCC" bottommargin="0" leftmargin="0" marginheight="0" marginwidth="0" rightmargin="0" topmargin="0"><div id="dropmenudiv" onmouseout="dynamichide(event)" onmouseover="clearhidemenu()" style="visibility:hidden;width:165px;background-color:lightgrey"></div>
+<div align="center">
+<img height="50" src="http://www.whitehousemuseum.org//images/whitehousemuseum-logo.jpg" title="White House Museum" width="800"/><br/>
+<table bgcolor="#FFFFFF" border="1" cellpadding="5" cellspacing="5" width="800">
+<tbody><tr>
+<td><div align="center"> <img height="25" src="http://www.whitehousemuseum.org//images/buttons/rosette.gif" width="50"/> <a href="/Overview.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu0, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org//images/buttons/button-overview-white.gif" width="100"/></a><a href="/residence.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu1, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org//images/buttons/button-residence.gif" width="100"/></a><a href="/east-wing.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu2, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org//images/buttons/button-east.gif" width="100"/></a><a href="/west-wing.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu3, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org//images/buttons/button-west.gif" width="100"/></a><a href="/index.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu4, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org//images/buttons/button-home.gif" width="100"/></a><img height="25" src="http://www.whitehousemuseum.org//images/buttons/rosette.gif" width="50"/> </div></td>
+</tr>
+</tbody></table>
+<h1>White House Piano</h1>
+<p align="center"><img border="0" height="396" src="http://www.whitehousemuseum.org//floor1/east-room/east-room-2002-piano.jpg" title="Custom piano" width="600"/>
+</p><p align="center">The custom Steinway piano  at Christmas,  2002</p>
+<table border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="800">
+<tbody><tr>
+<td valign="top"><h2>Maestro-in-Chief</h2>
+<p>Pianos have been popular musical instruments almost since their invention over two centuries ago, and quickly found their way into the White House. And several presidents have been adept piano players. President Truman and his daughter Margaret played regularly and preferred traditional black Baldwin grand pianos. Margaret's piano leg poking through the floor of her second-floor sitting room was one of the things that prompted a full structural evaluation of the White House and led to the <a href="/special/renovation-1948.htm">Truman reconstruction</a>. President Nixon also played piano and even accompanied singer Pearl Bailey in a performance in the East Room. </p>
+<h3>The Eagle-Leg Piano </h3>
+<p>The most famous piano in the White House is the Steinway grand piano with gilt American eagle supports. It was designed by Eric Gugler (with help from Franklin Roosevelt) and was given to the White House in 1938 by the manufacturer. It is decorated with gilt stenciling by Dunbar Beck. It replaced an earlier custom piano from the 19th century that featured a similar eagle motif. It is normally kept in the <a href="/floor1/east-room.htm">East Room</a>, but sometimes used in the <a href="/floor1/entrance-hall.htm">Entrance Hall</a>. </p>
+<h3>Other Pianos</h3>
+<p>The White House has other pianos, generally kept in the upstairs residence rooms, such as the <a href="/floor2/central-hall.htm">Central Hall</a>. These are more traditional black grand pianos, most by Baldwin (which President Truman preferred). </p>
+<h2 align="center"><a href="/furnishings/index.htm">White House furnishings overview</a></h2>
+<p align="center"> </p></td>
+</tr>
+</tbody></table><h2>More Images</h2>
+<p align="center"><img border="0" height="560" src="http://www.whitehousemuseum.org//floor2/central-hall/central-hall-c1997.jpg" title="Central Hall - Clinton" width="425"/>
+</p><p align="center">Piano in the second floor Central Hall around 1997, looking east</p>
+<p align="center"><img border="0" height="412" src="http://www.whitehousemuseum.org//floor2/central-hall/central-hall-1992-w.jpg" title="Central Hall - Bush 1" width="600"/>
+</p><p align="center">Piano in the second floor Central Hall  in 1992, looking west <font size="1">(<a class="external" href="http://memory.loc.gov/cgi-bin/displayPhoto.pl?path=/pnp/habshaer/dc/dc0400/dc0402/photos&amp;topImages=026720pr.jpg&amp;topLinks=026720pv.jpg,026720pu.tif&amp;title=569.%20%20228%20Center%20Hall;%20View%20looking%20West%20%3cbr%3eHABS%20DC,WASH,134-569&amp;displayProfile=0">HABS</a>)</font></p>
+<p align="center"><a href="/floor1/east-room/east-room-piano-clinton.jpg"><img border="0" height="400" src="http://www.whitehousemuseum.org//floor1/east-room/east-room-piano-clinton.jpg" title="Custom grand piano" width="400"/></a>
+</p><p align="center">Custom grand piano in the East Room <font size="1"> (Clinton Library)</font></p>
+<p align="center"><a href="/floor1/east-room/east-room-1974-bailey.jpg"><img border="0" height="413" src="http://www.whitehousemuseum.org//floor1/east-room/east-room-1974-bailey.jpg" title="Nixon playing piano" width="600"/></a></p>
+<p align="center">Richard Nixon accompanying Pearl Bailey on the White House piano in the East Room  in 1974 <font size="1"> (<a class="external" href="http://narademo.umiacs.umd.edu/cgi-bin/isadg/viewobject.pl?object=9213">NARA</a>)</font></p>
+<p align="center"><img border="0" height="402" src="http://www.whitehousemuseum.org//floor1/east-room/east-room-1961-truman-piano.jpg" title="East Room - Kennedy" width="600"/></p>
+<p align="center">Former President Harry Truman playing a Baldwin grand piano in the East Room in 1961 <font size="1">(<a class="external" href="http://narademo.umiacs.umd.edu/cgi-bin/isadg/viewobject.pl?object=8945">NARA</a> - Kennedy Library - Cecil Stoughton)</font></p>
+<div align="center">
+<p align="center"><img height="449" src="http://www.whitehousemuseum.org//floor2/dining-room/private-dining-room-1948-ne.jpg" title="Dining Room as Truman living room" width="600"/></p>
+<p align="center">The Truman's family room (now <a href="/floor2/private-dining-room.htm">Private Dining Room</a>) in 1948 shows the probable piano whose leg broke through the floor <font size="1">(<a class="external" href="http://www.trumanlibrary.org/photographs/view.php?id=2849">Truman Library</a>)</font></p>
+<p align="center"><img height="449" src="http://www.whitehousemuseum.org//furnishings/white-house-piano-1903.jpg" title="1903 piano" width="600"/></p>
+<p align="center">The 1903 White House piano in the Smithsonian Institution <font size="1">(<a class="external" href="http://travel.webshots.com/photo/1406084774074632963vxKKCa">Sjclovesjc</a>)</font> </p>
+<p align="center"><img height="326" src="http://www.whitehousemuseum.org//furnishings/white-house-piano-1903-tint.jpg" title="1903 piano" width="600"/></p>
+<p align="center">The 1903 White House piano  in the East Room <font size="1">(<a class="external" href="http://hdl.loc.gov/loc.pnp/ppmsca.11633">Library of Congress</a>)</font> </p>
+<p align="center"> </p>
+<table bgcolor="#FFFFFF" border="1" cellpadding="5" cellspacing="5" width="800">
+<tbody><tr>
+<td><div align="center"> <img height="25" src="http://www.whitehousemuseum.org//images/buttons/rosette.gif" width="50"/> <a href="/Overview.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu0, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org//images/buttons/button-overview-white.gif" width="100"/></a><a href="/residence.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu1, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org//images/buttons/button-residence.gif" width="100"/></a><a href="/east-wing.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu2, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org//images/buttons/button-east.gif" width="100"/></a><a href="/west-wing.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu3, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org//images/buttons/button-west.gif" width="100"/></a><a href="/index.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu4, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org//images/buttons/button-home.gif" width="100"/></a><img height="25" src="http://www.whitehousemuseum.org//images/buttons/rosette.gif" width="50"/> </div></td>
+</tr>
+</tbody></table>
+<p> </p>
+</div>
+</div>
+</body></html>

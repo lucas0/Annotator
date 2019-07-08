@@ -1,0 +1,487 @@
+<html class="yui3-js-enabled js no-flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" id="yui_3_5_0_1_1562533808325_250" lang="en"><body><div class="" id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important"></div>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width" name="viewport"/>
+<link href="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/cssnormalize/cssnormalize-min.css" rel="stylesheet" type="text/css"/>
+<link href="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/cssgrids-responsive/cssgrids-responsive-min.css" rel="stylesheet" type="text/css"/>
+<link href="https://chem.nlm.nih.gov//chemidplus/15704.462/toxnet/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://chem.nlm.nih.gov//chemidplus/15704.462/css/dialog.css" rel="stylesheet"/>
+<link href="https://chem.nlm.nih.gov//chemidplus/15704.462/toxnet/css/style.css" rel="stylesheet"/>
+<link href="https://chem.nlm.nih.gov//chemidplus/15704.462/css/postToxnet.css" rel="stylesheet"/>
+<script async="" src="//script.crazyegg.com/pages/scripts/0027/2050.js?434037" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/plugins/ua/linkid.js" type="text/javascript"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MT6MLL"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+var contextPath='/chemidplus',
+	buildPath='/chemidplus/15704.462/',
+	dataPath='/chemidplus/data/15704.462/',
+	my_page='SINGLE_RESULT_FULL_RECORD',
+	YUI_config={
+		base: '/chemidplus/yui3-3.18.1/build/',
+		combine: false,
+		groups: {
+			gallery: {
+				base: '/chemidplus/yui3-gallery/build/',
+				patterns: {
+					'gallery-': {},
+					'gallerycss-': {type:'css'}
+				}
+			}
+		}},
+	supportsHistoryAPI = !!(window.history && history.replaceState);
+if(supportsHistoryAPI){
+	(function(){
+		var href = window.location.href,
+			href1;
+		if(href.match(/.*(actionHandle=(runHistoricalQuery|scrollToRow).*|ProxyServlet\?nextPage=jsp\/(chemidheavy|srs)\/ChemidDataview\.jsp)/)){
+			history.replaceState({},'',window.location.pathname);
+		}else{
+			href1 = href.replace(/(HISTORICAL_INDEX=[0-9-]+|acSearch=true|fromBread=true)&/g,'').replace(/[?&](HISTORICAL_INDEX=[0-9-]+|acSearch=true|fromBread=true)/g,'');
+			if(href!=href1){
+				history.replaceState(null,'',href1);
+			}
+		}
+	})();
+}
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-16235265-24', 'auto');
+ga('send', 'pageview');
+
+</script>
+<script async="" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=HHS&amp;subagency=NIH&amp;sp=query&amp;enhlink=true" type="text/javascript"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MT6MLL');</script>
+<script src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/yui/yui-min.js"></script>
+<script src="https://chem.nlm.nih.gov//chemidplus/15704.462/toxnet/js/libs/modernizr-2.5.3.min.js"></script>
+<script src="https://chem.nlm.nih.gov//chemidplus/15704.462/js/common/search.js"></script>
+<script src="https://chem.nlm.nih.gov//chemidplus/15704.462/js/common/dialog.js"></script><link charset="utf-8" href="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-base/assets/skins/sam/widget-base.css" id="yui_3_5_0_1_1562533808325_2" rel="stylesheet"/><link charset="utf-8" href="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/cssbutton/cssbutton-min.css" id="yui_3_5_0_1_1562533808325_3" rel="stylesheet"/><link charset="utf-8" href="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-modality/assets/skins/sam/widget-modality.css" id="yui_3_5_0_1_1562533808325_4" rel="stylesheet"/><link charset="utf-8" href="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-stack/assets/skins/sam/widget-stack.css" id="yui_3_5_0_1_1562533808325_5" rel="stylesheet"/><link charset="utf-8" href="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/panel/assets/skins/sam/panel.css" id="yui_3_5_0_1_1562533808325_6" rel="stylesheet"/><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_8" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/oop/oop-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_9" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/attribute-core/attribute-core-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_10" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-custom-base/event-custom-base-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_11" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-custom-complex/event-custom-complex-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_12" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/attribute-observable/attribute-observable-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_13" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/attribute-extras/attribute-extras-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_14" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/attribute-base/attribute-base-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_15" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/attribute-complex/attribute-complex-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_16" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/base-core/base-core-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_17" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/base-observable/base-observable-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_18" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/base-base/base-base-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_19" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/pluginhost-base/pluginhost-base-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_20" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/pluginhost-config/pluginhost-config-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_21" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/base-pluginhost/base-pluginhost-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_22" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/classnamemanager/classnamemanager-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_23" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-base/event-base-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_24" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/dom-core/dom-core-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_25" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/dom-base/dom-base-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_26" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/selector-native/selector-native-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_27" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/selector/selector-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_28" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/node-core/node-core-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_29" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/dom-style/dom-style-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_30" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/node-base/node-base-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_31" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-synthetic/event-synthetic-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_32" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-focus/event-focus-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_33" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/node-style/node-style-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_34" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-base/widget-base-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_35" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-htmlparser/widget-htmlparser-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_36" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-skin/widget-skin-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_37" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-delegate/event-delegate-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_38" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/node-event-delegate/node-event-delegate-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_39" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-uievents/widget-uievents-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_40" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/base-build/base-build-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_41" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-key/event-key-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_42" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-outside/event-outside-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_43" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-autohide/widget-autohide-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_44" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/escape/escape-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_45" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/button-core/button-core-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_46" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/node-pluginhost/node-pluginhost-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_47" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/button-plugin/button-plugin-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_48" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-stdmod/widget-stdmod-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_49" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-buttons/widget-buttons-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_50" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-modality/widget-modality-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_51" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/dom-screen/dom-screen-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_52" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/node-screen/node-screen-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_53" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-position/widget-position-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_54" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-position-align/widget-position-align-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_55" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-position-constrain/widget-position-constrain-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_56" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-stack/widget-stack-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_1_1562533808325_57" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/panel/panel-min.js"></script>
+<title>ChemIDplus - 54-64-8 - RTKIYNMVFMVABJ-UHFFFAOYSA-L - Thimerosal [USP:JAN] - Similar structures search, synonyms, formulas, resource links, and other chemical information.</title>
+<meta content="54-64-8 - RTKIYNMVFMVABJ-UHFFFAOYSA-L - Thimerosal [USP:JAN] - Similar structures search, synonyms, formulas, resource links, and other chemical information." name="description"/>
+<meta content="54-64-8, RTKIYNMVFMVABJ-UHFFFAOYSA-L, chemical dictionaries, name search, structure search, substructure search, hyperlinked search locators, toxicology literature, medical literature, biomedical literature" name="keywords"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="Michael Chambers" name="author"/>
+<meta content="Altum, Inc." name="dcterms.rightsHolder"/>
+<meta content="2013" name="dcterms.dateCopyrighted"/>
+<link href="https://chem.nlm.nih.gov//chemidplus/15704.462/css/chemidstyles.css" rel="stylesheet" type="text/css"/>
+<link href="https://chem.nlm.nih.gov//chemidplus/15704.462/css/button.css" rel="stylesheet" type="text/css"/>
+<link href="https://chem.nlm.nih.gov//chemidplus/15704.462/css/admin.css" rel="stylesheet" type="text/css"/>
+<link href="https://chem.nlm.nih.gov//chemidplus/15704.462/css/ChemFull.css" rel="stylesheet" type="text/css"/>
+<link href="https://chem.nlm.nih.gov//chemidplus/15704.462/css/fullWidthHeader.css" rel="stylesheet" type="text/css"/>
+<link href="https://chem.nlm.nih.gov/chemidplus/rn/54-64-8" rel="canonical"/>
+<link charset="utf-8" href="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/autocomplete-list/assets/skins/sam/autocomplete-list.css" id="yui_3_5_0_2_1562533808325_2" rel="stylesheet"/><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_3" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/querystring-stringify-simple/querystring-stringify-simple-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_4" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/io-base/io-base-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_5" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/json-parse/json-parse-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_6" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/intl/intl-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_7" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/autocomplete-list/lang/autocomplete-list_en.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_8" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/array-extras/array-extras-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_9" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-valuechange/event-valuechange-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_10" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/autocomplete-base/autocomplete-base-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_11" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-resize/event-resize-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_12" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/selector-css2/selector-css2-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_13" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/selector-css3/selector-css3-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_14" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/shim-plugin/shim-plugin-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_15" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/autocomplete-list/autocomplete-list-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_16" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/autocomplete-list-keys/autocomplete-list-keys-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_2_1562533808325_17" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/autocomplete-plugin/autocomplete-plugin-min.js"></script><link charset="utf-8" href="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/tabview/assets/skins/sam/tabview.css" id="yui_3_5_0_3_1562533808325_2" rel="stylesheet"/><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_3" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/arraylist/arraylist-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_4" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-parent/widget-parent-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_5" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/widget-child/widget-child-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_6" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/tabview-base/tabview-base-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_7" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/plugin/plugin-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_8" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-simulate/event-simulate-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_9" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/async-queue/async-queue-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_10" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/gesture-simulate/gesture-simulate-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_11" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/node-event-simulate/node-event-simulate-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_12" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/node-focusmanager/node-focusmanager-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_13" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/tabview/tabview-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_14" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-mouseenter/event-mouseenter-min.js"></script><script async="" charset="utf-8" id="yui_3_5_0_3_1562533808325_15" src="https://chem.nlm.nih.gov//chemidplus/yui3-3.18.1/build/event-hover/event-hover-min.js"></script>
+<!--[if lte IE 8]>
+		<script>
+			document.body.className += ' old-ie';
+		</script>
+		<![endif]-->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-MT6MLL" style="display:none;visibility:hidden" title="googletagmanager" width="0"></iframe></noscript>
+<script>document.body.className += ' hasTopSearch';</script>
+<a class="skipNavOne" href="#skipnav" id="anch_0">Skip Navigation</a>
+<div class="container allowTiny" id="yui_3_5_0_1_1562533808325_248">
+<header id="branding">
+<div class="siteTitles">
+<div id="site-title"><a href="https://www.nlm.nih.gov/" id="anch_1" rel="NLM home" title="U.S. National Library of Medicine">U.S. National Library of Medicine</a></div>
+<div id="site-title2"><a href="https://toxnet.nlm.nih.gov/" id="anch_2" rel="home" title="TOXNET - TOXICOLOGY DATA NETWORK">TOXNET - TOXICOLOGY DATA NETWORK</a></div>
+</div>
+<nav id="access" role="article">
+<ul class="menu" id="menu-main-menu">
+<li><a href="/chemidplus/jsp/chemidheavy/help.jsp#SingleResultFull" id="anch_3" target="help">Help</a></li>
+<li><a href="https://toxnet.nlm.nih.gov/newtoxnet/faq.html" id="anch_4">FAQs</a></li>
+<li><a href="https://toxnet.nlm.nih.gov/help/newtoxnet/toxnetfs.html" id="anch_5">TOXNET Fact Sheet</a></li>
+<li><a href="https://sis.nlm.nih.gov/enviro/manuals.html" id="anch_6">Training Manual &amp; Schedule</a></li>
+</ul>
+</nav>
+</header>
+<div class="database" id="main" role="main">
+<div class="lineContainer breadSearch" id="yui_3_5_0_1_1562533808325_247">
+<div class="lcLeft" id="yui_3_5_0_1_1562533808325_259">
+<link href="https://chem.nlm.nih.gov//chemidplus/15704.462/css/breadcrumb.css" rel="stylesheet" type="text/css"/><ul class="breadcrumb"><li><a href="https://toxnet.nlm.nih.gov/" id="anch_7" title="Search all TOXNET databases">TOXNET</a><span class="divider">&gt;</span></li><li><a href="/chemidplus/?HISTORICAL_INDEX=0&amp;fromBread=true" id="anch_8" title="Return to the search page to modify the query">ChemID<i>plus</i></a><span class="divider">&gt;</span></li><li>Substance</li></ul>
+<div class="" id="database-banner">
+<div id="yui_3_5_0_1_1562533808325_258">ChemID<i>plus</i>
+<span class="sub-title">A TOXNET DATABASE</span>
+<span class="sub-links" id="yui_3_5_0_1_1562533808325_257"><a href="/chemidplus/chemidlite.jsp" id="anch_9" title="Start a new Lite search">Lite</a><span class="divider">•</span><a href="/chemidplus/name" id="anch_10" title="Start a new Browse search">Browse</a><span class="divider">•</span><a href="/chemidplus/" id="advancedBread" title="Start a new Advanced search">Advanced</a></span>
+</div>
+</div>
+</div>
+<div class="lcRight" id="yui_3_5_0_1_1562533808325_246">
+<link href="https://chem.nlm.nih.gov//chemidplus/15704.462/css/acSearch.css" rel="stylesheet" type="text/css"/><div class="acSearch" id="acSearch"><span class="selects-wrap" id="yui_3_5_0_1_1562533808325_245"><span class="selects"><select id="QF1" name="QF1" title="The data field to search. It is automatically set based on the search term unless a field is manually selected."><option value="auto">(automatic)</option><option value="name">Name/Synonym</option><option selected="selected" value="number">Registry Number</option><option value="inchikey">InChIKey</option><option value="formula">Formula</option><option value="category">Category</option><option value="locator">Locator Code</option></select><select id="QO1" name="QO1" title="The search operator determines how result values match the search term. It is automatically set unless an operator is manually selected."><option value="auto">(automatic)</option><option value="startswith">starts with</option><option selected="selected" value="equals">equals</option><option value="inlist">in list</option><option value="endswith">ends with</option><option value="contains">contains</option></select></span><input alt="Search Term" aria-autocomplete="list" aria-expanded="false" aria-owns="yui_3_5_0_2_1562533808325_69" autocomplete="off" class="input-medium search-query yui3-aclist-input" id="QV1" name="QV1" title="Enter a value to search for." type="text" value="54-64-8"/><button>Search</button><div class="hidden" id="genericNameStems">See <a href="https://druginfo.nlm.nih.gov/drugportal/jsp/drugportal/DrugNameGenericStems.jsp" id="anch_12" target="_blank">Generic Drug Name Endings</a></div><div aria-hidden="true" class="yui3-widget yui3-aclist yui3-widget-positioned yui3-aclist-hidden" id="yui_3_5_0_2_1562533808325_49" style="width: auto; left: 1272.5px; top: 139px;"><div class="hidden" id="spellCheckMsg">Did you mean...</div><div class="yui3-aclist-content" id="yui_3_5_0_2_1562533808325_51"><ul class="yui3-aclist-list" id="yui_3_5_0_2_1562533808325_69" role="listbox"></ul></div></div><div aria-live="polite" class="yui3-aclist-aria" role="status"></div></span></div><script src="https://chem.nlm.nih.gov//chemidplus/15704.462/js/common/acSearch.js"></script>
+<div class="button-row tight" role="toolbar">
+<a href="/chemidplus/?HISTORICAL_INDEX=-1" id="anch_13" title="New search input page">Start New Query</a>
+<a href="/chemidplus/?HISTORICAL_INDEX=0" id="anch_14" title="Modify last search">Modify Query</a>
+<button id="searchHistory" title="Display &amp; modify previous searches" type="button">Search History</button>
+<button id="useSummary" title="Go to summary view" type="button">Switch to Summary View</button>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+<div class="row-fluid">
+<a id="skipnav" name="skipnav"></a>
+<div id="dialogs"><div class="yui3-widget-mask" hidden="hidden" style="position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; display: none;"></div><div class="yui3-widget yui3-panel yui3-widget-positioned yui3-widget-modal yui3-widget-stacked yui3-panel-hidden" id="yui_3_5_0_1_1562533808325_66" style="width: 410px; left: 746.5px; top: 467px; z-index: 6;"><div class="yui3-panel-content yui3-widget-stdmod" id="dialogYesNo"><div class="yui3-widget-bd"><div class="message dialog-icon-warn">MESSAGE_TO_REPLACE</div></div><div class="yui3-widget-ft"><span class="yui3-widget-buttons" id="yui_3_5_0_1_1562533808325_161"><button class="yui3-button" id="yui_3_5_0_1_1562533808325_78">Yes</button><button class="yui3-button" id="yui_3_5_0_1_1562533808325_84">No</button></span></div></div></div><div class="yui3-widget yui3-panel yui3-widget-positioned yui3-widget-modal yui3-widget-stacked yui3-panel-hidden" id="yui_3_5_0_1_1562533808325_168" style="width: 410px; left: 746.5px; top: 467px; z-index: 6;"><div class="yui3-panel-content yui3-widget-stdmod" id="dialogAlert"><div class="yui3-widget-bd"><div class="message dialog-icon-warn">MESSAGE_TO_REPLACE</div></div><div class="yui3-widget-ft"><span class="yui3-widget-buttons" id="yui_3_5_0_1_1562533808325_232"><button class="yui3-button" id="yui_3_5_0_1_1562533808325_174">OK</button></span></div></div></div></div>
+<div class="mainPage">
+<div class="innerMain" role="main">
+<div class="lineContainer2" id="summary">
+<div class="lc2-right" id="structure">
+<table class="structure-img-btns" role="presentation"><tbody><tr>
+<td class="imgCol">
+<img alt="2D chemical structure of 54-64-8" src="https://chem.nlm.nih.gov//chemidplus/structure/54-64-8" title="2D chemical structure of 54-64-8"/>
+</td>
+<td class="btnCol structure-buttons-container">
+<ul aria-label="Structure Actions" class="structure-buttons button-column" id="_0000054648">
+<li><button class="transferStructure" title="Copy structure to search input page" type="button"><span class="image"></span><span class="title">Transfer structure to query page</span></button></li>
+<li><button class="similarStructures" title="Find structures 80% similar to this one" type="button"><span class="image"></span><span class="title">Find similar structures</span></button></li>
+<li><button class="findSalt" title="Find structures containing this one" type="button"><span class="image">Na +</span><span class="title">Find parent, salts, and hydrates</span></button></li>
+<li><button class="enlargeStructure" title="Open a window with an enlarged image" type="button"><span class="image"></span><span class="title">Enlarge the structure</span></button></li>
+<li><button class="view3D" title="Open a window with a dynamic 3D image" type="button"><span class="image">3D</span><span class="title">View 3D structure</span></button></li>
+</ul>
+</td>
+</tr></tbody></table>
+</div>
+<div class="lc2-left">
+<h1>Substance Name: Thimerosal [USP:JAN]<br/><span>RN: 54-64-8</span><br/><span>UNII: <a href="https://fdasis.nlm.nih.gov/srs/unii/2225pi3mov" id="anch_16" target="_blank">2225PI3MOV</a></span><br/><span>InChIKey: RTKIYNMVFMVABJ-UHFFFAOYSA-L</span></h1>
+<div class="yui3-g-r"><div class="yui3-u-2-3">
+<h2 id="notes">Note</h2><div aria-labelledby="notes" class="ds" id="yui_3_5_0_3_1562533808325_398" role="list"><ul id="yui_3_5_0_3_1562533808325_401" role="presentation">
+<li id="ds0"><div aria-describedby="infoWrap" role="listitem" tabindex="0">An ethylmercury-sulfidobenzoate that has been used as a preservative in VACCINES; ANTIVENINS; and OINTMENTS. It was formerly used as a topical antiseptic. It degrades to ethylmercury and thiosalicylate.</div></li>
+</ul></div>
+</div><div class="yui3-u-1-3">
+<h2 id="formulas">Molecular Formula</h2><div aria-labelledby="formulas" class="ds" id="yui_3_5_0_3_1562533808325_403" role="list"><ul id="yui_3_5_0_3_1562533808325_406" role="presentation">
+<li id="ds1"><div aria-describedby="infoWrap" role="listitem" tabindex="0">C9-H9-Hg-O2-S.Na</div></li>
+</ul></div>
+<div><h2 id="yui_3_5_0_3_1562533808325_407">Molecular Weight</h2><ul id="yui_3_5_0_3_1562533808325_408"><li>404.8141</li></ul></div>
+</div></div>
+</div>
+</div>
+<div class="yui3-widget yui3-tabview" id="yui_3_5_0_3_1562533808325_40"><div class="yui3-tabview-content" id="tabs">
+<ul class="yui3-tabview-list" role="tablist">
+<li class="yui3-tab yui3-widget yui3-tab-selected" id="liAll" role="presentation"><a class="yui3-tab-label yui3-tab-content" href="#all" id="anch_17" role="tab" tabindex="0">All</a></li><li class="yui3-tab yui3-widget" id="yui_3_5_0_3_1562533808325_66" role="presentation"><a class="yui3-tab-label yui3-tab-content" href="#classifications" id="anch_18" role="tab" tabindex="-1">Classifications</a></li><li class="can-wrap yui3-tab yui3-widget" id="yui_3_5_0_3_1562533808325_81" role="presentation"><a class="yui3-tab-label yui3-tab-content" href="#locators" id="anch_19" role="tab" tabindex="-1">Links to Resources</a></li><li class="can-wrap yui3-tab yui3-widget" id="yui_3_5_0_3_1562533808325_96" role="presentation"><a class="yui3-tab-label yui3-tab-content" href="#names" id="anch_20" role="tab" tabindex="-1">Names &amp; Synonyms</a></li><li class="can-wrap yui3-tab yui3-widget" id="yui_3_5_0_3_1562533808325_111" role="presentation"><a class="yui3-tab-label yui3-tab-content" href="#numbers" id="anch_21" role="tab" tabindex="-1">Registry Numbers</a></li><li class="yui3-tab yui3-widget" id="yui_3_5_0_3_1562533808325_126" role="presentation"><a class="yui3-tab-label yui3-tab-content" href="#formulas2" id="anch_22" role="tab" tabindex="-1">Formulas</a></li><li class="can-wrap yui3-tab yui3-widget" id="yui_3_5_0_3_1562533808325_141" role="presentation"><a class="yui3-tab-label yui3-tab-content" href="#structureDescs" id="anch_23" role="tab" tabindex="-1">Structure Descriptors</a></li><li class="yui3-tab yui3-widget" id="yui_3_5_0_3_1562533808325_156" role="presentation"><a class="yui3-tab-label yui3-tab-content" href="#toxicity" id="anch_24" role="tab" tabindex="-1">Toxicity</a></li><li class="can-wrap yui3-tab yui3-widget" id="yui_3_5_0_3_1562533808325_171" role="presentation"><a class="yui3-tab-label yui3-tab-content" href="#physical" id="anch_25" role="tab" tabindex="-1">Physical Properties</a></li></ul>
+<div class="yui3-tabview-panel">
+<div aria-labelledby="anch_17" class="yui3-tab-panel yui3-tab-panel-selected yui3-tab-panel-all" id="all" role="tabpanel"> </div><div aria-labelledby="anch_18" class="yui3-tab-panel yui3-tab-panel-all" id="classifications" role="tabpanel"><h2 class="extra-space-for-toggle-1-col" id="yui_3_5_0_3_1562533808325_409">Classification Codes</h2><div aria-labelledby="yui_3_5_0_3_1562533808325_409" class="ds" id="yui_3_5_0_3_1562533808325_410" role="list"><button class="toggle-1-col" id="yui_3_5_0_3_1562533808325_413" title="Toggle display between 1 column of wider results and multiple columns.">↔</button><div class="yui3-g-r" id="yui_3_5_0_3_1562533808325_415" role="presentation"><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds97"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Agricultural Chemical</div></li>
+<li id="ds98"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Anti-Infective, Topical</div></li>
+<li id="ds99"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Drug / Therapeutic Agent</div></li>
+<li id="ds100"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Fungicide, Bactericide, Wood Preservative</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds101"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Germicide, Bactericide, Disinfectant</div></li>
+<li id="ds102"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Human Data</div></li>
+<li id="ds103"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mutation Data</div></li>
+<li id="ds104"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Organometallic</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds105"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Pharmaceutic Aid (Preservative)</div></li>
+<li id="ds106"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Pharmaceutic Aids</div></li>
+<li id="ds107"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Preservatives, Pharmaceutical</div></li>
+<li id="ds108"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Reproductive Effect</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds109"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Skin / Eye Irritant</div></li>
+<li id="ds110"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Tumor Data</div></li>
+</ul></div></div></div>
+</div><div aria-labelledby="anch_19" class="yui3-tab-panel yui3-tab-panel-all" id="locators" role="tabpanel"><div class="mob2">* denotes mobile formatted website</div><h2 id="yui_3_5_0_3_1562533808325_416">Links to Resources</h2><div aria-labelledby="yui_3_5_0_3_1562533808325_416" class="ls" id="yui_3_5_0_3_1562533808325_417" role="list"><button class="toggle-1-col" id="yui_3_5_0_3_1562533808325_420" title="Toggle display between 1 column of wider results and multiple columns.">↔</button><h3 id="yui_3_5_0_3_1562533808325_422">NLM Resources (File Locators)</h3><div aria-labelledby="yui_3_5_0_3_1562533808325_422" class="yui3-g-r" id="yui_3_5_0_3_1562533808325_424" role="group"><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="CCRIS" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search/r?dbs+ccris:@term+@rn+54-64-8" id="anch_26" onclick="logLocator(this); return true;" role="listitem" target="_blank">CCRIS</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="ClinicalTrials.gov" href="https://clinicaltrials.gov/search/intervention=Thimerosal" id="anch_27" onclick="logLocator(this); return true;" role="listitem" target="_blank">ClinicalTrials.gov</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="DailyMed" href="https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=THIMEROSAL" id="anch_28" onclick="logLocator(this); return true;" role="listitem" target="_blank">DailyMed</a></li>
+<li class="mob"><a aria-describedby="infoWrap" data-id="0000054648" data-name="DailyMed Mob" href="https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=THIMEROSAL" id="anch_29" onclick="logLocator(this); return true;" role="listitem" target="_blank">DailyMed*</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="DART" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search/r?dbs+toxline:@and+@term+@rn+54-64-8+@term+@org+DART" id="anch_30" onclick="logLocator(this); return true;" role="listitem" target="_blank">DART</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="DrugPortal" href="https://druginfo.nlm.nih.gov/drugportal/rn/54-64-8" id="anch_31" onclick="logLocator(this); return true;" role="listitem" target="_blank">DrugPortal</a></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="EMIC" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search/r?dbs+toxline:@and+@term+@rn+54-64-8+@term+@org+EMIC" id="anch_32" onclick="logLocator(this); return true;" role="listitem" target="_blank">EMIC</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="GENETOX" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search/r?dbs+genetox:@term+@rn+@rel+54-64-8" id="anch_33" onclick="logLocator(this); return true;" role="listitem" target="_blank">GENETOX</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="Haz-Map" href="https://hazmap.nlm.nih.gov/category-details?table=copytblagents&amp;id=1101" id="anch_34" onclick="logLocator(this); return true;" role="listitem" target="_blank">Haz-Map</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="HSDB" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search/r?dbs+hsdb:@term+@rn+@rel+54-64-8" id="anch_35" onclick="logLocator(this); return true;" role="listitem" target="_blank">HSDB</a></li>
+<li class="mob"><a aria-describedby="infoWrap" data-id="0000054648" data-name="HSDB Mob" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search?@pda=1&amp;database=hsdb&amp;sectionopen=phcy&amp;queryxxx=54-64-8" id="anch_36" onclick="logLocator(this); return true;" role="listitem" target="_blank">HSDB*</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="MedlinePlusAll" href="https://vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta?v:project=medlineplus&amp;x=44&amp;y=10&amp;query=Thimerosal" id="anch_37" onclick="logLocator(this); return true;" role="listitem" target="_blank">MedlinePlusAll</a></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li class="mob"><a aria-describedby="infoWrap" data-id="0000054648" data-name="MedlinePlusAll Mob" href="https://vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta?v:project=medlineplus&amp;x=44&amp;y=10&amp;query=Thimerosal" id="anch_38" onclick="logLocator(this); return true;" role="listitem" target="_blank">MedlinePlusAll*</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="MeSH" href="https://meshb.nlm.nih.gov/#/fieldSearch?searchInField=allTerms&amp;sort=&amp;size=20&amp;searchType=exactMatch&amp;searchMethod=FullWord&amp;q=Thimerosal" id="anch_39" onclick="logLocator(this); return true;" role="listitem" target="_blank">MeSH</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="MeSH Heading" href="https://meshb.nlm.nih.gov/#/fieldSearch?searchInField=allTerms&amp;sort=&amp;size=20&amp;searchType=exactMatch&amp;searchMethod=FullWord&amp;q=Thimerosal" id="anch_40" onclick="logLocator(this); return true;" role="listitem" target="_blank">MeSH Heading</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="PubChem" href="https://www.ncbi.nlm.nih.gov/pccompound?term=54-64-8~%5Bsynonym%5D" id="anch_41" onclick="logLocator(this); return true;" role="listitem" target="_blank">PubChem</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="PubMed" href="https://www.ncbi.nlm.nih.gov/sites/entrez?cmd=search&amp;db=pubmed&amp;cmd_current=Limits&amp;term=Thimerosal+OR+54-64-8+[rn]" id="anch_42" onclick="logLocator(this); return true;" role="listitem" target="_blank">PubMed</a></li>
+<li class="mob"><a aria-describedby="infoWrap" data-id="0000054648" data-name="PubMed Mob" href="https://www.ncbi.nlm.nih.gov/m/pubmed/?term=Thimerosal+OR+54-64-8+[rn]" id="anch_43" onclick="logLocator(this); return true;" role="listitem" target="_blank">PubMed*</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="PubMed AIDS" href="https://www.ncbi.nlm.nih.gov/sites/entrez?cmd=search&amp;db=pubmed&amp;cmd_current=Limits&amp;pmfilter_Subsets=AIDS&amp;term=Thimerosal+OR+54-64-8+[rn]" id="anch_44" onclick="logLocator(this); return true;" role="listitem" target="_blank">PubMed AIDS</a></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="PubMed Cancer" href="https://www.ncbi.nlm.nih.gov/sites/entrez?cmd=search&amp;db=pubmed&amp;cmd_current=Limits&amp;pmfilter_Subsets=Cancer&amp;term=Thimerosal+OR+54-64-8+[rn]" id="anch_45" onclick="logLocator(this); return true;" role="listitem" target="_blank">PubMed Cancer</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="PubMed Central" href="https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;db=PMC&amp;term=Thimerosal" id="anch_46" onclick="logLocator(this); return true;" role="listitem" target="_blank">PubMed Central</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="PubMed Toxicology" href="https://www.ncbi.nlm.nih.gov/sites/entrez?cmd=search&amp;db=pubmed&amp;cmd_current=Limits&amp;pmfilter_Subsets=Toxicology&amp;term=Thimerosal+OR+54-64-8+[rn]" id="anch_47" onclick="logLocator(this); return true;" role="listitem" target="_blank">PubMed Toxicology</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="RTECS" href="https://www.cdc.gov/niosh/rtecs/default.html" id="anch_48" onclick="logLocator(this); return true;" role="listitem" target="_blank">RTECS</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="TOXLINE" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search/r?dbs+toxline:@term+@rn+54-64-8+@OR+@all+%22Thimerosal%22" id="anch_49" onclick="logLocator(this); return true;" role="listitem" target="_blank">TOXLINE</a></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li class="mob"><a aria-describedby="infoWrap" data-id="0000054648" data-name="TOXLINE Mob" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search?@pda=1&amp;database=toxline&amp;queryxxx=54-64-8+%22Thimerosal%22+" id="anch_50" onclick="logLocator(this); return true;" role="listitem" target="_blank">TOXLINE*</a></li>
+</ul></div></div><h3 id="yui_3_5_0_3_1562533808325_426">Regulatory Agencies (Superlist Locators)</h3><div aria-labelledby="yui_3_5_0_3_1562533808325_426" class="yui3-g-r" id="yui_3_5_0_3_1562533808325_428" role="group"><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="DSL" href="https://pollution-waste.canada.ca/substances-search/Substance/DisplaySubstanceDetails?Id=54-64-8" id="anch_51" onclick="logLocator(this); return true;" role="listitem" target="_blank">DSL</a></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="TSCAINV" href="https://iaspub.epa.gov/sor_internet/registry/substreg/searchandretrieve/advancedsearch/externalSearch.do?p_type=CASNO&amp;p_value=54-64-8" id="anch_52" onclick="logLocator(this); return true;" role="listitem" target="_blank">TSCAINV</a></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="WHMI" href="http://www.hc-sc.gc.ca/ewh-semt/occup-travail/whmis-simdut/index-eng.php" id="anch_53" onclick="logLocator(this); return true;" role="listitem" target="_blank">WHMI</a></li>
+</ul></div></div><h3 id="yui_3_5_0_3_1562533808325_430">Other Resources (Internet Locators)</h3><div aria-labelledby="yui_3_5_0_3_1562533808325_430" class="yui3-g-r" id="yui_3_5_0_3_1562533808325_432" role="group"><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="CAMEO" href="https://m.cameochemicals.noaa.gov/chemical/20596" id="anch_54" onclick="logLocator(this); return true;" role="listitem" target="_blank">CAMEO</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="ChEBI" href="http://www.ebi.ac.uk/chebi/searchFreeText.do?searchString=54-64-8" id="anch_55" onclick="logLocator(this); return true;" role="listitem" target="_blank">ChEBI</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="CTD" href="http://ctdbase.org/detail.go?type=chem&amp;acc=D013849" id="anch_56" onclick="logLocator(this); return true;" role="listitem" target="_blank">CTD</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="eChemPortal" href="https://www.echemportal.org/echemportal/substancesearch/substancesearch_execute.action?numberType=CAS&amp;number=54-64-8&amp;allParticipants=true" id="anch_57" onclick="logLocator(this); return true;" role="listitem" target="_blank">eChemPortal</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="EINECS" href="https://echa.europa.eu/substance-information/-/substanceinfo/100.000.192" id="anch_58" onclick="logLocator(this); return true;" role="listitem" target="_blank">EINECS</a></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="EPA ACToR" href="https://actor.epa.gov/actor/chemical.xhtml?casrn=54-64-8" id="anch_59" onclick="logLocator(this); return true;" role="listitem" target="_blank">EPA ACToR</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="EPA CompTox" href="https://comptox.epa.gov/dashboard/dsstoxdb/results?utf8=%E2%9C%93&amp;search=54-64-8" id="anch_60" onclick="logLocator(this); return true;" role="listitem" target="_blank">EPA CompTox</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="EPA Envirofacts" href="http://www.epa.gov/enviro/html/emci/chemref/54648.html" id="anch_61" onclick="logLocator(this); return true;" role="listitem" target="_blank">EPA Envirofacts</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="EPA PPIS" href="http://npirspublic.ceris.purdue.edu/ppis?__LASTFOCUS=&amp;__VIEWSTATE=%2FwEPDwUKLTcyODczMzU3NA9kFgJmD2QWAgIDD2QWAgIJDw8WAh4EVGV4dAUEMjAxOGRkGAEFJGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkTXVsdGlWaWV3MQ8PZGZk22qTuYiK6%2F6eJ0FuCJDF4I9%2FwZ4pL46DPwiNxpc3fQk%3D&amp;__EVENTTARGET=&amp;__EVENTARGUMENT=&amp;__EVENTVALIDATION=%2FwEWBgL84KqEAwKfzOf7CQKVgaG4CALl5%2BjfDgKCmqq7DAKgpqHxCXHlND%2FX5M%2FHkDgcL0rLdDgArb%2FzF5VNiYmDocQxspu%2F&amp;ctl00%24ContentPlaceHolder1%24view1Continue=Search+PPIS&amp;ctl00%24ContentPlaceHolder1%24TextBoxPCcode=54-64-8" id="anch_62" onclick="logLocator(this); return true;" role="listitem" target="_blank">EPA PPIS</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="EPA SRS" href="https://iaspub.epa.gov/sor_internet/registry/substreg/searchandretrieve/advancedsearch/externalSearch.do?p_type=CASNO&amp;p_value=54-64-8" id="anch_63" onclick="logLocator(this); return true;" role="listitem" target="_blank">EPA SRS</a></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="FDA SRS" href="https://fdasis.nlm.nih.gov/srs/unii/2225PI3MOV" id="anch_64" onclick="logLocator(this); return true;" role="listitem" target="_blank">FDA SRS</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="NTP DBS" href="https://tools.niehs.nih.gov/ntp_tox/index.cfm?fuseaction=ntpsearch.searchresults&amp;searchterm=54-64-8" id="anch_65" onclick="logLocator(this); return true;" role="listitem" target="_blank">NTP DBS</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="OSHA ChemDB" href="https://www.osha.gov/chemicaldata/chemResult.html?RecNo=402" id="anch_66" onclick="logLocator(this); return true;" role="listitem" target="_blank">OSHA ChemDB</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="PestName" href="http://www.alanwood.net/pesticides/thiomersal.html" id="anch_67" onclick="logLocator(this); return true;" role="listitem" target="_blank">PestName</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="SRC DATALOG" href="http://esc.syrres.com/scripts/CASdlcgi.exe?CASNUM=54-64-8" id="anch_68" onclick="logLocator(this); return true;" role="listitem" target="_blank">SRC DATALOG</a></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="USA.gov" href="https://search.usa.gov/search?utf8=?&amp;m=false&amp;affiliate=usagov&amp;query=Thimerosal" id="anch_69" onclick="logLocator(this); return true;" role="listitem" target="_blank">USA.gov</a></li>
+<li class="mob"><a aria-describedby="infoWrap" data-id="0000054648" data-name="USA.gov Mob" href="https://search.usa.gov/search?utf8=?&amp;m=true&amp;affiliate=usagov&amp;query=Thimerosal" id="anch_70" onclick="logLocator(this); return true;" role="listitem" target="_blank">USA.gov*</a></li>
+<li><a aria-describedby="infoWrap" data-id="0000054648" data-name="Wikipedia" href="http://en.wikipedia.org/wiki/Thiomersal" id="anch_71" onclick="logLocator(this); return true;" role="listitem" target="_blank">Wikipedia</a></li>
+</ul></div></div></div>
+<div><br/>Search for this InChIKey on the <a href="http://www.google.com/search?q=%22RTKIYNMVFMVABJ-UHFFFAOYSA-L%22" id="anch_72" rel="nofollow" target="new">Web</a></div></div><div aria-labelledby="anch_20" class="yui3-tab-panel yui3-tab-panel-all" id="names" role="tabpanel"><h2 id="yui_3_5_0_3_1562533808325_433">Names and Synonyms</h2><div aria-labelledby="yui_3_5_0_3_1562533808325_433" class="ds" id="yui_3_5_0_3_1562533808325_434" role="list"><button class="toggle-1-col" id="yui_3_5_0_3_1562533808325_437" title="Toggle display between 1 column of wider results and multiple columns.">↔</button><h3 id="yui_3_5_0_3_1562533808325_439">Name of Substance</h3><div aria-labelledby="yui_3_5_0_3_1562533808325_439" class="yui3-g-r" id="yui_3_5_0_3_1562533808325_441" role="group"><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds2"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Ethyl(2-mercaptobenzoato-S)mercury, sodium salt</div></li>
+<li id="ds3"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Sodium ethylmercurithiosalicylate</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds4"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thimerosal</div></li>
+<li id="ds5"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thimerosal [USP:JAN]</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds6"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thiomersal [INN]</div></li>
+</ul></div></div><h3 id="yui_3_5_0_3_1562533808325_443">MeSH Heading</h3><ul id="yui_3_5_0_3_1562533808325_445" role="presentation">
+<li id="ds7"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thimerosal</div></li>
+</ul><h3 id="yui_3_5_0_3_1562533808325_447">Synonyms</h3><div aria-labelledby="yui_3_5_0_3_1562533808325_447" class="yui3-g-r" id="yui_3_5_0_3_1562533808325_449" role="group"><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds8"><div aria-describedby="infoWrap" role="listitem" tabindex="0">((o-Carboxyphenyl)thio)ethylmercury sodium salt</div></li>
+<li id="ds9"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Aeroaid spray</div></li>
+<li id="ds10"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Caswell No. 766</div></li>
+<li id="ds11"><div aria-describedby="infoWrap" role="listitem" tabindex="0">CCRIS 4839</div></li>
+<li id="ds12"><div aria-describedby="infoWrap" role="listitem" tabindex="0">EINECS 200-210-4</div></li>
+<li id="ds13"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Elcide 73</div></li>
+<li id="ds14"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Elcide 75</div></li>
+<li id="ds15"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Elicide</div></li>
+<li id="ds16"><div aria-describedby="infoWrap" role="listitem" tabindex="0">EPA Pesticide Chemical Code 078901</div></li>
+<li id="ds17"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Estivin</div></li>
+<li id="ds18"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Ethyl (sodium o-mercaptobenzoato)mercury</div></li>
+<li id="ds19"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Ethyl(2-mercaptobenzoato-S)mercury sodium salt</div></li>
+<li id="ds20"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Ethylmercurithiosalicyclic acid, sodium salt</div></li>
+<li id="ds21"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Ethylmercurithiosalicylate sodium</div></li>
+<li id="ds22"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Ethylmercurithiosalicylate sodium salt</div></li>
+<li id="ds23"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Ethylmercurithiosalicylic acid sodium salt</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds24"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Ethylmerkurithiosalicilan sodny</div></li>
+<li id="ds25"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Ethylmerkurithiosalicilan sodny [Czech]</div></li>
+<li id="ds26"><div aria-describedby="infoWrap" role="listitem" tabindex="0">HSDB 7151</div></li>
+<li id="ds27"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercurate(1-), ethyl(2-mercaptobenzoate(2-)-O,S)-, sodium salt</div></li>
+<li id="ds28"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercurate(1-), ethyl(o-mercaptobenzoato(2-))-, sodium</div></li>
+<li id="ds29"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercurothiolate</div></li>
+<li id="ds30"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercurothiolatum</div></li>
+<li id="ds31"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercury, ((o-carboxyphenyl)thio)ethyl-, sodium salt</div></li>
+<li id="ds32"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercury, ethyl(2-mercaptobenzoate-S)-, sodium salt</div></li>
+<li id="ds33"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercury, ethyl(2-mercaptobenzoato-S)-, sodium salt</div></li>
+<li id="ds34"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Merfamin</div></li>
+<li id="ds35"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Merphol</div></li>
+<li id="ds36"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Merseptyl (VAN)</div></li>
+<li id="ds37"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Merthiolate</div></li>
+<li id="ds38"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Merthiolate salt</div></li>
+<li id="ds39"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Merthiolate sodium</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds40"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mertorgan</div></li>
+<li id="ds41"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Merzonin</div></li>
+<li id="ds42"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Merzonin sodium</div></li>
+<li id="ds43"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Nosemack</div></li>
+<li id="ds44"><div aria-describedby="infoWrap" role="listitem" tabindex="0">NSC 4794</div></li>
+<li id="ds45"><div aria-describedby="infoWrap" role="listitem" tabindex="0">o-(Ethylmercurithio)benzoic acid sodium salt</div></li>
+<li id="ds46"><div aria-describedby="infoWrap" role="listitem" tabindex="0">SET</div></li>
+<li id="ds47"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Sodium 2-(ethylmercurithio)benzoate</div></li>
+<li id="ds48"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Sodium ethylmercuric thiosalicylate</div></li>
+<li id="ds49"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Sodium ethylmercurithiosalicylate</div></li>
+<li id="ds50"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Sodium merthiolate</div></li>
+<li id="ds51"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Sodium o-(ethylmercurithio)benzoate</div></li>
+<li id="ds52"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thimerosal</div></li>
+<li id="ds53"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thimerosalate</div></li>
+<li id="ds54"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thimerosalum</div></li>
+<li id="ds55"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thimerosol</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds56"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thimersalate</div></li>
+<li id="ds57"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thiomersal</div></li>
+<li id="ds58"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thiomersalat</div></li>
+<li id="ds59"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thiomersalate</div></li>
+<li id="ds60"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thiomersalum</div></li>
+<li id="ds61"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thiomersalum [INN-Latin]</div></li>
+<li id="ds62"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Tiomersal</div></li>
+<li id="ds63"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Tiomersal [INN-Spanish]</div></li>
+<li id="ds64"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Tiomersale</div></li>
+<li id="ds65"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Tiomersale [DCIT]</div></li>
+<li id="ds66"><div aria-describedby="infoWrap" role="listitem" tabindex="0">UNII-2225PI3MOV</div></li>
+<li id="ds67"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Vitaseptol</div></li>
+<li id="ds68"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Vitaseptol Loesung</div></li>
+</ul></div></div><h3 id="yui_3_5_0_3_1562533808325_451">Systematic Names</h3><div aria-labelledby="yui_3_5_0_3_1562533808325_451" class="yui3-g-r" id="yui_3_5_0_3_1562533808325_453" role="group"><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds69"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercurate(1-), ethyl(2-(mercapto-kappaS)benzoato(2-)-kappaO)-, sodium</div></li>
+<li id="ds70"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercurate(1-), ethyl(2-(mercapto-kappaS)benzoato(2-)-kappaO)-, sodium (1:1)</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds71"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercurate(1-), ethyl(2-mercaptobenzoato(2-)-O,S)-, sodium</div></li>
+<li id="ds72"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercury, ((o-carboxyphenyl)thio)ethyl-, sodium salt</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds73"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercury, ethyl (2-mercaptobenzoato-S)-, sodium salt</div></li>
+<li id="ds74"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Mercury, ethyl(hydrogen o-mercaptobenzoato)-, sodium salt (8CI)</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds75"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thimerosal</div></li>
+<li id="ds76"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Thiomersal</div></li>
+</ul></div></div><h3 id="yui_3_5_0_3_1562533808325_455">Superlist Name</h3><ul id="yui_3_5_0_3_1562533808325_457" role="presentation">
+<li id="ds77"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Sodium o-(ethylmercurithio)benzoate</div></li>
+</ul><h3 id="yui_3_5_0_3_1562533808325_459">Mixture Name</h3><ul id="yui_3_5_0_3_1562533808325_461" role="presentation">
+<li id="ds78"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Collyrium Eye Wash</div></li>
+</ul></div>
+</div><div aria-labelledby="anch_21" class="yui3-tab-panel yui3-tab-panel-all" id="numbers" role="tabpanel"><h2 id="yui_3_5_0_3_1562533808325_462">Registry Numbers</h2><div aria-labelledby="yui_3_5_0_3_1562533808325_462" class="ds" id="yui_3_5_0_3_1562533808325_463" role="list"><button class="toggle-1-col" id="yui_3_5_0_3_1562533808325_466" title="Toggle display between 1 column of wider results and multiple columns.">↔</button><h3 id="yui_3_5_0_3_1562533808325_468">CAS Registry Number</h3><ul id="yui_3_5_0_3_1562533808325_470" role="presentation">
+<li id="ds79"><div aria-describedby="infoWrap" role="listitem" tabindex="0">54-64-8</div></li>
+</ul><h3 id="yui_3_5_0_3_1562533808325_472">FDA UNII</h3><ul id="yui_3_5_0_3_1562533808325_474" role="presentation">
+<li id="ds80"><div aria-describedby="infoWrap" role="listitem" tabindex="0">2225PI3MOV</div></li>
+</ul><h3 id="yui_3_5_0_3_1562533808325_476">Other Registry Numbers</h3><div aria-labelledby="yui_3_5_0_3_1562533808325_476" class="yui3-g-r" id="yui_3_5_0_3_1562533808325_478" role="group"><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds81"><div aria-describedby="infoWrap" role="listitem" tabindex="0">11004-81-2</div></li>
+<li id="ds82"><div aria-describedby="infoWrap" role="listitem" tabindex="0">113170-85-7</div></li>
+<li id="ds83"><div aria-describedby="infoWrap" role="listitem" tabindex="0">130995-49-2</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds84"><div aria-describedby="infoWrap" role="listitem" tabindex="0">2141-27-7</div></li>
+<li id="ds85"><div aria-describedby="infoWrap" role="listitem" tabindex="0">23065-35-2</div></li>
+<li id="ds86"><div aria-describedby="infoWrap" role="listitem" tabindex="0">25948-50-9</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds87"><div aria-describedby="infoWrap" role="listitem" tabindex="0">362653-08-5</div></li>
+<li id="ds88"><div aria-describedby="infoWrap" role="listitem" tabindex="0">77536-61-9</div></li>
+<li id="ds89"><div aria-describedby="infoWrap" role="listitem" tabindex="0">8030-32-8</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds90"><div aria-describedby="infoWrap" role="listitem" tabindex="0">8030-33-9</div></li>
+<li id="ds91"><div aria-describedby="infoWrap" role="listitem" tabindex="0">878791-13-0</div></li>
+</ul></div></div><h3 id="yui_3_5_0_3_1562533808325_480">System Generated Number</h3><ul id="yui_3_5_0_3_1562533808325_482" role="presentation">
+<li id="ds92"><div aria-describedby="infoWrap" role="listitem" tabindex="0">0000054648</div></li>
+</ul></div>
+</div><div aria-labelledby="anch_22" class="yui3-tab-panel yui3-tab-panel-all" id="formulas2" role="tabpanel"><h2 id="yui_3_5_0_3_1562533808325_483">Molecular Formulas</h2><div aria-labelledby="yui_3_5_0_3_1562533808325_483" class="ds" id="yui_3_5_0_3_1562533808325_484" role="list"><button class="toggle-1-col" id="yui_3_5_0_3_1562533808325_487" title="Toggle display between 1 column of wider results and multiple columns.">↔</button><h3 id="yui_3_5_0_3_1562533808325_489">Molecular Formula</h3><ul id="yui_3_5_0_3_1562533808325_491" role="presentation">
+<li id="ds93"><div aria-describedby="infoWrap" role="listitem" tabindex="0">C9-H9-Hg-O2-S.Na</div></li>
+</ul><h3 id="yui_3_5_0_3_1562533808325_493">Molecular Formula Fragments</h3><div aria-labelledby="yui_3_5_0_3_1562533808325_493" class="yui3-g-r" id="yui_3_5_0_3_1562533808325_495" role="group"><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds94"><div aria-describedby="infoWrap" role="listitem" tabindex="0">C9-H9-Hg-O2-S</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds95"><div aria-describedby="infoWrap" role="listitem" tabindex="0">COMPONENT</div></li>
+</ul></div><div class="yui3-u-1-4" role="presentation"><ul role="presentation">
+<li id="ds96"><div aria-describedby="infoWrap" role="listitem" tabindex="0">Na</div></li>
+</ul></div></div></div>
+</div><div aria-labelledby="anch_23" class="buttonWrap yui3-tab-panel yui3-tab-panel-all" id="structureDescs" role="tabpanel"><h2 id="yui_3_5_0_3_1562533808325_496">Structure Descriptors</h2>
+<div aria-labelledby="yui_3_5_0_3_1562533808325_496" id="yui_3_5_0_3_1562533808325_497" role="list"><h3 id="yui_3_5_0_3_1562533808325_500">InChI</h3>
+			1S/C7H6O2S.C2H5.Hg.Na/c8-7(9)5-3-1-2-4-6(5)10;1-2;;/h1-4,10H,(H,8,9);1H2,2H3;;/q;;2*+1/p-2<br id="yui_3_5_0_3_1562533808325_502"/>
+<button id="downloadInchi" type="button">Download</button>
+</div>
+<div><h3>InChIKey</h3>
+			RTKIYNMVFMVABJ-UHFFFAOYSA-L<br/>
+<button id="googleInchi" type="button">Search the web for this InChIKey</button>
+</div>
+<div class="scrollWrapper"><h3>Smiles</h3>
+			c1(c(cccc1)<wbr>C(=O)<wbr>[O-])<wbr>S[Hg]CC.[Na+]<br/>
+<button id="downloadSmiles" type="button">Download</button>
+</wbr></wbr></wbr></div>
+</div><div aria-labelledby="anch_24" class="yui3-tab-panel yui3-tab-panel-all" id="toxicity" role="tabpanel"><h2 id="yui_3_5_0_3_1562533808325_504">Toxicity</h2>
+<div aria-labelledby="yui_3_5_0_3_1562533808325_504" class="scrollWrapper" id="yui_3_5_0_3_1562533808325_505" role="list">
+<table class="prop" id="yui_3_5_0_3_1562533808325_508">
+<thead>
+<tr>
+<th class="TableColumnHeading">Organism</th>
+<th class="TableColumnHeading">Test Type</th>
+<th class="TableColumnHeading">Route</th>
+<th class="TableColumnHeading">Reported Dose (Normalized Dose)</th>
+<th class="TableColumnHeading">Effect</th>
+<th class="TableColumnHeading">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="TableRow"> <td class="TableCell">child</td> <td class="TableCell">LDLo</td> <td class="TableCell">intraaural</td> <td class="TableCell">60mg/kg/4W-I (60mg/kg)</td> <td class="TableCell"> </td> <td class="TableCell"><a href="https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&amp;db=PubMed&amp;term=6694031%5BPMID%5D" id="anch_73">Journal of Pediatrics.  Vol. 104, Pg. 311, 1984.</a></td></tr><tr class="TableRow"> <td class="TableCell">child</td> <td class="TableCell">LDLo</td> <td class="TableCell">intraaural</td> <td class="TableCell">60mg/kg/4W-I (60mg/kg)</td> <td class="TableCell">GASTROINTESTINAL: NAUSEA OR VOMITING<br/><br/>BEHAVIORAL: ATAXIA</td> <td class="TableCell"><a href="https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&amp;db=PubMed&amp;term=6694031%5BPMID%5D" id="anch_74">Journal of Pediatrics.  Vol. 104, Pg. 311, 1984.</a></td></tr><tr class="TableRow"> <td class="TableCell">man</td> <td class="TableCell">TDLo</td> <td class="TableCell">oral</td> <td class="TableCell">28571ug/kg/10 (28.571mg/kg)</td> <td class="TableCell">BEHAVIORAL: CHANGES IN MOTOR ACTIVITY (SPECIFIC ASSAY)<br/><br/>BRAIN AND COVERINGS: OTHER DEGENERATIVE CHANGES<br/><br/>BEHAVIORAL: ANOREXIA (HUMAN</td> <td class="TableCell">Rinsho Shinkeigaku.  Clinical Neurology.  Vol. 6, Pg. 697, 1966.</td></tr><tr class="TableRow"> <td class="TableCell">man</td> <td class="TableCell">TDLo</td> <td class="TableCell">oral</td> <td class="TableCell">83mg/kg (83mg/kg)</td> <td class="TableCell">LUNGS, THORAX, OR RESPIRATION: OTHER CHANGES<br/><br/>BEHAVIORAL: COMA<br/><br/>KIDNEY, URETER, AND BLADDER: "CHANGES IN TUBULES (INCLUDING ACUTE RENAL FAILURE, ACUTE TUBULAR NECROSIS)"</td> <td class="TableCell"><a href="https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&amp;db=PubMed&amp;term=8699562%5BPMID%5D" id="anch_75">Journal of Toxicology, Clinical Toxicology.  Vol. 34, Pg. 453, 1996.</a></td></tr><tr class="TableRow"> <td class="TableCell">mouse</td> <td class="TableCell">LD50</td> <td class="TableCell">intraperitoneal</td> <td class="TableCell">54mg/kg (54mg/kg)</td> <td class="TableCell"> </td> <td class="TableCell">Nippon Yakurigaku Zasshi.  Japanese Journal of Pharmacology.  Vol. 58, Pg. 235, 1962.</td></tr><tr class="TableRow"> <td class="TableCell">mouse</td> <td class="TableCell">LD50</td> <td class="TableCell">intravenous</td> <td class="TableCell">45mg/kg (45mg/kg)</td> <td class="TableCell">KIDNEY, URETER, AND BLADDER: "CHANGES IN TUBULES (INCLUDING ACUTE RENAL FAILURE, ACUTE TUBULAR NECROSIS)"</td> <td class="TableCell">Quarterly Journal of Pharmacy &amp; Pharmacology.  Vol. 12, Pg. 212, 1939.</td></tr><tr class="TableRow"> <td class="TableCell">mouse</td> <td class="TableCell">LD50</td> <td class="TableCell">oral</td> <td class="TableCell">91mg/kg (91mg/kg)</td> <td class="TableCell"> </td> <td class="TableCell">Nippon Yakurigaku Zasshi.  Japanese Journal of Pharmacology.  Vol. 58, Pg. 235, 1962.</td></tr><tr class="TableRow"> <td class="TableCell">mouse</td> <td class="TableCell">LD50</td> <td class="TableCell">subcutaneous</td> <td class="TableCell">66mg/kg (66mg/kg)</td> <td class="TableCell"> </td> <td class="TableCell">Quarterly Journal of Pharmacy &amp; Pharmacology.  Vol. 12, Pg. 212, 1939.</td></tr><tr class="TableRow"> <td class="TableCell">rat</td> <td class="TableCell">LD50</td> <td class="TableCell">oral</td> <td class="TableCell">75mg/kg (75mg/kg)</td> <td class="TableCell"> </td> <td class="TableCell">Pesticide Chemicals Official Compendium, Association of the American Pesticide Control Officials, Inc., 1966.  Vol. -, Pg. 1130, 1966.</td></tr><tr class="TableRow"> <td class="TableCell">rat</td> <td class="TableCell">LD50</td> <td class="TableCell">subcutaneous</td> <td class="TableCell">98mg/kg (98mg/kg)</td> <td class="TableCell"> </td> <td class="TableCell">Clinical Toxicology.  Vol. 4, Pg. 185, 1971.</td></tr><tr class="TableRow"> <td class="TableCell">rat</td> <td class="TableCell">LD50</td> <td class="TableCell">unreported</td> <td class="TableCell">40mg/kg (40mg/kg)</td> <td class="TableCell"> </td> <td class="TableCell">"Chemistry of Pesticides," Melnikov, N.N., New York, Springer-Verlag New York, Inc., 1971Vol. -, Pg. 290, 1971.</td></tr>
+</tbody>
+</table>
+</div>
+</div><div aria-labelledby="anch_25" class="yui3-tab-panel yui3-tab-panel-all" id="physical" role="tabpanel"><h2 id="yui_3_5_0_3_1562533808325_509">Physical Properties</h2>
+<div aria-labelledby="yui_3_5_0_3_1562533808325_509" class="scrollWrapper" id="yui_3_5_0_3_1562533808325_510" role="list">
+<table class="prop" id="yui_3_5_0_3_1562533808325_513">
+<thead>
+<tr>
+<th class="TableColumnHeading">Physical Property</th>
+<th class="TableColumnHeading">Value</th>
+<th class="TableColumnHeading">Units</th>
+<th class="TableColumnHeading">Temp (deg C)</th>
+<th class="TableColumnHeading">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="TableRow">
+<td class="TableCell">log P (octanol-water)</td>
+<td class="TableCell">-1.880</td>
+<td class="TableCell">(none)</td>
+<td class="TableCell"> </td>
+<td class="TableCell">EST</td>
+</tr>
+<tr class="TableRow">
+<td class="TableCell">Water Solubility</td>
+<td class="TableCell">  5.00E+05</td>
+<td class="TableCell">mg/L</td>
+<td class="TableCell"> </td>
+<td class="TableCell">EXP</td>
+</tr>
+<tr class="TableRow">
+<td class="TableCell">Atmospheric OH Rate Constant</td>
+<td class="TableCell">  6.77E-11</td>
+<td class="TableCell">cm3/molecule-sec</td>
+<td class="TableCell">25</td>
+<td class="TableCell">EST</td>
+</tr>
+</tbody>
+</table>
+<p class="center bodytextsmall" id="yui_3_5_0_3_1562533808325_515">Physical property data is provided to ChemIDplus by <a href="http://www.srcinc.com/what-we-do/environmental/scientific-databases.html" id="anch_76" target="PhysProp">SRC, Inc.</a></p>
+</div>
+</div></div>
+</div></div>
+</div>
+<div aria-describedby="infoContents" aria-hidden="true" aria-labelledby="infoHeader" aria-live="polite" class="hidden" id="infoWrap" role="dialog">
+<div id="info">
+<h4 id="infoHeader">Chemical Database</h4>
+<div id="infoContents">Chemical Database</div>
+<div>
+<input aria-hidden="true" class="button hidden" id="buttonCloseInfo" type="button" value="Close"/>
+<span id="infoClickInfo">Click on <span id="infoClickLabel"></span>'s <span id="infoClickIcon">icon</span> or row to pin it open.</span>
+</div>
+</div>
+</div>
+<form action="/chemidplus/ProxyServlet" id="searchForm" method="post" name="searchForm">
+<input name="objectHandle" type="hidden" value=""/>
+<input name="actionHandle" type="hidden" value=""/>
+<input name="nextPage" type="hidden" value=""/>
+</form>
+<script>
+var codeDetailSources = [['MeSH'],['EINECS','RTECS','TSCAINV'],['CTFA'],['CTFA'],['CTFA','HSDB','MeSH'],['NLM','USPDDN'],['FDA SRS'],['MeSH'],['RTECS'],['NLM'],['NLM'],['CCRIS'],['EINECS'],['NLM'],['NLM'],['RTECS'],['NLM'],['NLM'],['RTECS','USPDDN'],['RTECS'],['NLM'],['NLM'],['NLM'],['RTECS'],['NLM'],['RTECS'],['HSDB'],['RTECS'],['NLM'],['MeSH','RTECS'],['NLM'],['NLM'],['RTECS'],['NLM'],['RTECS'],['NLM'],['NLM'],['RTECS','USPDDN'],['NLM'],['RTECS'],['RTECS'],['RTECS'],['RTECS'],['NLM'],['NLM'],['RTECS'],['RTECS'],['NLM'],['RTECS'],['RTECS'],['RTECS'],['RTECS'],['EPA SRS','NLM','RTECS','USPDDN'],['RTECS'],['NLM'],['NLM'],['NLM'],['MeSH','RTECS'],['NLM'],['MeSH','RTECS'],['NLM'],['NLM'],['NLM'],['NLM'],['NLM'],['NLM'],['FDA SRS'],['MeSH'],['NLM'],['EPA SRS'],['TSCAINV'],['MeSH'],['RTECS'],['USPDDN'],['NLM'],['CCRIS'],['EINECS'],['WHMI'],['MeSH','USPDDN'],['PubMed Toxicology'],['FDA SRS'],['TSCAINV'],['TSCAINV'],['TSCAINV'],['TSCAINV'],['TSCAINV'],['TSCAINV'],['TSCAINV'],['TSCAINV'],['TSCAINV'],['TSCAINV'],['TSCAINV'],[],['EINECS','RTECS','TSCAINV'],[],[],[],['RTECS'],['USPDDN'],['RTECS'],['RTECS'],['RTECS'],['RTECS'],['RTECS'],['RTECS'],['USPDDN'],['SIS'],['MeSH','SIS'],['RTECS'],['RTECS'],['RTECS']],
+sourceDescriptions = {'PubMed Toxicology':'Toxicology Citations From PubMed','WHMI':'Workplace Haz.  Mat.  Information ','TSCAINV':'EPA Chem.  Sub.  Inventory','HSDB':'Hazardous Substances Data Bank','MeSH':'Medical Subject Headings File','EINECS':'EU Inv of Exist.  Comm.  Chem  Sub','NLM':'National Library of Medicine','CTFA':'Cosmetic, Toiletry, and Fragrance Association','CCRIS':'NCI Chem Carcino  Res Info Sys','FDA SRS':'FDA Substance Registration System','RTECS':'Reg.  of Toxic Eff.  of Chem.  Sub.','SIS':'Specialized Information Services','USPDDN':'United States Pharmacopeia Dictionary of Drug Names','EPA SRS':'EPA Substance Registry System '},
+superlistid='0000054648',
+listSourceURL='/chemidplus/jsp/common/ListSourceJSON.jsp?acronym=',
+summaryResultsPageCookieNameValue = 'r=s',
+QF1='number',
+QO1='equals',
+QV1='54-64-8',
+inchikey='RTKIYNMVFMVABJ-UHFFFAOYSA-L',
+bUseApplet=false;
+</script>
+<script src="https://chem.nlm.nih.gov//chemidplus/15704.462/js/common/ChemFull.js"></script>
+<script src="https://chem.nlm.nih.gov//chemidplus/15704.462/js/common/postLocator.js"></script>
+</div>
+</div>
+</div>
+</div>
+<footer class="clearfix" id="footer">
+<nav id="footer-access" role="article">
+<ul class="menu" id="footer-menu">
+<li><a href="https://toxnet.nlm.nih.gov/help/newtoxnet/toxnetfs.html" id="anch_77">About</a></li>
+<li><a href="https://sis.nlm.nih.gov/siscontact.html" id="anch_78">Contact Us</a></li>
+<li><a href="https://sis.nlm.nih.gov/" id="anch_79">SIS Home</a></li>
+<li><a href="https://www.nlm.nih.gov/copyright.html" id="anch_80">Copyright</a></li>
+<li><a href="https://www.nlm.nih.gov/privacy.html" id="anch_81">Privacy</a></li>
+<li><a href="https://www.nlm.nih.gov/accessibility.html" id="anch_82">Accessibility</a></li>
+<li><a href="https://www.nlm.nih.gov/plugins.html" id="anch_83">Viewers and Players</a></li>
+</ul>
+</nav>
+<div class="siteinfo">
+<a href="https://www.nlm.nih.gov/" id="anch_84">U.S. National Library of Medicine</a> 8600 Rockville Pike, Bethesda, MD 20894<br/>
+<a href="https://www.nih.gov/" id="anch_85">National Institutes of Health</a>, <a href="https://www.hhs.gov/" id="anch_86">Health &amp; Human Services</a>
+</div>
+</footer>
+</div>
+<div id="dropmenu-mask" style="display:none;"></div>
+<script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=HHS&amp;subagency=NIH&amp;sp=query&amp;enhlink=true" type="text/javascript"></script><script id="" type="text/javascript">window.addEventListener("beforeunload",function(a){dataLayer.push({event:"beforeunload",timeOnPage:(new Date).getTime()-google_tag_manager["GTM-MT6MLL"].macro(16)})});</script><script id="" type="text/javascript">if("undefined"!==typeof google_tag_manager["GTM-MT6MLL"].macro(17)){var visibilityEvent=google_tag_manager["GTM-MT6MLL"].macro(18)+"visibilitychange",hiddenState=google_tag_manager["GTM-MT6MLL"].macro(20),visibilityChanged=function(){"undefined"!==typeof hiddenState&&dataLayer.push({event:"visibilityChange"})};document.addEventListener(visibilityEvent,visibilityChanged,!1)};</script><script id="" type="text/javascript">(function(d){function e(b,a,c){if(b.addEventListener)b.addEventListener(a,c);else if(b.attachEvent)b.attachEvent("on"+a,function(a){c.call(b,a)});else if("undefined"===typeof b["on"+a]||null===b["on"+a])b["on"+a]=function(a){c.call(b,a)}}e(d,"message",function(b){try{var a=JSON.parse(b.data),c=d.dataLayer||(d.dataLayer=[]);a.event&&c.push({event:a.event,postMessageData:a})}catch(f){}})})(window);</script><script id="" type="text/javascript">(function(){var a="onDownload",b=document.querySelector('[title\x3d"Download"]')||document,c=!0;b.addEventListener(a,google_tag_manager["GTM-MT6MLL"].macro(25),c)})();</script></body></html>

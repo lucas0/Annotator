@@ -1,0 +1,604 @@
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase no-indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en-us" xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><title>
+	FOIA Home page: U.S. Department of State - Freedom of Information Act
+</title><meta content="VxPbxBn5jpGQCeq54dfbuo0uoXZJegQcRhiz3HMU1FY" name="google-site-verification"/><link href="https://foia.state.gov//favicon.ico" rel="shortcut icon"/><link href="https://foia.state.gov//Learn/RSS.aspx" rel="alternate" title="DoS FOIA Announcements RSS" type="application/rss+xml"/>
+<link href="https://foia.state.gov/../_includes/Styles/Telerik/Metro/ToolTip.Metro.css" rel="stylesheet" type="text/css"/>
+<link href="https://foia.state.gov//_includes/Styles/HideLeftNav.css" rel="Stylesheet"/>
+<link href="https://foia.state.gov//_includes/Styles/Rotator.css" rel="Stylesheet"/>
+<style type="text/css">
+#MainTitle, 
+#BreadcrumbArea
+{
+    display:none !important;
+}
+
+#MainContentArea 
+{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.Body-Two-Column /* two-column content at the bottom of the page */
+{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+    .Body-Two-Column .left, 
+    .Body-Two-Column .right 
+    {
+        display: inline-block;
+                        
+        vertical-align: top;
+    }
+    .Body-Two-Column .left /* external hyperlinks */
+    {
+        padding-right: 25px;
+        padding-left: 20px;
+        width: 480px;
+        border-right: 1px solid #D0D0D0;        
+        float: left;
+    }
+    .Body-Two-Column .right /* internal hyperlinks */
+    {
+        
+        padding-right: 10px;
+        padding-left: 20px;
+        width: 300px;
+                        
+        float: right;
+        vertical-align: top;
+    }
+    .Body-Two-Column h2 
+    {
+        margin: 0px 0px 10px 0px;
+                        
+        color: #A40B20;
+        font-size: 1.25em;
+    }
+    .Body-Two-Column ul 
+    {
+        margin: 0px;
+        padding: 0px 0px 0px 15px;
+
+        list-style: dot;
+    }
+        .Body-Two-Column ul li 
+        {
+            margin-top: 4px;
+                                                        
+            color: #333333;
+            font-size: 1em;
+            line-height: 1.25em;
+        }
+            .Body-Two-Column ul li h3 
+            {
+                                
+            }
+        .Body-Two-Column ul.announcements 
+        {
+
+        }
+            .Body-Two-Column ul.announcements li 
+            {
+                padding-bottom: 5px;
+            }
+                .Body-Two-Column ul.announcements li h3 
+                {
+                    margin: 5px 0px 2px 0px;
+                                    
+                    color: #333333;
+                    font-size: 1.1em;
+                    font-weight: bold;
+                }
+        .Body-Two-Column ul.hyperlinks 
+        {
+            margin: 0px;
+            padding: 0px;
+                            
+            display: block;
+                            
+            font-family: 'Georgia', Times New Roman, serif !important;
+            font-size: 1.2em;
+            font-style: italic;
+            font-weight: normal;
+            letter-spacing: 1px;
+            line-height: 1.5em;
+            list-style: none;
+        }
+            .Body-Two-Column ul.hyperlinks li 
+            {
+                display: block;
+            }
+                .Body-Two-Column ul.hyperlinks li a 
+                {
+                    display: block;
+                    margin: 0px 0px 10px 0px;
+                    padding: 2px 0px 2px 0px;
+                                    
+                    font-size: 1em;
+                    line-height: 1.1em;
+                }
+                    .Body-Two-Column ul.hyperlinks li a.small    
+                    {
+                        font-size: 1em;
+                    }
+
+    #WhatsNew 
+    {
+        display: none;
+    }
+    
+     /* "Department of State Records" section */
+    #RecordsInfo 
+    {
+        
+    }
+        #RecordsInfo .header.outer, 
+         #RecordsInfo .header .inner 
+        {
+            height: 40px;
+            
+            cursor: default;
+        }
+            #RecordsInfo .header.outer 
+            {
+                background-image: url('/_includes/Images/RecordsInfo/bk-header.gif');
+                background-position: left 0px;
+                background-repeat: no-repeat;
+                
+            }
+            #RecordsInfo .header .inner
+            {
+                padding-top: 12px;
+                padding-left: 20px;
+                
+                background-image: url('/_includes/Images/RecordsInfo/bk-header-alt.gif');
+                background-position: right -40px;
+                background-repeat: no-repeat;
+                color: #333333;
+                font-family: Georgia, 'Times New Roman', serif;
+                font-size: 1.3em;
+                font-style: italic;
+                letter-spacing: 1px;
+            }
+        #RecordsInfo .shadow 
+        {
+            border: 1px solid #CACACA;
+            border-top-width: 0px;
+            border-bottom-width: 0px;
+            height: 4px;
+            
+            background-image: url('/_includes/Images/RecordsInfo/bk-shadow.gif');
+            background-position: top center;
+            background-repeat: repeat-x;
+        }
+        #RecordsInfo .body 
+        {
+            border: 1px solid #CACACA;
+            border-top-width: 0px;
+            padding: 10px;
+            
+            background-image: url('/_includes/Images/RecordsInfo/bk-body.gif');
+            background-position: top left;
+            background-repeat: repeat;
+            font-size: 1.2em;
+        }
+            #RecordsInfo .body .content 
+            {
+                padding: 5px 10px 10px 10px;
+            }
+                #RecordsInfo .body .content ul 
+                {
+                    padding-top: 4px;
+                }
+                    #RecordsInfo .body .content ul li 
+                    {
+                        padding-bottom: 2px;
+                        
+                        list-style-image: url('/_includes/Images/bk-listitem.png');
+                    }
+            #RecordsInfo .body .more
+            {
+                text-align: right;
+            }
+                #RecordsInfo .body .more a 
+                {
+                    padding: 2px;
+                }
+        #RecordsInfo .footer 
+        {
+            height: 12px;
+            
+            background-image: url('/_includes/Images/RecordsInfo/bk-bottom.gif');
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+</style>
+<link href="https://foia.state.gov//Telerik.Web.UI.WebResource.axd?compress=1&amp;_TSM_CombinedScripts_=%3b%3b%7c636852322664223737%3a4af999ef%3a17b84db7%3bTelerik.Web.UI%2c+Version%3d2012.1.411.40%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3aebfa5361-1bb0-4d72-bf6d-db0befdf104a%3a53e1db5a%3bTelerik.Web.UI.Skins%2c+Version%3d2012.1.411.40%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3a45c8f008-e8e7-48f6-a5be-f77628933227%3a7e226990" rel="stylesheet" type="text/css"/></head>
+<body class="foia">
+<noscript>
+        Currently the generic search at the top requires javascript.</noscript>
+<form action="./" id="form1" method="post">
+<input id="rsmFOIAScripts_TSM" name="rsmFOIAScripts_TSM" type="hidden" value=";;System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35:en-US:d469afcf-7bb2-42b0-a0c2-3f036d3832f2:ea597d4b;Telerik.Web.UI:en-US:ebfa5361-1bb0-4d72-bf6d-db0befdf104a:16e4e7cd:f7645509:22a6274a:24ee1bba:f46195d3:874f8ea2:19620875:39040b5c:f85f9819"/>
+<input id="rssmFOIAStyles_TSSM" name="rssmFOIAStyles_TSSM" type="hidden" value=";|636852322664223737:4af999ef:17b84db7;Telerik.Web.UI, Version=2012.1.411.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:ebfa5361-1bb0-4d72-bf6d-db0befdf104a:53e1db5a;Telerik.Web.UI.Skins, Version=2012.1.411.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:45c8f008-e8e7-48f6-a5be-f77628933227:7e226990"/>
+<input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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HgtfIUl0ZW1Db3VudAIEFghmD2QWBAIBD2QWBgIBDw8WAh8FBQhXZWxjb21lIWRkAgMPDxYCHwUF8wM8cD4gICAgICBXZWxjb21lIHRvIHRoZSBVLlMuIERlcGFydG1lbnQgb2YgU3RhdGUgRnJlZWRvbSBvZiBJbmZvcm1hdGlvbiBBY3QgKEZPSUEpIHdlYnNpdGUuIExpa2UgYWxsIGZlZGVyYWwgYWdlbmNpZXMsIHRoZSBEZXBhcnRtZW50IGNyZWF0ZXMgYW5kIHJlY2VpdmVzIHJlY29yZHMgd2hlbiBjYXJyeWluZyBvdXQgaXRzIG1pc3Npb24uIFRoaXMgd2Vic2l0ZSBwcm92aWRlcyBhIHdlYWx0aCBvZiBpbmZvcm1hdGlvbiBhYm91dCB0aGUgRGVwYXJ0bWVudOKAmXMgRk9JQSBwcm9ncmFtIGFuZCBob3cgdG8gb2J0YWluIGFjY2VzcyB0byB0aGUgRGVwYXJ0bWVudOKAmXMgcmVjb3JkcywgYXMgd2VsbCBhcyBhIHNlYXJjaCB0b29sIGNvbnRhaW5pbmcgPGEgaWQ9IkhvbWVEb2NOdW1Db3VudCIgaHJlZj0iL1NlYXJjaC9TZWFyY2guYXNweCIgc3R5bGU9IiI+bnVtZXJvdXMgZG9jdW1lbnRzPC9hPiByZXZpZXdlZCBhbmQgcmVsZWFzZWQgdG8gdGhlIHB1YmxpYy4gICAgICA8L3A+ZGQCBQ8PFgQeC05hdmlnYXRlVXJsBQEvHwBoZBYCZg8VAQggJnJhcXVvO2QCAw9kFgICAQ8PFgIfCwUBL2QWAmYPFgIfBQVQPGltZyBhbHQ9J0Fib3V0IEZPSUEgQmFubmVyJyBzcmM9Jy9faW5jbHVkZXMvSW1hZ2VzL1NlY3Rpb24vQmFubmVycy9mbGFnLnBuZycgLz5kAgEPZBYEAgEPZBYGAgEPDxYCHwUFDkxlYXJuIGFib3V0Li4uZGQCAw8PFgIfBQXkAzxwPiAgICAgICAgVGhlIERlcGFydG1lbnQgb2YgU3RhdGUgYWRtaW5pc3RlcnMgaW5mb3JtYXRpb24gYWNjZXNzIHByb2dyYW1zIGluY2x1ZGluZyB0aGUgPGEgaHJlZj0iL0xlYXJuL0ZPSUEuYXNweCI+RnJlZWRvbSBvZiBJbmZvcm1hdGlvbiBBY3Q8L2E+LCB0aGUgPGEgaHJlZj0iL0xlYXJuL1ByaXZhY3lBY3QuYXNweCI+UHJpdmFjeSBBY3Q8L2E+LCBhbmQgdGhlIDxhIGhyZWY9Ii9MZWFybi9NRFIuYXNweCI+TWFuZGF0b3J5IERlY2xhc3NpZmljYXRpb24gUmV2aWV3PC9hPiBwcm9ncmFtcy4gIFRoZXNlIHByb2dyYW1zIGNhbiBiZSB1c2VkIHRvIG9idGFpbiBhY2Nlc3MgdG8gYSB2YXJpZXR5IG9mIERlcGFydG1lbnQgcmVjb3Jkcy4gIEZpbmQgb3V0IG1vcmUgYWJvdXQgdGhlc2UgcHJvZ3JhbXMgYW5kIGFib3V0IHdoYXQga2luZHMgb2YgcmVjb3JkcyBhbmQgaW5mb3JtYXRpb24gdGhlIERlcGFydG1lbnQgbWFpbnRhaW5zLiAgICAgIDwvcD5kZAIFDw8WAh8LBQYvTGVhcm5kFgJmDxUBEkxlYXJuIE1vcmUgJnJhcXVvO2QCAw9kFgICAQ8PFgIfCwUGL0xlYXJuZBYCZg8WAh8FBVE8aW1nIGFsdD0nTGVhcm4gRk9JQSBCYW5uZXInIHNyYz0nL19pbmNsdWRlcy9JbWFnZXMvU2VjdGlvbi9CYW5uZXJzL2xlYXJuLnBuZycgLz5kAgIPZBYEAgEPZBYGAgEPDxYCHwUFEFNlYXJjaCBPbmxpbmUuLi5kZAIDDw8WAh8FBdwEPHA+ICAgICAgICBQcmlvciB0byBtYWtpbmcgYSByZXF1ZXN0IGZvciBEZXBhcnRtZW50IG9mIFN0YXRlIHJlY29yZHMsIHlvdSBtYXkgd2lzaCB0byBmaW5kIG91dCBpZiB0aGUgaW5mb3JtYXRpb24gaGFzIGFscmVhZHkgYmVlbiBtYWRlIHB1YmxpY2x5IGF2YWlsYWJsZSB0aHJvdWdoIG9uZSBvZiB0aGUgRGVwYXJ0bWVudOKAmXMgc2VhcmNoYWJsZSBvbmxpbmUgcmVzb3VyY2VzOiAgICAgICAgPHVsPiAgICAgICAgICA8bGk+ICAgICAgICAgICAgPGEgaHJlZj0iL1NlYXJjaC9TZWFyY2guYXNweCI+VmlydHVhbCBSZWFkaW5nIFJvb20gU2VhcmNoPC9hPiAgICAgICAgICA8L2xpPiAgICAgICAgICA8bGk+ICAgICAgICAgICAgPGEgaHJlZj0iL1NlYXJjaC9MaXRpZ2F0aW9uLmFzcHgiPlJlY29yZHMgUmVsZWFzZWQgaW4gTGl0aWdhdGlvbjwvYT4gICAgICAgICAgPC9saT4gICAgICAgICAgPGxpPiAgICAgICAgICAgIDxhIGhyZWY9Ii9TZWFyY2gvTGlicmFyeS5hc3B4Ij5BZG1pbmlzdHJhdGl2ZSBSdWxpbmdzLCBQb2xpY3kgU3RhdGVtZW50cywgYW5kIE90aGVyIFB1YmxpY2F0aW9uczwvYT4gICAgICAgICAgPC9saT4gICAgICAgIDwvdWw+ICAgICAgPC9wPmRkAgUPDxYEHwsFEy9TZWFyY2gvU2VhcmNoLmFzcHgfAGhkFgJmDxUBCCAmcmFxdW87ZAIDD2QWAgIBDw8WAh8LBRMvU2VhcmNoL1NlYXJjaC5hc3B4ZBYCZg8WAh8FBVM8aW1nIGFsdD0nU2VhcmNoIEZPSUEgQmFubmVyJyBzcmM9Jy9faW5jbHVkZXMvSW1hZ2VzL1NlY3Rpb24vQmFubmVycy9zZWFyY2gucG5nJyAvPmQCAw9kFgQCAQ9kFgYCAQ8PFgIfBQURTWFrZSBhIFJlcXVlc3QuLi5kZAIDDw8WAh8FBZcEPHA+ICAgICAgICBVbmRlciB0aGUgPGEgaHJlZj0iL1JlcXVlc3QvIj5GcmVlZG9tIG9mIEluZm9ybWF0aW9uIEFjdCAoRk9JQSk8L2E+LCB0aGUgPGEgaHJlZj0iL0xlYXJuL1ByaXZhY3lBY3QuYXNweCI+UHJpdmFjeSBBY3Q8L2E+LCBvciA8YSBocmVmPSIvUmVxdWVzdC9NRFIuYXNweCI+TWFuZGF0b3J5IERlY2xhc3NpZmljYXRpb24gUmV2aWV3IChNRFIpPC9hPiBieSBtYWlsIG9yIGJ5IGZheC4gICAgICA8L3A+ICAgICAgPHA+ICAgICAgICBVbmRlciB0aGUgRnJlZWRvbSBvZiBJbmZvcm1hdGlvbiBBY3QgYnkgPGEgaHJlZj0iL1JlcXVlc3QvU3VibWl0LmFzcHgiPkVsZWN0cm9uaWMgU3VibWlzc2lvbjwvYT4uICAgICAgPC9wPiAgICAgIDxwPiAgICAgICAgUGxlYXNlIG5vdGU6IFJlcXVlc3RzIGZvciA8YSBocmVmPSIvUmVxdWVzdC9QZXJzb25hbFJlY29yZHMuYXNweCI+cGVyc29uYWwgcmVjb3JkczwvYT4gcmVxdWlyZSBhbiBvcmlnaW5hbCBzaWduYXR1cmUgYW5kIGNhbm5vdCBiZSBhY2NlcHRlZCBvbmxpbmUuICAgICAgPC9wPmRkAgUPDxYCHwsFCC9SZXF1ZXN0ZBYCZg8VARVNb3JlIFJlcXVlc3RzICZyYXF1bztkAgMPZBYCAgEPDxYCHwsFCC9SZXF1ZXN0ZBYCZg8WAh8FBVU8aW1nIGFsdD0nUmVxdWVzdCBGT0lBIEJhbm5lcicgc3JjPScvX2luY2x1ZGVzL0ltYWdlcy9TZWN0aW9uL0Jhbm5lcnMvcmVxdWVzdC5wbmcnIC8+ZAIFD2QWAgIGDw8WBB8IBRpCYW5uZXJMaW5rIEJhbm5lckxpbmtfTGFzdB8JAgJkZAIRDxYCHwUFCjA2LTI3LTIwMTlkGAIFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYTBRBjdGwwMCRydHRNYW5hZ2VyBRxjdGwwMCRjcGhNYWluQ29udGVudCRydHROZXcyBR5jdGwwMCRjcGhNYWluQ29udGVudCRydHRHdWlkZTIFIGN0bDAwJGNwaE1haW5Db250ZW50JHJ0dFJlcG9ydHMyBSRjdGwwMCRjcGhNYWluQ29udGVudCRydHRSZWd1bGF0aW9uczIFHGN0bDAwJGNwaE1haW5Db250ZW50JHJ0dEZBUTIFHGN0bDAwJGNwaE1haW5Db250ZW50JHJ0dE1JUzIFHmN0bDAwJGNwaE1haW5Db250ZW50JHJ0dEZvcm1zMgUdY3RsMDAkY3BoTWFpbkNvbnRlbnQkcnR0RkFNSDIFHGN0bDAwJGNwaE1haW5Db250ZW50JHJ0dE9HSTIFG2N0bDAwJGNwaE1haW5Db250ZW50JHJ0dE5ldwUdY3RsMDAkY3BoTWFpbkNvbnRlbnQkcnR0R3VpZGUFH2N0bDAwJGNwaE1haW5Db250ZW50JHJ0dFJlcG9ydHMFI2N0bDAwJGNwaE1haW5Db250ZW50JHJ0dFJlZ3VsYXRpb25zBRtjdGwwMCRjcGhNYWluQ29udGVudCRydHRGQVEFG2N0bDAwJGNwaE1haW5Db250ZW50JHJ0dE1JUwUdY3RsMDAkY3BoTWFpbkNvbnRlbnQkcnR0Rm9ybXMFHGN0bDAwJGNwaE1haW5Db250ZW50JHJ0dEZBTUgFG2N0bDAwJGNwaE1haW5Db250ZW50JHJ0dE9HSQUgY3RsMDAkY3BoTWFpbkNvbnRlbnQkU2tpbkNob29zZXIPFCsAAmUFBU1ldHJvZLP29nlefXgdn3JaU8do7saL6A+Epr/qkbUO9uJqvEYK"/>
+<script async="" src="https://stats.g.doubleclick.net/dc.js" type="text/javascript"></script><script src="https://foia.state.gov//Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=rsmFOIAScripts_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3ad469afcf-7bb2-42b0-a0c2-3f036d3832f2%3aea597d4b%3bTelerik.Web.UI%3aen-US%3aebfa5361-1bb0-4d72-bf6d-db0befdf104a%3a16e4e7cd%3af7645509%3a22a6274a%3a24ee1bba%3af46195d3%3a874f8ea2%3a19620875%3a39040b5c%3af85f9819" type="text/javascript"></script>
+<script src="https://foia.state.gov/_includes/Scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="https://foia.state.gov/Scripts/jquery-ui-1.12.1.js" type="text/javascript"></script>
+<script src="https://foia.state.gov/_includes/Scripts/JS_lib.js" type="text/javascript"></script>
+<script src="https://foia.state.gov/_includes/Scripts/modernizr-1.7.min.js" type="text/javascript"></script>
+<script src="https://foia.state.gov/_includes/Scripts/ganalysis.js" type="text/javascript"></script>
+<script src="https://foia.state.gov/_includes/Scripts/FOIA.js" type="text/javascript"></script>
+<input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="CA0B0334"/>
+<input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="/wEdAAZJSRycZ9BZ1OwFSMm/6/UiY1ORXittpgZbxvFlXHjvoOp0NdoWJZxtOBxJn2OlGhgMGbD3Wn1EKpCftLon+56xOeSWIacA1WLKxNZt1e2DBPQ15RYo6RqVJtTebkiShLgODtqWczkqvxseM+2NIa84e4vgimbv3tvn3htkLYZzSg=="/>
+<div id="wrapper">
+<div id="ctl00_rttManager" style="display:none;position:absolute;">
+<div id="ctl00_rttManagerRTMPanel">
+</div><input id="ctl00_rttManager_ClientState" name="ctl00_rttManager_ClientState" type="hidden"/>
+</div>
+<div id="TopArea">
+<div id="LogoArea">
+<div onclick="window.location='/Default.aspx';" onkeypress="window.location='/Default.aspx';" style="float: left; cursor: pointer">
+<img alt="Seal of the U.S. Department of State" id="LogoSeal" src="https://foia.state.gov//_includes/Images/logo_small.png"/>
+</div>
+<div onclick="window.location='/Default.aspx';" onkeypress="window.location='/Default.aspx';" style="float: left; cursor: pointer">
+<img alt="U.S. Department of State: Freedom of Information Act" id="LogoTitle" src="https://foia.state.gov//_includes/Images/title_small.png"/>
+<div id="tagline" style="color: #E5DBD1;">
+                        Freedom of Information Act
+                    </div>
+</div>
+</div>
+<div id="uplGenericSearchContent">
+<div class="SearchArea" id="pnlGenericSearchArea">
+<input class="generic-search-box" id="tbGenericSearch" name="ctl00$tbGenericSearch" tabindex="1" title="Search this website" type="text"/>
+<a class="Button" href="javascript:void(0);">Search</a>
+</div>
+</div>
+<div class="clear">
+</div>
+</div>
+<div id="TopMenuArea">
+<div class="HomeTopMenuArea">
+</div>
+<div class="clear">
+</div>
+</div>
+<div id="BreadcrumbArea">
+</div>
+<div id="MainArea">
+<div class="" id="MainContentArea" style="margin-left: 0px !important;">
+<h1 id="MainTitle" title="Main Title">
+                    Main Title</h1>
+<div id="uprogProcessing" style="display:none;">
+<img alt="Processing..." id="imgProcessing" src="https://foia.state.gov/_includes/Images/ajax-loader.gif" tabindex="6" title="Processing..."/>
+</div>
+<div id="uplMainContent">
+<a href="#main" style="display:none;" tabindex="16">Skip to main content</a>
+<noscript>
+        The FOIA banners are displayed using the links to show About, Learn, Search, and Request information.
+        <a href="About/" tabindex="17">About</a>
+<a href="Learn/" tabindex="18">Learn</a>
+<a href="Search/Search.aspx" tabindex="19">Search</a>
+<a href="Request/" tabindex="20">Request</a>
+</noscript>
+<div class="Content-Rotator" tabindex="21">
+<div class="shadow-top"> </div>
+<div class="content" tabindex="22">
+<div class="FOIATextBanner" style="display: block;">
+<div class="FOIABannerDescriptionArea" id="cphMainContent_rptBannerRotator_pnlFOIABannerDescription_0">
+<span class="SubTitle" id="cphMainContent_rptBannerRotator_lblStepTitle_0" tabindex="23">Welcome!</span>
+<div style="padding-left:20px;padding-top:24px;">
+<span class="FOIABannerDescription" id="cphMainContent_rptBannerRotator_lblStepDescription_0" tabindex="24"><p>      Welcome to the U.S. Department of State Freedom of Information Act (FOIA) website. Like all federal agencies, the Department creates and receives records when carrying out its mission. This website provides a wealth of information about the Department’s FOIA program and how to obtain access to the Department’s records, as well as a search tool containing <a href="/Search/Search.aspx" id="HomeDocNumCount" style="">220,319 searchable documents</a> reviewed and released to the public.      </p></span>
+<div>
+</div>
+</div>
+</div>
+<div class="FOIABannerImage" id="cphMainContent_rptBannerRotator_pnlFOIABannerMedia_0" tabindex="26">
+<a href="/" id="cphMainContent_rptBannerRotator_hlBannerLink_0" tabindex="27"><img alt="About FOIA Banner" src="https://foia.state.gov//_includes/Images/Section/Banners/flag.png"/></a>
+</div>
+</div>
+<div class="FOIATextBanner">
+<div class="FOIABannerDescriptionArea" id="cphMainContent_rptBannerRotator_pnlFOIABannerDescription_1">
+<span class="SubTitle" id="cphMainContent_rptBannerRotator_lblStepTitle_1" tabindex="23">Learn about...</span>
+<div style="padding-left:20px;padding-top:24px;">
+<span class="FOIABannerDescription" id="cphMainContent_rptBannerRotator_lblStepDescription_1" tabindex="24"><p>        The Department of State administers information access programs including the <a href="/Learn/FOIA.aspx">Freedom of Information Act</a>, the <a href="/Learn/PrivacyAct.aspx">Privacy Act</a>, and the <a href="/Learn/MDR.aspx">Mandatory Declassification Review</a> programs.  These programs can be used to obtain access to a variety of Department records.  Find out more about these programs and about what kinds of records and information the Department maintains.      </p></span>
+<div>
+<a class="FOIABannerLink" href="/Learn" id="cphMainContent_rptBannerRotator_hlStepLink_1" tabindex="25">Learn More »</a>
+</div>
+</div>
+</div>
+<div class="FOIABannerImage" id="cphMainContent_rptBannerRotator_pnlFOIABannerMedia_1" tabindex="26">
+<a href="/Learn" id="cphMainContent_rptBannerRotator_hlBannerLink_1" tabindex="27"><img alt="Learn FOIA Banner" src="https://foia.state.gov//_includes/Images/Section/Banners/learn.png"/></a>
+</div>
+</div>
+<div class="FOIATextBanner">
+<div class="FOIABannerDescriptionArea" id="cphMainContent_rptBannerRotator_pnlFOIABannerDescription_2">
+<span class="SubTitle" id="cphMainContent_rptBannerRotator_lblStepTitle_2" tabindex="23">Search Online...</span>
+<div style="padding-left:20px;padding-top:24px;">
+<span class="FOIABannerDescription" id="cphMainContent_rptBannerRotator_lblStepDescription_2" tabindex="24"><p>        Prior to making a request for Department of State records, you may wish to find out if the information has already been made publicly available through one of the Department’s searchable online resources:        </p><ul> <li> <a href="/Search/Search.aspx">Virtual Reading Room Search</a> </li> <li> <a href="/Search/Litigation.aspx">Records Released in Litigation</a> </li> <li> <a href="/Search/Library.aspx">Administrative Rulings, Policy Statements, and Other Publications</a> </li> </ul> <p></p></span>
+<div>
+</div>
+</div>
+</div>
+<div class="FOIABannerImage" id="cphMainContent_rptBannerRotator_pnlFOIABannerMedia_2" tabindex="26">
+<a href="/Search/Search.aspx" id="cphMainContent_rptBannerRotator_hlBannerLink_2" tabindex="27"><img alt="Search FOIA Banner" src="https://foia.state.gov//_includes/Images/Section/Banners/search.png"/></a>
+</div>
+</div>
+<div class="FOIATextBanner">
+<div class="FOIABannerDescriptionArea" id="cphMainContent_rptBannerRotator_pnlFOIABannerDescription_3">
+<span class="SubTitle" id="cphMainContent_rptBannerRotator_lblStepTitle_3" tabindex="23">Make a Request...</span>
+<div style="padding-left:20px;padding-top:24px;">
+<span class="FOIABannerDescription" id="cphMainContent_rptBannerRotator_lblStepDescription_3" tabindex="24"><p>        Under the <a href="/Request/">Freedom of Information Act (FOIA)</a>, the <a href="/Learn/PrivacyAct.aspx">Privacy Act</a>, or <a href="/Request/MDR.aspx">Mandatory Declassification Review (MDR)</a> by mail or by fax.      </p> <p>        Under the Freedom of Information Act by <a href="/Request/Submit.aspx">Electronic Submission</a>.      </p> <p>        Please note: Requests for <a href="/Request/PersonalRecords.aspx">personal records</a> require an original signature and cannot be accepted online.      </p></span>
+<div>
+<a class="FOIABannerLink" href="/Request" id="cphMainContent_rptBannerRotator_hlStepLink_3" tabindex="25">More Requests »</a>
+</div>
+</div>
+</div>
+<div class="FOIABannerImage" id="cphMainContent_rptBannerRotator_pnlFOIABannerMedia_3" tabindex="26">
+<a href="/Request" id="cphMainContent_rptBannerRotator_hlBannerLink_3" tabindex="27"><img alt="Request FOIA Banner" src="https://foia.state.gov//_includes/Images/Section/Banners/request.png"/></a>
+</div>
+</div>
+<a id="RightArrowOver"></a>
+<a id="LeftArrowOver"></a>
+<!--<div class="FOIATextBanner">
+            some text goes here
+        </div>-->
+<div class="BannerLinkPanel" id="cphMainContent_pnlMainBannerLinks" style="padding-top: 300px;">
+<a class="BannerLink BannerLink_First SelectedBannerLink" href="/" id="cphMainContent_SectionBanner0" onmouseover="window.FOIAWeb.Home.GoToBanner(0); return false;">HOME</a><span class="BannerLinkDivider active-right"> </span><a class="BannerLink" href="/Learn" id="cphMainContent_SectionBanner1" onmouseover="window.FOIAWeb.Home.GoToBanner(1); return false;" title="About information access programs">Learn</a><span class="BannerLinkDivider"> </span><a class="BannerLink" href="/Search/Search.aspx" id="cphMainContent_SectionBanner2" onmouseover="window.FOIAWeb.Home.GoToBanner(2); return false;" title="Documents and other records available online">Search</a><span class="BannerLinkDivider"> </span><a class="BannerLink BannerLink_Last" href="/Request" id="cphMainContent_SectionBanner3" onmouseover="window.FOIAWeb.Home.GoToBanner(3); return false;" title="Documents by mail, fax, or online">Request</a>
+</div>
+</div>
+<div class="shadow-bottom"> </div>
+</div>
+<div class="Body-Two-Column" tabindex="28">
+<div class="left">
+<div id="RecordsInfo">
+<div class="header outer">
+<div class="inner" tabindex="29" title="Department of State records heading">
+                        Department of State Records
+                    </div>
+</div>
+<div class="shadow"><img alt="" src="https://foia.state.gov//_includes/Images/blank.gif"/></div>
+<div class="body">
+<div class="content" tabindex="30">
+                        The Department of State maintains records dealing with:
+                        <ul>
+<li>Formulation and execution of <strong>U.S. Foreign Policy</strong></li>
+<li>Administration and operations of the Department of State and U.S. Missions abroad</li>
+<li>Consular assistance given to U.S. Citizens abroad</li>
+<li>In general, permanent records 25 years and older, pre-1925 passport and pre-1940 visa records are property of 
+                            <a href="http://www.archives.gov/" target="_blank">National Archives and Records Administration (NARA)<img alt="Opens this website http://www.archives.gov/ in new window." border="0" class="Link-External" src="https://foia.state.gov//_includes/Images/bk-externallink.gif"/></a>
+</li>
+<li style="display: none;">Current and former employees of the Department of State</li>
+<li style="display: none;">Applications from U.S. Citizens for U.S. Passports</li>
+<li style="display: none;">Visa requests from non-citizens to enter the U.S.  You may wish to view the <a href="Request/VisaRecords.aspx">Visa Records Contact Information</a> to determine where the visa records you are seeking are maintained</li>
+</ul>
+</div>
+<div class="more"><a href="javascript:void(0);">Show More</a></div></div>
+<div class="footer" tabindex="31"><img alt="" src="https://foia.state.gov//_includes/Images/blank.gif"/></div>
+</div>
+</div>
+<div class="right">
+<ul class="hyperlinks">
+<li id="WhatsNew"><a href="/Learn/New.aspx" id="cphMainContent_hlNew" tabindex="32">What's New?</a></li>
+<li><a href="/Learn/FAQ.aspx" id="cphMainContent_hlFAQ" tabindex="33">Frequently Asked Questions</a></li>
+<li><a href="http://www.ecfr.gov/cgi-bin/text-idx?SID=2809ca29213ba41b44fce61c7dae15d0&amp;node=22:1.0.1.18.85&amp;rgn=div5" id="cphMainContent_hlRegulations" tabindex="34" target="_blank">Department of State FOIA Regulations<img alt="Opens this website http://www.ecfr.gov/cgi-bin/text-idx?SID=2809ca29213ba41b44fce61c7dae15d0&amp;node=22:1.0.1.18.85&amp;rgn=div5 in new window." border="0" class="Link-External" src="https://foia.state.gov//_includes/Images/bk-externallink.gif"/></a></li>
+<li><a href="https://fam.state.gov" id="cphMainContent_hlFAMFAH" tabindex="35" target="_blank">Foreign Affairs Manual/Handbooks<img alt="Opens this website https://fam.state.gov in new window." border="0" class="Link-External" src="https://foia.state.gov//_includes/Images/bk-externallink.gif"/></a></li>
+<li><a href="/Request/Guide.aspx" id="cphMainContent_hlGuide" tabindex="36">Information Access Guide</a></li>
+<li><a href="http://www.state.gov/open/" id="cphMainContent_hlOGI" tabindex="37" target="_blank">Open Government Initiative<img alt="Opens this website http://www.state.gov/open/ in new window." border="0" class="Link-External" src="https://foia.state.gov//_includes/Images/bk-externallink.gif"/></a></li>
+<li><a href="/Learn/Reports.aspx" id="cphMainContent_hlReports" tabindex="38">FOIA Reports</a></li>
+<li><a href="http://www.state.gov/m/a/dir/forms/" id="cphMainContent_hlForms" tabindex="39" target="_blank">Forms<img alt="Opens this website http://www.state.gov/m/a/dir/forms/ in new window." border="0" class="Link-External" src="https://foia.state.gov//_includes/Images/bk-externallink.gif"/></a></li>
+<li><a href="/Learn/MIS.aspx" id="cphMainContent_hlMIS" tabindex="40">Major Information Systems</a></li>
+<li><input style="display:none" tabindex="-1" type="submit" value="Submit"/></li>
+</ul>
+<div id="main" tabindex="41"></div>
+<div id="ctl00_cphMainContent_rttNew2" style="display:none;position:absolute;">
+		
+                View announcements and the latest updates.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttNew2_ClientState" name="ctl00_cphMainContent_rttNew2_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttGuide2" style="display:none;position:absolute;">
+		
+                Your guide for requesting Department of State records.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttGuide2_ClientState" name="ctl00_cphMainContent_rttGuide2_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttReports2" style="display:none;position:absolute;">
+		
+                Access Annual, Quarterly, and Chief FOIA Officer Reports.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttReports2_ClientState" name="ctl00_cphMainContent_rttReports2_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttRegulations2" style="display:none;position:absolute;">
+		
+                The Code of Federal Regulations concerning Access to Department of State information.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttRegulations2_ClientState" name="ctl00_cphMainContent_rttRegulations2_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttFAQ2" style="display:none;position:absolute;">
+		
+                Get answers to some common questions about the Freedom of Information Act, Privacy Act, and Department of State records.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttFAQ2_ClientState" name="ctl00_cphMainContent_rttFAQ2_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttMIS2" style="display:none;position:absolute;">
+		
+                View details about the Department’s major information systems, as well as other information technology investments.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttMIS2_ClientState" name="ctl00_cphMainContent_rttMIS2_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttForms2" style="display:none;position:absolute;">
+		
+                Access official Department of State forms managed by the Office of Directives Management.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttForms2_ClientState" name="ctl00_cphMainContent_rttForms2_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttFAMH2" style="display:none;position:absolute;">
+		
+                The basic organizational directives of the Department of State.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttFAMH2_ClientState" name="ctl00_cphMainContent_rttFAMH2_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttOGI2" style="display:none;position:absolute;">
+		
+                Open Government Initiative.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttOGI2_ClientState" name="ctl00_cphMainContent_rttOGI2_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttNew" style="display:none;position:absolute;">
+		
+                View announcements and the latest updates.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttNew_ClientState" name="ctl00_cphMainContent_rttNew_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttGuide" style="display:none;position:absolute;">
+		
+                Your guide for requesting Department of State records.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttGuide_ClientState" name="ctl00_cphMainContent_rttGuide_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttReports" style="display:none;position:absolute;">
+		
+                Access Annual, Quarterly, and Chief FOIA Officer Reports.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttReports_ClientState" name="ctl00_cphMainContent_rttReports_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttRegulations" style="display:none;position:absolute;">
+		
+                The Code of Federal Regulations concerning Access to Department of State information.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttRegulations_ClientState" name="ctl00_cphMainContent_rttRegulations_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttFAQ" style="display:none;position:absolute;">
+		
+                Get answers to some common questions about the Freedom of Information Act, Privacy Act, and Department of State records.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttFAQ_ClientState" name="ctl00_cphMainContent_rttFAQ_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttMIS" style="display:none;position:absolute;">
+		
+                View details about the Department’s major information systems, as well as other information technology investments.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttMIS_ClientState" name="ctl00_cphMainContent_rttMIS_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttForms" style="display:none;position:absolute;">
+		
+                Access official Department of State forms managed by the Office of Directives Management.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttForms_ClientState" name="ctl00_cphMainContent_rttForms_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttFAMH" style="display:none;position:absolute;">
+		
+                The basic organizational directives of the Department of State.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttFAMH_ClientState" name="ctl00_cphMainContent_rttFAMH_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_cphMainContent_rttOGI" style="display:none;position:absolute;">
+		
+                Open Government Initiative.
+            <input autocomplete="off" id="ctl00_cphMainContent_rttOGI_ClientState" name="ctl00_cphMainContent_rttOGI_ClientState" type="hidden"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clear">
+</div>
+</div>
+<div id="FooterArea">
+<div class="right-footer">
+<span class="external-links"><a href="https://www.stateoig.gov/" tabindex="7" target="_blank" title="Office of Inspector General for the Department of State and the Broadcasting Board of Governors">
+                    Inspector General (OIG) FOIA<img alt="Opens this website https://www.stateoig.gov/ in new window." border="0" class="Link-External" src="https://foia.state.gov//_includes/Images/bk-externallink.gif"/></a> <a href="http://www.state.gov/r/pa/ei/subject/" tabindex="8" target="_blank" title="Department of State Subject Index">Subject Index<img alt="Opens this website http://www.state.gov/r/pa/ei/subject/ in new window." border="0" class="Link-External" src="https://foia.state.gov//_includes/Images/bk-externallink.gif"/></a>
+</span>
+<div class="internal-links" id="mnuFooter" style="float: left;">
+<ul class="level1 FooterLink static" style="position: relative;  width: auto; float: left;">
+<li class="static" style="position: relative; float: left;"><a class="level1 FooterLink static" href="../Default.aspx" tabindex="9" title="Retun to Home">Home</a></li>
+<li class="static" style="position: relative; float: left;"><a class="level1 FooterLink static" href="../Learn/Reports.aspx" tabindex="9" title="Link to FOIA Reports">FOIA Reports</a></li>
+<li class="static" style="position: relative; float: left;"><a class="level1 FooterLink static" href="../SiteMap.aspx" tabindex="10" title="Site Map">Site Map</a></li><li class="static" style="position: relative;
+                                float: left;"><a class="level1 FooterLink static" href="../Disclaimers.aspx" tabindex="11" title="Privacy and Disclaimers">Privacy &amp; Disclaimers</a></li><li class="static" style="position: relative; float: left;"><a class="level1 FooterLink static" href="../Contact/Default.aspx" tabindex="12" title="Contact">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="left-footer">
+<ul class="external-links">
+<li><a href="http://www.state.gov" id="ExternalLink-State" onmouseout="javascript:this.childNodes[0].src='/_includes/Images/Footer/state-inactive.png'" onmouseover="javascript:this.childNodes[0].src='/_includes/Images/Footer/state-active.png'" tabindex="13" target="_blank" title="Department of State website">
+<img alt="A hyperlink to State.gov" src="https://foia.state.gov//_includes/Images/Footer/state-inactive.png"/></a>
+</li>
+<li><a href="http://www.usa.gov/" id="ExternalLink-USA" onmouseout="javascript:this.childNodes[0].src='/_includes/Images/Footer/usa-inactive.png'" onmouseover="javascript:this.childNodes[0].src='/_includes/Images/Footer/usa-active.png'" tabindex="14" target="_blank" title="United States Government website">
+<img alt="A hyperlink to USA.gov" src="https://foia.state.gov//_includes/Images/Footer/usa-inactive.png"/></a>
+</li>
+</ul>
+</div>
+<div class="clear">
+</div>
+</div>
+<div style="text-align: right">
+<a class="version">
+                06-27-2019</a>  
+            <a class="version" href="https://get.adobe.com/reader/" tabindex="15" target="_blank" title="Link to download Acrobat">Download Acrobat Reader<img alt="Opens this website https://get.adobe.com/reader/ in new window." border="0" class="Link-External" src="https://foia.state.gov//_includes/Images/bk-externallink.gif"/></a>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+window.FOIAWeb.Home.OnLoad('cphMainContent_pnlMainBannerLinks', '#DocNumCount', '#HomeDocNumCount', '#RecordsInfo', '/_xml/Announcements.xml');window.FOIAWeb.MasterPage.OnLoad('#tbGenericSearch', '.generic-search-button', '.GenericSearchArea input', 'Search the FOIA Site', '#MainContentArea', '#LeftMenuArea');;(function() {
+                        function loadHandler() {
+                            var hf = $get('rssmFOIAStyles_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';|636852322664223737:4af999ef:17b84db7;Telerik.Web.UI, Version=2012.1.411.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:ebfa5361-1bb0-4d72-bf6d-db0befdf104a:53e1db5a;Telerik.Web.UI.Skins, Version=2012.1.411.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:45c8f008-e8e7-48f6-a5be-f77628933227:7e226990';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTipManager, {"_cssClass":"","_manualCloseButtonText":"Close","_updatePanelUniqueId":"ctl00$rttManagerRTMPanel","clientStateFieldID":"ctl00_rttManager_ClientState","formID":"form1","isToolTipFactory":true,"loadOnDemand":false,"skin":"Metro","targetControls":"[]"}, null, null, $get("ctl00_rttManager"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttNew2_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"showEvent":8,"skin":"Metro","targetControlID":"cphMainContent_hlNew","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttNew2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttGuide2_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"showEvent":8,"skin":"Metro","targetControlID":"cphMainContent_hlGuide","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttGuide2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttReports2_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"showEvent":8,"skin":"Metro","targetControlID":"cphMainContent_hlReports","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttReports2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttRegulations2_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"showEvent":8,"skin":"Metro","targetControlID":"cphMainContent_hlRegulations","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttRegulations2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttFAQ2_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"showEvent":8,"skin":"Metro","targetControlID":"cphMainContent_hlFAQ","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttFAQ2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttMIS2_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"showEvent":8,"skin":"Metro","targetControlID":"cphMainContent_hlMIS","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttMIS2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttForms2_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"showEvent":8,"skin":"Metro","targetControlID":"cphMainContent_hlForms","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttForms2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttFAMH2_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"showEvent":8,"skin":"Metro","targetControlID":"cphMainContent_hlFAMFAH","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttFAMH2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttOGI2_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"showEvent":8,"skin":"Metro","targetControlID":"cphMainContent_hlOGI","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttOGI2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttNew_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"skin":"Metro","targetControlID":"cphMainContent_hlNew","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttNew"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttGuide_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"skin":"Metro","targetControlID":"cphMainContent_hlGuide","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttGuide"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttReports_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"skin":"Metro","targetControlID":"cphMainContent_hlReports","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttReports"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttRegulations_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"skin":"Metro","targetControlID":"cphMainContent_hlRegulations","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttRegulations"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttFAQ_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"skin":"Metro","targetControlID":"cphMainContent_hlFAQ","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttFAQ"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttMIS_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"skin":"Metro","targetControlID":"cphMainContent_hlMIS","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttMIS"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttForms_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"skin":"Metro","targetControlID":"cphMainContent_hlForms","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttForms"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttFAMH_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"skin":"Metro","targetControlID":"cphMainContent_hlFAMFAH","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttFAMH"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","animation":4,"animationDuration":300,"clientStateFieldID":"ctl00_cphMainContent_rttOGI_ClientState","formID":"form1","hideDelay":5000,"position":21,"relativeTo":1,"showDelay":500,"skin":"Metro","targetControlID":"cphMainContent_hlOGI","width":"500px"}, null, null, $get("ctl00_cphMainContent_rttOGI"));
+});
+//]]>
+</script>
+</form>
+</body></html>

@@ -1,0 +1,900 @@
+<html class="not-logged-in js commerce locale-en applicationcache history postmessage websockets localstorage sessionstorage websqldatabase webworkers hashchange audio canvas canvastext video multiplebgs opacity fileinput supports hsla no-touchevents fontface generatedcontent cssvhunit cssvwunit textshadow cssanimations backgroundsize bgsizecover borderimage borderradius boxshadow boxsizing csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside cssfilters flexbox flexboxlegacy cssreflections csstransforms csstransforms3d csstransitions indexeddb indexeddb-deletedatabase backgroundblendmode no-ios no-ie no-ie11 no-safari no-android no-iframed no-hidpi no-microsofttablet" content-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &gt;940 &gt;960 &gt;980 &gt;1000 &gt;1020 &gt;1040 &gt;1060 &gt;1080 &gt;1100 &gt;1120 &gt;1140 &gt;1160 &gt;1180 &gt;1200 &gt;1220 &gt;1240 &gt;1260 &gt;1280 &gt;1300 &gt;1320 &gt;1340 &gt;1360 &gt;1380 &gt;1400" id="scoped-css" style=""><head prefix="fb: http://www.facebook.com/2008/fbml og: http://opengraphprotocol.org/schema/">
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflPBjLfx/www-widgetapi.js" type="text/javascript"></script><script async="" src="https://www.gstatic.com/recaptcha/api2/v1561357937155/recaptcha__en.js" type="text/javascript"></script><script async="" id="recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6Lfxx4EUAAAAAIuk746FxFg6gj7Ytjx--6K2eaia" type="text/javascript"></script><script src="https://www.youtube.com/iframe_api"></script><script src="https://www.youtube.com/iframe_api"></script><script src="https://www.youtube.com/iframe_api"></script><script src="https://www.youtube.com/iframe_api"></script><script src="https://www.youtube.com/iframe_api"></script><script src="https://www.youtube.com/iframe_api"></script><script async="" id="zstats" src="https://stats.bandzoogle.com/stats.js" type="text/javascript"></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4722504a69","applicationID":"7554975","transactionName":"IQxWQRdXDQ1UEUtCFgcRS1wRXU4RUAQBREoRC1dC","queueTime":1,"applicationTime":445,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<title>David Ball | Home</title>
+<style>
+#usersite-container #main-nav:not(.mobile) a.top:hover {
+    transition: all .3s;
+    letter-spacing: 8px !important;
+    font-weight: bold !important;
+}
+</style>
+<meta content="width=device-width" name="viewport"/>
+<link href="//d199exf5odosyq.cloudfront.net/assets/usersite/application-76c99b1b3f7f9d397fe079c5f4ff2dfa280c62f0f07bf04c9a25780b8e948950.css" media="screen" rel="stylesheet"/>
+<link href="https://s3.amazonaws.com/content.sitezoogle.com/u/316683/theme_configs/3/627488.css?1546644611" rel="stylesheet" type="text/css"/>
+<link href="//d199exf5odosyq.cloudfront.net/assets/usersite_print-898d57949af0ad2bc4f547f83dd6ff3afcc8a33f1513e732d597872e7fa68553.css" media="print" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","name":"David Ball","url":"https:\/\/davidball.com\/","sameAs":["https:\/\/www.facebook.com\/DavidBallMusic","https:\/\/www.youtube.com\/user\/DavidBallMusic","https:\/\/twitter.com\/davidballmusic","https:\/\/www.instagram.com\/davidballmusic"]}</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="//d199exf5odosyq.cloudfront.net/assets/usersite/application-2b0602811e61100a39a8c9dc4c8fb20038a4b744b41d9897a50dea9255bded81.js"></script>
+<script async="async" src="//d199exf5odosyq.cloudfront.net/packs/js/usersite-5723fdee235816be4137.js"></script>
+<script type="text/javascript">
+		themeJsManager.registerTheme(172, $.extend({}, themeJsManager.blankJs, {
+	// helper function
+	_throttle: function (func, limit, context) {
+		var wait = false;
+		return function () {
+			if (!wait) {
+				func.call(context);
+				wait = true;
+				setTimeout(function () {
+					wait = false;
+					func.call(context);
+				}, limit);
+			}
+		}
+	},
+
+	_scrollCheck: function () {
+		if (!this._isUserSite()) { // not for control panel
+			return;
+		}
+
+		if ($('.ie-flexbox-fix-wrapper').css('position') === 'sticky') { // not if we are already handling this in CSS
+			return;
+		}
+
+		if (this._shouldRemoveSticky()) {
+			$('.title-nav-container').removeClass('sticky');
+
+		} else if (this._shouldAddSticky()) {
+			$('.title-nav-container').addClass('sticky');
+		}
+	},
+
+	_shouldAddSticky: function () {
+		var barTop = document.getElementsByClassName('title-nav-container')[0].getBoundingClientRect().top;
+		return barTop < 0;
+	},
+
+	_shouldRemoveSticky: function () {
+		if (document.getElementById('page-header').offsetHeight > 0) { // if header is taller than 0
+			var barHeight = document.getElementsByClassName('title-nav-container')[0].offsetHeight;
+			var headerBottom = document.getElementById('page-header').getBoundingClientRect().bottom;
+			return (headerBottom - barHeight >= 0 || window.pageYOffset === 0);
+		} else {
+			// if header is 0, this is an edge case
+			var headerTop = document.getElementById('page-header').getBoundingClientRect().top;
+			return (headerTop >= 0 || window.pageYOffset === 0);
+		}
+	},
+
+	_isUserSite: function () {
+		return document.getElementsByClassName('wysiwyg').length < 1 && // no .wysiwyg
+			!document.getElementById('edit-bar-wrap'); // no #width-edit-bar
+	},
+
+	_setupScrollCheck: function () {
+		this.$window = $(window);
+		this.$container = $('#usersite-container');
+
+		this.scrollListenerFn = this._throttle(this._scrollCheck, 50, this);
+		this.$window.on('scroll.zenithScrollCheck', this.scrollListenerFn);
+		this.$container.on('scroll.zenithScrollCheck', this.scrollListenerFn);
+	},
+
+	_removeScrollCheck: function () {
+		this.$window.off('scroll.zenithScrollCheck', this.scrollListenerFn);
+		this.$container.off('scroll.zenithScrollCheck', this.scrollListenerFn);
+	},
+
+
+	setup: function () {
+		this._setupScrollCheck();
+	},
+
+	tearDown: function () {
+		this._removeScrollCheck();
+	},
+
+	plugins: {
+		scrollToContentTab: {
+			scrollTop: function() {
+				return $(window).height();
+			}
+		},
+		parallaxyPagePhoto: {
+			containerSelector: '.page-media-container',
+			elementSelector: '.page-media-container',
+			scrollSpeed: 1.2
+		},
+		navTitleNextToFlexbox: {}
+	}
+}
+));
+	</script>
+<meta content="authenticity_token" name="csrf-param"/>
+<meta content="tb/4kVVmJoKhWFalKD8+KLlTutd+B5c49xJ+KA6rKMA8xiu0S8u60748YRRjiUWz2nQrKCv0SJqjdrfkg6tYKQ==" name="csrf-token"/>
+<meta content="David Ball | Home" name="title"/>
+<meta content="David Ball | Home" property="og:title"/>
+<meta content="David Ball | Home" name="twitter:title"/>
+<meta content="Official website of Grammy Award Winner and Multi Platinum Country Artist David Ball - New Album 'Come See Me' Available Now!" name="description"/>
+<meta content="Official website of Grammy Award Winner and Multi Platinum Country Artist David Ball - New Album 'Come See Me' Available Now!" property="og:description"/>
+<meta content="Official website of Grammy Award Winner and Multi Platinum Country Artist David Ball - New Album 'Come See Me' Available Now!" name="twitter:description"/>
+<meta content="https://davidball.com/home" name="url"/>
+<meta content="https://davidball.com/home" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<link href="https://davidball.com/home" rel="canonical"/>
+<style class="page-styles">
+              			.website-page-home .first-section-background-color {
+				background-color: #e04330 !important;
+			}
+
+			.website-page-home .first-section-before-border-bottom:before {
+				border-bottom-color: #e04330 !important;
+			}
+
+			.website-page-home .first-section-after-border-bottom:after {
+				border-bottom-color: #e04330 !important;
+			}
+
+						</style>
+<link href="https://davidball.com/blogs/news.atom" rel="alternate" title="Atom Feed for News" type="application/atom+xml"/>
+<link href="https://davidball.com/blogs/news.rss" rel="alternate" title="RSS Feed for News" type="application/rss+xml"/>
+<meta content="reload" name="turbolinks-visit-control"/>
+<script charset="utf-8" src="https://platform.twitter.com/js/moment~timeline~tweet.a20574004ea824b1c047f200045ffa1e.js"></script><script charset="utf-8" src="https://platform.twitter.com/js/timeline.49693ebcd57b08708ebca7502c7c343d.js"></script></head>
+<body class="theme-zenith theme-zenith-a has-site-wide-my-sites bz not-intro-page" data-slug="home" data-turbolinks="false">
+<div class="usersite-container-wrap">
+<div id="usersite-container-inner-wrap">
+<div content-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &gt;940 &gt;960 &gt;980 &gt;1000 &gt;1020 &gt;1040 &gt;1060 &gt;1080 &gt;1100 &gt;1120 &gt;1140 &gt;1160 &gt;1180 &gt;1200 &gt;1220 &gt;1240 &gt;1260 &gt;1280 &gt;1300 &gt;1320 &gt;1340 &gt;1360 &gt;1380 &gt;1400" id="usersite-container">
+<nav class="mobile" id="main-nav"><ul class="mobile list balance_6 top menu-length-6"><li class="top"><div><a class="top no-pjax" href="/home">Home</a></div></li><li class="top"><div><a class="navigate-to-section top" data-page-id="2039414" href="/home#video">Video</a></div></li><li class="top"><div><a class="navigate-to-section top" data-page-id="2039414" href="/home#tour">Tour</a></div></li><li class="top"><div><a class="navigate-to-section top" data-page-id="2039414" href="/home#store">Store</a></div></li><li class="top"><div><a class="navigate-to-section top" data-page-id="2039414" href="/home#news">News</a></div></li><li class="top"><div><a class="navigate-to-section top" data-page-id="2039414" href="/home#contact">Contact</a></div></li></ul><ul class="my-sites"><li class="facebook"><a class="my_site_icon tip icon-default-1 facebook-sign icon icon-facebook-sign text-secondary" href="https://www.facebook.com/DavidBallMusic" rel="noopener" target="_blank" title="https://www.facebook.com/DavidBallMusic"></a></li> <li class="youtube"><a class="my_site_icon tip icon-default-1 youtube icon icon-youtube text-secondary" href="https://www.youtube.com/user/DavidBallMusic" rel="noopener" target="_blank" title="https://www.youtube.com/user/DavidBallMusic"></a></li> <li class="twitter"><a class="my_site_icon tip icon-default-1 twitter icon icon-twitter text-secondary" href="https://twitter.com/davidballmusic" rel="noopener" target="_blank" title="https://twitter.com/davidballmusic"></a></li> <li class="instagram"><a class="my_site_icon tip icon-default-1 instagram icon icon-instagram text-secondary" href="https://www.instagram.com/davidballmusic" rel="noopener" target="_blank" title="https://www.instagram.com/davidballmusic"></a></li></ul></nav>
+<div data-pjax-container="">
+<div class="landing-page display-type-text website-page-home has-site-wide-my-sites has-call-to-action-header has-section-styles" data-page-id="2039414" data-slug="home" id="page-root">
+<div id="container">
+<div class="ie-flexbox-fix-wrapper">
+<header id="page-header">
+<div class="parallax-wrapper">
+<div class="page-photos page-media-container display-time-medium transition-speed-medium transition-type-fade">
+<div class="page-photo page-media page-photo-background" style='background-image: url("//d2l6t8rnjafg4n.cloudfront.net/u/316683/7fbf09d60af767c259eff142dcd4d080fa55efae/original/header-image.png/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjE4MSwid2lkdGgiOjE5MjAsImhlaWdodCI6ODk5fV0sWyJyZXNpemUiLDE2MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png"); background-position: 50% 39%; opacity: 1; z-index: 1; transform: none; transition: none 0s ease 0s;'></div>
+<object data="about:blank" style="display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1; opacity: 0;" type="text/html"></object></div>
+</div>
+<div class="default-page-header-area" id="default-page-header"><div class="zoogle-content block" content-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400" data-arrangement-id="2383692"><div class="zoogle-columns zoogle-columns-1 zoogle-columns-100 default-section-style padding-none title-alignment-left block block-row layout_full" data-row-id="7723013"><div class="zoogle-columns-inner site-wrap"><div class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" data-column-id="9195674"><div class="zoogle-feature block layout_full" data-block-id="9180045"><section class="feature call_to_action_header_feature" data-feature-id="124593" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &lt;400 &lt;420 &lt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400">
+<section class="call-to-action-wrapper text-and-button">
+<div class="cta-heading-wrapper">
+<h2 class="heading-primary cta-heading">
+          Come See Me
+        </h2>
+</div>
+<div class="cta-subheading-wrapper">
+<h3 class="heading-quaternary cta-subheading">
+          The New Album
+        </h3>
+</div>
+<div class="cta-button-wrapper">
+<a class="button" href="https://davidball.com/home#store">Order Now</a>
+</div>
+</section>
+</section></div></div></div></div></div></div>
+<div class="title-nav-container">
+<div class="title-wrap" data-apply-textfit="false" id="title-wrap">
+<h1 class="page-title display-type-text text-fit" id="page-title"><a href="/home"><span class="outer" data-max-font-size="40"><span class="inner">David Ball</span></span></a></h1>
+</div>
+<div class="nav-bar">
+<span class="toggle-mobile-menu" id="toggle-mobile-menu"><a href="javascript:"><i class="icon-hamburger"></i></a></span><nav class="non-mobile" id="main-nav"><ul class="horizontal list balance_6 top menu-length-6"><li class="top"><div><a class="top no-pjax" href="/home">Home</a></div></li><li class="top"><div><a class="navigate-to-section top" data-page-id="2039414" href="/home#video">Video</a></div></li><li class="top"><div><a class="navigate-to-section top" data-page-id="2039414" href="/home#tour">Tour</a></div></li><li class="top"><div><a class="navigate-to-section top" data-page-id="2039414" href="/home#store">Store</a></div></li><li class="top"><div><a class="navigate-to-section top" data-page-id="2039414" href="/home#news">News</a></div></li><li class="top"><div><a class="navigate-to-section top" data-page-id="2039414" href="/home#contact">Contact</a></div></li></ul></nav>
+</div>
+</div>
+</header>
+</div>
+<div id="content-wrap">
+<div id="content">
+<div class="zoogle_flash">
+</div>
+<section class="cart bg-accent hide" content-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400" id="cart" style="">
+</section>
+<div id="page-content-wrap"><div class="zoogle-content block" content-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &gt;940 &gt;960 &gt;980 &gt;1000 &gt;1020 &gt;1040 &gt;1060 &gt;1080 &gt;1100 &gt;1120 &gt;1140 &gt;1160 &gt;1180 &gt;1200 &gt;1220 &gt;1240 &gt;1260 &gt;1280 &gt;1300 &gt;1320 &gt;1340 &gt;1360 &gt;1380 &gt;1400" data-arrangement-id="2383691"><div class="zoogle-columns zoogle-columns-1 zoogle-columns-100 style-section-style-1 padding-small title-alignment-center scroll-effect-fixed has-section-photo block block-row layout_full zoogle-columns-first" data-row-id="8353588"><div class="background-wrapper"><div class="background" style="background-image: url('//d2l6t8rnjafg4n.cloudfront.net/u/316683/253e8e90053c5817a76f589ddcc4af2c4af463b9/original/hats.jpg/!!/b%3AW1sicmVzaXplIiwxNjAwXSxbIm1heCJdLFsid2UiXV0%3D.jpg'); background-position: 49% 48%; opacity: 0.16;"></div></div><div class="zoogle-columns-inner site-wrap"><div class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" data-column-id="9950576"><div class="zoogle-feature block layout_full" data-block-id="9939701"><section class="feature quotation_feature" data-feature-id="50085" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <div class="quotation">
+<blockquote class="quote">
+<span class="left-quote">“</span>He has been consistently good for more years than I care to remember…but I wasn’t prepared for just how wonderful a piece of work this is.
+
+”
+			</blockquote>
+<cite class="source">
+<p>—
+						Duncan Warwick // Country Music People
+</p>
+</cite>
+</div>
+</section></div></div></div></div><div class="zoogle-columns zoogle-columns-2 zoogle-columns-50-50 default-section-style padding-small title-alignment-center has-title scroll-effect-normal has-section-photo block block-row layout_full" data-row-id="7962301"><div class="background-wrapper"><div class="background" style="background-image: url('//d2l6t8rnjafg4n.cloudfront.net/u/316683/6d1bdb1d3029c14a5163967cc896a54d07d5b8bc/original/rawpixel-574847-unsplash.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0Ijo2LCJ0b3AiOjI4Miwid2lkdGgiOjI0OTMsImhlaWdodCI6OTY3fV0sWyJyZXNpemUiLDE2MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.jpg'); background-position: 49% 20%; opacity: 0.16;"></div></div><div class="zoogle-columns-inner site-wrap"><a id="video"></a><h2 class="subtitle-wrap heading-primary row-title"><span class="subtitle">Video</span></h2><div class="zoogle-column zoogle-column-1-of-2 col_1_of_2 block layout_half" data-column-id="9486409"><div class="zoogle-feature block layout_full" data-block-id="9487501"><section class="feature video_feature" data-feature-id="508469" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <div class="video responsive" data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video">
+<div class="video-container"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" class="youtube-player wrapped zoogle-handled" frameborder="0" id="yt-508469" src="https://www.youtube.com/embed/_e3szB1biHg?rel=0&amp;amp;wmode=transparent&amp;amp;enablejsapi=1"></iframe></div>
+</div></section></div><div class="zoogle-feature block layout_full" data-block-id="9487505"><section class="feature video_feature" data-feature-id="508471" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <div class="video responsive" data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video">
+<div class="video-container"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" class="youtube-player wrapped zoogle-handled" frameborder="0" id="yt-508471" src="https://www.youtube.com/embed/S2GP10nCXv4?rel=0&amp;amp;wmode=transparent&amp;amp;enablejsapi=1"></iframe></div>
+</div></section></div><div class="zoogle-feature block layout_full" data-block-id="9587814"><section class="feature video_feature" data-feature-id="513278" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <div class="video responsive" data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video">
+<div class="video-container"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" class="youtube-player wrapped zoogle-handled" frameborder="0" id="yt-513278" src="https://www.youtube.com/embed/6T9TseVZa7c?rel=0&amp;amp;wmode=transparent&amp;amp;enablejsapi=1"></iframe></div>
+</div></section></div></div><div class="zoogle-column zoogle-column-2-of-2 col_2_of_2 block layout_half" data-column-id="9486801"><div class="zoogle-feature block layout_full" data-block-id="9487506"><section class="feature video_feature" data-feature-id="508472" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <div class="video responsive" data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video">
+<div class="video-container"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" class="youtube-player wrapped zoogle-handled" frameborder="0" id="yt-508472" src="https://www.youtube.com/embed/m6O5uFMlSCQ?rel=0&amp;amp;wmode=transparent&amp;amp;enablejsapi=1"></iframe></div>
+</div></section></div><div class="zoogle-feature block layout_full" data-block-id="9487503"><section class="feature video_feature" data-feature-id="508470" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <div class="video responsive" data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video">
+<div class="video-container"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" class="youtube-player wrapped zoogle-handled" frameborder="0" id="yt-508470" src="https://www.youtube.com/embed/YUqXWWb_ifA?rel=0&amp;amp;wmode=transparent&amp;amp;enablejsapi=1"></iframe></div>
+</div></section></div><div class="zoogle-feature block layout_full" data-block-id="9587815"><section class="feature video_feature" data-feature-id="513279" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <div class="video responsive" data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video">
+<div class="video-container"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" class="youtube-player wrapped zoogle-handled" frameborder="0" id="yt-513279" src="https://www.youtube.com/embed/3PqAGB5EFwQ?rel=0&amp;amp;wmode=transparent&amp;amp;enablejsapi=1"></iframe></div>
+</div></section></div></div></div></div><div class="zoogle-columns zoogle-columns-1 zoogle-columns-100 style-section-style-1 padding-medium title-alignment-center has-title scroll-effect-fixed has-section-photo block block-row layout_full" data-row-id="7723018"><div class="background-wrapper"><div class="background" style="background-image: url('//d2l6t8rnjafg4n.cloudfront.net/u/316683/ac6f9ef01d31eaaaa55edc9676cdaccb0b10e81a/original/david-gtr.jpg/!!/b%3AW1sicmVzaXplIiwxNjAwXSxbIm1heCJdLFsid2UiXV0%3D.jpg'); background-position: 30% 49%; opacity: 0.16;"></div></div><div class="zoogle-columns-inner site-wrap"><a id="tour"></a><h2 class="subtitle-wrap heading-primary row-title"><span class="subtitle">Tour</span></h2><div class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" data-column-id="9195679"><div class="zoogle-feature block layout_full" data-block-id="9297261"><section class="feature bandsintown_feature calendar_feature" data-feature-id="6242" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"><div class="calendar-wrap">
+<section class="upcoming">
+<table class="table-style border-accent">
+<thead class="text-tertiary">
+<tr class="border-accent">
+<th class="date">Date</th>
+<th class="event">Event</th>
+<th class="location">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098153" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Saturday, July 6</span> @ <span class="time">3:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Sat, Jul 6</span> @ <span class="time">3:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098153" rel="nofollow">
+<span class="text">David Ball @ 48th Annual Thresher's Festival</span>
+<span class="text text-tertiary">48th Annual Thresher's Festival, Denton, NC</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098153" rel="nofollow">
+<span class="text text-tertiary">48th Annual Thresher's Festival, Denton, NC</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098192" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Saturday, July 13</span> @ <span class="time">7:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Sat, Jul 13</span> @ <span class="time">7:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098192" rel="nofollow">
+<span class="text">David Ball @ Iconic Fest with Terri Clark</span>
+<span class="text text-tertiary">Iconic Fest with Terri Clark, Brainerd, MN</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098192" rel="nofollow">
+<span class="text text-tertiary">Iconic Fest with Terri Clark, Brainerd, MN</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098868" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Tuesday, July 16</span> @ <span class="time">8:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Tue, Jul 16</span> @ <span class="time">8:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098868" rel="nofollow">
+<span class="text">David Ball @ Honky Tonk Tuesday Nights</span>
+<span class="text text-tertiary">Honky Tonk Tuesday Nights, Nashville, TN</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098868" rel="nofollow">
+<span class="text text-tertiary">Honky Tonk Tuesday Nights, Nashville, TN</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098875" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Friday, July 19</span> @ <span class="time">10:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Fri, Jul 19</span> @ <span class="time">10:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098875" rel="nofollow">
+<span class="text">David Ball @ Hochatown saloon</span>
+<span class="text text-tertiary">Hochatown saloon, Broken Bow, OK</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098875" rel="nofollow">
+<span class="text text-tertiary">Hochatown saloon, Broken Bow, OK</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/1014543669" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Saturday, July 20</span> @ <span class="time">7:30PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Sat, Jul 20</span> @ <span class="time">7:30PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/1014543669" rel="nofollow">
+<span class="text">David Ball @ Coyote Country Store</span>
+<span class="text text-tertiary">Coyote Country Store, Gail, TX</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/1014543669" rel="nofollow">
+<span class="text text-tertiary">Coyote Country Store, Gail, TX</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241382" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Friday, July 26</span> @ <span class="time">8:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Fri, Jul 26</span> @ <span class="time">8:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241382" rel="nofollow">
+<span class="text">David Ball @ Hard Rock Hotel And Casino Tulsa</span>
+<span class="text text-tertiary">Hard Rock Hotel And Casino Tulsa, Catoosa, OK</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241382" rel="nofollow">
+<span class="text text-tertiary">Hard Rock Hotel And Casino Tulsa, Catoosa, OK</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101101565" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Saturday, July 27</span> @ <span class="time">7:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Sat, Jul 27</span> @ <span class="time">7:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101101565" rel="nofollow">
+<span class="text">David Ball @ National Day of the Cowboy</span>
+<span class="text text-tertiary">National Day of the Cowboy, Madisonville, TX</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101101565" rel="nofollow">
+<span class="text text-tertiary">National Day of the Cowboy, Madisonville, TX</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098880" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Friday, August 9</span> @ <span class="time">8:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Fri, Aug 9</span> @ <span class="time">8:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098880" rel="nofollow">
+<span class="text">David Ball @ Southbound Bar &amp; Grill</span>
+<span class="text text-tertiary">Southbound Bar &amp; Grill, Springfield, MO</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098880" rel="nofollow">
+<span class="text text-tertiary">Southbound Bar &amp; Grill, Springfield, MO</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098883" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Saturday, August 10</span> @ <span class="time">8:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Sat, Aug 10</span> @ <span class="time">8:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098883" rel="nofollow">
+<span class="text">David Ball @ Gilly's</span>
+<span class="text text-tertiary">Gilly's, Pocola, OK</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101098883" rel="nofollow">
+<span class="text text-tertiary">Gilly's, Pocola, OK</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241356" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Saturday, August 24</span> @ <span class="time">7:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Sat, Aug 24</span> @ <span class="time">7:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241356" rel="nofollow">
+<span class="text">David Ball @ Fyffe Park Days</span>
+<span class="text text-tertiary">Fyffe Park Days, Fyffe, AL</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241356" rel="nofollow">
+<span class="text text-tertiary">Fyffe Park Days, Fyffe, AL</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241377" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Tuesday, September 10</span> @ <span class="time">9:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Tue, Sep 10</span> @ <span class="time">9:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241377" rel="nofollow">
+<span class="text">David Ball @ AmericanaFest 2019 Kick-off at The Station Inn</span>
+<span class="text text-tertiary">AmericanaFest 2019 Kick-off at The Station Inn, Nashville, TN</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241377" rel="nofollow">
+<span class="text text-tertiary">AmericanaFest 2019 Kick-off at The Station Inn, Nashville, TN</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101101523" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Thursday, September 19</span> @ <span class="time">7:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Thu, Sep 19</span> @ <span class="time">7:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101101523" rel="nofollow">
+<span class="text">David Ball @ Palace Theater</span>
+<span class="text text-tertiary">Palace Theater, Crossville, TN</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101101523" rel="nofollow">
+<span class="text text-tertiary">Palace Theater, Crossville, TN</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101101603" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Monday, October 7</span> @ <span class="time">7:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Mon, Oct 7</span> @ <span class="time">7:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101101603" rel="nofollow">
+<span class="text">David Ball @ Savannah Center</span>
+<span class="text text-tertiary">Savannah Center, The Villages, FL</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101101603" rel="nofollow">
+<span class="text text-tertiary">Savannah Center, The Villages, FL</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101155047" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Thursday, October 10</span> @ <span class="time">8:30PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Thu, Oct 10</span> @ <span class="time">8:30PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101155047" rel="nofollow">
+<span class="text">David Ball @ Dosey Doe Big Barn </span>
+<span class="text text-tertiary">Dosey Doe Big Barn , Spring, TX</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101155047" rel="nofollow">
+<span class="text text-tertiary">Dosey Doe Big Barn , Spring, TX</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/1014529189" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Friday, October 11</span> @ <span class="time">9:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Fri, Oct 11</span> @ <span class="time">9:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/1014529189" rel="nofollow">
+<span class="text">David Ball @ Old Coupland Inn and Dancehall</span>
+<span class="text text-tertiary">Old Coupland Inn and Dancehall, Coupland, TX</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/1014529189" rel="nofollow">
+<span class="text text-tertiary">Old Coupland Inn and Dancehall, Coupland, TX</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101101751" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Saturday, October 12</span> @ <span class="time">8:30PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Sat, Oct 12</span> @ <span class="time">8:30PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101101751" rel="nofollow">
+<span class="text">David Ball @ Kendalia Halle</span>
+<span class="text text-tertiary">Kendalia Halle, Kendalia, TX</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101101751" rel="nofollow">
+<span class="text text-tertiary">Kendalia Halle, Kendalia, TX</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101175551" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Tuesday, October 15</span> @ <span class="time">8:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Tue, Oct 15</span> @ <span class="time">8:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101175551" rel="nofollow">
+<span class="text">David Ball @ Honky Tonk Tuesday Nights</span>
+<span class="text text-tertiary">Honky Tonk Tuesday Nights, Nashville, TN</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101175551" rel="nofollow">
+<span class="text text-tertiary">Honky Tonk Tuesday Nights, Nashville, TN</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241388" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Saturday, November 2</span> @ <span class="time">8:30PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Sat, Nov 2</span> @ <span class="time">8:30PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241388" rel="nofollow">
+<span class="text">David Ball @ The Meyer Theater w/special guests Motongator Joe &amp; Monica Giles</span>
+<span class="text text-tertiary">The Meyer Theater w/special guests Motongator Joe &amp; Monica Giles, Green Bay, WI</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241388" rel="nofollow">
+<span class="text text-tertiary">The Meyer Theater w/special guests Motongator Joe &amp; Monica Giles, Green Bay, WI</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241372" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Sunday, November 3</span> @ <span class="time">6:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Sun, Nov 3</span> @ <span class="time">6:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241372" rel="nofollow">
+<span class="text">David Ball @ Rollie's Rednecks &amp; Longnecks w/special guests Dairy Daughters</span>
+<span class="text text-tertiary">Rollie's Rednecks &amp; Longnecks w/special guests Dairy Daughters, Sauk Rapids, MN</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241372" rel="nofollow">
+<span class="text text-tertiary">Rollie's Rednecks &amp; Longnecks w/special guests Dairy Daughters, Sauk Rapids, MN</span>
+</a> </td>
+</tr>
+<tr class="border-accent">
+<td class="event-date">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241352" rel="nofollow">
+<span class="date-long"><span class="event-when with-time"><time class="from"><span class="date">Friday, January 24, 2020</span> @ <span class="time">8:00PM</span></time></span></span>
+<span class="date-short"><span class="event-when with-time"><time class="from"><span class="date">Fri, Jan 24, 2020</span> @ <span class="time">8:00PM</span></time></span></span>
+</a> </td>
+<td class="event-name">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241352" rel="nofollow">
+<span class="text">David Ball @ Park Theater</span>
+<span class="text text-tertiary">Park Theater, Mcminnville, TN</span>
+</a> </td>
+<td class="event-location">
+<a class="event_details no-pjax" data-featherlight="" href="/go/bandsintown/6242/event/101241352" rel="nofollow">
+<span class="text text-tertiary">Park Theater, Mcminnville, TN</span>
+</a> </td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="10321346"><section class="feature html_feature" data-feature-id="387783" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <div data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video">
+<center><iframe allowtransparency="true" frameborder="0" height="25" scrolling="no" src="https://www.bandsintown.com/artist/davidball/track_button?size=small&amp;display_tracker_count=true&amp;text_color=%23FFFFFF&amp;background_color=%2300B4B3&amp;hover_color=%2300908f" style="border:none; overflow:hidden" width="165"></iframe></center>
+</div></section></div></div></div></div><div class="zoogle-columns zoogle-columns-1 zoogle-columns-100 default-section-style padding-small title-alignment-center has-title scroll-effect-normal has-section-photo block block-row layout_full" data-row-id="7962303"><div class="background-wrapper"><div class="background" style="background-image: url('//d2l6t8rnjafg4n.cloudfront.net/u/316683/6d1bdb1d3029c14a5163967cc896a54d07d5b8bc/original/rawpixel-574847-unsplash.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjY1OCwid2lkdGgiOjI0OTMsImhlaWdodCI6NzAxfV0sWyJyZXNpemUiLDE2MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.jpg'); background-position: 46% 40%; opacity: 0.16;"></div></div><div class="zoogle-columns-inner site-wrap"><a id="store"></a><h2 class="subtitle-wrap heading-primary row-title"><span class="subtitle">Store</span></h2><div class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" data-column-id="9486412"><div class="zoogle-feature block layout_full" data-block-id="9487531"><section class="feature store_feature" data-feature-id="501658" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <div class="store-feature-wrapper store-layout-grid" data-store-id="191280">
+<article class="store store-item border-accent clearfix single-image" data-store-item-id="290316">
+<div>
+<figure class="image-area">
+<a class="main-image highlight-image thumbnail-image" href="#" rel="store[290316]" title="Come See Me : CD"><img alt="Come See Me : CD" class="" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/c023106c60b68ea6a1f3c6dc6a06e4a5e9b99a49/square/come-see-me-cover-hi.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/c023106c60b68ea6a1f3c6dc6a06e4a5e9b99a49/square_retina/come-see-me-cover-hi.jpg 2x"/></a>
+<ul class="image-thumbnails" data-featherlight-filter="li a" data-featherlight-gallery="">
+<li class="image-thumbnail">
+<a class="thumbnail-image highlight-image square-crop" href="//d2l6t8rnjafg4n.cloudfront.net/u/316683/c023106c60b68ea6a1f3c6dc6a06e4a5e9b99a49/large/come-see-me-cover-hi.jpg" rel="store[290316]" title="Come See Me : CD"><img alt="Come See Me : CD" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/c023106c60b68ea6a1f3c6dc6a06e4a5e9b99a49/mini/come-see-me-cover-hi.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/c023106c60b68ea6a1f3c6dc6a06e4a5e9b99a49/mini_retina/come-see-me-cover-hi.jpg 2x"/></a>
+</li>
+</ul>
+</figure>
+</div>
+<div class="product-details">
+<div>
+<h1 class="text-main alt-font heading-tertiary">
+<a class="store-grid-link" href="#">Come See Me : CD</a>
+</h1>
+</div>
+<div class="product-action">
+<form accept-charset="UTF-8" action="/go/cart/cart_items" class="store_item salable-item not-in-cart available with-quantity in-stock submit-check" data-inventory="0" data-item-id="290316" data-item-type="StoreItem" data-remote="true" data-requires-checkout="true" data-track-inventory="false" data-variations="[]" method="post"><input name="utf8" type="hidden" value="✓"/><input name="cart_item[item_id]" type="hidden" value="290316"/><input name="cart_item[item_type]" type="hidden" value="StoreItem"/>
+<button class="button add-to-cart" name="button" rel="nofollow" type="submit">Add to cart: $14.99</button>
+<a class="button if-in-cart">In cart</a>
+<em class="unless-available text-secondary">Not available</em>
+<em class="if-out-of-stock text-secondary">Out of stock</em>
+</form>
+</div>
+<a class="store-grid-link" href="#">
+<div class="product-price text-main">
+<div class="item-price">
+						$14.99
+					</div>
+</div>
+</a>
+<div class="description truncate-long">
+</div>
+<a class="detruncate hide" href="#">Read more…</a>
+<a class="retruncate hide" href="#">close</a>
+</div>
+</article>
+<article class="store store-item border-accent clearfix single-image" data-store-item-id="289864">
+<div>
+<figure class="image-area">
+<a class="main-image highlight-image thumbnail-image" href="#" rel="store[289864]" title="The Greatest Christmas: CD"><img alt="The Greatest Christmas: CD" class="" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/f0a17766ce4bafe34c171a7d0e3f0526bc28072b/square/greatest-christmas-album-art.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/f0a17766ce4bafe34c171a7d0e3f0526bc28072b/square_retina/greatest-christmas-album-art.jpg 2x"/></a>
+<ul class="image-thumbnails" data-featherlight-filter="li a" data-featherlight-gallery="">
+<li class="image-thumbnail">
+<a class="thumbnail-image highlight-image square-crop" href="//d2l6t8rnjafg4n.cloudfront.net/u/316683/f0a17766ce4bafe34c171a7d0e3f0526bc28072b/large/greatest-christmas-album-art.jpg" rel="store[289864]" title="The Greatest Christmas: CD"><img alt="The Greatest Christmas: CD" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/f0a17766ce4bafe34c171a7d0e3f0526bc28072b/mini/greatest-christmas-album-art.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/f0a17766ce4bafe34c171a7d0e3f0526bc28072b/mini_retina/greatest-christmas-album-art.jpg 2x"/></a>
+</li>
+</ul>
+</figure>
+</div>
+<div class="product-details">
+<div>
+<h1 class="text-main alt-font heading-tertiary">
+<a class="store-grid-link" href="#">The Greatest Christmas: CD</a>
+</h1>
+</div>
+<div class="product-action">
+<form accept-charset="UTF-8" action="/go/cart/cart_items" class="store_item salable-item not-in-cart available with-quantity in-stock submit-check" data-inventory="0" data-item-id="289864" data-item-type="StoreItem" data-remote="true" data-requires-checkout="true" data-track-inventory="false" data-variations="[]" method="post"><input name="utf8" type="hidden" value="✓"/><input name="cart_item[item_id]" type="hidden" value="289864"/><input name="cart_item[item_type]" type="hidden" value="StoreItem"/>
+<button class="button add-to-cart" name="button" rel="nofollow" type="submit">Add to cart: $14.99</button>
+<a class="button if-in-cart">In cart</a>
+<em class="unless-available text-secondary">Not available</em>
+<em class="if-out-of-stock text-secondary">Out of stock</em>
+</form>
+</div>
+<a class="store-grid-link" href="#">
+<div class="product-price text-main">
+<div class="item-price">
+						$14.99
+					</div>
+</div>
+</a>
+<div class="description truncate-long">
+</div>
+<a class="detruncate hide" href="#">Read more…</a>
+<a class="retruncate hide" href="#">close</a>
+</div>
+</article>
+<article class="store store-item border-accent clearfix single-image" data-store-item-id="289865">
+<div>
+<figure class="image-area">
+<a class="main-image highlight-image thumbnail-image" href="#" rel="store[289865]" title="Sparkle City: CD"><img alt="Sparkle City: CD" class="" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/36b0234ce6a3b6cd0fb6543cd3454488968d35be/square/sparkle-city.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/36b0234ce6a3b6cd0fb6543cd3454488968d35be/square_retina/sparkle-city.jpg 2x"/></a>
+<ul class="image-thumbnails" data-featherlight-filter="li a" data-featherlight-gallery="">
+<li class="image-thumbnail">
+<a class="thumbnail-image highlight-image square-crop" href="//d2l6t8rnjafg4n.cloudfront.net/u/316683/36b0234ce6a3b6cd0fb6543cd3454488968d35be/large/sparkle-city.jpg" rel="store[289865]" title="Sparkle City: CD"><img alt="Sparkle City: CD" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/36b0234ce6a3b6cd0fb6543cd3454488968d35be/mini/sparkle-city.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/36b0234ce6a3b6cd0fb6543cd3454488968d35be/mini_retina/sparkle-city.jpg 2x"/></a>
+</li>
+</ul>
+</figure>
+</div>
+<div class="product-details">
+<div>
+<h1 class="text-main alt-font heading-tertiary">
+<a class="store-grid-link" href="#">Sparkle City: CD</a>
+</h1>
+</div>
+<div class="product-action">
+<form accept-charset="UTF-8" action="/go/cart/cart_items" class="store_item salable-item not-in-cart available with-quantity in-stock submit-check" data-inventory="0" data-item-id="289865" data-item-type="StoreItem" data-remote="true" data-requires-checkout="true" data-track-inventory="false" data-variations="[]" method="post"><input name="utf8" type="hidden" value="✓"/><input name="cart_item[item_id]" type="hidden" value="289865"/><input name="cart_item[item_type]" type="hidden" value="StoreItem"/>
+<button class="button add-to-cart" name="button" rel="nofollow" type="submit">Add to cart: $14.99</button>
+<a class="button if-in-cart">In cart</a>
+<em class="unless-available text-secondary">Not available</em>
+<em class="if-out-of-stock text-secondary">Out of stock</em>
+</form>
+</div>
+<a class="store-grid-link" href="#">
+<div class="product-price text-main">
+<div class="item-price">
+						$14.99
+					</div>
+</div>
+</a>
+<div class="description truncate-long">
+</div>
+<a class="detruncate hide" href="#">Read more…</a>
+<a class="retruncate hide" href="#">close</a>
+</div>
+</article>
+<article class="store store-item border-accent clearfix single-image" data-store-item-id="289866">
+<div>
+<figure class="image-area">
+<a class="main-image highlight-image thumbnail-image" href="#" rel="store[289866]" title="Freewheeler: CD"><img alt="Freewheeler: CD" class="" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/984dce4ccbf364c891215424f83de81f2e5852f4/square/freewheeler.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/984dce4ccbf364c891215424f83de81f2e5852f4/square_retina/freewheeler.jpg 2x"/></a>
+<ul class="image-thumbnails" data-featherlight-filter="li a" data-featherlight-gallery="">
+<li class="image-thumbnail">
+<a class="thumbnail-image highlight-image square-crop" href="//d2l6t8rnjafg4n.cloudfront.net/u/316683/984dce4ccbf364c891215424f83de81f2e5852f4/large/freewheeler.jpg" rel="store[289866]" title="Freewheeler: CD"><img alt="Freewheeler: CD" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/984dce4ccbf364c891215424f83de81f2e5852f4/mini/freewheeler.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/984dce4ccbf364c891215424f83de81f2e5852f4/mini_retina/freewheeler.jpg 2x"/></a>
+</li>
+</ul>
+</figure>
+</div>
+<div class="product-details">
+<div>
+<h1 class="text-main alt-font heading-tertiary">
+<a class="store-grid-link" href="#">Freewheeler: CD</a>
+</h1>
+</div>
+<div class="product-action">
+<form accept-charset="UTF-8" action="/go/cart/cart_items" class="store_item salable-item not-in-cart available with-quantity in-stock submit-check" data-inventory="0" data-item-id="289866" data-item-type="StoreItem" data-remote="true" data-requires-checkout="true" data-track-inventory="false" data-variations="[]" method="post"><input name="utf8" type="hidden" value="✓"/><input name="cart_item[item_id]" type="hidden" value="289866"/><input name="cart_item[item_type]" type="hidden" value="StoreItem"/>
+<button class="button add-to-cart" name="button" rel="nofollow" type="submit">Add to cart: $14.99</button>
+<a class="button if-in-cart">In cart</a>
+<em class="unless-available text-secondary">Not available</em>
+<em class="if-out-of-stock text-secondary">Out of stock</em>
+</form>
+</div>
+<a class="store-grid-link" href="#">
+<div class="product-price text-main">
+<div class="item-price">
+						$14.99
+					</div>
+</div>
+</a>
+<div class="description truncate-long">
+</div>
+<a class="detruncate hide" href="#">Read more…</a>
+<a class="retruncate hide" href="#">close</a>
+</div>
+</article>
+<article class="store store-item border-accent clearfix single-image" data-store-item-id="288144">
+<div>
+<figure class="image-area">
+<a class="main-image highlight-image thumbnail-image" href="#" rel="store[288144]" title="Signed 8x10"><img alt="Signed 8x10" class="" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/a6676f4f121e9e5de80e93480b9eb73b5b82746f/square/new-web-pic.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/a6676f4f121e9e5de80e93480b9eb73b5b82746f/square_retina/new-web-pic.jpg 2x"/></a>
+<ul class="image-thumbnails" data-featherlight-filter="li a" data-featherlight-gallery="">
+<li class="image-thumbnail">
+<a class="thumbnail-image highlight-image square-crop" href="//d2l6t8rnjafg4n.cloudfront.net/u/316683/a6676f4f121e9e5de80e93480b9eb73b5b82746f/large/new-web-pic.jpg" rel="store[288144]" title="Signed 8x10"><img alt="Signed 8x10" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/a6676f4f121e9e5de80e93480b9eb73b5b82746f/mini/new-web-pic.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/a6676f4f121e9e5de80e93480b9eb73b5b82746f/mini_retina/new-web-pic.jpg 2x"/></a>
+</li>
+</ul>
+</figure>
+</div>
+<div class="product-details">
+<div>
+<h1 class="text-main alt-font heading-tertiary">
+<a class="store-grid-link" href="#">Signed 8x10</a>
+</h1>
+</div>
+<div class="product-action">
+<form accept-charset="UTF-8" action="/go/cart/cart_items" class="store_item salable-item not-in-cart available with-quantity in-stock submit-check" data-inventory="0" data-item-id="288144" data-item-type="StoreItem" data-remote="true" data-requires-checkout="true" data-track-inventory="false" data-variations="[]" method="post"><input name="utf8" type="hidden" value="✓"/><input name="cart_item[item_id]" type="hidden" value="288144"/><input name="cart_item[item_type]" type="hidden" value="StoreItem"/>
+<button class="button add-to-cart" name="button" rel="nofollow" type="submit">Add to cart: $7.99</button>
+<a class="button if-in-cart">In cart</a>
+<em class="unless-available text-secondary">Not available</em>
+<em class="if-out-of-stock text-secondary">Out of stock</em>
+</form>
+</div>
+<a class="store-grid-link" href="#">
+<div class="product-price text-main">
+<div class="item-price">
+						$7.99
+					</div>
+</div>
+</a>
+<div class="description truncate-long">
+</div>
+<a class="detruncate hide" href="#">Read more…</a>
+<a class="retruncate hide" href="#">close</a>
+</div>
+</article>
+<article></article>
+<article></article>
+<article></article>
+<article></article>
+<article></article>
+</div></section></div></div></div></div><div class="zoogle-columns zoogle-columns-3 zoogle-columns-33-33-33 style-section-style-1 padding-small title-alignment-center has-title scroll-effect-fixed has-section-photo block block-row layout_full" data-row-id="7723340"><div class="background-wrapper"><div class="background" style="background-image: url('//d2l6t8rnjafg4n.cloudfront.net/u/316683/076b7096be0b934958d19161c83fb835fdd00377/original/come-see-me-cover1.jpg/!!/b%3AW1sicmVzaXplIiwxNjAwXSxbIm1heCJdLFsid2UiXV0%3D.jpg'); background-position: 46% 39%; opacity: 0.16;"></div></div><div class="zoogle-columns-inner site-wrap"><h2 class="subtitle-wrap heading-primary row-title"><span class="subtitle">Digital Music</span></h2><div class="zoogle-column zoogle-column-1-of-3 col_1_of_3 block layout_third" data-column-id="9196087"><div class="zoogle-feature block layout_full" data-block-id="9180463"><section class="feature image_feature" data-feature-id="1038777" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &lt;280 &lt;300 &lt;320 &lt;340 &lt;360 &lt;380 &lt;400 &lt;420 &lt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <figure class="image custom center" style="width: 59%;">
+<a href="https://davidball.com/album/897209/come-see-me"><span class="image-filter-container filter-none-container shape-square"><img sizes="(max-width: 700px) 100vw, 33vw" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/076b7096be0b934958d19161c83fb835fdd00377/original/come-see-me-cover1.jpg/!!/b%3AW1sicmVzaXplIiwzMzBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/076b7096be0b934958d19161c83fb835fdd00377/original/come-see-me-cover1.jpg/!!/b%3AW1sicmVzaXplIiwzMzBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.jpg 330w, //d2l6t8rnjafg4n.cloudfront.net/u/316683/076b7096be0b934958d19161c83fb835fdd00377/original/come-see-me-cover1.jpg/!!/b%3AW1sicmVzaXplIiw2NjBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.jpg 660w"/><span class="image-filter-overlay" style=""></span></span></a>
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="9180469"><section class="feature image_feature" data-feature-id="1038783" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &lt;280 &lt;300 &lt;320 &lt;340 &lt;360 &lt;380 &lt;400 &lt;420 &lt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <figure class="image custom center" style="width: 59%;">
+<a href="https://itunes.apple.com/us/album/heartaches-by-the-number/803665787" target="_blank"><span class="image-filter-container filter-none-container shape-square"><img sizes="(max-width: 700px) 100vw, 33vw" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/8f203bf36158be0c9ca4e20e8ed6c497303b046d/original/davidheartaches.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjoyNCwidG9wIjowLCJ3aWR0aCI6MTc2LCJoZWlnaHQiOjE3Nn1dLFsicmVzaXplIiwyMDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/8f203bf36158be0c9ca4e20e8ed6c497303b046d/original/davidheartaches.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjoyNCwidG9wIjowLCJ3aWR0aCI6MTc2LCJoZWlnaHQiOjE3Nn1dLFsicmVzaXplIiwyMDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.jpg 200w"/><span class="image-filter-overlay" style=""></span></span></a>
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="9587823"><section class="feature image_feature" data-feature-id="1089335" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &lt;280 &lt;300 &lt;320 &lt;340 &lt;360 &lt;380 &lt;400 &lt;420 &lt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <figure class="image custom center" style="width: 59%;">
+<a href="https://www.amazon.com/Play-David-Ball/dp/B00000JG3L" target="_blank"><span class="image-filter-container filter-none-container shape-square"><img sizes="(max-width: 700px) 100vw, 33vw" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/6e78a41d716a491ee3e975c0007395009510d8b2/original/davidballplay.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjoxOTUsImhlaWdodCI6MTk1fV0sWyJyZXNpemUiLDIwMF0sWyJtYXgiXSxbIndlIl1d.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/6e78a41d716a491ee3e975c0007395009510d8b2/original/davidballplay.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjoxOTUsImhlaWdodCI6MTk1fV0sWyJyZXNpemUiLDIwMF0sWyJtYXgiXSxbIndlIl1d.jpg 200w"/><span class="image-filter-overlay" style=""></span></span></a>
+</figure>
+</section></div></div><div class="zoogle-column zoogle-column-2-of-3 col_2_of_3 block layout_third" data-column-id="9196092"><div class="zoogle-feature block layout_full" data-block-id="9180466"><section class="feature image_feature" data-feature-id="1038780" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &lt;280 &lt;300 &lt;320 &lt;340 &lt;360 &lt;380 &lt;400 &lt;420 &lt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <figure class="image custom center" style="width: 59%;">
+<a href="https://itunes.apple.com/us/album/sparkle-city/1057259871" target="_blank"><span class="image-filter-container filter-none-container shape-square"><img sizes="(max-width: 700px) 100vw, 33vw" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/6fa777ac8fdd308dfe3d4938c5919d806d046f85/original/download.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjoyMjQsImhlaWdodCI6MjI0fV0sWyJyZXNpemUiLDIyNV0sWyJtYXgiXSxbIndlIl1d.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/6fa777ac8fdd308dfe3d4938c5919d806d046f85/original/download.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjoyMjQsImhlaWdodCI6MjI0fV0sWyJyZXNpemUiLDIyNV0sWyJtYXgiXSxbIndlIl1d.jpg 225w"/><span class="image-filter-overlay" style=""></span></span></a>
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="9180471"><section class="feature image_feature" data-feature-id="1038785" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &lt;280 &lt;300 &lt;320 &lt;340 &lt;360 &lt;380 &lt;400 &lt;420 &lt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <figure class="image custom center" style="width: 59%;">
+<a href="https://itunes.apple.com/us/album/freewheeler/592813735" target="_blank"><span class="image-filter-container filter-none-container shape-square"><img sizes="(max-width: 700px) 100vw, 33vw" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/e57f6bd59c7882ab1160eb92ecdd0313f8fa7fbf/original/freewheeler.jpg/!!/b%3AW1sicmVzaXplIiwyNTBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/e57f6bd59c7882ab1160eb92ecdd0313f8fa7fbf/original/freewheeler.jpg/!!/b%3AW1sicmVzaXplIiwyNTBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.jpg 250w"/><span class="image-filter-overlay" style=""></span></span></a>
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="9587822"><section class="feature image_feature" data-feature-id="1089334" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &lt;280 &lt;300 &lt;320 &lt;340 &lt;360 &lt;380 &lt;400 &lt;420 &lt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <figure class="image custom center" style="width: 59%;">
+<a href="https://itunes.apple.com/us/album/starlite-lounge/300989713" target="_blank"><span class="image-filter-container filter-none-container shape-square"><img sizes="(max-width: 700px) 100vw, 33vw" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/25fcdbd10b7e01329dca469445704a4496bb02a0/original/415xq7d6fkl.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjozMDAsImhlaWdodCI6MzAwfV0sWyJyZXNpemUiLDMwMV0sWyJtYXgiXSxbIndlIl1d.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/25fcdbd10b7e01329dca469445704a4496bb02a0/original/415xq7d6fkl.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjozMDAsImhlaWdodCI6MzAwfV0sWyJyZXNpemUiLDMwMV0sWyJtYXgiXSxbIndlIl1d.jpg 301w"/><span class="image-filter-overlay" style=""></span></span></a>
+</figure>
+</section></div></div><div class="zoogle-column zoogle-column-3-of-3 col_3_of_3 block layout_third" data-column-id="9196093"><div class="zoogle-feature block layout_full" data-block-id="9433682"><section class="feature image_feature" data-feature-id="1071181" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &lt;280 &lt;300 &lt;320 &lt;340 &lt;360 &lt;380 &lt;400 &lt;420 &lt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <figure class="image custom center" style="width: 59%;">
+<a href="https://itunes.apple.com/us/album/the-greatest-christmas/483257989" target="_blank"><span class="image-filter-container filter-none-container shape-square"><img sizes="(max-width: 700px) 100vw, 33vw" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/42b4c644cff41ad14eaae7b2f96743e2c25782b1/original/greatest-christmas-album-art.jpg/!!/b%3AW1sicmVzaXplIiwzMzBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/42b4c644cff41ad14eaae7b2f96743e2c25782b1/original/greatest-christmas-album-art.jpg/!!/b%3AW1sicmVzaXplIiwzMzBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.jpg 330w, //d2l6t8rnjafg4n.cloudfront.net/u/316683/42b4c644cff41ad14eaae7b2f96743e2c25782b1/original/greatest-christmas-album-art.jpg/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.jpg 500w"/><span class="image-filter-overlay" style=""></span></span></a>
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="9180472"><section class="feature image_feature" data-feature-id="1038786" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &lt;280 &lt;300 &lt;320 &lt;340 &lt;360 &lt;380 &lt;400 &lt;420 &lt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <figure class="image custom center" style="width: 59%;">
+<a href="https://itunes.apple.com/us/album/amigo/3912465" target="_blank"><span class="image-filter-container filter-none-container shape-square"><img sizes="(max-width: 700px) 100vw, 33vw" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/854b3b6839376670217104334b27bbc356abb8f4/original/ballamigo.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjoxOTcsImhlaWdodCI6MTk3fV0sWyJyZXNpemUiLDIwMF0sWyJtYXgiXSxbIndlIl1d.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/854b3b6839376670217104334b27bbc356abb8f4/original/ballamigo.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjoxOTcsImhlaWdodCI6MTk3fV0sWyJyZXNpemUiLDIwMF0sWyJtYXgiXSxbIndlIl1d.jpg 200w"/><span class="image-filter-overlay" style=""></span></span></a>
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="9180467"><section class="feature image_feature" data-feature-id="1038781" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &lt;280 &lt;300 &lt;320 &lt;340 &lt;360 &lt;380 &lt;400 &lt;420 &lt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <figure class="image custom center" style="width: 59%;">
+<a href="https://itunes.apple.com/us/album/thinkin-problem/349009840" target="_blank"><span class="image-filter-container filter-none-container shape-square"><img sizes="(max-width: 700px) 100vw, 33vw" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/ee8a414b45fd453eab62a8cb2268b30e5ccb7de2/original/71qs2i3ujyl-sx355.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjozNTIsImhlaWdodCI6MzUyfV0sWyJyZXNpemUiLDMzMF0sWyJtYXgiXSxbIndlIl1d.jpg" srcset="//d2l6t8rnjafg4n.cloudfront.net/u/316683/ee8a414b45fd453eab62a8cb2268b30e5ccb7de2/original/71qs2i3ujyl-sx355.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjozNTIsImhlaWdodCI6MzUyfV0sWyJyZXNpemUiLDMzMF0sWyJtYXgiXSxbIndlIl1d.jpg 330w, //d2l6t8rnjafg4n.cloudfront.net/u/316683/ee8a414b45fd453eab62a8cb2268b30e5ccb7de2/original/71qs2i3ujyl-sx355.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjozNTIsImhlaWdodCI6MzUyfV0sWyJyZXNpemUiLDM1NV0sWyJtYXgiXSxbIndlIl1d.jpg 355w"/><span class="image-filter-overlay" style=""></span></span></a>
+</figure>
+</section></div></div></div></div><div class="zoogle-columns zoogle-columns-1 zoogle-columns-100 default-section-style padding-small title-alignment-center has-title scroll-effect-normal has-section-photo block block-row layout_full" data-row-id="7962305"><div class="background-wrapper"><div class="background" style="background-image: url('//d2l6t8rnjafg4n.cloudfront.net/u/316683/6d1bdb1d3029c14a5163967cc896a54d07d5b8bc/original/rawpixel-574847-unsplash.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjozLCJ0b3AiOjEsIndpZHRoIjoyNDkzLCJoZWlnaHQiOjEyNDJ9XSxbInJlc2l6ZSIsMTYwMF0sWyJtYXgiXSxbIndlIl1d.jpg'); background-position: 50% 50%; opacity: 0.16;"></div></div><div class="zoogle-columns-inner site-wrap"><a id="news"></a><h2 class="subtitle-wrap heading-primary row-title"><span class="subtitle">News</span></h2><div class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" data-column-id="9486414"><div class="zoogle-feature block layout_full" data-block-id="9744556"><section class="feature blog_feature" data-feature-id="222571" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <div class="blog-wrapper carousel clearfix" data-max-posts-per-slide="3">
+<nav class="carousel-nav hide full-width">
+<button class="button-nav prev button button-secondary icon-previous disable"></button>
+<button class="button-nav next button button-secondary icon-next disable"></button>
+</nav>
+<ul class="slide-container"><li class="slide slide-3-items active"><article class="post blog-article carousel-item post-carousel" data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video">
+<div class="carousel-post">
+<div class="carousel-post-inner">
+<a class="featured-image landscape-3-2" href="/home/blog/tour-announcement"><img class="featured" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/abda2e50aef0bf5f0736fcb038ac72afba2aa741/large/db-w-fiddlers-sm.jpg"/></a>
+<div class="post-wrap">
+<header class="meta text-tertiary alt-font">
+<h3 class="text-main alt-font">
+<a href="/home/blog/tour-announcement">Country Music Hall of Fame Welcomes Ricky Skaggs, Dottie West, Johnny Gimble </a>
+</h3>
+</header>
+<div class="post">
+<div class="message"><p>The lineup of artists that welcomed Ricky Skaggs, Dottie West and Johnny Gimble into the Country Music Hall of Fame in Nashville Sunday night (Oct. 21) could have filled the cavernous Bridgestone Arena, which sat just across the street from…</p><span class="read-more"><a href="/home/blog/tour-announcement">Read more</a></span></div>
+</div>
+</div>
+</div>
+</div>
+</article><article class="post blog-article carousel-item post-carousel" data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video">
+<div class="carousel-post">
+<div class="carousel-post-inner">
+<a class="featured-image landscape-3-2" href="/home/blog/come-see-me"><img class="featured" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/812037b86962a9253c11fc773ef3b2d03906e72b/large/come-see-me-cover1.jpg"/></a>
+<div class="post-wrap">
+<header class="meta text-tertiary alt-font">
+<h3 class="text-main alt-font">
+<a href="/home/blog/come-see-me">David Ball Returns To Weirsdale</a>
+</h3>
+</header>
+<div class="post">
+<div class="message"><p>Make no mistake, David Ball likes making hit records. </p>
+<p>He has made quite of few of them, in fact. “Thinkin’ Problem,” “Riding with Private Malone” and “When the Thought of You Catches Up with Me” were Top 10 country…</p><span class="read-more"><a href="/home/blog/come-see-me">Read more</a></span></div>
+</div>
+</div>
+</div>
+</div>
+</article><article class="post blog-article carousel-item post-carousel" data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video">
+<div class="carousel-post">
+<div class="carousel-post-inner">
+<a class="featured-image landscape-3-2" href="/home/blog/new-updates"><img class="featured" src="//d2l6t8rnjafg4n.cloudfront.net/u/316683/676d49537b22171dd62d25be7840fba0e7cdcac8/large/woc-logo-desktop16v1.png"/></a>
+<div class="post-wrap">
+<header class="meta text-tertiary alt-font">
+<h3 class="text-main alt-font">
+<a href="/home/blog/new-updates">Hear David Ball Return With 'I Got a Broken Heart in the Mail'</a>
+</h3>
+</header>
+<div class="post">
+<div class="message"><p>Honky-tonk revivalist David Ball just released the single "I Got a Broken Heart in the Mail." It's the first hints of what's on <em>Come See Me,</em> his first album in close to eight years. Ball recorded the album at his…</p><span class="read-more"><a href="/home/blog/new-updates">Read more</a></span></div>
+</div>
+</div>
+</div>
+</div>
+</article></li></ul>
+</div>
+<nav class="load-more">
+<a class="button button-secondary" href="/blogs/news">View all posts</a>
+</nav>
+</section></div></div></div></div><div class="zoogle-columns zoogle-columns-1 zoogle-columns-100 style-section-style-1 padding-none title-alignment-center has-title scroll-effect-fixed has-section-photo block block-row layout_full" data-row-id="7723321"><div class="background-wrapper"><div class="background" style="background-image: url('//d2l6t8rnjafg4n.cloudfront.net/u/316683/de730f946ddd75c2e0820aa40d87074a32653458/original/piano.jpg/!!/b%3AW1sicmVzaXplIiwxNjAwXSxbIm1heCJdLFsid2UiXV0%3D.jpg'); background-position: 50% 49%; opacity: 0.16;"></div></div><div class="zoogle-columns-inner site-wrap"><a id="contact"></a><h2 class="subtitle-wrap heading-primary row-title"><span class="subtitle">Contact</span></h2><div class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" data-column-id="9196066"><div class="zoogle-feature block layout_full" data-block-id="9180480"><section class="feature custom_form_feature" data-feature-id="265290" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"><div class="feature-placeholder feature-placeholder-observed" data-block-id="9180480"></div></section></div><div class="zoogle-feature block layout_full block-title-feature" data-block-id="9487558"><section class="feature title_feature" data-feature-id="1807178" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"><h2 class="subtitle-wrap heading-primary">
+<span class="subtitle">Booking Contact</span>
+</h2>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="9487559"><section class="feature text_feature" data-feature-id="2048686" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"><div data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video"><p style="text-align: center;"><strong>Gary Kirves </strong><br/><em>Artist Events Nashville </em><br/>615.309.0458 <br/><a contents="www.artisteventsnashville.com" data-link-label="" data-link-type="url" href="http://www.artisteventsnashville.com">www.artisteventsnashville.com</a></p></div></section></div></div></div></div><div class="zoogle-columns zoogle-columns-2 zoogle-columns-50-50 default-section-style padding-large title-alignment-center has-title scroll-effect-normal has-section-photo block block-row layout_full" data-row-id="7723015"><div class="background-wrapper"><div class="background" style="background-image: url('//d2l6t8rnjafg4n.cloudfront.net/u/316683/6d1bdb1d3029c14a5163967cc896a54d07d5b8bc/original/rawpixel-574847-unsplash.jpg/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjozLCJ0b3AiOjEsIndpZHRoIjoyNDkzLCJoZWlnaHQiOjEzMTF9XSxbInJlc2l6ZSIsMTYwMF0sWyJtYXgiXSxbIndlIl1d.jpg'); background-position: 50% 49%; opacity: 0.16;"></div></div><div class="zoogle-columns-inner site-wrap"><h2 class="subtitle-wrap heading-primary row-title"><span class="subtitle">Stay In Touch</span></h2><div class="zoogle-column zoogle-column-1-of-2 col_1_of_2 block layout_half" data-column-id="9195676"><div class="zoogle-feature block layout_full" data-block-id="9520953"><section class="feature html_feature" data-feature-id="364872" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <div data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video">
+<iframe allow="encrypted-media" allowtransparency="true" frameborder="0" height="500" scrolling="no" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDavidBallMusic%2F&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" style="border:none;overflow:hidden" width="340"></iframe></div></section></div></div><div class="zoogle-column zoogle-column-2-of-2 col_2_of_2 block layout_half" data-column-id="9518967"><div class="zoogle-feature block layout_full" data-block-id="9520976"><section class="feature html_feature" data-feature-id="364873" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <div data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video">
+<iframe allowfullscreen="true" allowtransparency="true" class="twitter-timeline twitter-timeline-rendered" data-widget-id="profile:davidballmusic" frameborder="0" id="twitter-widget-0" scrolling="no" style="position: static; visibility: visible; display: inline-block; width: 340px; height: 500px; padding: 0px; border: none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px; min-height: 200px;" title="Twitter Timeline"></iframe> <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script></div></section></div></div></div></div><div class="zoogle-columns zoogle-columns-1 zoogle-columns-100 style-section-style-1 padding-none title-alignment-center block block-row layout_full" data-row-id="8123371"><div class="zoogle-columns-inner site-wrap"><div class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" data-column-id="9680392"><div class="zoogle-feature block layout_full" data-block-id="9180047"><section class="feature mailing_list_feature" data-feature-id="265724" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400">
+<p class="mailing-list-result-265724 hide-on-return alert"></p>
+<div class="mailing-list-form" id="list-265724">
+<form accept-charset="UTF-8" action="/home/mailing_list_features/265724/join" class="simple_form captcha form-list-265724 member submit-check" data-controller="recaptcha" data-remote="true" data-sitekey="6Lfxx4EUAAAAAIuk746FxFg6gj7Ytjx--6K2eaia" id="new_member" method="post" role="member"><input name="utf8" type="hidden" value="✓"/><input name="_method" type="hidden" value="put"/>
+<h3>Join David's Mailing List for Updates!</h3>
+<div class="control">
+<div class="input email required member_email string"><span class="input_field"><input aria-required="" class="string email required" id="member_email" name="member[email]" placeholder="Your email" required="required" size="25" type="email"/></span></div>
+<div class="actions">
+<button class="button positive" type="submit">
+						Sign up
+					</button>
+</div>
+</div>
+<input name="recaptcha_token" type="hidden"/></form></div>
+</section></div></div></div></div></div></div>
+</div>
+</div>
+<div class="site-wrap" id="footer-wrap">
+<div class="site-wide-feature-area" id="site-wide-header"><div class="zoogle-content block" content-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &gt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400" data-arrangement-id="2383693"><div class="zoogle-columns zoogle-columns-1 zoogle-columns-100 default-section-style padding-none title-alignment-left block block-row layout_full" data-row-id="7723014"><div class="zoogle-columns-inner site-wrap"><div class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" data-column-id="9195675"><div class="zoogle-feature block layout_full" data-block-id="9180046"><section class="feature my_site_feature" data-feature-id="490228" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &gt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400"> <ul class="my_sites my_sites_font_face my_sites_count_4">
+<li class="facebook">
+<a class="my_site_icon tip icon-default-1 facebook-sign icon icon-facebook-sign text-secondary" href="https://www.facebook.com/DavidBallMusic" target="_blank" title="https://www.facebook.com/DavidBallMusic"></a>
+</li> <li class="youtube">
+<a class="my_site_icon tip icon-default-1 youtube icon icon-youtube text-secondary" href="https://www.youtube.com/user/DavidBallMusic" target="_blank" title="https://www.youtube.com/user/DavidBallMusic"></a>
+</li> <li class="twitter">
+<a class="my_site_icon tip icon-default-1 twitter icon icon-twitter text-secondary" href="https://twitter.com/davidballmusic" target="_blank" title="https://twitter.com/davidballmusic"></a>
+</li> <li class="instagram">
+<a class="my_site_icon tip icon-default-1 instagram icon icon-instagram text-secondary" href="https://www.instagram.com/davidballmusic" target="_blank" title="https://www.instagram.com/davidballmusic"></a>
+</li> </ul>
+</section></div></div></div></div></div></div>
+<footer id="page-footer">
+<div class="block layout_full"><section class="feature text_feature" data-feature-id="1978417" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &gt;280 &gt;300 &gt;320 &gt;340 &gt;360 &gt;380 &gt;400 &gt;420 &gt;440 &gt;460 &gt;480 &gt;500 &gt;520 &gt;540 &gt;560 &gt;580 &gt;600 &gt;620 &gt;640 &gt;660 &gt;680 &gt;700 &gt;720 &gt;740 &gt;760 &gt;780 &gt;800 &gt;820 &gt;840 &gt;860 &gt;880 &gt;900 &gt;920 &gt;940 &gt;960 &gt;980 &gt;1000 &gt;1020 &gt;1040 &gt;1060 &gt;1080 &gt;1100 &gt;1120 &gt;1140 &gt;1160 &gt;1180 &gt;1200 &gt;1220 &gt;1240 &gt;1260 &gt;1280 &gt;1300 &gt;1320 &gt;1340 &gt;1360 &gt;1380 &gt;1400"><div data-action="message@window-&gt;zoogle-video#handleVimeoPostMessage" data-controller="zoogle-video"></div></section></div>
+</footer>
+</div>
+</div>
+</div><div class="mobile-nav-open-site-overlay"></div>
+</div>
+<script type="text/javascript">
+var _zaq = _zaq || [];
+var dntStatus = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+var dontTrack = dntStatus === true || dntStatus === "1";
+if ( ! dontTrack ) {
+	_zaq.push(['_setWebsite', '318808']);
+	_zaq.push(['_setZone', 'Central Time (US &amp; Canada)']);
+	_zaq.push(['_setHash', '8f512ba3eb9b27ad0672e84f53d0af4c']);
+	_zaq.push(['_trackPage', '2039414']);
+
+	(function() {
+		var zs = document.createElement('script'); zs.type = 'text/javascript'; zs.async = true;
+		zs.src = "https://stats.bandzoogle.com/stats.js";
+		zs.id = "zstats";
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(zs, s);
+	})();
+}
+</script>
+</div>
+</div>
+</div>
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/widget_iframe.d753e00c3e838c1b2558149bd3f6ecb8.html?origin=https%3A%2F%2Fdavidball.com" style="display: none;" title="Twitter settings iframe"></iframe><iframe allowfullscreen="true" allowtransparency="true" frameborder="0" id="rufous-sandbox" scrolling="no" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s ease 0s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px;"><div class="grecaptcha-logo"><iframe frameborder="0" height="60" name="a-fg3sz067eup9" role="presentation" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" scrolling="no" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lfxx4EUAAAAAIuk746FxFg6gj7Ytjx--6K2eaia&amp;co=aHR0cHM6Ly9kYXZpZGJhbGwuY29tOjQ0Mw..&amp;hl=en&amp;v=v1561357937155&amp;size=invisible&amp;cb=718utlvdyn33" width="256"></iframe></div><div class="grecaptcha-error"></div><textarea class="g-recaptcha-response" id="g-recaptcha-response-100000" name="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div></body></html>

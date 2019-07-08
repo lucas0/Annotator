@@ -1,0 +1,1601 @@
+<html><head>
+<title>US John F. Kennedy Jr. 1988 DNC Convention Speech | AP Archive</title>
+<meta content="United States Presidential Election,Events,Presidential elections,National elections,Elections,Government and politics,Political conventions,Political parties,Political organizations,Democratic National Convention,United States presidential election" name="keywords"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<link href="http://www.aparchive.com//css/ap-v2.0.0.28096.css" rel="Stylesheet" type="text/css"/>
+<link href="http://www.aparchive.com//css/alert.css" rel="Stylesheet" type="text/css"/>
+<link href="http://www.aparchive.com//css/ap_org_styles.css" rel="Stylesheet" type="text/css"/>
+<link href="http://www.aparchive.com//css/grid_framework.css" rel="Stylesheet" type="text/css"/>
+<link href="http://www.aparchive.com//css/typography.css" rel="Stylesheet" type="text/css"/>
+<link href="http://www.aparchive.com//css/jquery.ui.selectmenu.css" rel="Stylesheet" type="text/css"/>
+<link href="http://www.aparchive.com//css/jquery.multiselect.css" rel="Stylesheet" type="text/css"/>
+<link href="http://www.aparchive.com//js/fancybox/jquery.fancybox-1.3.4.css" rel="Stylesheet" type="text/css"/>
+<script async="" src="http://www.google-analytics.com/ga.js" type="text/javascript"></script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js" type="text/javascript"></script>
+<script src="//ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/ap-v2.0.0.28096.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/fancybox/jquery.fancybox-1.3.4.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/fancybox/jquery.mousewheel-3.0.4.pack.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/jlib_ap.org.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/jwPlayer/jwplayer.js" type="text/javascript"></script>
+<script type="text/javascript">
+        jwplayer.key = "IVNn2IuHyR3YRsCHors1X3BP7BSYGIWCLEWgF5iUUOk=";
+        window.IsMindecUser = false;
+    </script>
+<script type="text/javascript">
+        var addProjectDialog;
+        var renameProjectDialog;
+        var addFolderDialog;
+        var applyForLicenceDialog;
+        var deactivateProjecteDialog;
+        var confirmDialog;
+        var shareDialog;
+        var messageBox;
+        var downloadDialog;        
+
+        $(document).ready(function () {
+            AP.config.WEBROOT = '/';
+
+            //Sorting Feature
+            $(".ap-sortable").sortable({
+                serialize: { attribute: "data-id" },
+                cancel: '.ap-sortable .workspaceItem span,' +
+                        '.ap-sortable .workspaceItem a,' +
+                        '.ap-sortable .workspaceItem .comment,' +
+                        '.ap-sortable .folderItem .details,' +
+                        '.ap-sortable .folderItem .commentList' +
+                        'ul.ui-sortable li',
+                update: function (event, ui) {
+                    var ids = $(this).sortable("toArray", { attribute: "data-id" }).join();
+                    var type = $(ui.item).data("type");
+
+                    $.ajax({
+                        url: "/Workspace/Sequence",
+                        data: { ItemIds: ids, ItemType: type },
+                        type: "POST",
+                        success: function (json) {
+                            var success = json.IsSuccess;
+                        }
+                    });
+                }
+            });
+            //End of Sorting
+            //dialogs
+            addFolderDialog = $('#addFolderDialog').apUiModal();
+            $('*[ap-action="add-folder"]').apWorkspaceAddFolder(addFolderDialog);
+            $('*[ap-action="request-licence"]').apWorkspaceApplyForLicence();
+            deactivateProjecteDialog = $("#deactivateProjectDialog").apUiModal();
+            $('*[ap-action="deactivate-project"]').apWorkspaceDeactivateProject(deactivateProjecteDialog);
+            confirmDialog = $('#confirmDialog').apUiModal();
+            $('*[ap-action="confirm-registration"]').apWorkspaceConfirmRegistration(confirmDialog);
+            shareDialog = $('#shareDialog').apUiModal();
+            $('*[ap-action="share"]').apWorkspaceShare(shareDialog);
+            messageBoxDialog = $('#messageBoxDialog').apUiModal();
+            $('*[ap-action="messagebox"]').apWorkspaceShare(messageBoxDialog);
+            downloadDialog = $('#downloadDialog').apUiModal();
+            $('*[ap-action="download"]').apWorkspaceDownload(downloadDialog);
+            addProjectDialog = $('#addProjectDialog').apUiModal();
+            $('*[ap-action="add-project"]').apWorkspaceAddProject(addProjectDialog);
+
+            //browser           
+            if ($.cookie("AP.browser") !== "1") {
+                $.cookie("AP.browser", 1);
+
+                //http://javascriptly.com/2008/09/javascript-to-detect-google-chrome/
+                var ua = navigator.userAgent.toLowerCase();
+                var browser = {
+                    version: (ua.match(/.+(?:rv|it|ra|ie|me)[\/: ]([\d.]+)/) || [])[1],
+                    chrome: /chrome/.test(ua),
+                    safari: /webkit/.test(ua) && !/chrome/.test(ua),
+                    opera: /opera/.test(ua),
+                    msie: /msie/.test(ua) && !/opera/.test(ua),
+                    mozilla: /mozilla/.test(ua) && !/(compatible|webkit)/.test(ua)
+                };
+
+                var version = parseFloat(browser.version);
+                var ok = (browser.mozilla && version > 9) || (browser.chrome && version > 11) || (browser.msie && version > 7) || (browser.safari && version > 5);
+                if (!ok) { window.location = AP.config.WEBROOT + "browser"; }
+            }
+        });
+    </script>
+<script src="http://www.aparchive.com//js/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/jquery.form.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/jquery.watermark.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/jquery.BlockUI.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/slimScroll.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/slimScroll.min.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/json2.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/jquery.cookie.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/jquery.json.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/jquery.ui.selectmenu.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/jquery.highlight.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/jquery.multiselect.js" type="text/javascript"></script>
+<script charset="UTF-8" src="https://optanon.blob.core.windows.net/consent/fe5c95ae-a863-4714-a0d3-0eb114a64a53-test.js" type="text/javascript"></script><link href="https://optanon.blob.core.windows.net/skins/default_flat_bottom_two_button_black/v2/css/optanon.css" rel="stylesheet" type="text/css"/><style>#optanon ul#optanon-menu li { background-color:  !important }#optanon ul#optanon-menu li.menu-item-selected { background-color:  !important }#optanon #optanon-popup-wrapper .optanon-white-button-middle { background-color:  !important }.optanon-alert-box-wrapper .optanon-alert-box-button-middle { background-color:  !important; border-color:  !important; }#optanon #optanon-popup-wrapper .optanon-white-button-middle a { color:  !important }.optanon-alert-box-wrapper .optanon-alert-box-button-middle a { color:  !important }#optanon #optanon-popup-bottom { background-color: #F2F2F2 !important }#optanon.modern #optanon-popup-top, #optanon.modern #optanon-popup-body-left-shading { background-color: #F2F2F2 !important }.optanon-alert-box-wrapper { background-color: !important }.optanon-alert-box-wrapper .optanon-alert-box-bg p { color:#FFFFFF !important }</style>
+<script type="text/javascript">
+    function OptanonWrapper() { }
+</script>
+<script src="http://www.aparchive.com//js/jquery.numeric.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19104461-9']);
+
+  _gaq.push(['_setCustomVar', 1, 'OrgId', '0', 3]);
+
+  _gaq.push(['_setCustomVar', 2, 'OrgName', '', 3]);
+
+  _gaq.push(['_setCustomVar', 3, 'UserId', '0', 3]);
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script src="http://p.jwpcdn.com/6/8/jwpsrv.js"></script><script src="http://www.aparchive.com/js/jwPlayer/jwplayer.html5.js"></script><style type="text/css"></style></head>
+<body style="cursor: default;" vlink="#b503b0">
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('input[name="query"]').apFormToggleField();
+
+        $('#searchButton').click(function () {
+            $(this).css({ // this is just for style
+                "background-color": "#146994"
+            });
+        });
+
+        $("#userinfodialog").dialog({
+            autoOpen: false,
+            modal: true,
+            height: 500,
+            width: 1000,
+            resizable: true
+
+
+        });
+
+        $("a#getuserinfo").click(function () {
+            $("#userinfodialog").dialog("open");
+        });
+
+        // Initialize search box watermark.
+        updateSearchBox($('#query'));
+
+        // Hide or show the magnifying glass in the search box, depending if text is entered.
+        $('#query').blur(function () {
+            updateSearchBox(this);
+        });
+
+        // set advanced pop up position
+        GetAbsolutePosition();
+
+        // set advanced pop up position when resize window
+        $(window).resize(function () {
+            GetAbsolutePosition();
+        });
+
+        $("a.advsearchbutton").click(function () {
+            var mysearch = '';
+            var allfilter = SearchHandler.getAllFiltersState();
+            var startdate = $("#searchStartDate").val();
+            var enddate = $("#searchEndDate").val();
+            var surl = "/search/GetAdvancedSearch?query=" + mysearch + "&allFilters=" + allfilter + "&startd=" + startdate + "&endd=" + enddate + "&callback=?";
+            if (document.location.protocol.toLowerCase() == "https:") {
+                surl = document.location.protocol + "//" + location.host + surl;
+            }
+            $.ajax({
+                type: 'POST',
+                url: surl,
+                async: false,
+                dataType: "jsonp",
+                contentType: "application/json; charset=utf-8",
+                data: "{ }",
+                success: function (result) {
+                    JsonCallbackFuntion(result);
+                },
+                error: function (xhr, settings, exception) {
+                    alert(settings);
+                }
+            });
+        });
+
+    });
+
+    function JsonCallbackFuntion(result) {
+        $("#advancesearchPopup").html(result.Content);
+        
+        if (!$('.advancedSearch').is(":visible")) {         
+            $("a.advsearchbutton").css({ "border-left": "10px solid #727272" });
+            $("a.advsearchbutton").css({ "border-right": "10px solid #727272" });
+            $("a.advsearchbutton").css({ "border-left": "10px solid rgba(0,0,0,.55)" });
+            $("a.advsearchbutton").css({ "border-right": "10px solid rgba(0,0,0,.55)" });
+            $("a.advsearchbutton").css({ "background-color": "#ffffff" });
+            $("a.advsearchbutton").css({ "height": "42px" });    
+            var overlayheight = $(document).height() - 170;     
+            $('#oe_overlay').css({ "height": overlayheight});
+            document.getElementById('oe_overlay').style.display = 'block';
+           
+        }
+        $('.advancedSearch').slideToggle('fast', function () {
+            if (!$(this).is(":visible")) {                
+                $("a.advsearchbutton").css({ "border-left": "none" });
+                $("a.advsearchbutton").css({ "border-right": "none" });
+                $("a.advsearchbutton").css({ "background-color": "#EFEFEF" });
+                $("a.advsearchbutton").css({ "height": "40px" });
+                document.getElementById('oe_overlay').style.display = 'none';              
+            }
+          
+        });
+
+    }
+
+    function GetAbsolutePosition() {
+        var absoluteLeft = $("a.advsearchbutton").offset().left;
+        var absoluteRight = absoluteLeft - 627;
+        $("ul.advancedSearch").css({ "left": absoluteRight });
+    }
+</script>
+<style type="text/css">
+#SSO {
+    background-color: #000000;
+    border-bottom: 0px solid #333333;
+    color: #5A5959;
+    float: left;
+    font-family: "GoodWeb-Book",Arial Narrow,Trebuchet,Arial,sans-serif;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#SSO ul {
+    display: block;
+    margin: 0 0 0 10px;
+} 
+
+#SSO ul li {
+    float: left;
+    height: 10px;
+    line-height: 0;
+    list-style: none outside none;
+    padding: 12px 0 4px 20px;
+} 
+
+#SSO a {
+    color: #b6b6ab;
+    text-decoration:none;
+}
+
+#SSO a:hover {
+    color: #eee;
+}
+
+#SSO a.active {
+    color: #fff;
+}
+.advanceddropdown ul.advancedSearch {
+   top: 171px;
+}
+
+</style>
+<script>
+    function redirectWithDelay(link) {
+        var l = link;
+        setTimeout(function () { location = l.href }, 250);
+        return false;
+    }
+</script>
+<div id="SSO">
+<ul>
+<li>
+<a href="http://www.ap.org/" onclick="_gaq.push(['_trackEvent', 'AP', 'Click']); return redirectWithDelay(this);">AP</a>
+</li>
+<li>|</li>
+<li>
+<a href="http://www.apimages.com" onclick="_gaq.push(['_trackEvent', 'IMAGES', 'Click']); return redirectWithDelay(this);">AP Images</a>
+</li>
+</ul>
+</div>
+<div style="clear: both"></div>
+<div class="container" id="topnavContainer">
+<div class="grid_8a" id="topnav">
+<div id="TopLogoContainer">
+<a href="/">
+<img alt="AP" class="mark" src="http://www.aparchive.com//i/logo-apMark.png"/></a>
+</div>
+<div>
+<a href="/">
+<img alt="AP Archive" class="logo-aparchive" src="http://www.aparchive.com//i/logo-archive.png"/></a>
+</div>
+</div>
+<div class="grid_8" id="topright">
+<link href="http://www.aparchive.com//images/icons/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<link href="http://www.aparchive.com//css/navigation.css" rel="stylesheet"/>
+<link href="http://www.aparchive.com//css/navigation2.css" rel="stylesheet"/>
+<script src="http://www.aparchive.com//js/jquery.hoverIntent.js" type="text/javascript"></script>
+<script src="http://www.aparchive.com//js/bootstrap-dropdown.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var length = 0;
+	$(document).ready(function () {
+	    //$('.dropdown-toggle-topnav').dropdown();
+	    $(".hover-menu").hoverIntent({
+	        sensitivity: 1, // number = sensitivity threshold (must be 1 or higher)
+	        interval: 0,   // number = milliseconds for onMouseOver polling interval
+	        over: function () { $(this).children(".actions").slideDown("fast"); closedAdavncedSearch(); },     // function = onMouseOver callback (required)
+	        timeout: 100,  // number = milliseconds delay before onMouseOut
+	        out: function () { $(this).children(".actions").hide(); }       // function = onMouseOut callback (required)
+	    });
+
+	    var changeTimeZone = $('#timeZoneFormatDialog').apUiModal();
+	    $('#changeTimeZone').apRequestsChangePreferences(changeTimeZone);
+
+	    var changePasswordDialog = $('#changePasswordDialog').apUiModal();
+	    $('#changePassword').apRequestsChangePassword(changePasswordDialog);
+
+	    $('#PackageDialog').hide();
+	    $('.dropdown-toggle-topnav').click(function () {
+	        length = 0;
+	        hidepopup();
+	    });
+	    $("body").click(function (event) {
+	        if (length == 0) {
+	            hidepopup();
+	        }
+	    });
+	    $('#PackageDialog').live("mouseenter mouseleave", function (event) {
+	        if (event.type == 'mouseleave') {
+	            length = 0;
+	        }
+	        else
+	        { length = 1; }
+	    });
+
+	    // highlights selected menus
+	    LoadMenuHighLights();
+
+	    $(".lowerheader a:not(a:first), .topHeader a").click(function () {
+	        //$(this).css({ "color": "#ecb200" });
+	    });
+	    SetNotificationBarPosition();
+	    $(window).resize(function () {
+	        SetNotificationBarPosition();
+	    });
+
+	    // Add class to notification bar on mouse hover
+	    $('#myNotification').live("mouseenter mouseleave", function (event) {
+	        if (event.type == 'mouseleave') {
+	            $("#myNotification").css({ "background-color": "transparent" });
+	            $("#myNotification a.togglenav").removeClass("topNavStyles");
+	        }
+	        else {
+	            $("#myNotification").css({ "background-color": "rgba(0,0,0,.55)" });
+	            $("#myNotification a.togglenav").addClass("topNavStyles");
+	        }
+	    });
+
+	});
+
+	function runEffect() {
+		// get effect type from 
+		var $choices = $('div#PackageDialog');
+		if ($choices.css("display") == "none") {
+			length = 1;
+			// $choices.show();      
+			$(".gbmac").css({ // this is just for style
+				"visibility": "hidden"
+			});
+		}
+		else {
+			length = 0;
+			//$choices.hide();    
+			$(".gbmac").css({ // this is just for style
+				"visibility": "hidden"
+			});
+		}
+	}
+	function hidepopup() {
+		$(".gbmac").css({ // this is just for style
+			"visibility": "hidden"
+		});
+
+		$("#PackageDialog").hide();
+		$(".lowerheader a:not(a:first), .topHeader a").css({ "color": "" });   //remove dynamically added style
+	}
+	function newPopup(url) {
+		popupWindow = window.open(url, 'popUpWindow', 'height=700,width=800,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+     }
+	function routeUrl() {
+	        document.location.href = "/partners";
+     }
+
+     function SetNotificationBarPosition() {
+         if ($("#myNotification").length > 0) {
+             var curr_width = $("#myNotification").outerWidth();
+             var leftposition = $("#myNotification").position().left;
+             $("ul.notificationNav").css({ "left": (leftposition - 386) + curr_width });
+             var elementwidth = $("#myNotification a.notificationTag").outerWidth();
+             $(".notificationtopdiv").width(elementwidth);
+         }
+     }
+</script>
+<div class="topHeader" style="float: right;">
+<div style="padding: 3px 20px 0 0; color: #fff; font: normal 12px GoodWeb-Book, Verdana, Arial, Helvetica, sans-serif;">
+<span>Welcome  Guest</span></div>
+<div style="padding: 3px 0px 0 0; color: #fff; font: normal 12px GoodWeb-Book, Verdana, Arial, Helvetica, sans-serif;">
+<span><a href="/login" id="signInOrRegister">Sign in or Register</a></span></div>
+</div>
+<div class="inactivenav lowerheader" style="float: right; margin-top: 12px; width: auto;">
+<div class="activemenu" id="homeMenu" onclick="HighLightsMenuItem('home')" style="padding: 10px 20px 0 0;">
+<a href="/">Home</a></div>
+<div ap-action="package" class="compilationpop hover-menu" id="compilationsMenu" onclick="LoadMenuHighLights()" style="padding: 10px 20px 0 7px; position: relative;">
+<a href="/Compilation">AP Compilations<b class="caret-topnav" style="margin: 6px 0 0 4px;"></b><span class="gbmac"></span></a>
+<ul class="actions dropdown-menu-topnav" style="top: 29px; left: -300px; padding: 12px 0 0 0;
+                margin: 0px; width: 644px; font: normal 12px GoodWeb-Book; text-transform: none;">
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.category-widget a').click(function () {
+            $(this).css({ // this is just for style
+                "color": "#ecb200"
+            });        
+        });
+    });
+</script>
+<div class="categories">
+<div class="category-group">
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19602/Accidents_Disasters" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Accidents &amp; Disasters', 'Accidents &amp; Disasters']);">Accidents &amp; Disasters</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19604/AP Annual Reviews" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'AP Annual Reviews', 'AP Annual Reviews']);">AP Annual Reviews</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19603/AP Annual Entertainment Reviews" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'AP Annual Entertainment Reviews', 'AP Annual Entertainment Reviews']);">AP Annual Entertainment Reviews</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19606/Conflicts_Terrorism" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Conflicts &amp; Terrorism', 'Conflicts &amp; Terrorism']);">Conflicts &amp; Terrorism</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19607/Crime" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Crime', 'Crime']);">Crime</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19608/Economy" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Economy', 'Economy']);">Economy</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19609/Fashion_Lifestyle" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Fashion &amp; Lifestyle', 'Fashion &amp; Lifestyle']);">Fashion &amp; Lifestyle</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19611/Iraq" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Iraq', 'Iraq']);">Iraq</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19612/Location Stockshots" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Location Stockshots', 'Location Stockshots']);">Location Stockshots</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19613/Movements_Political Events" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Movements &amp; Political Events', 'Movements &amp; Political Events']);">Movements &amp; Political Events</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19614/Natural World_Environment" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Natural World &amp; Environment', 'Natural World &amp; Environment']);">Natural World &amp; Environment</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19615/North Korea" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'North Korea', 'North Korea']);">North Korea</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19616/Olympics" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Olympics', 'Olympics']);">Olympics</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19617/People" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'People', 'People']);">People</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19618/Space Exploration" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Space Exploration', 'Space Exploration']);">Space Exploration</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19619/Sports" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Sports', 'Sports']);">Sports</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19620/Universal Annual Reviews" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Universal Annual Reviews', 'Universal Annual Reviews']);">Universal Annual Reviews</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19621/Universal Newsreels" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Universal Newsreels', 'Universal Newsreels']);">Universal Newsreels</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19622/US Presidential Elections 2008" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'US Presidential Elections 2008', 'US Presidential Elections 2008']);">US Presidential Elections 2008</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19623/Vietnam War" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Vietnam War', 'Vietnam War']);">Vietnam War</a>
+</div>
+</div>
+<div class="category-widget-col">
+<div class="category-widget">
+<a href="/compilations/19624/Wackies" onclick="_gaq.push(['_trackEvent', 'Compilation Link', 'Wackies', 'Wackies']);">Wackies</a>
+</div>
+</div>
+</div>
+</div>
+</ul>
+</div>
+<div class="hover-menu" id="partnersMenu" onclick="routeUrl();" style="padding: 10px 0px 0 3px;">
+<a class="dropdown-toggle-topnav" data-toggle="dropdown" href="#partnerFilter" onclick="LoadMenuHighLights()" style="display: inline; padding-top: 0px;">Partners<b class="caret-topnav" style="margin: 6px 0 0 4px;"></b>
+</a>
+<ul class="actions dropdown-menu-topnav" style="top: 67px; left: 460px; padding: 2px 0 0 0;
+                margin: 0px; text-transform: none; font-size: 12px; font-family: GoodWeb-Book;">
+<li><a href="/partners">All Partners</a></li>
+<li><a href="/partner/ABC%20News" onclick="_gaq.push(['_trackEvent', 'Partner Link', 'ABC News', 'ABCNewsUser']);">ABC News</a></li>
+<li><a href="/partner/British%20Movietone" onclick="_gaq.push(['_trackEvent', 'Partner Link', 'British Movietone', 'movietoneuser']);">British Movietone</a></li>
+<li><a href="/partner/CCTV%20Plus" onclick="_gaq.push(['_trackEvent', 'Partner Link', 'CCTV Plus', 'CCTV News Content']);">CCTV Plus</a></li>
+<li><a href="/partner/Celebrity%20Footage" onclick="_gaq.push(['_trackEvent', 'Partner Link', 'Celebrity Footage', 'celebfootageuser']);">Celebrity Footage</a></li>
+<li><a href="/partner/TV%20Globo" onclick="_gaq.push(['_trackEvent', 'Partner Link', 'TV Globo', 'TV Globo']);">TV Globo</a></li>
+<li><a href="/partner/SNTV%20Archive" onclick="_gaq.push(['_trackEvent', 'Partner Link', 'SNTV Archive', 'celebfootageuser']);">SNTV Archive</a></li>
+<li><a href="/partner/TV-am" onclick="_gaq.push(['_trackEvent', 'Partner Link', 'TV-am', 'tvamuser']);">TV-am</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="clearfix">
+</div>
+</div>
+<div class="container" id="topbanner">
+<table style="float: right;">
+<tbody><tr>
+<td>
+<div class="searchBar">
+<form action="/search" id="search" name="input" novalidate="novalidate">
+<input id="searchStartDate" name="startd" type="hidden"/>
+<input id="searchEndDate" name="endd" type="hidden"/>
+<input id="searchAllFilters" name="allFilters" type="hidden"/>
+<ul style="width: 683px;">
+<li>
+<input class="searchTextBox" id="query" name="query" style=" height:40px;" title="Explore our exclusive footage" type="text" value="Explore our exclusive footage"/></li>
+<li class="advanceddropdown" style="width: 113px;"><a class="advsearchbutton dropdown-toggle-topnav" data-toggle="dropdown" href="#advsearchbutton" style="border-radius: 0px; height: 40px;
+                            line-height: 40px; display: block; padding: 0; text-align: center;">Advanced<b class="caret-topnav" style="margin: 18px 0 0 4px; color:Black;"></b></a>
+<ul class="advancedSearch dropdown-menu-topnav" style="filter: none; left: 663.5px;">
+<li style="width: 720px;">
+<link href="http://www.aparchive.com/../../css/jquery.ui.selectmenu.css" rel="Stylesheet" type="text/css"/>
+<script src="http://www.aparchive.com/../../js/jquery.ui.selectmenu.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var selectedsubval = $.cookie('selectedsubscription');
+        if (selectedsubval != "" && selectedsubval != null && selectedsubval != undefined) {
+            $("#subscitionddl").val(selectedsubval);
+        }
+
+        $("#advancedsearch").click(function () {
+            if (ValidateAdvancedFilters()) {
+                SearchHandler.setErrorMessage("", "errormessage");
+                AddDateFilter();
+                return search();
+            }
+            else {
+                return false;
+            }
+        });
+
+        $("#decadeddl").multiselect({
+            selectedText: "# of # selected",
+            noneSelectedText: 'Select an Option',
+            minWidth: '160',
+            checkAll: function () { ValidateAdvancedFilters(); SearchHandler.clickAdvDecadeFilter("Decade"); },
+            uncheckAll: function () { ValidateAdvancedFilters(); SearchHandler.clickAdvDecadeFilter("Decade"); $.removeCookie('selecteddecade'); }
+        });
+
+        var decadefilter = $.cookie('selecteddecade');
+        if (decadefilter != "" && decadefilter != null && decadefilter != undefined) {
+            $('#decadeddl').val(decadefilter.split(','));
+            $('#decadeddl').multiselect('refresh');
+        }
+
+        $('.ui-multiselect-menu').css({ 'width': '160' });
+        $("#decadeddl").bind("multiselectclick", function (event, ui) {
+            ValidateAdvancedFilters();
+            SearchHandler.clickAdvDecadeFilter("Decade");
+        });
+        $('.advsearchDateFilter .date').apDateInputInit('/i');
+
+        $('#subscitionddl').selectmenu({
+            style: 'dropdown',
+            direction: "down",
+            speed: 1000,
+            menuWidth: 200,
+            maxHeight: 200,
+            format: TextFormatting,
+            change: function () {
+                var selectedvalue = $(this).val();
+                if (selectedvalue != "" && selectedvalue != null && selectedvalue != undefined) {
+                    SearchHandler.ClickAdvsubscriptionFiler("Products", selectedvalue);
+                }
+                else {
+                    SearchHandler.ClickAdvsubscriptionFiler("Products", selectedvalue);
+                    //SearchHandler.filters.removeByCategory("Products");
+                    //$.cookie.set('selectedsubscription', "");
+                }
+            }
+        });
+
+        SetCheckboxstyles();
+
+    });
+
+    //a custom format option callback
+    var TextFormatting = function (text) {
+        var newText = text;
+        //array of find replaces
+        var findreps = [
+		  { find: /^([^\;]+) \; /g, rep: '<span class="ui-selectmenu-item-header">$1</span>' },
+		  { find: /([^\|><]+) \| /g, rep: '<span class="ui-selectmenu-item-content">$1</span>' },
+		  { find: /([^\|><\(\)]+) (\()/g, rep: '<span class="ui-selectmenu-item-content">$1</span>$2' },
+		  { find: /([^\|><\(\)]+)$/g, rep: '<span class="ui-selectmenu-item-content">$1</span>' },
+		  { find: /(\([^\|><]+\))$/g, rep: '<span class="ui-selectmenu-item-footer">$1</span>'}];
+        for (var i in findreps) {
+            newText = newText.replace(findreps[i].find, findreps[i].rep);
+        }
+        return newText;
+    }
+
+    function closedAdavncedSearch() {
+        $("a.advsearchbutton").css({ "border-left": "none" });
+        $("a.advsearchbutton").css({ "border-right": "none" });
+        $("a.advsearchbutton").css({ "background-color": "#EFEFEF" });
+        $("a.advsearchbutton").css({ "height": "40px" });
+       // $('#main').css('opacity', 1);       
+        $('.advancedSearch').slideUp();
+        document.getElementById('oe_overlay').style.display = 'none';     
+    }
+
+    function search() {
+        // Track GA event for search filter.
+        _gaq.push(['_trackEvent', 'Filters (Advanced)', SearchHandler.getAllFiltersState()]);
+
+        // Disable the submit button to avoid multiple clicks.
+        $("#advancedsearch").attr('disabled', true);
+        $("#advancedsearch").addClass('disabled');
+
+        // After 1 second, submit the form.
+        setTimeout(function () {
+            document.getElementById('search').submit();
+        }, 600);
+
+        return false;
+    }
+
+    function AddDateFilter() {
+              //First remove date filter, then apply new if dates are not null
+        var category = "Date";
+        SearchHandler.filters.removeByCategory(category);
+        var startDate = $("#advsearchStartDateFilter").getDateValue();
+        var endDate = $("#advsearchEndDateFilter").getDateValue();
+        if (startDate != null && startDate != "" && endDate != null && endDate != "") {
+            SearchHandler.filters.add(category, $("#advsearchStartDateFilter").val() + "-" + $("#advsearchEndDateFilter").val());
+        }
+        $("#searchStartDate").val(isNaN(startDate) ? "" : $.datepicker.formatDate('mm/dd/yy', startDate));
+        $("#searchEndDate").val(isNaN(endDate) ? "" : $.datepicker.formatDate('mm/dd/yy', endDate));
+        SearchHandler.setAllFiltersState(SearchHandler.filters.toString());     
+        if (SearchHandler.removeAdvancedFilters == true) {
+//            SearchHandler.filters.removeByCategory("AspectRatio");
+//            SearchHandler.filters.removeByCategory("IsHd");
+//            SearchHandler.filters.removeByCategory("IsColor");
+//            SearchHandler.filters.removeByCategory("IsDigitized");
+//            SearchHandler.filters.removeByCategory("Partner");
+//            SearchHandler.filters.removeByCategory("Decade");
+//            SearchHandler.filters.removeByCategory("Products");
+            SearchHandler.filters.removeAllFilters();
+            $.removeCookie('setallfilters');
+            $.removeCookie('selecteddecade');
+            $.removeCookie('selectedsubscription');
+            $("#producttypeid").val("IncludedProducts");
+            TabIndex = 0;           
+            SearchHandler.setAllFiltersState("");
+        }
+        else {
+            $.each(SearchHandler.AdvfiltersArray, function (i, value) {
+                var filter = value.split(":");
+                if (filter[1] == "Products" && filter[0] != "" && filter[0] != null) {
+                    var prevval = $.cookie('selectedsubscription');
+                    if (prevval != null && prevval != undefined) {
+                        SearchHandler.filters.removeByCategory("Products");
+                    }
+                    $.cookie('selectedsubscription', filter[0]);
+                }
+                if (filter[1] == "Products" && filter[0] == "") {
+                    $.cookie('selectedsubscription', "");
+                }
+                if (filter[1] == "Decade" && filter[0] != "" && filter[0] != null) {
+                    var prevdecade = $.cookie('advdecade');
+                    $.cookie('selecteddecade', prevdecade);
+                }
+                if (filter[1] == "Decade" && filter[0] == "") {
+                    $.cookie('selecteddecade', "");
+                }            
+                SearchHandler.clickAdvancedSearchAllFilter(filter[1], filter[0]);
+            });
+        }
+
+        if ($('.partnerproductid').val() != null && $('.partnerproductid').val() != "" && $('.partnerproductid').val() != undefined) {
+            SearchHandler.clickAdvancedSearchAllFilter("Partner", $('.partnerproductid').val());
+        }        
+    
+    }
+
+    function resetfilters() {  
+        SearchHandler.removeAdvancedFilter();
+        return false;
+    }
+
+    function ValidateAdvancedFilters() {
+        var isValid = true;
+        var startDate = $("#advsearchStartDateFilter").getDateValue();
+        var endDate = $("#advsearchEndDateFilter").getDateValue();
+
+        var decadefilter = $("#decadeddl").multiselect("getChecked").map(function () { return this.value; }).get();
+        var mysearchquery = $('#query').val();
+       // var getallfilters = SearchHandler.getAllFiltersState();
+        if (mysearchquery == null || mysearchquery == '' || mysearchquery == watermarkSearch) {
+            SearchHandler.setErrorMessage("Enter keywords in the search box above and click “Search”.", "nonefilter");
+            isValid = false;
+        }
+        if (startDate != null && endDate != null && startDate != "" && endDate != "" && decadefilter != null && decadefilter != "") {
+            SearchHandler.setErrorMessage("Only one filter criteria should be selected.", "errormessage");
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    $(function () {
+        $('ul.ui-multiselect-checkboxes').slimScroll({ color: '#666666', railVisible: true, alwaysVisible: true, railColor: '#e8e8e8', height: '175px', width: '160px', railOpacity: 0.3, distance: '0px', size: "10px" });
+    });
+</script>
+<div class="advancesearch" id="advancesearchPopup">
+<div class="borderdiv"> </div>
+<div class="filtersection">
+<table>
+<tbody><tr>
+<td style="width: 35%" valign="top">
+<div class="column">
+<div class="header"><span style=" padding-left:10px;">Date</span> </div>
+<div class="filter">
+<label>
+                                    Range</label>
+<div class="advsearchDateFilter">
+<label>
+                                        From</label>
+<input class="date hasDatepicker watermark" id="advsearchStartDateFilter" name="advsearchStartDateFilter" type="text" value=""/><img alt="..." class="ui-datepicker-trigger" src="http://www.aparchive.com//i/icon_datePicker_0001_calendar-default.png" title="..."/>
+<span class="error" id="searchStartDateError"></span>
+<br/>
+<label>
+                                        To</label>
+<input class="date hasDatepicker watermark" id="advsearchEndDateFilter" name="advsearchEndDateFilter" type="text" value=""/><img alt="..." class="ui-datepicker-trigger" src="http://www.aparchive.com//i/icon_datePicker_0001_calendar-default.png" title="..."/>
+<span class="error" id="searchEndDateError"></span>
+</div>
+</div>
+<div class="orfilter">
+<label>
+                                    OR</label>
+<span id="errormessage" style="color: Red;"></span>
+</div>
+<div class="filter">
+<div style="float:left;">Decade:</div>
+<div class="decade" id="DecadeFilter" style="float:left;">
+<select id="decadeddl" multiple="multiple" name="decadeddl" style="width: 160px; display: none;">
+<option value="1890">1890s</option>
+<option value="1900">1900s</option>
+<option value="1910">1910s</option>
+<option value="1920">1920s</option>
+<option value="1930">1930s</option>
+<option value="1940">1940s</option>
+<option value="1950">1950s</option>
+<option value="1960">1960s</option>
+<option value="1970">1970s</option>
+<option value="1980">1980s</option>
+<option value="1990">1990s</option>
+<option value="2000">2000s</option>
+<option value="2010">2010s</option>
+</select><button aria-haspopup="true" class="ui-multiselect ui-widget ui-state-default ui-corner-all" style="width: 166px;" type="button"><span class="ui-icon ui-icon-triangle-2-n-s"></span><span>Select an Option</span></button>
+</div>
+</div>
+</div>
+</td>
+<td style="width: 30%;" valign="top">
+<div class="column">
+<div class="header"><span style=" padding-left:10px;">Format</span></div>
+<div class="filter">
+<ul style="margin-bottom: 5px;">
+<li>
+<span style="vertical-align: middle;">
+<input checked="" id="searchFilterHdSdFormatboth1" name="searchFilterHdSDFormat" onclick="SearchHandler.clickHDSDAddvancedfilters('IsHd',null);" style="display: none;" type="radio" value="All"/><label for="searchFilterHdSdFormatboth1"></label></span>
+<span><b>All Resolutions</b></span> </li>
+<li><span style="vertical-align: middle;">
+<input id="searchFilterHdFormat1" name="searchFilterHdSDFormat" onclick="SearchHandler.clickHDSDAddvancedfilters('IsHd','HD');" style="display: none;" type="radio" value="HD"/><label for="searchFilterHdFormat1"></label></span> <span>HD</span></li>
+<li><span style="vertical-align: middle;">
+<input id="searchFilterSdFormat1" name="searchFilterHdSDFormat" onclick="SearchHandler.clickHDSDAddvancedfilters('IsHd','SD');" style="display: none;" type="radio" value="SD"/><label for="searchFilterSdFormat1"></label></span> <span>SD</span>
+</li>
+</ul>
+<ul style="margin-bottom: 5px;">
+<li>
+<span style="vertical-align: middle;">
+<input checked="" id="searchFilterDigitizedboth1" name="searchFilterDigitized" onclick="SearchHandler.clickdigitizedAddvancedfilters('IsDigitized',null);" style="display: none;" type="radio" value="All"/><label for="searchFilterDigitizedboth1"></label></span> <span><b>All Statuses</b></span>
+</li>
+<li><span style="vertical-align: middle;">
+<input id="searchFilterNotDigitized1" name="searchFilterDigitized" onclick="SearchHandler.clickdigitizedAddvancedfilters('IsDigitized','False');" style="display: none;" type="radio" value="False"/><label for="searchFilterNotDigitized1"></label></span> <span>Not Digitized</span></li>
+<li><span style="vertical-align: middle;">
+<input id="searchFilterDigitized1" name="searchFilterDigitized" onclick="SearchHandler.clickdigitizedAddvancedfilters('IsDigitized','True');" style="display: none;" type="radio" value="True"/><label for="searchFilterDigitized1"></label></span> <span>Digitized</span></li>
+</ul>
+<ul style="margin-bottom: 5px;">
+<li>
+<span style="vertical-align: middle;">
+<input checked="" id="searchFiltercolorFormatBoth1" name="searchFiltercolorFormat" onclick="SearchHandler.clickcolorAddvancedfilters('IsColor',null);" style="display: none;" type="radio" value="All"/><label for="searchFiltercolorFormatBoth1"></label></span> <span><b>All Colors</b></span>
+</li>
+<li><span style="vertical-align: middle;">
+<input id="searchFiltercolorFormat1" name="searchFiltercolorFormat" onclick="SearchHandler.clickcolorAddvancedfilters('IsColor','Color|True');" style="display: none;" type="radio" value="Color|True"/><label for="searchFiltercolorFormat1"></label></span> <span>Color</span></li>
+<li><span style="vertical-align: middle;">
+<input id="searchFilterBWFormat1" name="searchFiltercolorFormat" onclick="SearchHandler.clickcolorAddvancedfilters('IsColor','Black &amp; White|False');" style="display: none;" type="radio" value="Black &amp; White|False"/><label for="searchFilterBWFormat1"></label></span> <span>Black &amp; White</span> </li>
+</ul>
+<ul>
+<li>
+<span style="vertical-align: middle;">
+<input checked="" id="searchFilterAllaspectratioFormat1" name="searchFilteraspectratioFormat" onclick="SearchHandler.clickAspectrationAddvancedfilters('AspectRatio',null);" style="display: none;" type="radio" value="All"/><label for="searchFilterAllaspectratioFormat1"></label></span> <span><b>All Aspect Ratios</b></span>
+</li>
+<li><span style="vertical-align: middle;">
+<input id="searchFilterA169aspectratioFormat1" name="searchFilteraspectratioFormat" onclick="SearchHandler.clickAspectrationAddvancedfilters('AspectRatio','A169');" style="display: none;" type="radio" value="A169"/><label for="searchFilterA169aspectratioFormat1"></label></span> <span>16:9</span></li>
+<li><span style="vertical-align: middle;">
+<input id="searchFilterA43aspectratioFormat1" name="searchFilteraspectratioFormat" onclick="SearchHandler.clickAspectrationAddvancedfilters('AspectRatio','A43');" style="display: none;" type="radio" value="A43"/><label for="searchFilterA43aspectratioFormat1"></label></span> <span>4:3</span></li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 35%; " valign="top">
+<div class="column">
+<div class="header"><span style=" padding-left:10px;">Partners</span><span style="float:right; "><a onclick="closedAdavncedSearch()" style="vertical-align:bottom; ">×</a></span></div>
+<div class="filter">
+<ul>
+<li>
+<span style="vertical-align: middle;">
+<input id="searchPartners-ABC News" name="searchPartner" onclick="SearchHandler.clickADvPartnersSearch('Partner',this);" type="checkbox" value="ABC News|100487"/>
+<label for="searchPartners-ABC News" style="cursor: pointer;">
+</label>
+</span><span style="">ABC News</span> </li>
+<li>
+<span style="vertical-align: middle;">
+<input id="searchPartners-AP" name="searchPartner" onclick="SearchHandler.clickADvPartnersSearch('Partner',this);" type="checkbox" value="AP|8976"/>
+<label for="searchPartners-AP" style="cursor: pointer;">
+</label>
+</span><span style="">AP</span> </li>
+<li>
+<span style="vertical-align: middle;">
+<input id="searchPartners-AP and Partners" name="searchPartner" onclick="SearchHandler.clickADvPartnersSearch('Partner',this);" type="checkbox" value="AP and Partners|8976;8978;40204;43894;42371;42904;42905;43223;8985;8986;44292;44046;8983;8988;8989;8981;8984;8987;45283;44765;45225;44828;44840;44891;46245;46246;46320;46368;46438;46451"/>
+<label for="searchPartners-AP and Partners" style="cursor: pointer;">
+</label>
+</span><span style="">AP and Partners</span> </li>
+<li>
+<span style="vertical-align: middle;">
+<input id="searchPartners-British Movietone" name="searchPartner" onclick="SearchHandler.clickADvPartnersSearch('Partner',this);" type="checkbox" value="British Movietone|43894"/>
+<label for="searchPartners-British Movietone" style="cursor: pointer;">
+</label>
+</span><span style="">British Movietone</span> </li>
+<li>
+<span style="vertical-align: middle;">
+<input id="searchPartners-CCTV Plus" name="searchPartner" onclick="SearchHandler.clickADvPartnersSearch('Partner',this);" type="checkbox" value="CCTV Plus|45225"/>
+<label for="searchPartners-CCTV Plus" style="cursor: pointer;">
+</label>
+</span><span style="">CCTV Plus</span> </li>
+<li>
+<span style="vertical-align: middle;">
+<input id="searchPartners-Celebrity Footage" name="searchPartner" onclick="SearchHandler.clickADvPartnersSearch('Partner',this);" type="checkbox" value="Celebrity Footage|42371"/>
+<label for="searchPartners-Celebrity Footage" style="cursor: pointer;">
+</label>
+</span><span style="">Celebrity Footage</span> </li>
+<li>
+<span style="vertical-align: middle;">
+<input id="searchPartners-SNTV Archive" name="searchPartner" onclick="SearchHandler.clickADvPartnersSearch('Partner',this);" type="checkbox" value="SNTV Archive|44828"/>
+<label for="searchPartners-SNTV Archive" style="cursor: pointer;">
+</label>
+</span><span style="">SNTV Archive</span> </li>
+<li>
+<span style="vertical-align: middle;">
+<input id="searchPartners-TV Globo" name="searchPartner" onclick="SearchHandler.clickADvPartnersSearch('Partner',this);" type="checkbox" value="TV Globo|44765"/>
+<label for="searchPartners-TV Globo" style="cursor: pointer;">
+</label>
+</span><span style="">TV Globo</span> </li>
+<li>
+<span style="vertical-align: middle;">
+<input id="searchPartners-TV-am" name="searchPartner" onclick="SearchHandler.clickADvPartnersSearch('Partner',this);" type="checkbox" value="TV-am|42905"/>
+<label for="searchPartners-TV-am" style="cursor: pointer;">
+</label>
+</span><span style="">TV-am</span> </li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<div class="advancesearchbtn">
+<input class="button" id="advancedsearch" title="Submit" type="submit" value="Search"/>
+<div style="float: right; margin: 10px 10px 0 5px;">
+<a class="clear-advlink" href="#" onclick="resetfilters();">Clear All Filters</a></div>
+<div id="nonefilter" style="float: right; margin: 10px 10px 0 5px; color: Red;">
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<input class="button" id="searchButton" style="line-height: 40px; height: 40px;" title="Submit" type="submit" value="Search"/></li>
+</ul>
+</form>
+</div>
+</td>
+</tr>
+</tbody></table>
+<div class="clearfix">
+</div>
+<div class="oe_overlay" disabled="true" id="oe_overlay"></div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //set cookie for current url
+        $.cookie("previousUrl", window.location.href);
+
+        $('*[ap-action="add-to-folder"]').apWorkspaceAddToFolder(
+            function (sender) { window.location.reload(); });
+
+        $('*[ap-action="redirect-to-login"]').click(function () {
+            //var url = '../../login?url=' + window.location.pathname + window.location.search;
+            var url = '/login?url=' + window.location.pathname + window.location.search;
+            window.location.href = url;
+        });
+
+        $('#video').apUiCarousel(1, '.carouselContent', '.carouselNavigaton');
+        $('#details').apUiVerticalSlidingNav('#ProjectsAnchor');
+        $('*[ap-action="download-item"]').apWorkspaceDownloadFootage(function (sender) { return setClipInOut(sender); });
+
+        //$('.requestInOut').numeric({ decimal: false, negative: false });
+        var addSearchInfoDialog = $('#searchInfoDialog').apUiModal();
+        $('*[ap-action="searchme"]').apSearchInformation(addSearchInfoDialog);
+
+        $('input[name="requestIn"]').apFormToggleField();
+        $('input[name="requestOut"]').apFormToggleField();
+
+        $('.requestInOut').keypress(function (event) {
+            var keyCodeEntered = (event.which) ? event.which : (window.event.keyCode) ? window.event.keyCode : -1;
+            if ((keyCodeEntered >= 48) && (keyCodeEntered <= 57)) {
+                return true;
+            }
+                // ':' decimal point...
+            else if (keyCodeEntered == 58) {
+                // Allow only 2 decimal point (':')...
+                if (($(this).val()) && ($(this).val().indexOf(':') >= 3))
+                    return false;
+                else
+                    return true;
+            }
+            else if ($(this).val().length > 8) {
+                return false;
+            }
+            else if (keyCodeEntered == 8) {
+                return true;
+            }
+            return false;
+        });
+
+        //Highlight keywords
+        var searchitem = $.trim('');
+        if (searchitem != "" && searchitem != null && searchitem != undefined) {
+            var mysearchterms = searchitem.split(/ +/);
+            $(mysearchterms).each(function () {
+                $('.list').highlight(this);
+                $('.title').highlight(this);
+                $('.metaDataDetails').highlight(this);
+            });
+        }
+
+        // Initialize comments.
+        CommentManager.initialize();
+
+        AP.selections.init("Search", []);
+    });
+
+    function setClipInOut(sender) {
+        var requestedIn = GetTotalDurationInSeconds($.trim($('#requestIn').val()));
+        var requestedOut = GetTotalDurationInSeconds($.trim($('#requestOut').val()));
+        var requestInVal = $.trim($('#requestIn').val());
+        var requestoutval = $.trim($('#requestOut').val());
+        if (requestedIn > 0 && isNaN(requestedOut)) {
+            alert('The value for Requested Out must be provided with Requested In.');
+            return false;
+        }
+
+        if (isNaN(requestedIn) && requestedOut > 0) {
+            alert('The value for Requested In must be provided with Requested Out.');
+            return false;
+        }
+
+        if (requestedIn >= requestedOut) {
+            alert('The value for Requested In must be less than Requested Out.');
+            return false;
+        }
+
+        if (validateTime(requestInVal) && validateTime(requestoutval)) {
+            if (requestInVal == "HH:MM:SS" && requestoutval == "HH:MM:SS") {
+                requestInVal = "00:00:00";
+                requestoutval = "00:00:00"
+            }
+            sender.attr("ap-subclipin", requestInVal);
+            sender.attr("ap-subclipout", requestoutval);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+</script>
+<div class="container content" id="main">
+<div class="searchdetail">
+<div class="metadata" id="details">
+<table class="title">
+<tbody><tr>
+<td class="res-image">
+<img alt="" src="http://www.aparchive.com//i/ic_SD_res.png"/></td>
+<td>
+<h3 id="content-slug-3d06a60efe2d44b595937f626fcded26">US John F. Kennedy Jr. 1988 DNC Convention Speech</h3>
+</td>
+</tr>
+</tbody></table>
+<div class="clearfix"></div>
+<div id="detailsNav">
+<div class="nav on">
+<a href="#ProjectsAnchor">Projects</a></div>
+<div class="nav">
+<a href="#DetailsAnchor">Details</a></div>
+<div class="nav">
+<a href="#ShotlistAnchor">Shotlist</a></div>
+<div class="nav">
+<a href="#StorylineAnchor">Storyline</a></div>
+<div class="nav">
+<a href="#CategoriesAnchor">Categories</a></div>
+<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+<div class="verticalSlidingNavBody"><div class="verticalSlidingNavBodyContent"><a id="ProjectsAnchor"></a><div class="sectionheader">
+<h4 style="padding-top: 4px; padding-left: 10px;">Project</h4>
+<div class="gotoTop nav" style="margin-bottom: 0px;">
+<a href="#ProjectsAnchor">Go to top</a></div>
+<div class="clearfix"></div>
+</div><div class="clearfix"></div><div class="metaDataDetails list" style="padding: 10px 0 0 10px;">
+<p>None</p>
+</div><div class="clearfix"></div><a id="DetailsAnchor"></a><div class="sectionheader">
+<h4 style="padding-top: 4px; padding-left: 10px;">Details</h4>
+<div class="gotoTop nav" style="margin-bottom: 0px;">
+<a href="#ProjectsAnchor">Go to top</a></div>
+<div class="clearfix"></div>
+</div><div class="metaDataDetails list">
+<p>
+<span id="content-summary-3d06a60efe2d44b595937f626fcded26">John F. Kennedy Jr. introduces his uncle Sen. Edward Kennedy (D-Mass.) at the 1988 Democratic National Convention</span></p>
+<p> </p>
+<p><strong>Story No.:</strong>
+<span id="content-storynumber-3d06a60efe2d44b595937f626fcded26">DC00188</span></p>
+<p><strong>Restrictions:</strong> AP have permission to license this ABC material</p>
+<p><strong>Duration:</strong><span style="margin-left: 4px;"></span></p>
+<p>
+<strong>Source:</strong>
+Pool                    </p>
+<p><strong>Dateline:</strong> Atlanta - 19 July 1988</p>
+<p><strong>Date:</strong> 19/07/1988 12:48 PM</p>
+</div><div class="clearfix"></div><a id="ShotlistAnchor"></a><div class="sectionheader">
+<h4 style="padding-top: 4px; padding-left: 10px;">Shotlist</h4>
+<div class="gotoTop nav" style="margin-bottom: 0px;">
+<a href="#ProjectsAnchor">Go to top</a></div>
+<div class="clearfix"></div>
+</div><div class="clearfix"></div><div class="metaDataDetails">
+<p></p><p xmlns="http://ap.org/schemas/03/2005/appl">
+</p><p xmlns="http://ap.org/schemas/03/2005/appl">1. WS "Democratic National Convention, Atlanta 88" on wall</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">2. CU gavel being banged, calling hall to order</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">3. CU Speaker of the House of Representatives Jame Wright (D-Texas) at podium, introduces John F. Kennedy Jr.</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">4. WS  Kennedy enters stage, walks over to Wright and shakes his hand</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">5. WS  delegates from Massachusetts cheering in stands</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">6. CU Kennedy begins remarks</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">8. SOUNDBITE: (English) John F. Kennedy Jr., son of late US President John F. Kennedy:</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">"...over a quarter of century ago my father stood before you to accept the nomination for the presidency of the United States.  So many of you came into public service because of him. In very real sense because of you he is with us still, and for that I am grateful to all of you..</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">
+</p><p xmlns="http://ap.org/schemas/03/2005/appl">I owe a special debt to the man his nephews and nieces call Teddy not just because of what he means to me personally</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">but because of the causes he's carried on.  He has shown that an unwavering commitment to the poor, to the elderly, to those without hope, regardless of faction or convention is the greatest reward of public service."</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">
+</p><p xmlns="http://ap.org/schemas/03/2005/appl">I'm not a political leader but I can speak for those of my age who have been inspired by Teddy to give their energy and ideas to their communities and not to just for themselves.  In that ongoing effort...all of you will be guided by the honorable and unyielding example of the senior Senator from Massachusetts. He has shown that our hope is not lost idealism but a realistic possibility. America is better because of the leadership of Edward Kennedy.  May he continue to guide us for many years to come.  Ladies and gentleman, my uncle Ted Kennedy."</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">9. MS Sen. Edward Kennedy (D-Mass.) comes out onto stage</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">10. WS Kennedy hugs his nephew and shakes his hand</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">11. MS JFK Jr. leaves stage</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">12. CU Kennedy, VS crowd</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">
+</p><p xmlns="http://ap.org/schemas/03/2005/appl">Rushes available on Tape TVD0040, TVD0041</p>
+<p xmlns="http://ap.org/schemas/03/2005/appl">KMF</p><p></p>
+</div><div class="clearfix"></div><a id="StorylineAnchor"></a><div class="sectionheader">
+<h4 style="padding-top: 4px; padding-left: 10px;">Storyline</h4>
+<div class="gotoTop nav" style="margin-bottom: 0px;">
+<a href="#ProjectsAnchor">Go to top</a></div>
+<div class="clearfix"></div>
+</div><div class="clearfix"></div><div class="metaDataDetails">
+<p></p><p xmlns="http://ap.org/schemas/03/2005/appl">John F. Kennedy Jr., who has avoided publicity in the years since his father's assassination, jumped into the national political spotlight by introducing his uncle, Massachusetts Sen. Edward M. Kennedy, at the Democratic National Convention. The 27-year-old law student received a two-minute standing ovation as he appeared before the delegates. The appearance has prompted speculation over whether the son of John F. Kennedy will be the next member of the new generation of Kennedys to enter the family business of politics.</p><p></p>
+</div><div class="clearfix"></div><a id="CategoriesAnchor"></a><div class="sectionheader">
+<h4 style="padding-top: 4px; padding-left: 10px;">Categories</h4>
+<div class="gotoTop nav" style="margin-bottom: 0px;">
+<a href="#ProjectsAnchor">Go to top</a></div>
+<div class="clearfix"></div>
+</div><div class="clearfix"></div><div class="metaDataDetails">
+<table>
+<tbody><tr>
+<th>Subjects:</th>
+<td>
+United States Presidential Election <span>,</span> Events <span>,</span> Presidential elections <span>,</span> National elections <span>,</span> Elections <span>,</span> Government and politics <span>,</span> Political conventions <span>,</span> Political parties <span>,</span> Political organizations <span>,</span> Democratic National Convention <span>,</span> United States presidential election                                </td>
+</tr>
+<tr>
+<th>People:</th>
+<td>
+Edward Kennedy <span>,</span> John F. Kennedy Jr.                                </td>
+</tr>
+<tr>
+<th>Organisations:</th>
+<td>U.S. Democratic Party, United States government</td>
+</tr>
+<tr>
+<th>Locations:</th>
+<td>
+Atlanta <span>,</span> Georgia <span>,</span> United States
+                                </td>
+</tr>
+</tbody></table>
+</div><div class="clearfix"></div></div></div>
+<!--
+        <table>
+            <tr><th>Source Rights</th><td>    Acquired
+        
+
+
+</td></tr>
+            <tr><th>Product Rights</th><td>    Failed
+</td></tr>
+        </table>
+        -->
+</div>
+<div class="grid_8" id="video">
+<div class="jwplayer playlist-none" id="jw-player" style="width: 552px; height: 310px; background-color: rgb(0, 0, 0);"></div>
+<script type="text/javascript">
+                    jwplayer("jw-player").setup({
+                        autostart: true,
+                        width: 552,
+                        height: 310,
+                        image: "http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0000.jpg",
+                        file: "http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_360p25-h264-1500k.mp4",
+                        skin: "/js/jwPlayer/skins/bekle.xml",
+                        primary: "html5",
+                        provider: "http",
+                        startparam: "starttime",
+                        events: {
+                            onPlay: function () {
+                                var clips = window.jwPlayerClipInOut;
+                                if (clips == null) {                                  
+                                    clips = new clipInOut(jwplayer("jw-player"), -1);
+                                    window.jwPlayerClipInOut = clips;
+                                }
+                                if (clips.progressInterval == null) {
+                                    clips.refresh();
+                                }
+                            },
+                            onTime: function () {
+                                var clips = window.jwPlayerClipInOut;
+                                if (clips.getDuration() == -1 && jwplayer("jw-player").getDuration() > -1)
+                                {
+                                    clips = new clipInOut(jwplayer("jw-player"), jwplayer("jw-player").getDuration());
+                                    window.jwPlayerClipInOut = clips;
+                                    if (clips.progressInterval == null) {
+                                        clips.refresh();
+                                    }
+                                }
+                            }
+                        }
+                    });
+                </script>
+<div class="request-slider"></div>
+<div id="videoActions">
+<div ap-action="redirect-to-login" ap-batchprocess="false" ap-value-id="3d06a60efe2d44b595937f626fcded26" ap-value-name="US John F. Kennedy Jr. 1988 DNC Convention Speech" class="clipbinaction">
+<a class="noreload" href="#" style="color: #FFFFFF;" title="Clip bin">
+<span class="clipbinButton">Clip Bin</span></a>
+</div>
+<div class="taskDivider" style="float: left; padding: 0 0px 0 0px;"> </div>
+<div ap-action="redirect-to-login" ap-allbroadcastformats="" ap-can-download-master="== null ? 'False' : Model.Data.ItemInfo.CanDownloadMasterVideo" ap-duration="" ap-item-id="3d06a60efe2d44b595937f626fcded26" ap-key="== null ? 0 : Model.Data.ItemInfo.Id" ap-subclipin="" ap-subclipout="" class="RequestButton">
+<a href="#" style="color: #FFFFFF;" title="Request Footage">Request</a>
+</div>
+<div class="taskDivider" style="float: left; padding: 0 0px 0 0px;"> </div>
+<div ap-action="request-share" ap-duration="" ap-subclipin="" ap-subclipout="" class="actionlink">
+<a class="btnShare" href="#" id="btnShare-3d06a60efe2d44b595937f626fcded26" onclick="setClipInOut($('[ap-action=&quot;request-share&quot;]')); return onShare('3d06a60efe2d44b595937f626fcded26', 'http://www.aparchive.comhttp://www.aparchive.com/metadata/US-John-F-Kennedy-Jr-1988-DNC-Convention-Speech/3d06a60efe2d44b595937f626fcded26');" title="Share">
+<span class="shareButton">Share</span></a>
+</div>
+<div class="requestFootage">
+<img class="scissors" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<a class="request-jump request-in" href="#In" title="Move IN request into the current play position">In</a>
+<input class="requestInOut" id="requestIn" maxlength="8" name="requestIn" title="HH:MM:SS" value="HH:MM:SS"/>
+<span>/</span>
+<input class="requestInOut" id="requestOut" maxlength="8" name="requestOut" title="HH:MM:SS" value="HH:MM:SS"/>
+<a class="request-jump request-out" href="#Out" title="Move OUT request into the current play position">Out</a>
+</div>
+<div class="checkboxiconStyles">
+<input class="selection-check" data-clipin="" data-clipout="" data-g2id="3d06a60efe2d44b595937f626fcded26" data-id="0" data-type="Search" id="chkSelect-3d06a60efe2d44b595937f626fcded26" style="padding: 0; margin: 0;" type="checkbox"/>
+<label class="selection-link" for="chkSelect-3d06a60efe2d44b595937f626fcded26">Select</label>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="shotListThumbs">
+<div class="shots carousel">
+<div class="carouselContent" style="left: 0px;">
+<div class="thumbGroup" thumbnails-per-page="8">
+<div>
+<img alt="00:00:00" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0000.jpg" data-start="0" src="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0000.jpg"/>
+<p>00:00:00</p>
+</div>
+<div>
+<img alt="00:00:04" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0001.jpg" data-start="4" src="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0001.jpg"/>
+<p>00:00:04</p>
+</div>
+<div>
+<img alt="00:00:12" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0002.jpg" data-start="12" src="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0002.jpg"/>
+<p>00:00:12</p>
+</div>
+<div>
+<img alt="00:00:16" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0003.jpg" data-start="16" src="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0003.jpg"/>
+<p>00:00:16</p>
+</div>
+<div>
+<img alt="00:00:20" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0004.jpg" data-start="20" src="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0004.jpg"/>
+<p>00:00:20</p>
+</div>
+<div>
+<img alt="00:00:44" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0005.jpg" data-start="44" src="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0005.jpg"/>
+<p>00:00:44</p>
+</div>
+<div>
+<img alt="00:01:08" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0006.jpg" data-start="68" src="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0006.jpg"/>
+<p>00:01:08</p>
+</div>
+<div>
+<img alt="00:01:27" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0007.jpg" data-start="87" src="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0007.jpg"/>
+<p>00:01:27</p>
+</div>
+</div>
+<div class="thumbGroup" thumbnails-per-page="8">
+<div>
+<img alt="00:01:33" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0008.jpg" data-start="93" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:01:33</p>
+</div>
+<div>
+<img alt="00:01:37" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0009.jpg" data-start="97" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:01:37</p>
+</div>
+<div>
+<img alt="00:01:41" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0010.jpg" data-start="101" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:01:41</p>
+</div>
+<div>
+<img alt="00:01:50" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0011.jpg" data-start="110" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:01:50</p>
+</div>
+<div>
+<img alt="00:01:58" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0012.jpg" data-start="118" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:01:58</p>
+</div>
+<div>
+<img alt="00:02:02" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0013.jpg" data-start="122" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:02:02</p>
+</div>
+<div>
+<img alt="00:02:17" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0014.jpg" data-start="137" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:02:17</p>
+</div>
+<div>
+<img alt="00:02:21" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0015.jpg" data-start="141" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:02:21</p>
+</div>
+</div>
+<div class="thumbGroup" thumbnails-per-page="8">
+<div>
+<img alt="00:02:36" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0016.jpg" data-start="156" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:02:36</p>
+</div>
+<div>
+<img alt="00:02:42" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0017.jpg" data-start="162" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:02:42</p>
+</div>
+<div>
+<img alt="00:03:06" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0018.jpg" data-start="186" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:03:06</p>
+</div>
+<div>
+<img alt="00:03:10" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0019.jpg" data-start="190" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:03:10</p>
+</div>
+<div>
+<img alt="00:03:34" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0020.jpg" data-start="214" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:03:34</p>
+</div>
+<div>
+<img alt="00:03:46" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0021.jpg" data-start="226" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:03:46</p>
+</div>
+<div>
+<img alt="00:03:53" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0022.jpg" data-start="233" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:03:53</p>
+</div>
+<div>
+<img alt="00:04:17" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0023.jpg" data-start="257" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:04:17</p>
+</div>
+</div>
+<div class="thumbGroup" thumbnails-per-page="8">
+<div>
+<img alt="00:04:23" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0024.jpg" data-start="263" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:04:23</p>
+</div>
+<div>
+<img alt="00:04:35" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0025.jpg" data-start="275" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:04:35</p>
+</div>
+<div>
+<img alt="00:04:43" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0026.jpg" data-start="283" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:04:43</p>
+</div>
+<div>
+<img alt="00:04:47" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0027.jpg" data-start="287" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:04:47</p>
+</div>
+<div>
+<img alt="00:04:57" class="shot" data-original="http://d3g09s34apoqvi.cloudfront.net:80/3d06a60efe2d44b595937f626fcded26/3d06a60efe2d44b595937f626fcded26_THUMBNAIL_index/0028.jpg" data-start="297" src="http://www.aparchive.com//images/shades/clear.gif"/>
+<p>00:04:57</p>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="carouselNavigaton" style="visibility: visible;">
+<span class="previous" style="visibility: hidden;"></span>
+<span class="template page"></span>
+<span alt="Page 1" class="current"></span><span alt="Page 2" class="page"></span><span alt="Page 3" class="page"></span><span alt="Page 4" class="page"></span><span class="next" style="visibility: visible;"></span>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div id="mainFooter"></div>
+<div id="downloadFootageDialogContainer"></div>
+</div>
+<link href="http://www.aparchive.com//css/validation.css" rel="stylesheet" type="text/css"/>
+<div class="modalDialog" id="modal_1562476371401" style="cursor:default;"><div class="button closeButton" style="top: 12px; left: 529px;"><a class="modalClose">×</a></div><div class="modelContent genericDialog" id="shareDialog" style="display: block;">
+<form action="/share" id="shareForm" method="post" novalidate="novalidate"> <div class="top"> </div>
+<div class="content">
+<h5><span id="title">Share Story</span></h5>
+<div class="form">
+<span id="isBatchShare" style="display: none;"></span>
+<input id="ItemsString" name="ItemsString" type="hidden" value=""/>
+<input data-val="true" data-val-required="The isCC field is required." id="isCC" name="isCC" type="hidden" value="False"/>
+<input id="SubClipIn" name="SubClipIn" type="hidden" value=""/>
+<input id="SubClipOut" name="SubClipOut" type="hidden" value=""/>
+<input data-val="true" data-val-number="The field ClipbinId must be a number." id="ClipbinId" name="ClipbinId" type="hidden" value=""/>
+<div style="display: none;">
+<div style="float: left; width: 90px;"> </div>
+<div class="error" id="shareError"></div>
+</div>
+<span id="shareRequestedFootageLength" style="margin-bottom:-26px;display:none;">
+<span style="display:block;">
+<span style="float:left;width:88px;">Length:</span>
+<input id="shareFullVideo" name="shareVideo" style="display: none;" type="radio" value="1"/>
+<label for="shareFullVideo" style="width:12px; margin-top:8px;"></label>
+<span id="shareFullVideoClip"></span>
+</span>
+<span style="margin-top:-10px;display:block;">
+<span style="float:left;width:0px;"> </span>
+<input checked="checked" id="shareSelectedClip" name="shareVideo" style="display: none;" type="radio" value="2"/>
+<label for="shareSelectedClip" style="width:12px; margin-top:8px;"></label>
+<span id="shareSelectedVideoClip"></span>
+</span>
+<br/>
+</span>
+<div>
+<div style="float: left; width: 80px;">
+<label for="From">From:</label>
+</div>
+<div>
+<input data-val="true" data-val-regex="Please enter a valid email address." data-val-regex-pattern="^\S+@\S+\.\S+$" data-val-required="The From field is required." id="From" name="From" type="text" value=""/> <span class="field-validation-valid" data-valmsg-for="From" data-valmsg-replace="false">*</span>
+</div>
+</div>
+<div>
+<div style="float: left; width: 80px;">
+<label for="To">To:</label>
+</div>
+<div>
+<input data-val="true" data-val-required="Please enter a valid email address." id="To" name="To" type="text" value=""/> <span class="field-validation-valid" data-valmsg-for="To" data-valmsg-replace="false">*</span>
+</div>
+</div>
+<div>
+<div style="float: left; width: 80px;">
+<label for="Subject">Subject:</label>
+</div>
+<div>
+<input data-val="true" data-val-required="The Subject field is required." id="Subject" name="Subject" type="text" value=""/> <span class="field-validation-valid" data-valmsg-for="Subject" data-valmsg-replace="false">*</span>
+</div>
+</div>
+<div>
+<div style="float: left; width: 80px;">
+<label for="Body">Body:</label>
+</div>
+<div>
+<textarea cols="30" id="Body" name="Body" rows="10"></textarea>
+</div>
+</div>
+<div>
+<div style="float: left; width: 90px;">
+                     
+                </div>
+<div style="float:left; width:300px;">
+<input id="chkCC" onclick="$('#isCC').val($('#chkCC').is(':checked'));" type="checkbox"/>
+<label for="chkCC" style="text-align: left; padding:0 0 0 19px; width: 200px; font-size:11px; font-family:Verdana;">Send a copy to myself</label>
+</div>
+</div>
+<br/>
+</div>
+<div class="confirm">
+            You have successfully shared <span id="shareCount"></span> item(s).
+        </div>
+<div class="buttons">
+<div class="add">Share</div>
+<div ap-key="close" class="cancel">Cancel</div>
+<div ap-key="close" class="close">Close</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</form></div></div>
+<div class="modalDialog" id="modal_1562476371477" style="cursor:default;"><div class="button closeButton" style="top: 12px; left: 529px;"><a class="modalClose">×</a></div><div class="modelContent genericDialog" id="searchInfoDialog" style="display: block;">
+<div class="top"> </div>
+<div class="content">
+<h5><b>Additional Debug Information</b></h5>
+<div class="form">
+<div style="float:left; color:Black;width:545px;">
+<div style="width:540px;"><b>APQL:</b><div id="apqlquery" style="width:520px; word-wrap:break-word;"></div></div>
+<div style="width:540px;"><b>FastCommandText:</b><div id="fstcommandid" style="width:520px; word-wrap:break-word;"></div></div>
+<div style="width:540px;"><b>QueryTime:</b> <span id="querytimeId"></span> (hh:mm:ss:ms)</div>
+<div style="width:540px;"><b>TotalTime:</b> <span id="totaltimeId"></span> (hh:mm:ss:ms)</div>
+<div style="width:540px;"><b>Products:</b> <span id="productsId"></span></div>
+<div style="width:540px;"><b>Source:</b> <span id="sourceId"></span></div>
+<div style="width:540px;"><b>XML Document:</b> <div id="xmldocumentid" style=" overflow:scroll; max-height:300px;"></div></div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+<div id="footer">
+<div class="container">
+<div class="grid_16" id="apLinks" style="margin-left: 0px; margin-right: 0px;">
+<table border="0" style="width:100%; margin-top:15px; margin-left:25px;  margin-bottom:40px;">
+<tbody><tr>
+<td class="footerheaderLink" style="font-size: 14px; font-weight: bold; color: #FFFFFF; Padding: 0 0 20px 0; margin-right:5%;">AP ARCHIVE</td>
+<td class="footerheaderLink" style="font-size: 14px; font-weight: bold; color: #FFFFFF; Padding: 0 0 20px 0; margin-right:5%; ">ASSOCIATED PRESS</td>
+<td class="footerheaderLink" style="font-size: 14px; font-weight: bold; color: #FFFFFF; Padding: 0 0 20px 0; margin-right:5%;">PRODUCTS AND SERVICES</td>
+<td class="footerheaderLink" style="font-size: 14px; font-weight: bold; color: #FFFFFF; Padding: 0 0 25px 0; margin-right:5%;"><a href="/partners">CONTENT PARTNERS</a></td>
+</tr>
+<tr>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8; margin:5"><a href="/AboutUs">About Us</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="http://www.ap.org/company/about-us" target="_New">About AP</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="/compilation">AP Compilations</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="/partner/ABC News">ABC News</a></td>
+</tr>
+<tr>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8; margin:5;"><a href="/ourcontent">Our Content</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="http://www.ap.org/Company/AP-Leadership" target="_New">AP Leadership</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="/InstantLibrary">Instant Library</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="/partner/Celebrity Footage">CelebrityFootage</a></td>
+</tr>
+<tr>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #b6b6ab; margin:5;"><a href="/HowWeWork">How We Work</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="http://www.ap.org/company/history/ap-history" target="_New">History</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="/RightsClearances">Rights Clearance</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="http://betaaparchive.rnd.local/partner/British%20Movietone">British MovieTone</a></td>
+</tr>
+<tr>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8; margin:5;"><a href="/News">News</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="http://www.ap.org/company/Industry-Leadership" target="_New">Industry Leadership</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="/ContentRepresentation">Content Representation</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="/partner/TV-am">TV-am</a></td>
+</tr>
+<tr>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8; margin:5;"><a href="/ContactUs">Contact Us</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="http://www.ap.org/company/Intellectual-Property" target="_New">Intellectual Property</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="/photos">Photos</a></td>
+</tr>
+<tr>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8; margin:5;"><a href="/help/FAQs.htm">Help</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="http://www.ap.org/company/Brand" target="_New">Branding</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"></td>
+</tr>
+<tr>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"><a href="https://www.ap.org/privacy-policy" target="_New">Privacy Policy</a></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"></td>
+<td style="font-family: Verdana;font-size: 11px; font-weight: normal; color: #E7e2d8;Padding: 0 0 5px 0;"></td>
+</tr>
+</tbody></table>
+<div style="border-bottom:1px solid #BDBDBd; background-color:#BDBDBd; width:1136px;"></div>
+<div style=" margin-left:25px; padding:20px 0 30px 12px;">All contents © Copyright 2019 <a href="http://www.ap.org/">The Associated Press</a>. All rights reserved.</div>
+<div class="clear"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div>
+<div class="optanon-show-settings-popup-wrapper"><div class="optanon-show-settings-button optanon-toggle-display"><div class="optanon-show-settings-left"></div><div class="optanon-show-settings-middle"><a class="optanon-show-settings" href="#">Cookie Settings</a></div><div class="optanon-show-settings-right"></div></div></div>
+</div>
+</div>
+<div id="addToFolderDialogContainer"></div>
+<div class="modalDialog" id="modal_1562476371404" style="cursor:default;"><div class="button closeButton" style="top: 12px; left: 529px;"><a class="modalClose">×</a></div><div class="modelContent genericDialog" id="messageBoxDialog" style="display: block;">
+<div class="top"> </div>
+<div class="content">
+<h5><span id="title">Message Box</span></h5>
+<p><span id="body"></span></p>
+<div class="buttons">
+<div ap-key="close" class="cancel">OK</div>
+<div class="cancel" id="messageBox-no">No</div>
+<div class="cancel" id="messageBox-yes">Yes</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+<script type="text/javascript">
+    $(document).ready(function () {
+       restoreOrderHistoryProgress();
+    });
+    </script>
+<div class="modalOverlay"></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div class="modalOverlay"></div><div class="modalOverlay"></div><div class="modalOverlay"></div><div class="modalOverlay"></div><div class="modalOverlay"></div><div class="modalOverlay"></div><div class="modalOverlay"></div><div class="modalOverlay"></div><div class="modalOverlay"></div><div class="ui-multiselect-menu ui-widget ui-widget-content ui-corner-all" style="width: 160px;"><div class="ui-widget-header ui-corner-all ui-multiselect-header ui-helper-clearfix"><ul class="ui-helper-reset"><li><a class="ui-multiselect-all" href="#"><span class="ui-icon ui-icon-check"></span><span>All</span></a></li><li><a class="ui-multiselect-none" href="#"><span class="ui-icon ui-icon-closethick" style="vertical-align:bottom;"></span><span style="vertical-align:1px;">None</span></a></li><li class="ui-multiselect-close"><a class="ui-multiselect-close" href="#"><span class="ui-icon ui-icon-circle-close"></span></a></li></ul></div><div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 160px; height: 175px;"><ul class="ui-multiselect-checkboxes ui-helper-reset" style="overflow: hidden; width: 160px; height: 175px;"><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-0" title=""><input id="ui-multiselect-decadeddl-option-0" name="multiselect_decadeddl" title="1890s" type="checkbox" value="1890"/><label for="ui-multiselect-decadeddl-option-0"></label><span>1890s</span></label></li><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-1" title=""><input id="ui-multiselect-decadeddl-option-1" name="multiselect_decadeddl" title="1900s" type="checkbox" value="1900"/><label for="ui-multiselect-decadeddl-option-1"></label><span>1900s</span></label></li><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-2" title=""><input id="ui-multiselect-decadeddl-option-2" name="multiselect_decadeddl" title="1910s" type="checkbox" value="1910"/><label for="ui-multiselect-decadeddl-option-2"></label><span>1910s</span></label></li><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-3" title=""><input id="ui-multiselect-decadeddl-option-3" name="multiselect_decadeddl" title="1920s" type="checkbox" value="1920"/><label for="ui-multiselect-decadeddl-option-3"></label><span>1920s</span></label></li><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-4" title=""><input id="ui-multiselect-decadeddl-option-4" name="multiselect_decadeddl" title="1930s" type="checkbox" value="1930"/><label for="ui-multiselect-decadeddl-option-4"></label><span>1930s</span></label></li><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-5" title=""><input id="ui-multiselect-decadeddl-option-5" name="multiselect_decadeddl" title="1940s" type="checkbox" value="1940"/><label for="ui-multiselect-decadeddl-option-5"></label><span>1940s</span></label></li><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-6" title=""><input id="ui-multiselect-decadeddl-option-6" name="multiselect_decadeddl" title="1950s" type="checkbox" value="1950"/><label for="ui-multiselect-decadeddl-option-6"></label><span>1950s</span></label></li><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-7" title=""><input id="ui-multiselect-decadeddl-option-7" name="multiselect_decadeddl" title="1960s" type="checkbox" value="1960"/><label for="ui-multiselect-decadeddl-option-7"></label><span>1960s</span></label></li><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-8" title=""><input id="ui-multiselect-decadeddl-option-8" name="multiselect_decadeddl" title="1970s" type="checkbox" value="1970"/><label for="ui-multiselect-decadeddl-option-8"></label><span>1970s</span></label></li><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-9" title=""><input id="ui-multiselect-decadeddl-option-9" name="multiselect_decadeddl" title="1980s" type="checkbox" value="1980"/><label for="ui-multiselect-decadeddl-option-9"></label><span>1980s</span></label></li><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-10" title=""><input id="ui-multiselect-decadeddl-option-10" name="multiselect_decadeddl" title="1990s" type="checkbox" value="1990"/><label for="ui-multiselect-decadeddl-option-10"></label><span>1990s</span></label></li><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-11" title=""><input id="ui-multiselect-decadeddl-option-11" name="multiselect_decadeddl" title="2000s" type="checkbox" value="2000"/><label for="ui-multiselect-decadeddl-option-11"></label><span>2000s</span></label></li><li class=""><label class="ui-corner-all" for="ui-multiselect-decadeddl-option-12" title=""><input id="ui-multiselect-decadeddl-option-12" name="multiselect_decadeddl" title="2010s" type="checkbox" value="2010"/><label for="ui-multiselect-decadeddl-option-12"></label><span>2010s</span></label></li></ul><div class="slimScrollBar ui-draggable" style="background: rgb(102, 102, 102); width: 10px; position: absolute; top: 0px; opacity: 0.4; display: block; border: 1px solid rgb(191, 191, 191); border-radius: 0px; z-index: 99; right: 0px;"></div><div class="slimScrollRail" style="width: 10px; height: 100%; position: absolute; top: 0px; display: block; border-radius: 0px; background: rgb(232, 232, 232); opacity: 0.3; z-index: 90; right: 0px;"></div></div></div><div class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" id="ui-datepicker-div"></div><div class="modalOverlay"></div><div class="modern" id="optanon"><div id="optanon-popup-bg"></div><div aria-modal="true" id="optanon-popup-wrapper" lang="en-GB" role="dialog" tabindex="-1"><div id="optanon-popup-top"><a class="optanon-close-link optanon-close optanon-close-ui" href="#" onclick="Optanon.TriggerGoogleAnalyticsEvent('OneTrust Cookie Consent', 'Preferences Close Button');" title="Close Preference Centre"><div id="optanon-close" style="background: url(https://optanon.blob.core.windows.net/skins/default_flat_bottom_two_button_black/v2/images/optanon-pop-up-close.png);width:34px;height:34px;"></div></a></div><div id="optanon-popup-body"><div id="optanon-popup-body-left"><div id="optanon-popup-body-left-shading"></div><div id="optanon-branding-top-logo" style="background-image: url(https://optanon.blob.core.windows.net/logos/6124/6124:aparchive.com/AP_RGB_180x210.png) !important;"></div><ul id="optanon-menu"><li class="menu-item-on menu-item-about" title="Your Privacy"><p><a href="#">Your Privacy</a></p></li><li class="menu-item-necessary menu-item-on" title="Strictly Necessary Cookies"><p><a href="#">Strictly Necessary Cookies</a></p></li><li class="menu-item-on menu-item-performance" title="Performance Cookies"><p><a href="#">Performance Cookies</a></p></li><li class="menu-item-on menu-item-functional" title="Functional Cookies"><p><a href="#">Functional Cookies</a></p></li><li class="menu-item-on menu-item-advertising" title="Targeting Cookies"><p><a href="#">Targeting Cookies</a></p></li><li class="menu-item-moreinfo menu-item-off" title="More Information"><p><a href="https://www.ap.org/privacy-policy" onclick="Optanon.TriggerGoogleAnalyticsEvent('OneTrust Cookie Consent', 'Preferences Cookie Policy');" target="_blank">More Information</a></p></li></ul></div><div id="optanon-popup-body-right"><h2 aria-label="true">Privacy Preference Center</h2><h3></h3><div id="optanon-popup-more-info-bar"><div class="optanon-status"><div class="optanon-status-editable"><form><fieldset><p><input checked="" class="optanon-status-checkbox" id="chkMain" type="checkbox" value="check"/><label for="chkMain">Active</label></p></fieldset></form></div><div class="optanon-status-always-active optanon-status-on"><p>Always Active</p></div></div></div><div id="optanon-main-info-text"></div></div><div class="optanon-bottom-spacer"></div></div><div id="optanon-popup-bottom"> <a href="https://onetrust.com/poweredbyonetrust" target="_blank"><div id="optanon-popup-bottom-logo" style="background: url(https://optanon.blob.core.windows.net/skins/default_flat_bottom_two_button_black/v2/images/cookie-collective-top-bottom.png);width:155px;height:35px;" title="powered by OneTrust"></div></a><div class="optanon-button-wrapper optanon-save-settings-button optanon-close optanon-close-consent"><div class="optanon-white-button-left"></div><div class="optanon-white-button-middle"><a href="#" onclick="Optanon.TriggerGoogleAnalyticsEvent('OneTrust Cookie Consent', 'Preferences Save Settings');">Save Settings</a></div><div class="optanon-white-button-right"></div></div><div class="optanon-button-wrapper optanon-allow-all-button optanon-allow-all" style="display: none;"><div class="optanon-white-button-left"></div><div class="optanon-white-button-middle"><a href="#" onclick="Optanon.TriggerGoogleAnalyticsEvent('OneTrust Cookie Consent', 'Preferences Allow All');">Allow All</a></div><div class="optanon-white-button-right"></div></div></div></div></div><div class="optanon-alert-box-wrapper" style="bottom: -134.316px;"><div class="optanon-alert-box-bottom-top"><div class="optanon-alert-box-corner-close"><a class="optanon-alert-box-close" href="#" onclick="Optanon.TriggerGoogleAnalyticsEvent('OneTrust Cookie Consent', 'Banner Close Button');" title="Close Banner"></a></div></div><div class="optanon-alert-box-bg"><div class="optanon-alert-box-logo"> </div><div class="optanon-alert-box-body"><p>We use cookies to personalize content and ads, to provide social media features and to analyze our traffic. We also share information about your use of our site with our social media, advertising and analytics partners. <a href="https://www.ap.org/privacy-policy">Cookie Policy</a></p></div><div class="optanon-clearfix"></div><div class="optanon-alert-box-button-container"><div class="optanon-alert-box-button optanon-button-close"><div class="optanon-alert-box-button-middle"><a class="optanon-alert-box-close" href="#">Close</a></div></div><div class="optanon-alert-box-button optanon-button-allow"><div class="optanon-alert-box-button-middle"><a class="optanon-allow-all" href="#" onclick="Optanon.TriggerGoogleAnalyticsEvent('OneTrust Cookie Consent', 'Banner Accept Cookies');">Accept Cookies</a></div></div><div class="optanon-alert-box-button optanon-button-more"><div class="optanon-alert-box-button-middle"><a class="optanon-toggle-display" href="#" onclick="Optanon.TriggerGoogleAnalyticsEvent('OneTrust Cookie Consent', 'Banner Open Preferences');">Cookie Settings</a></div></div></div><div class="optanon-clearfix optanon-alert-box-bottom-padding"></div></div></div></body></html>

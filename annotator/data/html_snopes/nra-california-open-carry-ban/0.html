@@ -1,0 +1,1575 @@
+<html class="js no-touch svg inlinesvg svgclippaths no-ie8compat" lang="en" style=""><head><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="//cse.google.com/adsense/search/async-ads.js"></script><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.D4Eh4BHvUNU.O/m=gapi_iframes_style_bubble/exm=auth,ytsubscribe/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCPbw18SS5tux6PhVuTz5NV7ZASbtA/cb=gapi.loaded_2"></script><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.D4Eh4BHvUNU.O/m=auth/exm=ytsubscribe/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCPbw18SS5tux6PhVuTz5NV7ZASbtA/cb=gapi.loaded_1"></script><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.D4Eh4BHvUNU.O/m=ytsubscribe/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCPbw18SS5tux6PhVuTz5NV7ZASbtA/cb=gapi.loaded_0"></script>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="https://www.google.com/cse/cse.js?cx=005255107940593127965:kkzcgsdpbww" type="text/javascript"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"bfc89a3027","applicationID":"84768","transactionName":"IVcNEEJZVQ9RRk0WFwBUCgcfRlgEUUdNFQoNTw==","queueTime":2,"applicationTime":300,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQYDWFBaGwsEU1da"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(21)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(21)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(21)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(21)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(21)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(16);n.exports={generateTraceHeader:r}},{}],11:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(12),u=t(10).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(15),w=t(14),v=window.XMLHttpRequest;s.features.xhr=!0,t(9),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],12:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],13:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],14:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],15:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],16:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],18:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],19:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],20:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],21:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:x,userAgent:d};t(13),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(20)},{}]},{},["loader",2,11,4,3]);</script>
+<meta content="Charged with Carrying a Loaded Firearm in Public or a Vehicle (Penal Code 25850)? California criminal lawyers discuss the laws, sentencing &amp; legal defenses." name="description"/>
+<title>Penal Code 25850 PC - Carrying a Loaded Firearm - California Law</title>
+<link href="https://www.shouselaw.com/25850.html" rel="canonical"/>
+<link href="https://s3.amazonaws.com/law-media/favicon.png" rel="shortcut icon"/>
+<meta content="authenticity_token" name="csrf-param"/>
+<meta content="P8LltuzKCKGYjrzCHlgvtTx3LDQjUWHtMDlIUNU6QJc59QMie52DDAXUne/161uzBOGOxwLijLfiAgigJbnB+A==" name="csrf-token"/>
+<!--[if lt IE 9]>
+      <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link href="https://s3.amazonaws.com/law-media/layouts/platform.css" media="screen" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
+<link href="https://law-media.s3.amazonaws.com/layouts/86/assets/stylesheets/compressed-app-new.min.css" rel="stylesheet"/>
+<script src="https://law-media.s3.amazonaws.com/layouts/86/assets/javascripts/foundation/compressed-modernizr.foundation.js"></script>
+<script gapi_processed="true" src="https://apis.google.com/js/platform.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+
+  h3, h4, h5, h6, h3 a, h4 a, h5 a, h6 a {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 300 !important;
+  }
+
+</style>
+<link href="https://fonts.googleapis.com/css?family=Actor" rel="stylesheet" type="text/css"/>
+<style>
+          /*****************************
+  Text & Links
+*****************************/
+* {
+  font-family: Lucida Grande, sans-serif;
+}
+body, p {
+  color: #777;
+  font-family: Lucida Grande, sans-serif !important;
+}
+a {
+  color: #404f48;
+}
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #2b3530;
+}
+h1, h2, h1 a, h2 a {
+  font-family: Actor !important;
+}
+h3, h4, h5, h6, h3 a, h4 a, h5 a, h6 a {
+  font-family: Georgia !important;
+}
+
+/* pattern */
+
+/*****************************
+  Full Pallette
+*****************************/
+.bg-light1, .hover-bg-light1:hover { background-color: #ffffff !important; }
+.bg-light2, .hover-bg-light2:hover { background-color: #f0f3f1 !important; }
+.bg-light3, .hover-bg-light3:hover { background-color: #d9e9b3 !important; }
+.bg-light4, .hover-bg-light4:hover { background-color: #c9d3cf !important; }
+.bg-light5, .hover-bg-light5:hover { background-color: #b9d570 !important; }
+.bg-light6, .hover-bg-light6:hover { background-color: #8fb890 !important; }
+.bg-light7, .hover-bg-light7:hover { background-color: #99bf38 !important; }
+.bg-dark1, .hover-bg-dark1:hover   { background-color: #0c0f04 !important; }
+.bg-dark2, .hover-bg-dark2:hover   { background-color: #171d09 !important; }
+.bg-dark3, .hover-bg-dark3:hover   { background-color: #1c2d1d !important; }
+.bg-dark4, .hover-bg-dark4:hover   { background-color: #2b3530 !important; }
+.bg-dark5, .hover-bg-dark5:hover   { background-color: #2e4a2f !important; }
+.bg-dark6, .hover-bg-dark6:hover   { background-color: #46581a !important; }
+.bg-dark7, .hover-bg-dark7:hover   { background-color: #404f48 !important; }
+
+.text-light1, .hover-text-light1:hover { color: #ffffff !important; }
+.text-light2, .hover-text-light2:hover { color: #f0f3f1 !important; }
+.text-light3, .hover-text-light3:hover { color: #d9e9b3 !important; }
+.text-light4, .hover-text-light4:hover { color: #c9d3cf !important; }
+.text-light5, .hover-text-light5:hover { color: #b9d570 !important; }
+.text-light6, .hover-text-light6:hover { color: #8fb890 !important; }
+.text-light7, .hover-text-light7:hover { color: #99bf38 !important; }
+.text-dark1, .hover-text-dark1:hover   { color: #0c0f04 !important; }
+.text-dark2, .hover-text-dark2:hover   { color: #171d09 !important; }
+.text-dark3, .hover-text-dark3:hover   { color: #1c2d1d !important; }
+.text-dark4, .hover-text-dark4:hover   { color: #2b3530 !important; }
+.text-dark5, .hover-text-dark5:hover   { color: #2e4a2f !important; }
+.text-dark6, .hover-text-dark6:hover   { color: #46581a !important; }
+.text-dark7, .hover-text-dark7:hover   { color: #404f48 !important; }
+
+.border-light1 { border-color: #ffffff !important; }
+.border-light2 { border-color: #f0f3f1 !important; }
+.border-light3 { border-color: #d9e9b3 !important; }
+.border-light4 { border-color: #c9d3cf !important; }
+.border-light5 { border-color: #b9d570 !important; }
+.border-light6 { border-color: #8fb890 !important; }
+.border-light7 { border-color: #99bf38 !important; }
+.border-dark1 { border-color: #0c0f04 !important; }
+.border-dark2 { border-color: #171d09 !important; }
+.border-dark3 { border-color: #1c2d1d !important; }
+.border-dark4 { border-color: #2b3530 !important; }
+.border-dark5 { border-color: #2e4a2f !important; }
+.border-dark6 { border-color: #46581a !important; }
+.border-dark7 { border-color: #404f48 !important; }
+
+.border-light1 * { border-color: #ffffff; }
+.border-light2 * { border-color: #f0f3f1; }
+.border-light3 * { border-color: #d9e9b3; }
+.border-light4 * { border-color: #c9d3cf; }
+.border-light5 * { border-color: #b9d570; }
+.border-light6 * { border-color: #8fb890; }
+.border-light7 * { border-color: #99bf38; }
+.border-dark1 * { border-color: #0c0f04; }
+.border-dark2 * { border-color: #171d09; }
+.border-dark3 * { border-color: #1c2d1d; }
+.border-dark4 * { border-color: #2b3530; }
+.border-dark5 * { border-color: #2e4a2f; }
+.border-dark6 * { border-color: #46581a; }
+.border-dark7 * { border-color: #404f48; }
+
+      </style>
+<style class="pattern"></style>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-10201436-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-10201436-1');
+</script>
+<link href="https://s3.amazonaws.com/law-media/layouts/86/assets/images/favicon-ca.png" rel="icon"/>
+<link href="https://plus.google.com/103582401270719866045" rel="author"/>
+<meta content="IB0wkFw6i9s-zwrz7cyup28C5hotQx0xEUFjUf_qiqs" name="google-site-verification"/>
+<meta content="V97od8ALb7Cn7f4K92JvQShvFJ-ZXhGbR-GIUb1nNlE" name="google-site-verification"/>
+<meta content="C29C21D0474FD79A385598F2978568E6" name="msvalidate.01"/>
+<link rel="prefetch"/><style>.gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5 !important}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailtop,.tbl-grey .pls-tailright,.tbl-grey .pls-tailleft,.tbl-grey .pls-dropTR,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png) !important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0} </style><script src="https://www.google.com/cse/static/element/e1b7867e793369c8/cse_element__en.js?usqp=CAI%3D" type="text/javascript"></script><link href="https://www.google.com/cse/static/element/e1b7867e793369c8/default+en.css" rel="stylesheet" type="text/css"/><link href="https://www.google.com/cse/static/style/look/v3/default.css" rel="stylesheet" type="text/css"/><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#D9D9D9}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#666666;background-color:#CECECE;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover,.gsc-imageResult:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#0000CC}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#0000CC}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#0000CC}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#0000CC}.gsc-cursor-page{color:#0000CC}a.gsc-trailing-more-results:link{color:#0000CC}.gs-webResult .gs-snippet,.gs-imageResult .gs-snippet,.gs-fileFormatType{color:#000000}.gs-webResult div.gs-visibleUrl,.gs-imageResult div.gs-visibleUrl{color:#008000}.gs-webResult div.gs-visibleUrl-short{color:#008000}.gs-webResult div.gs-visibleUrl-short{display:none}.gs-webResult div.gs-visibleUrl-long{display:block}.gs-promotion div.gs-visibleUrl-short{display:none}.gs-promotion div.gs-visibleUrl-long{display:block}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-webResult.gsc-result.gsc-promotion{border-color:#336699;background-color:#FFFFFF}.gsc-completion-title{color:#0000CC}.gsc-completion-snippet{color:#000000}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#0000CC}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#0000CC}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#0000CC}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#0000CC}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#000000}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#008000}.gcsc-find-more-on-google{color:#0000CC}.gcsc-find-more-on-google-magnifier{fill:#0000CC}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head><body class="sub os-other desktop" data-analytics-url="https://www.ll-analytics.com/api/v1/sessions" data-domain="shouselaw.com" data-layout-id="86" data-page-id="23348" data-parent-id="23343" data-root-id="23220" data-site-id="312"><div class="userway userway_p5 userway-the-big" style="background-color: transparent !important;" title="Accessibility Menu"><div aria-label="This website uses the UserWay accessibility widget. Hit Control U on your keyboard to enable the widget and keyboard navigation." class="userway_accessibility_icon userway_dark" id="userwayAccessibilityIcon" role="button" style="background-color: #003d68!important" tabindex="0"><span class="userway_icon_image_wrapper"><img alt="Icon of a person: white decorative" aria-hidden="true" class="userway_icon_white" height="43" src="https://cdn.userway.org/widgetapp/images/body_wh.svg" width="43"/></span><div class="userway_preloader_spinner"><img alt="Spinner: White decorative" aria-hidden="true" class="spinner_icon_white" height="43" src="https://cdn.userway.org/widgetapp/images/spin_wh.svg" width="43"/></div><span class="userway-spacer"></span><img alt="Accessibility menu is on" class="check_on" height="20" src="https://cdn.userway.org/widgetapp/images/check_on.svg" width="18"/><div class="userway_hide"><span aria-hidden="true" class="userway_hide_off" style="background-color: #003d68!important">Hide</span> <span aria-hidden="true" class="userway_hide_on" style="background-color: #003d68!important">Unhide</span></div><div aria-hidden="true" class="userway_hide_icon"><span class="userway_hide_icons_wrapper" style="background-color: #003d68!important"></span></div></div><iframe class="userway_iframe userway_p5" name="userway" style="width: 100% !important; max-width: 100% !important; height: 100% !important; max-height: 100% !important; visibility: visible !important; opacity: 1 !important;" title="UserWay Accessibility Menu"></iframe><iframe class="userway_ft_iframe" name="userwayFt" src="https://cdn.userway.org/widget/en/ftab.html?color=003d68&amp;size=large&amp;position=5&amp;logosrc=https%3A%2F%2Fcdn.userway.org%2Fwidgetapp%2Fimages%2Flogo-grey.svg&amp;logourl=https%3A%2F%2Fuserway.org&amp;rand=1562555486727" title="Quick Accessibility Menu"></iframe></div><div class="uw-page-structure-modal" id="uwPageStructureModal"><div class="uw-page-structure-modal-content"><div class="uw-popup-header" style="background-color: #003d68!important; color:#ffffff!important"><div class="uw-popup-header-text" style="color:#ffffff!important">Page Structure</div><div aria-label="Close dialog" class="uw-popup-header-close" id="uwPopupHeaderClose" role="button" tabindex="0"><svg aria-hidden="true" viewbox="0 0 14 14"><path class="uw-popup-header-close-path" d="M 0,0 L 14,14 M 14,0 L 0,14" style="stroke: #ffffff!important"></path></svg></div></div><div class="uw-popup-main"><div class="uw-popup-main-tabs"><div aria-label="Headers Tab" class="uw-popup-main-tab uw-popup-main-tab_headers" tabindex="0"><span aria-hidden="true" class="tab-name">Headers</span></div><div aria-label="Landmarks Tab" class="uw-popup-main-tab uw-popup-main-tab_landmarks" tabindex="0"><span aria-hidden="true" class="tab-name">Landmarks</span></div><div aria-label="Links Tab" class="uw-popup-main-tab uw-popup-main-tab_links" tabindex="0"><span aria-hidden="true" class="tab-name">Links</span></div></div><div class="uw-popup-main-panels"><div class="uw-popup-main-panel uw-popup-main-panel-headers"><div class="uw-popup-main-panel-no-items"><div class="no-items-text">This page contains no headers</div><div aria-hidden="true" class="no-items-image"></div><div class="no-items-button-wrapper"><button aria-label="Close this dialog" class="no-items-button">Close</button></div></div><div class="items-wrapper"></div></div><div class="uw-popup-main-panel uw-popup-main-panel-landmarks"><div class="uw-popup-main-panel-no-items"><div class="no-items-text">This page contains no landmarks</div><div aria-hidden="true" class="no-items-image"></div><div class="no-items-button-wrapper"><button aria-label="Close this dialog" class="no-items-button">Close</button></div></div><div class="items-wrapper"></div></div><div class="uw-popup-main-panel uw-popup-main-panel-links"><div class="uw-popup-main-panel-no-items"><div class="no-items-text">This page contains no links</div><div aria-hidden="true" class="no-items-image"></div><div class="no-items-button-wrapper"><button aria-label="Close this dialog" class="no-items-button">Close</button></div></div><div class="items-wrapper"></div></div></div></div><div class="uw-popup-footer"></div></div></div><div class="uw-s10-reading-guide"></div><div aria-hidden="true" class="uw-s12-tooltip"></div><div id="hover_nav" style="display: none; position: absolute; z-index: 9999;"></div><youtube>
+<meta content="J_Si1YxAzGTico7pMFhEiRldCh5MbCY852D_1jEnbPs" name="google-site-verification"/>
+<meta content="g2aYSxt7RcTX620kzlkzwd6KukiU3br-UrxIFVUPnTM" name="google-site-verification"/>
+</youtube>
+<meta content="qiydShfU24wOG50IVW2cJG3_mvIzNtiF3Lpt3d5GcVQ" name="google-site-verification"/>
+<script gapi_processed="true" src="https://apis.google.com/js/platform.js"></script>
+<style>
+
+.featured_content h2 {
+    margin-bottom: 20px;
+}
+
+.featured_video {
+    margin-top: 40px;
+}
+
+.wysiwyg_container ul > li {
+    list-style: disc outside !important;
+}
+
+/* california/nevada header subtitles */
+
+#header .inner_header header hgroup h2 {
+    color: #368ac9;
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 1.25;
+    margin: 1em auto 0;
+    max-width: 400px;
+    text-align: center;
+    text-transform: uppercase !important;
+}
+
+#header .inner_header header hgroup h2 span {
+    display: block;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+
+    #header .inner_header header hgroup h2 {
+        float: right;
+        font-size: 20px;
+        margin: 1.25em auto 0;
+        max-width: 335px;
+    }
+
+}
+
+@media (min-width: 980px) {
+
+    #header .inner_header header hgroup h2 {
+        display: none;
+    }
+
+}
+
+/* lexicata popup forms */
+
+.btmForm.lexicata {
+    bottom: -750px;
+    display: none;
+    width: 300px;
+}
+
+.changeForm.lexicata {
+    bottom: -5px !important;
+}
+
+#content .sidebar .widget.btmForm.lexicata {
+    padding: 0;
+}
+
+#content .sidebar .widget.btmForm.lexicata p {
+    margin-bottom: 0 !important;
+}
+
+span.display-in-nevada.nevada-popup,
+span.display-in-colorado.colorado-popup {
+    display: block;
+    width: 260px;
+    height: 71px;
+    position: relative;
+    top: 71px;
+}
+
+/* california mobile menu */
+
+.slideout_menu li.slideout_accord p {
+    background: #3b3b3b;
+    background: -o-linear-gradient(top,#3e3e3e,#383838);
+    background: -ms-linear-gradient(top,#3e3e3e,#383838);
+    background: -moz-linear-gradient(top,#3e3e3e,#383838);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#3e3e3e),color-stop(1,#383838));
+    background: -webkit-linear-gradient(#3e3e3e,#383838);
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 0 !important;
+    padding: 10px 5%;
+    border-top: 1px solid #484848;
+    border-bottom: 1px solid #2e2e2e;
+    text-decoration: none;
+    text-shadow: 0 -1px 2px #222;
+    color: #f7f7f7;
+}
+
+.slideout_menu li.slideout_accord p:focus {
+    outline: none;
+}
+
+.slideout_menu li.slideout_accord p:after {
+    content: '\f078';
+    font-family: FontAwesome;
+    float: right;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transition: transform .25s;
+    -moz-transition: transform .25s;
+    transition: transform .25s;
+}
+
+.slideout_menu li.slideout_accord p[aria-expanded=true]:after {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.slideout_menu li.slideout_accord ul {
+    border-bottom: none;
+    margin-left: 5%;
+    margin-top: 14px;
+}
+
+.slideout_menu li.slideout_accord ul li {
+    margin-bottom: 15px;
+    margin-left: 5%;
+}
+
+.slideout_menu li.slideout_accord ul li a {
+    font-size: 14px !important;
+    font-weight: 300 !important;
+}
+
+.slideout_menu li.slideout_accord span {
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10px;
+    padding: 0 0 15px;
+    text-shadow: none;
+    font-weight: 400;
+}
+
+/* california desktop menu */
+
+.medical_overview {
+    float: left;
+    width: 55%;
+}
+
+.medical_overview i {
+    background: url(https://s3.amazonaws.com/law-media/uploads/131/72214/original/medical-dropdown-ico.png) top center no-repeat;
+    width: 76px;
+    height: 76px;
+    display: block;
+    float: left;
+    margin-right: 15px;
+}
+
+.medical_overview .text {
+    float: left;
+    width: 78%;
+}
+
+.medical_overview .text p {
+  color: #fff;
+}
+
+#main_navigation_wrap #california_medical p a.dropdown_cta {
+    background: #00408b!important;
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff !important;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border: none !important;
+}
+
+#main_navigation_wrap #california_medical p a.dropdown_cta:hover {
+    background: #fff !important;
+    color: #348aca !important;
+}
+
+.injury_overview {
+    float: left;
+    width: 55%;
+}
+
+.injury_overview i {
+    background: url(https://s3.amazonaws.com/law-media/layouts/86/assets/images/nv-accidents-dropdown-ico.png) top center no-repeat;
+    width: 76px;
+    height: 76px;
+    display: block;
+    float: left;
+    margin-right: 15px;
+}
+
+.injury_overview .text {
+    float: left;
+    width: 78%;
+}
+
+.injury_overview .text p {
+    color: #fff;
+}
+
+#main_navigation_wrap #california_injury p a.dropdown_cta {
+    background: #00408b!important;
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff !important;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border: none !important;
+}
+
+#main_navigation_wrap #california_injury p a.dropdown_cta:hover {
+    background: #fff !important;
+    color: #348aca !important;
+}
+
+/* colorado desktop menu */
+
+#main_navigation_wrap .crimes_navigation .navigate ul {
+    width: 50% !important;
+}
+
+/* nevada recent victories page */
+
+body[data-page-id="25362"] #content .wysiwyg_container h2,
+body[data-page-id="25362"] #content .wysiwyg_container h2 strong {
+    font-size: 22px !important;
+    line-height: 30px !important;
+}
+
+/* social media icons */
+
+.social-links ul li {
+    margin: 3px !important;
+}
+
+/* "help for victims" nv navigation button */
+
+.dropdown-cta {
+    background: #00408b !important;
+    border: none !important;
+    font-size: 18px;
+    display: inline-block !important;
+    padding: 20px 25px !important;
+}
+
+.dropdown-cta:hover {
+    background: #fff !important;
+    color: #348aca !important;
+}
+
+/* footer reviews */
+
+.footer_review_wrapper {
+    background-color: #07428a;
+}
+
+.footer_review {
+    margin: 0 auto;
+    max-width: 62.5em;
+    padding: 30px;
+}
+
+.footer_review span {
+    color: #fff;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif; 
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.footer_review div[itemprop="itemReviewed"] span[itemprop="name"] {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0px;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.footer_review span[itemprop="reviewRating"] span[itemprop="ratingValue"] {
+    background-image: url(https://s3.amazonaws.com/law-media/uploads/131/55924/original/five-stars.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 23px;
+    margin-bottom: 16px;
+    position: relative;
+    text-indent: -100%;
+    width: 131px;
+}
+
+.footer_review span[itemprop="author"] span[itemprop="name"] {
+    display: block;
+    font-size: 20px !important;
+    padding-top: 16px;
+}
+
+.footer_review span[itemprop="author"] span[itemprop="name"]:before {
+    content: '–';
+    padding-right: 5px;
+}
+
+.footer_review_button {
+    text-align: center;
+}
+
+.footer_review_button a {
+    background-color: #58adf4;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 16px;
+    padding: 16px 20px;
+}
+
+.footer_review_button a:hover {
+    background-color: #fff;
+    color: #58adf4;
+}
+
+@media screen and (min-width: 980px) {
+
+    .footer_review_wrapper {
+        padding: 0 30px;
+    }
+
+    .footer_review {
+        padding: 60px 0;
+    }
+
+}
+
+/* breadcrumb nav */
+
+#breadcrumb-nav {
+    display: none;
+}
+
+#breadcrumb-nav-footer {
+    display: block;
+    font-size: 14px !important;
+    border-top: 1px solid #ddd;
+    padding-top: 16px;
+}
+
+#breadcrumb-nav-footer ol {
+    padding-left: 0;
+}
+
+#breadcrumb-nav-footer ol li {
+    display: inline-block;
+    list-style-type: none!important;
+    margin: 0!important;
+}
+
+#breadcrumb-nav-footer ol li a {
+    border-bottom-style: none !important;
+    font-size: 14px !important;
+}
+
+@media screen and (min-width: 980px) {
+
+    #breadcrumb-nav-footer {
+        display: none;
+    }
+
+    #breadcrumb-nav {
+        display: block;
+        font-size: 14px;
+    }
+
+    #breadcrumb-nav ol li a {
+        color: #348aca!important;
+    }
+
+}
+
+</style>
+<script integrity="sha384-EwBObn5QAxP8f09iemwAJljc+sU+eUXeL9vSBw1eNmVarwhKk2F9vBEpaN9rsrtp" src="//instant.page/1.1.0" type="module"></script>
+<div class="outterContainer">
+<div class="slideout_menu">
+<div class="close_menu">
+<a href="#">Close <span>X</span></a>
+</div>
+<div class="mobile_menu_container">
+<div id="mobile_menu">
+<ul>
+<div id="california_mobile_menu">
+<li><a href="/home">Areas Where We Can Help</a></li>
+<li><a href="/attorneys.html">About Us</a></li>
+<li class="slideout_accord ui-accordion ui-widget ui-helper-reset" role="tablist">
+<p aria-controls="ui-id-2" aria-expanded="false" aria-selected="false" class="ui-accordion-header ui-state-default ui-corner-all" id="ui-id-1" role="tab" tabindex="0">Criminal Defense</p>
+<ul aria-hidden="true" aria-labelledby="ui-id-1" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-2" role="tabpanel" style="display: none;">
+<li><a href="/crimes-a-z.html">California Crimes A to Z</a></li>
+<span>Popular Topics</span>
+<li><a href="/expunge-criminal-records.html">Clearing Your Record</a></li>
+<li><a href="/crimes-code.html">Crimes by Code Section</a></li>
+<li><a href="/probation.html">Probation</a></li>
+<li><a href="/admin-hearing.html">Professional License Issues</a></li>
+<li><a href="/warrants.html">Warrants</a></li>
+</ul>
+</li>
+<li class="slideout_accord ui-accordion ui-widget ui-helper-reset" role="tablist">
+<p aria-controls="ui-id-4" aria-expanded="false" aria-selected="false" class="ui-accordion-header ui-state-default ui-corner-all" id="ui-id-3" role="tab" tabindex="0">DUI</p>
+<ul aria-hidden="true" aria-labelledby="ui-id-3" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-4" role="tabpanel" style="display: none;">
+<li><a href="/dui-az">California DUI Laws A to Z</a></li>
+<span>Popular Topics</span>
+<li><a href="/drunk-driving.html">California DUI Laws</a></li>
+<li><a href="/DUI-car-insurance.html">Car Insurance Issues</a></li>
+<li><a href="/drunk-driving-penalties.html">DUI Penalties</a></li>
+<li><a href="/fst.html">Field Testing</a></li>
+<li><a href="/DUI-defenses.html">Fighting a DUI case</a></li>
+<li><a href="/license_suspension.html">License Suspensions</a></li>
+<li><a href="/dui-plea-bargains.html">Plea Bargains to Lesser Charges</a></li>
+</ul>
+</li>
+<li class="slideout_accord ui-accordion ui-widget ui-helper-reset" role="tablist">
+<p aria-controls="ui-id-6" aria-expanded="false" aria-selected="false" class="ui-accordion-header ui-state-default ui-corner-all" id="ui-id-5" role="tab" tabindex="0">Medical Class Actions</p>
+<ul aria-hidden="true" aria-labelledby="ui-id-5" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-6" role="tabpanel" style="display: none;">
+<li><a href="/torts">Medical Class Actions</a></li>
+<span>Popular Topics</span>
+<li><a href="/herniamesh.html">Hernia Mesh</a></li>
+<li><a href="/torts/ivc">IVC Filters</a></li>
+<li><a href="/torts/truvada">Truvada</a></li>
+<li><a href="/torts/uloric">Uloric</a></li>
+<li><a href="/valsartan">Valsartan</a></li>
+<li><a href="/torts/zostavax">Zostavax</a></li>
+</ul>
+</li>
+<li class="slideout_accord ui-accordion ui-widget ui-helper-reset" role="tablist">
+<p aria-controls="ui-id-8" aria-expanded="false" aria-selected="false" class="ui-accordion-header ui-state-default ui-corner-all" id="ui-id-7" role="tab" tabindex="0">Personal Injury</p>
+<ul aria-hidden="true" aria-labelledby="ui-id-7" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-8" role="tabpanel" style="display: none;">
+<li><a href="/personal-injury/a-to-z">California Injury Laws A to Z</a></li>
+<span>Popular Topics</span>
+<li><a href="/personal-injury/vehicle-accidents">Car Accidents</a></li>
+<li><a href="/personal-injury/dog-bites">Dog Bites</a></li>
+<li><a href="/personal-injury/product-liability">Products Liability</a></li>
+<li><a href="/personal-injury/slip-and-fall">Slip and Fall</a></li>
+<li><a href="/personal-injury/wrongful-death">Wrongful Death</a></li>
+</ul>
+</li>
+<li class="slideout_accord ui-accordion ui-widget ui-helper-reset" role="tablist">
+<p aria-controls="ui-id-10" aria-expanded="false" aria-selected="false" class="ui-accordion-header ui-state-default ui-corner-all" id="ui-id-9" role="tab" tabindex="0">Other States</p>
+<ul aria-hidden="true" aria-labelledby="ui-id-9" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-10" role="tabpanel" style="display: none;">
+<li><a href="/nevada">Nevada</a></li>
+<li><a href="/colorado">Colorado</a></li>
+</ul>
+</li>
+<li>
+<a class="contact-link" href="/contact.html">Find an Office Near You</a>
+</li>
+</div>
+</ul>
+</div>
+<div class="sidebar-contact-buttons">
+<ul>
+<li class="sidebar-contact-phone"><a href="tel:(855) 396-0370">(855) 396-0370</a></li>
+<li class="sidebar-contact-form" id="sidebar-contact-toggle"><a>Message Us</a></li>
+</ul>
+</div>
+<form action="/search" id="google_form_mobile">
+<input name="q" type="hidden" value="005255107940593127965:kkzcgsdpbww"/>
+<input name="ie" type="hidden" value="UTF-8"/>
+<input id="google_search" name="q" placeholder="Search our Site" type="text"/>
+</form>
+</div>
+</div>
+<div class="siteWrapper">
+<div id="wrapper">
+<div class="menu"><a href="#">Menu</a></div>
+<!-- Header
+        ================================================== -->
+<div id="header_wrapper">
+<div id="main_navigation_wrap">
+<div class="inner_nav">
+<div id="main_navigation_nav">
+<nav>
+<ul id="california_menu">
+<li><a class="home_link" href="/home"><i aria-hidden="true" class="fa fa-home"></i></a></li>
+<li><a href="/attorneys.html">Attorneys</a></li>
+<li class="has_secondary">
+<a href="/">Criminal Defense</a>
+<div class="hover_container_third no_secondary">
+<div class="mega_dropdown">
+<span class="third">California Criminal Defense</span>
+<div class="crimes_overview" id="california_crimes">
+<i></i>
+<div class="text">
+<p>Being arrested for a crime does not necessarily mean you will be convicted. Often we can help you get charges reduced or dismissed, and avoid jail and a criminal record.</p>
+<p><a class="dropdown_cta" href="/crimes-a-z.html">California Crimes A to Z</a></p>
+</div>
+</div>
+<div class="crimes_navigation">
+<div class="navigate">
+<span class="fourth">Popular Topics</span>
+<ul class="col1_2">
+<li><a href="/expunge-criminal-records.html">Clearing Your Record</a></li>
+<li><a href="/crimes-a-z.html">California Crimes A-Z</a></li>
+<li><a href="/crimes-code.html">Crimes by Code Section</a></li>
+</ul>
+<ul class="col1_2">
+<li><a href="/probation.html">Probation</a></li>
+<li><a href="/admin-hearing.html">Professional License Issues</a></li>
+<li><a href="/warrants.html">Warrants</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="has_secondary">
+<a href="/drunk-driving.html">DUI</a>
+<div class="hover_container_third no_secondary">
+<div class="mega_dropdown">
+<span class="third">California DUI</span>
+<div class="dui_overview" id="california_dui">
+<i></i>
+<div class="text">
+<p>DUI arrests don't always lead to convictions in court. Police officer mistakes, faulty breathalyzers and crime lab errors may get your charges reduced or dismissed. Visit our California DUI page to learn more.</p>
+<p><a class="dropdown_cta" href="/dui-az">California DUI Laws A to Z</a></p>
+</div>
+</div>
+<div class="dui_navigation">
+<div class="navigate">
+<span class="fourth">Popular Topics</span>
+<ul class="col1_2">
+<li><a href="/DUI-process.html">California DUI laws</a></li>
+<li><a href="/DUI-car-insurance.html">Car insurance issues</a></li>
+<li><a href="/drunk-driving-penalties.html">DUI penalties</a></li>
+</ul>
+<ul class="col1_2">
+<li><a href="/DUI-defenses.html">Fighting a DUI case</a></li>
+<li><a href="/license_suspension.html">License suspensions</a></li>
+<li><a href="/dui-plea-bargains.html">Plea bargains to lesser charges</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="has_secondary">
+<a href="/torts">Medical Class Actions</a>
+<div class="hover_container_third no_secondary">
+<div class="mega_dropdown">
+<span class="third">Lawsuits for Dangerous Drugs &amp; Medical Devices</span>
+<div class="medical_overview" id="california_medical">
+<i></i>
+<div class="text">
+<p>Shouse Law Group represents victims throughout the U.S. who suffered serious complications and injuries from dangerous drugs and failed medical devices.</p>
+<p><a class="dropdown_cta" href="/torts">Medical Class Actions</a></p>
+</div>
+</div>
+<div class="medical_navigation">
+<div class="navigate">
+<span class="fourth">Popular Topics</span>
+<ul class="col1_2">
+<li><a href="/herniamesh.html">Hernia Mesh</a></li>
+<li><a href="/torts/ivc">IVC Filters</a></li>
+<li><a href="/torts/truvada">Truvada</a></li>
+</ul>
+<ul class="col1_2">
+<li><a href="/torts/uloric">Uloric</a></li>
+<li><a href="/valsartan">Valsartan</a></li>
+<li><a href="/torts/zostavax">Zostavax</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="has_secondary">
+<a href="/personal-injury">Personal Injury</a>
+<div class="hover_container_third no_secondary">
+<div class="mega_dropdown">
+<span class="third">California Personal Injury</span>
+<div class="injury_overview" id="california_injury">
+<i></i>
+<div class="text">
+<p>If you've been injured in an accident, our personal injury lawyers will fight to get you compensation for medical bills, lost wages, pain and suffering, and even punitive damages.</p>
+<p><a class="dropdown_cta" href="/personal-injury/a-to-z">California Personal Injury Laws A to Z</a></p>
+</div>
+</div>
+<div class="injury_navigation">
+<div class="navigate">
+<span class="fourth">Popular Topics</span>
+<ul class="col1_2">
+<li><a href="/personal-injury/medical-malpractice">Medical Malpractice</a></li>
+<li><a href="/personal-injury/vehicle-accidents">Car Accidents</a></li>
+<li><a href="/personal-injury/dog-bites">Dog Bites</a></li>
+</ul>
+<ul class="col1_2">
+<li><a href="/personal-injury/product-liability">Products Liability</a></li>
+<li><a href="/personal-injury/slip-and-fall">Slip and Fall</a></li>
+<li><a href="/personal-injury/wrongful-death">Wrongful Death</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li><a href="/contact.html">Locations</a></li>
+</ul>
+</nav>
+</div>
+<form action="/search" id="google_form">
+<input name="q" type="hidden" value="005255107940593127965:kkzcgsdpbww"/>
+<input name="ie" type="hidden" value="UTF-8"/>
+<input id="google_search" name="q" placeholder="Search our Site" type="text"/>
+</form>
+</div>
+</div>
+<div id="header">
+<div class="inner_header">
+<header>
+<hgroup>
+<h1 id="logo">
+<a href="/home"><img alt="Shouse California Law Group" src="https://s3.amazonaws.com/law-media/uploads/131/30587/original/shouselawgroup-logo.png"/></a>
+</h1>
+</hgroup>
+<div class="header-phone">
+<div class="phone_number">
+<p><span>Call us 24/7</span><a class="header_telephone" href="tel:(877) 504-7750" onclick="_gaq.push(['_trackEvent','Click To Call', 'Clicked' , 'http://www.shouselaw.com/']);" style="display: inline;">(877) 504-7750</a></p><p class="phone-text"><span>24/7 Help:</span></p><a class="ca-phone" fa="" fa-phone="" href="tel:(877) 504-7750&gt;&lt;i class="></a>
+<a id="contact-toggle"><i class="fa fa-envelope"></i></a></div>
+<ul class="social">
+<li class="results-btn">
+<a href="/home/case-results-hub"><i></i></a>
+</li>
+<li class="reviews-btn">
+<a href="/client-reviews"><i></i></a>
+</li>
+</ul>
+</div>
+</header>
+</div>
+</div>
+</div>
+<div id="pageTitle">
+<section id="title"><div id="breadcrumb-nav">
+<ol>
+<li><a href="https://www.shouselaw.com/home"> Shouse Law Group </a></li>
+›
+<li><a href="https://www.shouselaw.com/"> Criminal Defense </a></li>
+›
+<li><a href="https://www.shouselaw.com/firearm-offenses.html"> Gun Laws </a></li>
+›
+<li><a href="https://www.shouselaw.com/25850.html"> Penal Code 25850: Carrying a Loaded Firearm in a Public Place </a></li>
+</ol>
+</div>
+<header>
+<h1>Carrying a Loaded Firearm in a Public Place or Vehicle <br/>(California Penal Code 25850 PC)</h1>
+</header>
+</section>
+</div>
+<!-- Primary Content
+================================================== -->
+<div id="primary">
+<section id="content">
+<div class="page_main">
+<script>
+  (function() {
+    var cx = '005255107940593127965:kkzcgsdpbww';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr" style="visibility: hidden;"><form accept-charset="utf-8" class="gsc-search-box gsc-search-box-tools" style="display: none;"><table cellpadding="0" cellspacing="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellpadding="0" cellspacing="0" class="gstl_50 gsc-input" id="gs_id50" style="width: 100%; padding: 0px;"><tbody><tr><td class="gsib_a" id="gs_tti50"><input autocomplete="off" class="gsc-input" dir="ltr" id="gsc-i-id1" name="search" placeholder="Custom Search" size="10" spellcheck="false" style='width: 100%; padding: 0px; border: none; margin: 0px; height: auto; background: url("https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png") left center no-repeat rgb(255, 255, 255); text-indent: 48px; outline: none;' title="search" type="text"/></td><td class="gsib_b"><div class="gsst_b" dir="ltr" id="gs_st50"><a class="gsst_a" href="javascript:void(0)" role="button" style="display: none;" title="Clear search box"><span aria-hidden="true" class="gscb_a" id="gs_cb50">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg height="13" viewbox="0 0 13 13" width="13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results"> </div></td></tr></tbody></table></form><div class="gsc-results-wrapper-nooverlay"><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"><div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div></div><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"></div></div><div class="gsc-above-wrapper-area-invisible"><table cellpadding="0" cellspacing="0" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Sort by:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><table cellpadding="0" cellspacing="0" class="gsc-resultsHeader"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Web</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div class="gsc-result-selector gsc-one-result" title="show one result"> </div><div class="gsc-result-selector gsc-more-results" title="show more results"> </div><div class="gsc-result-selector gsc-all-results" title="show all results"> </div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div></div></div>
+<div class="wysiwyg_container">
+<div class="new-article">
+<div id="video"> 
+<div class="insertion widget" data-insertion-id="63480" id="insertion_63480" style="">
+<div class="widget free_form">
+<div class="widget_content"><div itemprop="video" itemscope="" itemtype="http://schema.org/VideoObject">
+<h2><span content="Carrying a Loaded Firearm - CA Penal Code 25850 PC" itemprop="name"></span></h2>
+<meta content="00:02:39" itemprop="duration"/>
+<meta content="http://i.ytimg.com/vi/fSDr44CEkHg/mqdefault.jpg" itemprop="thumbnailUrl"/>
+<meta content="https://www.youtube.com/watch?v=fSDr44CEkHg" itemprop="embedURL"/>
+<meta content="2013-08-29" itemprop="uploadDate"/>
+<meta content="360" itemprop="height"/>
+<meta content="640" itemprop="width"/>
+<iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/fSDr44CEkHg" width="640"></iframe>
+<span content="California Penal Code 25850 PC makes it a misdemeanor crime to carry or possess a loaded firearm in public. Penalties include probation, fines and up to one year county jail. The offense can be charged as a felony in some circumstances.In this video, a former Los Angeles County district attorney -- now a criminal defense lawyer -- discusses the law of Penal Code 25850, the punishment and sentencing, and legal strategies for fighting the case.More info at www.shouselaw.com/12031.html" itemprop="description"></span>
+</div></div>
+</div>
+</div>
+</div>
+<p><br/><strong>California Penal Code 25850</strong> PC makes it a <strong>crime to carry a loaded firearm</strong> in a vehicle or public place. Though it is a <a data-insertion-id="68208" href="https://www.shouselaw.com/misdemeanor.html">misdemeanor</a> in most cases, PC 25850 carrying a loaded firearm can be charged as a <a data-insertion-id="68209" href="https://www.shouselaw.com/felony.html">California felony</a> if certain aggravating circumstances are present.<sup class="fn">1</sup></p>
+<blockquote>
+<p><em><strong>PC 25850 reads</strong></em>: “A person is guilty of carrying a loaded firearm when the person carries a loaded firearm on the person or in a vehicle while in any public place or on any public street in an incorporated city or in any public place or on any public street in a prohibited area of unincorporated territory."<sup class="fn">2</sup></p>
+</blockquote>
+<p>PC 25850 carrying a loaded firearm is a separate and distinct offense from <a href="https://www.shouselaw.com/25400.html">carrying a <em>concealed</em> firearm, which is prohibited under Penal Code 25400 PC</a>.</p>
+<p>Despite the fact that carrying a loaded weapon sounds like a very straight-forward offense, it's not.  The code is filled with legal jargon, technicalities, and exceptions that make this seemingly obvious offense rather complex.</p>
+<p>To help understand exactly what conduct is (and is not) prohibited by this <a href="https://www.shouselaw.com/firearm-offenses.html">California firearms law</a>, our California criminal defense attorneys will address the following:</p>
+<ul class="article-nav bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li><a href="#1">1. What is the legal definition of “carrying a loaded firearm in a public place"?</a></li>
+<li><a href="#2">2. How can I fight Penal Code 25850 PC charges?</a></li>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li><a href="#2.1">2.1. You didn't realize you were carrying the firearm</a></li>
+<li><a href="#2.2">2.2. The firearm wasn't loaded</a></li>
+<li><a href="#2.3">2.3. You didn't carry the firearm in public</a></li>
+<li><a href="#2.4">2.4. Police misconduct</a></li>
+<li><a href="#2.5">2.5. You were carrying a gun in self-defense</a></li>
+</ul>
+<li><a href="#3">3. Am I exempt from prosecution under Penal Code 25850 PC?</a></li>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li><a href="#3.1">3.1. Penal Code 25900 and 26020 PC -- Peace officers and federal agents</a></li>
+<li><a href="#3.2">3.2. Penal Code 26000 PC – members of the military</a></li>
+<li><a href="#3.3">3.3. Penal Code 26025 PC -- POST certification</a></li>
+<li><a href="#3.4">3.4. Penal Code 26005 and 26040 PC – recreational shooters</a></li>
+<li><a href="#3.5">3.5. Penal Code 26010 – People with concealed carry permits</a></li>
+<li><a href="#3.6">3.6. Penal Code 26015 and 26030 PC – Armored vehicle guards, security guards and private investigators</a></li>
+<li><a href="#3.7">3.7. Penal Code 26035 -- Business owners and private<br/>property owners</a></li>
+</ul>
+<li><a href="#4">4. What are the penalties for PC 25850 carrying a loaded firearm in public?</a></li>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li><a href="#4.1">4.1. Misdemeanor violations of Penal Code 25850 PC</a></li>
+<li><a href="#4.2">4.2. “Wobbler” provisions of Penal Code 25850 PC</a></li>
+<li><a href="#4.3">4.3. Straight felonies under Penal Code 25850 PC</a></li>
+<li><a href="#4.4">4.4. Violation of Penal Code 25850 after prior<br/>firearm convictions</a></li>
+</ul>
+<li><a href="#5">5. What are the collateral consequences of a Penal Code 25850 conviction?</a></li>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li><a href="#5.1">5.1. What are the immigration consequences of a PC 25850 conviction?</a></li>
+<li><a href="#5.2">5.2. Can I expunge my California Penal Code 25850 PC conviction?</a></li>
+<li><a href="#5.3">5.3. Can I own firearms after a PC 25850 conviction?</a></li>
+</ul>
+</ul>
+<p>If, after reading this article, you would like more information, we invite you to contact us at Shouse Law Group.</p>
+<h2>
+<a class="anchor" name="1"></a>1. What is the legal definition of “carrying a loaded firearm in a public place”?</h2>
+<p>Penal Code 25850(a) reads as follows:</p>
+<p>“A person is guilty of carrying a loaded firearm when the person carries a loaded firearm on the person or in a vehicle while in any public place or on any public street in an incorporated city or in any public place or on any public street in a prohibited area of unincorporated territory.”<sup class="fn">3</sup></p>
+<p>Let's take a look at some of these terms to gain a better understanding of their legal definitions.</p>
+<p><strong><em>"Loaded"</em></strong></p>
+<p>A firearm is “loaded” when there is:</p>
+<ol>
+<li>an unexpended cartridge or shell,</li>
+<li>consisting of a case that holds a charge of powder and a bullet or shot,</li>
+<li>in, or attached in any manner to, the firearm…including, but not limited to, in the firing chamber, magazine, or clip thereof attached to the firearm.<sup class="fn">4</sup>
+</li>
+</ol>
+<p>A muzzle-loader firearm is considered loaded when:</p>
+<ol>
+<li>it is capped or primed, and</li>
+<li>has a powder charge and ball or shot in the barrel or cylinder.<sup class="fn">5</sup>
+</li>
+</ol>
+<p>And although it may seem illogical, prosecutors can convict you of carrying a loaded firearm in a vehicle or public place even if the gun is <em>inoperable</em>.<sup class="fn">6</sup></p>
+<p>In addition, if you carry a gun in public, a peace officer has the right to examine it to determine if it is loaded.  Refusal constitutes probable cause for arrest for violation of Penal Code 25850.<sup class="fn">7</sup></p>
+<p><em><strong>"Firearm"</strong></em></p>
+<p>A “firearm” under California's gun laws means:</p>
+<ol>
+<li>a device,</li>
+<li>designed to be used as a weapon,</li>
+<li>from which a projectile,</li>
+<li>is expelled through a barrel,</li>
+<li>by the force of an explosion or other form of combustion.<sup class="fn">8</sup>
+</li>
+</ol>
+<p>It also includes any:</p>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>rocket,</li>
+<li>rocket propelled projectile launcher, or</li>
+<li>similar device…</li>
+</ul>
+<p>containing any explosive or incendiary material…whether or not the device is designed for emergency or distress signaling purposes.”<sup class="fn">9</sup></p>
+<blockquote>
+<strong><em>Examples:</em></strong> Examples of “firearms”…which are synonymously referred to as "guns"…include (but are not limited to):</blockquote>
+<blockquote>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>pistols,</li>
+</ul>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>revolvers,</li>
+</ul>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>rifles,</li>
+</ul>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>shotguns,</li>
+</ul>
+<p>and</p>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>tasers.<sup class="fn">10</sup>
+</li>
+</ul>
+</blockquote>
+<blockquote>Excluded from the definition of “firearms” under Penal Code 25850 PC are:</blockquote>
+<blockquote>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>pellet guns,</li>
+</ul>
+<p>and</p>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>BB guns.<sup class="fn">11</sup>
+</li>
+</ul>
+</blockquote>
+<p><strong><em>"Public place"</em><br/></strong></p>
+<p>A “public place” is any place which is open to common and general use and is readily accessible by anyone wishing to go there.<sup class="fn">12</sup></p>
+<p><strong><em>"Prohibited area"</em></strong></p>
+<p>A “prohibited area” refers to “any place where it is unlawful to discharge a weapon.”<sup class="fn">13</sup></p>
+<h2>
+<a class="anchor" name="2"></a>2. How can I fight Penal Code 25850 PC charges?</h2>
+<p>There are a variety of legal defenses to this charge that a good California criminal defense attorney may present on to help you fight charges of carrying a loaded weapon.  Below are examples of some of the most common.</p>
+<h3>
+<a class="anchor" name="2.1"></a>2.1. You didn't realize you were carrying the firearm</h3>
+<p>If you don't know you are carrying a firearm, you aren't guilty of violating Penal Code 25850 PC.  This is because carrying a loaded firearm in public necessarily requires that you <em>know</em> the firearm is present.<sup class="fn">14</sup></p>
+<p>This defense works best when the gun is not actually on your person.  For instance, it could be in your car or in a bag that you are carrying.  If a gun is tucked inside your waistband, it's hard to argue you didn't know it was there.</p>
+<blockquote>
+<strong><em>Example:</em></strong> When security officers check your backpack at a <a href="http://www.nba.com/lakers/" target="_blank">Lakers</a> game, they find a loaded handgun at the bottom.  You accidentally grabbed your roommate's bag instead of yours and had no idea the gun was inside.</blockquote>
+<blockquote>Because you weren't aware of the gun's presence, you should be acquitted of this charge.</blockquote>
+<h3>
+<a class="anchor" name="2.2"></a>2.2. The firearm wasn't loaded</h3>
+<p>The offense is carrying a <em>loaded</em> firearm in public.  It therefore stands to reason that if the firearm wasn't loaded, you have not committed this offense.  However, you may be guilty of violating California Penal Code Section 26350(a), carrying an <em>unloaded</em> firearm in public.<sup class="fn">15</sup></p>
+<blockquote>
+<strong><em>Example:</em></strong> Let's say you are carrying a shotgun.  The shell or cartridge is in a storage compartment located in a separate area of the gun.  Because the ammunition hasn't been placed in a “firing” position, you aren't carrying a <em>loaded</em> firearm.<sup class="fn">16</sup>
+</blockquote>
+<p>Claiming that you <em>didn't know</em> the firearm was loaded will not serve as a legal defense to this crime.<sup class="fn">17</sup> However, if you can prove more than sheer ignorance…that is, that you had a legitimate, reasonable reason to believe that the gun, in fact, was <em>not</em> loaded…you may be able to prevail based on a “mistake of fact” defense.</p>
+<blockquote>
+<strong><em>Example:</em></strong> You always carry your unloaded 22 in your glove compartment. Unbeknownst to you, your brother had loaded the gun without your permission. You get pulled over and the cops recover the loaded pistol.  Nevertheless, you had a legitimate belief it was not loaded.</blockquote>
+<blockquote>Again, however, you may be guilty of violating California Penal Code Section 26350(a), carrying an <em>unloaded</em> firearm in public.</blockquote>
+<h3>
+<a class="anchor" name="2.3"></a>2.3. You didn't carry the firearm in public</h3>
+<p>Penal Code 25850 PC applies when you are:</p>
+<ol>
+<li>in any public place or on any public street in an <em>incorporated city</em> or,</li>
+<li>in any public place or on any public street in a <em>prohibited area</em> of any <em>unincorporated territory</em>.<sup class="fn">18</sup>
+</li>
+</ol>
+<p>Prohibited areas include government offices, schools, and post offices.</p>
+<p>If you weren't arrested in a public place or street, you should be acquitted of the charge.  You can't legally be convicted unless the prosecutor independently proves each “element” of the crime.</p>
+<blockquote>
+<strong><em>Example:</em></strong> Officers approach you while you are parked in your car on a street.  They see ammunition on the floor and ask whether you have any weapons in the car.  You tell them that you have a shotgun in the backseat and they arrest you for violating Penal Code 25850 PC.</blockquote>
+<blockquote>At your trial, your California criminal defense lawyer asks the officer if the street you were parked on was in an incorporated city.  The officer replies that he doesn't know.  Your attorney then asks the officer if there are any county ordinances that prohibit discharging a firearm in that area.  Again, the officer replies that he doesn't know.</blockquote>
+<blockquote>Given these facts, the officer (as part of the prosecution team) hasn't established a necessary element of the crime.   He can't prove that he arrested you on a public street in an incorporated city or in a prohibited area of an unincorporated territory.  As a result, you should be acquitted of this charge.<sup class="fn">19</sup>
+</blockquote>
+<h3>
+<a class="anchor" name="2.4"></a>2.4. Police misconduct</h3>
+<p>Unfortunately, police officers, like anyone else, are often driven by unethical motives that compel them to do unjust acts.  Some of these acts might include:</p>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>“planting” or “fabricating” evidence,</li>
+<li>creating a false report alleging you carried a gun on your person (turning in someone else's gun at the station),</li>
+<li>violating your <a href="http://www.law.cornell.edu/constitution/fourth_amendment" target="_blank">Fourth Amendment</a> right against unreasonable searches,<sup class="fn">20</sup>
+</li>
+<li>coercing your confession.</li>
+</ul>
+<p>And despite how reprehensible <a href="https://www.shouselaw.com/police-misconduct.html">police misconduct</a> is, it's not uncommon.</p>
+<p>As <a href="https://www.shouselaw.com/office-rancho.html">Rancho Cucamonga criminal defense attorney</a> John Murray explains:<sup class="fn">21</sup></p>
+<p>“Cops are just as capable as anyone to succumbing to anger, revenge, humiliation, or even a power trip to get control over another person.  With our team's former law enforcement experience, we know the best ways to investigate this outrageous conduct and how to convince the judge/jury that it took place.”</p>
+<h3>
+<a class="anchor" name="2.5"></a>2.5. You were carrying a gun in self-defense</h3>
+<p><a href="https://www.shouselaw.com/self-defense.html">California's self-defense law</a>… specifically addressed under Penal Code 26045 PC… allows you to carry a gun under two circumstances:</p>
+<p>1. under otherwise lawful circumstances where you reasonably believe that:</p>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>any person… or the property of any person…</li>
+<li>is in immediate, grave danger, and</li>
+<li>the carrying of the weapon is necessary for the preservation  of that person or property; or</li>
+</ul>
+<p>2. you reasonably believe</p>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>that you are in grave danger…</li>
+<li>because of circumstances forming the basis of a current restraining order issued by a court…</li>
+<li>against another person who has been found to pose a threat to your life or safety.<sup class="fn">22</sup>
+</li>
+</ul>
+<p>Whether your belief of grave danger is reasonable is an <em>objective</em> standard.  A judge and/or jury will decide how a reasonable person would have acted in your situation.<sup class="fn">23</sup></p>
+<h2>
+<a class="anchor" name="3"></a>3. Am I exempt from prosecution under Penal Code 25850 PC?</h2>
+<p>Certain people are exempt from the prohibitions of California Penal Code 25850 PC.</p>
+<p>If you are fall into one of the below categories, you have not unlawfully carried a loaded firearm in public.</p>
+<h3>
+<a class="anchor" name="3.1"></a>3.1. Penal Code 25900 and 26020 PC -- Peace officers and federal agents</h3>
+<p>California Penal Code 25900 PC states that you may carry a loaded firearm in a public place if you are:</p>
+<ol>
+<li>A California peace officer, whether active or honorably retired,</li>
+<li>A full-time paid peace officer of another state or the federal government who is carrying out official duties while in California, or</li>
+<li>Any person summoned by any of these officers to assist in making arrests or preserving the peace while the person is actually engaged in assisting that officer.<sup class="fn">24</sup>
+</li>
+</ol>
+<p>You may carry a loaded firearm under California Penal Code 26020 PC if:</p>
+<ol>
+<li>you are an honorably retired federal officer or agent of any federal law enforcement agency, and</li>
+<li>you have the approval of the sheriff of the county in which you reside.<sup class="fn">25</sup>
+</li>
+</ol>
+<p>Federal law enforcement agencies include (but are not limited to):</p>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>the <a href="https://www.fbi.gov/" target="_blank">Federal Bureau of Investigation</a> (FBI),</li>
+<li>the <a href="http://www.atf.gov/" target="_blank">Federal Bureau of Alcohol, Tobacco, Firearms and Explosives</a> (ATF),</li>
+<li>the United States Drug Enforcement Administration (DEA), and</li>
+<li>the Internal Revenue Service (IRS).<sup class="fn">26</sup>
+</li>
+</ul>
+<h3>
+<a class="anchor" name="3.2"></a>3.2. Penal Code 26000 PC – members of the military</h3>
+<p>California Penal Code 26000 states that 25850 does not apply to members of the military.</p>
+<p>The exemption applies to members of the forces of California or of the United States engaged in the performance of their duties.<sup class="fn">27</sup></p>
+<h3>
+<a class="anchor" name="3.3"></a>3.3. Penal Code 26025 PC -- POST certification</h3>
+<p>California Penal Code 26025 PC exempts specific individuals who have completed a “regular course in firearms training approved by the <a href="http://www.post.ca.gov/" target="_blank">Commission on Peace Officer Standards and Training</a>”.</p>
+<p>Examples of individuals included in this group are:</p>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>animal control police or zookeepers, and</li>
+<li>harbor patrol police officers.<sup class="fn">28</sup>
+</li>
+</ul>
+<h3>
+<a class="anchor" name="3.4"></a>3.4. Penal Code 26005 and 26040 PC – recreational shooters</h3>
+<p>California Penal Code 26005 allows you to carry a loaded gun:</p>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>if you are using a target range for the purpose of practice shooting with a firearm, or</li>
+<li>while hunting on the premises of a shooting club of which you are a member.<sup class="fn">29</sup>
+</li>
+</ul>
+<p>Additionally, California Penal Code 26040 permits people to carry a loaded firearm while engaged in hunting.  This exemption is subject to hunting at that place and time not being prohibited by the city council.<sup class="fn">30</sup></p>
+<p>You must, however, carry your gun to and from these places in a locked container.<sup class="fn">31</sup></p>
+<h3>
+<a class="anchor" name="3.5"></a>3.5. Penal Code 26010 – People with concealed carry permits</h3>
+<p>People who have a <a href="https://www.shouselaw.com/concealed-weapon.html">California permit to carry a concealed firearm</a> are exempt from the prohibition against carrying a loaded gun.<sup class="fn">32</sup></p>
+<h3>
+<a class="anchor" name="3.6"></a>3.6. Penal Code 26015 and 26030 PC – Armored vehicle guards, security guards and private investigators</h3>
+<p>California Penal Code sections 26015 and 26030 PC allow other specified individuals to carry a gun as long as certain conditions are met.  These individuals include:</p>
+<ol>
+<li>armored vehicle guards,<sup class="fn">33</sup>
+</li>
+<li>security guards,<sup class="fn">34</sup> and</li>
+<li>private investigators.<sup class="fn">35</sup>
+</li>
+</ol>
+<h3>
+<a class="anchor" name="3.7"></a>3.7. Penal Code 26035 -- Business owners and private property owners</h3>
+<p>California Penal Code 26035 PC states that the crime of carrying a loaded firearm in a public place doesn't apply to:</p>
+<ol>
+<li>people who are engaged in a lawful business who have a loaded firearm in that place of business, or</li>
+<li>people in lawful possession of private property who have a loaded firearm on that property.<sup class="fn">36</sup>
+</li>
+</ol>
+<p>But notice that this exclusion applies to <em>having</em> a loaded firearm.  California courts have held that “having” a loaded firearm is not the same as “carrying” a loaded firearm.  “Having” is synonymous with possession; “carrying” involves a physical act.<sup class="fn">37</sup></p>
+<p>So while you may be allowed to <em>have</em> a loaded gun in your place of business or in your home, absent another lawful exception or the need for self-defense, you are not allowed to <em>carry</em> it, unless you have an immediate need for self-defense.<sup class="fn">38</sup></p>
+<p>And even all of the above subdivisions have caveats and exclusions…which is why it is important to consult with a criminal defense attorney who understands the complex nature of California's firearm laws.</p>
+<h2>
+<a class="anchor" name="4"></a>4. What are the penalties for PC 25850 carrying a loaded firearm in public?</h2>
+<h3>
+<a class="anchor" name="4.1"></a>4.1. Misdemeanor violations of Penal Code 25850 PC</h3>
+<p>Absent aggravating circumstances, carrying a loaded firearm in a vehicle or on your person is a misdemeanor. If convicted of this offense, you face:</p>
+<ol>
+<li>informal (otherwise known as “summary”) probation,</li>
+<li>up to one (1) year in a county jail, and/or</li>
+<li>a maximum $1,000 fine.<sup class="fn">39</sup>
+</li>
+</ol>
+<h3>
+<a class="anchor" name="4.2"></a>4.2. “Wobbler” provisions of Penal Code 25850 PC</h3>
+<p>When there are aggravating factors, those circumstances elevate a 25850 PC violation to a “wobbler” or a “straight” felony.  A “wobbler” is an offense that prosecutors can file as either a misdemeanor or a felony, depending on:</p>
+<ol>
+<li>the circumstances of the offense, and</li>
+<li>your criminal history.</li>
+</ol>
+<p>A Penal Code 25850 violation becomes a wobbler when…in addition to carrying a loaded firearm in a public place or in a car…you:</p>
+<ol>
+<li>were previously convicted of a misdemeanor crime against a person or property, or of a narcotics or dangerous <a href="https://www.shouselaw.com/drug-crimes.html">California drug crime law</a>,<sup class="fn">40</sup> or</li>
+<li>are not listed as the registered owner of the loaded handgun with the <a href="http://www.ag.ca.gov/" target="_blank">Department of Justice</a>.<sup class="fn">41</sup>
+</li>
+</ol>
+<p>If you are convicted of carrying a firearm in a public place or in a vehicle as a misdemeanor under one of these wobbler subdivisions, you face the same misdemeanor penalties listed above.</p>
+<p>If you are convicted of this offense as a felony, you face:</p>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>16 months, or two (2) or three (3) years in county jail, and</li>
+<li>a fine of up to $1,000.</li>
+</ul>
+<h3>
+<a class="anchor" name="4.3"></a>4.3. Straight felonies under Penal Code 25850 PC</h3>
+<p>There are four remaining sentencing schemes that are outlined in Penal Code 25850 PC.  All of these are straight felonies (meaning they cannot be reduced to misdemeanors).</p>
+<p>If you are convicted of carrying a loaded firearm on your person or in your car…and any of the certain conditions apply…you face:</p>
+<ol>
+<li>up to one-year county jail or 16 months, or two (2) or three (3) years in county jail, and/or</li>
+<li>a maximum $10,000 fine.</li>
+</ol>
+<p>These conditions include:</p>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>previously being convicted of a felony or any other offense under <a href="https://www.shouselaw.com/firearm-offenses.html">California gun laws</a>,<sup class="fn">42</sup>
+</li>
+<li>situations in which the loaded firearm is stolen <em>and</em> you know or have reasonable cause to believe that the gun is stolen,<sup class="fn">43</sup>
+</li>
+<li>unlawfully possessing the firearm or otherwise being prohibited from owning or possessing a firearm,<sup class="fn">44</sup> and</li>
+<li>being an active participant in a criminal street gang.<sup class="fn">45</sup>
+</li>
+</ul>
+<p>Note that you may be found guilty of active participation in a gang even if your PC 25850 carrying a loaded firearm isn't connected to your involvement with the gang.<sup class="fn">46</sup></p>
+<p>And keep in mind that just because prosecutors charge you as a felony doesn't mean that the jury will convict you of the felony offense.  If the jury believes that you carried a loaded gun in public or in your car…but doesn't believe that you fall within one of the categories that elevates the offense to a felony…it could alternatively convict you of only a misdemeanor.<sup class="fn">47</sup></p>
+<h3>
+<a class="anchor" name="4.4"></a>4.4. Violation of Penal Code 25850 after prior firearm convictions</h3>
+<p>If you are convicted of any Penal Code 25850 PC violation…and have previously been convicted of:</p>
+<ul class="bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets bullets">
+<li>
+<a href="https://www.shouselaw.com/assault-weapon.html">California Penal Code 254 PC -- “assault with a deadly weapon”</a>,</li>
+<li>
+<a href="https://www.shouselaw.com/pc246.html">Penal Code 246 PC -- “shooting at an inhabited dwelling house or car”</a>,</li>
+<li>
+<a href="https://www.shouselaw.com/brandishing-weapon-pc417.html">Penal Code 417 PC -- California's “brandishing a weapon” law</a>, or</li>
+<li>any other California firearm offense…</li>
+</ul>
+<p>you must serve a <em>minimum</em> three (3) month county jail sentence.<sup class="fn">48</sup></p>
+<h2>
+<a class="anchor" name="5"></a>5. What are the collateral consequences of a Penal Code 25850 conviction?</h2>
+<h3>
+<a class="anchor" name="5.1"></a>5.1. What are the immigration consequences of a PC 25850 conviction?</h3>
+<p>If you are a legal immigrant or legal alien, a Penal Code 25850 PC conviction could additionally result in deportation.<sup class="fn">49</sup> For more information about how California's firearm laws affect aliens, please visit our article on <a href="https://www.shouselaw.com/deportable-crimes.html">California crimes that lead to deportation</a>.</p>
+<h3>
+<a class="anchor" name="5.2"></a>5.2. Can I expunge my California Penal Code 25850 PC conviction?</h3>
+<p>If you are granted probation in a misdemeanor or felony Penal Code 25850 PC case, you may <a href="https://www.shouselaw.com/expunge-criminal-records.html">expunge your California criminal record</a> once you successfully complete the probationary period.  However, the judge can deny you an expungement if you suffer a probation violation or fail to adhere to all the terms and conditions of probation.<sup class="fn">50</sup></p>
+<p>And if you are charged with carrying a loaded firearm in public as a felony, the court may be willing to <a href="https://www.shouselaw.com/reducing-felony-to-misdmeanor.html">reduce the wobbler from a felony to a misdemeanor</a>.<sup class="fn">51</sup> The court may also grant an <a href="https://www.shouselaw.com/early-probation-termination.html">early termination of probation</a> if you comply with all the terms and conditions of probation for the first year or two.<sup class="fn">52</sup></p>
+<h3>
+<a class="anchor" name="5.3"></a>5.3. Can I own firearms after a PC 25850 conviction?</h3>
+<p>A <em>misdemeanor</em> conviction for carrying a loaded firearm in public won't by itself revoke your right to own or possess a firearm.  That said, if you are adjudged a ward of the juvenile court based on a Penal Code 25850 PC misdemeanor conviction, you will be prohibited from owning or possessing a firearm until you are 30 years old.<sup class="fn">53</sup></p>
+<p>But if you get convicted as a <em>felony</em>, you will be prohibited from purchasing, receiving, owning, or possessing a firearm for life.<sup class="fn">54</sup> For a more detailed discussion, visit our page on <a href="https://www.shouselaw.com/felon-firearm.html">California's “Felon with a Firearm” law, Penal Code 29800 PC</a>.</p>
+<p>If you are convicted of a felony under one of the “wobbler” subdivisions of Penal Code 25850 PC…and you successfully have the felony reduced to a misdemeanor…your gun rights will be restored.  Absent that, there are very few avenues of firearm rights restoration.</p>
+<p>Typically, a <a href="https://www.shouselaw.com/certificates-of-rehabilitation.html">certificate of rehabilitation</a> and/or a <a href="https://www.shouselaw.com/governor-pardons.html">governor's pardon</a> would <a href="https://www.shouselaw.com/gun-restoration.html">restore your California gun rights</a>.  But even those remedies don't apply to offenses that involve the <em>use</em> of a dangerous weapon.<sup class="fn">55</sup></p>
+<p>California law defines “dangerous weapon” as any weapon, instrument, or object that is capable of being used to inflict great bodily injury or death.<sup class="fn">56</sup> A loaded firearm under PC 25850 therefore qualifies as a dangerous weapon.</p>
+<h2>Call us for help…</h2>
+<div class="insertion image" data-insertion-id="139387" id="insertion_139387">
+<div class="insertedImage"><img alt="loaded firearm legal defense california attorneys" data-remove="true" src="https://s3.amazonaws.com/law-media/uploads/131/52741/large/female_operator_smiling_ss.jpg?1526684159" style="width: 500px; height: 334px;"/><div class="captionContainer" style="width: 500px;"><div class="text caption" data-remove="true" style="width: 510px;">Call us for help</div></div></div>
+</div>
+<p>If you or loved one is charged with Penal Code 25850 PC carrying a loaded firearm and you are looking to hire an attorney for representation, we invite you to contact us at Shouse Law Group. We can provide a free consultation in office or by phone. We have local offices in Los Angeles, the San Fernando Valley, Pasadena, Long Beach, Orange County, Ventura, San Bernardino, Rancho Cucamonga, Riverside, San Diego, Sacramento, Oakland, San Francisco, San Jose and throughout California.</p>
+<p>Additionally, our Las Vegas Nevada criminal defense attorneys represent clients accused of violating <a href="https://www.shouselaw.com/nevada/weaponhub.html">Nevada's firearm laws</a>.  For more information, we invite you to contact our local attorneys at one of our Nevada law offices, located in Reno and Las Vegas.<sup class="fn">57</sup></p>
+<hr/>
+<h4>Legal References:</h4>
+<div class="footnotes">
+<ol>
+<ol>
+<li id="fn:1">California Penal Code 25850 PC replaced former Penal Code 12031 without substantive changed effective January 1, 2012.
+<p>California Penal Code 25850 PC -- Caryrying a loaded firearm in public, subdivision "a". ("A person is guilty of carrying a loaded firearm when the person carries a loaded firearm on the person or in a vehicle while in any public place or on any public street in an incorporated city or in any public place or on any public street in a prohibited area of unincorporated territory.")</p>
+<p>See also California Penal Code 25850(c) Carrying a loaded firearm penalties. </p>
+</li>
+<li id="fn:2">Same.</li>
+<li id="fn:3">California Penal Code 25850 PC -- Carrying a loaded firearm in public, subdivision “a”, endnote 1, above.</li>
+<li id="fn:4">California Penal Code 16840(b)(1) -- As used in Chapter 2 (commencing with Section 25100) of Division 4 of Title 4, in subparagraph (A) of paragraph (6) of subdivision (c) of Section 25400, and in Sections 25850 to 26055, inclusive, (1) A firearm shall be deemed to be "loaded" when there is an unexpended cartridge or shell, consisting of a case that holds a charge of powder and a bullet or shot, in, or attached in any manner to, the firearm, including, but not limited to, in the firing chamber, magazine, or clip thereof attached to the firearm.
+<p>See also <a class="insertion link" data-insertion-id="155905" href="https://law.justia.com/cases/california/court-of-appeal/4th/45/1147.html" id="insertion_155905" target="_blank">People v. Clark (1996) 45 Cal. App. 4th 1147</a> (“[T]he Legislature's use of the phrase "attached in any manner" to the firearm was intended to encompass a situation where a shell or cartridge might be attached to a firearm or "loaded" for firing by some unconventional method. The phrase does not demonstrate a clear Legislative intent to deem a firearm loaded no matter how a shell is attached to a firearm; in particular, it does not indicate a clear intent to deem a gun "loaded" when the ammunition, as here, is in a storage compartment which is not equivalent to either a magazine or clip and from which the ammunition cannot be fired.”).</p>
+</li>
+<li id="fn:5">California Penal Code 16840(b)(2) -- Notwithstanding paragraph (1), a muzzle-loader firearm shall be deemed to be loaded when it is capped or primed and has a powder charge and ball or shot in the barrel or cylinder.</li>
+<li id="fn:6">People v. Taylor (1984) 151 Cal.App.3d 432, 437.  (“The obvious intent of the legislature in each instance is to proscribe aspects of firearm possession to protect society. As has been pointed out, it does not matter the firearm does not work when it is seen by a victim of crime, an innocent bystander or a member of law enforcement. The possession of a firearm under the enumerated circumstances constitutes a threat…A firearm need not be operable to convict under [California] Penal Code section 12031, subdivision (a).</li>
+<li id="fn:7">California Penal Code 25850 (b) -- In order to determine whether or not a firearm is loaded for the purpose of enforcing this section, peace officers are authorized to examine any firearm carried by anyone on the person or in a vehicle while in any public place or on any public street in an incorporated city or prohibited area of an unincorporated territory. Refusal to allow a peace officer to inspect a firearm pursuant to this section constitutes probable cause for arrest for violation of this section.</li>
+<li id="fn:8">California Penal Code 16520(a)  -- As used in this part, "firearm" means a device, designed to be used as a weapon, from which is expelled through a barrel, a projectile by the force of an explosion or other form of combustion.</li>
+<li id="fn:9">California Penal Code 16520(c) -- …"firearm" also includes a rocket, rocket propelled projectile launcher, or similar device containing an explosive or incendiary material, whether or not the device is designed for emergency or distress signaling purposes…
+<p>See also People v. Norton (1978) 80 Cal.App.3d Supp. 14, 25.  (“The word, ‘firearm,' includes a pistol, revolver or rifle, or any other device designed to be used as a weapon from which a projectile may be expelled by the force of any explosion or other form of combustion.”)</p>
+</li>
+<li id="fn:10">See also People v. Heffner (1977) 70 Cal.App.3d 643, 652.  (“To summarize, we conclude that a Taser is a firearm and can be a loaded firearm within [former] section 12031 [California's “carrying a loaded firearm in public” law]. In other words, the question presented for determination, whether section 12031, subdivision (a) applies to the weapon known as a ‘Taser' is answered in the affirmative.”)</li>
+<li id="fn:11">California Penal Code 16250 -- As used in this part, "BB device" means any instrument that expels a projectile, such as a BB or a pellet, not exceeding 6mm caliber, through the force of air pressure, gas pressure, or spring action, or any spot marker gun.
+<p>Note:  Since these weapons rely on the force of air pressure and not combustion, they do not qualify as firearms.</p>
+</li>
+<li id="fn:12">California Jury Instructions – Criminal – CALCJI 16.431 -- The term “public place” means any place which is open to common or general use, participation and enjoyment by members of the public. [A person may be guilty of a crime of if [he] [she] is in a public place in the condition described even if [he] [she] is not visible to public view.] [A public place is also a location that is readily accessible to all those who may wish to go there even though not a place that the general public also frequents.]</li>
+<li id="fn:13">California Penal Code 17030 PC.  As used in this part, "prohibited area" means any place where it is unlawful to discharge a weapon.</li>
+<li id="fn:14">Judicial Council Of California Criminal Jury Instruction CALCRIM 2530 -- Carrying a loaded firearm in public --To prove that the defendant is guilty of this crime, the People must prove that:[1] The defendant carried a loaded firearm (on (his/her) person/in a vehicle); [2] The defendant knew that (he/she) was carrying a firearm; AND [3] At that time, the defendant was in a public place or on a public street in (an incorporated city/in an unincorporated area where it was unlawful to discharge a firearm).</li>
+<li id="fn:15">California Penal Code Section 26350(a). (1) A person is guilty of openly carrying an unloaded handgun when that person carries upon his or her person an exposed and unloaded handgun outside a vehicle while in or on any of the following: (A) A public place or public street in an incorporated city or city and county. (B) A public street in a prohibited area of an unincorporated area of a county or city and county. (C) A public place in a prohibited area of a county or city and county.  (2) A person is guilty of openly carrying an unloaded handgun when that person carries an exposed and unloaded handgun inside or on a vehicle, whether or not on his or her person, while in or on any of the following:(A) A public place or public street in an incorporated city or city and county (B) A public street in a prohibited area of an unincorporated area of a county or city and county. (C) A public place in a prohibited area of a county or city and county.</li>
+<li id="fn:16">People v. Clark (1996) 45 Cal.App.4th 1147, 1153.  (“Under the commonly understood meaning of the term “loaded,” a firearm is “loaded” when a shell or cartridge has been placed into a position from which it can be fired; the shotgun is not “loaded” if the shell or cartridge is stored elsewhere and not yet placed in a firing position. The shells here were placed in a separate storage compartment of the shotgun and were not yet “loaded” as the term is commonly understood.”)</li>
+<li id="fn:17">People v. Dillard (1984) 154 Cal.App.3d 261, 267.  (“Since knowledge that the weapon is loaded is not an element of the offense of violation of [former Penal Code] section 12031, subdivision (a), [California's “carrying a loaded firearm in public” law] lack of such knowledge is not a defense.”)</li>
+<li id="fn:18">See Penal Code 25850(a), endnote 1, above.</li>
+<li id="fn:19">These facts were loosely based on <a class="insertion link" data-insertion-id="155906" href="https://www.courtlistener.com/opinion/2259621/people-v-knight/" id="insertion_155906" target="_blank">People v. Knight (2004) 121 Cal.App.4th 1568</a> where the court held that “[former Penal Code] Section 12031, subdivision (a)(1) [California's “carrying a loaded firearm in public” law, now PC 25850], however, does not criminalize the possession of a loaded firearm unless defendant carries it on his or her person or in a vehicle while in any public place or on any public street in an incorporated city or unless defendant carries it on his or her person or in a vehicle while in any public place or on any public street in a prohibited area of unincorporated territory.”</li>
+<li id="fn:20">AMENDMENT IV<br/>The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures, shall not be violated, and no warrants shall issue, but upon probable cause, supported by oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized.</li>
+<li id="fn:21">Rancho Cucamonga criminal defense attorney John Murray represents clients accused of gun offenses throughout the Inland Empire and San Gabriel Valley, including Ontario, Fontana, Chino, Pomona, West Covina and Alhambra.</li>
+<li id="fn:22">California Penal Code 26045 PC. (a) Nothing in Section 25850 [California's carrying a loaded firearm law] is intended to preclude the carrying of any loaded firearm, under circumstances where it would otherwise be lawful, by a person who reasonably believes that any person or the property of any person is in immediate, grave danger and that the carrying of the weapon is necessary for the preservation of that person or property. (b) A violation of Section 25850 is justifiable when a person who possesses a firearm reasonably believes that person is in grave danger because of circumstances forming the basis of a current restraining order issued by a court against another person who has been found to pose a threat to the life or safety of the person who possesses the firearm. This subdivision may not apply when the circumstances involve a mutual restraining order issued pursuant to Division 10 (commencing with Section 6200) of the Family Code absent a factual finding of a specific threat to the person's life or safety. It is not the intent of the Legislature to limit, restrict, or narrow the application of current statutory or judicial authority to apply this or other justifications to a defendant charged with violating Section 25400 or committing another similar offense. Upon trial for violating Section 25850, the trier of fact shall determine whether the defendant was acting out of a reasonable belief that the defendant was in grave danger. (c) As used in this section, "immediate" means the brief interval before and after the local law enforcement agency, when reasonably possible, has been notified of the danger and before the arrival of its assistance.</li>
+<li id="fn:23">People v. Humphrey, (1996) 13 Cal.4th 1073, 1083. ("Although the belief in the need to defend [that is, the need to assert self-defense, as in a PC 25850 carrying a loaded firearm case] must be objectively reasonable, a jury must consider what "would appear to be necessary to a reasonable person in a similar situation and with similar knowledge…" (CALJIC No. 5.50.) It judges reasonableness "from the point of view of a reasonable person in the position of defendant…")</li>
+<li id="fn:24">
+<a class="insertion link" data-insertion-id="176808" href="https://www.shouselaw.com/penal-code.html" id="insertion_176808">California Penal Code</a> 25900 PC.</li>
+<li id="fn:25">California Penal Code 26020 PC.</li>
+<li id="fn:26">See same.</li>
+<li id="fn:27">California Penal Code 26000 PC.  Section 25850 [California's carrying a loaded firearm law] does not apply to members of the military forces of this state or of the United States engaged in the performance of their duties.</li>
+<li id="fn:28">California Penal Code 26025 PC.</li>
+<li id="fn:29">California Penal Code 26005 PC.</li>
+<li id="fn:30">California Penal Code 26040 PC.  Nothing in Section 25850 [PC] shall prevent any person from carrying a loaded firearm in an area within an incorporated city while engaged in hunting, provided that the hunting at that place and time is not prohibited by the city council.</li>
+<li id="fn:31">California Penal Code 25610.  (a) Section 25400 shall not be construed to prohibit any citizen of the United States over the age of 18 years who resides or is temporarily within this state, and who is not prohibited by state or federal law from possessing, receiving, owning, or purchasing a firearm, from transporting or carrying any pistol, revolver, or other firearm capable of being concealed upon the person, provided that the following applies to the firearm: (1) The firearm is within a motor vehicle and it is locked in the vehicle's trunk or in a locked container in the vehicle. (2) The firearm is carried by the person directly to or from any motor vehicle for any lawful purpose and, while carrying the firearm, the firearm is contained within a locked container. (b) The provisions of this section do not prohibit or limit the otherwise lawful carrying or transportation of any pistol, revolver, or other firearm capable of being concealed upon the person in accordance with the provisions listed in Section 16580.</li>
+<li id="fn:32">California Penal Code 26010 PC.  Section 25850 [PC] does not apply to the carrying of any handgun by any person as authorized pursuant to Chapter 4 (commencing with Section 26150) of Division 5.</li>
+<li id="fn:33">California Penal Code 26015 PC.  Section 25850 [PC, carrying a loaded firearm] does not apply to any armored vehicle guard, as defined in Section 7582.1 of the Business and Professions Code.</li>
+<li id="fn:34">California Penal Code 26015 PC.  Section 25850 [PC] does not apply to any armored vehicle guard, as defined in Section 7582.1 of the Business and Professions Code.</li>
+<li id="fn:35">California Penal Code 26030 PC.</li>
+<li id="fn:36">California Penal Code 26035 PC.  Nothing in Section 25850 [PC] shall prevent any person engaged in any lawful business, including a nonprofit organization, or any officer, employee, or agent authorized by that person for lawful purposes connected with that business, from having a loaded firearm within the person's place of business, or any person in lawful possession of private property from having a loaded firearm on that property.</li>
+<li id="fn:37">People v. Overturf (1976) 64 Cal.App.3d Supp. 1, 5.  (“It can thus be seen that none of the subdivisions …of [former Penal Code 12031 PC, California's “carrying a firearm in public” law] expressly create any exemptions from the liability established for violation of subdivision (a). Rather, subdivisions (f) through (j) are legislative statements of the intent of the section not to prevent or preclude particular kinds of conduct specified in those sections. What is that conduct? When it involves hunting not otherwise prohibited (subd. (g)), or making a lawful defense of one's person or property (subd. (h)), or engaging in the act of making or attempting to make a lawful arrest (subd. (i)) the statute states that nothing in the section shall prevent or preclude the carrying of a loaded firearm. But, when it refers to geographical areas where certain conduct is permitted - “place of business” and “private property” in subdivision (f) [currently subdivision (h)] and “place of residence including any temporary residence or campsite” in subdivision (j), the statute [that is, California Penal Code 25850 PC] states that nothing in the section shall prevent any person from having a loaded weapon.”)</li>
+<li id="fn:38">California Penal Code 26045(a), endnote 22, above.
+<p>See also Peruta v. County of San Diego (2010) 758 F. Supp. 2d 1106 (“[T]he provisions of [former] section 12031 … expressly permit loaded open carry for immediate self-defense.”)</p>
+</li>
+<li id="fn:39">California Penal Code 25850(c) Carrying a loaded firearm -- Carrying a loaded firearm in violation of this section is punishable, as follows: …(7) In all cases other than those specified in paragraphs (1) to (6), inclusive, as a misdemeanor, punishable by imprisonment in a county jail not to exceed one year, by a fine not to exceed one thousand dollars ($1,000), or by both that imprisonment and fine.</li>
+<li id="fn:40">California Penal Code 25850(c)(5) Carrying a loaded firearm -- Where the person has been convicted of a crime against a person or property, or of a narcotics or dangerous drug violation, by imprisonment pursuant to subdivision (h) of Section 1170, or by imprisonment in a county jail not to exceed one year, by a fine not to exceed one thousand dollars ($1,000), or by both that imprisonment and fine.</li>
+<li id="fn:41">California Penal Code 25850(c)(6) Carrying a loaded firearm -- Where the person is not listed with the Department of Justice pursuant to Section 11106 as the registered owner of the handgun, by imprisonment pursuant to subdivision (h) of Section 1170, or by imprisonment in a county jail not to exceed one year, or by a fine not to exceed one thousand dollars ($1,000), or both that fine and imprisonment.</li>
+<li id="fn:42">California Penal Code 25850(c)(1) Carrying a loaded firearm -- Where the person previously has been convicted of any felony, or of any crime made punishable by a provision listed in Section 16580, as a felony.</li>
+<li id="fn:43">California Penal Code 25850(c)(2) Carrying a loaded firearm -- Where the firearm is stolen and the person knew or had reasonable cause to believe that it was stolen, as a felony.
+<p>If you possess a gun you know is stolen, you may also be charged with Penal Code 496 Receiving Stolen Property. And if the evidence suggests you stole a gun, you could be charged with the more serious offense of Grand Theft Firearm.</p>
+</li>
+<li id="fn:44">“Unlawful possession of a firearm” means that you have taken the gun without permission from the gun's lawful owner or from a person who had lawful custody of the weapon. See also California Penal Code 25850(c)(4) -- Where the person is not in lawful possession of the firearm, or is within a class of persons prohibited from possessing or acquiring a firearm pursuant to Chapter 2 (commencing with Section 29800) or Chapter 3 (commencing with Section 29900) of Division 9 of this title, or Section 8100 or 8103 of the Welfare and Institutions Code, as a felony.
+<p>And see California's “Felon with a Firearm” law, Penal Code 29800 PC.</p>
+</li>
+<li id="fn:45">California Penal Code 25850(c)(3) -- Where the person is an active participant in a criminal street gang, as defined in subdivision (a) of Section 186.22, under the Street Terrorism Enforcement and Prevention Act (Chapter 11 (commencing with Section 186.20) of Title 7 of Part 1), as a felony. See also California Penal Code 672 PC -- Offenses for which no fine prescribed; fine authorized in addition to imprisonment.  (“Upon a conviction for any crime punishable by imprisonment in any jail or prison, in relation to which no fine is herein prescribed, the court may impose a fine on the offender not exceeding one thousand dollars ($1,000) in cases of misdemeanors or ten thousand dollars ($10,000) in cases of felonies [including felony PC 25850], in addition to the imprisonment prescribed.”)</li>
+<li id="fn:46">People v. Schoppe-Rico (2006) 140 Cal.App.4th 1370, 1372.  (“In the published portion of this opinion, we examine and interpret the street gang firearm possession statutes, and conclude, as a matter of first impression, that they do not require proof that the charged firearm possession was connected with the underlying gang participation…and at 1381…the Legislature intended the street gang firearms statutes to make it possible to convict active gang members of a felony whenever they are found in possession of a loaded or concealed firearm, even when the prosecution cannot establish any temporal or causal connection between the firearm possession [including carrying a loaded firearm PC 25850] and gang activity. (<em>Robles, supra</em>, 23 Cal.4th at p. 1113, 99 Cal.Rptr.2d 120, 5 P.3d 176.)”)</li>
+<li id="fn:47">CALCRIM 2530 -- Carrying a loaded firearm in public.  Bench notes -- LESSER INCLUDED OFFENSES.  (“If the defendant is charged with one of the sentencing factors that makes this offense a felony, then the misdemeanor offense is a lesser included offense. The statute defines as a misdemeanor all violations of the statute not covered by the specified sentencing factors. (Pen. Code, § 12031(a)(2)(G).) The court must provide the jury with a verdict form on which the jury will indicate if the sentencing factor has been proved. If the jury finds that the sentencing factor has not been proved, then the offense should be set at a misdemeanor.”)</li>
+<li id="fn:48">California Penal Code 25850(d)(1) Every person convicted under this section who has previously been convicted of an offense enumerated in Section 23515, or of any crime made punishable under a provision listed in Section 16580, shall serve a term of at least three months in a county jail, or, if granted probation or if the execution or imposition of sentence is suspended, it shall be a condition thereof that the person be imprisoned for a period of at least three months. (2) The court shall apply the three-month minimum sentence except in unusual cases where the interests of justice would best be served by granting probation or suspending the imposition or execution of sentence without the minimum imprisonment required in this section or by granting probation or suspending the imposition or execution of sentence with conditions other than those set forth in this section, in which case, the court shall specify on the record and shall enter on the minutes the circumstances indicating that the interests of justice would best be served by that disposition.</li>
+<li id="fn:49">8 USC 1227 (a) -- Classes of deportable aliens.  Any alien (including an alien crewman) in and admitted to the United States shall, upon the order of the Attorney General, be removed if the alien is within one or more of the following classes of deportable aliens…(2) Criminal offenses…(C) Certain firearm offenses -- Any alien who at any time after admission is convicted under any law of purchasing, selling, offering for sale, exchanging, using, owning, possessing, or carrying, or of attempting or conspiring to purchase, sell, offer for sale, exchange, use, own, possess, or carry, any weapon, part, or accessory which is a firearm or destructive device (as defined in section 921(a) of title 18) in violation of any law is deportable.
+<p>Because Penal Code 25850 PC involves carrying a firearm, it is a California crime that can lead to deportation.</p>
+</li>
+<li id="fn:50">California Penal Code 1203.4 PC -- Change of plea. This section outlines the procedures by which a defendant can expunge his California Penal Code 2580 PC “carrying a loaded firearm in public” conviction from his criminal record.</li>
+<li id="fn:51">California Penal Code 17 -- Reducing a wobbler [including PC 25850] from a felony to a misdemeanor. </li>
+<li id="fn:52">California Penal Code 1203.3 PC -- Probation; revocation, modification, termination. This code section outlines the procedures that must be followed in order to qualify for early termination of probation in a California firearm case [including a PC 25850 case].</li>
+<li id="fn:53">California Penal Code 29820(b)-- Any person described in subdivision (a) shall not own, or have in possession or under custody or control, any firearm until the age of 30 years.</li>
+<li id="fn:54">See same.  (“(a)(1) Any person who has been convicted of a felony [including felony 'carrying a loaded firearm' under PC 25850] under the laws of the United States, the State of California, or any other state, government, or country or of an offense enumerated in subdivision (a), (b), or (d) of Section 12001.6, or who is addicted to the use of any narcotic drug, and who owns, purchases, receives, or has in his or her possession or under his or her custody or control any firearm is guilty of a felony.”)</li>
+<li id="fn:55">California Penal Code 4852.17 PC.</li>
+<li id="fn:56">CALJIC 17.16 -- Personal use of a dangerous or deadly weapon.  [“A deadly or dangerous weapon” means any weapon, instrument or object that is capable of being used to inflict great bodily injury or death[including a loaded firearm]."]
+<p>See also People v. James (1978) 88 Cal.App.3d 150, 160. </p>
+</li>
+<li id="fn:57">Please feel free to contact our Nevada criminal defense attorneys Michael Becker and Neil Shouse for any questions relating to Nevada's firearm laws. Their Nevada law offices are located in Reno and Las Vegas.</li>
+</ol>
+</ol>
+</div>
+</div>
+<p><span style="border-radius: 2px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font: bold 11px/20px 'Helvetica Neue',Helvetica,sans-serif; color: #ffffff; background: #bd081c  no-repeat scroll 3px 50% / 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer;">Save</span></p>
+<div id="breadcrumb-nav-footer">
+<ol>
+<li><a href="https://www.shouselaw.com/home"> Shouse Law Group </a></li>
+›
+<li><a href="https://www.shouselaw.com/"> Criminal Defense </a></li>
+›
+<li><a href="https://www.shouselaw.com/firearm-offenses.html"> Gun Laws </a></li>
+›
+<li><a href="https://www.shouselaw.com/25850.html"> Penal Code 25850: Carrying a Loaded Firearm in a Public Place </a></li>
+</ol>
+</div>
+</div>
+</div>
+<aside class="page_sidebar">
+<div class="sidebar">
+<div class="widget form" style="display: block;">
+<h4>Get Quick Legal Help</h4>
+<div class="formTitle">
+</div><p>Most responses within 5 minutes </p>
+<p class="notice" style="display:none;">Please stand by. A member of our staff usually responds within a few minutes</p>
+<p class="warning" style="display:none;">Please complete all required fields below.</p>
+<form accept-charset="UTF-8" action="/submit/196" data-remote="true" id="form_196" method="post"><input name="utf8" type="hidden" value="✓"/>
+<div class="__title___1562555467"><style media="screen">.__title___1562555467 {position:absolute!important;top:-9999px;left:-9999px;}</style><label for="__title__">If you are a human, ignore this field</label><input id="__title__" name="__title__" tabindex="-1" type="text"/></div>
+<input name="page_id" type="hidden" value="23348"/>
+<ul class="fields">
+<li class="single_line_text required">
+<label for="Name">Name <span class="required">*</span></label>
+<input class="input" id="contents_Name" name="contents[Name]" type="text"/>
+</li> <li class="single_line_text required">
+<label for="Phone">Phone <span class="required">*</span></label>
+<input class="input" id="contents_Phone" name="contents[Phone]" type="text"/>
+</li> <li class="single_line_text required">
+<label for="Email">Email <span class="required">*</span></label>
+<input class="input" id="contents_Email" name="contents[Email]" type="text"/>
+</li> <li class="single_line_text required">
+<label for="City_where_case_is_located">City where case is located <span class="required">*</span></label>
+<input class="input" id="contents_City_where_case_is_located" name="contents[City where case is located]" type="text"/>
+</li> <li class="multi_line_text required">
+<label for="Tell_us_what_happened">Tell us what happened <span class="required">*</span></label>
+<textarea class="input" id="contents_Tell_us_what_happened" name="contents[Tell us what happened]"></textarea>
+</li> <li class="buttons"><input data-disable-with="Submit" disable_with="One Moment" name="commit" onclick="_gaq.push(['_trackEvent','Legal Help Form','Submitted','https://www.shouselaw.com/25850.html']);" type="submit" value="Submit"/></li>
+</ul></form>
+</div>
+<div class="widget form btmForm">
+<h4>Contact Our Firm</h4>
+<div class="formTitle">
+</div><p>Most responses within 5 minutes.</p>
+<p class="notice" style="display:none;">Thank you for contacting us.  We will get back to you shortly.</p>
+<p class="warning" style="display:none;">Please complete all required fields below.</p>
+<form accept-charset="UTF-8" action="/submit/329" data-remote="true" id="form_329" method="post"><input name="utf8" type="hidden" value="✓"/>
+<div class="__title___1562555468"><style media="screen">.__title___1562555468 {display:none;}</style><label for="__title__">If you are a human, ignore this field</label><input id="__title__" name="__title__" tabindex="-1" type="text"/></div>
+<input name="page_id" type="hidden" value="23348"/>
+<ul class="fields">
+<li class="single_line_text required">
+<label for="Name">Name <span class="required">*</span></label>
+<input class="input" id="contents_Name" name="contents[Name]" type="text"/>
+</li> <li class="single_line_text required">
+<label for="Phone">Phone <span class="required">*</span></label>
+<input class="input" id="contents_Phone" name="contents[Phone]" type="text"/>
+</li> <li class="single_line_text">
+<label for="Email">Email </label>
+<input class="input" id="contents_Email" name="contents[Email]" type="text"/>
+</li> <li class="single_line_text required">
+<label for="City_where_case_is_located">City where case is located <span class="required">*</span></label>
+<input class="input" id="contents_City_where_case_is_located" name="contents[City where case is located]" type="text"/>
+</li> <li class="multi_line_text required">
+<label for="Tell_us_what_happened">Tell us what happened <span class="required">*</span></label>
+<textarea class="input" id="contents_Tell_us_what_happened" name="contents[Tell us what happened]"></textarea>
+</li> <li class="buttons"><input data-disable-with="Submit" disable_with="One Moment" name="commit" onclick="_gaq.push(['_trackEvent','Legal Help Form','Submitted','https://www.shouselaw.com/25850.html']);" type="submit" value="Submit"/></li>
+</ul></form>
+</div>
+<div class="widget free_form" style="display: none;">
+<div class="widget_content"><p><span class="display-in-nevada"></span><iframe allowfullscreen="1" frameborder="0" scrolling="no" src="https://shouselaw.us/nevada-contact-form/" style="width:100%; height: auto; min-height: 806px; overflow: hidden;"></iframe></p></div>
+</div>
+<div class="widget free_form" style="display: none;">
+<div class="widget_content"><p><span class="display-in-nevada nevada-popup"></span><iframe allowfullscreen="1" frameborder="0" scrolling="no" src="https://shouselaw.us/nevada-contact-form/" style="width:100%; height: auto; min-height: 806px; overflow: hidden;"></iframe></p></div>
+</div>
+<div class="widget free_form" style="display: none;">
+<div class="widget_content"><p><span class="display-in-colorado"></span><iframe allowfullscreen="1" frameborder="0" scrolling="no" src="https://shouselaw.us/colorado-contact-form/" style="width:100%; height: auto; min-height: 806px; overflow: hidden;"></iframe></p></div>
+</div>
+<div class="widget free_form" style="display: none;">
+<div class="widget_content"><p><span class="display-in-colorado colorado-popup"></span><iframe allowfullscreen="1" frameborder="0" scrolling="no" src="https://shouselaw.us/colorado-contact-form/" style="width:100%; height: auto; min-height: 806px; overflow: hidden;"></iframe></p></div>
+</div>
+<div class="widget free_form">
+<div class="widget_content"><p><span class="display-in-california"></span></p><div id="___ytsubscribe_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 209px; height: 48px;"><iframe data-gapiattached="true" frameborder="0" hspace="0" id="I0_1562555475498" marginheight="0" marginwidth="0" name="I0_1562555475498" ng-non-bindable="" scrolling="no" src="https://www.youtube.com/subscribe_embed?usegapi=1&amp;channelid=UCXTAY9DlvBqMEXh1paOdmOg&amp;layout=full&amp;count=default&amp;origin=https%3A%2F%2Fwww.shouselaw.com&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.D4Eh4BHvUNU.O%2Fam%3DwQE%2Fd%3D1%2Frs%3DAGLTcCPbw18SS5tux6PhVuTz5NV7ZASbtA%2Fm%3D__features__#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1562555475498&amp;_gfid=I0_1562555475498&amp;parent=https%3A%2F%2Fwww.shouselaw.com&amp;pfname=&amp;rpctoken=42240633" style="position: static; top: 0px; width: 209px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 48px;" tabindex="0" vspace="0" width="100%"></iframe></div><p></p></div>
+</div>
+<div class="widget free_form" style="display: none;">
+<div class="widget_content"><p><span class="display-in-nevada"></span></p><div id="___ytsubscribe_1" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 450px; height: 24px;"><iframe data-gapiattached="true" frameborder="0" hspace="0" id="I1_1562555475509" marginheight="0" marginwidth="0" name="I1_1562555475509" ng-non-bindable="" scrolling="no" src="https://www.youtube.com/subscribe_embed?usegapi=1&amp;channelid=UCdImDRB1DYfChU97WMXUxUA&amp;layout=full&amp;count=default&amp;origin=https%3A%2F%2Fwww.shouselaw.com&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.D4Eh4BHvUNU.O%2Fam%3DwQE%2Fd%3D1%2Frs%3DAGLTcCPbw18SS5tux6PhVuTz5NV7ZASbtA%2Fm%3D__features__#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I1_1562555475509&amp;_gfid=I1_1562555475509&amp;parent=https%3A%2F%2Fwww.shouselaw.com&amp;pfname=&amp;rpctoken=49143434" style="position: static; top: 0px; width: 450px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%"></iframe></div><p></p></div>
+</div>
+<div class="widget free_form">
+<div class="widget_content"><p><span class="display-in-california"></span></p><p>Featured on:</p><img src="https://s3.amazonaws.com/law-media/uploads/131/36520/original/media-logos-sidebar.png"/><p></p></div>
+</div>
+<div class="widget free_form" style="display: none;">
+<div class="widget_content"><p><span class="display-in-nevada"></span></p><p>Featured on:</p><img src="https://s3.amazonaws.com/law-media/uploads/131/36519/original/media-logos-sidebar-nevada.png"/><p></p></div>
+</div>
+</div>
+</aside>
+</section>
+</div>
+<!-- End Primary Content
+================================================== -->
+<div id="spaces_wrapper">
+<section id="spaces">
+<div class="spacer">
+<div class="space">
+<h3>Free attorney consultations...</h3>
+<p>The attorneys at Shouse Law Group bring more than 100 years collective experience fighting for individuals. We're ready to fight for you. Call us 24 hours a day, 365 days a year at 855-LAW-FIRM for a free case evaluation.</p>
+</div>
+</div>
+<div class="spacer">
+<div class="space">
+<h3>Regain peace of mind...</h3>
+<p>Shouse Law Defense Group has multiple locations throughout California. Click Office Locations to find out which office is right for you.</p>
+</div>
+</div>
+<div class="spacer">
+<div class="space">
+<h3><a href="https://www.shouselaw.com/all-locations">Office Locations</a></h3>
+<p>Shouse Law Group has multiple locations all across California, Nevada, and Colorado. Click Office Locations to find out which office is right for you.</p>
+</div>
+</div>
+</section>
+</div>
+<div class="footer_review_wrapper">
+<div class="footer_review">
+<div itemscope="" itemtype="http://schema.org/Review">
+<div itemprop="itemReviewed" itemscope="" itemtype="http://schema.org/Organization">
+<span itemprop="name">Shouse Law Group</span>
+</div>
+<span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+<span itemprop="ratingValue">5</span>
+</span>
+<span itemprop="reviewBody">The Shouse Law Group is the Best in town! Mark Russ is my brothers attorney and he has done such a great job with his case. Working with the Shouse Law Group has been such a breeze. they are all so friendly and kind and they really know their stuff. Emails, calls and text messages are returned in a timely matter. If anyone is looking for a great outcome please come to the Shouse Law Group, you will be in the best hands possible. I cannot thank them enough for all the hard work they have put into my Brothers case.</span>
+<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+<span itemprop="name">Carli Acevedo</span>
+</span>
+</div>
+<div class="footer_review_button">
+<a href="https://birdeye.com/shouse-law-group-144130712293164" rel="nofollow">See More Reviews</a>
+</div>
+</div>
+</div>
+<div class="footer_wrapper">
+<footer id="footer">
+<div class="footer_nav">
+<nav>
+<ul>
+<li class="home_link"><a href="/">Home</a></li>
+<li><a href="/nevada">Nevada Cases</a></li>
+<li><a href="/colorado">Colorado Cases</a></li>
+<li class="footer-attorney-link"><a href="/attorneys.html">Attorneys</a></li>
+<li class="footer-espanol-link"><a href="/es">¿Español?</a></li>
+<li class="footer-contact-link"><a href="/contact.html">Contact Us</a></li>
+</ul>
+</nav>
+</div>
+<div id="footer_logo">
+<div class="logo_image" style="display: block;">
+<img src="https://law-media.s3.amazonaws.com/layouts/35/assets/images/shouse-footer-logo.png"/>
+</div>
+<div class="footer_phone">Call us <a href="tel:(877) 504-7750" style="display: inline;">(877) 504-7750</a></div>
+</div>
+<div id="footer_text">
+<h3>Help is a Call Away</h3>
+<p>Our team of attorneys and investigators are available 356 days a year, ready to come to your aid. Call and tell us your situation. Let's see how we can help.</p>
+</div>
+</footer>
+<div id="copyright_wrapper">
+<div id="copyright">
+<div class="copyright_left">
+<p class="copyright_text">Copyright © 2019 Shouse Law Group, A.P.C.</p>
+<div class="disclaimers">
+<ul>
+<li><a href="/docs/terms-of-use">Terms of Use</a></li>
+<li><a href="/docs/privacy-policy">Privacy Policy</a></li>
+<li><a href="/docs/anti-spam">Anti-spam</a></li>
+</ul>
+</div>
+<div class="footer_badges">
+<img alt="" src="https://law-media.s3.amazonaws.com/layouts/35/assets/images/badges.png"/>
+</div>
+</div>
+<div class="copyright_right">
+<div class="social-links">
+<h4>Social</h4>
+<ul>
+<li class="facebook"><a href="http://www.facebook.com/ShouseLawGroup"></a></li>
+<li class="twitter"><a href="http://www.twitter.com/shouselaw"></a></li>
+<li class="youtube"><a href="http://www.youtube.com/user/CACriminalLawInfo"></a></li>
+<li class="rss_feed"><a href="/feed"></a></li>
+</ul>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="lawlytics_footer">
+<p><a class="lawlytics_branding" href="https://www.lawlytics.com" title="Website Software For Law Firms">LawLytics</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="contact-wrapper" id="contact-wrapper">
+<div class="contact-overlay">
+<div class="contact-content">
+<h3>To contact us, please select your state:</h3>
+<div class="contact-california">
+<a href="/contact-california"><h4>California</h4></a>
+</div>
+<div class="contact-nevada">
+<a href="/contact-nevada"><h4>Nevada</h4></a>
+</div>
+<div class="contact-colorado">
+<a href="/colorado/contact-colorado"><h4>Colorado</h4></a>
+</div>
+<div id="contact-close"><a>CLOSE</a></div>
+</div>
+</div>
+</div>
+<script src="https://d2tym8aqod56lu.cloudfront.net/assets/client-adc88364536b230cc91e3f35dde476add82ab57595927a3a8d879defe0b1ecef.js"></script>
+<script>
+      Gmaps.oldOnload = window.onload;
+      window.onload = function() { Gmaps.triggerOldOnload(); Gmaps.loadMaps(); };
+    </script>
+<script src="https://law-media.s3.amazonaws.com/layouts/86/assets/javascripts/compressed-main-new.min.js"></script>
+<div class="phone_sticky">
+<span>Call us 24/7</span>
+<a class="header_telephone" href="tel:(877) 504-7750" onclick="_gaq.push(['_trackEvent','Click To Call', 'Clicked' , 'http://www.shouselaw.com/']);" style="display: inline;">(877) 504-7750</a>
+</div>
+<script>
+var currentPage = $(location).attr('href');
+$( '.sidebar .widget.form .buttons input' ).attr( 'onclick', '_gaq.push([\'_trackEvent\',\'Legal Help Form\',\'Submitted\',\'' + currentPage + '\']);' );
+</script>
+<script>
+$(document).ready(function(){
+    $('sup.fn').click(function(){
+        // get current footnote number
+        var id_number = $(this).text();
+        // build id of target (note: use two back slashes to escape the colon)
+        var target_content_id = '#fn\\:' + id_number;
+        // get target text
+        var target_text = $(target_content_id).text();
+        // if `fnbox` does not exist, build it using `target_text`
+        if (!$('div.fnbox').length) {
+            $(this).after('<div class="fnbox"><p style="color: #fff !important;">' + target_text + '</p></div>');  
+            $('div.fnbox').click(function(){
+                $(this).remove();
+            });
+        }
+        // if `fnbox` does exist, remove
+        else {
+            $('div.fnbox').remove();
+        }
+  });
+});
+</script>
+<script>
+$(document).ready(function() {
+    $(".btmForm.lexicata > div > p > span").click(function() {
+        $(this).parent().parent().parent().toggleClass("changeForm");
+    });
+});
+</script>
+<script>
+$('.slideout_accord').accordion({
+    active: false,
+    collapsible: true,
+    header: 'p',
+    heightStyle: 'content',
+    icons: false
+});
+</script>
+<script>
+$(document).ready(function() {
+    $('#breadcrumb-nav').prependTo($('#title'));
+});
+</script>
+<script type="text/javascript">
+var _userway_config = {
+/* uncomment the following line to override default position*/
+/* position: '5', */
+/* uncomment the following line to override default size (values: small, large)*/
+/* size: 'large', */
+/* uncomment the following line to override default language (e.g., fr, de, es, he, nl, etc.)*/
+/* language: 'en-US', */
+/* uncomment the following line to override color set via widget (e.g., #053f67)*/
+/* color: '#053f67', */
+/* uncomment the following line to override type set via widget(1=person, 2=chair, 3=eye)*/
+/* type: '1', */
+/* uncomment the following line to override support on mobile devices*/
+/* mobile: true, */
+account: 'PgJBLRHmZy'
+};
+</script>
+<script src="https://cdn.userway.org/widget.js" type="text/javascript"></script>
+<script dashboard="https://shouse-law-group.lawlyticsapp.com" data-id="site_owner_bar" defer="defer" id="site_owner_bar_script" page="23348" src="https://d2tym8aqod56lu.cloudfront.net/assets/site_owner_bar-50d0e97d19ba0778fc4b69e6365ca13b2d3459e2aacb92dc7719eff0510b375c.js"></script>
+</div><script src="https://cdn.userway.org/widgetapp/2019-07-04/widget_app_1562265381967.js"></script><iframe aria-hidden="true" id="oauth2relay533017630" name="oauth2relay533017630" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=https%3A%2F%2Fwww.shouselaw.com&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.D4Eh4BHvUNU.O%2Fam%3DwQE%2Fd%3D1%2Frs%3DAGLTcCPbw18SS5tux6PhVuTz5NV7ZASbtA%2Fm%3D__features__#rpctoken=1789126576&amp;forcesecure=1" style="width: 1px; height: 1px; position: absolute; top: -100px;" tabindex="-1"></iframe><div style="display: block; visibility: hidden; position: absolute; width: 106px; left: -10000px; top: -10000px;"><table cellpadding="0" cellspacing="0" class="gc-bubbleDefault pls-container" dir="ltr" frame="void" rules="none" style="width:106px;"><tbody><tr class="gc-reset"><td class="pls-topLeft gc-reset"><img class="gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td><td class="pls-topTail gc-reset"><img class="pls-tailbottom gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:15px !important; height:9px !important; max-width: 15px !important; max-height: 9px !important;"/><img class="pls-spacerbottom gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td><td class="pls-topRight gc-reset"><img class="gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td></tr><tr class="gc-reset"><td class="pls-vertShimLeft gc-reset"><img class="gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;"/></td><td class="pls-vertShim gc-reset"><img class="gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;"/></td><td class="pls-vertShimRight gc-reset"><img class="pls-dropTR gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:5px !important; height:4px !important; max-width: 5px !important; max-height: 4px !important;"/></td></tr><tr class="gc-reset"><td class="pls-contentLeft gc-reset"><img class="pls-tailright gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:9px !important; height:15px !important; max-width: 9px !important; max-height: 15px !important;"/><img class="pls-spacerright gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td><td class="pls-contentWrap gc-reset"><div class="goog-bubble-content gc-reset"><iframe frameborder="0" hspace="0" id="I0_1562555478615" marginheight="0" marginwidth="0" name="I0_1562555478615" ng-non-bindable="" scrolling="no" src="https://www.youtube.com/subscribe_embed?channelid=UCdImDRB1DYfChU97WMXUxUA&amp;action_card=1&amp;usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.D4Eh4BHvUNU.O%2Fam%3DwQE%2Fd%3D1%2Frs%3DAGLTcCPbw18SS5tux6PhVuTz5NV7ZASbtA%2Fm%3D__features__#id=I0_1562555478615&amp;_gfid=I0_1562555478615&amp;parent=https%3A%2F%2Fwww.shouselaw.com&amp;pfname=&amp;rpctoken=31867217" style="margin:0px;position:absolute;z-index:1;border-style:none;outline:none;width:100px;" tabindex="0" vspace="0" width="100%"></iframe></div></td><td class="pls-dropRight gc-reset"><img class="pls-tailleft gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:12px !important; height:19px !important; max-width: 12px !important; max-height: 19px !important;"/><img class="pls-spacerleft gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td></tr><tr class="gc-reset"><td class="pls-bottomLeft gc-reset"><img class="gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td><td class="gc-reset"><table cellpadding="0" cellspacing="0" class="gc-reset" style="width:100%"><tbody><tr class="gc-reset"><td class="pls-vert gc-reset"><img class="pls-dropBL gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:4px !important; height:5px !important; max-width: 4px !important; max-height: 5px !important;"/></td><td class="pls-dropBottom gc-reset"><img class="pls-tailtop gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:19px !important; height:13px !important; max-width: 19px !important; max-height: 13px !important;"/><img class="pls-spacertop gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td></tr></tbody></table></td><td class="pls-vert gc-reset"><img class="pls-dropBR gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:5px !important; height:5px !important; max-width: 5px !important; max-height: 5px !important;"/></td></tr></tbody></table></div><div style="display: block; visibility: hidden; position: absolute; width: 106px; left: -1000px; top: -1000px;"><table cellpadding="0" cellspacing="0" class="gc-bubbleDefault pls-container" dir="ltr" frame="void" rules="none" style="width:106px;"><tbody><tr class="gc-reset"><td class="pls-topLeft gc-reset"><img class="gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td><td class="pls-topTail gc-reset"><img class="pls-tailbottom gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:15px !important; height:9px !important; max-width: 15px !important; max-height: 9px !important;"/><img class="pls-spacerbottom gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td><td class="pls-topRight gc-reset"><img class="gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td></tr><tr class="gc-reset"><td class="pls-vertShimLeft gc-reset"><img class="gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;"/></td><td class="pls-vertShim gc-reset"><img class="gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;"/></td><td class="pls-vertShimRight gc-reset"><img class="pls-dropTR gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:5px !important; height:4px !important; max-width: 5px !important; max-height: 4px !important;"/></td></tr><tr class="gc-reset"><td class="pls-contentLeft gc-reset"><img class="pls-tailright gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:9px !important; height:15px !important; max-width: 9px !important; max-height: 15px !important;"/><img class="pls-spacerright gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td><td class="pls-contentWrap gc-reset"><div class="goog-bubble-content gc-reset"><iframe frameborder="0" hspace="0" id="I1_1562555478639" marginheight="0" marginwidth="0" name="I1_1562555478639" ng-non-bindable="" scrolling="no" src="https://www.youtube.com/subscribe_embed?channelid=UCXTAY9DlvBqMEXh1paOdmOg&amp;action_card=1&amp;usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.D4Eh4BHvUNU.O%2Fam%3DwQE%2Fd%3D1%2Frs%3DAGLTcCPbw18SS5tux6PhVuTz5NV7ZASbtA%2Fm%3D__features__#id=I1_1562555478639&amp;_gfid=I1_1562555478639&amp;parent=https%3A%2F%2Fwww.shouselaw.com&amp;pfname=&amp;rpctoken=35211894" style="margin:0px;position:absolute;z-index:1;border-style:none;outline:none;width:100px;" tabindex="0" vspace="0" width="100%"></iframe></div></td><td class="pls-dropRight gc-reset"><img class="pls-tailleft gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:12px !important; height:19px !important; max-width: 12px !important; max-height: 19px !important;"/><img class="pls-spacerleft gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td></tr><tr class="gc-reset"><td class="pls-bottomLeft gc-reset"><img class="gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td><td class="gc-reset"><table cellpadding="0" cellspacing="0" class="gc-reset" style="width:100%"><tbody><tr class="gc-reset"><td class="pls-vert gc-reset"><img class="pls-dropBL gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:4px !important; height:5px !important; max-width: 4px !important; max-height: 5px !important;"/></td><td class="pls-dropBottom gc-reset"><img class="pls-tailtop gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:19px !important; height:13px !important; max-width: 19px !important; max-height: 13px !important;"/><img class="pls-spacertop gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;"/></td></tr></tbody></table></td><td class="pls-vert gc-reset"><img class="pls-dropBR gc-reset" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif" style="width:5px !important; height:5px !important; max-width: 5px !important; max-height: 5px !important;"/></td></tr></tbody></table></div><table cellpadding="0" cellspacing="0" class="gstl_50 gssb_c" style="width: 146px; display: none; top: 481px; left: 470px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><style>html.userway-s3-3{background-color:#fff}html.userway-s3-3.userway-s1 a:focus,html.userway-s3-3.userway-s1 button:focus,html.userway-s3-3.userway-s1 input:focus,html.userway-s3-3.userway-s1 select:focus,html.userway-s3-3.userway-s1 textarea:focus{outline-color:#c00!important}html.userway-s3-2{background-color:#000}html.userway-s3-2.userway-s1 a:focus,html.userway-s3-2.userway-s1 button:focus,html.userway-s3-2.userway-s1 input:focus,html.userway-s3-2.userway-s1 select:focus,html.userway-s3-2.userway-s1 textarea:focus{outline-color:#50d0a0!important}.uw-s10-reading-guide,.uw-s12-tooltip{display:none;position:absolute!important;z-index:2147483647}.uw-s10-reading-guide{background:#000;width:100%!important;min-width:100%!important;top:20px;box-sizing:border-box;height:12px!important;border:solid 3px #fff300;border-radius:5px}.uw-s12-tooltip{opacity:0;white-space:nowrap;box-sizing:border-box!important;border:solid 2px #fff!important;background:#34394d!important;color:#fff!important;font-weight:600!important;font-size:17px!important;border-radius:10px;text-align:left!important;padding:13px 18px;box-shadow:0 0 15px rgba(66,73,96,.4);height:auto!important}.uw-s12-tooltip.visible{opacity:1}.userway-s12 .uw-s12-tooltip{display:inline-block}.userway-screen-reader-text{clip:rect(1px,1px,1px,1px);height:1px;width:1px;overflow:hidden;position:absolute!important;z-index:-1;opacity:0}.userway-s1 .userway-s1-selected{outline:dashed 2px #c00!important}.userway-s1 .userway-s1-selected:active,.userway-s1 .userway-s1-selected:focus{outline:dashed 4px #c00!important}.userway-s2,.userway-s2 *{cursor:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyOS4xODhweCIgaGVpZ2h0PSI0My42MjVweCIgdmlld0JveD0iMCAwIDI5LjE4OCA0My42MjUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI5LjE4OCA0My42MjUiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iI0Q5REFEOSIgc3Ryb2tlLXdpZHRoPSIxLjE0MDYiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIyLjgsNC41NDkgMjYuODQ3LDE5LjkwMiAxNi45NjQsMjIuNzAxIDI0LjIzOSwzNy43NDkgMTguMjc4LDQyLjAxNyA5Ljc0MSwzMC43MjQgMS4xMzgsMzUuODA5ICIvPjxnPjxnPjxnPjxwYXRoIGZpbGw9IiMyMTI2MjciIGQ9Ik0yOS4xNzUsMjEuMTU1YzAuMDcxLTAuNjEzLTAuMTY1LTEuMjUzLTAuNjM1LTEuNTczTDIuMTY1LDAuMjU4Yy0wLjQyNC0wLjMyLTAuOTg4LTAuMzQ2LTEuNDM1LTAuMDUzQzAuMjgyLDAuNDk3LDAsMS4wMywwLDEuNjE3djM0LjE3MWMwLDAuNjEzLDAuMzA2LDEuMTQ2LDAuNzc2LDEuNDM5YzAuNDcxLDAuMjY3LDEuMDU5LDAuMjEzLDEuNDgyLTAuMTZsNy40ODItNi4zNDRsNi44NDcsMTIuMTU1YzAuMjU5LDAuNDgsMC43MjksMC43NDYsMS4yLDAuNzQ2YzAuMjM1LDAsMC40OTQtMC4wOCwwLjcwNi0wLjIxM2w2Ljk4OC00LjU4NWMwLjMyOS0wLjIxMywwLjU2NS0wLjU4NiwwLjY1OS0xLjAxM2MwLjA5NC0wLjQyNiwwLjAyNC0wLjg4LTAuMTg4LTEuMjI2bC02LjM3Ni0xMS4zODJsOC42MTEtMi43NDVDMjguNzA1LDIyLjI3NCwyOS4xMDUsMjEuNzY4LDI5LjE3NSwyMS4xNTV6IE0xNi45NjQsMjIuNzAxYy0wLjQyNCwwLjEzMy0wLjc3NiwwLjUwNi0wLjk0MSwwLjk2Yy0wLjE2NSwwLjQ4LTAuMTE4LDEuMDEzLDAuMTE4LDEuNDM5bDYuNTg4LDExLjc4MWwtNC41NDEsMi45ODVsLTYuODk0LTEyLjMxNWMtMC4yMTItMC4zNzMtMC41NDEtMC42NC0wLjk0MS0wLjcyYy0wLjA5NC0wLjAyNy0wLjE2NS0wLjAyNy0wLjI1OS0wLjAyN2MtMC4zMDYsMC0wLjU4OCwwLjEwNy0wLjg0NywwLjMyTDIuOCwzMi41OVY0LjU0OWwyMS41OTksMTUuODA2TDE2Ljk2NCwyMi43MDF6Ii8+PC9nPjwvZz48L2c+PC9nPjwvc3ZnPg==),auto!important}.userway-s2-ie,.userway-s2-ie *{cursor:url(cursor_ie_32.cur),auto!important}.userway-s3-1{background:#000!important}.userway-s3-1,.userway-s3-1-ff{filter:invert(100%);-webkit-filter:invert(100%)}.userway-s3-2,.userway-s3-2 a,.userway-s3-2 a:hover{background-color:#000!important}.userway-s3-2 a{border-color:#fff!important;color:#fcff3c!important}.userway-s3-2 abbr,.userway-s3-2 article,.userway-s3-2 aside,.userway-s3-2 b,.userway-s3-2 big,.userway-s3-2 body,.userway-s3-2 button,.userway-s3-2 div,.userway-s3-2 em,.userway-s3-2 footer,.userway-s3-2 form,.userway-s3-2 h1,.userway-s3-2 h2,.userway-s3-2 h3,.userway-s3-2 h4,.userway-s3-2 h5,.userway-s3-2 h6,.userway-s3-2 header,.userway-s3-2 i,.userway-s3-2 input,.userway-s3-2 label,.userway-s3-2 li,.userway-s3-2 main,.userway-s3-2 nav,.userway-s3-2 p,.userway-s3-2 select,.userway-s3-2 small,.userway-s3-2 span,.userway-s3-2 strong,.userway-s3-2 td,.userway-s3-2 textarea,.userway-s3-2 th,.userway-s3-2 ul{background-color:#000!important;border-color:#fff!important;color:#50d0a0!important}.userway-s3-2 a:hover{color:#fff!important}.userway-s3-3{background-color:#fff!important}.userway-s3-3 a{border-color:#000!important}.userway-s3-3 abbr,.userway-s3-3 article,.userway-s3-3 aside,.userway-s3-3 b,.userway-s3-3 big,.userway-s3-3 body,.userway-s3-3 button,.userway-s3-3 div,.userway-s3-3 em,.userway-s3-3 footer,.userway-s3-3 form,.userway-s3-3 h1,.userway-s3-3 h2,.userway-s3-3 h3,.userway-s3-3 h4,.userway-s3-3 h5,.userway-s3-3 h6,.userway-s3-3 header,.userway-s3-3 i,.userway-s3-3 input,.userway-s3-3 label,.userway-s3-3 li,.userway-s3-3 main,.userway-s3-3 nav,.userway-s3-3 p,.userway-s3-3 select,.userway-s3-3 small,.userway-s3-3 span,.userway-s3-3 strong,.userway-s3-3 td,.userway-s3-3 textarea,.userway-s3-3 th,.userway-s3-3 ul{background-color:#fff!important;color:#000!important;border-color:#000!important}.userway-s3-3 a:hover,.userway-s3-3.userway-s6 [role=link]:hover,.userway-s3-3.userway-s6 a:hover{color:#000!important;background-color:#fff!important}.userway-s3-3 a,.userway-s3-3.userway-s6 [role=link],.userway-s3-3.userway-s6 [role=link] *,.userway-s3-3.userway-s6 a,.userway-s3-3.userway-s6 a *{color:#0000d3!important;background-color:#fff!important}.userway-s4-1{zoom:130%}.userway-s4-2{zoom:160%}.userway-s4-3{zoom:190%}.userway-s4-4{zoom:205%}.userway-s4-1-ie,.userway-s4-1-ie .userway-s4-1-fixed-ie{zoom:130%;max-width:76.92%}.userway-s4-2-ie,.userway-s4-2-ie .userway-s4-2-fixed-ie{zoom:160%;max-width:62.5%}.userway-s4-3-ie,.userway-s4-3-ie .userway-s4-3-fixed-ie{zoom:190%;max-width:52.63%}.userway-s4-4-ie,.userway-s4-4-ie .userway-s4-4-fixed-ie{zoom:205%;max-width:48.78%}.userway-s5-black{background-color:#888!important;color:#fff!important}.userway-s5-light{background-color:#fff!important;color:#000!important}.userway-s5{filter:grayscale(100%)!important;-webkit-filter:grayscale(100%)!important}.userway-s5.userway-s3-1{filter:invert(100%) grayscale(100%)!important;-webkit-filter:invert(100%) grayscale(100%)!important;background:#000!important}.userway-s6 [role=link],.userway-s6 [role=link] *,.userway-s6 a,.userway-s6 a *{text-decoration:underline!important;color:#ff0!important;background-color:#000!important}.userway-s6 [role=link] img,.userway-s6 a img{box-sizing:border-box!important;border:1px solid #ff0!important}.userway-s7 .userway-s7-active{font-family:Arial,serif!important}.userway-s7 .userway-s7-no-justify{text-align:unset!important}body .userway{filter:none!important;-webkit-filter:none!important;transform:none!important;position:fixed;top:10px;right:10px;z-index:2147483647;transition:.2s;height:43px;width:43px}body .userway.hidden{display:none}body .userway.userway_mobile .userway_hide .userway_hide_off{display:none!important}.userway-s10 .uw-s10-reading-guide,body .userway.userway_mobile .userway_accessibility_icon .userway_hide_icon,body .userway.userway_p1 .userway_accessibility_icon .userway_hide_icon span .userway_hide_icon_right,body .userway.userway_p2 .userway_accessibility_icon .userway_hide_icon span .userway_hide_icon_right,body .userway.userway_p3 .userway_accessibility_icon .userway_hide_icon span .userway_hide_icon_right,body .userway.userway_p4 .userway_accessibility_icon .userway_hide_icon span .userway_hide_icon_down,body .userway.userway_p7 .userway_accessibility_icon .userway_hide_icon span .userway_hide_icon_left{display:block}body .userway.userway_p1{top:10px;right:10px;left:auto;bottom:auto}body .userway.userway_p1.userway_hidden,body .userway.userway_p2.userway_hidden,body .userway.userway_p3.userway_hidden{right:-30px;left:auto}body .userway.userway_p1 .userway_accessibility_icon .userway_hide{right:30px;left:auto}body .userway.userway_p1 .userway_accessibility_icon .userway_hide span{border-radius:4px 0 0 4px!important}body .userway.userway_p2{top:calc(50% - 22px);left:auto;right:10px}body .userway.userway_p3{top:auto;left:auto;bottom:10px;right:10px}body .userway.userway_p3 .userway_accessibility_icon .userway_hide_icon{top:-18px}body .userway.userway_p3 .userway_accessibility_icon .userway_hide_icon span{border-radius:4px 4px 0 0!important}body .userway.userway_p4{top:auto;left:calc(50% - 22px);bottom:10px;right:auto}body .userway.userway_p4.userway_hidden{bottom:-30px;top:auto;right:auto}body .userway.userway_p4.userway_hidden.userway_over{bottom:10px}body .userway.userway_p4 .userway_accessibility_icon .userway_hide{left:30px;right:auto}body .userway.userway_p4 .userway_accessibility_icon .userway_hide span{border-radius:0 4px 4px 0!important}body .userway.userway_p4 .userway_accessibility_icon .userway_hide_icon{top:-19px}body .userway.userway_p4 .userway_accessibility_icon .userway_hide_icon span{border-radius:4px 4px 0 0!important}body .userway.userway_p5{top:auto;bottom:10px;left:10px;right:auto}body .userway.userway_p5.userway_hidden,body .userway.userway_p6.userway_hidden,body .userway.userway_p7.userway_hidden{left:-30px;right:auto}body .userway.userway_p5 .userway_accessibility_icon .userway_hide{left:30px;right:auto}body .userway.userway_p5 .userway_accessibility_icon .userway_hide span{border-radius:0 4px 4px 0!important}body .userway.userway_p5 .userway_accessibility_icon .userway_hide_icon{top:-18px}body .userway.userway_p5 .userway_accessibility_icon .userway_hide_icon span{border-radius:4px 4px 0 0!important}body .userway.userway_p5 .userway_accessibility_icon .userway_hide_icon .userway_hide_icon_left{display:block!important}body .userway.userway_p5 .userway_accessibility_icon .userway_hide_icon .userway_hide_icon_down,body .userway.userway_p5 .userway_accessibility_icon .userway_hide_icon .userway_hide_icon_right,body .userway.userway_p5 .userway_accessibility_icon .userway_hide_icon .userway_hide_icon_up{display:none!important}body .userway.userway_p6{top:calc(50% - 22px);left:10px;right:auto;bottom:auto}body .userway.userway_p6 .userway_accessibility_icon .userway_hide,body .userway.userway_p7 .userway_accessibility_icon .userway_hide{left:30px;right:auto}body .userway.userway_p6 .userway_accessibility_icon .userway_hide span,body .userway.userway_p7 .userway_accessibility_icon .userway_hide span,body .userway.userway_p8 .userway_accessibility_icon .userway_hide span{border-radius:0 4px 4px 0!important}body .userway.userway_p6 .userway_accessibility_icon .userway_hide_icon .userway_hide_icon_left{display:block!important}body .userway.userway_p6 .userway_accessibility_icon .userway_hide_icon .userway_hide_icon_down,body .userway.userway_p6 .userway_accessibility_icon .userway_hide_icon .userway_hide_icon_right,body .userway.userway_p6 .userway_accessibility_icon .userway_hide_icon .userway_hide_icon_up{display:none!important}body .userway.userway_p7{top:10px;left:10px;right:auto;bottom:auto}body .userway.userway_p7 .userway_accessibility_icon .userway_hide_icon span .userway_hide_icon_down,body .userway.userway_p7 .userway_accessibility_icon .userway_hide_icon span .userway_hide_icon_right,body .userway.userway_p7 .userway_accessibility_icon .userway_hide_icon span .userway_hide_icon_up{display:none}body .userway.userway_p8{top:10px;left:calc(50% - 22px);right:auto;bottom:auto}body .userway.userway_p8.userway_hidden{top:-30px;bottom:auto;right:auto}body .userway.userway_p8.userway_hidden.userway_over{top:10px}body .userway.userway_p8 .userway_accessibility_icon .userway_hide{left:30px;right:auto}body .userway.userway_p8 .userway_accessibility_icon .userway_hide_icon_up{display:block!important}body .userway.userway_p8 .userway_accessibility_icon .userway_hide_icon_down,body .userway.userway_p8 .userway_accessibility_icon .userway_hide_icon_left,body .userway.userway_p8 .userway_accessibility_icon .userway_hide_icon_right{display:none!important}body .userway.userway_on .userway_accessibility_icon,body .userway.userway_on .userway_accessibility_icon .userway_hide span,body .userway.userway_on .userway_accessibility_icon .userway_hide_icon span{background:#007dd5!important}body .userway.userway_on .userway_accessibility_icon .userway_hide{display:block!important}body .userway .userway_accessibility_icon .userway_preloader_spinner.white .spinner_icon_white,body .userway.userway_ft_on .userway_ft_iframe,body .userway.userway_on .userway_iframe{display:block}body .userway.userway_enabled .userway_accessibility_icon .check_on{opacity:1;visibility:visible;top:-4px;right:-4px}body .userway.userway_hidden{right:-30px}body .userway.userway_hidden .userway_hide_off{display:none!important}body .userway.userway_hidden .userway_hide_on{display:inline!important}body .userway.userway_hidden .userway_hide_icon{display:none!important}body .userway.userway_over .userway_hide{display:block!important}body .userway .userway_ft_iframe,body .userway .userway_iframe{filter:none!important;position:fixed;top:0;left:0;bottom:0;right:0;width:100%!important;max-width:100%!important;height:100%!important;visibility:visible!important;opacity:1!important;border:none;margin:0;padding:0;overflow:hidden;z-index:999999;display:none}body .userway .userway_accessibility_icon{position:relative;filter:none!important;cursor:pointer;background:#003d68!important;border-radius:50%!important;padding:4px;transition:.1s;display:inline-block;width:35px;height:35px;min-width:35px;min-height:35px;max-width:35px;max-height:35px;text-align:center;box-sizing:content-box!important;font-size:initial!important}body .userway .userway_accessibility_icon:active,body .userway .userway_accessibility_icon:focus,body .userway .userway_accessibility_icon:hover{background:#007dd5}body .userway .userway_accessibility_icon .userway_preloader_spinner{display:none;position:absolute;height:45px;width:45px;top:-1px;left:-1px;background-color:transparent!important;overflow:hidden;background-position:-48px -48px;background-size:140px;animation:standard .75s infinite linear;transform-origin:50% 50% 0!important}@keyframes standard{0%{transform:rotate(0deg)}to{transform:rotate(360deg)}}body .userway .userway_accessibility_icon .userway_preloader_spinner .spinner_icon_white{display:block}body .userway .userway_accessibility_icon .userway_preloader_spinner .spinner_icon_black,body .userway .userway_accessibility_icon .userway_preloader_spinner.white .spinner_icon_black{display:none}body .userway .userway_accessibility_icon .userway_preloader_spinner .spinner_icon_black,body .userway .userway_accessibility_icon .userway_preloader_spinner .spinner_icon_white{height:45px;width:45px;position:absolute;top:0;left:0}body .userway .userway_accessibility_icon .userway-spacer{position:absolute;top:-10px;right:-10px;bottom:-10px;left:-10px;display:inline-block;background-color:transparent!important}body .userway .userway_accessibility_icon.userway_light .userway_icon_white,body .userway .userway_accessibility_icon.userway_light .userway_preloader_spinner .spinner_icon_white{display:none}body .userway .userway_accessibility_icon.userway_light .userway_icon_black,body .userway .userway_accessibility_icon.userway_light .userway_preloader_spinner .spinner_icon_black{display:block}body .userway .userway_accessibility_icon.userway_light .userway_hide span{color:#000!important}body .userway .userway_accessibility_icon.userway_light .userway_hide_icon .userway_icon_white{display:none!important}body .userway .userway_accessibility_icon.userway_light .userway_hide_icon .userway_icon_black{display:none}body .userway .userway_accessibility_icon.userway_dark .userway_hide_icon .userway_icon_black{display:none!important}body .userway .userway_accessibility_icon .userway_icon_white,body .userway .userway_accessibility_icon.userway_dark .userway_preloader_spinner .spinner_icon_white{display:block}body .userway .userway_accessibility_icon.loading .userway_preloader_spinner{display:block!important}body .userway .userway_accessibility_icon .userway_icon_black,body .userway .userway_accessibility_icon.loading .userway_icon_black,body .userway .userway_accessibility_icon.loading .userway_icon_white,body .userway .userway_accessibility_icon.userway_dark .userway_preloader_spinner .spinner_icon_black{display:none}body .userway .userway_accessibility_icon .userway_hide{z-index:-1;display:none;position:absolute;right:30px;cursor:pointer;font-size:12px!important;line-height:14px!important;top:5px!important;padding:10px;background:0 0!important}body .userway .userway_accessibility_icon .userway_hide>span{border-radius:4px 0 0 4px!important;color:#fff!important;font-size:12px!important;line-height:14px!important;font-weight:800;background:#003d68!important;padding:2px 5px;font-family:sans-serif!important;position:relative!important;white-space:nowrap!important}body .userway .userway_accessibility_icon .userway_hide .userway_hide_off{display:inline}body .userway .userway_accessibility_icon .userway_hide .userway_hide_on{display:none}body .userway .userway_accessibility_icon .userway_hide_icon{display:none;position:absolute;top:38px;left:0;right:0;z-index:-1;text-align:center!important}body .userway .userway_accessibility_icon .userway_hide_icon span{display:inline-block;background:#003d68!important;padding:5px 7px 2px;border-radius:0 0 4px 4px!important}body .userway .userway_accessibility_icon .userway_hide_icon span img{width:14px;height:16px;display:none;position:relative;bottom:2px}body .userway .userway_accessibility_icon .check_on{position:absolute;top:-7px;right:-4px;width:18px;height:20px;transition:.1s;opacity:0;visibility:hidden}body .userway .userway_accessibility_icon img{height:35px;width:35px;display:block;padding:0!important;margin:0!important;background:0 0!important;border:none!important}body .userway.userway-the-big .userway_accessibility_icon{padding:4px;width:57px;height:57px;min-width:57px;min-height:57px;max-width:57px;max-height:57px}body .userway.userway-the-big .userway_accessibility_icon img{width:57px;height:57px;padding:0!important;margin:0!important;background:0 0!important;border:none!important}body .userway.userway-the-big .userway_accessibility_icon .userway_hide{padding:22px}body .userway.userway-the-big .userway_accessibility_icon .userway_hide>span{font-size:12px!important;padding:3px 6px}body .userway.userway-the-big .userway_accessibility_icon .check_on{top:-2px;right:-2px;width:21px;height:21px}body .userway.userway-the-big.userway_p1,body .userway.userway-the-big.userway_p2{right:30px}body .userway.userway-the-big.userway_p1 .userway_hide{right:39px}body .userway.userway-the-big.userway_p1.userway_hidden{right:-20px}body .userway.userway-the-big.userway_p2 .userway_hide{right:39px}body .userway.userway-the-big.userway_p2.userway_hidden{right:-20px}body .userway.userway-the-big.userway_p3{right:30px;bottom:30px}body .userway.userway-the-big.userway_p3 .userway_hide{right:39px}body .userway.userway-the-big.userway_p3.userway_hidden{right:-20px}body .userway.userway-the-big.userway_p4,body .userway.userway-the-big.userway_p4.userway_hidden.userway_over{bottom:30px}body .userway.userway-the-big.userway_p4 .userway_hide{left:39px}body .userway.userway-the-big.userway_p4.userway_hidden{bottom:-25px;top:auto}body .userway.userway-the-big.userway_p5{left:11px;bottom:30px}body .userway.userway-the-big.userway_p5 .userway_hide{left:39px}body .userway.userway-the-big.userway_p5.userway_hidden{left:-35px}body .userway.userway-the-big.userway_p6,body .userway.userway-the-big.userway_p7{left:11px}body .userway.userway-the-big.userway_p6 .userway_hide{left:39px}body .userway.userway-the-big.userway_p6.userway_hidden{left:-35px}body .userway.userway-the-big.userway_p7 .userway_hide{left:39px}body .userway.userway-the-big.userway_p7.userway_hidden{left:-35px}body .userway.userway-the-big.userway_p8 .userway_hide{left:39px}body .userway.userway-the-big.userway_p8.userway_hidden{top:-40px}body .userway.userway-the-big.userway_p8.userway_hidden.userway_over{top:10px}body .userway.userway-the-big .userway_preloader_spinner{top:9px;left:9px}body .userway-reader-active:not(.userway_ft_iframe),body .userway-reader-active:not(.userway_iframe){background:#ff0!important;color:#000!important}body .uw-page-structure-modal{display:none;position:fixed!important;z-index:2147483647!important;left:0!important;top:0!important;width:100%!important;height:100%!important;overflow:hidden!important;background-color:#000!important;background-color:rgba(0,0,0,.4)!important}body .uw-page-structure-modal *{box-sizing:border-box!important;line-height:1.4!important;letter-spacing:normal!important}body .uw-page-structure-modal .uw-page-structure-modal-content{background-color:#fefefe;margin:40px auto;width:90%;max-width:600px!important;box-shadow:0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);animation-name:uwPageStructurePopupSlideTop;animation-duration:.4s;border-radius:8px}body .uw-page-structure-modal .uw-page-structure-modal-content.uw-ps-mobile{width:90%}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-header{border-top-right-radius:8px;border-top-left-radius:8px;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;color:#fff;padding:15px 24px;font-size:14px;height:62px;background:#006dd5}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-header .uw-popup-header-text{font-weight:500}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-header .uw-popup-header-close{width:14px;height:14px;cursor:pointer}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-header .uw-popup-header-close svg{position:relative!important;width:14px!important;height:14px!important;margin:0!important;left:0!important;top:0!important;right:0!important;bottom:0!important}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-header .uw-popup-header-close svg .uw-popup-header-close-path{stroke:#fff;fill:transparent;stroke-linecap:round;stroke-width:.8}@media (max-width:780px),(max-height:575px){body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-header{padding:12px 10px;height:44px;font-size:12px!important}}@media (max-width:1024px),(max-height:650px){body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-header{padding:15px 18px;font-size:13px!important}}@media (max-width:1250px),(max-height:670px){body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-header{padding:15px 20px;height:51px}}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-tabs{display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;background:#f2f2f2}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-tabs .uw-popup-main-tab{cursor:pointer;padding:15px 25px;color:#006dd5;font-size:14px!important;-ms-flex:1;flex:1;margin-right:1px;text-align:center!important}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-tabs .uw-popup-main-tab .tab-name{font-size:14px!important;font-weight:500!important}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-tabs .uw-popup-main-tab.active{cursor:auto;color:#000;background:#fff}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-tabs .uw-popup-main-tab:last-child{margin-right:0}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel{display:none}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel.active{display:block}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper{max-height:400px!important;overflow-x:hidden;overflow-y:scroll;padding-top:20px}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper .uw-popup-item{font-size:14px!important;padding:9px 25px 9px 0;cursor:pointer;display:-ms-flexbox!important;display:flex!important;-ms-flex-pack:left;justify-content:left;-ms-flex-align:center;align-items:center;color:#006dd5;transition:.2s}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper .uw-popup-item:focus,body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper .uw-popup-item:hover{background:#f2f2f2}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper .uw-popup-item:hover .uw-popup-item-text{text-decoration:underline}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper .uw-popup-item .uw-popup-item-label{max-width:32px;margin-right:10px}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper .uw-popup-item .uw-popup-item-label img{width:32px;height:22px;min-width:32px;min-height:22px;vertical-align:middle;display:inline-block!important}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper .uw-popup-item .uw-popup-item-label.header-label{font-size:12px!important;font-weight:400;text-transform:uppercase;background:#1e242a;opacity:.8;border-radius:5px;padding:4px 0}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper .uw-popup-item .uw-popup-item-label.header-label span{color:#fff;margin:0 8px}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper .uw-popup-item .uw-popup-item-text{text-align:left;color:#006dd5;font-weight:400}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper .uw-popup-item .aria--label-link-icon,body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper .uw-popup-item .external-link-icon{width:12px;height:12px;margin-left:8px;vertical-align:middle;display:inline-block!important}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .items-wrapper .uw-popup-item .external-link-icon{cursor:pointer}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .uw-popup-main-panel-no-items{margin-top:60px;display:none}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .uw-popup-main-panel-no-items .no-items-text{text-align:center;font-size:14px;font-weight:400}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .uw-popup-main-panel-no-items .no-items-image{text-align:center;margin:25px auto}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .uw-popup-main-panel-no-items .no-items-image img{width:81px;height:80px}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .uw-popup-main-panel-no-items .no-items-button-wrapper{text-align:center}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-main .uw-popup-main-panels .uw-popup-main-panel .uw-popup-main-panel-no-items .no-items-button-wrapper button{background:#006dd5;border:none;border-radius:4px;color:#fff;font-size:14px;font-weight:400;padding:10px 45px}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-footer{border-bottom-right-radius:8px;border-bottom-left-radius:8px;padding:15px 25px;text-align:right}body .uw-page-structure-modal .uw-page-structure-modal-content .uw-popup-footer img{display:inline-block!important}@keyframes uwPageStructurePopupSlideTop{0%{top:-300px;opacity:0}to{top:0;opacity:1}}</style><script src="https://cdn.userway.org/vendor/franc-all_lng-codes.min.js"></script></body></html>

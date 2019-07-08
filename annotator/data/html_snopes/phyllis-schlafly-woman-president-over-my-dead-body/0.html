@@ -1,0 +1,600 @@
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml"><head><script src="https://js-agent.newrelic.com/nr-1118.min.js"></script><script async="async" src="http://caucuses.desmoinesregister.com/2011/" type="text/javascript"></script>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/><script async="" crossorigin="anonymous" src="https://connect.facebook.net/en_US/all.js?hash=a25b79ac324b6e77589120c3bd749723&amp;ua=modern_es6"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwQPV1JVGwEAVVJaAAAA"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script>
+<title>Conservative activist Phyllis Schlafly endorses Michele Bachmann | Iowa Caucuses</title>
+<link href="http://caucuses.desmoinesregister.com/wp-content/themes/caucuses/style.css" media="all" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+				<!--
+				//configuration
+				//If OAS_sitepage is set to {SECTION}{pagetype} it means you did not set the value in the .ini file.
+				var OAS_version,OAS_url,OAS_rns,OAS_listpos ="";
+				OAS_sitepage='ia-desmoines.desmoinesregister.com/news/government/front.htm';
+				OAS_query = ''+'&'+location.search.substring(1);
+				//-->
+			</script>
+<script type="text/javascript">var adtech_global_control =1;</script>
+<script src="http://dmregist.ur.gcion.com/AD/DFPSiteSettings.js" type="text/javascript"></script>
+<script src="http://dmregist.ur.gcion.com/Scripts/AD/DFPscript.js" type="text/javascript"></script>
+<script type="text/javascript">
+			var s_pageName = 'Caucuses - Caucus Insider - Conservative+activist+Phyllis+Schlafly+endorses+Michele+Bachmann';
+							var s_prop2 = "Caucuses";
+								var s_prop6 = "news";
+								var s_prop7 = "local_news";
+								var s_prop16 = "article";
+								var s_prop25 = "Des Moines:desmoinesregister";
+								var s_prop50 = "Newspaper";
+								var s_prop71 = "Jennifer Jacobs";
+						</script>
+<meta content="michele bachmann,newt gingrich,phyllis schlafly,ron paul,steve forbes" name="keywords"/>
+<link href="http://caucuses.desmoinesregister.com/2011/12/04/conservative-activist-phyllis-schlafly-endorses-michele-bachmann/" rel="canonical"/>
+<link href="http://caucuses.desmoinesregister.com/feed/" rel="alternate" title="Iowa Caucuses » Feed" type="application/rss+xml"/>
+<link href="http://caucuses.desmoinesregister.com/comments/feed/" rel="alternate" title="Iowa Caucuses » Comments Feed" type="application/rss+xml"/>
+<link href="http://caucuses.desmoinesregister.com/2011/12/04/conservative-activist-phyllis-schlafly-endorses-michele-bachmann/feed/" rel="alternate" title="Iowa Caucuses » Conservative activist Phyllis Schlafly endorses Michele Bachmann Comments Feed" type="application/rss+xml"/>
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/caucuses.desmoinesregister.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.23"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="http://caucuses.desmoinesregister.com/wp-includes/js/wp-emoji-release.min.js?ver=4.2.23" type="text/javascript"></script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="http://caucuses.desmoinesregister.com/wp-content/themes/caucuses/includes/css/avatar-fix.css?ver=4.2.23" id="avatar_fix-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://caucuses.desmoinesregister.com/wp-content/plugins/facebook-comments-for-wordpress/css/facebook-comments-hidewpcomments.css?ver=3.1.3" id="fbComments_hideWpComments-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://caucuses.desmoinesregister.com/wp-content/plugins/facebook-comments-for-wordpress/css/facebook-comments-widgets.css?ver=4.2.23" id="fbc_rc_widgets-style-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css?ver=4.2.23" id="ct_map_styles-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://caucuses.desmoinesregister.com/wp-content/plugins/candidate-tracker/includes/css/smoothness/jquery-ui-1.10.4.custom.min.css?ver=4.2.23" id="jquery.ui.theme-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://caucuses.desmoinesregister.com/wp-content/plugins/candidate-tracker/includes/css/ct_styles.css?ver=4.2.23" id="ct_styles-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://caucuses.desmoinesregister.com/wp-content/plugins/nextcellent-gallery-nextgen-legacy/css/nggallery.css?ver=1.0.0" id="NextGEN-css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="http://caucuses.desmoinesregister.com/wp-content/plugins/nextcellent-gallery-nextgen-legacy/css/framework-min.css?ver=1.0.1" id="NextCellent-Framework-css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="http://caucuses.desmoinesregister.com/wp-content/plugins/nextcellent-gallery-nextgen-legacy/shutter/shutter-reloaded.css?ver=1.3.4" id="shutter-css" media="screen" rel="stylesheet" type="text/css"/>
+<script src="http://caucuses.desmoinesregister.com/wp-includes/js/jquery/jquery.js?ver=1.11.2" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-content/themes/caucuses/includes/js/jquery.dropdownPlain.js?ver=4.2.23" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-content/plugins/gci-dailynews-countdown/jquery.jcountdown1.3.3.min.js?ver=1.3.3" type="text/javascript"></script>
+<script src="http://widgets.twimg.com/j/2/widget.js?ver=4.2.23" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="http://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js?ver=4.2.23" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-content/plugins/candidate-tracker/includes/js/candidate_tracker.js?ver=4.2.23" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-content/plugins/traffic_and_ads/includes/js/VisitorAPI.js?ver=1.1" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-content/plugins/traffic_and_ads/includes/js/AppMeasurement.js?ver=1.2.4" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js?ver=2.2" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var shutterSettings = {"msgLoading":"L O A D I N G","msgClose":"Click to Close","imageCount":"1"};
+/* ]]> */
+</script>
+<script src="http://caucuses.desmoinesregister.com/wp-content/plugins/nextcellent-gallery-nextgen-legacy/shutter/shutter-reloaded.js?ver=1.3.3" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-content/plugins/nextcellent-gallery-nextgen-legacy/js/owl.carousel.min.js?ver=2" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-includes/js/jquery/ui/tooltip.min.js?ver=1.11.4" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ngg_ajax = {"path":"http:\/\/caucuses.desmoinesregister.com\/wp-content\/plugins\/nextcellent-gallery-nextgen-legacy\/","callback":"http:\/\/caucuses.desmoinesregister.com\/index.php?callback=ngg-ajax","loading":"loading"};
+/* ]]> */
+</script>
+<script src="http://caucuses.desmoinesregister.com/wp-content/plugins/nextcellent-gallery-nextgen-legacy/js/ngg.js?ver=2.1" type="text/javascript"></script>
+<script src="http://caucuses.desmoinesregister.com/wp-content/plugins/countdown-timer/js/webtoolkit.sprintf.js?ver=3.0.6" type="text/javascript"></script>
+<script charset="utf-8" type="text/javascript">
+	(function(){
+		try {
+			// Disabling SWFObject's Autohide feature
+			if (typeof swfobject.switchOffAutoHideShow === "function") {
+				swfobject.switchOffAutoHideShow();
+			}
+		} catch(e) {}
+	})();
+</script>
+<link href="http://caucuses.desmoinesregister.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<link href="http://caucuses.desmoinesregister.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+<link href="http://caucuses.desmoinesregister.com/2011/12/04/frontrunner-newt-gingrich-will-do-town-hall-in-des-moines-on-saturday-before-debate/" rel="prev" title="Frontrunner Newt Gingrich will do town hall in Des Moines on Saturday before debate"/>
+<link href="http://caucuses.desmoinesregister.com/2011/12/04/newt-gingrichs-first-iowa-advertisement-is-the-first-in-a-series-before-jan-3/" rel="next" title="Newt Gingrich’s first Iowa advertisement is the first in a series before Jan. 3"/>
+<meta content="WordPress 4.2.23" name="generator"/>
+<link href="http://caucuses.desmoinesregister.com/?p=21238" rel="shortlink"/>
+<meta content="http://caucuses.desmoinesregister.com/wp-content/plugins/candidate-tracker" name="pluginurl"/><meta content="Conservative activist Phyllis Schlafly endorses Michele Bachmann" property="og:title"/><meta content="Iowa Caucuses" property="og:site_name"/><meta content="http://caucuses.desmoinesregister.com/2011/12/04/conservative-activist-phyllis-schlafly-endorses-michele-bachmann/" property="og:url"/><meta content="article" property="og:type"/><meta content="198722363481114" property="fb:app_id"/>
+<style media="screen" type="text/css">
+          div.printfriendly {
+            margin: 0px 0px 0px 0px;;
+          }
+          div.printfriendly a, div.printfriendly a:link, div.printfriendly a:visited {
+            text-decoration: none;
+            font-size: 14px;
+            color: #000000;
+            vertical-align: bottom;
+            border: none;
+          }
+
+          .printfriendly a:hover {
+            cursor: pointer;
+          }
+
+          .printfriendly a img  {
+            border: none;
+            padding:0;
+            margin-right: 6px;
+            display:inline-block;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+          }
+          .printfriendly a span{
+            vertical-align: bottom;
+          }
+          .pf-alignleft {
+            float: left;
+          }
+          .pf-alignright {
+            float: right;
+          }
+          div.pf-aligncenter {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+          }
+        </style>
+<style media="print" type="text/css">
+          .printfriendly {
+            display: none;
+          }
+        </style>
+<link href="http://feeds2.feedburner.com/" rel="alternate" title=" RSS Feed" type="application/rss+xml"/>
+<style media="all" type="text/css">
+/* <![CDATA[ */
+@import url("http://caucuses.desmoinesregister.com/wp-content/plugins/wp-table-reloaded/css/plugin.css?ver=1.9.4");
+@import url("http://caucuses.desmoinesregister.com/wp-content/plugins/wp-table-reloaded/css/datatables.css?ver=1.9.4");
+/* ]]> */
+</style> <script async="" charset="UTF-8" src="http://odb.outbrain.com/utils/get?url=http%3A%2F%2Fcaucuses.desmoinesregister.com%2F2011%2F12%2F04%2Fconservative-activist-phyllis-schlafly-endorses-michele-bachmann%2F&amp;srcUrl=http%3A%2F%2Fcaucuses.desmoinesregister.com%2Ffeed%2F&amp;settings=true&amp;recs=true&amp;widgetJSId=AR_1&amp;key=NANOWDGT01&amp;idx=0&amp;version=01020902&amp;apv=false&amp;sig=6J40vMZA&amp;format=html&amp;rand=26868&amp;osLang=en-US&amp;winW=1920&amp;winH=1080&amp;scrW=1920&amp;scrH=1080&amp;adblck=false&amp;va=true&amp;cmpStat=0&amp;ref=" type="text/javascript"></script><script src="http://cdn.printfriendly.com/printfriendly.js" type="text/javascript"></script><style type="text/css">.ob-tcolor{color:#555} .ob-lcolor{color:rgb(0, 51, 136)} .ob-bgtcolor{background-color:#555} .item-link-container:hover .ob-tcolor{border-color:#555} </style><script charset="utf-8" src="https://platform.twitter.com/js/button.509719336ca39171c37a321231ccaf83.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style><script id="__gel_nsscript_everypage-min.js" src="http://static.gcion.net/dfp/gel/lib/everypage-min.js"></script>
+<style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gscsep_a{display:none}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 2px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<body>
+<div class="main_container clearfix">
+<div class="header_wrap">
+<div class="header">
+<a href="http://www.desmoinesregister.com">
+<img alt="DesMoinesRegister.com" class="right_refer" src="http://caucuses.desmoinesregister.com/wp-content/themes/caucuses/images/dmr_refer.png"/>
+</a>
+<a href="http://caucuses.desmoinesregister.com">
+<img alt="Iowa Caucuses" src="http://caucuses.desmoinesregister.com/wp-content/themes/caucuses/images/iac_logo.png"/>
+</a>
+<div class="nav_links"><ul class="nav" id="menu-top-navigation"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-540" id="menu-item-540"><a href="/">Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-541" id="menu-item-541"><a href="http://caucuses.desmoinesregister.com/category/kathie-obradovich-caucus/">Opinion</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24658" id="menu-item-24658"><a href="http://caucuses.desmoinesregister.com/category/kathie-obradovich-caucus/">Kathie Obradovich</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24648" id="menu-item-24648"><a href="http://caucuses.desmoinesregister.com/2011/12/17/23902/">Des Moines Register endorsement</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-627" id="menu-item-627"><a href="/candidates">Candidates</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-iac_candidate_page menu-item-18173" id="menu-item-18173"><a href="http://caucuses.desmoinesregister.com/candidates/michele-bachmann/">Michele Bachmann</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-iac_candidate_page menu-item-18175" id="menu-item-18175"><a href="http://caucuses.desmoinesregister.com/candidates/newt-gingrich/">Newt Gingrich</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-iac_candidate_page menu-item-18172" id="menu-item-18172"><a href="http://caucuses.desmoinesregister.com/candidates/jon-huntsman/">Jon Huntsman</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-iac_candidate_page menu-item-18170" id="menu-item-18170"><a href="http://caucuses.desmoinesregister.com/candidates/gary-johnson/">Gary Johnson</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-iac_candidate_page menu-item-18178" id="menu-item-18178"><a href="http://caucuses.desmoinesregister.com/candidates/ron-paul/">Ron Paul</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-iac_candidate_page menu-item-18176" id="menu-item-18176"><a href="http://caucuses.desmoinesregister.com/candidates/rick-perry/">Rick Perry</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-iac_candidate_page menu-item-18169" id="menu-item-18169"><a href="http://caucuses.desmoinesregister.com/candidates/buddy-roemer/">Buddy Roemer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-iac_candidate_page menu-item-18174" id="menu-item-18174"><a href="http://caucuses.desmoinesregister.com/candidates/mitt-romney/">Mitt Romney</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-iac_candidate_page menu-item-18177" id="menu-item-18177"><a href="http://caucuses.desmoinesregister.com/candidates/rick-santorum/">Rick Santorum</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-iac_candidate_page menu-item-18168" id="menu-item-18168"><a href="http://caucuses.desmoinesregister.com/candidates/barack-obama/">Barack Obama</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25414" id="menu-item-25414"><a href="http://caucuses.desmoinesregister.com/tag/leadership-profile/">Feature: Leadership series</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-542" id="menu-item-542"><a href="http://caucuses.desmoinesregister.com/category/caucus-photos/">Photos</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24679" id="menu-item-24679"><a href="http://caucuses.desmoinesregister.com/2011/09/20/photos-gallery-a-historical-look-at-the-iowa-caucuses/">Historical photos</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25083" id="menu-item-25083"><a href="http://caucuses.desmoinesregister.com/2011/12/23/your-caucus-photos/">Share your photos</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7707" id="menu-item-7707"><a href="http://caucuses.desmoinesregister.com/caucusvideos/">Videos</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24659" id="menu-item-24659"><a href="http://caucuses.desmoinesregister.com/caucusvideos/">Share your videos</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25411" id="menu-item-25411"><a href="http://caucuses.desmoinesregister.com/2011/12/25/campaign-styles-reveal-ways-of-republican-candidates/">Feature: Styles on the Stump</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-820" id="menu-item-820"><a href="http://caucuses.desmoinesregister.com/data/iowa-caucus/candidate-tracker/">Calendar</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8147" id="menu-item-8147"><a href="http://caucuses.desmoinesregister.com/data/iowa-caucus/compare-candidates/">Issues</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24657" id="menu-item-24657"><a href="http://caucuses.desmoinesregister.com/data/iowa-caucus/compare-candidates/">Compare candidates</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25408" id="menu-item-25408"><a href="http://caucuses.desmoinesregister.com/tag/issues-series/">Feature: Issues series</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-25388" id="menu-item-25388"><a href="http://caucuses.desmoinesregister.com/2012-iowa-caucus-voter-guide/">About the caucuses</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24656" id="menu-item-24656"><a href="http://caucuses.desmoinesregister.com/how-to-caucus/">How the Iowa caucuses work</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24669" id="menu-item-24669"><a href="http://iowagop.org/caucus/findmycaucus.php">Where: GOP locations</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24670" id="menu-item-24670"><a href="http://thecaucuses.com/yourcaucus.php">Where: Democratic locations</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24647" id="menu-item-24647"><a href="http://caucuses.desmoinesregister.com/data/iowa-caucus/caucus-history-gop/index.php">County GOP results database</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24687" id="menu-item-24687"><a href="http://caucuses.desmoinesregister.com/caucus-history-past-years-results/">Past years’ results</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24655" id="menu-item-24655"><a href="http://caucuses.desmoinesregister.com/2010/11/15/ghosts-of-caucuses-past-haunt-todays-campaigns/">Ghosts of caucuses past</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29088" id="menu-item-29088"><a href="http://caucuses.desmoinesregister.com/data/iowa-caucus/results/">Results</a></li>
+</ul></div> </div>
+<div class="leader_wrap">
+<script language="JavaScript">
+							<!--
+							OAS_AD('728x90_1');
+							//-->
+						</script><script src="http://static.gcion.net/dfp/gel/lib/core/core.js"></script><script src="http://aws.gannett.com/m?jsoncallback=setBannerData&amp;p=ia-desmoines.desmoinesregister.com%2Fnews%2Fgovernment%2Ffront.htm&amp;networkid=7103"></script><banner position="728x90_1" sitepage="ia-desmoines.desmoinesregister.com/news/government/front.htm"></banner>
+</div>
+<div class="sponsorship">
+<script language="JavaScript">
+						<!--
+						OAS_AD('88x31_1');
+						//-->
+					</script><banner position="88x31_1" sitepage="ia-desmoines.desmoinesregister.com/news/government/front.htm"></banner>
+<div>sponsored by</div>
+</div>
+</div>
+<div class="notice-banner">For 2016 Iowa caucuses coverage, please go to <a href="http://www.desmoinesregister.com/iowa-caucuses/">http://www.desmoinesregister.com/iowa-caucuses/</a></div>
+<div class="left_wrap clearfix">
+<div class="story_title">
+<a href="http://caucuses.desmoinesregister.com/2011/12/04/conservative-activist-phyllis-schlafly-endorses-michele-bachmann/" title="Conservative activist Phyllis Schlafly endorses Michele Bachmann">Conservative activist Phyllis Schlafly endorses Michele Bachmann</a>
+</div>
+<div class="shadow_rule"></div>
+<div class="top_stuff">
+<div class="story_byline">
+<a href="http://caucuses.desmoinesregister.com/author/jennifer-jacobs/" title="View more posts by Jennifer Jacobs">
+				Jennifer Jacobs			</a>
+</div>
+<div class="post_meta">9:54 PM, Dec 4, 2011</div>
+<div class="post_meta">
+			Categories: <a href="http://caucuses.desmoinesregister.com/category/caucus-insider/" rel="category tag">Caucus Insider</a> </div>
+</div>
+<div class="left_matter clear">
+<a href="http://caucuses.desmoinesregister.com/author/jennifer-jacobs/" title="View more posts by Jennifer Jacobs">
+<img alt="Jennifer Jacobs" class="post_avatar no-rate avatar-150 avatar-default" height="150" src="http://caucuses.desmoinesregister.com/wp-content/avatars/jacobs.jpg" width="150"/> </a>
+<p>
+			Chief politics writer, covering all candidates		</p>
+<p>
+<a class="blue" href="http://caucuses.desmoinesregister.com/author/jennifer-jacobs/" title="View more posts by ">
+				More posts by Jennifer Jacobs			</a>
+</p>
+<table cellpadding="0" cellspacing="0" width="170">
+<tbody><tr>
+<td width="40">
+<img alt="Print" src="http://caucuses.desmoinesregister.com/wp-content/themes/caucuses/images/print.png"/>
+</td>
+<td>
+<div class="printfriendly pf-alignleft"><a class="noslimstat" href="#" onclick="window.print(); return false;" rel="nofollow"><span class="printfriendly-text2">Print/Email</span></a></div> </td>
+</tr>
+<tr><td><img alt="tags" src="http://caucuses.desmoinesregister.com/wp-content/themes/caucuses/images/tag.png"/></td><td><b>Tags: </b><a href="http://caucuses.desmoinesregister.com/tag/michele-bachmann/" rel="tag">Michele Bachmann</a>, <a href="http://caucuses.desmoinesregister.com/tag/newt-gingrich-caucus/" rel="tag">Newt Gingrich</a>, <a href="http://caucuses.desmoinesregister.com/tag/phyllis-schlafly/" rel="tag">Phyllis Schlafly</a>, <a href="http://caucuses.desmoinesregister.com/tag/ron-paul-caucus/" rel="tag">Ron Paul</a>, <a href="http://caucuses.desmoinesregister.com/tag/steve-forbes/" rel="tag">Steve Forbes</a></td></tr><tr><td><img alt="candidate tags" src="http://caucuses.desmoinesregister.com/wp-content/themes/caucuses/images/cat.png"/></td><td><b>Candidate Tags: </b><a href="http://caucuses.desmoinesregister.com/candidate/michele-bachmann-caucus/" rel="tag">Michele Bachmann</a></td></tr> </tbody></table>
+<iframe allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" data-url="http://dmreg.co/sio9sE" frameborder="0" id="twitter-widget-0" scrolling="no" src="https://platform.twitter.com/widgets/tweet_button.d753e00c3e838c1b2558149bd3f6ecb8.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fcaucuses.desmoinesregister.com%2F2011%2F12%2F04%2Fconservative-activist-phyllis-schlafly-endorses-michele-bachmann%2F&amp;size=m&amp;text=Conservative%20activist%20Phyllis%20Schlafly%20endorses%20Michele%20Bachmann%20%7C%20Iowa%20Caucuses&amp;time=1562478052081&amp;type=share&amp;url=http%3A%2F%2Fdmreg.co%2Fsio9sE" style="position: static; visibility: visible; width: 60px; height: 20px;" title="Twitter Tweet Button"></iframe>
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script> <div class="raise_voice">
+<script type="text/javascript">
+				var label = "Raise Your Voice";
+				// alert(label);
+				var hover = false;
+				var url = window.location;
+				var title;
+				var description = "Write Your Legislators";
+				if (document.getElementsByTagName) { title = document.getElementsByTagName('title')[0].innerText; }
+				title = (title == 'undefined' || title == '' ? '' : title);
+				document.write("<form name='ryvForm' class='ryv' style='padding: 0px; display: inline;'>\n");
+				document.write("<input style=\"border: 0;\" type=\"image\" name=\"ryvOpener\" src=\"https://raiseyourvoice.us/images/icons/111027_RYV_Ad_F2_160x60.jpg\" onclick=\"window.open('http://action.raiseyourvoice.us/?api_key=bf9f3c735&url="+url+"&title="+title+"','ryvwindow','width=480,height=635,left=50,top=50,screenX=50,screenY=50,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,copyhistory=no'); return false;\" />");
+				document.write("</form>");
+			</script><form class="ryv" name="ryvForm" style="padding: 0px; display: inline;">
+<input name="ryvOpener" onclick="window.open('http://action.raiseyourvoice.us/?api_key=bf9f3c735&amp;url=http://caucuses.desmoinesregister.com/2011/12/04/conservative-activist-phyllis-schlafly-endorses-michele-bachmann/&amp;title=Conservative activist Phyllis Schlafly endorses Michele Bachmann | Iowa Caucuses','ryvwindow','width=480,height=635,left=50,top=50,screenX=50,screenY=50,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,copyhistory=no'); return false;" src="https://raiseyourvoice.us/images/icons/111027_RYV_Ad_F2_160x60.jpg" style="border: 0;" type="image"/></form>
+</div>
+</div>
+<div class="story">
+<div class="pf-content"><div class="wp-caption aligncenter" id="attachment_21250" style="width: 410px"><a href="http://caucuses.desmoinesregister.com/2011/12/04/conservative-activist-phyllis-schlafly-endorses-michele-bachmann/bachmann-smile/" rel="attachment wp-att-21250"><img alt="" class="size-full wp-image-21250" height="269" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2011/12/bachmann.smile_.jpeg" title="bachmann.smile" width="400"/></a><p class="wp-caption-text">U.S. Rep. Michele Bachmann, R-Minn., speaks at the book-signing event for her book "Core of Conviction" Saturday, Dec. 3, 2011, in South Carolina. (AP Photo/Rainier Ehrhardt))</p></div>
+<p>Social conservative Phyllis Schlafly has endorsed Michele Bachmann for president and is urging Iowans to caucus for her, Bachmann’s campaign told The Des Moines Register tonight.</p>
+<p>In a written statement, Schlafly says: “Most important, Michele has the courage to be a leader among her peers. She is a real champion in speaking up for values we care about. Michele is a woman of faith and the mother of a beautiful family. She has a 100 percent pro-life record and is a strong supporter of traditional marriage.”</p>
+<p>Schlafly became a national leader in the conservative movement in the 1960s. In 2000, she campaigned in Iowa for Republican Steve Forbes.</p>
+<p>In the statement, Schlafly pumps up Iowa’s first-in-the-nation caucuses.</p>
+<p>“If I were an Iowa voter, I would be making plans right now to cast my vote for Michele Bachmann for president on January 3. I hope you will take advantage of this golden opportunity to support a candidate we can all be proud of.”</p>
+<p>Schlafly said conservatives don’t want the media to choose their candidate, “or tell us we must choose one of the two who currently lead in the polls.”</p>
+<p>Bachmann has the support of 8 percent of likely GOP caucusgoers in Iowa, a new Des Moines Register poll shows. Newt Gingrich is at the top with 25 percent, followed by Ron Paul at 18 percent.</p>
+<p>Schlafly highlighted the Minnesota congresswoman’s work against “ObamaCare,” deficit spending and “traditional values.”</p>
+<p><strong>Here’s the biography provided by the Bachmann campaign:</strong></p>
+<blockquote><p>Schlafly, who was named one of the 100 most important women of the 20th century by the Ladies’ Home Journal, has been a national leader of the conservative movement since the publication of her best-selling 1964 book, A Choice Not An Echo. She has been a leader of the pro-family movement since 1972, when she started her national volunteer organization now called Eagle Forum. In a ten-year battle, Mrs. Schlafly led the pro-family movement to victory over the Equal Rights Amendment, which was the principal legislative goal of the radical feminists. Her syndicated column appears in 100 newspapers, her radio commentaries are heard daily on over 600 stations, and her radio talk show on education called “Eagle Forum Live” is heard weekly on 75 stations.</p></blockquote>
+<p> </p>
+<h3>Recommended Photos</h3><div class="ngg-related-gallery"><a class="shutterset_related-images-for-conservative-activist-phyllis-schlafly-endorses-michele-bachmann" href="http://caucuses.desmoinesregister.com/wp-content/gallery/michele-bachmann-in-waterloo/dmrdc5-609sdpxet0x16m017vf_original.jpg" title="Rep. Michelle Bachmann, R-Minn, makes her formal announcement as a candidate for President Monday morning outside the Snowden House in Waterloo. (Justin Hayworth/The Des Moines Register)"><img alt="m0628bachmann" src="http://caucuses.desmoinesregister.com/wp-content/gallery/michele-bachmann-in-waterloo/thumbs/thumbs_dmrdc5-609sdpxet0x16m017vf_original.jpg" title="m0628bachmann"/></a>
+<a class="shutterset_related-images-for-conservative-activist-phyllis-schlafly-endorses-michele-bachmann" href="http://caucuses.desmoinesregister.com/wp-content/gallery/soapbox-speeches-at-the-iowa-state-fair/dmrdc5-60xigwgcuwnspidbc5z_original.jpg" title="Newt Gingerich speaks at the Des Moines Register soapbox Iowa State Fair Friday. (Rodney White/The Register)"><img alt="state fair Friday" src="http://caucuses.desmoinesregister.com/wp-content/gallery/soapbox-speeches-at-the-iowa-state-fair/thumbs/thumbs_dmrdc5-60xigwgcuwnspidbc5z_original.jpg" title="state fair Friday"/></a>
+<a class="shutterset_related-images-for-conservative-activist-phyllis-schlafly-endorses-michele-bachmann" href="http://caucuses.desmoinesregister.com/wp-content/gallery/2011-iowa-straw-poll/bachmann_2012__jlthompsontallahassee-com_6.jpg" title="Republican presidential candidate, Rep. Michele Bachmann, R-Minn., arrives at a breakfast before the GOP Ames Straw Poll in Ames, Iowa, Saturday, Aug. 13, 2011. (AP Photo/Charles Dharapak)"><img alt="Bachmann 2012" src="http://caucuses.desmoinesregister.com/wp-content/gallery/2011-iowa-straw-poll/thumbs/thumbs_bachmann_2012__jlthompsontallahassee-com_6.jpg" title="Bachmann 2012"/></a>
+<a class="shutterset_related-images-for-conservative-activist-phyllis-schlafly-endorses-michele-bachmann" href="http://caucuses.desmoinesregister.com/wp-content/gallery/mitt-romney-in-iowa-tuesday/dmrdc5-62zgr7s7v4n6811h5cs_original.jpg" title="Republican presidential candidate Rep. Michele Bachmann, R-Minn, speaks during a campaign stop at Rock the Caucus Assembly at Valley High School Gym in West on Tuesday, January 3, 2012. (David Purdy/The Des Moines Register)"><img alt="Michele Bachmann on Caucus Day" src="http://caucuses.desmoinesregister.com/wp-content/gallery/mitt-romney-in-iowa-tuesday/thumbs/thumbs_dmrdc5-62zgr7s7v4n6811h5cs_original.jpg" title="Michele Bachmann on Caucus Day"/></a>
+<a class="shutterset_related-images-for-conservative-activist-phyllis-schlafly-endorses-michele-bachmann" href="http://caucuses.desmoinesregister.com/wp-content/gallery/michele-bachmann-in-waterloo/dmrdc5-609sitdgxr41akhkf7vf_original.jpg" title="Rep. Michelle Bachmann, R-Minn, makes her formal announcement as a candidate for President Monday morning outside the Snowden House in Waterloo. (Justin Hayworth/The Des Moines Register)"><img alt="m0628bachmann" src="http://caucuses.desmoinesregister.com/wp-content/gallery/michele-bachmann-in-waterloo/thumbs/thumbs_dmrdc5-609sitdgxr41akhkf7vf_original.jpg" title="m0628bachmann"/></a>
+<a class="shutterset_related-images-for-conservative-activist-phyllis-schlafly-endorses-michele-bachmann" href="http://caucuses.desmoinesregister.com/wp-content/gallery/mitt-romney-in-iowa-tuesday/dmrdc5-62zh802bd9e5u6ii5cs_original.jpg" title="Republican presidential candidate, Rep. Ron Paul, R-Texas, is swarmed by the media speaks during a campaign stop at Rock the Caucus Assembly at Valley High School Gym in West on Tuesday, January 3, 2012. (David Purdy/The Des Moines Register)"><img alt="Ron Paul on Caucus Day" src="http://caucuses.desmoinesregister.com/wp-content/gallery/mitt-romney-in-iowa-tuesday/thumbs/thumbs_dmrdc5-62zh802bd9e5u6ii5cs_original.jpg" title="Ron Paul on Caucus Day"/></a>
+<a class="shutterset_related-images-for-conservative-activist-phyllis-schlafly-endorses-michele-bachmann" href="http://caucuses.desmoinesregister.com/wp-content/gallery/newt-gingrich-in-iowa/gingrich_2012__jlthompsontallahassee-com_3.jpg" title="Former House Speaker Newt Gingrich speaks during the Kiwanis Club luncheon, Monday, May 16, 2011, in Dubuque, Iowa. (AP Photo/Charlie Neibergall)"><img alt="Gingrich 2012" src="http://caucuses.desmoinesregister.com/wp-content/gallery/newt-gingrich-in-iowa/thumbs/thumbs_gingrich_2012__jlthompsontallahassee-com_3.jpg" title="Gingrich 2012"/></a>
+</div>
+</div> <div id="ob_holder" style="display: none;"></div><div class="OUTBRAIN" data-browser="chrome" data-dynload="" data-idx="0" data-ob-mark="true" data-ob-template="gannett" data-os="linux x86_64" data-src="http://caucuses.desmoinesregister.com/2011/12/04/conservative-activist-phyllis-schlafly-endorses-michele-bachmann/" data-widget-id="AR_1" id="outbrain_widget_0"><div class="ob_dual_container AR_1">
+<div class="ob-pixels">
+</div>
+</div></div>
+<script src="http://widgets.outbrain.com/outbrain.js" type="text/javascript"></script>
+<a name="facebook-comments"></a>
+<div class="fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe allow="encrypted-media" allowfullscreen="true" allowtransparency="true" aria-hidden="true" frameborder="0" id="fb_xdm_frame_https" name="fb_xdm_frame_https" scrolling="no" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=44#channel=f33592b33576c1c&amp;origin=http%3A%2F%2Fcaucuses.desmoinesregister.com" style="border: none;" tabindex="-1" title="Facebook Cross Domain Communication Frame"></iframe></div><div></div></div></div>
+<script src="http://connect.facebook.net/en_US/all.js#appId=198722363481114&amp;xfbml=1" type="text/javascript"></script>
+<script type="text/javascript">
+	var addedComment = function(response) {
+		//console.log('fbComments: Caught added comment');
+		//console.log('fbComments:     Making AJAX call to update Facebook comment count');
+		$.post('http://caucuses.desmoinesregister.com/wp-content/plugins/facebook-comments-for-wordpress/facebook-comments-ajax.php', { fn: 'addComment', xid: 'JCai2Q5edGZCMXF_post21238' }, function(resp) {
+			if (resp === 'true') {
+				//console.log('fbComments:     Updated and cached Facebook comment count for post with xid=JCai2Q5edGZCMXF_post21238');
+			} else {
+				//console.log('fbComments:     FAILED to update Facebook comment count for post with xid=JCai2Q5edGZCMXF_post21238');
+			}
+		});
+
+	};
+
+	FB.Event.subscribe('comments.add', addedComment);
+</script>
+<div id="fbComments" style="">
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://www.facebook.com/plugins/like.php?href=http://caucuses.desmoinesregister.com/2011/12/04/conservative-activist-phyllis-schlafly-endorses-michele-bachmann/&amp;layout=standard&amp;show_faces=false&amp;width=500&amp;action=like&amp;font=arial&amp;colorscheme=light" style="height: 40px; width: 100%;"></iframe>
+<fb:comments class="fb_iframe_widget fb_iframe_widget_fluid_desktop" fb-iframe-plugin-query="app_id=198722363481114&amp;container_width=0&amp;height=100&amp;href=http%3A%2F%2Fcaucuses.desmoinesregister.com%2F2011%2F12%2F04%2Fconservative-activist-phyllis-schlafly-endorses-michele-bachmann%2F&amp;locale=en_US&amp;migrated=1&amp;numposts=0&amp;sdk=joey&amp;width=460&amp;xid=JCai2Q5edGZCMXF_post21238" fb-xfbml-state="rendered" href="http://caucuses.desmoinesregister.com/2011/12/04/conservative-activist-phyllis-schlafly-endorses-michele-bachmann/" migrated="1" numposts="0" publish_feed="false" width="460" xid="JCai2Q5edGZCMXF_post21238"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe allow="encrypted-media" allowfullscreen="true" allowtransparency="true" frameborder="0" height="100px" name="f29cd452bef144" scrolling="no" src="https://www.facebook.com/plugins/comments.php?app_id=198722363481114&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Dfd22824578b2c%26domain%3Dcaucuses.desmoinesregister.com%26origin%3Dhttp%253A%252F%252Fcaucuses.desmoinesregister.com%252Ff33592b33576c1c%26relation%3Dparent.parent&amp;container_width=0&amp;height=100&amp;href=http%3A%2F%2Fcaucuses.desmoinesregister.com%2F2011%2F12%2F04%2Fconservative-activist-phyllis-schlafly-endorses-michele-bachmann%2F&amp;locale=en_US&amp;migrated=1&amp;numposts=0&amp;sdk=joey&amp;width=460&amp;xid=JCai2Q5edGZCMXF_post21238" style="border: none; visibility: visible; width: 0px; height: 0px;" title="fb:comments Facebook Social Plugin" width="460px"></iframe></span></fb:comments></div>
+<div id="comments">
+<div class="comment-respond" id="respond">
+<h3 class="comment-reply-title" id="reply-title">Leave a Reply <small><a href="/2011/12/04/conservative-activist-phyllis-schlafly-endorses-michele-bachmann/#respond" id="cancel-comment-reply-link" rel="nofollow" style="display:none;">Cancel reply</a></small></h3>
+<p class="must-log-in">You must be <a href="http://caucuses.desmoinesregister.com/wp-login.php?redirect_to=http%3A%2F%2Fcaucuses.desmoinesregister.com%2F2011%2F12%2F04%2Fconservative-activist-phyllis-schlafly-endorses-michele-bachmann%2F">logged in</a> to post a comment.</p> </div>
+</div> </div>
+</div>
+<div class="content_rt">
+<div class="search_form_wrap">
+<script src="//www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+		  google.load('search', '1');
+		  google.setOnLoadCallback(function() {
+			google.search.CustomSearchControl.attachAutoCompletion(
+			  '009237343847593634205:jikypyftb2y',
+			  document.getElementById('q'),
+			  'cse-search-box');
+		  });
+		</script><script src="http://www.google.com/uds/?file=search&amp;v=1" type="text/javascript"></script><link href="http://www.google.com/uds/api/search/1.0/76c37a052829ad2c9825658fbbc50bce/default+en.css" rel="stylesheet" type="text/css"/><script src="http://www.google.com/uds/api/search/1.0/76c37a052829ad2c9825658fbbc50bce/default+en.I.js" type="text/javascript"></script>
+<form action="http://caucuses.desmoinesregister.com/search-results/" id="cse-search-box">
+<div>
+<input name="cx" type="hidden" value="009237343847593634205:jikypyftb2y"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="UTF-8"/>
+<input autocomplete="off" dir="ltr" id="q" name="q" placeholder="Custom Search" size="19" spellcheck="false" style='background: url("https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png") left center no-repeat rgb(255, 255, 255); text-indent: 48px; outline: none;' type="text"/>
+<input name="sa" type="submit" value="Search"/>
+</div>
+<input name="siteurl" type="hidden" value="caucuses.desmoinesregister.com/2011/12/04/conservative-activist-phyllis-schlafly-endorses-michele-bachmann/"/><input name="ref" type="hidden" value=""/><input name="ss" type="hidden" value=""/><input name="siteurl" type="hidden" value="caucuses.desmoinesregister.com/2011/12/04/conservative-activist-phyllis-schlafly-endorses-michele-bachmann/"/><input name="ref" type="hidden" value=""/><input name="ss" type="hidden" value=""/></form>
+<script src="//www.google.com/cse/brand?form=cse-search-box&amp;lang=en" type="text/javascript"></script>
+<script src="//www.google.com/cse/brand?form=cse-search-box&amp;lang=en" type="text/javascript"></script>
+<div class="nav_icons">
+<a href="http://feeds2.feedburner.com/IowaCaucuses"><img alt="rss" src="http://caucuses.desmoinesregister.com/wp-content/themes/caucuses/images/rss.gif"/></a>
+<a href="http://twitter.com/#!/dmrcaucus"><img alt="twitter" src="http://caucuses.desmoinesregister.com/wp-content/themes/caucuses/images/twitter.gif"/></a>
+<a href="http://www.facebook.com/pages/Iowa-Caucuses-Des-Moines-Register/171566092897057"><img alt="facebook" src="http://caucuses.desmoinesregister.com/wp-content/themes/caucuses/images/facebook.gif"/></a>
+</div>
+</div>
+<div class="ad_wrap">
+<script language="JavaScript">
+				<!--
+				OAS_AD('Flex_1');
+				//-->
+			</script><banner position="Flex_1" sitepage="ia-desmoines.desmoinesregister.com/news/government/front.htm"></banner>
+<img alt="ad" src="http://caucuses.desmoinesregister.com/wp-content/themes/caucuses/images/ad_label_horiz.gif"/>
+</div>
+<div class="widget_wrap"><h3>Meet the candidates</h3><div class="shadow_rule clear"></div> <ul class="candidate_nav_narrow">
+<li><a class="feature01" href="http://caucuses.desmoinesregister.com/candidates/michele-bachmann/" title="View info on Michele Bachmann"><span class="overlay01"></span><img alt="m0122bachmannbn12" class="attachment-candidate-nav" height="45" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2011/10/Bachmann-new-nav-45x45.jpg" width="45"/><span class="caption01">Bachmann</span></a></li><li><a class="feature01" href="http://caucuses.desmoinesregister.com/candidates/newt-gingrich/" title="View info on Newt Gingrich"><span class="overlay01"></span><img alt="Gingrich" class="attachment-candidate-nav" height="45" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2011/10/Gingrich-new-nav-45x45.jpg" width="45"/><span class="caption01">Gingrich</span></a></li><li><a class="feature01" href="http://caucuses.desmoinesregister.com/candidates/jon-huntsman/" title="View info on Jon Huntsman"><span class="overlay01"></span><img alt="U.S. Ambassador To China Jon Huntsman Jr. Lectures In Shanghai" class="attachment-candidate-nav" height="45" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2011/10/Huntsman-new-nav1-45x45.jpg" width="45"/><span class="caption01">Huntsman</span></a></li><li><a class="feature01" href="http://caucuses.desmoinesregister.com/candidates/gary-johnson/" title="View info on Gary Johnson"><span class="overlay01"></span><img alt="Johnson new nav" class="attachment-candidate-nav" height="45" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2011/10/Johnson-new-nav-45x45.jpg" width="45"/><span class="caption01">Johnson</span></a></li><li><a class="feature01" href="http://caucuses.desmoinesregister.com/candidates/ron-paul/" title="View info on Ron Paul"><span class="overlay01"></span><img alt="Paul" class="attachment-candidate-nav" height="45" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2011/10/Paul-new-nav-45x45.jpg" width="45"/><span class="caption01">Paul</span></a></li><li><a class="feature01" href="http://caucuses.desmoinesregister.com/candidates/rick-perry/" title="View info on Rick Perry"><span class="overlay01"></span><img alt="Perry new nav" class="attachment-candidate-nav" height="45" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2011/10/Perry-new-nav-45x45.jpg" width="45"/><span class="caption01">Perry</span></a></li><li><a class="feature01" href="http://caucuses.desmoinesregister.com/candidates/buddy-roemer/" title="View info on Buddy Roemer"><span class="overlay01"></span><img alt="Roemer new nav" class="attachment-candidate-nav" height="45" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2011/10/Roemer-new-nav-45x45.jpg" width="45"/><span class="caption01">Roemer</span></a></li><li><a class="feature01" href="http://caucuses.desmoinesregister.com/candidates/mitt-romney/" title="View info on Mitt Romney"><span class="overlay01"></span><img alt="Fifth Annual Values Voter Summit Held In Washington, DC" class="attachment-candidate-nav" height="45" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2011/10/Romney-new-nav-45x45.jpg" width="45"/><span class="caption01">Romney</span></a></li><li><a class="feature01" href="http://caucuses.desmoinesregister.com/candidates/rick-santorum/" title="View info on Rick Santorum"><span class="overlay01"></span><img alt="Rick Santorum" class="attachment-candidate-nav" height="45" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2011/10/Santorum-new-nav-45x45.jpg" width="45"/><span class="caption01">Santorum</span></a></li> </ul>
+<ul class="candidate_nav_incumbent">
+<li>
+<a class="feature02" href="http://caucuses.desmoinesregister.com/candidates/barack-obama/" title="View info on Barack Obama">
+<span class="overlay02"></span>
+<img alt="Obama new nav" class="attachment-incumbent" height="90" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2011/10/Obama-new-nav-90x90.jpg" width="90"/> <span class="caption02">Barack Obama</span>
+</a>
+</li>
+<li>
+<ul>
+<li><a href="http://caucuses.desmoinesregister.com/about-the-democratic-caucuses/">About the Democratic caucuses</a></li>
+<li><a href="http://caucuses.desmoinesregister.com/barack-obamas-record/">Barack Obama's record</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="widget_wrap"><h3>Campaign trail videos</h3><div class="shadow_rule clear"></div> <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,47,0" height="440" id="flashObj" width="300">
+<param name="movie" value="http://c.brightcove.com/services/viewer/federated_f9?isVid=1&amp;isUI=1"/>
+<param name="bgcolor" value="#FFFFFF"/>
+<param name="flashVars" value="playerID=848298731001&amp;playerKey=AQ~~,AAAACEa20sk~,awHVm72MyKknaP-ccfyQl1n1kvGJccx1&amp;domain=embed&amp;dynamicStreaming=true"/>
+<param name="base" value="http://admin.brightcove.com"/>
+<param name="seamlesstabbing" value="false"/>
+<param name="allowFullScreen" value="true"/>
+<param name="swLiveConnect" value="true"/>
+<param name="allowScriptAccess" value="always"/>
+<embed allowfullscreen="true" allowscriptaccess="always" base="http://admin.brightcove.com" bgcolor="#FFFFFF" flashvars="playerID=848298731001&amp;playerKey=AQ~~,AAAACEa20sk~,awHVm72MyKknaP-ccfyQl1n1kvGJccx1&amp;domain=embed&amp;dynamicStreaming=true" height="440" name="flashObj" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" seamlesstabbing="false" src="http://c.brightcove.com/services/viewer/federated_f9?isVid=1&amp;isUI=1" swliveconnect="true" type="application/x-shockwave-flash" width="300">
+</embed></object>
+</div><div class="widget_wrap"><h3>Iowa Caucus tweets</h3><div class="shadow_rule clear"></div> <script type="text/javascript">
+				new TWTR.Widget({
+				version: 2,
+				type: 'search',
+				search: '#iacaucus',
+				interval: 60000,
+				title: '',
+				subject: '',
+				width: 300,
+				height: 130,
+				theme: {
+					shell: {
+					background: '#ffffff',
+					color: '#ffffff'
+					},
+					tweets: {
+					background: '#e8edf4',
+					color: '#003388',
+					links: '#000000'
+					}
+				},
+				features: {
+					scrollbar: true,
+					loop: false,
+					live: false,
+					behavior: 'all'
+				}
+				}).render().start();
+			</script>
+</div><div class="widget_wrap"><h3>Caucus galleries</h3><div class="shadow_rule clear"></div> <div class="gal_wrap">
+<div class="img_wrap">
+<a href="http://caucuses.desmoinesregister.com/2012/01/03/photos-2012-iowa-caucus-day/" title="Photos: 2012 Iowa caucus day">
+<img alt="Photos: 2012 Iowa caucus day" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2012/01/dmrdc5-62zh7xlr212166cwn5cs_original1-94x60.jpg"/> </a>
+<p>
+<a href="http://caucuses.desmoinesregister.com/2012/01/03/photos-2012-iowa-caucus-day/" title="Photos: 2012 Iowa caucus day">
+									Photos: 2012 Iowa caucus day								</a>
+</p>
+</div>
+<div class="img_wrap">
+<a href="http://caucuses.desmoinesregister.com/2012/01/03/mitt-romney-in-iowa-on-caucus-day/" title="Photos: Mitt Romney in Iowa on Caucus Day">
+<img alt="Photos: Mitt Romney in Iowa on Caucus Day" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2012/01/dmrdc5-62zekgsijed1erbrc5cs_original-94x60.jpg"/> </a>
+<p>
+<a href="http://caucuses.desmoinesregister.com/2012/01/03/mitt-romney-in-iowa-on-caucus-day/" title="Photos: Mitt Romney in Iowa on Caucus Day">
+									Photos: Mitt Romney in Iowa on ...								</a>
+</p>
+</div>
+<div class="img_wrap">
+<a href="http://caucuses.desmoinesregister.com/2012/01/03/photos-candidates-stage-last-day-campaign-stops/" title="Photos: Candidates stage last-day campaign stops">
+<img alt="Photos: Candidates stage last-day campaign stops" src="http://caucuses.desmoinesregister.com/wp-content/uploads/2012/01/dmrdc5-62z241526gju5nz1ce0_original-94x60.jpg"/> </a>
+<p>
+<a href="http://caucuses.desmoinesregister.com/2012/01/03/photos-candidates-stage-last-day-campaign-stops/" title="Photos: Candidates stage last-day campaign stops">
+									Photos: Candidates stage last-day campaign stops								</a>
+</p>
+</div>
+</div>
+</div></div></div>
+<div class="footer_wrap full_width clear">
+<div class="shadow_rule"></div>
+<div class="leader_wrap">
+<script language="JavaScript">
+				<!--
+				OAS_AD('728x90_2');
+				//-->
+			</script><banner position="728x90_2" sitepage="ia-desmoines.desmoinesregister.com/news/government/front.htm"></banner>
+</div>
+<div class="legal">
+<p>Copyright © 2019 www.DesMoinesRegister.com. All rights reserved.</p>
+<p>Users of this site agree to the <a href="http://www.DesMoinesRegister.com/section/terms">Terms of Service</a>, <a href="http://www.DesMoinesRegister.com/section/privacy">Privacy Notice</a>, and <a href="http://www.DesMoinesRegister.com/section/privacy#adchoices">Ad Choices</a></p>
+</div>
+<div class="red_bar full_width"></div>
+</div>
+<script type="text/javascript">
+				var visitor = new Visitor(""); // same as s.visitorNamespace
+				visitor.trackingServer = ""; // same as s.trackingServer
+
+				s=new AppMeasurement();
+				s.visitorNamespace = "";
+				s.account = "gpaper122,gntbcstglobal";
+
+				/******** VISITOR ID SERVICE CONFIG - REQUIRES VisitorAPI.js ********/
+				s.visitor = Visitor.getInstance(""); // same as s.VisitorNamespace
+
+				/************************** CONFIG SECTION **************************/
+				/* You may add or alter any code config here. */
+				/* Link Tracking Config */
+				s.trackDownloadLinks = true;
+				s.trackExternalLinks = true;
+				s.trackInlineStats = true;
+				s.linkDownloadFileTypes = "avi,doc,exe,m4v,mov,mp3,mp4,mpg,pdf,wav,wmv,xls,zip";
+				s.linkInternalFilters="javascript:,hawkcentral,pictopia,topix,gbahn,gon.gannettonline.com,ur.gcion.com,desmoinesregister.com,ragbrai.com";
+				s.linkLeaveQueryString = false;
+				s.linkTrackVars = "None";
+				s.linkTrackEvents = "None";
+				s.trackingServer = "";
+				
+				if(typeof gcion_enable_bt != 'undefined') {
+					if(gcion_enable_bt) {
+					document.writeln('<script type="text/javascript" src="//js.revsci.net/gateway/gw.js?csid=J06575" charset="ISO-8859-1"></s' + 'cript>');
+					}
+				}
+	
+				s.server="dataserver"
+				if(typeof s_pageName!='undefined'){s.pageName=s_pageName}else{s.pageName="Caucuses - Other"}
+				if (typeof s_channel!='undefined'){s.channel=s_channel}else{s.channel=""}
+				if(typeof s_pageType!='undefined'){s.pageType=s_pageType}
+				if(typeof s_prop1!='undefined'){s.prop1=s_prop1}else{s.prop1=""}
+				if(typeof s_prop2!='undefined'){s.prop2=s_prop2}else{s.prop2=""}
+				if(typeof s_prop3!='undefined'){s.prop3=s_prop3}else{s.prop3=""}
+				if(typeof s_prop4!='undefined'){s.prop4=s_prop4}else{s.prop4=""}
+				if(typeof s_prop5!='undefined'){s.prop5=s_prop5}else{s.prop5=""}
+				if(typeof s_prop6!='undefined'){s.prop6=s_prop6}else{s.prop6=""}
+				if(typeof s_prop41!='undefined'){s.prop41=s_prop41}
+				if(typeof s_prop43!='undefined'){s.prop43=s_prop43}
+				if(typeof s_prop45!='undefined'){s.prop45=s_prop45}
+				if(typeof s_prop7!='undefined'){s.prop7=s_prop7}else{s.prop7=""}
+				if(typeof s_prop8!='undefined'){s.prop8=s_prop8}else{s.prop8=""}
+				if(typeof s_prop21!='undefined'){s.prop21=s_prop21}
+				if(typeof s_prop25!='undefined'){s.prop25=s_prop25}
+				if(typeof s_prop71!='undefined'){s.prop71=s_prop71}
+				s.prop23=document.location
+				if(typeof s_prop16!='undefined'){s.prop16=s_prop16}else{s.prop16='section'}
+				if(typeof rsinetsegs!='undefined'){s.prop48=(rsinetsegs.join('|')).replace(/J06575_/g,'');}else{s.prop48='no segment';}
+				s.prop50=s_prop50;
+				if(s.prop7){s.eVar5=s.prop7;}
+				/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+				var s_code=s.t();if(s_code)document.write(s_code)
+				//-->
+			</script>
+<script type="text/javascript"><!--
+			if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+			//--></script>
+<noscript><img alt="" border="0" height="1" src="//gpaper122.112.2O7.net/b/ss/gpaper122,gntbcstglobal/1/H.3--NS/0" width="1"/></noscript>
+<script type="text/javascript">
+				if (typeof(checkM8_global_control)!='undefined' && checkM8_global_control == "1"){
+				if (typeof(checkM8_site_control)!='undefined' && checkM8_site_control == "1"){
+							var oas_domain = xtractDomain();
+							var oas_section = xtractSection(OAS_sitepage);
+							var oas_file = xtractFile(OAS_sitepage);
+							var checkm8String = "";
+							if (oas_section=='umbrella'){
+								checkm8String = matchSections(oas_section)} else {
+								checkm8String = matchSections(oas_section)+".Front"};
+							/*CheckM8 Settings*/
+							var CM8Server = "q1.checkm8.com";
+							var CM8Cat = oas_domain+"."+checkm8String;
+							var CM8Profile="";
+							/*CheckM8 Settings*/
+							/*CheckM8 JS Call*/
+							document.writeln("<scr"+"ipt type='text/javascript' src='//q1digital.checkm8.com/adam/cm8adam_1_call.js'><" + "/script>");
+				}
+			}
+			</script>
+<script type="text/javascript">
+    
+          var pfHeaderImgUrl = '';
+          var pfHeaderTagline = '';
+          var pfdisableClickToDel = '0';
+          var pfHideImages = '0';
+          var pfImageDisplayStyle = 'right';
+          var pfDisableEmail = '0';
+          var pfDisablePDF = '0';
+          var pfDisablePrint = '0';
+          var pfCustomCSS = '';
+      (function() {
+            var e = document.createElement('script'); e.type="text/javascript";
+        if('https:' == document.location.protocol) {
+        js='https://pf-cdn.printfriendly.com/ssl/main.js';
+        }
+        else{
+        js='http://cdn.printfriendly.com/printfriendly.js';
+        }
+            e.src = js;
+            document.getElementsByTagName('head')[0].appendChild(e);
+        })();
+      </script>
+<script src="http://caucuses.desmoinesregister.com/wp-includes/js/underscore.min.js?ver=1.6.0" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var fergcorp_countdown_timer_js_lang = {"year":"%d year,","years":"%d years,","month":"%d month,","months":"%d months,","week":"%d week,","weeks":"%d weeks,","day":"%d day,","days":"%d days,","hour":"%d hour,","hours":"%d hours,","minute":"%d minute,","minutes":"%d minutes,","second":"%d second,","seconds":"%d seconds,","agotime":"%s ago","intime":"in %s"};
+var fergcorp_countdown_timer_jsEvents = [];
+var fergcorp_countdown_timer_options = {"showYear":"1","showMonth":"0","showWeek":"0","showDay":"1","showHour":"1","showMinute":"1","showSecond":"1","stripZero":"1"};
+/* ]]> */
+</script>
+<script src="http://caucuses.desmoinesregister.com/wp-content/plugins/countdown-timer/js/fergcorp_countdownTimer_java.js?ver=3.0.6" type="text/javascript"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b7ac0e2ada","applicationID":"20138717","transactionName":"NARUbRdVVhdSBk0MWQ1Od1oRXVcKHBZQC1EPBA==","queueTime":0,"applicationTime":1198,"atts":"GENXG19PRRk=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using memcached
+Database Caching 100/121 queries in 0.101 seconds using memcached
+Object Caching 4217/4528 objects using memcached
+
+ Served from: caucuses.desmoinesregister.com @ 2019-07-07 00:40:43 by W3 Total Cache --><iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/widget_iframe.d753e00c3e838c1b2558149bd3f6ecb8.html?origin=http%3A%2F%2Fcaucuses.desmoinesregister.com" style="display: none;" title="Twitter settings iframe"></iframe><table cellpadding="0" cellspacing="0" class="gstl_50 gssb_c" style="width: 142px; display: none; top: 296px; left: 1156px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body></html>

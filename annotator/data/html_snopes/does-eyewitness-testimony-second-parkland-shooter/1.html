@@ -1,0 +1,577 @@
+<html><head>
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="http://mms.tveyes.com//js/prototype-1.6.0.2.js" type="text/javascript"></script>
+<title>TVEyes Media Monitoring Suite - [Transcript]</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="http://mms.tveyes.com/library/mms/default.css" rel="stylesheet" type="text/css"/>
+<script language="javascript">	
+<!--
+
+	ns4 = (document.layers)? true:false
+	ie4 = (document.all)? true:false
+
+	// Show/Hide functions for non-pointer layer/objects
+	function show(id,width,height) 
+	{
+	
+	    if (ns4) 
+		{
+			document.layers[id].visibility = "show";
+			document.layers[id].width = width;
+			document.layers[id].height = height;
+		}
+	    else if (ie4)
+	    {
+			document.all[id].style.visibility = "visible";
+			document.all[id].width = width;
+			document.all[id].height = height;
+		}
+		else
+		{
+			document.getElementById(id).width = width;
+			document.getElementById(id).height = height;
+			document.getElementById(id).visibility = "show";
+		}
+	}
+	
+	function hide(id) 
+	{
+	    if (ns4) 
+		{
+			document.layers[id].visibility = "hide";
+			document.layers[id].width = "0";
+			document.layers[id].height = "0";
+		}
+	    else if (ie4)
+	    {
+			document.all[id].style.visibility = "hidden";
+			document.all[id].width = "0";
+			document.all[id].height = "0";
+		}
+		else
+		{
+			document.getElementById(id).width = 0;
+			document.getElementById(id).height = 0;
+			document.getElementById(id).visibility = "hide";
+		}
+	}
+
+	function loadIFrame(id,src) {
+	    if (ns4) 
+		{
+			document.layers[id].src = src;
+		}
+	    else if (ie4)
+	    {
+			document.all[id].src = src;
+		}
+		else
+		{
+			//top.document.frames[id].location = src;
+			document.getElementById(id).src = src;
+			//.location.href = src ;
+		}
+	}
+
+
+	function activateEmailAlert(iWLTermID)
+	{
+	 document.location = "/scripts/activateEmailAlert.asp?WLTermID=" + iWLTermID
+	}
+
+	function loadMain(url)
+	{
+		document.src=url;
+	}
+
+	function loadDyno(action)
+	{
+		if (action == "basic")
+		{
+			loadIFrame('dynoFrame','/forms/addterm.asp');
+			show('dynoFrame',725,70);
+			//dynoFrame.focus();
+			//document.dynoFrame.form1.focus();
+		}
+		else if (action == "basicphonetic")
+		{
+			loadIFrame('dynoFrame','/forms/addterm.asp');
+			show('dynoFrame',725,90);
+			//dynoFrame.focus();
+			//document.dynoFrame.form1.focus();
+		}
+		else if (action == "advancedphonetic")
+		{
+			loadIFrame('dynoFrame','/forms/addterm.asp?Advanced=TRUE');
+			show('dynoFrame',725,130);
+		}
+		else if (action == "advanced")
+		{
+			loadIFrame('dynoFrame','/forms/addterm.asp?Advanced=TRUE');
+			show('dynoFrame',725,120);
+		}
+		else if (action == "otherWatchLists")
+		{
+			loadIFrame('dynoFrame','/forms/otherWatchLists.asp');
+			show('dynoFrame',725,110);
+		}
+		else if (action == "addCluster")
+		{
+			loadIFrame('dynoFrame','/addCluster.asp');
+			show('dynoFrame',725,40);
+		}
+		else if (action == "hide")
+		{
+			hide('dynoFrame');
+		}
+	}
+	
+
+	function OpenWindow(theURL,winName,winType)
+	{
+		var mainWinX,mainWinY,winVariables;
+		mainWinX = window.screenLeft;
+		mainWinY = window.screenTop;
+	
+		switch( winType ) 
+		{
+			case "Yahoo":
+			    winVariables = "toolbar=yes,resizable=yes,scrollbars=yes,width=650,height=500,left=" + mainWinX + ",top=" + mainWinY;
+			    break;
+			case "Podscope":
+			    winVariables = "toolbar=yes,resizable=yes,scrollbars=yes,width=800,height=600,left=" + mainWinX + ",top=" + mainWinY;
+			    break;
+			case "audio":
+			    winVariables = "resizable=no,scrollbars=no,width=285,height=180,left=" + mainWinX + ",top=" + mainWinY;
+			    break;
+			case "video":
+			    winVariables = "resizable=no,scrollbars=no,width=290,height=325,left=" + mainWinX + ",top=" + mainWinY;
+			    break;
+			case "charthelp":
+				winVariables = "resizable=no,scrollbars=no,width=400,height=225,left=" + mainWinX + ",top=" + mainWinY;
+				break;
+			case "printcharts":
+				winVariables = "toolbar=yes,menubar=yes,resizable=no,scrollbars=yes,width=640,height=480,left=" + mainWinX + ",top=" + mainWinY;
+				break;
+			case "zoom":
+				winVariables = "toolbar=no,menubar=no,resizable=no,scrollbars=yes,width=725,height=480,left=" + mainWinX + ",top=" + mainWinY;
+			case "default":
+			    winVariables = "resizable=yes,scrollbars=yes,width=800,height=600";
+			default :
+			    winVariables = "resizable=yes,scrollbars=yes,width=800,height=600,left=" + mainWinX + ",top=" + mainWinY;
+			    break;
+		}
+	
+		var myWindow = window.open(theURL,winName,winVariables);
+		myWindow.focus()
+	}
+
+	function confirmTermOrGroupDelete(delURL, sDisplayText) //20120510
+	{
+		if (confirm(sDisplayText)) 
+		{
+			document.location = delURL;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+  function confirmDelete(delURL) 
+	{
+		if (confirm("Are you sure you want to delete this keyword?")) 
+		{
+			document.location = delURL;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	function confirmDelDLClip(dcURL, dcText)
+	{
+		if (confirm(dcText)) //20120511 text is now passed in dcText. removed: "Delete clip from " + 
+		{
+			document.location = dcURL;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+
+	function EditScore(TermNo,UserID,AlertID,Score)
+	{
+		document.location.replace('scripts/eS1.asp?TermNo=' + TermNo + '&UserID=' + UserID + '&AlertID=' + AlertID + '&Score=' + Score);
+	}
+
+	function ChangeFilter(filterName,filterID,refresh)
+	{
+		var url = document.location
+		
+		if (filterName == 'media')
+		{	
+			if (filterID == 0)
+			{
+			setCookie('MediaFilter', '0')
+			setCookie('StationFilter', '0')
+			setCookie('ContentFilter', '0')
+			}
+			else
+			{
+			setCookie('MediaFilter', filterID)
+			setCookie('StationFilter', '0')
+			setCookie('ContentFilter', '0')
+			}
+		}
+		
+		if (filterName == 'station')
+		{	
+			if (filterID == 0)
+			{
+			setCookie('StationFilter', '0')
+			}
+			else
+			{
+			setCookie('StationFilter', filterID)
+			}
+		}
+		
+		if (filterName == 'Content')
+		{	
+			if (filterID == 0)
+			{
+			setCookie('ContentFilter', '0')
+			}
+			else
+			{
+			setCookie('ContentFilter', filterID)
+			}
+		}
+		
+		if (filterName == 'AmtSelect')
+		{
+			setCookie('AmtSelect', filterID)
+		}
+		
+		if (filterName == 'MaxCount')
+		{
+			setCookie('MaxCount', filterID)
+		}
+		
+		if (refresh)
+		{
+			window.location.reload();
+		}
+		return true;
+	}
+	
+	function ChangeFilterRedir(filterName,filterID, redir)
+	{
+		//var url = document.location
+		
+		if (filterName == 'media')
+		{	
+			if (filterID == 0)
+			{
+			setCookie('MediaFilterRedir', '0')
+			setCookie('StationFilterRedir', '0')
+			setCookie('ContentFilterRedir', '0')
+			setCookie('TVDataFilterRedir', '0')
+			}
+			else
+			{
+			setCookie('MediaFilterRedir', filterID)
+			setCookie('StationFilterRedir', '0')
+			setCookie('ContentFilterRedir', '0')
+			setCookie('TVDataFilterRedir', '0')
+			}
+		}
+		
+		if (filterName == 'station')
+		{	
+			if (filterID == 0)
+			{
+			setCookie('StationFilterRedir', '0')
+			//alert('stations set to 0')
+			}
+			else
+			{
+			setCookie('StationFilterRedir', filterID)
+			//alert('stations set to ' + filterID)
+			}
+		}
+		
+		if (filterName == 'Content')
+		{	
+			if (filterID == 0)
+			{
+			setCookie('ContentFilterRedir', '0')
+			}
+			else
+			{
+			setCookie('ContentFilterRedir', filterID)
+			}
+		}
+		
+		if (filterName == 'TVData')
+		{	
+			if (filterID == 0)
+			{
+			setCookie('TVDataFilterRedir', '0')
+			//alert('stations set to 0')
+			}
+			else
+			{
+			setCookie('TVDataFilterRedir', filterID)
+			//alert('stations set to ' + filterID)
+			}
+		}
+		
+		if (redir)
+		{
+			//window.location.reload();
+			document.location = redir
+		}
+		return true;
+	}
+	
+
+	// name - name of the cookie
+	// value - value of the cookie
+	// [expires] - expiration date of the cookie (defaults to end of current session)
+	// [path] - path for which the cookie is valid (defaults to path of calling document)
+	// [domain] - domain for which the cookie is valid (defaults to domain of calling document)
+	// [secure] - Boolean value indicating if the cookie transmission requires a secure transmission
+	// * an argument defaults when it is assigned null as a placeholder
+	// * a null placeholder is not required for trailing omitted arguments
+	function setCookie(name, value, expires, path, domain, secure) {
+	  var curCookie = name + "=" + value
+	  document.cookie = curCookie;
+	}
+
+	// name - name of the desired cookie
+	// * return string containing value of specified cookie or null if cookie does not exist
+	function getCookie(name) {
+	  var dc = document.cookie;
+	  var prefix = name + "=";
+	  var begin = dc.indexOf("; " + prefix);
+	  if (begin == -1) {
+	    begin = dc.indexOf(prefix);
+	    if (begin != 0) return null;
+	  } else
+	    begin += 2;
+	  var end = document.cookie.indexOf(";", begin);
+	  if (end == -1)
+	    end = dc.length;
+	  return unescape(dc.substring(begin + prefix.length, end));
+	}
+
+	// name - name of the cookie
+	// [path] - path of the cookie (must be same as path used to create cookie)
+	// [domain] - domain of the cookie (must be same as domain used to create cookie)
+	// * path and domain default if assigned null or omitted if no explicit argument proceeds
+	function deleteCookie(name, path, domain) {
+	  if (getCookie(name)) {
+	    document.cookie = name + "=" + 
+	    ((path) ? "; path=" + path : "") +
+	    ((domain) ? "; domain=" + domain : "") +
+	    "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+	  }
+	}
+
+	// date - any instance of the Date object
+	// * hand all instances of the Date object to this function for "repairs"
+	function fixDate(date) {
+	  var base = new Date(0);
+	  var skew = base.getTime();
+	  if (skew > 0)
+	    date.setTime(date.getTime() - skew);
+	}
+	
+
+	//pops up calendar
+	function calpopup(lnk) { 
+		window.open(lnk, "calendar","height=260,width=250,scrollbars=no") 
+	} 
+
+	function GetLocalDate() {
+		var thedate = new Date()
+		var printDate = (thedate.getMonth() + 1) + "/" + thedate.getDate() + "/" + thedate.getFullYear();
+		var printTime = thedate.getHours() + ":" + thedate.getMinutes() + ":" + thedate.getSeconds();
+		document.getElementById('HiddenD1').value = printDate;
+		document.getElementById('HiddenT1').value = printTime;
+	}
+
+
+-->
+</script>
+<script>
+<!--
+var baseDateTime = new Date(2018, 1, 14, 18, 1, 27,0);
+var highlight;
+function LoadMediaFrame()
+{
+tempFrame = document.getElementById("MediaFrame");
+
+            tempFrame.src = "Playerlette.aspx?StationID=989&StartDateTime=2%2F14%2F2018+6%3A01%3A27+PM&Duration=15&OrGroupID=&inframe=False&pbc=";
+        
+}
+//-->
+    function JumpVideo(secondsOffBase)
+    {
+                
+        var finalDateTime = new Date(baseDateTime.getTime() + (secondsOffBase * 1000) + (-10 * 1000))
+        if (highlight != null)
+        {
+            $(highlight).style.background="#FFFFFF";
+        }
+        $(secondsOffBase).style.background="#C8C8C8";
+        highlight = secondsOffBase;
+        highlight = secondsOffBase;
+    
+        //use the formatting ability of the playerlette 
+        urlEncodedDT = escape($('MediaFrame').contentWindow.getPlayerPrintableDateTimeFormat(finalDateTime));
+        
+        
+        //alert("Playerlette.aspx?StationID=989&StartDateTime=" + urlEncodedDT + "&Duration=600&OrGroupID=&inframe=False&ShowLinks=true");
+        tempFrame.src = "Playerlette.aspx?StationID=989&StartDateTime=" + urlEncodedDT + "&Duration=15&OrGroupID=&inframe=False&ShowLinks=true";
+        return false;
+    }
+</script>
+</head>
+<body onload="LoadMediaFrame();updateCheckbox($('AddToCurrentReport'), 989, '02/14/2018 06:01:27 PM')">
+<center>
+<table align="CENTER" width="750"><tbody><tr><td valign="BASELINE"><img alt="Media Monitoring Suite" height="34" src="http://mms.tveyes.com//images/mms/mms.gif" width="287"/></td><td align="RIGHT"><a href="http://www.TVEyes.com"><img alt="TVEyes" border="0" src="http://mms.tveyes.com/../images/TVEyes_eye2side.gif"/></a></td></tr></tbody></table>
+<table align="CENTER" width="100%">
+<tbody><tr><td align="RIGHT" class="menuBar">
+<table align="CENTER" border="0" cellpadding="2" cellspacing="2" width="750">
+<tbody><tr><td class="menuBar">
+<a href="http://www.tveyes.com" onmouseout="window.status='';return true" onmouseover="window.status='Log In';return true">Log In</a> &gt; 
+Transcript
+</td><td align="RIGHT" class="menuBar">
+<a href="http://www.tveyes.com" onmouseout="window.status='';return true" onmouseover="window.status='Log In';return true">Log In</a>
+</td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+<p><a name="Transcript"></a></p><table align="CENTER" border="0" cellpadding="0" cellspacing="0" width="725"><tbody><tr><td class="FeatureHeader"><span class="FH1" id="Transcript">Transcript</span> </td><td align="RIGHT" class="MiniLink" valign="BOTTOM"><a href="http://www.tveyes.com" id="headerlinkid0" onmouseout="window.status='';return true" onmouseover="window.status='Log In';return true">Log In</a> </td></tr></tbody></table><hr size="1" width="725"/>
+<script type="text/javascript">
+	function toggleInCurrentReport(objCheckbox, iStationID, sDateTime) {
+		var toggleUrl = "/scripts/MyReportHandler.asp?";
+		if(objCheckbox.checked) {
+			toggleUrl += "action=add";
+		} else {
+			toggleUrl += "action=remove";
+		}
+		
+		toggleUrl += "&StationID="+ iStationID + "&DateTime=" + sDateTime;
+		$('toggleLoadingStatus').style.display = "inline";
+		new Ajax.Request(toggleUrl, {
+			method: 'get',
+			onSuccess: function(transport) {
+				$('toggleLoadingStatus').style.display = "none";
+				//alert(transport.responseText);
+			}
+		});
+
+    }
+    function toggleInNetReport(objCheckbox, iStationID, sDateTime) {
+        var toggleUrl = "/NetReport.aspx?";
+        if (objCheckbox.checked) {
+            toggleUrl += "action=add";
+        } else {
+            toggleUrl += "action=remove";
+        }
+
+        toggleUrl += "&StationID=" + iStationID + "&StationDateTime=" + sDateTime;
+        $('toggleLoadingStatus').style.display = "inline";
+        //alert(toggleUrl);
+        new Ajax.Request(toggleUrl, {
+            method: 'get',
+            onSuccess: function(transport) {
+                $('toggleLoadingStatus').style.display = "none";
+            }
+        });
+    }
+    function updateCheckbox(objCheckbox, iStationID, sDateTime) {
+        var ajaxUrl = '/NetReport.aspx?action=CurrentReportQuery&query=contains&StationID=' + escape(iStationID) + '&StationDateTime=' + escape(sDateTime);
+
+        new Ajax.Request(ajaxUrl, { method: 'get',
+            onSuccess: function(transport) {
+                //alert(transport.responseText);
+                var jResponse = transport.responseText.evalJSON();
+                objCheckbox.checked = jResponse.QueryResult.Contains;
+            }
+        });
+    }
+
+</script>
+<table width="700">
+<tbody><tr><td><b>KPRC-HOU (NBC) - Houston, TX<br/>KPRC Channel 2 News at 6PM</b></td></tr>
+<tr>
+<td>
+<iframe align="right" allow="autoplay; fullscreen" allowfullscreen="true" frameborder="0" height="338" id="MediaFrame" scrolling="no" src="Playerlette.aspx?StationID=989&amp;StartDateTime=2%2F14%2F2018+6%3A01%3A27+PM&amp;Duration=15&amp;OrGroupID=&amp;inframe=False&amp;pbc=" width="352">
+</iframe>
+<div style="font-size: 10pt; border: 2px solid #99CC99; width: 300px; padding-left: 2px; padding-bottom: 2px; padding-top: 4px; margin-bottom: 4px; margin-top: 3px;"><a href="javascript:toggleDemoPanel();" style="text-decoration: none;">+</a> Local Market Viewership: 207,623<div style="margin-left: 14px;">Local Publicity Value: $13,635.30<span style="color: #333333; font-size: 6pt; margin-left: 6px;">per 30s</span></div>
+<style type="text/css">
+				DIV#FullDemoPanel TABLE TR TH {color: #333333; text-align: left;}
+			</style>
+<div id="FullDemoPanel" style="display: none;">
+<div style="font-size: 8pt; margin-left: 3px; margin-bottom: 3px; margin-top: 8px;"><span style="font-weight: bold;">Local Household Rating/Share</span><span style="margin-left: 5px;">6.342/12.338</span></div><a href="" onclick="popupViewershipReport('/ViewershipData/ViewershipReport.aspx?StationID=989&amp;StationDateTime=02%2F14%2F2018+06%3A01%3A27+PM'); return false;">Viewership Report</a>
+</div>
+</div>
+<script type="text/javascript">
+		    function popupViewershipReport(sUrl) {
+		        window.open(sUrl, "viewershipreport", "width=850,height=350,scrollbars=yes");
+		    }
+			function toggleDemoPanel() {
+				if(document.getElementById('FullDemoPanel').style.display == 'block') {
+					document.getElementById('FullDemoPanel').style.display = 'none';
+				} else {
+					document.getElementById('FullDemoPanel').style.display = 'block'
+				}
+			}
+		</script>
+<b>KPRC 02/14/2018 06:01:27 PM: </b>......
+		</td>
+</tr>
+</tbody></table>
+<p> 
+</p><p>
+</p><table align="CENTER" width="100%">
+<tbody><tr>
+<td class="menuBar">
+<font size="1">
+</font><p align="center"><font size="1">
+<br/>
+				Copyright ©1999 - 2019
+				<a href="http://www.tveyes.com" onmouseout="window.status='';return true" onmouseover="window.status='Goto TVEyes.com';return true">TVEyes, Inc.</a> 
+				All rights reserved.
+				<br/>
+				Questions, comments, or suggestions? Send us 
+				<a href="mailto:Sales@TVEyes.com&amp;Subject=Professional Support" onmouseout="window.status='';return true" onmouseover="window.status='Send us feedback';return true">feedback</a>.
+				<a href="http://www.tveyes.com/privacy-policy" onmouseout="window.status='';return true" onmouseover="window.status='View Privacy Policy';return true">
+<br/>
+				Privacy Policy
+				</a>
+<br/><br/>
+</font>
+</p></td>
+</tr>
+</tbody></table>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41293988-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</center></body></html>

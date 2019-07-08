@@ -1,0 +1,392 @@
+<html class="js"><head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><script src="https://pi.pardot.com/pd.js" type="text/javascript"></script><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://www.google-analytics.com/plugins/ua/linkid.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-P7TPGCK" type="text/javascript"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwIAUlRSGwcHUlJSAQM="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(u){try{i("ierr",[u,c.now(),!0])}catch(d){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),u=t("gos"),f=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(5),t(4),"addEventListener"in window&&t(3),c.xhrWrappable&&t(6),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(u(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(f);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[f,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),u=XMLHttpRequest,f="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(u.prototype)):u.prototype.hasOwnProperty(f)&&(o(window),o(u.prototype)),a.on(f+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],4:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],5:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",u="clearTimeout",f="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[u,"clearImmediate"],u+d),i.on(c+f,r),i.on(s+f,o)},{}],6:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=f.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,f.emit("xhr-resolved",[],t)),d.inPlace(t,x,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(3);var u=t("ee"),f=u.get("xhr"),d=t(18)(f),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",x=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=f;var y=window.XMLHttpRequest=function(t){var n=new p(t);try{f.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}return n};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),f.on("send-xhr-start",function(t,n){r(t,n),i(n)}),f.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else u.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],7:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(13);n.exports={generateTraceHeader:r}},{}],8:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return v(r)}function i(t,n){var e=u(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),u=t(9),f=t(7).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(12),v=t(11),w=window.XMLHttpRequest;s.features.xhr=!0,t(6),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=f();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=v(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof w&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof w&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof w&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],9:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],10:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[u.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),u=t("loader"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){f[n]=o(l+n,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,f.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[u.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[u.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[u.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,u.now(),!1,n])}},{}],11:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],12:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],13:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],14:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(u){l([u,"",[r,a,o],s])}f(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw f(n+"err",[r,a,d],s),d}finally{f(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function u(t,n,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,u?s+o:o,i,s))}function f(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=u,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,u=0;u<c;u++)s[u].apply(a,r);var d=f[g[e]];return d&&d.push([y,e,r,a]),a}}function p(t,n){x[t]=m(t).concat(n)}function h(t,n){var e=x[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return x[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){u(t,function(t,e){n=n||"feature",g[e]=n,n in f||(f[n]=[])})}var x={},g={},y={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return y}function i(){return new r}function a(){(f.api||f.feature)&&(l.aborted=!0,f=l.backlog={})}var s="nr@context",c=t("gos"),u=t(15),f={},d={},l=n.exports=o();l.backlog=f},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return f.abort();u(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),u=t(15),f=t("ee"),d=t(14),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var x=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},y=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:x,features:{},xhrWrappable:y,userAgent:d};t(10),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(17)},{}]},{},["loader",2,8]);</script>
+<link href="https://www.kidney.org/profiles/kidneys_distro/themes/custom/nkf_base/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<meta content="What is a calcium oxalate stone? Calcium oxalate stones are the most common type of kidney stone.  Kidney stones are solid masses that form in the kidney when there are high levels of calcium, oxalate, cystine, or phosphate and too little liquid. There are different types of kidney stones.  Your healthcare provider can test your stones to find what type you have.  Calcium" name="description"/>
+<meta content="Drupal 7 (https://www.drupal.org)" name="generator"/>
+<link href="https://www.kidney.org/atoz/content/calcium-oxalate-stone" rel="canonical"/>
+<link href="https://www.kidney.org/node/26601" rel="shortlink"/>
+<meta content="National Kidney Foundation" property="og:site_name"/>
+<meta content="article" property="og:type"/>
+<meta content="https://www.kidney.org/atoz/content/calcium-oxalate-stone" property="og:url"/>
+<meta content="Calcium Oxalate Stones" property="og:title"/>
+<meta content="What is a calcium oxalate stone? Calcium oxalate stones are the most common type of kidney stone.  Kidney stones are solid masses that form in the kidney when there are high levels of calcium, oxalate, cystine, or phosphate and too little liquid. There are different types of kidney stones.  Your healthcare provider can test your stones to find what type you have.  Calcium oxalate stones are caused by too much oxalate in the urine." property="og:description"/>
+<meta content="2019-04-19T13:29:47-04:00" property="og:updated_time"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="https://www.kidney.org/atoz/content/calcium-oxalate-stone" name="twitter:url"/>
+<meta content="Calcium Oxalate Stones" name="twitter:title"/>
+<meta content="What is a calcium oxalate stone? Calcium oxalate stones are the most common type of kidney stone.  Kidney stones are solid masses that form in the kidney when there are high levels of calcium," name="twitter:description"/>
+<meta content="2016-05-16T13:32:04-04:00" property="article:published_time"/>
+<meta content="2019-04-19T13:29:47-04:00" property="article:modified_time"/>
+<title>Calcium Oxalate Stones | National Kidney Foundation</title>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/icons/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content=" " name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="/profiles/kidneys_distro/themes/custom/nkf_base/icons/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="/profiles/kidneys_distro/themes/custom/nkf_base/icons/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="/profiles/kidneys_distro/themes/custom/nkf_base/icons/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="/profiles/kidneys_distro/themes/custom/nkf_base/icons/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="/profiles/kidneys_distro/themes/custom/nkf_base/icons/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<link href="https://www.kidney.org/sites/default/files/css/css_xyF9Luyg42ZtA5Y1YqLemH941YUm9Mpv-4Z6KatILec.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.kidney.org/sites/default/files/css/css_H-6ThAmeMKTQYxRojHt1H50xZmfqv5BbddePeIDSTdk.css" media="all" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="https://www.kidney.org/sites/default/files/css/css_kjKOLPI6kLKEGERLZd14VaUk8yN28VZsUd3MES3M4-E.css" media="all" />
+<![endif]-->
+<link href="https://www.kidney.org/sites/default/files/css/css_L4Vd-oORXcqJxLIpifuuPcxXJvwh93mxYAdY2dIW1c4.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.kidney.org/sites/default/files/css/css_47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU.css" media="screen" rel="stylesheet" type="text/css"/>
+<script src="https://www.kidney.org/sites/default/files/js/js_iJZnPdmRA10lVpmJTguWW1J25LRVxskzX76I1akejmo.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<![CDATA[//><!--
+window.jQuery || document.write("<script src='/profiles/kidneys_distro/modules/contrib/jquery_update/replace/jquery/1.10/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script src="https://www.kidney.org/sites/default/files/js/js_dWhBODswdXXk1M5Z5nyqNfGljmqwxUwAK9i6D0YSDNs.js" type="text/javascript"></script>
+<script src="https://www.kidney.org/sites/default/files/js/js_N6JkNedF3eKzTB4U2z7d6_hOZh4KH5IcCJ48oUPMMP0.js" type="text/javascript"></script>
+<script src="https://www.kidney.org/sites/default/files/js/js_v4ebnprt48q0hDHQXyB1A38K19_IbK17HqqfwUnoon8.js" type="text/javascript"></script>
+<script type="text/javascript">
+<![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-2200653-1", {"cookieDomain":".kidney.org"});ga("require", "linkid", "linkid.js");ga("require", "displayfeatures");ga("set", "anonymizeIp", true);ga("send", "pageview");
+//--><!]]>
+</script>
+<script src="https://www.kidney.org/sites/default/files/js/js_MskpAv8NAJr53bZl5dWN9PeQa9yLeYO6wXOn5gPJXKU.js" type="text/javascript"></script>
+<script src="https://www.kidney.org/sites/default/files/js/js_MQwQ_KbBDnIaAXsDmmSc9xoaBzXtuHZUjnTHY3mgT8U.js" type="text/javascript"></script>
+<script type="text/javascript">
+<![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"nkf_base","theme_token":"Y3S_qSP7lvuNl1qhD8mohZrkhIBElCgGtLaytHBfPfI","jquery_version":"1.10","js":{"profiles\/kidneys_distro\/modules\/contrib\/pardot\/pardot.js":1,"public:\/\/google_tag\/google_tag.script.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.10.2\/jquery.min.js":1,"0":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/kidneys_distro\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"misc\/ajax.js":1,"profiles\/kidneys_distro\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"profiles\/kidneys_distro\/modules\/custom\/kidneys_misc\/kidneys_misc.js":1,"profiles\/kidneys_distro\/modules\/custom\/kidneys_content\/kidneys_basic_page\/js\/kidneys_basic_page.js":1,"profiles\/kidneys_distro\/modules\/contrib\/field_group\/field_group.js":1,"misc\/progress.js":1,"profiles\/kidneys_distro\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"1":1,"profiles\/kidneys_distro\/libraries\/magnific_popup\/dist\/jquery.magnific-popup.js":1,"profiles\/kidneys_distro\/libraries\/jquery.payment\/lib\/jquery.payment.min.js":1,"profiles\/kidneys_distro\/themes\/custom\/nkf_base\/js\/scripts.js":1,"profiles\/kidneys_distro\/themes\/custom\/nkf_base\/js\/drupal.js":1,"profiles\/kidneys_distro\/themes\/custom\/nkf_base\/js\/donate-form.js":1},"css":{"modules\/system\/system.messages.css":1,"profiles\/kidneys_distro\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/kidneys_distro\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"profiles\/kidneys_distro\/modules\/contrib\/views\/css\/views.css":1,"profiles\/kidneys_distro\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"profiles\/kidneys_distro\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"profiles\/kidneys_distro\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/kidneys_distro\/modules\/contrib\/panels\/css\/panels.css":1,"profiles\/kidneys_distro\/themes\/custom\/nkf_base\/layouts\/66x33\/66x33.css":1,"profiles\/kidneys_distro\/modules\/custom\/kidneys_content\/kidneys_basic_page\/css\/kidneys_basic_page.css":1,"profiles\/kidneys_distro\/themes\/custom\/nkf_base\/layouts\/flex\/flex.css":1,"profiles\/kidneys_distro\/libraries\/magnific_popup\/dist\/magnific-popup.css":1,"profiles\/kidneys_distro\/themes\/contrib\/tao\/ie.css":1,"profiles\/kidneys_distro\/themes\/custom\/nkf_base\/reset.css":1,"profiles\/kidneys_distro\/themes\/custom\/nkf_base\/base.css":1,"profiles\/kidneys_distro\/themes\/custom\/nkf_base\/system.messages.css":1,"profiles\/kidneys_distro\/themes\/custom\/nkf_base\/addressfield.css":1,"profiles\/kidneys_distro\/themes\/custom\/nkf_base\/css\/styles.min.css":1,"profiles\/kidneys_distro\/themes\/custom\/nkf_base\/drupal.css":1}},"pardot":{"pardot_a_id":"220342","pardot_c_id":"1330","score":""},"field_group":{"hidden":"full"},"urlIsAjaxTrusted":{"\/search\/atoz-redirect":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":1},"calling_q":"node\/26601","kidneys_categories":"{\u002242936\u0022:3,\u002242933\u0022:2}","kidneys_categories_processed":false});
+//--><!]]>
+</script>
+<script>
+    // crazy hack for testing if IE 8 or below
+    var ie8 = false;
+  </script>
+<!--[if lt IE 9]>
+    <script>
+      ie8 = true;
+    </script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-26601 node-type-a-to-z i18n-en tao jquery-once-1-processed accordion-hash-processed" style="">
+<div id="skip-link">
+<a class="element-invisible element-focusable" href="#main-content">Skip to main content</a>
+</div>
+<noscript aria-hidden="true"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-P7TPGCK" style="display:none;visibility:hidden" title="Google Tag Manager" width="0">Google Tag Manager</iframe></noscript>
+<div class="page">
+<header class="print--hide width--100 bg--orange color--white logo--wb">
+<nav class="container position--relative">
+<div class="display--table width--100">
+<div class="display--table-cell width--100 vertical-align--middle padding-left--md">
+<a class="display--inline-block vertical-align--middle padding-x--md margin-y--sm" href="/" id="logo">
+</a>
+</div>
+<div class="display--table-cell vertical-align--middle width--auto">
+<a class="display--block white-space--nowrap bg--orange color--white logo--wb classToggle-processed" data-class="hide" data-target=".burger-time" data-toggle="class" href="#">
+<div class="burger-time md--padding-y--xl padding-y--lg padding-x--xs">
+<div class="md--show">
+<i class="icon-menu"></i>
+<span class="caps">Menu</span>
+</div>
+<div class="md--hide font-size--lg padding-x--xxs">
+<i class="icon-menu"></i>
+</div>
+</div>
+<div class="burger-time hide bg--orange--l1 md--padding-y--xl padding-y--lg padding-x--xs">
+<div class="md--show">
+<i class="icon-cancel"></i>
+<span class="caps">Menu</span>
+</div>
+<div class="md--hide font-size--lg padding-x--xxs">
+<i class="icon-cancel"></i>
+</div>
+</div>
+</a>
+</div>
+<div class="display--table-cell vertical-align--middle width--auto">
+<a class="modal-trigger display--block md--padding-y--xl padding-y--lg padding-x--xs white-space--nowrap color--white" href="#search-modal">
+<div class="md--show">
+<i class="icon-search"></i>
+<span class="caps">Search</span>
+</div>
+<div class="md--hide font-size--lg padding-right--xxs">
+<i class="icon-search"></i>
+</div>
+</a>
+</div>
+<div class="modal padding--xl bg--white border-radius--md max-width--xxl center mfp-hide" id="search-modal">
+<div class="center padding-y--lg">
+<div>
+<div class="block block-views" id="block-views-2dc453494102fbb7d24ac0e966c5d1b3">
+<div class="block-content clearfix"><form accept-charset="UTF-8" action="/search/atoz-redirect" class="hideSubmitButton-processed" id="views-exposed-form-search-results-subsection-page-1" method="get"><div><div class="steps grid text-align--center sm--show bg--white"></div><div class="sm--display--table display-block max-width--xxl">
+<div class="sm--display--table-cell display--block width--100">
+<div class="form-item form-type-textfield form-item-search">
+<input class="width--100 form-text" id="edit-search" maxlength="128" name="search" size="30" type="text" value=""/>
+</div>
+</div>
+<div class="sm--display--table-cell display--block sm--width--auto width--100 sm--padding--md">
+<input class="width--100 button--gray-4 form-submit" id="edit-submit-search-results-subsection" name="" type="submit" value="Search"/> </div>
+</div>
+</div></form></div>
+</div>
+</div>
+</div>
+</div>
+<div class="display--table-cell vertical-align--middle width--auto padding-x--xs">
+<div class="promotion jquery-once-2-processed jquery-once-1-processed" data-promo="button" id="promotion--button">
+<div data-id="27972" data-promo-name="donate default" data-promo-path="atoz/content/calcium-oxalate-stone" style="display: block;"><div class="field field-name-field-promo-button field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><a class="button--white caps" href="/donation?promo=MTL000103">Donate</a></div></div></div></div>
+</div> </div>
+</div>
+<div class="position--absolute right z-index--200">
+<div class="burger-time hide font-size--md grid-cell bg--orange--l1 max-width--xl width--100">
+<ul class="menu menu-tree"><li class="first leaf menu-mlid-1006"><a class="home" href="/">Home</a></li>
+<li class="leaf menu-mlid-1324"><a href="/prevention">Prevention</a></li>
+<li class="leaf has-children menu-mlid-1008"><a class="kd" href="/kidneydisease">Kidney Disease</a></li>
+<li class="leaf has-children menu-mlid-1009"><a class="patients" href="/patients">Patients</a></li>
+<li class="leaf has-children menu-mlid-1010"><a class="organ" href="/transplantation">Organ Donation &amp; Transplantation</a></li>
+<li class="leaf has-children menu-mlid-106316"><a href="/news">Events</a></li>
+<li class="leaf has-children menu-mlid-1011"><a class="professionals" href="/professionals">Professionals</a></li>
+<li class="leaf has-children menu-mlid-1013"><a class="advocacy" href="/advocacy">Advocacy</a></li>
+<li class="last leaf has-children menu-mlid-1014"><a class="donate" href="/support">Donate</a></li>
+</ul> </div>
+</div>
+</nav>
+</header>
+<div class="display--none print--show text-align--center padding--xl">
+<img src="https://www.kidney.org//profiles/kidneys_distro/themes/custom/nkf_base/img/NKF-logoR_Hori_OB.png"/>
+</div>
+<main class="main position--relative z-index--100">
+<section class="position--absolute top left right print--hide">
+<div class="block block-kidneys-misc" id="block-kidneys-misc-kidneys-misc-promo-band">
+<div class="block-content clearfix"><div class="promotion jquery-once-2-processed jquery-once-1-processed" data-promo="band" id="promotion--band">
+<div style="display: block;"></div>
+</div></div>
+</div>
+</section>
+<section class="main__title padding-top--sm">
+<div class="container padding-top--xl md--padding-top--xxl padding-x--sm sm--padding-x--md md--padding-x--lg">
+<a class="display--inline-block caps bold padding-y--xs" href="/atoz">A to Z Health Guide</a> <h1 class="font-size--xxl padding--none"><div class="prose display--inline-block">Calcium Oxalate Stones</div></h1>
+</div>
+</section>
+<section class="main__content">
+<div class="container padding-top--xl padding-bottom--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg position--relative z-index--1">
+<div class="grid">
+<div class="grid-cell sm--padding-right--md width--100">
+<div class="clearfix" id="content"> <div class="grid">
+<div class="grid-cell sm--width--66 width--100 padding-bottom--lg sm--padding-right--lg">
+<div class="panel-pane pane-block pane-kidneys-misc-kidneys-misc-content-actions-top width--100 print--hide">
+<div class="pane-content">
+<div class="sm--display--inline-block padding-y--md grid print--hide sm--font-size--sm"><div class="grid-cell padding-right--xs padding-bottom--xs"><a class="caps button--gray-4 js--print-link jsPrint-processed googleEvent-processed" data-action="print" data-category="cta" data-label="https%3A%2F%2Fwww.kidney.org%2F%2Fatoz%2Fcontent%2Fcalcium-oxalate-stone" data-track="event" href="#"><i class="icon-print"></i> <span class="display--none sm--display--inline">Print</span></a></div><div class="grid-cell padding-right--xs padding-bottom--xs"><a class="caps button--gray-4 googleEvent-processed" data-action="email" data-category="cta" data-label="https%3A%2F%2Fwww.kidney.org%2F%2Fatoz%2Fcontent%2Fcalcium-oxalate-stone" data-track="event" href="mailto:?subject=Shared%20from%20National%20Kidney%20Foundation&amp;body=%3Cp%3EHere%20is%20an%20article%20from%20National%20Kidney%20Foundation%20you%20might%20be%20interested%20in%3A%3C%2Fp%3E%3Cp%3Ehttps%3A%2F%2Fwww.kidney.org%2F%2Fatoz%2Fcontent%2Fcalcium-oxalate-stone%3C%2Fp%3E"><i class="icon-mail-alt"></i> <span class="display--none sm--display--inline">Email</span></a></div></div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-content">
+<div class="pane-content">
+<div about="/atoz/content/calcium-oxalate-stone" id="node-26601" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="" property="dc:title"></span><span class="rdf-meta element-hidden" content="0" datatype="xsd:integer" property="sioc:num_replies"></span>
+<div class="node-content clearfix prose">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden prose"><div class="field-items"><div class="field-item even" property="content:encoded"><h2><strong>What is a calcium oxalate stone?</strong></h2>
+<p>Calcium oxalate stones are the most common type of <a href="https://www.kidney.org/atoz/content/kidneystones">kidney stone. </a> Kidney stones are solid masses that form in the kidney when there are high levels of calcium, oxalate, cystine, or phosphate and too little liquid. There are different types of kidney stones.  Your healthcare provider can test your stones to find what type you have.  Calcium oxalate stones are caused by too much oxalate in the urine.</p>
+<h2><strong>What is oxalate and how does it form stones?</strong></h2>
+<p>Oxalate is a natural substance found in many foods.  Your body uses food for energy.  After your body uses what it needs, waste products travel through the bloodstream to the kidneys and are removed through urine.  Urine has various wastes in it.  If there is too much waste in too little liquid, crystals can begin to form.  These crystals may stick together and form a solid mass (a <a href="https://www.kidney.org/atoz/content/kidneystones">kidney stone).</a> Oxalate is one type of substance that can form crystals in the urine.  This can happen if there is too much oxalate, too little liquid, and the oxalate “sticks” to calcium while urine is being made by the kidneys.</p>
+<h2><strong>Who is at risk for calcium oxalate stones?</strong></h2>
+<p>Certain risk factors may cause your body to form calcium oxalate stones. These risk factors include:</p>
+<ul>
+<li>Dehydration from not drinking enough fluid</li>
+<li>A diet too high in:
+<ul>
+<li><a href="https://www.kidney.org/atoz/content/enjoy">Protein</a></li>
+<li>Oxalate</li>
+<li><a href="https://www.kidney.org/atoz/content/sodiumckd">Sodium</a> (salt)</li>
+<li>Sugar (like high fructose corn syrup)</li>
+</ul>
+</li>
+<li><a href="https://www.kidney.org/atoz/content/obesewyska">Obesity</a></li>
+<li>Medical conditions like:
+<ul>
+<li>Dent Disease (a rare genetic disorder that affects the kidneys)</li>
+<li>Hyperparathyroidism (a very high amount of a type of hormone called parathyroid hormone in the blood that causes a loss of calcium. Calcium is needed to bind with oxalate and leave the body)</li>
+</ul>
+</li>
+<li>Digestive Diseases and Surgeries like:
+<ul>
+<li>Inflammatory Bowel Disease (IBD) such as:
+<ul>
+<li>Ulcerative Colitis</li>
+<li>Crohn’s Disease</li>
+<li>Gastric bypass surgeries</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>It is important to know that kidney stones are more common if you have Inflammatory Bowel Disease (IBD). These conditions affect your body’s ability to absorb fats properly.  When fat is not absorbed the right way, the fat binds to calcium and leaves oxalate behind. The oxalate is then absorbed and taken to the kidney, where it can form stones. Similarly, following gastric bypass surgery, your body absorbs less calcium from your digestive system. Because of this, higher levels of oxalate are found in the urinary tract.  The build-up of oxalate can form crystals, which can form kidney stones.</p>
+<p><span>If your calcium oxalate stones keep coming back, your </span>healthcare<span> provider may test you for these conditions. Your healthcare </span>provider<span> may also look at your lifestyle to help lower your risk factors or help find the cause of your forming calcium oxalate stones.</span></p>
+<h2><strong>How can I lower my chances of forming calcium oxalate stones?</strong></h2>
+<ul>
+<li><strong>Drink enough fluids.</strong> The number one thing you can do is to drink enough fluids, like water. Drinking enough fluids will thin out your urine and make it harder for chemicals to build up and form crystals. Your healthcare provider will look at your overall health, diet, and lifestyle and recommend the right amount of fluid you should have each day.</li>
+<li><strong>Avoid eating too much protein.</strong>  Eating too many foods high in <a href="https://www.kidney.org/atoz/content/enjoy">protein</a> can cause stones to form.</li>
+<li><strong>Eat less salt (sodium).</strong>  A diet high in salt (<a href="https://www.kidney.org/atoz/content/sodiumckd">sodium</a>) causes calcium to build in your urine. Too much calcium in your urine can lead to new stones.  It can also cause your bones to weaken. </li>
+<li><strong>Include the right amount of calcium in your diet.  </strong>Some people may think they can keep stones from forming by avoiding calcium, but the opposite is true.  Calcium is a nutrient that is found in dairy products, such as yogurt, milk and cheese. You need to eat calcium so that it can bind with oxalate in the stomach and intestines before it moves to the kidneys.  Eating foods with calcium is a good way for oxalates to leave the body and not form stones. The best way to get calcium into your body is through the foods you eat.  It may seem easier to increase your calcium by taking a supplement. However, calcium in the form of a supplement may raise your chances of forming new calcium oxalate stones. Speaking with your healthcare provider will help you find the best way to include calcium in your diet. This will help avoid having too little or too much calcium in your body.</li>
+<li><strong>Avoid vitamin C supplements.</strong>  Talk to your healthcare provider before taking vitamin C supplements. Too much vitamin C can cause high amounts of oxalate in the urine. </li>
+<li><strong>Eat less oxalate-rich foods.</strong>  Limiting how many oxalate-rich foods you eat each day may help lower your chance of forming new stones. There are some foods you should avoid because of their high oxalate levels. Some foods very high in oxalate a<br/>
+<ul class="rteindent1">
+<li><span>Nuts</span></li>
+<li><span>Rhubarb</span></li>
+<li><span>Beets</span></li>
+<li><span>Chocolate soy milk</span></li>
+<li><span>All Bran®</span></li>
+<li><span>Buckwheat flour</span></li>
+<li><span>Miso</span></li>
+<li><span>Tahini</span></li>
+<li><span>Sesame seeds</span></li>
+<li><span>Swiss chard</span></li>
+</ul>
+</li>
+</ul>
+<h2><strong>Should I cut out all foods that have oxalate or calcium?</strong></h2>
+<p>No, this is a common mistake.  Some people think that cutting out all foods that have oxalate — or all foods with calcium — will keep stones from forming.  However, this approach is not healthy.  It can lead to poor nutrition and can cause other health problems. A better plan? Eat and drink calcium and oxalate-rich foods together during a meal.  Doing this helps oxalate and calcium “bind” to one another in the stomach and intestines before reaching the kidneys, making it less likely for kidney stones to form in the urine. </p>
+<p><strong>Plan Your Plate For Kidney Stones (PDF)</strong></p>
+<div><a href="https://www.kidney.org/sites/default/files/CaOx%20My%20Plate.pdf" target="PDF"><img alt="Plan Your Plate For KidneyStones" class="sm--width--50 xs--width--100" src="https://www.kidney.org/sites/default/files/PlanYourPlateForKidneyStones.jpg"/></a><p></p>
+<div> </div>
+<p><strong>Plan Your Vegetarian Plate For Kidney Stones (PDF)</strong></p>
+<p><a href="https://www.kidney.org/sites/default/files/CaOx%20Vegetarian%20MyPlate.pdf" target="PDF"><img alt="Plan your Vegetarian Plate For Kidney Stones" class="sm--width--50 xs--width--100" src="https://www.kidney.org/sites/default/files/PlanYourPlateForKidneyStones_Vegetarian.jpg"/></a></p>
+<p> </p>
+<p class="font-size--small">Acknowledgment: Reviewed by the Council on Renal Nutrition (03/2019)</p>
+<p><strong>See also in the A-Z Guide:</strong></p>
+<p><a href="https://www.kidney.org/atoz/content/kidneystones">Kidney <span>Stones</span></a></p>
+<p><a href="https://www.kidney.org/atoz/content/diet">Diet and Kidney Stones</a></p>
+<p><a href="https://www.kidney.org/atoz/content/kidneystones_Ureteroscopy">Kidney Stone Treatment: Ureteroscopy</a></p>
+<p><a href="https://www.kidney.org/atoz/content/kidneystones_ShockWave">Kidney Stone Treatment: Shock Wave Lithotripsy</a></p>
+<p><a href="https://www.kidney.org/atoz/content/kidneystones_PNN">Kidney Stone Treatment: Percutaneous Nephrolithotomy/Nephrolithotripsy</a></p>
+</div>
+</div></div></div><div class="field field-name-field-last-revised field-type-datetime field-label-inline clearfix"><div class="field-label">Date Reviewed: </div><div class="field-items"><div class="field-item even"><span class="date-display-single" content="2019-03-22T00:00:00-04:00" datatype="xsd:dateTime" property="dc:date">March 22, 2019</span></div></div></div> </div>
+<div class="node-links clearfix">
+</div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-1">
+<div class="pane-content">
+<p class="color--gray-3 padding-top--xl">The information shared on our websites is information developed solely from internal experts on the subject matter, including medical advisory boards, who have developed guidelines for our patient content. This material does not constitute medical advice. It is intended for informational purposes only. No one associated with the National Kidney Foundation will answer medical questions via e-mail. Please consult a physician for specific treatment recommendations.</p>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-kidneys-misc-kidneys-misc-content-actions-top">
+<div class="pane-content">
+<div class="sm--display--inline-block padding-y--md grid print--hide sm--font-size--sm"><div class="grid-cell padding-right--xs padding-bottom--xs"><a class="caps button--gray-4 js--print-link jsPrint-processed googleEvent-processed" data-action="print" data-category="cta" data-label="https%3A%2F%2Fwww.kidney.org%2F%2Fatoz%2Fcontent%2Fcalcium-oxalate-stone" data-track="event" href="#"><i class="icon-print"></i> <span class="display--none sm--display--inline">Print</span></a></div><div class="grid-cell padding-right--xs padding-bottom--xs"><a class="caps button--gray-4 googleEvent-processed" data-action="email" data-category="cta" data-label="https%3A%2F%2Fwww.kidney.org%2F%2Fatoz%2Fcontent%2Fcalcium-oxalate-stone" data-track="event" href="mailto:?subject=Shared%20from%20National%20Kidney%20Foundation&amp;body=%3Cp%3EHere%20is%20an%20article%20from%20National%20Kidney%20Foundation%20you%20might%20be%20interested%20in%3A%3C%2Fp%3E%3Cp%3Ehttps%3A%2F%2Fwww.kidney.org%2F%2Fatoz%2Fcontent%2Fcalcium-oxalate-stone%3C%2Fp%3E"><i class="icon-mail-alt"></i> <span class="display--none sm--display--inline">Email</span></a></div></div> </div>
+</div>
+</div>
+<div class="grid-cell sm--width--33 width--100 padding-bottom--lg sm--padding-left--lg">
+<div class="panel-pane pane-views-panes pane-related-content-by-category-panel-pane-1 print--hide">
+<h2 class="pane-title">
+      Read related articles    </h2>
+<div class="pane-content">
+<div class="view view-related-content-by-category view-id-related_content_by_category view-display-id-panel_pane_1 view-dom-id-a54305cde5e9fd9abade94258f6d136e">
+<div class="view-content">
+<ul class="padding--none margin--none"> <li class="">
+<div class="color--gray-3 padding-bottom--xxs"><a href="/atoz/content/kidneystones_prevent">6 Easy Ways to Prevent Kidney Stones</a></div> </li>
+<li class="">
+<div class="color--gray-3 padding-bottom--xxs"><a href="/atoz/content/diet">Kidney Stone Diet Plan and Prevention</a></div> </li>
+<li class="">
+<div class="color--gray-3 padding-bottom--xxs"><a href="/atoz/content/kidneystones_shockwave">Kidney Stone Treatment: Shock Wave Lithotripsy</a></div> </li>
+<li class="">
+<div class="color--gray-3 padding-bottom--xxs"><a href="/atoz/content/kidneystones">Kidney Stones</a></div> </li>
+<li class="">
+<div class="color--gray-3 padding-bottom--xxs"><a href="/atoz/content/kidneystones_ureteroscopy">Ureteroscopy</a></div> </li>
+</ul> </div>
+</div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-kidneys-misc-kidneys-misc-promo-block padding-top--xl print--hide">
+<div class="pane-content">
+<div class="promotion jquery-once-2-processed jquery-once-1-processed" data-promo="block" id="promotion--block">
+<div data-id="28014" data-promo-name="nkf cares" data-promo-path="atoz/content/calcium-oxalate-stone" style="display: block;"><div class="field field-name-field-promo-block field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><div class="display--block padding--xl margin-top--md color--black bg--gray-1 text-align--center font-size--lg" style="overflow-wrap:break-word">
+<div class="">Need personal support?<br/>Contact our helpline.</div>
+<div class="margin-top--md">
+<div class="">Toll–free<br/><a class="color--black bold" href="tel:1-855-653-2273">1.855.653.2273</a></div>
+<div class="bold padding-top--xs"><a class="color--black" href="mailto:nkfcares@kidney.org">nkfcares@kidney.org</a></div>
+</div>
+</div></div></div></div></div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer bg--gray-1">
+<div class="container padding-y--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg">
+<div class="block block-panels-mini" id="block-panels-mini-big-ask-big-give-footer">
+<div class="block-content clearfix"><div class="container">
+<div class="grid" id="mini-panel-big_ask_big_give_footer">
+<div class="panel-pane pane-custom pane-2 padding--sm sm--width--50 width--100 grid-cell">
+<div class="pane-content">
+<p>The National Kidney Foundation (NKF) is the largest, most comprehensive and longstanding organization dedicated to the awareness, prevention and treatment of kidney disease. </p>
+<p>The <a href="http://www.give.org/charity-reviews/national/health/national-kidney-foundation-in-new-york-ny-41" target="NKF" title="national kidney foundation meets the bbb wise giving alliance's standards for charity accountability">Better Business Bureau Wise Giving Alliance Charity Seal</a> provides the giving public with an easily recognizable symbol which certifies that the National Kidney Foundation meets the comprehensive standards of America's most experienced charity evaluator.</p>
+<p><a href="/about/privacy" title="Our Privacy Policy">Privacy Policy</a> | <a href="/about/legal">Legal and Copyright Information</a> | <a href="/sites/default/files/required-fundraising-disclosure-statements.pdf">State Charity Registration Disclosures</a></p>
+<p>© 2019 National Kidney Foundation, Inc., 30 East 33rd Street, New York, NY 10016, 1-800-622-9010. We subscribe to the HONcode principles of the Health on the Net Foundation. <a href="http://www.hon.ch/HONcode/Conduct.html?HONConduct627563" target="NKF" title="We subscribe to the HONcode principles of the Health on the Net Foundation.">Verify here</a></p>
+<p class="grid width--100">
+<a class="grid-cell padding--xs text-align--center width--100 sm--width--33 lg--width--15" href="http://www.give.org/charity-reviews/national/health/national-kidney-foundation-in-new-york-ny-41" target="NKF" title="national kidney foundation meets the bbb wise giving alliance's standards for charity accountability">
+<img alt="national kidney foundation meets the bbb wise giving alliance's standards for charity accountability" border="0" data-pin-nopin="true" src="https://www.kidney.org/profiles/kidneys_distro/modules/custom/kidneys_common/images/blocks/about/logo-bbb.jpg" title="national kidney foundation meets the bbb wise giving alliance's standards for charity accountability"/>
+</a>
+<a class="grid-cell padding--xs text-align--center width--100 sm--width--33 lg--width--15" href="https://www.hon.ch/HONcode/Conduct.html?HONConduct627563" target="NKF" title="We subscribe to the HONcode principles of the Health on the Net Foundation.">
+<img alt="HONcode certification seal." data-pin-nopin="true" src="https://www.honcode.ch/HONcode/Seal/HONConduct627563.jpg" title="This website is certified by Health On the Net Foundation. Click to verify."/></a>
+<a class="grid-cell padding--xs text-align--center width--100 sm--width--33 lg--width--15" href="http://www.charitynavigator.org/index.cfm?bay=search.summary&amp;orgid=4185#.VLlogIrF-Z4" target="NKF">
+<img alt="Charity Navigator" data-pin-nopin="true" src="https://www.kidney.org/sites/default/files/CharityNavigator-Logo-Square-Color.png"/>
+</a>
+<a class="grid-cell padding--xs text-align--center width--100 sm--width--33 lg--width--15" href="https://www.charitywatch.org/ratings-and-metrics/national-kidney-foundation/331" target="NKF">
+<img alt="Charity Watch Top Rated Charity" data-pin-nopin="true" src="https://www.kidney.org/sites/default/files/CharityWatch-TopRated_RGB_WEB_80px.png"/>
+</a>
+<a class="grid-cell padding--xs text-align--center width--100 sm--width--33 lg--width--15" href="https://www.guidestar.org/organizations/13-1673104/national-kidney-foundation.aspx" target="_blank">
+<img data-pin-nopin="true" src="https://widgets.guidestar.org/gximage2?o=6905717&amp;l=v4"/> 
+  </a>
+<a class="grid-cell padding--xs text-align--center width--100 sm--width--33 lg--width--15" href="http://www.nationalhealthcouncil.org/about-nhc/members/national-kidney-foundation" target="_blank">
+<img alt="National Health Council" data-pin-nopin="true" src="https://www.kidney.org/sites/default/files/NHC_SOECP.png" target="NKF"/>
+</a>
+</p>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-3 padding--sm sm--width--25 width--100 grid-cell">
+<div class="pane-content">
+<div class="text-align--center"><a class="width--md button--twitter margin--sm" href="https://twitter.com/nkf"><i class="icon-twitter"></i>Twitter</a><br/>
+<a class="width--md button--facebook margin--sm" href="https://www.facebook.com/nationalkidneyfoundation/"><i class="icon-facebook"></i>Facebook</a><br/>
+<a class="width--md button--linkedin margin--sm" href="https://www.linkedin.com/company/national-kidney-foundation"><i class="icon-linkedin"></i>LinkedIn</a><br/>
+<a class="width--md button--instagram margin--sm" href="https://www.instagram.com/nationalkidneyfoundation"><i class="icon-instagram"></i>Instagram</a></div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-menu-menu-header-menu grid-cell">
+<div class="pane-content">
+<ul class="menu menu-header-menu"><li class="first leaf"><a href="/spanish">En Español</a></li>
+<li class="leaf"><a href="http://nkf.worksmartsuite.com/UserContentStart.aspx">NKF Store</a></li>
+<li class="leaf"><a href="/about">About Us</a></li>
+<li class="leaf"><a href="/about/careers">Careers</a></li>
+<li class="leaf"><a href="/professionals/membership">Join NKF</a></li>
+<li class="leaf"><a href="/news/newsroom/welcome">Newsroom</a></li>
+<li class="leaf"><a href="/latest-news">Latest News</a></li>
+<li class="last leaf"><a href="/about/contact">Contact Us</a></li>
+</ul> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="https://www.kidney.org/sites/default/files/js/js_7h324ifclLGYFxFoatQ4-wnM2It7bPCH8oukRlW-nkY.js" type="text/javascript"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7fc61aa031","applicationID":"4763062","transactionName":"blFUY0RXC0BXVBcMClcbY0VfGUpaWFMGHUtJXEY=","queueTime":0,"applicationTime":15,"atts":"QhZXFQxNGE4=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+</body></html>

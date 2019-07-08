@@ -1,0 +1,465 @@
+<html lang="en"><head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="https://bitcoin.org/img/icons/opengraph.png?1562321166" property="og:image"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Bitcoin - Open source P2P money</title>
+<meta content="Bitcoin is an innovative payment network and a new kind of money. Find all you need to know and get started with Bitcoin on bitcoin.org." name="description"/>
+<link href="https://bitcoin.org//css/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://bitcoin.org//css/main.css?1562321166" rel="stylesheet"/>
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://bitcoin.org//js/base.js?1562321166" type="text/javascript"></script>
+<script src="https://bitcoin.org//js/main.js?1562321166" type="text/javascript"></script>
+<script src="https://bitcoin.org//js/jquery/jquery-1.11.2.min.js"></script>
+<script src="https://bitcoin.org//js/jquery/jquery-ui.min.js"></script>
+<script src="https://bitcoin.org//js/jquery/jquery.qrcode.min.js"></script>
+<link href="https://bitcoin.org//favicon.png?1562321166" rel="shortcut icon"/>
+<link href="https://bitcoin.org//img/icons/logo_ios.png?1562321166" rel="apple-touch-icon-precomposed"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script src="https://bitcoin.org//js/cookieconsent/cookieconsent.js?1562321166" type="text/javascript"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = '/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script><script src="https://bitcoin.org//js/analytics.js"></script>
+<link href="https://bitcoin.org//js/cookieconsent/light-floating.css" rel="stylesheet" type="text/css"/></head>
+<body>
+<div class="donation-modal hidden" id="donation-modal" style="display: none">
+<div class="modal-dialog">
+<div class="modal-header">
+<div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+<p class="modal-header-text section-title">Donate to Bitcoin.org</p>
+</div>
+<p class="modal-subheader">Use this QR code or address below</p>
+<div style="text-align: center;">
+<div data-address="3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa" id="donation-qr-code"></div>
+</div>
+<div>
+<a class="donation-btc-address" href="bitcoin:3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa" target="_blank">
+        3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa
+      </a>
+</div>
+<div class="modal-body bg-white" style="overflow-y:hidden;text-align: center;">
+<div>
+<button class="donation-amount-btn" data-amount-usd="5" type="button">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+</button>
+<button class="donation-amount-btn" data-amount-usd="25" type="button">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+</button>
+<button class="donation-amount-btn" data-amount-usd="50" type="button">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+</button>
+</div>
+<div>
+<input class="donation-amount-input" id="donation-input-amount-btc" placeholder="Or custom amount? (BTC)" style="margin-right: 15px" type="text"/>
+<input class="donation-amount-input" id="donation-input-amount-usd" placeholder="Or custom amount? (USD)" type="text"/>
+</div>
+<div>
+<textarea class="donation-amount-input" id="donation-input-message" placeholder="Optional description (for your wallet)"></textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="detectmobile" id="detectmobile"></div>
+<div class="head"><div>
+<a class="logo" href="/en/"><img alt="Bitcoin" src="https://bitcoin.org//img/icons/logotop.svg?1562321166"/></a>
+<ul class="menusimple menumain" id="menusimple" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+<li><a class="is-expand">Introduction</a>
+<ul>
+<li><a href="/en/bitcoin-for-individuals">Individuals</a></li>
+<li><a href="/en/bitcoin-for-businesses">Businesses</a></li>
+<li><a href="/en/bitcoin-for-developers">Developers</a></li>
+<li><a href="/en/getting-started">Getting started</a></li>
+<li><a href="/en/how-it-works">How it works</a></li>
+<li><a href="/en/bitcoin-paper">White paper</a></li>
+</ul>
+</li>
+<li><a class="is-expand">Resources</a>
+<ul>
+<li><a href="/en/resources">Resources</a>
+</li><li><a href="/en/exchanges">Exchanges</a></li>
+<li><a href="/en/community">Community</a></li>
+<li><a href="/en/developer-documentation">Documentation</a></li>
+<li><a href="/en/vocabulary">Vocabulary</a></li>
+<li><a href="/en/events">Events</a></li>
+<li><a href="/en/bitcoin-core/">Bitcoin Core</a></li>
+</ul>
+</li>
+<li><a href="/en/innovation">Innovation</a></li>
+<li><a class="is-expand">Participate</a>
+<ul>
+<li><a href="/en/support-bitcoin">Support Bitcoin</a>
+</li><li><a href="/en/buy">Buy Bitcoin</a></li>
+<li><a href="/en/full-node">Running a full node</a></li>
+<li><a href="/en/development">Development</a></li>
+</ul>
+</li>
+<li><a href="/en/faq">FAQ</a></li>
+</ul>
+<a class="menumobile" id="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+<ul class="lang is-expand">
+<li><a>English</a>
+<ul>
+<li><ul>
+<li><a href="/id/">Bahasa Indonesia</a></li>
+<li><a href="/da/">Dansk</a></li>
+<li><a href="/de/">Deutsch</a></li>
+<li><a class="active" href="/en/">English</a></li>
+<li><a href="/es/">Español</a></li>
+<li><a href="/fr/">Français</a></li>
+<li><a href="/it/">Italiano</a></li>
+<li><a href="/hu/">Magyar</a></li>
+<li><a href="/nl/">Nederlands</a></li>
+<li><a href="/pl/">Polski</a></li>
+<li><a href="/pt_BR/">Português Brasil</a></li>
+<li><a href="/ro/">Română</a></li>
+<li><a href="/sl/">Slovenščina</a></li>
+<li><a href="/sr/">Srpski</a></li>
+</ul></li><li><ul>
+<li><a href="/sv/">Svenska</a></li>
+<li><a href="/tr/">Türkçe</a></li>
+<li><a href="/el/">Ελληνικά</a></li>
+<li><a href="/bg/">български</a></li>
+<li><a href="/ru/">Русский</a></li>
+<li><a href="/uk/">Українська</a></li>
+<li><a href="/ar/">العربية</a></li>
+<li><a href="/fa/">فارسی</a></li>
+<li><a href="/hi/">हिन्दी</a></li>
+<li><a href="/ko/">한국어</a></li>
+<li><a href="/ja/">日本語</a></li>
+<li><a href="/zh_CN/">简体中文</a></li>
+<li><a href="/zh_TW/">繁體中文</a></li>
+</ul></li>
+</ul>
+</li>
+</ul>
+<div class="langselect" id="langselect">
+<label class="center-select" for="select-input">
+<select class="center-select__input" id="select-input" onchange="window.location=this.value;">
+<option value="/id/">Bahasa Indonesia</option>
+<option value="/da/">Dansk</option>
+<option value="/de/">Deutsch</option>
+<option selected="selected" value="/en/">English</option>
+<option value="/es/">Español</option>
+<option value="/fr/">Français</option>
+<option value="/it/">Italiano</option>
+<option value="/hu/">Magyar</option>
+<option value="/nl/">Nederlands</option>
+<option value="/pl/">Polski</option>
+<option value="/pt_BR/">Português Brasil</option>
+<option value="/ro/">Română</option>
+<option value="/sl/">Slovenščina</option>
+<option value="/sr/">Srpski</option>
+<option value="/sv/">Svenska</option>
+<option value="/tr/">Türkçe</option>
+<option value="/el/">Ελληνικά</option>
+<option value="/bg/">български</option>
+<option value="/ru/">Русский</option>
+<option value="/uk/">Українська</option>
+<option value="/ar/">العربية</option>
+<option value="/fa/">فارسی</option>
+<option value="/hi/">हिन्दी</option>
+<option value="/ko/">한국어</option>
+<option value="/ja/">日本語</option>
+<option value="/zh_CN/">简体中文</option>
+<option value="/zh_TW/">繁體中文</option>
+</select>
+<span class="center-select__text">Language: <span class="is-capital">en</span></span>
+</label>
+</div>
+</div></div>
+<div class="body">
+<div class="breadcrumbs">
+<div class="container">
+</div>
+</div>
+<div class="content" id="content">
+<div class="mainhero">
+<div class="container hero-container">
+<p class="mainsummary">Bitcoin is an innovative payment network and a new kind of money.</p>
+<div class="btn-container">
+<a class="btn btn-bright btn-home" href="/en/getting-started">Get started with Bitcoin</a>
+<a class="btn btn-light btn-home" href="/en/choose-your-wallet">Choose your wallet</a>
+</div>
+<div class="mainvideo">
+<button class="mainvideo-btn-open" data-youtubeurl="//www.youtube.com/embed/Gc2en3nHxA4?rel=0&amp;showinfo=0&amp;wmode=opaque&amp;autoplay=1" onclick="loadYoutubeVideo(event);" ontouchstart="loadYoutubeVideo(event);">What is Bitcoin?</button>
+</div>
+<div class="row hero-social">
+<a class="hero-social-link" href="" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href))" target="_blank">
+<img alt="facebook" src="https://bitcoin.org//img/icons/ico_facebook_bright.svg?1562321166"/>
+</a>
+<a class="hero-social-link" href="" onclick="window.open('https://twitter.com/share?url=' + encodeURIComponent(location.href))" target="_blank">
+<img alt="twitter" src="https://bitcoin.org//img/icons/ico_twitter_bright.svg?1562321166"/>
+</a>
+</div>
+</div>
+</div>
+<div class="mainoverview">
+<div class="container">
+<div class="mainoverview-title">Get a quick overview for</div>
+<a class="maincard" href="/en/bitcoin-for-individuals">
+<img alt="Icon" class="maincard-img" src="https://bitcoin.org//img/icons/ico_individuals.svg?1562321166"/>
+<div>
+<p class="maincard-title">Individuals</p>
+<p class="maincard-link">Learn more</p>
+</div>
+</a>
+<a class="maincard" href="/en/bitcoin-for-businesses">
+<img alt="Icon" class="maincard-img" src="https://bitcoin.org//img/icons/ico_business.svg?1562321166"/>
+<div>
+<p class="maincard-title">Businesses</p>
+<p class="maincard-link">Learn more</p>
+</div>
+</a>
+<a class="maincard" href="/en/bitcoin-for-developers">
+<img alt="Icon" class="maincard-img" src="https://bitcoin.org//img/icons/ico_developers.svg?1562321166"/>
+<div>
+<p class="maincard-title">Developers</p>
+<p class="maincard-link">Learn more</p>
+</div>
+</a>
+</div>
+<a class="btn-down" href="#maindesc-title">
+<img alt="Link" src="https://bitcoin.org//img/icons/ico_arrow_down.svg?1562321166"/>
+</a>
+</div>
+<div class="maindesc">
+<div class="container">
+<p class="section-title center home-title" id="maindesc-title">Get started with Bitcoin</p>
+<div class="row maindesc-row">
+<div>
+<p class="maindesc-text">Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. <b>Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and <a href="/en/support-bitcoin">everyone can take part</a></b>. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.</p>
+<ul class="mainlist">
+<li class="mainlist-item">
+<img alt="Icon" src="https://bitcoin.org//img/icons/main_ico_instant.svg?1562321166"/>
+<p>Fast peer-to-peer transactions</p>
+</li>
+<li class="mainlist-item">
+<img alt="Icon" src="https://bitcoin.org//img/icons/main_ico_worldwide.svg?1562321166"/>
+<p>Worldwide payments</p>
+</li>
+<li class="mainlist-item">
+<img alt="Icon" src="https://bitcoin.org//img/icons/main_ico_lowfee.svg?1562321166"/>
+<p>Low processing fees</p>
+</li>
+</ul>
+</div>
+<img alt="Bitcoin image" class="maindesc-img" src="https://bitcoin.org//img/home/bitcoin-img.svg?1562321166"/>
+</div>
+<div class="btn-container">
+<a class="btn btn-dark btn-home center" href="/en/getting-started">Get started with Bitcoin</a>
+</div>
+</div>
+</div>
+<div class="modal closed">
+<iframe allowfullscreen="" class="modal-video" frameborder="0">
+</iframe>
+<button class="mainvideo-btn-close" onclick="loadYoutubeVideo(event);" ontouchstart="loadYoutubeVideo(event);"></button>
+</div>
+<div class="modal-overlay closed">
+</div>
+</div>
+<div class="footer">
+<div class="container">
+<a class="logo-footer" href="/en/">
+<img alt="Bitcoin" src="https://bitcoin.org//img/icons/logo-footer.svg?1562321166"/>
+</a>
+<div class="row footer-row">
+<div class="donate">
+<div class="row donate-row">
+<div>
+<span class="footer-title">Support Bitcoin.org:</span>
+<a class="donate-btn btn-bright" onclick="openDonationModal()">Donate</a>
+<p class="donate-text">
+<a class="donate-link" href="bitcoin:3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa" target="_blank">3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa</a>
+</p>
+</div>
+<div class="donate-qrcode">
+<img alt="QR code" src="https://bitcoin.org//img/footer/qr.png?1562321166"/>
+</div>
+</div>
+</div>
+<div class="row footermenu">
+<div class="footermenu-item footermenu-introduction">
+<p class="footer-title">Introduction:</p>
+<ul class="footermenu-list">
+<li>
+<a href="/en/bitcoin-for-individuals">Individuals</a>
+</li>
+<li>
+<a href="/en/bitcoin-for-businesses">Businesses</a>
+</li>
+<li>
+<a href="/en/bitcoin-for-developers">Developers</a>
+</li>
+<li>
+<a href="/en/getting-started">Getting started</a>
+</li>
+<li>
+<a href="/en/how-it-works">How it works</a>
+</li>
+<li>
+<a href="/en/you-need-to-know">You need to know</a>
+</li>
+<li>
+<a href="/en/bitcoin-paper">White paper</a>
+</li>
+</ul>
+</div>
+<div class="footermenu-item footermenu-resources">
+<p class="footer-title">Resources:</p>
+<ul class="footermenu-list">
+<li>
+<a href="/en/resources">Resources</a>
+</li><li>
+<a href="/en/exchanges">Exchanges</a>
+</li>
+<li>
+<a href="/en/community">Community</a>
+</li>
+<li>
+<a href="/en/vocabulary">Vocabulary
+          </a>
+</li>
+<li>
+<a href="/en/events">Events</a>
+</li>
+<li>
+<a href="/en/bitcoin-core/">Bitcoin Core</a>
+</li>
+</ul>
+</div>
+<div class="footermenu-item footermenu-participate">
+<p class="footer-title">Participate:</p>
+<ul class="footermenu-list">
+<li>
+<a href="/en/support-bitcoin">Support Bitcoin</a>
+</li><li>
+<a href="/en/buy">Buy Bitcoin</a>
+</li>
+<li>
+<a href="/en/full-node">Running a full node</a>
+</li>
+<li>
+<a href="/en/development">Development</a>
+</li>
+</ul>
+</div>
+<div class="footermenu-item footermenu-other">
+<p class="footer-title">Other:</p>
+<a href="/en/scams">Avoid Scams</a>
+<a href="/en/legal">Legal</a>
+<a href="/en/privacy">Privacy Policy</a>
+<a href="/en/press">Press</a>
+<a href="/en/about-us">About bitcoin.org</a>
+<a href="/en/blog">Blog</a>
+</div>
+</div>
+</div>
+<div class="footersponsor">
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container">
+<div class="row footer-bottom-row">
+<div class="footerlicense">© Bitcoin Project 2009-2019 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a></div>
+<div class="row footer-social">
+<a class="footer-social-link" href="" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href))" target="_blank">
+<img alt="facebook" class="footer-social-img" src="https://bitcoin.org//img/icons/ico_facebook_dark.svg?1562321166"/>
+</a>
+<a class="footer-social-link" href="" onclick="window.open('https://twitter.com/share?url=' + encodeURIComponent(location.href))" target="_blank">
+<img alt="twitter" class="footer-social-img" src="https://bitcoin.org//img/icons/ico_twitter_dark.svg?1562321166"/>
+</a>
+</div>
+<div class="row footer-status-block">
+<a class="statusmenu" href="/en/alerts">Network Status</a>
+<ul class="lang is-expand">
+<li><a>English</a>
+<ul>
+<li><ul>
+<li><a href="/id/">Bahasa Indonesia</a></li>
+<li><a href="/da/">Dansk</a></li>
+<li><a href="/de/">Deutsch</a></li>
+<li><a class="active" href="/en/">English</a></li>
+<li><a href="/es/">Español</a></li>
+<li><a href="/fr/">Français</a></li>
+<li><a href="/it/">Italiano</a></li>
+<li><a href="/hu/">Magyar</a></li>
+<li><a href="/nl/">Nederlands</a></li>
+<li><a href="/pl/">Polski</a></li>
+<li><a href="/pt_BR/">Português Brasil</a></li>
+<li><a href="/ro/">Română</a></li>
+<li><a href="/sl/">Slovenščina</a></li>
+<li><a href="/sr/">Srpski</a></li>
+</ul></li><li><ul>
+<li><a href="/sv/">Svenska</a></li>
+<li><a href="/tr/">Türkçe</a></li>
+<li><a href="/el/">Ελληνικά</a></li>
+<li><a href="/bg/">български</a></li>
+<li><a href="/ru/">Русский</a></li>
+<li><a href="/uk/">Українська</a></li>
+<li><a href="/ar/">العربية</a></li>
+<li><a href="/fa/">فارسی</a></li>
+<li><a href="/hi/">हिन्दी</a></li>
+<li><a href="/ko/">한국어</a></li>
+<li><a href="/ja/">日本語</a></li>
+<li><a href="/zh_CN/">简体中文</a></li>
+<li><a href="/zh_TW/">繁體中文</a></li>
+</ul></li>
+</ul>
+</li>
+</ul>
+<div class="footer-langselect langselect" id="footer-langselect">
+<label class="center-select" for="select-input-footer">
+<select class="center-select__input" onchange="window.location=this.value; ">
+<option value="/id/">Bahasa Indonesia</option>
+<option value="/da/">Dansk</option>
+<option value="/de/">Deutsch</option>
+<option selected="selected" value="/en/">English</option>
+<option value="/es/">Español</option>
+<option value="/fr/">Français</option>
+<option value="/it/">Italiano</option>
+<option value="/hu/">Magyar</option>
+<option value="/nl/">Nederlands</option>
+<option value="/pl/">Polski</option>
+<option value="/pt_BR/">Português Brasil</option>
+<option value="/ro/">Română</option>
+<option value="/sl/">Slovenščina</option>
+<option value="/sr/">Srpski</option>
+<option value="/sv/">Svenska</option>
+<option value="/tr/">Türkçe</option>
+<option value="/el/">Ελληνικά</option>
+<option value="/bg/">български</option>
+<option value="/ru/">Русский</option>
+<option value="/uk/">Українська</option>
+<option value="/ar/">العربية</option>
+<option value="/fa/">فارسی</option>
+<option value="/hi/">हिन्दी</option>
+<option value="/ko/">한국어</option>
+<option value="/ja/">日本語</option>
+<option value="/zh_CN/">简体中文</option>
+<option value="/zh_TW/">繁體中文</option>
+</select>
+<span class="center-select__text">en</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+</body></html>

@@ -1,0 +1,98 @@
+<html><head>
+<script async="" charset="utf-8" src="https://c.evidon.com/sitenotice/evidon-barrier.js"></script><script async="" charset="utf-8" src="https://c.evidon.com/sitenotice/4134/translations/en.js"></script><script async="" id="evidon-settings" src="//c.evidon.com/sitenotice/4134/popsugar/settings.js"></script><script async="" id="evidon-themes" src="//c.evidon.com/sitenotice/4134/snthemes.js"></script><script async="" id="evidon-location" src="//c.evidon.com/geo/country.js"></script><script async="" id="evidon-notice" src="//c.evidon.com/sitenotice/evidon-sitenotice-tag.js"></script><script type="text/javascript">
+        (function (id) {
+            function append(scriptid, url, async) {
+                var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+                if (!f) f = d.head;
+                var s = d.createElement(sn);
+                s.async = true;
+                s.id = scriptid;
+                s.src = url;
+                s.onerror = renderAdBlockWarning;
+                f.parentNode.insertBefore(s, f);
+            }
+
+            function getRootDomain() {
+                var parts = window.location.hostname.split('.');
+                if (parts.length === 2) rootDomain = parts[0];
+                else if (parts.length > 2) {
+                    // see if the next to last value is a common tld
+                    var part = parts[parts.length - 2];
+                    if (part === 'com' || part === 'co') {
+                        rootDomain = parts[parts.length - 3]; // go back one more
+                    }
+                    else {
+                        rootDomain = part;
+                    }
+                }
+
+                return rootDomain;
+            }
+
+            function renderAdBlockWarning() {
+                if (warningThrown) return;
+                warningThrown = true;
+                var outerContainer = document.createElement('div');
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (xmlhttp.readyState == XMLHttpRequest.DONE) {   // XMLHttpRequest.DONE == 4
+                            if (xmlhttp.status == 200) {
+                                outerContainer.innerHTML = xmlhttp.responseText;
+                            }
+                        }
+                    };
+
+                    xmlhttp.open("GET", "/gdpr-failed", true);
+                    xmlhttp.send();
+                    document.body.appendChild(outerContainer);
+            }
+
+            window.evidon = {};
+            window.evidon.id = id;
+            var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+            var warningThrown = false;
+            append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+            append('evidon-location', cdn + 'geo/country.js', true);
+            append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+
+            if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+
+            window.evidon.priorConsentCallback = function () {
+                function getUrlParameter(name) {
+                    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                    var results = regex.exec(location.search);
+                    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+                };
+
+                if (location.search.indexOf("amp=1") != -1) {
+                    window.parent.postMessage({
+                        type: 'consent-response',
+                        action: 'accept'
+                    }, '*');
+                }
+                else {
+                    var destination = getUrlParameter('destination');
+                    var popsugarHostName = "www.popsugar.co.uk";
+                    if (destination) {
+                        var getLocation = function(href) {
+                            var l = document.createElement("a");
+                            l.href = href;
+                            return l;
+                        };
+                        var l = getLocation(destination);
+                        if (l.hostname == popsugarHostName) {
+                            window.location.href = "https://" + popsugarHostName + l.pathname + l.search + l.hash;
+                        }
+                        else {
+                            window.location.href = "https://" + popsugarHostName;
+                        }
+                    }
+                    else if (window.location.pathname === '/gdpr-consent') {
+                        window.location.href = "https://" + popsugarHostName;
+                    }
+                }
+            }
+        })(4134);
+    </script>
+</head><body><div id="_evidon-barrier-wrapper" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 2147483642;"><div id="_evidon-background" style="background: rgb(47, 56, 71); opacity: 0.9; position: fixed; top: 0px; left: 0px; bottom: 0px; width: 100%; z-index: 2147483646;"></div><div class="evidon-barrier" id="_evidon-banner" style="position: relative; display: block; margin: 40px auto; background: rgb(255, 255, 255); width: 50%; padding: 25px; border: 0px solid rgb(0, 0, 0); z-index: 2147483647;" tabindex="0"><div id="_evidon-banner-content" style="opacity: 1.1;"><img alt="Company Logo" class="evidon-barrier-logo" id="_evidon-banner-logo" src="//c.evidon.com/logos/4134/4134-20180523182546." style="display: block; width: 478px; height: 38px; margin: 0px auto;"/><div class="evidon-barrier-title" id="_evidon-banner-title" style="display: block; text-align: center; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 0px; font-family: Texta; color: rgb(47, 56, 71); margin: 6px;">We need your consent to proceed</div><div class="evidon-barrier-message" id="_evidon-banner-message" style="display: block; font-size: 1rem; letter-spacing: 0.1px; vertical-align: top; padding: 16px 8px; line-height: 1.2; font-family: Texta; color: rgb(47, 56, 71); text-align: left; margin: -5px 10px;">We use cookies to personalize and enhance your experience on our site. Visit our <a href="//www.popsugar.co.uk/privacy" target="_blank">Privacy Policy</a> for more information on our data collection practices. By clicking Accept, you agree to our use of cookies for the purposes listed in our <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Consent Tool</a>.</div><div class="evidon-barrier-cookiemessage" id="_evidon-banner-cookiemessage" style="display: block; font-size: 1rem; padding: 1px 8px; line-height: 1.2; font-family: Texta; letter-spacing: 0.1px; color: rgb(47, 56, 71); margin: 0px 10px; text-align: left;">To see a complete list of the companies that use these cookies and other technologies and to tell us whether they can be used on your device or not, access our Cookie Consent Tool.<br/><br/>You will see this message only once, but you will always be able to set your preferences at any time in the Cookie Consent Tool. In addition, find more information about the use of cookies and similar technologies on this site in our Privacy Policy.</div><div class="evidon-barrier-acceptmessage" id="_evidon-banner-acceptmessage" style="display: block; margin: 13px 6px; font-size: 1rem; letter-spacing: 0.1px; padding: 0px 12px; line-height: 1.2; font-family: Texta; color: rgb(47, 56, 71); text-align: left;">When you proceed to access our site, the companies listed in the Cookie Consent Tool will use cookies and other technologies. This is further explained in our Privacy Policy.</div><div style='display: block; width: 100%; margin-bottom: -25px; position: relative; padding: 4px; font-size: 11px; border-top: 1px solid rgb(155, 155, 155); font-family: "open sans", sans-serif;'><button class="evidon-barrier-cookiebutton" id="_evidon-banner-cookiebutton" style="display: block; border-radius: 100px; background: transparent; font-size: 1rem; margin: 10px 0px; text-decoration: underline; font-family: Texta; color: rgb(17, 83, 255); padding: 0px 20px 3px; border: 0px solid rgb(0, 0, 0); cursor: pointer;" tabindex="0"><span id="_evidon-banner-cookiebuttontext">Cookie Consent</span></button><button class="evidon-barrier-acceptbutton" id="_evidon-banner-acceptbutton" style="display: block; margin: 20px auto; padding: 6px 20px 8px; border: 0px solid black; border-radius: 100px; background: rgb(36, 196, 248); color: rgb(255, 255, 255); font-size: 0.9rem; font-family: Texta; font-weight: 300; text-transform: uppercase; letter-spacing: 0.8px; cursor: pointer;" tabindex="0">Agree and Access Site</button></div></div><div id="_ev_opt_out" style="background-color: rgb(255, 255, 255); position: absolute; display: none; top: 0px; right: 0px; height: 100%; width: 100%; opacity: 0; color: rgb(47, 56, 71); overflow: auto;"><button id="_ev_opt_out_close" style="position: absolute; top: 0px; right: 2px; color: rgb(47, 56, 71); background: transparent; font-size: 12px; border: 0px; cursor: pointer;" tabindex="0">Close  ✖</button></div></div></div></body></html>

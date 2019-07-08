@@ -1,0 +1,707 @@
+<html lang="en-US"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>New Verifier | Verified Voting</title>
+<!-- <link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://www.verifiedvoting.org/xmlrpc.php" />
+ -->
+<link href="https://www.verifiedvoting.org/wp-content/themes/verified_voting/style.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.verifiedvoting.org//wp-content/themes/verified_voting/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+<link href="https://www.verifiedvoting.org//wp-content/themes/verified_voting/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"/>
+<link href="https://www.verifiedvoting.org//wp-content/themes/verified_voting/css/styles.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+<script src="https://www.verifiedvoting.org/wp-content/themes/verified_voting/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<script async="" src="https://www.gstatic.com/recaptcha/api2/v1561357937155/recaptcha__en.js" type="text/javascript"></script><script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/jquery.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/bootstrap/js/bootstrap.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/search_bar.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verified-mobile.js"></script>
+<script>
+/*
+(function($) {
+
+   // we create a copy of the WP inline edit post function
+   var $wp_inline_edit = inlineEditPost.edit;
+   // and then we overwrite the function with our own code
+   inlineEditPost.edit = function( id ) {
+
+      // "call" the original WP edit function
+      // we don't want to leave WordPress hanging
+      $wp_inline_edit.apply( this, arguments );
+
+      // now we take care of our business
+
+      // get the post ID
+      var $post_id = 0;
+      if ( typeof( id ) == 'object' )
+         $post_id = parseInt( this.getId( id ) );
+
+      if ( $post_id > 0 ) {
+
+         // define the edit row
+         var $edit_row = $( '#edit-' + $post_id );
+
+         // get the release date
+	 var $site = $( '#site-' + $post_id ).text();
+
+	 // populate the release date
+	 $edit_row.find( 'input[name="site"]' ).val( $site );
+
+      }
+
+   };
+
+})(jQuery);
+*/
+</script>
+<link href="//www.google.com" rel="dns-prefetch"/>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="https://www.verifiedvoting.org/feed/" rel="alternate" title="Verified Voting » Feed" type="application/rss+xml"/>
+<link href="https://www.verifiedvoting.org/comments/feed/" rel="alternate" title="Verified Voting » Comments Feed" type="application/rss+xml"/>
+<link href="https://www.verifiedvoting.org/verifier/feed/" rel="alternate" title="Verified Voting » New Verifier Comments Feed" type="application/rss+xml"/>
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.verifiedvoting.org\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script defer="" src="https://www.verifiedvoting.org/wp-includes/js/wp-emoji-release.min.js" type="text/javascript"></script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="https://www.verifiedvoting.org/wp-content/plugins/mailchimp//css/flick/flick.css" id="flick-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.verifiedvoting.org/?mcsf_action=main_css" id="mailchimpSF_main_css-css" media="all" rel="stylesheet" type="text/css"/>
+<!--[if IE]>
+<link rel='stylesheet' id='mailchimpSF_ie_css-css'  href='https://www.verifiedvoting.org/wp-content/plugins/mailchimp/css/ie.css' type='text/css' media='all' />
+<![endif]-->
+<link href="https://www.verifiedvoting.org/wp-content/plugins/shortcodes-ultimate/css/nivoslider.css?ver=3.9.5" id="nivo-slider-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.verifiedvoting.org/wp-content/plugins/shortcodes-ultimate/css/jcarousel.css?ver=3.9.5" id="jcarousel-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.verifiedvoting.org/wp-content/plugins/shortcodes-ultimate/css/style.css?ver=3.9.5" id="shortcodes-ultimate-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.verifiedvoting.org/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.verifiedvoting.org/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.3" id="contact-form-7-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.verifiedvoting.org/wp-content/plugins/wp-to-twitter/css/twitter-feed.css" id="wpt-twitter-feed-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.verifiedvoting.org/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4" id="wp-lightbox-2.min.css-css" media="all" rel="stylesheet" type="text/css"/>
+<script src="https://www.verifiedvoting.org/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/jquery-vertical-accordion-menu/js/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/jquery-vertical-accordion-menu/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/jquery-vertical-accordion-menu/js/jquery.dcjqaccordion.2.9.js" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/mailchimp//js/scrollTo.js?ver=1.5.7" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-includes/js/jquery/jquery.form.min.js?ver=4.2.1" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"https:\/\/www.verifiedvoting.org\/"};
+/* ]]> */
+</script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/mailchimp//js/mailchimp.js?ver=1.5.7" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/mailchimp//js/datepicker.js" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/shortcodes-ultimate/js/jwplayer.js?ver=3.9.5" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/shortcodes-ultimate/js/nivoslider.js?ver=3.9.5" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/shortcodes-ultimate/js/jcarousel.js?ver=3.9.5" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/shortcodes-ultimate/js/init.js?ver=3.9.5" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/fd-footnotes/fdfootnotes.js?ver=1.34" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/radslide/vendor/jquery.cycle.all.js" type="text/javascript"></script>
+<link href="https://www.verifiedvoting.org/wp-json/" rel="https://api.w.org/"/>
+<link href="https://www.verifiedvoting.org/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<link href="https://www.verifiedvoting.org/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+<meta content="WordPress 5.2.2" name="generator"/>
+<link href="https://www.verifiedvoting.org/verifier/" rel="canonical"/>
+<link href="https://www.verifiedvoting.org/?p=66516" rel="shortlink"/>
+<link href="https://www.verifiedvoting.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.verifiedvoting.org%2Fverifier%2F" rel="alternate" type="application/json+oembed"/>
+<link href="https://www.verifiedvoting.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.verifiedvoting.org%2Fverifier%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+<link href="https://www.verifiedvoting.org/wp-content/plugins/cforms/styling/cforms2012.css" rel="stylesheet" type="text/css"/>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/cforms/js/cforms.js" type="text/javascript"></script>
+<script type="text/javascript">
+        jQuery(function($) {
+            $('.date-pick').each(function() {
+                var format = $(this).data('format') || 'mm/dd/yyyy';
+                format = format.replace(/yyyy/i, 'yy');
+                $(this).datepicker({
+                    autoFocusNextInput: true,
+                    constrainInput: false,
+                    changeMonth: true,
+                    changeYear: true,
+                    beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
+                    dateFormat: format.toLowerCase(),
+                });
+            });
+            d = new Date();
+            $('.birthdate-pick').each(function() {
+                var format = $(this).data('format') || 'mm/dd';
+                format = format.replace(/yyyy/i, 'yy');
+                $(this).datepicker({
+                    autoFocusNextInput: true,
+                    constrainInput: false,
+                    changeMonth: true,
+                    changeYear: false,
+                    minDate: new Date(d.getFullYear(), 1-1, 1),
+                    maxDate: new Date(d.getFullYear(), 12-1, 31),
+                    beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
+                    dateFormat: format.toLowerCase(),
+                });
+
+            });
+
+        });
+    </script>
+<script type="text/javascript">jQuery(window).load(function() { 
+                  jQuery(function(){                    jQuery("#radslide-1").cycle({ timeout:6000, speed:800, pager: '#slide-pager' }); })
+        });</script>
+<style type="text/css">
+.su-spoiler-style-1 > .su-spoiler-title {
+    color: #00385A;
+    font-family: \\\\\\\'Vollkorn\\\\\\\',serif;
+    font-size: 21px;
+    font-weight: normal;
+  background-image: url(/wp-content/themes/verified_voting/img/icons/gen-icon-map.png);
+}
+
+
+</style>
+<link href="https://www.verifiedvoting.org/wp-content/plugins/jquery-vertical-accordion-menu/skin.php?widget_id=7&amp;skin=black" media="screen" rel="stylesheet" type="text/css"/>
+<link href="https://www.verifiedvoting.org/wp-content/plugins/jquery-vertical-accordion-menu/skin.php?widget_id=9&amp;skin=grey" media="screen" rel="stylesheet" type="text/css"/><link href="https://www.verifiedvoting.org/wp-content/themes/verified_voting/img/favicon.ico" rel="shortcut icon"/>
+<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,700" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic" rel="stylesheet" type="text/css"/>
+<link href="https://www.verifiedvoting.org/wp-content/themes/verified_voting/css/spoiler_override.css" rel="stylesheet"/>
+</head>
+<body class="page-template page-template-verifier page-template-verifier-php page page-id-66516 singular" data-offset="50" data-spy="scroll" data-target=".subnav">
+<div id="header">
+<div class="mobile-only" id="logo-mobile">
+<a href="/"><img alt="Verified Voting" border="0" src="https://www.verifiedvoting.org/wp-content/themes/verified_voting/images/vv-logo-mobile_01.png"/></a>
+</div>
+<div id="mobile-icons">
+<div id="menu-toggle">
+<div class="mobile-open"><img alt="Open Menu" height="" src="https://www.verifiedvoting.org/wp-content/themes/verified_voting/images/vv-header-mobile_05-2.png" width=""/><br/>MENU</div>
+<div class="mobile-close"><img alt="Close Menu" height="30" src="https://www.verifiedvoting.org/wp-content/themes/verified_voting/images/vv-header-mobile-close_03.png" width="30"/><br/>MENU</div>
+</div>
+<a class="mobile-only" href="/search" id="search-link">
+<img alt="search" border="0" height="30" src="https://www.verifiedvoting.org/wp-content/themes/verified_voting/images/search-icon.png" width="30"/>
+</a>
+</div>
+<div id="header-fader">
+<div id="header-container">
+<div id="logo">
+<a href="/"><img alt="The Voting News" border="0" src="https://www.verifiedvoting.org/wp-content/themes/verified_voting/images/vv-logo-header_03-vvo.png"/></a>
+</div>
+<div id="main-menu">
+<ul class="menu" id="menu-main-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-37190" id="menu-item-37190"><a>About</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46902" id="menu-item-46902"><a href="/about-vvo/">VerifiedVoting.org</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46594" id="menu-item-46594"><a href="/about-vvf/">Verified Voting Foundation</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46991" id="menu-item-46991"><a href="https://www.verifiedvoting.org/vv-in-the-news/">Verified Voting in the News</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60342" id="menu-item-60342"><a href="https://www.verifiedvoting.org/team/">Verified Voting Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60349" id="menu-item-60349"><a href="https://www.verifiedvoting.org/board-of-directors/">Board of Directors</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60355" id="menu-item-60355"><a href="https://www.verifiedvoting.org/board-of-advisors/">Board of Advisors</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88892" id="menu-item-88892"><a href="https://www.verifiedvoting.org/voting-system-principles/">Principles for New Voting Systems</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-98561" id="menu-item-98561"><a href="https://www.verifiedvoting.org/media-releases/">Media Releases</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116327" id="menu-item-116327"><a href="https://www.verifiedvoting.org/donate/">Donate</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47630" id="menu-item-47630"><a href="/contact">Contact</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-132146" id="menu-item-132146"><a href="/careers">Careers</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-46961" id="menu-item-46961"><a>Resources</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46962" id="menu-item-46962"><a href="https://www.verifiedvoting.org/resources/voting-equipment/">Voting Equipment</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46963" id="menu-item-46963"><a href="https://www.verifiedvoting.org/resources/post-election-audits/">Post Election Audits</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113507" id="menu-item-113507"><a href="https://www.verifiedvoting.org/state-audit-laws/">State Audit Law Database</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46964" id="menu-item-46964"><a href="https://www.verifiedvoting.org/resources/vvpr-legislation/">Legislation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46965" id="menu-item-46965"><a href="https://www.verifiedvoting.org/resources/internet-voting/">Internet Voting in the US</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86680" id="menu-item-86680"><a href="https://www.verifiedvoting.org/resources/internet-voting/internet-voting-outside-the-united-states/">Internet Voting Outside the US</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62131" id="menu-item-62131"><a href="https://www.verifiedvoting.org/resources/voter-registration-technology/">Voter Registration Technology</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-37187" id="menu-item-37187"><a aria-current="page" href="/verifier/">Verifier</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37186" id="menu-item-37186"><a href="/news/">Voting News</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37188" id="menu-item-37188"><a href="/blog/">Blog</a></li>
+</ul>
+</div>
+<div id="top-menu">
+<ul class="top-menu" id="menu-top-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37183" id="menu-item-37183"><a href="/donate/">Donate</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-117463" id="menu-item-117463"><a href="/contact/">Contact</a></li>
+</ul> </div>
+<div id="header-search">
+<form action="/search/#q/" method="GET" style="position:relative;">
+<input id="navbar-search" name="keywords" placeholder="Search" type="text" value=""/>
+<input src="https://www.verifiedvoting.org/wp-content/themes/verified_voting/images/search.png" type="image"/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mobile-menu" style="display: none;">
+<ul class="menu" id="menu-main-menu-1"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-37190"><a>About</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46902"><a href="/about-vvo/">VerifiedVoting.org</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46594"><a href="/about-vvf/">Verified Voting Foundation</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46991"><a href="https://www.verifiedvoting.org/vv-in-the-news/">Verified Voting in the News</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60342"><a href="https://www.verifiedvoting.org/team/">Verified Voting Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60349"><a href="https://www.verifiedvoting.org/board-of-directors/">Board of Directors</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60355"><a href="https://www.verifiedvoting.org/board-of-advisors/">Board of Advisors</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88892"><a href="https://www.verifiedvoting.org/voting-system-principles/">Principles for New Voting Systems</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-98561"><a href="https://www.verifiedvoting.org/media-releases/">Media Releases</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116327"><a href="https://www.verifiedvoting.org/donate/">Donate</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47630"><a href="/contact">Contact</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-132146"><a href="/careers">Careers</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-46961"><a>Resources</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46962"><a href="https://www.verifiedvoting.org/resources/voting-equipment/">Voting Equipment</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46963"><a href="https://www.verifiedvoting.org/resources/post-election-audits/">Post Election Audits</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113507"><a href="https://www.verifiedvoting.org/state-audit-laws/">State Audit Law Database</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46964"><a href="https://www.verifiedvoting.org/resources/vvpr-legislation/">Legislation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46965"><a href="https://www.verifiedvoting.org/resources/internet-voting/">Internet Voting in the US</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86680"><a href="https://www.verifiedvoting.org/resources/internet-voting/internet-voting-outside-the-united-states/">Internet Voting Outside the US</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62131"><a href="https://www.verifiedvoting.org/resources/voter-registration-technology/">Voter Registration Technology</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-37187"><a aria-current="page" href="/verifier/">Verifier</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37186"><a href="/news/">Voting News</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37188"><a href="/blog/">Blog</a></li>
+</ul> <div class="clear"></div>
+</div>
+<div class="container" id="main">
+<link href="https://www.verifiedvoting.org//wp-content/themes/verified_voting/css/verifier-colors.css" rel="stylesheet"/>
+<link href="https://www.verifiedvoting.org//wp-content/themes/verified_voting/css/verifier.css" rel="stylesheet"/>
+<div class="" id="tooltip" style="display: none; left: 243px; right: auto; top: 246px; "></div>
+<div id="verifier-content" role="main">
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/vendor/underscore.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/vendor/backbone.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/vendor/d3.v3.min.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/vendor/ejs_production.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/functions.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/views/official.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/views/region_select.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/views/machine_results.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/views/title.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/views/legend.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/views/map.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/views/search_results.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/views/search.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/views/stage.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/views/download.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/verifier.js"></script>
+<script src="https://www.verifiedvoting.org//wp-content/themes/verified_voting/js/verifier/router.js"></script>
+<style>
+[data-code=avbm]{ /*all vote by mail */
+  fill: url('https://www.verifiedvoting.org/verifier/#p2');  
+  background: #F2E8D7 url(/wp-content/themes/verified_voting/images/diagonal.png);
+}
+[data-code=ipa]{ /*all vote by mail */
+  fill: url('https://www.verifiedvoting.org/verifier/#p2');  
+  background: #F2E8D7 url(/wp-content/themes/verified_voting/images/diagonal.png);
+}
+</style>
+<div class="" id="tooltip" style="display: none; left: 243px; right: auto; top: 246px; "></div>
+<div>
+<div id="title-container">
+<h2>Loading Verifier</h2>
+</div>
+<div id="navigation-container">
+<div id="region-select-container">
+</div>
+<div id="stage-container"><div id="voting-stage">
+<div class="stage-tab selected" data-stage="std">
+<div class="tab-pad">
+      Polling Place<br/>Equipment
+    </div>
+</div>
+<div class="stage-tab" data-stage="acc">
+<div class="tab-pad">
+      Accessible<br/>Equipment
+    </div>
+</div>
+<div class="stage-tab" data-stage="ev">
+<div class="tab-pad">
+      Early Voting<br/>Equipment
+    </div>
+</div>
+<div class="stage-tab" data-stage="abs">
+<div class="tab-pad">
+      Absentee Ballot<br/>Tabulation
+    </div>
+</div>
+</div></div>
+<div class="clear"></div>
+</div>
+<div id="left-column">
+<div id="map-area">
+<div id="ajax-loader">Loading...</div>
+<div id="svg-container">
+<svg height="480" id="svg-map" width="650"></svg></div>
+<div id="legend">
+</div>
+</div>
+<div id="machine-results-container">
+</div>
+<div id="download-container">
+</div>
+<div id="search-results-container">
+</div>
+</div>
+<div id="right-column">
+<div class="well" id="year-switch-container">
+<form id="year-select">
+<select id="year-select" name="year" onchange="verifier.change_year(this.options[this.selectedIndex].value)" onload="this.options.[3].selected=true">
+<option id="0" value="2018">Select Year...</option>
+<option id="2018" value="2018">2018</option>
+<option id="2016" value="2016">2016</option>
+<option id="2014" value="2014">2014</option>
+<option id="2012" value="2012">2012</option>
+<option id="2010" value="2010">2010</option>
+<option id="2008" value="2008">2008</option>
+<option id="2006" value="2006">2006</option>
+</select>
+</form>
+</div>
+<div class="well" id="official-container">
+      Loading...
+    </div>
+<div class="well" id="advanced-search-container"><h3 class="fake-link" id="search-title">Search Equipment</h3>
+<div id="search-holder">
+<form id="machine-search">
+<select id="search-state" name="state_fips">
+<option value="">All States</option>
+<option value="1">Alabama</option>
+<option value="2">Alaska</option>
+<option value="4">Arizona</option>
+<option value="5">Arkansas</option>
+<option value="6">California</option>
+<option value="8">Colorado</option>
+<option value="9">Connecticut</option>
+<option value="10">Delaware</option>
+<option value="11">District of Columbia</option>
+<option value="12">Florida</option>
+<option value="13">Georgia</option>
+<option value="15">Hawaii</option>
+<option value="16">Idaho</option>
+<option value="17">Illinois</option>
+<option value="18">Indiana</option>
+<option value="19">Iowa</option>
+<option value="20">Kansas</option>
+<option value="21">Kentucky</option>
+<option value="22">Louisiana</option>
+<option value="23">Maine</option>
+<option value="24">Maryland</option>
+<option value="25">Massachusetts</option>
+<option value="26">Michigan</option>
+<option value="27">Minnesota</option>
+<option value="28">Mississippi</option>
+<option value="29">Missouri</option>
+<option value="30">Montana</option>
+<option value="31">Nebraska</option>
+<option value="32">Nevada</option>
+<option value="33">New Hampshire</option>
+<option value="34">New Jersey</option>
+<option value="35">New Mexico</option>
+<option value="36">New York</option>
+<option value="37">North Carolina</option>
+<option value="38">North Dakota</option>
+<option value="39">Ohio</option>
+<option value="40">Oklahoma</option>
+<option value="41">Oregon</option>
+<option value="42">Pennsylvania</option>
+<option value="44">Rhode Island</option>
+<option value="45">South Carolina</option>
+<option value="46">South Dakota</option>
+<option value="47">Tennessee</option>
+<option value="48">Texas</option>
+<option value="49">Utah</option>
+<option value="50">Vermont</option>
+<option value="51">Virginia</option>
+<option value="53">Washington</option>
+<option value="54">West Virginia</option>
+<option value="55">Wisconsin</option>
+<option value="56">Wyoming</option>
+</select>
+<select id="search-equipment" name="equip_type">
+<option value="">All Equipment</option>."\n"  <option value="Ballot Marking Device or System">Ballot Marking Device or System</option>
+<option value="DRE-Dial">DRE-Dial</option>
+<option value="DRE-Push Button">DRE-Push Button</option>
+<option value="DRE-Touchscreen">DRE-Touchscreen</option>
+<option value="Hand Counted Paper Ballots">Hand Counted Paper Ballots</option>
+<option value="Optical Scan">Optical Scan</option>
+<option value="Punch Card Voting System">Punch Card Voting System</option>
+</select>
+<select id="search-make" name="make">
+<option value="">All Makes</option>
+<option value="Avante">Avante</option>
+<option value="AVS">AVS</option>
+<option value="Danaher">Danaher</option>
+<option value="DFM">DFM</option>
+<option value="Dominion">Dominion</option>
+<option value="Election Systems &amp; Software">Election Systems &amp; Software</option>
+<option value="EnableMart">EnableMart</option>
+<option value="Hart InterCivic">Hart InterCivic</option>
+<option value="IVS">IVS</option>
+<option value="MicroVote">MicroVote</option>
+<option value="MTS">MTS</option>
+<option value="No Voting Equipment Used">No Voting Equipment Used</option>
+<option value="Populex">Populex</option>
+<option value="Premier/Diebold (Dominion)">Premier/Diebold (Dominion)</option>
+<option value="Sequoia (Dominion)">Sequoia (Dominion)</option>
+<option value="Unilect">Unilect</option>
+<option value="Unisyn">Unisyn</option>
+<option value="Vote-PAD">Vote-PAD</option>
+</select>
+<select id="search-model" name="model">
+<option value="">All Models</option>
+<option value="AccuVote OS">AccuVote OS</option>
+<option value="AccuVote OS CC">AccuVote OS CC</option>
+<option value="AccuVote OSX">AccuVote OSX</option>
+<option value="AccuVote TS">AccuVote TS</option>
+<option value="AccuVote TSX">AccuVote TSX</option>
+<option value="Alternate Format Ballot">Alternate Format Ballot</option>
+<option value="AutoMARK">AutoMARK</option>
+<option value="AVC Advantage">AVC Advantage</option>
+<option value="AVC Edge">AVC Edge</option>
+<option value="Ballot Now">Ballot Now</option>
+<option value="Chatsworth ACP 2200">Chatsworth ACP 2200</option>
+<option value="Chatsworth OMR 9002">Chatsworth OMR 9002</option>
+<option value="ClearVote">ClearVote</option>
+<option value="DS200">DS200</option>
+<option value="DS850">DS850</option>
+<option value="eScan">eScan</option>
+<option value="eScan AT">eScan AT</option>
+<option value="eSlate">eSlate</option>
+<option value="ExpressVote">ExpressVote</option>
+<option value="ImageCast BMD">ImageCast BMD</option>
+<option value="ImageCast Central">ImageCast Central</option>
+<option value="ImageCast Evolution">ImageCast Evolution</option>
+<option value="ImageCast ICP">ImageCast ICP</option>
+<option value="ImageCast Precinct">ImageCast Precinct</option>
+<option value="Infinity">Infinity</option>
+<option value="InkaVote">InkaVote</option>
+<option value="InkaVote Plus">InkaVote Plus</option>
+<option value="Inspire Vote by Phone">Inspire Vote by Phone</option>
+<option value="Inspire Ballot Marking System">Inspire Ballot Marking System</option>
+<option value="iVotronic">iVotronic</option>
+<option value="Mark A Vote">Mark A Vote</option>
+<option value="Model 100">Model 100</option>
+<option value="Model 150">Model 150</option>
+<option value="Model 550">Model 550</option>
+<option value="Model 650">Model 650</option>
+<option value="MTS">MTS</option>
+<option value="MV-464">MV-464</option>
+<option value="NCS OpScan 5">NCS OpScan 5</option>
+<option value="NCS OpScan 6">NCS OpScan 6</option>
+<option value="OMR 9002">OMR 9002</option>
+<option value="OpenElect">OpenElect</option>
+<option value="OpenElect OVCS">OpenElect OVCS</option>
+<option value="OpenElect OVI">OpenElect OVI</option>
+<option value="OpenElect OVO">OpenElect OVO</option>
+<option value="OpTech 2">OpTech 2</option>
+<option value="Optech 400C">Optech 400C</option>
+<option value="Optech IIIP-Eagle">Optech IIIP-Eagle</option>
+<option value="Optech Insight">Optech Insight</option>
+<option value="Patriot">Patriot</option>
+<option value="PopulexSlate">PopulexSlate</option>
+<option value="Shouptronic 1242">Shouptronic 1242</option>
+<option value="Teamwork Model 25">Teamwork Model 25</option>
+<option value="Unilect/Peripheral Dynamics VMR 138">Unilect/Peripheral Dynamics VMR 138</option>
+<option value="Verity Central">Verity Central</option>
+<option value="Verity Scan">Verity Scan</option>
+<option value="Verity Touch Writer">Verity Touch Writer</option>
+<option value="Vote-PAD Ballot Marking System">Vote-PAD Ballot Marking System</option>
+<option value="Vote-Trakker">Vote-Trakker</option>
+<option value="Votomatic">Votomatic</option>
+<option value="WinScan">WinScan</option>
+<option value="WinVote">WinVote</option>
+</select>
+<select id="search-year" name="year" onchange="verifier.change_year(value);">
+<option value="2018">2018</option>
+<option value="2016">2016</option>
+<option value="2014">2014</option>
+<option value="2012">2012</option>
+<option value="2010">2010</option>
+<option value="2008">2008</option>
+<option value="2006">2006</option>
+</select>
+<input id="reset-search" type="button" value="Reset"/>
+<input style="float:right" type="submit" value="SEARCH"/>
+</form>
+</div>
+</div>
+<p style="text-align: right; "><a href="/verifier/">National Map</a></p>
+</div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<pattern height="11" id="p2" patternunits="userSpaceOnUse" width="11">
+<image height="11" width="11" xlink:href="https://www.verifiedvoting.org/wp-content/themes/verified_voting/images/diagonal.png"/>
+</pattern>
+</defs>
+</svg>
+</div>
+<div class="clear"> </div>
+<br/>
+<div class="container">
+<div class="row">
+<div class="span12">
+<p>Verified Voting and the Verifier project are grateful for the support of Carla Itzkowich, in honor of her father, Moises Itzkowich. If you would like to support vital projects like the Verifier, or discuss other giving options, please contact Development and Outreach Officer Rachel Dellon (rachel@verifiedvoting.org).</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer
+  ================================================== -->
+<div class="clear"> </div>
+<footer class="footer">
+<hr/>
+<div class="container">
+<div class="row">
+<div class="span12">
+<div align="center" class="footerText">
+<div id="footer-nav">
+<ul class="nav nav-pills">
+<li class="">
+<a href="/about-vvo/">VerifiedVoting.org</a>
+</li>
+<li class="">
+<a href="/about-vvf/">Verified Voting Foundation</a>
+</li>
+<li class="">
+<a href="/verifier/">The Verifier</a>
+</li>
+<li class="">
+<a href="/blog/">Blog</a>
+</li>
+<li class="">
+<a href="/news/">The Voting News</a>
+</li>
+<li class="">
+<a href="/take-action">Take Action</a>
+</li>
+<li class="">
+<a href="/donate/">Donate</a>
+</li>
+<li class="">
+<a href="/contact/">Contact Us</a>
+</li>
+</ul>
+</div>
+<p>
+              © Copyright 2019, Verified Voting Foundation, Inc. All rights reserved, although reprint permission granted for nonprofit purposes with attribution to Verified Voting Foundation, Inc.
+          </p></div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+			<!--
+			var sc_project=8418821;
+			var sc_security="2da02394";
+			      var sc_invisible=1;
+			var scJsHost = (("https:" == document.location.protocol) ?
+				"https://secure." : "http://www.");
+			//-->
+					</script>
+<script async="" src="https://secure.statcounter.com/counter/counter.js" type="text/javascript"></script> <noscript><div class="statcounter"><a href="https://statcounter.com/" title="web analytics"><img alt="web analytics" class="statcounter" src="https://c.statcounter.com/8418821/0/2da02394/1/"/></a></div></noscript>
+<script type="text/javascript">
+				jQuery(document).ready(function($) {
+					jQuery('#dc_jqaccordion_widget-7-item .menu').dcAccordion({
+						eventType: 'click',
+						hoverDelay: 0,
+						menuClose: false,
+						autoClose: false,
+						saveState: false,
+						autoExpand: false,
+						classExpand: 'current-menu-item',
+						classDisable: '',
+						showCount: false,
+						disableLink: true,
+						cookie: 'dc_jqaccordion_widget-7',
+						speed: 'fast'
+					});
+				});
+			</script>
+<script type="text/javascript">
+				jQuery(document).ready(function($) {
+					jQuery('#dc_jqaccordion_widget-9-item .menu').dcAccordion({
+						eventType: 'click',
+						hoverDelay: 0,
+						menuClose: false,
+						autoClose: false,
+						saveState: false,
+						autoExpand: false,
+						classExpand: 'current-menu-item',
+						classDisable: '',
+						showCount: false,
+						disableLink: true,
+						cookie: 'dc_jqaccordion_widget-9',
+						speed: 'fast'
+					});
+				});
+			</script>
+<script src="https://www.verifiedvoting.org/wp-includes/js/comment-reply.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.verifiedvoting.org\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.3" type="text/javascript"></script>
+<script type="text/javascript">
+var renderInvisibleReCaptcha = function() {
+
+    for (var i = 0; i < document.forms.length; ++i) {
+        var form = document.forms[i];
+        var holder = form.querySelector('.inv-recaptcha-holder');
+
+        if (null === holder) continue;
+		holder.innerHTML = '';
+
+         (function(frm){
+			var cf7SubmitElm = frm.querySelector('.wpcf7-submit');
+            var holderId = grecaptcha.render(holder,{
+                'sitekey': '', 'size': 'invisible', 'badge' : 'bottomright',
+                'callback' : function (recaptchaToken) {
+					if((null !== cf7SubmitElm) && (typeof jQuery != 'undefined')){jQuery(frm).submit();grecaptcha.reset(holderId);return;}
+					 HTMLFormElement.prototype.submit.call(frm);
+                },
+                'expired-callback' : function(){grecaptcha.reset(holderId);}
+            });
+
+			if(null !== cf7SubmitElm && (typeof jQuery != 'undefined') ){
+				jQuery(cf7SubmitElm).off('click').on('click', function(clickEvt){
+					clickEvt.preventDefault();
+					grecaptcha.execute(holderId);
+				});
+			}
+			else
+			{
+				frm.onsubmit = function (evt){evt.preventDefault();grecaptcha.execute(holderId);};
+			}
+
+
+        })(form);
+    }
+};
+</script>
+<script async="" defer="" src="https://www.google.com/recaptcha/api.js?onload=renderInvisibleReCaptcha&amp;render=explicit" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"0","resizeSpeed":"200","displayDownloadLink":"1","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"0","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/www.verifiedvoting.org\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/www.verifiedvoting.org\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/www.verifiedvoting.org\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js?ver=1.3.4.1" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-content/plugins/page-links-to/js/new-tab.min.js?ver=3.1.1" type="text/javascript"></script>
+<script src="https://www.verifiedvoting.org/wp-includes/js/wp-embed.min.js" type="text/javascript"></script>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Object Caching 77/87 objects using disk
+Page Caching using disk: enhanced 
+Minified using disk
+Database Caching 16/18 queries in 0.037 seconds using disk
+
+Served from: www.verifiedvoting.org @ 2019-07-07 21:19:17 by W3 Total Cache
+--></body></html>

@@ -1,0 +1,741 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="tnTUm_z1jNWgTiMQtSMnuDCxRnw-aU2Loari8h5qlWA" name="google-site-verification"/>
+<script async="" src="//cse.google.com/adsense/search/async-ads.js"></script><script async="" crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js?hash=f53b3b40ec3f599fddcb1dd92470b261&amp;ua=modern_es6"></script><script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.3&amp;appId=605101509631919"></script><script async="" src="https://cse.google.com/cse.js?cx=001782146558691295792:qhcjv37h2nm" type="text/javascript"></script><script async="" src="//siteimproveanalytics.com/js/siteanalyze_86712.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KHH7VBW"></script><script>
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-KHH7VBW');
+            </script>
+<title>Previous Changes to the NDSS</title>
+<link href="https://www.ndss.com.au//Content/shared/all/css?v=s929S12Mvezh_GzxsEv0Vi-4KHvDKVr-cGtxTTo-WXk1" rel="stylesheet"/>
+<link href="https://www.ndss.com.au//content/ndss/all/css?v=StlLmKIJD-b9YqRDJpeD592DDVuq6OoBXMQR-Znt6RE1" rel="stylesheet"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="https://www.ndss.com.au//content/ndss/images/favicon/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content=" " name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="/content/ndss/images/favicon/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="/content/ndss/images/favicon/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="/content/ndss/images/favicon/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="/content/ndss/images/favicon/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="/content/ndss/images/favicon/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<style type="text/css">.js-slide-hidden{position:absolute !important;left:-9999px !important;top:-9999px !important;display:block !important}</style><script charset="utf-8" src="https://platform.twitter.com/js/button.509719336ca39171c37a321231ccaf83.js"></script><script src="https://www.google.com/cse/static/element/e1b7867e793369c8/cse_element__en.js?usqp=CAI%3D" type="text/javascript"></script><link href="https://www.google.com/cse/static/element/e1b7867e793369c8/default+en.css" rel="stylesheet" type="text/css"/><link href="https://www.google.com/cse/static/style/look/v3/default.css" rel="stylesheet" type="text/css"/><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#BCCDF0}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#336699;background-color:#E9E9E9;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover,.gsc-imageResult:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#1155CC}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#1155CC}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#1155CC}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#1155CC}.gsc-cursor-page{color:#1155CC}a.gsc-trailing-more-results:link{color:#1155CC}.gs-webResult .gs-snippet,.gs-imageResult .gs-snippet,.gs-fileFormatType{color:#333333}.gs-webResult div.gs-visibleUrl,.gs-imageResult div.gs-visibleUrl{color:#009933}.gs-webResult div.gs-visibleUrl-short{color:#009933}.gs-webResult div.gs-visibleUrl-short{display:none}.gs-webResult div.gs-visibleUrl-long{display:block}.gs-promotion div.gs-visibleUrl-short{display:none}.gs-promotion div.gs-visibleUrl-long{display:block}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-webResult.gsc-result.gsc-promotion{border-color:#336699;background-color:#FFFFFF}.gsc-completion-title{color:#1155CC}.gsc-completion-snippet{color:#333333}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#0000FF}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#663399}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#0000FF}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#0000FF}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#000000}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#008000}.gcsc-find-more-on-google{color:#1155CC}.gcsc-find-more-on-google-magnifier{fill:#1155CC}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+<body style="font-size: 1em;">
+<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+<a class="accessibility" href="#main">Skip to Content</a>
+<!--[if lte IE 8]>
+        <div class="old-browser-warning">
+            Time to upgrade your browser Diabetes Australia website only runs on Internet Explorer 10+ please download latest browser <a href="http://browsehappy.com/">click here</a>
+        </div>
+    <![endif]-->
+<div id="wrapper">
+<noscript>
+<iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-KHH7VBW" style="display: none; visibility: hidden" width="0"></iframe>
+</noscript>
+<header id="header">
+<div class="holder">
+<div class="pannel">
+<div class="info-line">NDSS Helpline <a href="tel:1300136588">1300 136 588</a></div>
+<div class="language-block">
+<ul class="resizer">
+<li><a href="#" id="increase">A</a></li>
+<li><a href="#" id="decrease">A</a></li>
+</ul>
+</div><div id="search-wrapper">
+<div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><form accept-charset="utf-8" class="gsc-search-box gsc-search-box-tools"><table cellpadding="0" cellspacing="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellpadding="0" cellspacing="0" class="gstl_50 gsc-input" id="gs_id50" style="width: 100%; padding: 0px;"><tbody><tr><td class="gsib_a" id="gs_tti50"><input autocomplete="off" class="gsc-input" dir="ltr" id="gsc-i-id1" name="search" placeholder="Custom Search" size="10" spellcheck="false" style='width: 100%; padding: 0px; border: none; margin: 0px; height: 26px; background: url("https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png") left center no-repeat rgb(255, 255, 255); text-indent: 48px; outline: none;' title="search" type="text"/></td><td class="gsib_b"><div class="gsst_b" dir="ltr" id="gs_st50"><a class="gsst_a" href="javascript:void(0)" role="button" style="display: none;" title="Clear search box"><span aria-hidden="true" class="gscb_a" id="gs_cb50">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button" src="/content/ndss/images/icon_search_blue.svg"><button class="gsc-search-button gsc-search-button-v2" src="/content/ndss/images/icon_search_blue.svg"><svg height="13" viewbox="0 0 13 13" width="13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results"> </div></td></tr></tbody></table></form><div class="gsc-results-wrapper-nooverlay"><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"><div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div></div><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"></div></div><div class="gsc-above-wrapper-area-invisible"><table cellpadding="0" cellspacing="0" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><table cellpadding="0" cellspacing="0" class="gsc-resultsHeader"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Web</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div class="gsc-result-selector gsc-one-result" title="show one result"> </div><div class="gsc-result-selector gsc-more-results" title="show more results"> </div><div class="gsc-result-selector gsc-all-results" title="show all results"> </div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div></div></div>
+</div> </div>
+<strong class="logo">
+<a href="/" tabindex="0" title="national diabetes services scheme"></a>
+</strong>
+<strong class="logo da">
+<a href="https://www.diabetesaustralia.com.au" tabindex="0" title="Diabetes Australia"></a>
+</strong>
+</div>
+<nav id="nav">
+<a class="opener icon-hamburger" href="#"><span>open</span></a>
+<ul class="slide">
+<li><a accesskey="S" href="/" tabindex="0"><span>Home</span></a></li>
+<li class="active header-node has-drop">
+<a href="/the-ndss" tabindex="0"><span>The NDSS</span></a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/the-ndss">The NDSS</a></li>
+<li class="active">
+<a href="/important-changes-to-the-ndss">Previous Changes to the NDSS</a>
+</li>
+<li>
+<a href="/state-and-territory-agents-and-access-points">State and Territory Agents and Access Points</a>
+</li>
+<li class="has-drop">
+<a href="/support-services">Support Services</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/support-services">Support Services</a></li>
+<li><a href="/online-services">Online Services</a></li>
+<li><a href="/helpline">NDSS Helpline</a></li>
+</ul>
+</div>
+</li>
+<li class="has-drop">
+<a href="/registration">Registration</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/registration">Registration</a></li>
+<li><a href="/manage-your-registration">Manage your Registration</a></li>
+<li><a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/f973794b-69d8-4cca-b9c5-23b55cde2f62.pdf">Registration Form</a></li>
+<li><a href="/address-update-or-request-card">Update Your Details or Request a Card</a></li>
+<li><a href="/welcome">New registrants</a></li>
+</ul>
+</div>
+</li>
+<li class="has-drop">
+<a href="/product-and-supply">Product and Supply</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/product-and-supply">Product and Supply</a></li>
+<li><a href="http://osd.ndss.com.au/search/">Find an Access Point</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/news">News</a>
+</li>
+<li>
+<a href="/unsubscribe">Unsubscribe</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="header-node has-drop">
+<a href="/my-diabetes" tabindex="0"><span>My Diabetes</span></a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/my-diabetes">My Diabetes</a></li>
+<li class="has-drop">
+<a href="/type-1">Type 1</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/type-1">Type 1</a></li>
+<li><a href="/type-1-your-health-care-team">Your Health Care Team</a></li>
+<li><a href="/type-1-insulin">Insulin</a></li>
+<li><a href="/type-1-blood-glucose-monitoring">Blood Glucose Monitoring</a></li>
+</ul>
+</div>
+</li>
+<li class="has-drop">
+<a href="/type-2">Type 2</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/type-2">Type 2</a></li>
+<li><a href="/type-2-your-health-care-team">Your Health Care Team</a></li>
+<li><a href="/type-2-medications">Medications</a></li>
+<li><a href="/type-2-blood-glucose-monitoring">Blood Glucose Monitoring</a></li>
+<li><a href="/type-2-diabetes-in-children-adolescents-information-sheet">Type 2 Diabetes in Children &amp; Adolescents</a></li>
+</ul>
+</div>
+</li>
+<li class="has-drop">
+<a href="/gestational-diabetes">Gestational Diabetes</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/gestational-diabetes">Gestational Diabetes</a></li>
+<li><a href="/gestational-your-health-care-team">Your Health Care Team</a></li>
+<li><a href="/gestational-blood-glucose-monitoring">Blood Glucose Monitoring</a></li>
+</ul>
+</div>
+</li>
+<li class="has-drop">
+<a href="/cgm">Continuous Glucose Monitoring</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/cgm">Continuous Glucose Monitoring</a></li>
+<li><a href="/type-1-diabetes-age-under-21-years">Type 1 diabetes; Aged under 21 years</a></li>
+<li><a href="/type-1-diabetes-aged-21-years-and-over">Type 1 diabetes; Aged 21 years and older with valid concessional status</a></li>
+<li><a href="/type-1-diabetes-and-pregnancy">Type 1 diabetes; Pregnancy/ Post-Pregnancy</a></li>
+<li><a href="/other-eligible-conditions-age-under-21-years">Conditions similar to type 1 diabetes; Aged under 21 years</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/aboriginal-and-torres-strait-islanders">Aboriginal and Torres Strait Islanders</a>
+</li>
+<li>
+<a href="/carers">Carers</a>
+</li>
+<li>
+<a href="/exercise">Exercise</a>
+</li>
+<li class="has-drop">
+<a href="/nutrition">Nutrition</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/nutrition">Nutrition</a></li>
+<li><a href="/what-should-i-eat">What Should I Eat?</a></li>
+<li><a href="/between-meal-snacks">Between-Meal Snacks</a></li>
+<li><a href="/eating-out">Eating Out</a></li>
+<li><a href="/alcohol">Alcohol</a></li>
+<li><a href="/healthy-hints-for-modifying-recipes">Healthy Hints for Modifying Recipes</a></li>
+<li><a href="/diabetes-and-fasting">Diabetes and Fasting</a></li>
+<li><a href="/glycaemic-index">Glycaemic Index</a></li>
+<li><a href="/weight-management">Weight Management</a></li>
+<li><a href="/cholesterol">Cholesterol</a></li>
+</ul>
+</div>
+</li>
+<li class="has-drop">
+<a href="/health-management">Health Management</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/health-management">Health Management</a></li>
+<li><a href="/your-eyes">Your Eyes</a></li>
+<li><a href="/your-feet">Your Feet</a></li>
+<li><a href="/sick-days">Sick Days</a></li>
+<li><a href="/sexual-health">Sexual Health</a></li>
+<li><a href="/heart-disease">Heart Disease</a></li>
+<li><a href="/mental-health">Mental Health</a></li>
+<li><a href="/blood-pressure">Blood Pressure</a></li>
+<li><a href="/coeliac-disease">Coeliac Disease</a></li>
+<li><a href="/pregnancy">Pregnancy</a></li>
+<li><a href="/your-bladder-and-kidneys">Your Bladder and Kidneys</a></li>
+<li><a href="/your-skin">Your Skin</a></li>
+<li><a href="/complementary-medicines">Complementary Medicines</a></li>
+</ul>
+</div>
+</li>
+<li class="has-drop">
+<a href="/travel">Travel</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/travel">Travel</a></li>
+<li><a href="/visiting-or-moving-to-australia">Visiting or Moving to Australia</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="header-node has-drop">
+<a href="/facts-figures" tabindex="0"><span>Facts &amp; Figures</span></a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/facts-figures">Facts &amp; Figures</a></li>
+<li>
+<a href="/diabetes-map">Diabetes Map</a>
+</li>
+<li>
+<a href="/data-snapshots">Data Snapshots</a>
+</li>
+<li>
+<a href="/for-registrants">For Registrants</a>
+</li>
+<li>
+<a href="/for-researchers">For Researchers</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="header-node has-drop">
+<a href="/publications-resources" tabindex="0"><span>Publications &amp; Resources</span></a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/publications-resources">Publications &amp; Resources</a></li>
+<li>
+<a href="/request-a-resource">Request a Resource</a>
+</li>
+<li class="has-drop">
+<a href="/understanding-diabetes">Understanding Diabetes</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/understanding-diabetes">Understanding Diabetes</a></li>
+<li><a href="/understanding-type-1-diabetes">Understanding Type 1 Diabetes</a></li>
+<li><a href="/understanding-type-2-diabetes">Understanding Type 2 Diabetes</a></li>
+<li><a href="/gestational-diabetes-resources">Gestational Diabetes</a></li>
+<li><a href="/understanding-pre-diabetes">Understanding Pre-Diabetes</a></li>
+</ul>
+</div>
+</li>
+<li class="has-drop">
+<a href="/managing-diabetes">Managing Diabetes</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/managing-diabetes">Managing Diabetes</a></li>
+<li><a href="/managing-hypoglycaemia">Managing Hypoglycaemia</a></li>
+<li><a href="/diabetes-and-pregnancy">Diabetes and Pregnancy</a></li>
+<li><a href="/polycystic-ovary-syndrome">Polycystic Ovary Syndrome</a></li>
+<li><a href="/sick-days-and-type-1-diabetes">Sick Days and Type 1 Diabetes</a></li>
+<li><a href="/sick-days-and-type-2-diabetes">Sick Days and Type 2 Diabetes</a></li>
+<li><a href="/steroid-medications">Steroid Medications</a></li>
+<li><a href="/insulin">Insulin and type 1 diabetes</a></li>
+<li><a href="/insulin-and-type-2-diabetes">Insulin and type 2 diabetes</a></li>
+<li><a href="/medications-for-type-2-diabetes">Medications for Type 2 Diabetes</a></li>
+<li><a href="/blood-glucose-monitoring">Blood Glucose Monitoring</a></li>
+<li><a href="/diabetes-and-travel">Travel</a></li>
+<li><a href="/surgery-and-hospital-stays">Surgery and Hospital Stays</a></li>
+<li><a href="/diabetes-and-coeliac-disease">Coeliac Disease</a></li>
+<li><a href="/continuous-glucose-monitoring">Continuous Glucose Monitoring</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/young-people">Young People</a>
+</li>
+<li>
+<a href="/older-people">Older People</a>
+</li>
+<li>
+<a href="/caring-for-someone-with-diabetes">Caring for someone with diabetes</a>
+</li>
+<li>
+<a href="/aboriginal-and-torres-strait-islander-resources">Aboriginal and Torres Strait Islander Resources</a>
+</li>
+<li class="has-drop">
+<a href="/diabetes-and-related-health">Diabetes and Related Health</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/diabetes-and-related-health">Diabetes and Related Health</a></li>
+<li><a href="/diabetes-related-complications">Diabetes-related Complications</a></li>
+<li><a href="/looking-after-your-kidneys">Looking After Your Kidneys</a></li>
+<li><a href="/looking-after-your-feet">Looking After Your Feet</a></li>
+<li><a href="/looking-after-your-heart">Looking After Your Heart</a></li>
+<li><a href="/looking-after-your-eyes">Looking After Your Eyes</a></li>
+<li><a href="/looking-after-your-dental-health">Looking After Your Dental Health</a></li>
+<li><a href="/your-diabetes-annual-cycle-of-care">Your Diabetes Annual Cycle of Care</a></li>
+<li><a href="/sexual-health-and-diabetes">Sexual Health and Diabetes</a></li>
+</ul>
+</div>
+</li>
+<li class="has-drop">
+<a href="/diabetes-and-emotional-health">Diabetes and Emotional Health</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/diabetes-and-emotional-health">Diabetes and Emotional Health</a></li>
+<li><a href="/adjusting-to-life-with-diabetes">Adjusting to Life with Diabetes</a></li>
+<li><a href="/peer-support">Peer Support</a></li>
+<li><a href="/concerns-about-starting-insulin">Concerns About Starting Insulin</a></li>
+<li><a href="/fear-of-hypoglycaemia">Fear of Hypoglycaemia</a></li>
+<li><a href="/diabetes-distress">Diabetes Distress</a></li>
+<li><a href="/diabetes-and-anxiety">Diabetes and Anxiety</a></li>
+<li><a href="/diabetes-and-depression">Diabetes and Depression</a></li>
+<li><a href="/disordered-eating">Disordered Eating</a></li>
+</ul>
+</div>
+</li>
+<li class="has-drop">
+<a href="/diabetes-and-lifestyle">Diabetes and Lifestyle</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/diabetes-and-lifestyle">Diabetes and Lifestyle</a></li>
+<li><a href="/diabetes-and-alcohol">Alcohol</a></li>
+<li><a href="/physical-activity">Physical Activity</a></li>
+<li><a href="/healthy-snacks">Healthy Snacks</a></li>
+<li><a href="/hints-for-healthy-cooking">Hints for Healthy Cooking</a></li>
+<li><a href="/understanding-food-labels">Understanding Food Labels</a></li>
+<li><a href="/carbohydrate-counting-and-diabetes">Carbohydrate Counting and Diabetes</a></li>
+<li><a href="/the-glycemic-index">The Glycemic Index</a></li>
+<li><a href="/food-choices-for-people-with-diabetes">Food Choices for People with Diabetes</a></li>
+<li><a href="/healthy-meal-ideas">Healthy Meal Ideas</a></li>
+<li><a href="/diabetes-and-eating-out">Eating Out</a></li>
+<li><a href="/alternative-sweeteners">Alternative Sweeteners</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/driving">Driving</a>
+</li>
+<li class="has-drop">
+<a href="/diabetes-and-emergencies">Emergencies</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/diabetes-and-emergencies">Emergencies</a></li>
+<li><a href="/resources-for-local-council-emergency-services-and-not-for-profits">Local Council, Emergency Services and Not-for-Profits</a></li>
+<li><a href="/commonly-asked-questions">Commonly Asked Questions</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/translated-resources">Translated Resources</a>
+</li>
+<li>
+<a href="/reports">Reports</a>
+</li>
+<li>
+<a href="/useful-links">Useful Links</a>
+</li>
+<li>
+<a href="/driving">Driving</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="header-node last-node has-drop">
+<a href="/health-professionals" tabindex="0"><span>Health Professionals</span></a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/health-professionals">Health Professionals</a></li>
+<li>
+<a href="/health-professionals-support-services">Support Services</a>
+</li>
+<li class="has-drop">
+<a href="/health-professionals-resources">Health Professionals Resources</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/health-professionals-resources">Health Professionals Resources</a></li>
+<li><a href="/online-resources-for-health-professionals">Website Resources for Health Professionals</a></li>
+<li><a href="/important-changes-to-the-ndss-health-professionals">Changes to some NDSS products from 1 December 2018</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/forms">Forms</a>
+</li>
+<li class="has-drop">
+<a href="/access-point-resources">Access Point Resources</a>
+<div class="drop"><a class="btn-back" href="#">Menu</a>
+<ul>
+<li class="top-link"><a href="/access-point-resources">Access Point Resources</a></li>
+<li><a href="/important-changes-to-the-ndss-access-points">Changes to some NDSS products from 1 December 2018</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/online-learning-for-hp">Online Learning for Health Professionals</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="footer-node">
+<a href="/the-ndss" tabindex="0"><span>About Us</span></a>
+</li>
+<li class="footer-node">
+<a href="/contact-us" tabindex="0"><span>Contact Us</span></a>
+</li>
+<li class="footer-node">
+<a href="/privacy-policy" tabindex="0"><span>Privacy Policy</span></a>
+</li>
+<li class="footer-node">
+<a href="/about-this-site" tabindex="0"><span>About this site</span></a>
+</li>
+<li class="footer-node">
+<a href="/site-map" tabindex="0"><span>Site map</span></a>
+</li>
+</ul>
+</nav>
+</header>
+<main id="main" role="main">
+<!--[if IE 9]>
+                <div class="old-browser-warning">
+                    Time to upgrade your browser Diabetes Australia website only runs on Internet Explorer 10+ please download latest browser <a href="http://browsehappy.com/">click here</a>
+                </div>
+            <![endif]-->
+<div class="two-columns">
+<div id="content">
+<div class="content-holder">
+<ul class="breadcrumb">
+<li><a href="/">Home</a></li>
+<li><a href="/the-ndss">The NDSS</a></li>
+<li class="active">Previous Changes to the NDSS</li>
+</ul>
+<div class="share-buttons-placeholder" style="display: none;"></div><div class="share-buttons" style="display: block;"><div class="fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe allow="encrypted-media" allowfullscreen="true" allowtransparency="true" aria-hidden="true" frameborder="0" id="fb_xdm_frame_https" name="fb_xdm_frame_https" scrolling="no" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=44#channel=f2be3076d1e80f4&amp;origin=https%3A%2F%2Fwww.ndss.com.au" style="border: none;" tabindex="-1" title="Facebook Cross Domain Communication Frame"></iframe></div><div></div></div></div><div class="fb-share-button fb_iframe_widget" data-href="https://www.ndss.com.au/important-changes-to-the-ndss" data-layout="button" fb-iframe-plugin-query="app_id=605101509631919&amp;container_width=814&amp;href=https%3A%2F%2Fwww.ndss.com.au%2Fimportant-changes-to-the-ndss&amp;layout=button&amp;locale=en_US&amp;sdk=joey" fb-xfbml-state="rendered"><span style="vertical-align: bottom; width: 59px; height: 20px;"><iframe allow="encrypted-media" allowfullscreen="true" allowtransparency="true" class="" frameborder="0" height="1000px" name="f6d1c4f60ffedc" scrolling="no" src="https://www.facebook.com/v2.3/plugins/share_button.php?app_id=605101509631919&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df395dbb3d370f6%26domain%3Dwww.ndss.com.au%26origin%3Dhttps%253A%252F%252Fwww.ndss.com.au%252Ff2be3076d1e80f4%26relation%3Dparent.parent&amp;container_width=814&amp;href=https%3A%2F%2Fwww.ndss.com.au%2Fimportant-changes-to-the-ndss&amp;layout=button&amp;locale=en_US&amp;sdk=joey" style="border: none; visibility: visible; width: 59px; height: 20px;" title="fb:share_button Facebook Social Plugin" width="1000px"></iframe></span></div><iframe allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" frameborder="0" id="twitter-widget-0" scrolling="no" src="https://platform.twitter.com/widgets/tweet_button.d753e00c3e838c1b2558149bd3f6ecb8.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fwww.ndss.com.au%2Fimportant-changes-to-the-ndss&amp;size=m&amp;text=Previous%20Changes%20to%20the%20NDSS&amp;time=1562461872357&amp;type=share&amp;url=https%3A%2F%2Fwww.ndss.com.au%2Fimportant-changes-to-the-ndss" style="position: static; visibility: visible; width: 1px; height: 1px;" title="Twitter Tweet Button"></iframe><script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script><a class="email" href="mailto:?body=%0APrevious%20Changes%20to%20the%20NDSS%20https://www.ndss.com.au/important-changes-to-the-ndss"><div></div></a></div>
+<header class="heading-box">
+<h1>Previous Changes to the NDSS</h1>
+</header>
+<div class="markdown"><p><strong>Updated 6 February 2019</strong></p>
+<h2>Government Funding Boost enables more people to access new glucose monitoring devices through the NDSS from 1 March 2019</h2>
+<p>The Australian Government is expanding subsidised access to continuous glucose monitoring (CGM) and flash glucose monitoring (Flash GM) to support more people with diabetes, specifically those with high clinical needs. There will be no co-payment involved.</p>
+<p>From 1 March 2019, the following additional groups of people will be able to access fully subsidised CGM or Flash GM devices:</p>
+<p><strong>People aged 21 years or older with type 1 diabetes, with valid concessional status, and who meet certain clinical needs criteria</strong></p>
+<ul>
+<li>If you are 21 years or older, have type 1 diabetes, concessional status (e.g. a valid Commonwealth-issued concession card), and have a high clinical need as assessed by an authorised health professional, you may be eligible.<br/><br/>More details available <a href="/type-1-diabetes-aged-21-years-and-over">here</a>.</li>
+</ul>
+<p><strong>Women with type 1 diabetes who are either actively planning pregnancy, are pregnant, or are in the immediate post-pregnancy period</strong></p>
+<ul>
+<li>Women with type 1 diabetes will be eligible for up to 12 months subsidised access to CGM or Flash GM to support active pregnancy planning. Once pregnant they will be eligible for subsidised access during the pregnancy and for up to three months after the expected date of birth of the child. </li>
+<li>If you are a woman with type 1 diabetes and you are actively planning pregnancy, are pregnant, or in the post-pregnancy phase, you may be eligible.<br/><br/>More details available <a href="/type-1-diabetes-and-pregnancy">here</a>.</li>
+</ul>
+<p><strong>Children and young people aged under 21 years with conditions very similar to type 1 diabetes who require insulin</strong></p>
+<ul>
+<li>If a child or young person has a condition where there is a risk of hypoglycaemic episodes and active glucose monitoring is required, they may be eligible for subsidised CGM access.<br/><br/>More details available <a href="/other-eligible-conditions-age-under-21-years">here</a>.</li>
+</ul>
+<p><strong>This initiative will save eligible people up to $7,000 annually.</strong></p>
+<p>Since 1 April 2017, the Australia Government has provided fully subsidised access to CGM products through the NDSS for children and young people with type 1 diabetes, under 21 years of age. </p>
+<p>From 1 March, 2019, as a result of a funding boost, over 37,000 Australians will be eligible for access to subsidised CGM and Flash GM products.</p>
+<p><strong>Flash glucose monitoring and sensors to be subsidised through the NDSS</strong></p>
+<ul>
+<li>Flash GM devices (Freestyle Libre) will be included in the program expansion from 1 March 2019 subject to price negotiations with the product sponsor. </li>
+<li>This will provide greater choice for people with diabetes in managing their health.</li>
+</ul>
+<p><strong>For people with diabetes, families, those who may be eligible</strong></p>
+<p>We understand that you may have questions about CGM devices and eligibility criteria and time frames. The NDSS team is here to help you. For more information or support, call the NDSS Helpline on <strong>1300 136 588</strong>.</p>
+<p><strong>For NDSS Access Points</strong></p>
+<p>The new arrangements start on 1 March 2019.</p>
+<p><strong>For Health Professionals</strong></p>
+<p>People who are eligible for subsidised CGM devices have been advised to talk to their health professional about their clinical needs and eligibility criteria.</p>
+<p>For more about this initiative announced on the <a href="http://www.health.gov.au/internet/main/publishing.nsf/Content/health-pbs-healthpro-cgm.htm">Department of Health’s website</a>.</p>
+</div><div class="markdown"><p><strong>Updated 9 November 2018</strong></p>
+<h2>Reduced NDSS Co-payments</h2>
+<p><strong>Some NDSS products will become more affordable for many people with diabetes from 1 December 2018</strong></p>
+<p>The cost of a number of NDSS products will either remain the same or reduce:</p>
+<ul>
+<li><strong>Blood glucose test strips and urine test strips:</strong>
+<ul>
+<li>cost to the registrant is reduced for all people without a concession card</li>
+<li>cost to the registrant is reduced for most people with a concession card</li>
+</ul></li>
+<li><strong>Insulin pump infusion sets and reservoirs:</strong>
+<ul>
+<li>no cost change to the registrant for people without a concession card</li>
+<li>cost to the registrant is reduced for all people with a concession card</li>
+</ul></li>
+<li><strong>Insulin syringes and pen needles:</strong>
+<ul>
+<li>no change</li>
+<li>co-payments for insulin syringes will continue to be subsidised by State or Territory Governments.</li>
+</ul></li>
+</ul>
+<p>Read more about the <a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/10898a39-96cc-4956-9b0c-bd8d27823d60.pdf" target="_blank">reduced NDSS co-payments</a>.</p>
+<h2>Changes to NDSS products</h2>
+<p><strong>Some changes will also be made to certain insulin syringes and some blood glucose test strips</strong> on the list of products available through the NDSS.</p>
+<h2>Most people with diabetes registered with the NDSS will not be affected by the product changes.</h2>
+<p>The changes include:</p>
+<ul>
+<li>Several new brands of blood glucose test strips and insulin syringes will be added.</li>
+<li>Some existing brands of blood glucose test strips and insulin syringes will be removed. People with diabetes who are affected will still be able to access the same types of subsidised products they need, but some brands of products will change. If someone’s usual brand is no longer subsidised through the NDSS, they can access a clinically equivalent NDSS product.</li>
+<li>There will be no changes to urine ketone test strips, insulin pump consumables &amp; continuous glucose monitoring products.</li>
+</ul>
+<p>To see if a product is changing, please see the <a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/ccea7e3f-a305-43ca-87fd-4feabf497c40.pdf" target="_blank">Fact sheet for people with diabetes</a>.</p>
+<p><strong>There is a transition period, from 1 December 2018 to 28 February 2019</strong>. During the transition period, you may be able to purchase existing brands that are being removed from the list of products available through the NDSS. You will only be able to purchase these brands while existing community pharmacies stock is available. It is likely that available stock may reduce over the transition period as pharmacies sell their available stock. If you require assistance in changing brands, you may wish to consult your healthcare team for assistance.</p>
+<h2>Free blood glucose meters</h2>
+<p>People with diabetes registered on the NDSS will be eligible to receive a <strong>free blood glucose meter associated with your preferred new brand of blood glucose test strips</strong>.</p>
+<p>With respect to the new blood glucose meters, people are encouraged to discuss the most suitable options with their health care professional. To find out which meters are suitable for NDSS-funded blood glucose test strips, as well as how to get one of these meters, read the <a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/b9c98ef4-521c-48e0-83fd-db81cc2e12c5.pdf" target="_blank">How to Access A Free Blood Glucose Meter</a> fact sheet.</p>
+<p>More information can be found here:</p>
+<ul>
+<li><a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/69203d36-40e5-427d-b210-74542bc9beac.pdf" target="_blank">Letter for people with diabetes</a></li>
+<li><a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/ccea7e3f-a305-43ca-87fd-4feabf497c40.pdf" target="_blank">Fact sheet for people with diabetes</a></li>
+<li><a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/e2de67e3-e722-4da1-a88f-835aa4710306.pdf" target="_blank">FAQs for people with diabetes</a></li>
+</ul>
+<h3><em>For NDSS Access Points</em></h3>
+<p>The new arrangements start on 1 December 2018. For Access Points, this is followed by a three-month transition period, during which time you can transition your stock of products being delisted. For more information specific to NDSS Access Points, please click <a href="https://www.ndss.com.au/important-changes-to-the-ndss-access-points">here</a>.</p>
+<h3><em>Available support</em></h3>
+<p>We understand that change can be challenging, and the NDSS team is here to help people with diabetes, their families and carers, health professionals, and NDSS Access Points during this transition period. For more information or support, call the NDSS Helpline on <strong>1300 136 588</strong>.</p>
+<p>To view the changes announced on the Department of Health’s website, click <a href="http://www.health.gov.au/internet/main/publishing.nsf/Content/health-pbs-healthpro-supply-ndss.htm">here</a>.</p>
+</div><div class="markdown"><p><strong>Updated 01 April 2017</strong></p>
+<h2>Continuous Glucose Monitoring Information</h2>
+<p><strong>For information about access to continuous glucose monitoring products through the NDSS, go to <a href="https://www.ndss.com.au/cgm">ndss.com.au/cgm</a></strong></p>
+<p><strong>Updated 1 July 2016</strong></p>
+<h2>Important notice about NDSS product supply and delivery</h2>
+<p>There have been changes to the way NDSS products are supplied and delivered.</p>
+<p><strong>What this means for people with diabetes:</strong></p>
+<p>Consumers will now receive all NDSS products, including insulin pump consumables (IPCs), through NDSS Access Points, usually your local community pharmacy. </p>
+<p>If you do not know where your nearest NDSS community pharmacy is located, you can check on the NDSS website at ndss.com.au or call the NDSS Helpline on 1300 136 588.</p>
+<p><strong>Changes to the NDSS</strong></p>
+<p>The Australian Government implemented changes to the NDSS from 1 July, 2016. Under these changes, NDSS products are no longer distributed through Diabetes Australia and state and territory diabetes organisations. </p>
+<p>Diabetes Australia and state and territory diabetes organisations will continue to deliver NDSS support and education services for people living with all types of diabetes.</p>
+<p>From 1 July 2016, NDSS products, such as needles, syringes, blood glucose test strips and urine test strips will be available from NDSS Access Points, usually your local community pharmacy. </p>
+<p>In addition, insulin pump consumables are now available from Access Points. If an Access Point does not stock the product, they can be ordered by and delivered to the Access Point, usually within 24-48 hours. People using an insulin pump are encouraged to speak to their local Access Point about their requirements. </p>
+<p>The Australian Government has also made changes to access to subsidised test strips for people with type 2 diabetes who do not use insulin. From 1 July 2016, all people with type 2 diabetes who are not using insulin can purchase subsidised blood glucose testing strips for an initial period of six months. </p>
+<p><em>For example, if you purchased blood glucose test strips on 3 July 2016, you will have access until 2 January 2017. If you purchased them on 1 August 2016, you will have access until 31 January 2017.</em> </p>
+<p>If your doctor, credentialled diabetes educator or nurse practitioner decides that it is necessary for you to continue to monitor your blood glucose levels, they will need to sign an NDSS  Blood Glucose Test Strip Six Month Approval form. This will mean you can access subsidised blood glucose test strips for a further six month period.  You will need to bring this signed form to your pharmacy.</p>
+<p>It is recommended that people with type 2 diabetes have an HbA1c test at least every six months.  This will give you an opportunity to discuss your need to monitor your blood glucose levels as part of your diabetes management.</p>
+<p>It’s important to talk to your doctor, credentialled diabetes educator or nurse practitioner if you are concerned about these changes. There are no limits to the number of blood glucose test strip approvals that may be granted as long as there is a need for you to continue to monitor your blood glucose levels.</p>
+<p>You can access the form <a href="https://www.ndss.com.au/manage-your-registration"><strong>here</strong></a>.</p>
+<p><strong>These changes will not affect people with diabetes using insulin, or people with gestational or other diabetes.</strong></p>
+<p>Please contact the NDSS Helpline on <strong>1300 136 588</strong> if you have any questions or concerns.</p>
+<p>A letter was sent by the Department of Health to people with diabetes registered on the NDSS, health professionals, and NDSS pharmacy Access Points. You can see copies of those letters below.</p>
+<p><a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/61c9e908-14f0-4ad3-affb-73b78ee5b60c.pdf" target="_blank">Letter for people with diabetes registered on the NDSS</a></p>
+<p><a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/86fd5838-24da-49d3-8db1-e8efd7d847d7.pdf" target="_blank">Letter for people purchasing insulin pump consumables</a></p>
+<p><a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/f6d5291d-50a4-439a-b5d7-46bf84884814.pdf" target="_blank">Letter for health professionals</a></p>
+<p><a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/4ccb5b5b-456e-4d8f-85fe-04a4a0386345.pdf" target="_blank">Letter for NDSS Access Points</a>
+<a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/6b061145-403a-4a87-9ed9-d30e0186a8ae.pdf" target="_blank">Attachment of Access Point letter</a></p>
+<p><a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/855f16d4-3bb3-4c4a-a057-d81375e50b1f.pdf" target="_blank">Brochure about the NDSS</a></p>
+<p>All NDSS Community Pharmacies were sent a letter in June 2016 with a Direct Debit Request form. This form can be <a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/5d34ac71-7c41-433c-8524-95c525c64f79.pdf" target="_blank"><strong>found here.</strong></a></p>
+<p>A list of answers to questions frequently asked by Access Points is <a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/80ee81b1-3042-47cc-8945-8c977250a584.pdf" target="_blank">available here</a></p>
+<p>To view the changes announced on the Department of Health’s website, <a href="http://www.health.gov.au/diabetes-services">click here</a>.</p>
+</div>
+<a class="btn-top" href="#wrapper" style="display: none;"><img alt="Back to TOP" src="https://www.ndss.com.au//content/ndss/images/top_button.svg"/></a>
+</div>
+</div>
+<aside id="sidebar">
+<nav class="side-nav">
+<a class="opener1" href="/important-changes-to-the-ndss">
+<span></span>Previous Changes to the NDSS 2</a>
+<div class="slide1 js-slide-hidden">
+<ul class="accordion">
+<li class="active">
+<a class="opener" href="/important-changes-to-the-ndss">Previous Changes to the NDSS</a>
+</li>
+<li>
+<a class="opener" href="/state-and-territory-agents-and-access-points">State and Territory Agents and Access Points</a>
+</li>
+<li class="has-children">
+<a class="opener" href="/support-services">Support Services</a>
+<div class="slide" style="position: absolute; top: -9999px; left: -9999px; width: 306px;">
+<ul>
+<li>
+<a href="/online-services">Online Services</a>
+</li>
+<li>
+<a href="/helpline">NDSS Helpline</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="has-children">
+<a class="opener" href="/registration">Registration</a>
+<div class="slide" style="position: absolute; top: -9999px; left: -9999px; width: 306px;">
+<ul>
+<li>
+<a href="/manage-your-registration">Manage your Registration</a>
+</li>
+<li>
+<a href="https://static.diabetesaustralia.com.au/s/fileassets/diabetes-australia/f973794b-69d8-4cca-b9c5-23b55cde2f62.pdf">Registration Form</a>
+</li>
+<li>
+<a href="/address-update-or-request-card">Update Your Details or Request a Card</a>
+</li>
+<li>
+<a href="/welcome">New registrants</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="has-children">
+<a class="opener" href="/product-and-supply">Product and Supply</a>
+<div class="slide" style="position: absolute; top: -9999px; left: -9999px; width: 306px;">
+<ul>
+<li>
+<a href="http://osd.ndss.com.au/search/">Find an Access Point</a>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<a class="opener" href="/news">News</a>
+</li>
+<li>
+<a class="opener" href="/unsubscribe">Unsubscribe</a>
+</li>
+</ul>
+</div>
+</nav>
+<section class="widget">
+<div class="box">
+<div class="box-holder">
+<a href="/address-update-or-request-card">
+<span data-alt="NDSSRegistrationCard" data-picture="">
+<span data-src="https://static.diabetesaustralia.com.au/s/images/diabetes-australia/428b8bb8-378a-4ed4-8432-09f6fae38613.jpg?w=572"><img alt="NDSSRegistrationCard" src="https://static.diabetesaustralia.com.au/s/images/diabetes-australia/428b8bb8-378a-4ed4-8432-09f6fae38613.jpg?w=572"/></span>
+<span data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" data-src="https://static.diabetesaustralia.com.au/s/images/diabetes-australia/428b8bb8-378a-4ed4-8432-09f6fae38613.jpg?w=1144&amp;quality=50"></span>
+<span data-media="(max-width:375px)" data-src="https://static.diabetesaustralia.com.au/s/images/diabetes-australia/428b8bb8-378a-4ed4-8432-09f6fae38613.jpg?w=375"></span>
+<span data-media="(max-width:375px) and (-webkit-min-device-pixel-ratio:1.5)" data-src="https://static.diabetesaustralia.com.au/s/images/diabetes-australia/428b8bb8-378a-4ed4-8432-09f6fae38613.jpg?w=750&amp;quality=50"></span>
+<noscript><img alt="NDSSRegistrationCard" src="https://static.diabetesaustralia.com.au/s/images/diabetes-australia/428b8bb8-378a-4ed4-8432-09f6fae38613.jpg?w=572"/></noscript>
+</span>
+<div class="more">
+<span class="title">Need a new card?</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+</aside>
+</div>
+</main>
+<footer id="footer">
+<div class="holder">
+<ul class="footer-links">
+<li><a href="/the-ndss">About Us</a></li>
+<li><a href="/contact-us">Contact Us</a></li>
+<li><a href="/privacy-policy">Privacy Policy</a></li>
+<li><a href="/about-this-site">About this site</a></li>
+<li><a href="/site-map">Site map</a></li>
+</ul>
+<strong class="copyright"><div class="markdown"><p>The National Diabetes Services Scheme is an initiative of the Australian Government administered with the assistance of Diabetes Australia.</p>
+<p>© Copyright 2015</p>
+</div></strong>
+</div>
+</footer>
+</div>
+<a class="accessibility" href="#wrapper">Back to top</a>
+<script>
+        var isNdss = true;
+        var contentRoot = '/content/ndss';
+
+        if (isNdss) {
+            // Tags for DA OneTag Remarketing
+
+            // One Tag Conditional Container: Coordinate - Diabetes Australia (12282) | DA OneTag Remarketing (9412)
+
+            var ft_onetag_9412 = {
+                ft_vars:{
+                    "ftXRef":"",
+                    "ftXValue":"",
+                    "ftXType":"",
+                    "ftXName":"",
+                    "ftXNumItems":"",
+                    "ftXCurrency":"",
+                    "U1":"",
+                    "U2":"",
+                    "U3":"",
+                    "U4":"",
+                    "U5":"",
+                    "U6":"",
+                    "U7":"",
+                    "U8":"",
+                    "U9":"",
+                    "U10":"",
+                    "U11":"",
+                    "U12":"",
+                    "U13":"",
+                    "U14":"",
+                    "U15":"",
+                    "U16":"",
+                    "U17":"",
+                    "U18":"",
+                    "U19":"",
+                    "U20":""
+                },
+                ot_dom:document.location.protocol+'//servedby.flashtalking.com',
+                ot_path:'/container/12282;91169;9412;iframe/?',
+                ot_href:'ft_referrer='+escape(document.location.href),
+                ot_rand:Math.random()*1000000,
+                ot_ref:document.referrer,
+                ot_init:function(){
+                    var o=this,qs='',count=0,ns='';
+                    for(var key in o.ft_vars){
+                        qs+=(o.ft_vars[key]==''?'':key+'='+o.ft_vars[key]+'&');
+                    }
+                    count=o.ot_path.length+qs.length+o.ot_href+escape(o.ot_ref).length;
+                    ns=o.ot_ns(count-2000);
+                    document.write('<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="'+o.ot_dom+o.ot_path+qs+o.ot_href+'&ns='+ns+'&cb='+o.ot_rand+'"></iframe>');
+                },
+                ot_ns:function(diff){
+                    if(diff>0){
+                        var o=this,qo={},
+                            sp=/(?:^|&)([^&=]*)=?([^&]*)/g,
+                            fp=/^(http[s]?):\/\/?([^:\/\s]+)\/([\w\.]+[^#?\s]+)(.*)?/.exec(o.ot_ref),
+                            ro={h:fp[2],p:fp[3],qs:fp[4].replace(sp,function(p1,p2,p3){if(p2)qo[p2]=[p3]})};
+                        return escape(ro.h+ro.p.substring(0,10)+(qo.q?'?q='+unescape(qo.q):'?p='+unescape(qo.p)));
+                    }else{
+                        var o=this;
+                        return escape(unescape(o.ot_ref));
+                    }
+                }
+            }
+            ft_onetag_9412.ot_init();
+        }
+    </script><iframe src="https://servedby.flashtalking.com/container/12282;91169;9412;iframe/?ft_referrer=https%3A//www.ndss.com.au/important-changes-to-the-ndss&amp;ns=&amp;cb=923390.75656457" style="position:absolute; visibility:hidden; width:1px; height:1px;"></iframe>
+<script src="https://www.ndss.com.au//bundles/js?v=deiUx-ZygK49TWypQuXaVgPPm8J54n88C7XNr76AiiU1"></script><script id="" type="text/javascript">(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//siteimproveanalytics.com/js/siteanalyze_86712.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+<iframe class="font-resize-helper" id="font-resize-frame-953" style="width: 100em; height: 10px; position: absolute; border-width: 0px; top: -9999px; left: -9999px;"></iframe><iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/widget_iframe.d753e00c3e838c1b2558149bd3f6ecb8.html?origin=https%3A%2F%2Fwww.ndss.com.au" style="display: none;" title="Twitter settings iframe"></iframe><table cellpadding="0" cellspacing="0" class="gstl_50 gssb_c" style="width: 207px; display: none; top: 86px; left: 1313px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body></html>

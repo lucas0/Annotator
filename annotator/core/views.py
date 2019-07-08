@@ -5,6 +5,7 @@ from django.contrib.auth import login, authenticate
 from django.http import JsonResponse
 import json
 import codecs
+from datetime import datetime
 
 import os, sys
 from os import listdir
@@ -91,7 +92,7 @@ def get_least_annotated_page(name,aPage=None):
     done_by_annotator = get_done_by_annotator(name)
     
     #Print number of annotated pages and total number of pages
-    s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1").sample(frac=1)
+    s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1").sample(frac=1, random_state=time.time())
     print("done: ", len(done_by_annotator), " | total: ", len(s_p))
     
     if len(done_by_annotator) == len(s_p):
@@ -101,8 +102,7 @@ def get_least_annotated_page(name,aPage=None):
     count_file = get_count_file(s_p)
         
     #Get pages not done by current annotator
-    not_done_count = count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)]
-    
+    not_done_count = (count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)]).sample(frac=1, random_state=time.time())
 
     print(">>",aPage)
     if aPage is not None:

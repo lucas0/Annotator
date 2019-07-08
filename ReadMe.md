@@ -7,22 +7,20 @@ Using ```python manage.py flush```
 
 ## ~~Skip ```save_annotation()``` if username has "test" in it~~
 
-## ~~Use shuffled samples dataframe in ```get_least_annotated_page()```~~
+## Make sure ```save_source.py``` is running
 
-Also remember to change the other functions that are called from it
+## Change radiobuttons to buttons
 
-## Find a way to prevent ```get_least_annotetd_page()``` from being stuck in an infinite loop
+Also add function to take care of setting value of op and submitting form
 
-1) ~~Try using ```random_state=time.time()``` in ```.frac()``` for both samples and not_done_count dataframes~~
+## Add print to see which rows are selected an if they are found
 
-2) Add bad-row removal to ```save_source.py``` for future runs (if any)
+## Use shuffled samples dataframe in ```get_least_annotated_page()```
 
-3) Write a script to remove "bad rows", stored in bad_rows.csv, from samples.csv then overwrite. This will reduce the chance of "Gateway Timeout" error happening as a result of successive "bad rows" getting retrieved by ```get_least_annotated_page()```
+Change shufling so that a new row is retrieved each time (to avoid infinite loops)
 
 ## ~~Remove automatic annotation~~
 
 Instead just call the function again using ```aPage = none```
 
 ## Deal with Snopes "Learn More" message width issue
-
-## ~~Replace radio buttons in form with checkboxes~~

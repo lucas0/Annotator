@@ -21,7 +21,7 @@ data_dir = os.path.abspath(cwd+"/../data")
 html_dir = os.path.abspath(cwd+"/../../html_getter")
 
 res_header = ["page", "claim", "verdict", "tags", "date", "author", "source_list", "source_url", "value", "name"]
-
+op_dict = {'Yes':'1', 'No':'2', 'Invalid Input': '3', "Don't Know": '4'}
 samples_path = data_dir+"/samples.csv"
 results_path = data_dir+"/results/"
 snopes_path = data_dir+"/html_snopes/"
@@ -44,6 +44,7 @@ def highlight_link(a_html, o_url):
 
 def get_done_by_annotator(name):
     # creates a list of pages that have been already annotated by the current annotator
+    print("GETTING DONE_BY_ANNOTATOR")
     results_filename = results_path+name+".csv"
     if os.path.exists(results_filename):
         results = pd.read_csv(results_filename, sep=',', encoding="latin1")
@@ -53,7 +54,8 @@ def get_done_by_annotator(name):
     return done_by_annotator
 
 def get_count_file(s_p):
-    #Creates or reads countfile:
+    #Creates or reads countfile
+    print("GETTING COUNT_FILE")
     if os.path.exists(count_path):
         count_file = pd.read_csv(count_path, sep=',', encoding="latin1")
     else:
@@ -91,7 +93,7 @@ def get_least_annotated_page(name,aPage=None):
     done_by_annotator = get_done_by_annotator(name)
     
     #Print number of annotated pages and total number of pages
-    s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1").sample(frac=1, random_state=7)
+    s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1").sample(frac=1)
     print("done: ", len(done_by_annotator), " | total: ", len(s_p))
     
     if len(done_by_annotator) == len(s_p):
@@ -101,7 +103,7 @@ def get_least_annotated_page(name,aPage=None):
     count_file = get_count_file(s_p)
         
     #Get pages not done by current annotator
-    not_done_count = (count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)]).sample(frac=1, random_state=7)
+    not_done_count = ((count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)])).sample(frac=1)
 
     print(">>",aPage)
     if aPage is not None:
@@ -123,8 +125,15 @@ def get_least_annotated_page(name,aPage=None):
 
     entry = remOrigins.iloc[0]
     entry = s_p[(s_p.page.isin([entry.page]) & s_p.source_url.isin([entry.source_url]))].iloc[0]
+    
     a_page = entry.page.strip()
+    print("CHOSEN PAGE")
+    print(a_page)
+    print("CHOSEN PAGE")
     o_page = entry.source_url.strip()
+    print("CHOSEN SOURCE")
+    print(o_page)
+    print("CHOSEN SOURCE")
     src_lst = entry.source_list.strip()
     
     #To avoid "deformed node" ast error
@@ -142,7 +151,9 @@ def get_least_annotated_page(name,aPage=None):
     
     # If page has a broken link, get another page (instead of looping over all sources)
     if not (os.path.exists(o_page_path) and os.path.exists(a_page_path)):
-            return get_least_annotated_page(name)
+        print("PATH NOT FOUND")
+        #save_annotation(a_page, o_page, '3', name)
+        return get_least_annotated_page(name)
 
     f = codecs.open(a_page_path, encoding='utf-8')
     a_html = bs(f.read(),"lxml")
@@ -153,7 +164,7 @@ def get_least_annotated_page(name,aPage=None):
     #filenames = [f for f in listdir(path_of_both)]
     a_total = len(ast.literal_eval(entry.source_list))
     a_done  = sum(entry.page in s for s in done_by_annotator)
-    print("WORKS")
+    print("PATH FOUND")
 
     return a_page, o_page, a_html, str(o_html), src_lst, a_done, a_total, len(done_by_annotator)
 
@@ -172,9 +183,17 @@ def home(request):
 		print("USER LOGGED IN")
 		name = user.username
 		if request.method == 'POST':
+			print("METHOD IS POST")
 			op = request.POST.copy().get('op')
 			if op:
-				if op in ['1', '2', '3', '4']:
+				print("OP")
+				print(op)
+				print("OP")
+				if op in list(op_dict.keys()):
+					op = op_dict[op]
+					print("OP NUM")
+					print(op)
+					print("OP NUM")
 					if not ("test" in name):
 						save_annotation(session.get('claim'),session.get('origin'), op, name)
 					a_url, o_url, a_html, o_html, src_lst, a_done, a_total, t_done = get_least_annotated_page(name, session.get('claim'))

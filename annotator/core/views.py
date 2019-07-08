@@ -91,7 +91,7 @@ def get_least_annotated_page(name,aPage=None):
     done_by_annotator = get_done_by_annotator(name)
     
     #Print number of annotated pages and total number of pages
-    s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1")
+    s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1").sample(frac=1)
     print("done: ", len(done_by_annotator), " | total: ", len(s_p))
     
     if len(done_by_annotator) == len(s_p):
@@ -143,8 +143,7 @@ def get_least_annotated_page(name,aPage=None):
     
     # If page has a broken link, get another page (instead of looping over all sources)
     if not (os.path.exists(o_page_path) and os.path.exists(a_page_path)):
-            save_annotation(a_page, o_page, "3", name)
-            return get_least_annotated_page(name, a_page)
+            return get_least_annotated_page(name)
 
     f = codecs.open(a_page_path, encoding='utf-8')
     a_html = bs(f.read(),"lxml")
@@ -170,7 +169,6 @@ def home(request):
 		print("NOT LOGGED IN")
 		return render(request, 'home.html')
 	else:
-
 		# return render(request, 'home.html', {'t1':"<html></html>", 't2':"<html></html>", 't3':"asda", 't4':"asdas", 'a_done':0, 'a_total':0, 't_done':0, 'alpha':0})
 		print("USER LOGGED IN")
 		name = user.username
@@ -178,7 +176,8 @@ def home(request):
 			op = request.POST.copy().get('op')
 			if op:
 				if op in ['1', '2', '3', '4']:
-					save_annotation(session.get('claim'),session.get('origin'), op, name)
+					if not ("test" in name):
+						save_annotation(session.get('claim'),session.get('origin'), op, name)
 					a_url, o_url, a_html, o_html, src_lst, a_done, a_total, t_done = get_least_annotated_page(name, session.get('claim'))
 					# Turn string representation of a list to a list
 					print("")

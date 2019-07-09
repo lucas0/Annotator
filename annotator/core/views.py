@@ -54,7 +54,7 @@ def get_done_by_annotator(name):
     total_done = len(done_by_annotator)
     #Get bad links
     if os.path.exists(data_dir+"/bad_links.csv"):
-        bad_links = (pd.read_csv(data_dir+"/bad_links.csv", sep='\t', encoding="latin1")).drop_duplicates(keep=False)
+        bad_links = (pd.read_csv(data_dir+"/bad_links.csv", sep='\t', encoding="latin1")).drop_duplicates(keep="first")
         res = [done_by_annotator, bad_links]
         done_by_annotator = pd.concat(res)
 
@@ -79,40 +79,45 @@ def increase_page_annotation_count(page, origin):
 def save_annotation(page, origin, value, name):
     # Read samples file
     print("SAVING ANNOTATION")
+    print("READING S_P")
     s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1")
-    entry = s_p.loc[(s_p["page"] == page) & (s_p["source_url"] == origin)]
+    entry = s_p.loc[s_p["page"] == page].loc[s_p["source_url"] == origin]
     if not (entry.empty):
+        print("ENTRY EXISTS")
         n_entry = entry.values.tolist()[0]
         n_entry.extend([value, name])
         results_filename = results_path+name+".csv"
+        print("READING RESULTS")
         if os.path.exists(results_filename):
             results = pd.read_csv(results_filename, sep=',', encoding="latin1")
         else:
             results = pd.DataFrame(columns=res_header)
-        oldEntry = results.loc[(results["page"] == page) & (results["source_url"] == origin)]
-        if oldEntry.empty:
-            results.loc[len(results)] = n_entry
+
+        results.loc[len(results)] = n_entry
+        results = results.drop_duplicates(keep="first")
         results.to_csv(results_filename, sep=',', index=False)
         # keeps track of how many times page was annotated
         increase_page_annotation_count(page, origin)
+    else:
+        print("ENTRY DOESNT EXIST")
 
 def get_least_annotated_page(name,aPage=None):
     done_by_annotator, total_done = get_done_by_annotator(name)
-    
+
     #Print number of annotated pages and total number of pages
     s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1").sample(frac=1)
     print("done: ", len(done_by_annotator), " | total: ", len(s_p))
-    
+
     if len(done_by_annotator) == len(s_p):
         return "Last annotation done! Thank you!", None, None, None, None, None, None, None
 
     #Creates or reads countfile:
     count_file = get_count_file(s_p)
-    
+
     #Get pages not done by current annotator
     #not_done_count = ((count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)])).sample(frac=1)
     not_done_count = (count_file[~(count_file.page.isin(done_by_annotator.page) & count_file.source_url.isin(done_by_annotator.source_url))]).sample(frac=1)
-    
+
     print(">>",aPage)
     if aPage is not None:
         remOrigins = not_done_count.loc[not_done_count['page'] == aPage]
@@ -123,7 +128,7 @@ def get_least_annotated_page(name,aPage=None):
         if len(twice_annotated) > 0:
             print("TWICE")
             page = twice_annotated.iloc[0]['page']
-        else:    
+        else:
             once_annotated = (not_done_count.loc[not_done_count['count'] == 1]).sample(frac=1)
             if len(once_annotated) > 0:
                 print("ONCE")
@@ -136,7 +141,7 @@ def get_least_annotated_page(name,aPage=None):
 
     entry = remOrigins.iloc[0]
     entry = s_p[(s_p.page.isin([entry.page]) & s_p.source_url.isin([entry.source_url]))].iloc[0]
-    
+
     a_page = entry.page.strip()
     print("CHOSEN PAGE")
     print(a_page)
@@ -146,20 +151,20 @@ def get_least_annotated_page(name,aPage=None):
     print(o_page)
     print("CHOSEN SOURCE")
     src_lst = entry.source_list.strip()
-    
+
     #To avoid "deformed node" ast error
     try :
         src_lst = ast.literal_eval(src_lst)
     except:
         src_lst = ast.literal_eval(src_lst.decode())
 
-    path_of_both = snopes_path + (a_page.strip("/").split("/")[-1]+"/") 
-    
+    path_of_both = snopes_path + (a_page.strip("/").split("/")[-1]+"/")
+
     a_page_path = path_of_both+"page.html"
-    
+
     src_idx_num = src_lst.index(o_page)
     o_page_path = path_of_both+str(src_idx_num)+".html"
-    
+
     # If page has a broken link, get another page (instead of looping over all sources)
     if not (os.path.exists(o_page_path) and os.path.exists(a_page_path)):
         if not (os.path.exists(o_page_path)):
@@ -210,7 +215,10 @@ def home(request):
 					print("OP NUM")
 					if not ("test" in name):
 						save_annotation(session.get('claim'),session.get('origin'), op, name)
-					a_url, o_url, a_html, o_html, src_lst, a_done, a_total, t_done = get_least_annotated_page(name, session.get('claim'))
+
+                                        apage = session.get('claim') if op in ["3","2"] else None
+
+					a_url, o_url, a_html, o_html, src_lst, a_done, a_total, t_done = get_least_annotated_page(name, apage)
 					# Turn string representation of a list to a list
 					print("")
 					print(a_url)
@@ -247,7 +255,7 @@ def home(request):
 		if a_html:
 			if not (type(a_html) == str):
 				a_html = highlight_link(a_html, o_url)
-		
+
 		#Save claim and origin links and list of origins in session
 		session['claim'] = a_url
 		session['origin'] = o_url
@@ -279,7 +287,7 @@ def signup(request):
 	if request.method == 'POST':
 		form = UserCreationForm(request.POST)
 		if form.is_valid():
-			user = form.save()	
+			user = form.save()
 			return redirect('home')
 	else:
 		form = UserCreationForm();
@@ -292,13 +300,13 @@ def signup(request):
 def change_origin(request):
 	if request.method == 'POST':
 		session = request.session
-		
+
 		print("")
 		print(request.body)
 		print("")
-		
+
 		received = json.loads(request.body.decode())
-		
+
 		print("")
 		print(received)
 		print("")

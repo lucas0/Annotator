@@ -92,7 +92,7 @@ def save_annotation(page, origin, value, name):
             results = pd.read_csv(results_filename, sep=',', encoding="latin1")
         else:
             results = pd.DataFrame(columns=res_header)
-        
+
         results.loc[len(results)] = n_entry
         results = results.drop_duplicates(keep="first")
         results.to_csv(results_filename, sep=',', index=False)

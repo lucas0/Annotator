@@ -224,7 +224,7 @@ for idx, e in samples.iterrows():
             domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urllib.parse.urlparse(e.source_url))
             without_domain = (e.source_url).replace(domain, "")
             soup = bs(o_html, 'lxml')
-            for elem in soup.find_all(['img', 'script', 'link', 'input']):
+            for elem in soup.find_all(['img', 'script', 'link', 'input','a']):
                 if str(elem) != "<None></None>":
                     if elem.has_attr('src'):
                         src = elem['src']

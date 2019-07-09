@@ -48,9 +48,15 @@ def get_done_by_annotator(name):
     results_filename = results_path+name+".csv"
     if os.path.exists(results_filename):
         results = pd.read_csv(results_filename, sep=',', encoding="latin1")
-        done_by_annotator = (results["page"]+results["source_url"]).unique()
+        done_by_annotator = results.drop(columns = ["value", "name"])
     else:
-        done_by_annotator = []
+        done_by_annotator = pd.Dataframe(columns=res_header).drop(columns = ["value", "name"])
+    #Get bad links
+    if os.path.exists(data_dir+"/bad_links.csv"):
+        bad_links = (pd.read_csv(data_dir+"/bad_links.csv", sep='\t', encoding="latin1")).drop_duplicates(keep=False)
+        res = [done_by_annotator, bad_links]
+        done_by_annotator = pd.concat(res)
+
     return done_by_annotator
 
 def get_count_file(s_p):
@@ -101,25 +107,29 @@ def get_least_annotated_page(name,aPage=None):
 
     #Creates or reads countfile:
     count_file = get_count_file(s_p)
-        
+    
     #Get pages not done by current annotator
-    not_done_count = ((count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)])).sample(frac=1)
-
+    #not_done_count = ((count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)])).sample(frac=1)
+    not_done_count = (count_file[~(count_file.page.isin(done_by_annotator.page) & count_file.source_url.isin(done_by_annotator.source_url))]).sample(frac=1)
+    
     print(">>",aPage)
     if aPage is not None:
         remOrigins = not_done_count.loc[not_done_count['page'] == aPage]
         if len(remOrigins)==0:
             return get_least_annotated_page(name)
     else:
-        twice_annotated = not_done_count.loc[not_done_count['count'] == 2]
+        twice_annotated = (not_done_count.loc[not_done_count['count'] == 2]).sample(frac=1)
         if len(twice_annotated) > 0:
+            print("TWICE")
             page = twice_annotated.iloc[0]['page']
         else:    
-            once_annotated = not_done_count.loc[not_done_count['count'] == 1]
+            once_annotated = (not_done_count.loc[not_done_count['count'] == 1]).sample(frac=1)
             if len(once_annotated) > 0:
+                print("ONCE")
                 page = once_annotated.iloc[0]['page']
             else:
-                index = not_done_count['count'].idxmin(axis=0, skipna=True)
+                print("OTHER")
+                index = (not_done_count['count']).sample(frac=1).idxmin(axis=0, skipna=True)
                 page = not_done_count.loc[index]['page']
         remOrigins = not_done_count.loc[not_done_count['page'] == page]
 
@@ -151,7 +161,10 @@ def get_least_annotated_page(name,aPage=None):
     
     # If page has a broken link, get another page (instead of looping over all sources)
     if not (os.path.exists(o_page_path) and os.path.exists(a_page_path)):
-        print("PATH NOT FOUND")
+        if not (os.path.exists(o_page_path)):
+            print("SOURCE PATH NOT FOUND")
+        if not (os.path.exists(a_page_path)):
+            print("PAGE PATH NOT FOUND")
         #save_annotation(a_page, o_page, '3', name)
         return get_least_annotated_page(name)
 
@@ -163,7 +176,7 @@ def get_least_annotated_page(name,aPage=None):
 
     #filenames = [f for f in listdir(path_of_both)]
     a_total = len(ast.literal_eval(entry.source_list))
-    a_done  = sum(entry.page in s for s in done_by_annotator)
+    a_done  = len(done_by_annotator.loc[done_by_annotator["page"] == a_page])
     print("PATH FOUND")
 
     return a_page, o_page, a_html, str(o_html), src_lst, a_done, a_total, len(done_by_annotator)

@@ -52,11 +52,6 @@ def get_done_by_annotator(name):
     else:
         done_by_annotator = pd.DataFrame(columns=res_header).drop(columns = ["value", "name"])
     total_done = len(done_by_annotator)
-    #Get bad links
-    if os.path.exists(data_dir+"/bad_links.csv"):
-        bad_links = (pd.read_csv(data_dir+"/bad_links.csv", sep='\t', encoding="latin1")).drop_duplicates(keep="first")
-        res = [done_by_annotator, bad_links]
-        done_by_annotator = pd.concat(res)
 
     return done_by_annotator, total_done
 
@@ -104,19 +99,24 @@ def save_annotation(page, origin, value, name):
 def get_least_annotated_page(name,aPage=None):
     done_by_annotator, total_done = get_done_by_annotator(name)
 
+    #Get bad links
+    if os.path.exists(data_dir+"/bad_links.csv"):
+        bad_links = (pd.read_csv(data_dir+"/bad_links.csv", sep='\t', encoding="latin1")).drop_duplicates(keep="first")
+        res = [done_by_annotator, bad_links]
+        after_merge = pd.concat(res)
+
     #Print number of annotated pages and total number of pages
     s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1").sample(frac=1)
     print("done: ", len(done_by_annotator), " | total: ", len(s_p))
 
-    if len(done_by_annotator) == len(s_p):
+    if len(after_merge) == len(s_p):
         return "Last annotation done! Thank you!", None, None, None, None, None, None, None
 
     #Creates or reads countfile:
     count_file = get_count_file(s_p)
 
     #Get pages not done by current annotator
-    #not_done_count = ((count_file.loc[~(count_file['page']+count_file['source_url']).isin(done_by_annotator)])).sample(frac=1)
-    not_done_count = (count_file[~(count_file.page.isin(done_by_annotator.page) & count_file.source_url.isin(done_by_annotator.source_url))]).sample(frac=1)
+    not_done_count = (count_file[~(count_file.page.isin(after_merge.page) & count_file.source_url.isin(after_merge.source_url))]).sample(frac=1)
 
     print(">>",aPage)
     if aPage is not None:

@@ -31,4 +31,4 @@ Some links that were retrieved after stopping then resuming the ```save_source.p
 
 ## Figure out the ```data-specless-position``` attribute issue
 
-Sometimes the row in the annotator conating the iframes and the form has its width reduced to about 20% of the screen while the rest of the screen remains empty. This is solved from the browser (from "inspect element") by removing an attribute called ```data-specless-position``` from the ```div``` tag surrounding the rows. This attribute, however, isnt in ```home.html```. Need to figure out when is it added to stop it from distorting the annotator.
+Sometimes the row in the annotator containing the iframes and the form has its width reduced to about 20% of the screen while the rest of the screen remains empty. This is solved from the browser (from "inspect element") by removing an attribute called ```data-specless-position``` from the ```div``` tag surrounding the rows. This attribute, however, isnt in ```home.html```. Need to figure out when is it added to stop it from distorting the annotator.

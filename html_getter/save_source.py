@@ -140,18 +140,6 @@ for idx, e in samples.iterrows():
                             words=a.get_text()
                             a.clear()
                             a.insert(1,words)
-                            #Make the link a child tag of the paragraph (ie remove all tags between link and paragraph) <p><nobr><a></a></nobr></p> becomes <p><a></a></p>. Important for injected Javascript functions.
-                            if a.parent.name not in ["p","div"]:
-                                curr_parent = a.parent
-                                old_parent = curr_parent
-                                if curr_parent is not None:
-                                    while curr_parent.name not in ["p","div"]:
-                                        old_parent = curr_parent
-                                        curr_parent = curr_parent.parent
-                                        if curr_parent is None:
-                                            break
-                                    if curr_parent is not None:
-                                        old_parent.replace_with(a)
 
             #Remove snopes top banner
             for d in soup.find_all('div'):

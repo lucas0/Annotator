@@ -51,13 +51,14 @@ def get_done_by_annotator(name):
         done_by_annotator = results.drop(columns = ["value", "name"])
     else:
         done_by_annotator = pd.DataFrame(columns=res_header).drop(columns = ["value", "name"])
+    total_done = len(done_by_annotator)
     #Get bad links
     if os.path.exists(data_dir+"/bad_links.csv"):
         bad_links = (pd.read_csv(data_dir+"/bad_links.csv", sep='\t', encoding="latin1")).drop_duplicates(keep=False)
         res = [done_by_annotator, bad_links]
         done_by_annotator = pd.concat(res)
 
-    return done_by_annotator
+    return done_by_annotator, total_done
 
 def get_count_file(s_p):
     #Creates or reads countfile
@@ -96,7 +97,7 @@ def save_annotation(page, origin, value, name):
         increase_page_annotation_count(page, origin)
 
 def get_least_annotated_page(name,aPage=None):
-    done_by_annotator = get_done_by_annotator(name)
+    done_by_annotator, total_done = get_done_by_annotator(name)
     
     #Print number of annotated pages and total number of pages
     s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1").sample(frac=1)
@@ -179,7 +180,7 @@ def get_least_annotated_page(name,aPage=None):
     a_done  = len(done_by_annotator.loc[done_by_annotator["page"] == a_page])
     print("PATH FOUND")
 
-    return a_page, o_page, a_html, str(o_html), src_lst, a_done, a_total, len(done_by_annotator)
+    return a_page, o_page, a_html, str(o_html), src_lst, a_done, a_total, total_done
 
 # VIEWS
 def home(request):

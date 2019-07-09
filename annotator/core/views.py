@@ -211,7 +211,7 @@ def home(request):
 					if not ("test" in name):
 						save_annotation(session.get('claim'),session.get('origin'), op, name)
 
-                                        apage = session.get('claim') if op in ["3","4"] else None
+                                        apage = session.get('claim') if op in ["3","2"] else None
 
 					a_url, o_url, a_html, o_html, src_lst, a_done, a_total, t_done = get_least_annotated_page(name, apage)
 					# Turn string representation of a list to a list

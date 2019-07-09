@@ -54,7 +54,7 @@ def get_done_by_annotator(name):
     total_done = len(done_by_annotator)
     #Get bad links
     if os.path.exists(data_dir+"/bad_links.csv"):
-        bad_links = (pd.read_csv(data_dir+"/bad_links.csv", sep='\t', encoding="latin1")).drop_duplicates(keep=False)
+        bad_links = (pd.read_csv(data_dir+"/bad_links.csv", sep='\t', encoding="latin1")).drop_duplicates(keep="first")
         res = [done_by_annotator, bad_links]
         done_by_annotator = pd.concat(res)
 
@@ -79,22 +79,27 @@ def increase_page_annotation_count(page, origin):
 def save_annotation(page, origin, value, name):
     # Read samples file
     print("SAVING ANNOTATION")
+    print("READING S_P")
     s_p = pd.read_csv(samples_path, sep='\t', encoding="latin1")
-    entry = s_p.loc[(s_p["page"] == page) & (s_p["source_url"] == origin)]
+    entry = s_p.loc[s_p["page"] == page].loc[s_p["source_url"] == origin]
     if not (entry.empty):
+        print("ENTRY EXISTS")
         n_entry = entry.values.tolist()[0]
         n_entry.extend([value, name])
         results_filename = results_path+name+".csv"
+        print("READING RESULTS")
         if os.path.exists(results_filename):
             results = pd.read_csv(results_filename, sep=',', encoding="latin1")
         else:
             results = pd.DataFrame(columns=res_header)
-        oldEntry = results.loc[(results["page"] == page) & (results["source_url"] == origin)]
-        if oldEntry.empty:
-            results.loc[len(results)] = n_entry
+        
+        results.loc[len(results)] = n_entry
+        results = results.drop_duplicates(keep="first")
         results.to_csv(results_filename, sep=',', index=False)
         # keeps track of how many times page was annotated
         increase_page_annotation_count(page, origin)
+    else:
+        print("ENTRY DOESNT EXIST")
 
 def get_least_annotated_page(name,aPage=None):
     done_by_annotator, total_done = get_done_by_annotator(name)

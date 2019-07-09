@@ -50,7 +50,7 @@ def get_done_by_annotator(name):
         results = pd.read_csv(results_filename, sep=',', encoding="latin1")
         done_by_annotator = results.drop(columns = ["value", "name"])
     else:
-        done_by_annotator = pd.Dataframe(columns=res_header).drop(columns = ["value", "name"])
+        done_by_annotator = pd.DataFrame(columns=res_header).drop(columns = ["value", "name"])
     #Get bad links
     if os.path.exists(data_dir+"/bad_links.csv"):
         bad_links = (pd.read_csv(data_dir+"/bad_links.csv", sep='\t', encoding="latin1")).drop_duplicates(keep=False)

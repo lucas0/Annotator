@@ -205,6 +205,7 @@ def home(request):
 			print("METHOD IS POST")
 			op = request.POST.copy().get('op')
 			if op:
+				op =re.sub('^[^a-zA-z]*|[^a-zA-Z]*$','',op)
 				print("OP")
 				print(op)
 				print("OP")

@@ -74,19 +74,23 @@ def get_html(url):
         for req in browser.requests:
             if req.response:
                 st = req.response.status_code
-        print("STATUS CODE: ",st)
-        if st == 404 or st == 301:
-            return "error"
-        elif st == 502:
-            logError(url, st)
-            return "error"
-        html = browser.page_source
-        if len(html) < 1000:
-            print("HTML SIZE PROBLEM")
-            logError(url, "size")
-            return "error"
+        if st:
+            print("STATUS CODE: ",st)
+            if st == 404 or st == 301:
+                return "error"
+            elif st == 502:
+                logError(url, st)
+                return "error"
+            html = browser.page_source
+            if len(html) < 1000:
+                print("HTML SIZE PROBLEM")
+                logError(url, "size")
+                return "error"
+            else:
+                return html
         else:
-            return html
+            logError(url, "no status code")
+            return "error"
     except Exception as e:
         print("GET HTML EXCEPTION")
         logError(url, e)
@@ -97,7 +101,9 @@ def get_html(url):
 is_first = not (os.path.exists(error_path))
 
 #Used to check whether or not this will be the first write to samples_html.csv
-for idx, e in samples.iterrows()[3000:]:
+for idx, e in samples.iterrows():
+    if idx < 3160:
+        continue
     print("\n|> ROW: ",idx,"/",num_samples)
     a_dir_name = html_path+e.page.strip("/").split("/")[-1]+"/"
 
@@ -224,6 +230,10 @@ for idx, e in samples.iterrows()[3000:]:
             domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urllib.parse.urlparse(e.source_url))
             without_domain = (e.source_url).replace(domain, "")
             soup = bs(o_html, 'lxml')
+            print(e.source_url)
+            print(domain)
+            print(without_domain)
+
             for elem in soup.find_all(['img', 'script', 'link', 'input','a']):
                 if str(elem) != "<None></None>":
                     if elem.has_attr('src'):
@@ -238,6 +248,7 @@ for idx, e in samples.iterrows()[3000:]:
                             list_for_this_elem = without_domain.split("/")
                             src.lstrip("/")
                             elem['href'] = get_correct_path(list_for_this_elem, domain, src) + src
+
             o_html = soup
 
             with open(o_html_filename, "w+", encoding='utf-8') as f:

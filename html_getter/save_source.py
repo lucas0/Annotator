@@ -35,7 +35,6 @@ out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list"
 req_header = {'User-Agent': 'a user agent'}
 
 def get_correct_path(lst, d, src):
-    print(lst, d, src)
     while lst:
         try:
             start=time.time()
@@ -95,7 +94,7 @@ is_first = not (os.path.exists(error_path))
 
 #Used to check whether or not this will be the first write to samples_html.csv
 for idx, e in samples.iterrows():
-    if idx < 3160:
+    if idx < 3375:
         continue
     print("\n|> ROW: ",idx,"/",num_samples)
     a_dir_name = html_path+e.page.strip("/").split("/")[-1]+"/"
@@ -227,15 +226,18 @@ for idx, e in samples.iterrows():
                 if str(elem) != "<None></None>":
                     if elem.has_attr('src'):
                         src =  elem['src']
-                        if not (src.startswith("http") or src.startswith("//")):
+                        print(src)
+                        if src is "data:image/png;base64":
+                            break
+                        if not (src.startswith(("http","//","data:image/"))):
                             list_for_this_elem = without_domain.split("/")
-                            src.lstrip("/")
+                            src = src.lstrip("/")
                             elem['src'] = get_correct_path(list_for_this_elem, domain, src) + src
                     if elem.has_attr('href'):
                         src = elem['href']
-                        if not ( src.startswith("http") or src.startswith("//")):
+                        if not (src.startswith(("http","//","data:image/"))):
                             list_for_this_elem = without_domain.split("/")
-                            src.lstrip("/")
+                            src = src.lstrip("/")
                             elem['href'] = get_correct_path(list_for_this_elem, domain, src) + src
 
             o_html = soup

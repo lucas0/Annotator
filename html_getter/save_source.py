@@ -175,13 +175,7 @@ for idx, e in samples.iterrows():
             # if statement is for error checking, nothing more
             if b:
                 if b.has_attr("class"):
-                    classes = b["class"]
-                    if type(classes) == list:
-                        print("true is list")
-                        class_list = class_list + classes
-                    else:
-                        print("false isnt list")
-                        class_list.append(classes)
+                    class_list.extend(b["class"])
 
             body = str(soup)
             # Go over all styles affecting body (bode + classes) and change overflow
@@ -226,7 +220,6 @@ for idx, e in samples.iterrows():
                 if str(elem) != "<None></None>":
                     if elem.has_attr('src'):
                         src =  elem['src']
-                        print(src)
                         if src is "data:image/png;base64":
                             break
                         if not (src.startswith(("http","//","data:image/"))):

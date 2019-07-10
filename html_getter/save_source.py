@@ -39,7 +39,7 @@ def get_correct_path(lst, d, src):
     dom = d
     while True:
         try:
-            start=time.time()	
+            start=time.time()
             r = requests.get(dom + src, headers=req_header, timeout=5)
             end = time.time()
             print("TIME TAKEN")
@@ -97,7 +97,7 @@ def get_html(url):
 is_first = not (os.path.exists(error_path))
 
 #Used to check whether or not this will be the first write to samples_html.csv
-for idx, e in samples.iterrows():
+for idx, e in samples.iterrows()[3000:]:
     print("\n|> ROW: ",idx,"/",num_samples)
     a_dir_name = html_path+e.page.strip("/").split("/")[-1]+"/"
 
@@ -190,7 +190,7 @@ for idx, e in samples.iterrows():
             for body_class in class_list:
                 # Get css rule affecting body
                 pattern = body_class +'{.+?(})'
-                class_style = re.search(str(pattern), body) 
+                class_style = re.search(str(pattern), body)
                 if class_style:
                     # Turn to string and substitute value of overflow with scroll
                     class_style = class_style.group(0)
@@ -198,7 +198,7 @@ for idx, e in samples.iterrows():
                     # Replace in body string
                     body = body.replace(class_style, changed_style)
 
-            
+
             injectionPoint=body.split("</body>")
             # Code to higlight the pressed link
             highlightLnkFnc = '<script> function highlightLnk(newLnk,oldLnk){document.getElementById(oldLnk).style.backgroundColor="white"; document.getElementById(newLnk).style.backgroundColor="yellow"; } </script>'
@@ -206,7 +206,7 @@ for idx, e in samples.iterrows():
             # JQuery CDN and event-handler
             jqueryCode='<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>'
             jqEvnt='<script> $("a").on("click", function(e){ e.preventDefault(); if(e.target.href){ if(!(e.target.href == parent.document.getElementById("oLink").href)){ parent.document.getElementById("oFrame").srcdoc = "<p>LOADING..PLEASE WAIT</p>"; let clicked_source = e.target.href; console.log(clicked_source); let csrf_tok = parent.document.getElementById("csrf_tok").value; $.ajax({ url: "/change_origin/", data: JSON.stringify({"clicked_source":clicked_source}), type: "POST", beforeSend: function (xhr, settings) { xhr.setRequestHeader("X-CSRFToken", csrf_tok );}, success: function(response) { if(response.msg=="ok"){ parent.document.getElementById("oFrame").srcdoc=response.source; parent.document.getElementById("oLink").href=response.n_link; highlightLnk(response.n_link,response.o_link)} else if (response.msg=="bad"){ alert("Broken link :/"); parent.document.getElementById("oFrame").srcdoc=response.source; } else{ alert("Link already annotated!"); parent.document.getElementById("oFrame").srcdoc=response.source; } }, error:function(error) { console.log(error); } }); } } }); </script></body>'
-            
+
             body=injectionPoint[0]+highlightLnkFnc+jqueryCode+jqEvnt+injectionPoint[1]
 
 

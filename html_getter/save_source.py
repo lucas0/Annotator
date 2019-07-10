@@ -35,27 +35,20 @@ out_header = ["page", "claim", "verdict", "tags", "date", "author","source_list"
 req_header = {'User-Agent': 'a user agent'}
 
 def get_correct_path(lst, d, src):
-    list_for_this_elem = lst
-    dom = d
-    while True:
+    print(lst, d, src)
+    while lst:
         try:
             start=time.time()
-            r = requests.get(dom + src, headers=req_header, timeout=5)
+            r = requests.get(d + src, headers=req_header, timeout=5)
             end = time.time()
-            print("TIME TAKEN")
-            print(end - start)
-            print("TIME TAKEN")
+            print("TIME TAKEN:",(end - start))
             if r.status_code == requests.codes.ok:
                 break
         except requests.exceptions.RequestException as e:
-            print("REQUESTS EXCEPTION")
             print(e)
-            print("REQUESTS EXCEPTION")
-        if not (list_for_this_elem):
-            break
-        dom = dom + list_for_this_elem[0] + "/"
-        list_for_this_elem.pop(0)
-    return dom
+        d = d + lst[0] + "/"
+        lst.pop(0)
+    return d
 
 #Change delimitter
 def logError(url, message):
@@ -215,7 +208,6 @@ for idx, e in samples.iterrows():
 
             body=injectionPoint[0]+highlightLnkFnc+jqueryCode+jqEvnt+injectionPoint[1]
 
-
             a_html = bs(body,'lxml')
 
             # save
@@ -230,15 +222,12 @@ for idx, e in samples.iterrows():
             domain = '{uri.scheme}://{uri.netloc}/'.format(uri=urllib.parse.urlparse(e.source_url))
             without_domain = (e.source_url).replace(domain, "")
             soup = bs(o_html, 'lxml')
-            print(e.source_url)
-            print(domain)
-            print(without_domain)
 
             for elem in soup.find_all(['img', 'script', 'link', 'input','a']):
                 if str(elem) != "<None></None>":
                     if elem.has_attr('src'):
-                        src = elem['src']
-                        if not ( src.startswith("http") or src.startswith("//")):
+                        src =  elem['src']
+                        if not (src.startswith("http") or src.startswith("//")):
                             list_for_this_elem = without_domain.split("/")
                             src.lstrip("/")
                             elem['src'] = get_correct_path(list_for_this_elem, domain, src) + src

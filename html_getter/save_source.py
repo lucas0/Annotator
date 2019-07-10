@@ -63,10 +63,8 @@ def get_html(url):
         browser = webdriver.Chrome(chrome_options=chrome_options, executable_path=chrome_driver)
         browser.header_overrides = {'User-Agent': 'Custom user agent', 'ORG_UNIT':'IT'}
         browser.get(url)
-        for req in browser.requests:
-            if req.response:
-                st = req.response.status_code
-        if st:
+        st = [req.response.status_code for req in browser.requests if req.response][0]
+        if st is not None:
             print("STATUS CODE: ",st)
             if st == 404 or st == 301:
                 return "error"
@@ -94,7 +92,7 @@ is_first = not (os.path.exists(error_path))
 
 #Used to check whether or not this will be the first write to samples_html.csv
 for idx, e in samples.iterrows():
-    if idx < 3375:
+    if idx < 4000:
         continue
     print("\n|> ROW: ",idx,"/",num_samples)
     a_dir_name = html_path+e.page.strip("/").split("/")[-1]+"/"

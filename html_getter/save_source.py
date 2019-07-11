@@ -40,7 +40,6 @@ def get_correct_path(lst, d, src):
             start=time.time()
             r = requests.get(d + src, headers=req_header, timeout=5)
             end = time.time()
-            print("TIME TAKEN:",(end - start))
             if r.status_code == requests.codes.ok:
                 break
         except requests.exceptions.RequestException as e:
@@ -50,15 +49,15 @@ def get_correct_path(lst, d, src):
     return d
 
 #Change delimitter
-def logError(url, message):
-    message = url+"<|>"+str(message)+"\n" #using comma in .write() function gives error
+def logError(row, url, message):
+    message = row+"<|>"+url+"<|>"+str(message)+"\n" #using comma in .write() function gives error
     with open(log_path, "r+") as log:
         lines = log.readlines()
     if message not in lines:
         with open(log_path, "a+") as log:
             log.write(message)
 
-def get_html(url):
+def get_html(row,url):
     try:
         browser = webdriver.Chrome(chrome_options=chrome_options, executable_path=chrome_driver)
         browser.header_overrides = {'User-Agent': 'Custom user agent', 'ORG_UNIT':'IT'}
@@ -67,23 +66,24 @@ def get_html(url):
         if st is not None:
             print("STATUS CODE: ",st)
             if st == 404 or st == 301:
+                logError(row, url, st)
                 return "error"
             elif st == 502:
-                logError(url, st)
+                logError(row, url, st)
                 return "error"
             html = browser.page_source
             if len(html) < 1000:
                 print("HTML SIZE PROBLEM")
-                logError(url, "size")
+                logError(row,url, "size")
                 return "error"
             else:
                 return html
         else:
-            logError(url, "no status code")
+            logError(row, url, "no status code")
             return "error"
     except Exception as e:
         print("GET HTML EXCEPTION")
-        logError(url, e)
+        logError(row, url, e)
         return "error"
     finally:
         browser.quit()
@@ -92,7 +92,7 @@ is_first = not (os.path.exists(error_path))
 
 #Used to check whether or not this will be the first write to samples_html.csv
 for idx, e in samples.iterrows():
-    if idx < 4000:
+    if idx < 5390:
         continue
     print("\n|> ROW: ",idx,"/",num_samples)
     a_dir_name = html_path+e.page.strip("/").split("/")[-1]+"/"
@@ -106,8 +106,8 @@ for idx, e in samples.iterrows():
     a_html_filename = a_dir_name+"page.html"
     o_html_filename = a_dir_name+str(o_idx)+".html"
 
-    a_html = "done" if os.path.exists(a_html_filename) else get_html(e.page)
-    o_html = "done" if os.path.exists(o_html_filename) else get_html(e.source_url)
+    a_html = "done" if os.path.exists(a_html_filename) else get_html(idx,e.page)
+    o_html = "done" if os.path.exists(o_html_filename) else get_html(idx,e.source_url)
 
     if "error" in [a_html,o_html]:
         output = pd.DataFrame(columns=out_header)

@@ -1,0 +1,356 @@
+<html lang="en"><head>
+<title>JPL Small-Body Database Browser</title>
+<meta content="index,nofollow" name="robots"/>
+<link href="https://ssd.jpl.nasa.gov/favicon.ico" rel="shortcut icon"/>
+<script language="JavaScript" type="text/javascript">
+<!-- Hide script
+//<![CDATA[
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("pop_page" + id + " = window.open(URL, '" + id + "','toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=600,height=600');");
+}
+
+function popUpHelp(URL) {
+help_window = window.open(URL, 'help','toolbar=0,scrollbars=1,statusbar=0,menubar=0,resizable=1,width=400,height=200,alwaysRaised=1');
+}
+function select_item(list)
+{
+  var item = list.options[list.selectedIndex].value;
+  list.form.submit();
+}
+
+
+//]]> End script hiding -->
+</script>
+<script language="JavaScript" src="https://ssd.jpl.nasa.gov/lib/jpl_std.js" type="text/javascript"></script>
+<script language="JavaScript" src="https://ssd.jpl.nasa.gov/lib/row_hiliter.js" type="text/javascript"></script>
+<link href="https://ssd.jpl.nasa.gov/css/ssd.css" media="screen" rel="StyleSheet" type="text/css"/>
+<style type="text/css">
+<!--
+@import "css/nav_menu.css";
+@import "css/ssd_extra.css";
+-->
+</style>
+<meta content="Alan Chamberlin" name="Author"/>
+<meta content="Solar System Dynamics,Solar System,Dynamics,Orbital Mechanics,Orbits" name="keywords"/>
+<meta content="CL 97-0935" name="JPL-clearance"/>
+</head>
+<body bgcolor="#000000" id="bodyID">
+<a href="https://ssd.jpl.nasa.gov/#content"><img alt="Skip Page Navigation" border="0" height="0" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="0"/></a>
+<table align="center" bgcolor="#000000" border="0" cellpadding="10" cellspacing="0" width="100%">
+<tbody><tr valign="top">
+<td>
+<table align="center" bgcolor="#FFFFFF" border="0" cellpadding="10" cellspacing="0" width="750">
+<tbody><tr valign="top">
+<td>
+<table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="730">
+<tbody><tr valign="top">
+<td align="left" bgcolor="#FFFFFF" width="100%">
+<map name="Map">
+<area alt="NASA" coords="31,26,24" href="https://www.nasa.gov" shape="circle"/>
+<area alt="JPL" coords="68,10,260,27" href="https://www.jpl.nasa.gov" shape="rect"/>
+<area alt="Caltech" coords="68,30,240,40" href="http://www.caltech.edu/" shape="rect"/>
+</map>
+<table border="0" cellpadding="0" cellspacing="0" width="730">
+<tbody><tr valign="middle">
+<td align="left" bgcolor="#CCCCCC" width="255">
+<img alt="NASA Logo - Jet Propulsion Laboratory" border="0" height="55" src="https://ssd.jpl.nasa.gov/images/nasa_logo.gif" usemap="#Map" width="255"/>
+</td>
+<td align="center" bgcolor="#CCCCCC" width="40"><img alt="" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="40"/></td>
+<td align="center" bgcolor="#CCCCCC" width="1"><img alt="" height="40" src="https://ssd.jpl.nasa.gov/images/black_1x1.gif" width="1"/></td>
+<td align="center" bgcolor="#CCCCCC" width="10"><img alt="" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="10"/></td>
+<td align="left" bgcolor="#CCCCCC" nowrap="" width="200">
+<a class="portal_link" href="https://www.nasa.gov/">+ View the NASA Portal</a>
+<br/>
+<a class="portal_link" href="https://cneos.jpl.nasa.gov/">+ Center for Near-Earth Object Studies</a>
+</td>
+<td align="center" bgcolor="#CCCCCC" width="10"><img alt="" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="10"/></td>
+<td align="center" bgcolor="#006699" width="10"><img alt="" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="10"/></td>
+<td align="center" bgcolor="#006699" nowrap="" width="140">
+<img alt="" height="55" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="140"/>
+</td>
+</tr>
+<tr>
+<td align="center" colspan="8">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr bgcolor="#FFFFFF">
+<td><a href="https://www.jpl.nasa.gov/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('home','','portal_images/topnav_01.gif',1)"><img alt="JPL Home" border="0" name="home" src="https://ssd.jpl.nasa.gov/portal_images/topnavoff_01.gif"/></a></td>
+<td><a href="https://www.jpl.nasa.gov/earth/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('earth','','portal_images/topnav_02.gif',1)"><img alt="Earth" border="0" name="earth" src="https://ssd.jpl.nasa.gov/portal_images/topnavoff_02.gif"/></a></td>
+<td><a href="https://www.jpl.nasa.gov/solar_system/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('solar_system','','portal_images/topnav_03.gif',1)"><img alt="Solar System" border="0" name="solar_system" src="https://ssd.jpl.nasa.gov/portal_images/topnavoff_03.gif"/></a></td>
+<td><a href="https://www.jpl.nasa.gov/stars_galaxies/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('stars','','portal_images/topnav_04.gif',1)"><img alt="Stars &amp; Galaxies" border="0" name="stars" src="https://ssd.jpl.nasa.gov/portal_images/topnavoff_04.gif"/></a></td>
+<td><a href="https://www.jpl.nasa.gov/technology/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('technology','','portal_images/topnav_05.gif',1)"><img alt="Technology" border="0" name="technology" src="https://ssd.jpl.nasa.gov/portal_images/topnavoff_05.gif"/></a></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td><img alt="" height="2" src="https://ssd.jpl.nasa.gov/images/blank.gif"/></td></tr>
+<tr><td align="left"><a href="https://ssd.jpl.nasa.gov/"><img alt="JPL Solar System Dynamics" border="0" height="97" src="https://ssd.jpl.nasa.gov/images/ssd_banner.jpg" width="730"/></a></td></tr>
+<tr>
+<td>
+<table bgcolor="#666666" border="0" cellpadding="0" cellspacing="0" width="730">
+<tbody><tr>
+<td><a href="https://ssd.jpl.nasa.gov/?bodies" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('bodies','','images/nav/bodies_on.gif',1)"><img alt="BODIES" border="0" height="16" name="bodies" src="https://ssd.jpl.nasa.gov/images/nav/bodies_off.gif" width="78"/></a></td>
+<td bgcolor="#CCCCCC" width="1"><img alt="" height="16" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="1"/></td>
+<td><a href="https://ssd.jpl.nasa.gov/?orbits" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('orbits','','images/nav/orbits_on.gif',1)"><img alt="ORBITS" border="0" height="16" name="orbits" src="https://ssd.jpl.nasa.gov/images/nav/orbits_off.gif" width="75"/></a></td>
+<td bgcolor="#CCCCCC" width="1"><img alt="" height="16" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="1"/></td>
+<td><a href="https://ssd.jpl.nasa.gov/?ephemerides" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('ephemerides','','images/nav/ephemerides_on.gif',1)"><img alt="EPHEMERIDES" border="0" height="16" name="ephemerides" src="https://ssd.jpl.nasa.gov/images/nav/ephemerides_off.gif" width="121"/></a></td>
+<td bgcolor="#CCCCCC" width="1"><img alt="" height="16" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="1"/></td>
+<td><a href="https://ssd.jpl.nasa.gov/?tools" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tools','','images/nav/tools_on.gif',1)"><img alt="TOOLS" border="0" height="16" name="tools" src="https://ssd.jpl.nasa.gov/images/nav/tools_off.gif" width="74"/></a></td>
+<td bgcolor="#CCCCCC" width="1"><img alt="" height="16" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="1"/></td>
+<td width="126"><a href="https://ssd.jpl.nasa.gov/?phys_data" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('phys_data','','images/nav/phys_data_on.gif',1)"><img alt="PHYSICAL DATA" border="0" height="16" name="phys_data" src="https://ssd.jpl.nasa.gov/images/nav/phys_data_off.gif" width="126"/></a></td>
+<td bgcolor="#CCCCCC" width="1"><img alt="" height="16" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="1"/></td>
+<td><a href="https://ssd.jpl.nasa.gov/?discovery" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('discovery','','images/nav/discovery_on.gif',1)"><img alt="DISCOVERY" border="0" height="16" name="discovery" src="https://ssd.jpl.nasa.gov/images/nav/discovery_off.gif" width="102"/></a></td>
+<td bgcolor="#CCCCCC" width="1"><img alt="" height="16" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="1"/></td>
+<td><a href="https://ssd.jpl.nasa.gov/?faq" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('faq','','images/nav/faq_on.gif',1)"><img alt="FAQ" border="0" height="16" name="faq" src="https://ssd.jpl.nasa.gov/images/nav/faq_off.gif" width="57"/></a></td>
+<td bgcolor="#CCCCCC" width="1"><img alt="" height="16" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="1"/></td>
+<td><a href="https://ssd.jpl.nasa.gov/?site_map" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('site_map','','images/nav/site_map_on.gif',1)"><img alt="SITE MAP" border="0" height="16" name="site_map" src="https://ssd.jpl.nasa.gov/images/nav/site_map_off.gif" width="90"/></a></td>
+</tr>
+</tbody></table>
+<!--
+                    <table border="0" cellspacing="0" cellpadding="0" width="730">
+                      <tr><td align="left" bgcolor="#666666">
+                        <div class="navtext">SSD STANDARD NAVIGATION HEADER</div>
+                      </td></tr>
+                      <tr><td><img src="images/blank.gif" height="1" alt=""></td></tr>
+                      <tr><td align="left" width="730" bgcolor="#666666">
+                        <div class="navtext">SSD STANDARD NAVIGATION HEADER (LINE 2)</div>
+                      </td></tr>
+                    </table>
+-->
+</td>
+</tr>
+<tr><td><img alt="" height="10" src="https://ssd.jpl.nasa.gov/images/blank.gif"/></td></tr>
+<tr>
+<td align="left"><a name="content"> </a>
+<div id="site_notice_email_list">
+<div class="big-notice"><b>IMPORTANT:</b> 
+    The SSD Announcement email list is now available.
+    Major changes are coming in the near future,
+    including possible hostname and/or URL changes.
+    To be notified of such changes, subscribe to this email list.
+    <br/><br/>
+    Please visit <a href="https://ssd.jpl.nasa.gov/?email_list">this page</a> for more details.
+    <div id="site_notice_email_list_ack">
+<br/><br/>
+<button class="" onclick="ackEmailNotice()">Don't show this message again</button>
+</div>
+</div>
+</div>
+<script src="https://ssd.jpl.nasa.gov/lib/site_notice.js"></script>
+<script>
+  var ls = canDoLocalStorage();
+  var key = "email_list_announcement";
+  //
+  // If localStorage is available...
+  if ( ls ) {
+    //
+    // If this message has already be acknowledged, don't show it again:
+    if ( localStorage.getItem(key) ) {
+      document.getElementById("site_notice_email_list").innerHTML = '';
+    }
+  //
+  // If localStorage is NOT available...
+  } else {
+    document.getElementById("site_notice_email_list_ack").innerHTML = '<br><br>'
+      + '<em>To not show this message again from this browser, enable "localStorage".</em>';
+  }
+  //
+  // Acknowledge message:
+  function ackEmailNotice() {
+    if ( ! ls ) return;
+    localStorage.setItem(key, true);
+    document.getElementById("site_notice_email_list").innerHTML = '';
+  }
+</script>
+<a name="top"> </a>
+<form action="https://ssd.jpl.nasa.gov/sbdb.cgi#top" enctype="multipart/form-data" method="post"><table bgcolor="#FFFFEE" border="0" cellpadding="4" cellspacing="0" width="730">
+<tbody><tr>
+<td align="left" nowrap="" valign="middle"><font class="page_title">JPL Small-Body Database Browser</font></td>
+<td align="right" nowrap="" valign="bottom"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td align="left"><font face="times, serif" size="-1"><b>Search:</b></font></td> <td align="right" nowrap=""><font face="helvetica, ariel, sans-serif" size="-2">[ <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?help=1">help</a> ]  </font></td></tr> <tr><td align="left" colspan="2"><input alt="search" maxlength="40" name="sstr" size="35" type="text"/></td></tr></tbody></table></td>
+</tr>
+</tbody></table>
+</form>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td align="left" bgcolor="#EEEEEE">
+<table bgcolor="#EEEEEE" border="0" cellpadding="0" cellspacing="0" width="730"><tbody><tr><td align="center" nowrap=""><font color="#000099" face="times,serif" size="+1"><b>23238 Ocasio-Cortez (2000 WU111)</b></font></td></tr>
+<tr><td align="center" nowrap=""><font face="helvetica,ariel,sans-serif" size="-1"><b>Classification:</b> </font><font face="times,serif" size="-1"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?class=MBA')">Main-belt Asteroid</a></font>          <font face="helvetica,ariel,sans-serif" size="-1"><b>SPK-ID:</b> </font><font face="times,serif" size="-1">2023238</font></td></tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="730"><tbody><tr bgcolor="#CCCCCC"><td align="center" nowrap="">[ <a href="https://ssd.jpl.nasa.gov/horizons.cgi?find_body=1&amp;body_group=sb&amp;sstr=23238"><font face="helvetica,ariel,sans-serif" size="-1">Ephemeris</font></a> | <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=1;cov=0;log=0;cad=0#orb"><font face="helvetica,ariel,sans-serif" size="-1">Orbit Diagram</font></a> | <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=0;cov=0;log=0;cad=0#elem"><font face="helvetica,ariel,sans-serif" size="-1">Orbital Elements</font></a> | <a href="https://ssd.jpl.nasa.gov/?mdesign_server&amp;des=23238"><font face="helvetica,ariel,sans-serif" size="-1">Mission Design</font></a> | <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=0;cov=0;log=0;cad=0#phys_par"><font face="helvetica,ariel,sans-serif" size="-1">Physical Parameters</font></a> | <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=0;cov=0;log=0;cad=0#discovery"><font face="helvetica,ariel,sans-serif" size="-1">Discovery Circumstances</font></a> ]</td></tr>
+</tbody></table>
+<br/>
+<a name="orb"></a><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=1;cov=0;log=0;cad=0#orb">[ show orbit diagram ]</a>
+<br/>
+<a name="elem"></a><table bgcolor="#0099FF" border="0" cellpadding="4" cellspacing="0"><tbody><tr valign="middle" width="100%"><td align="center"><font color="#000000" face="Helvetica, Ariel, Verdana, sans-serif" size="2"><b>Orbital Elements at Epoch 2458600.5 (2019-Apr-27.0) TDB</b></font><br/>
+<font color="#000000" face="Helvetica, Ariel, Verdana, sans-serif" size="2"><b>Reference: </b><font color="#FFFF00" face="Helvetica, Ariel, Verdana, sans-serif" size="2"><b>JPL 23</b></font> <b>(heliocentric ecliptic J2000)</b></font><br/>
+<table bgcolor="#000000" border="0" cellpadding="1" cellspacing="0" width="100%"><tbody><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr bgcolor="#999999"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><b> Element</b></font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><b>Value</b></font></td> <td align="center" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><b>Uncertainty (1-sigma) </b></font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><b> Units </b></font></td></tr>
+<tr bgcolor="#FFFFFF" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=e')">e</a></font></td> <td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">.125910684834657</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">3.5437e-08</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"> </font></td></tr>
+<tr bgcolor="#CCCCCC" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=a')">a</a></font></td> <td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">2.459832664774211</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">1.2311e-08</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">au</font></td></tr>
+<tr bgcolor="#FFFFFF" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=q')">q</a></font></td> <td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">2.150113449373831</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">8.7726e-08</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">au</font></td></tr>
+<tr bgcolor="#CCCCCC" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=i')">i</a></font></td> <td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">6.223526113941539</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">5.098e-06</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">deg</font></td></tr>
+<tr bgcolor="#FFFFFF" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=om')">node</a></font></td> <td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">6.15053701764503</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">3.7372e-05</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">deg</font></td></tr>
+<tr bgcolor="#CCCCCC" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=w')">peri</a></font></td> <td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">277.2668607994012</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">4.309e-05</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">deg</font></td></tr>
+<tr bgcolor="#FFFFFF" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=ma')">M</a></font></td> <td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">56.9510272850379</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">2.2259e-05</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">deg</font></td></tr>
+<tr bgcolor="#CCCCCC" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=tp')">t</a><sub><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=tp')">p</a></sub></font></td> <td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">2458377.576509322116<br/>(2018-Sep-16.07650932)</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">8.6667e-05</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">TDB</font></td></tr>
+<tr bgcolor="#FFFFFF" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=per')">period</a></font></td> <td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">1409.148534623921<br/>3.86</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">1.0579e-05<br/>2.896e-08</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">d<br/>yr</font></td></tr>
+<tr bgcolor="#CCCCCC" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=n')">n</a></font></td> <td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">.2554734232442558</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">1.9179e-09</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">deg/d</font></td></tr>
+<tr bgcolor="#FFFFFF" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=ad')">Q</a></font></td> <td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">2.769551880174591</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">1.3861e-08</font></td> <td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">au</font></td></tr>
+</tbody></table>
+</td></tr></tbody></table>
+</td> <td> </td> <td align="center"><font color="#000000" face="Helvetica, Ariel, Verdana, sans-serif" size="2"><b>Orbit Determination Parameters</b></font><table bgcolor="#000000" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr bgcolor="#FFFFFF" valign="middle"><td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">   <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=n_obs_used')"># obs. used (total)</a>   </font></td> <td align="left" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">  1302  </font></td></tr>
+<tr bgcolor="#CCCCCC" valign="middle"><td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">   <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=data_arc')">data-arc span</a>   </font></td> <td align="left" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">  9411 days (25.77 yr)  </font></td></tr>
+<tr bgcolor="#FFFFFF" valign="middle"><td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">   <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=first_obs')">first obs. used</a>   </font></td> <td align="left" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">  1992-10-31  </font></td></tr>
+<tr bgcolor="#CCCCCC" valign="middle"><td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">   <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=last_obs')">last obs. used</a>   </font></td> <td align="left" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">  2018-08-07  </font></td></tr>
+<tr bgcolor="#FFFFFF" valign="middle"><td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">   <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=pe_used')">planetary ephem.</a>   </font></td> <td align="left" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">  DE431  </font></td></tr>
+<tr bgcolor="#CCCCCC" valign="middle"><td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">   <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=sb_used')">SB-pert. ephem.</a>   </font></td> <td align="left" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">  SB431-N16  </font></td></tr>
+<tr bgcolor="#FFFFFF" valign="middle"><td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">   <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=condition_code')">condition code</a>   </font></td> <td align="left" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">  0  </font></td></tr>
+<tr bgcolor="#CCCCCC" valign="middle"><td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">   <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=rms')">norm. resid. RMS</a>   </font></td> <td align="left" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">  .53861  </font></td></tr>
+<tr bgcolor="#FFFFFF" valign="middle"><td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">   <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=source')">source</a>   </font></td> <td align="left" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">  ORB  </font></td></tr>
+<tr bgcolor="#CCCCCC" valign="middle"><td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">   <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=producer')">producer</a>   </font></td> <td align="left" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">  Otto Matic  </font></td></tr>
+<tr bgcolor="#FFFFFF" valign="middle"><td align="right" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">   <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=soln_date')">solution date</a>   </font></td> <td align="left" nowrap=""><font face="Helvetica, Ariel, Verdana, sans-serif" size="2">  2018-Oct-03 18:13:42  </font></td></tr>
+</tbody></table>
+</td></tr></tbody></table>
+<br/>
+<font color="#000000" face="Helvetica, Ariel, Verdana, sans-serif" size="2"><b>Additional Information</b></font><table bgcolor="#000000" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td><table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr bgcolor="#FFFFFF" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"> <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=moid')">Earth MOID</a> = 1.14419 au </font></td></tr>
+<tr bgcolor="#CCCCCC" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"> <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=moid_jup')">Jupiter MOID</a> = 2.38759 au </font></td></tr>
+<tr bgcolor="#FFFFFF" valign="middle"><td align="center"><font face="Helvetica, Ariel, Verdana, sans-serif" size="2"> <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=t_jup')">T_jup</a> = 3.471 </font></td></tr>
+</tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+</tbody></table>
+<a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=0;cov=1;log=0;cad=0#elem">[ show covariance matrix ]</a><br/>
+<br/>
+<table border="0" cellpadding="0" cellspacing="0" width="730"><tbody><tr bgcolor="#CCCCCC"><td align="center" nowrap="">[ <a href="https://ssd.jpl.nasa.gov/horizons.cgi?find_body=1&amp;body_group=sb&amp;sstr=23238"><font face="helvetica,ariel,sans-serif" size="-1">Ephemeris</font></a> | <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=1;cov=0;log=0;cad=0#orb"><font face="helvetica,ariel,sans-serif" size="-1">Orbit Diagram</font></a> | <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=0;cov=0;log=0;cad=0#elem"><font face="helvetica,ariel,sans-serif" size="-1">Orbital Elements</font></a> | <a href="https://ssd.jpl.nasa.gov/?mdesign_server&amp;des=23238"><font face="helvetica,ariel,sans-serif" size="-1">Mission Design</font></a> | <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=0;cov=0;log=0;cad=0#phys_par"><font face="helvetica,ariel,sans-serif" size="-1">Physical Parameters</font></a> | <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=0;cov=0;log=0;cad=0#discovery"><font face="helvetica,ariel,sans-serif" size="-1">Discovery Circumstances</font></a> ]</td></tr>
+</tbody></table>
+<br/>
+<a name="phys_par"></a><table bgcolor="#0099FF" border="0" cellpadding="3" cellspacing="0"><tbody><tr><td align="left"><font face="Ariel,Helvetica,sans-serif" size="2"><b>Physical Parameter Table</b></font><br/>
+<table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="0"><tbody><tr bgcolor="#EEEEEE">
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2"><b>Parameter</b></font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2"><b>Symbol</b></font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2"><b>Value</b></font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2"><b>Units</b></font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2"><b>Sigma</b></font></td>
+<td align="left" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2"><b>Reference</b></font></td>
+<td align="left" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2"><b>Notes</b></font></td>
+</tr>
+<tr>
+<td align="left" nowrap=""><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=H')"><font face="Ariel,Helvetica,sans-serif" size="2">absolute magnitude</font></a></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">H</font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">14.7</font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2"> </font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">n/a</font></td>
+<td align="left" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">MPO431770</font></td>
+<td align="left" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2"> </font></td>
+</tr>
+<tr>
+<td align="left" nowrap=""><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=diameter')"><font face="Ariel,Helvetica,sans-serif" size="2">diameter</font></a></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">diameter</font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">2.322</font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">km</font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">0.635</font></td>
+<td align="left" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">urn:nasa:pds:neowise_diameters_albedos::2.0[mainbelt] (http://adsabs.harvard.edu/abs/2011ApJ...741...68M)</font></td>
+<td align="left" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2"> </font></td>
+</tr>
+<tr>
+<td align="left" nowrap=""><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/javascript: popUpHelp('sbdb_help.cgi?name=albedo')"><font face="Ariel,Helvetica,sans-serif" size="2">geometric albedo</font></a></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">albedo</font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">0.156</font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2"> </font></td>
+<td align="center" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">0.072</font></td>
+<td align="left" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2">urn:nasa:pds:neowise_diameters_albedos::2.0[mainbelt] (http://adsabs.harvard.edu/abs/2011ApJ...741...68M)</font></td>
+<td align="left" nowrap=""><font face="Ariel,Helvetica,sans-serif" size="2"> </font></td>
+</tr>
+</tbody></table>
+</td></tr></tbody></table>
+<a name="discovery"></a><br/>
+<table bgcolor="#0099FF" border="0" cellpadding="4" cellspacing="0"><tbody><tr><td align="center"><table bgcolor="#FFFFFF" border="0" cellpadding="2" cellspacing="0"><tbody><tr valign="top"><td align="left" nowrap=""><b>23238 Ocasio-Cortez</b>          </td> <td align="left" width="100%"><font face="verdana,helvetica,ariel" size="-1">Discovered 2000 Nov. 20 by the Lincoln Laboratory Near-Earth Asteroid Research Team in Socorro.</font></td></tr>
+<tr><td align="left" colspan="2"><font face="verdana,helvetica,ariel" size="-1">Alexandria Ocasio-Cortez (b. 1989) was awarded second place in the 2007 Intel International Science and Engineering Fair for her microbiology project.  She attends the Yorktown High School, Yorktown Heights, New York, U.S.A.</font></td></tr>
+<tr bgcolor="#0099FF"><td align="left" colspan="2"><font face="helvetica,ariel" size="-2">NOTE: some special characters may not display properly (any characters within {} are an attempt to place the proper accent above a character)</font></td></tr>
+<tr bgcolor="#0099FF"><td align="left" nowrap=""><font face="helvetica,ariel" size="-1"><b>Reference:</b> 20070828/MPCPages.arc</font></td><td align="right" nowrap="" width="100%"><font face="helvetica,ariel" size="-1"><b>Last Updated:</b> 2007-08-30</font></td></tr>
+</tbody></table></td></tr></tbody></table>
+<br/>
+<table bgcolor="#0099FF" border="0" cellpadding="3" cellspacing="0"><tbody><tr><td align="center"><font face="Ariel,Helvetica,sans-serif" size="2"><b>Alternate Designations</b></font><br/>
+<table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="0"><tbody><tr><td nowrap=""><font face="times,serif" size="2"> <b>2000 WU111</b> = 1992 UB9 </font></td></tr></tbody></table></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="730"><tbody><tr bgcolor="#CCCCCC"><td align="center" nowrap="">[ <a href="https://ssd.jpl.nasa.gov/horizons.cgi?find_body=1&amp;body_group=sb&amp;sstr=23238"><font face="helvetica,ariel,sans-serif" size="-1">Ephemeris</font></a> | <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=1;cov=0;log=0;cad=0#orb"><font face="helvetica,ariel,sans-serif" size="-1">Orbit Diagram</font></a> | <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=0;cov=0;log=0;cad=0#elem"><font face="helvetica,ariel,sans-serif" size="-1">Orbital Elements</font></a> | <a href="https://ssd.jpl.nasa.gov/?mdesign_server&amp;des=23238"><font face="helvetica,ariel,sans-serif" size="-1">Mission Design</font></a> | <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=0;cov=0;log=0;cad=0#phys_par"><font face="helvetica,ariel,sans-serif" size="-1">Physical Parameters</font></a> | <a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238;old=0;orb=0;cov=0;log=0;cad=0#discovery"><font face="helvetica,ariel,sans-serif" size="-1">Discovery Circumstances</font></a> ]</td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td align="center"><img alt="" height="10" src="https://ssd.jpl.nasa.gov/images/blank.gif"/></td></tr>
+<tr><td>
+<table bgcolor="#666666" border="0" cellpadding="0" cellspacing="0" width="730">
+<tbody><tr align="center">
+<td><a href="https://ssd.jpl.nasa.gov/?about" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('about','','images/nav/about_on.gif',1)"><img alt="ABOUT SSD" border="0" name="about" src="https://ssd.jpl.nasa.gov/images/nav/about_off.gif"/></a></td>
+<td bgcolor="#CCCCCC" width="1"><img alt="" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="1"/></td>
+<td><a href="https://ssd.jpl.nasa.gov/?credits" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('credits','','images/nav/credits_on.gif',1)"><img alt="CREDITS/AWARDS" border="0" name="credits" src="https://ssd.jpl.nasa.gov/images/nav/credits_off.gif"/></a></td>
+<td bgcolor="#CCCCCC" width="1"><img alt="" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="1"/></td>
+<td><a href="http://www.jpl.nasa.gov/copyrights.cfm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('copyright','','images/nav/copyright_on.gif',1)"><img alt="PRIVACY/COPYRIGHT" border="0" name="copyright" src="https://ssd.jpl.nasa.gov/images/nav/copyright_off.gif"/></a></td>
+<td bgcolor="#CCCCCC" width="1"><img alt="" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="1"/></td>
+<td><a href="https://ssd.jpl.nasa.gov/?glossary" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('glossary','','images/nav/glossary_on.gif',1)"><img alt="GLOSSARY" border="0" name="glossary" src="https://ssd.jpl.nasa.gov/images/nav/glossary_off.gif"/></a></td>
+<td bgcolor="#CCCCCC" width="1"><img alt="" src="https://ssd.jpl.nasa.gov/images/blank.gif" width="1"/></td>
+<td><a href="https://ssd.jpl.nasa.gov/?links" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('links','','images/nav/links_on.gif',1)"><img alt="LINKS" border="0" name="links" src="https://ssd.jpl.nasa.gov/images/nav/links_off.gif"/></a></td>
+</tr>
+</tbody></table>
+<!--
+      <table border="0" cellpadding="0" cellspacing="0" width="730">
+        <tr>
+          <td align="center" width="100%" bgcolor="#666666">
+            <div class="navtext">SSD STANDARD NAVIGATION FOOTER</div>
+          </td>
+        </tr>
+      </table>
+-->
+</td></tr>
+<tr><td><img alt="" height="2" src="https://ssd.jpl.nasa.gov/images/blank.gif"/></td></tr>
+<tr>
+<td align="left" bgcolor="#FFFFFF" width="100%">
+<table bgcolor="#CCCCCC" border="0" cellpadding="5" cellspacing="0" width="730">
+<tbody><tr>
+<td align="left" width="100%"><a href="http://www.firstgov.gov/" target="_blank"><img alt="FirstGov" border="0" height="39" src="https://ssd.jpl.nasa.gov/portal_images/footer_image1.gif" width="136"/></a></td>
+<td align="right" nowrap="">
+<font class="date_time">
+        
+        
+        2019-Jul-10 20:00 UT
+        <br/>(server date/time)  
+      </font>
+</td>
+<td width="61"><a href="https://www.nasa.gov/" target="_blank"><img alt="NASA Home Page" border="0" height="40" src="https://ssd.jpl.nasa.gov/portal_images/footer_image2.gif" width="61"/></a></td>
+<td align="right">
+<table border="0" cellpadding="0" cellspacing="0" class="author">
+<tbody><tr>
+<td align="right" nowrap="">Site Manager: </td>
+<td align="left" nowrap=""> Ryan S. Park</td>
+</tr>
+<tr>
+<td align="right" nowrap=""><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=23238/mailto:webmaster@ssd.jpl.nasa.gov">Webmaster</a>: </td>
+<td align="left" nowrap=""> Alan B. Chamberlin</td>
+</tr>
+<!--
+        <tr>
+          <td align="right" nowrap><font size="-2">&nbsp;</font></td>
+          <td align="left" nowrap><font size="-2">&nbsp;CL 97-0935</font></td>
+        </tr>
+        -->
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</body></html>

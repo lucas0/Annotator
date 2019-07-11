@@ -1,0 +1,1100 @@
+<html lang="en"><head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="always" name="referrer"/>
+<title>Herbert, Timothy</title>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>
+<link href="https://vivo.brown.edu/assets/application-5f23501f1d6c2f16f269cf38353d8af51a94da034dc2aa7f24b0d1dbf76b14d4.css" media="all" rel="stylesheet"/>
+<script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script src="https://vivo.brown.edu/assets/application-56d61108a9e8059efdf93dd0a73c4ff46390289a6cb79ebb6d3ae73b30acabe4.js"></script>
+<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script><style>.cke{visibility:hidden;}</style>
+<meta content="authenticity_token" name="csrf-param"/>
+<meta content="VzaEWHdm9dqgN04wd+lAAP0EEPqjdKtqne36Q332ZKtG5r2QEKft9Ly3fckt6rjQ2AF2l73qbx4zZllLp9rqng==" name="csrf-token"/>
+<link href="https://vivo.brown.edu/assets/favicon-2fa978a02e16ff74e349752a9cf8dfb85c131603fb1d28eff1d9de5ff43b51a4.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="https://vivo.brown.edu/individual/therbert/therbert.rdf" rel="alternate" type="application/rdf+xml"/>
+</head>
+<body class="no-logo fae">
+<header id="branding" role="banner">
+<div class="header">
+<div class="hgroup">
+<div class="container">
+<div class="row">
+<div class="site-logo col-lg-3 col-md-3 col-sm-3 hidden-xs logo-sm">
+<a href="http://brown.edu" target="_blank"><img alt="Brown University" src="https://vivo.brown.edu/assets/brown_logo_small-8a3f1be87d6663e832a915247e36f17ca50e35b2fc812251e0a20854e71e0fd9.png"/></a>
+</div>
+<div class="site-logo col-xs-3 visible-xs-block">
+<a href="http://brown.edu" target="_blank"><img alt="Brown University" src="https://vivo.brown.edu/assets/brown_logo_small-8a3f1be87d6663e832a915247e36f17ca50e35b2fc812251e0a20854e71e0fd9.png"/></a>
+</div>
+<div class="site-title col-lg-6 col-md-6 col-sm-6 hidden-xs">
+<h1>
+<a href="https://vivo.brown.edu/">Researchers@Brown</a>
+</h1>
+</div>
+<div class="site-title col-xs-6 visible-xs-block">
+<h1>
+<a href="https://vivo.brown.edu/">Researchers@Brown</a>
+</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script type="text/javascript">
+  var vivoId = "therbert";
+  var facultyId = "http://vivo.brown.edu/individual/therbert";
+  var showViz = false;
+  var hasCoauthors = true;
+  var hasCollaborators = false;
+  var rootUrl = "https://vivo.brown.edu/";
+</script>
+<script type="text/javascript">
+  var researcherTabs = ["tabOverview", "tabPublications", "tabResearch",
+    "tabBackground", "tabAffiliations", "tabTeaching"];
+
+  function publicationsShowAll() {
+    // show all publications
+    $(".pub-item").removeClass("hidden");
+    $(".btn-filter-pub").removeClass("active");
+    $("#btn-for_all").addClass("active");
+  }
+
+  function publicationsShowOnly(filter) {
+    // hide all publications except the ones that we want to filter
+    $(".pub-item").addClass("hidden");
+    $(".pub-type_" + filter).removeClass("hidden");
+    $(".btn-filter-pub").removeClass("active");
+    $("#btn-for_" + filter).addClass("active");
+  }
+
+  function isValidTab(name) {
+    var i;
+    for(i = 0; i < researcherTabs.length; i++) {
+      if (name == researcherTabs[i]) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function updateUrl(hash) {
+    if(history.replaceState) {
+      // reference http://stackoverflow.com/a/14690177/446681
+      history.replaceState(null, null, hash);
+    }
+  }
+
+  function getUrlParameter(param) {
+    var url = window.location.search.substring(1);
+    var params = url.split('&');
+    var i, tokens;
+    for (var i = 0; i < params.length; i++) {
+      tokens = params[i].split('=');
+      if (tokens[0] == param) {
+        return tokens[1];
+      }
+    }
+    return null;
+  }
+
+  function showTab(name) {
+    var i;
+    if (name == "tabAll") {
+      // show all tabs
+      for(i = 0; i < researcherTabs.length; i++) {
+        $("#" + researcherTabs[i]).removeClass("hidden");
+        $("#" + researcherTabs[i] + "Btn").removeClass("active");
+      }
+      $("#tabAllBtn").addClass("active");
+      updateUrl("#All")
+    } else {
+      if (isValidTab(name)) {
+        // hide all tabs
+        for(i = 0; i < researcherTabs.length; i++) {
+          $("#" + researcherTabs[i]).addClass("hidden");
+          $("#" + researcherTabs[i] + "Btn").removeClass("active");
+        }
+        // show the indicated tab
+        $("#" + name).removeClass("hidden");
+        $("#tabAllBtn").removeClass("active");
+        $("#" + name + "Btn").addClass("active");
+        if (name == "tabOverview") {
+          updateUrl("#");
+        } else {
+          updateUrl("#" + name.substring(3));
+        }
+      } else {
+        // invalid tab, do nothing.
+      }
+    }
+  }
+
+  $(document).ready(function() {
+    var tabId;
+    if(window.location.hash) {
+      // use the tab indicated in the URL
+      tabId = "tab" + window.location.hash.substring(1);
+      showTab(tabId);
+    }
+
+    if (showViz) {
+      if (hasCoauthors) {
+        $("#viz_coauthor").removeClass("hidden");
+      }
+      if (hasCollaborators) {
+        $("#viz_collab").removeClass("hidden");
+      }
+    }
+  });
+</script>
+<nav class="navbar navbar-default navbar-static-top navbar-inverse col-lg-3 col-lg-push-9 col-md-4 col-md-push-8 col-sm-4 col-sm-push-8" id="sticky-nav" role="navigation">
+<div class="container">
+<h1 class="sr-only">Search</h1>
+<div class="navbar-header">
+</div>
+<form action="/search" class="navbar-form navbar-right" method="GET">
+<div class="form-group">
+<span aria-live="polite" class="ui-helper-hidden-accessible" role="status"></span>
+<input accesskey="q" autocomplete="off" class="form-control query ui-autocomplete-input" id="query_top" name="q" placeholder="Find an expert..." title="Search query" type="text" value=""/>
+</div>
+<button class="btn btn-default sympl-search hidden-xs" type="submit">
+<span aria-hidden="true" class="glyphicon glyphicon-search" role="submit"></span>
+<span aria-only="true">Search</span>
+</button>
+<button class="btn btn-default btn-block sympl-search hidden-sm hidden-md hidden-lg" type="submit">
+<span aria-hidden="true" class="glyphicon glyphicon-search" role="submit"></span>
+<span aria-only="true">Search</span>
+</button>
+</form>
+</div>
+</nav>
+<div class="container profile">
+<div class="row person-content">
+<div class="container profile-page">
+<div class="row subnavbar">
+<div class="below-nav-links">
+<p>
+<span class="advanced-search"><a href="https://vivo.brown.edu/search/advanced?">Advanced search…</a></span>
+<span class="profile-login"><a href="https://vivo.brown.edu/manager">Manage your Profile</a></span>
+</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-12">
+<section class="vcard person" id="individual-intro" itemscope="" itemtype="http://schema.org/Person" role="region">
+<section class="share-contact" role="region">
+<div aria-hidden="true" id="photo-wrapper">
+<img alt="Faculty Picture" class="img-circle" src="https://vivo.brown.edu/profile-images/172/04/herbert_timothy.png" width="175"/>
+</div>
+<h2 class="hidden-sm hidden-md hidden-lg">
+          Timothy D Herbert
+      </h2>
+<div class="emailsContainer">
+<a href="https://vivo.brown.edu/display/therbert/mailto:Timothy_Herbert@brown.edu" title="Email Timothy_Herbert@brown.edu">
+<span aria-hidden="true" class="glyphicon glyphicon-envelope"></span>
+<span aria-hidden="true" class="sr-only">title="Email Timothy_Herbert@brown.edu</span>
+</a>
+</div>
+<div class="btn-group-vertical" id="tabButtons">
+<!-- On these links we use the `href` value to allow users to bookmark
+               these links, but use `onclick` to select tabs via JavaScript
+               rather than a full page reload. -->
+<a class="btn btn-default active" href="https://vivo.brown.edu/#Overview" id="tabOverviewBtn" onclick="javascript:showTab('tabOverview'); return false;" title="Overview">
+<span aria-hidden="true" class="glyphicon glyphicon-tag"></span>
+              Overview
+          </a>
+<a class="btn btn-default" href="https://vivo.brown.edu/#Publications" id="tabPublicationsBtn" onclick="javascript:showTab('tabPublications'); return false;" title="Publications">
+<span aria-hidden="true" class="glyphicon glyphicon-file"></span>
+                Publications
+            </a>
+<a class="btn btn-default" href="https://vivo.brown.edu/#Research" id="tabResearchBtn" onclick="javascript:showTab('tabResearch'); return false;" title="Research">
+<span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span>
+                Research
+            </a>
+<a class="btn btn-default" href="https://vivo.brown.edu/#Background" id="tabBackgroundBtn" onclick="javascript:showTab('tabBackground'); return false;" title="Background">
+<span aria-hidden="true" class="glyphicon glyphicon-education"></span>
+                Background
+            </a>
+<a class="btn btn-default" href="https://vivo.brown.edu/#Affiliations" id="tabAffiliationsBtn" onclick="javascript:showTab('tabAffiliations'); return false;" title="Affiliations">
+<span aria-hidden="true" class="glyphicon glyphicon-tower"></span>
+                Affiliations
+            </a>
+<a class="btn btn-default" href="https://vivo.brown.edu/#Teaching" id="tabTeachingBtn" onclick="javascript:showTab('tabTeaching'); return false;" title="Teaching">
+<span aria-hidden="true" class="glyphicon glyphicon-leaf"></span>
+                Teaching
+            </a>
+<a class="btn btn-default" href="https://vivo.brown.edu/#All" id="tabAllBtn" onclick="javascript:showTab('tabAll'); return false;" title="View All">
+<span aria-hidden="true" class="glyphicon glyphicon-globe"></span>
+                View All
+            </a>
+<a class="btn btn-default" href="http://vivo.brown.edu/docs/t/therbert_cv.pdf?dt=215110101" target="_blank" title="Curriculum Vitae">Curriculum Vitae [PDF]</a>
+</div>
+</section>
+</section>
+</div>
+<style>
+  .overview_textarea {
+    background-color:#F3F5B3;
+    width: 100%;
+  }
+  .delete_research_area:hover {
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    border:0!important; /* needed for the underline to be hidden */
+  }
+  .delete_item_link:hover {
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    border:0!important; /* needed for the underline to be hidden */
+  }
+
+  .modal_save_cancel_button:focus {
+    background-color:#5bc0de;
+    color: #fff;
+    border-color: #46b8da;
+    border: 1px solid transparent;
+    text-shadow: none;
+  }
+</style>
+<div class="modal fade" id="ontheweb_modal" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title">Website information</h4>
+</div>
+<div class="modal-body">
+<div>
+<span>Text: </span>
+<input id="ontheweb_modal_text" placeholder="Name of your site" style="width:90%;" type="text"/>
+</div>
+<div>
+<span>URL: </span>
+<input id="ontheweb_modal_url" placeholder="http://yoursite" style="width:90%;" type="text"/>
+<input class="hidden" id="ontheweb_modal_id" type="text"/>
+</div>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default pull-left modal_save_cancel_button" data-dismiss="modal" id="ontheweb_modal_save" title="Save your changes">Save</button>
+<button class="btn btn-default pull-left modal_save_cancel_button" data-dismiss="modal" id="ontheweb_modal_cancel" title="Cancel (don't save) your changes))">Cancel</button>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-9 col-sm-8 col-xs-12" id="section_overview">
+<h2 class="vcard foaf-person individual_overview hidden-xs">Timothy D Herbert</h2>
+<h3 class="individual_overview">Henry L. Doherty Professor of Oceanography, Professor of Earth, Environmental, and Planetary Sciences, Professor of Environmental Studies</h3>
+<div class="tabFinder" id="tabOverview">
+<h3>Overview</h3>
+<p></p><p>I received my B.S. in Geological Sciences from Yale College in 1980 (Magna Cum Laude), and my Ph.D. from Princeton University in Geological Sciences, in 1987. I have been recognized for my research in the area of Earth Systems History and paleoceanography which has earned me a leadership role in the paleoclimate community. My research has led to a better understanding of the history of global change. Within the University community, I have worked hard to develop strong links between the Department of Earth, Environmental and Planetary Sciences and Environmental Studies, the Institute at Brown for Environment and Society, and Ecology and Evolutionary Biology groups. I teach broad-reaching courses such as "Earth: Evolution of a Habitable Planet", "Ocean Biogeochemistry", and "The Enigma of Warm Climates in the Geological Record."</p><p></p>
+<h4 class="brown-affiliations panel-heading">Brown Affiliations</h4>
+<div class="brown-affiliations-list">
+<p>
+<img alt="Earth, Environmental, and Planetary Sciences logo" src="https://vivo.brown.edu/profile-images/448/6/banner-home.jpg" width="36"/>
+<a href="https://vivo.brown.edu/display/org-brown-univ-dept667">
+            Earth, Environmental, and Planetary Sciences
+          </a>
+</p>
+<p>
+<img alt="Institute at Brown for Environment and Society logo" src="https://vivo.brown.edu/profile-images/124/14/Greenhouse5.jpg" width="36"/>
+<a href="https://vivo.brown.edu/display/org-brown-univ-dept687">
+            Institute at Brown for Environment and Society
+          </a>
+</p>
+</div>
+<h4 class="research-areas panel-heading">Research Areas</h4>
+<div class="brown-research-areas-list" id="research-areas-list">
+<a href="https://vivo.brown.edu/search?fq=research_areas|alkenone+sea+surface+temperature" id="">
+            alkenone sea surface temperature
+          </a>
+             | 
+          <a href="https://vivo.brown.edu/search?fq=research_areas|carbon+cycle" id="">
+            carbon cycle
+          </a>
+             | 
+          <a href="https://vivo.brown.edu/search?fq=research_areas|marine+geology" id="">
+            marine geology
+          </a>
+             | 
+          <a href="https://vivo.brown.edu/search?fq=research_areas|Oceanography" id="">
+            Oceanography
+          </a>
+             | 
+          <a href="https://vivo.brown.edu/search?fq=research_areas|stratigraphy+and+sedimentation" id="">
+            stratigraphy and sedimentation
+          </a>
+             | 
+          <a href="https://vivo.brown.edu/search?fq=research_areas|time+series+analysis" id="">
+            time series analysis
+          </a>
+</div>
+<h4 class="research-areas panel-heading">On the Web</h4>
+<div class="brown-research-areas-list" id="on-the-web-list">
+<span id="http___vivo_brown_edu_individual_nd0f88350_b9fe_11e4_84a8_005056aa66a3">
+<img alt="Google scholar logo" src="https://vivo.brown.edu/assets/google_scholar_logo-5d8e7fbe3ed63118eb5f176eb793c4c61aadd094ab7ca807a39e1eb3fc480533.png" width="17"/>
+<a href="https://scholar.google.com/citations?user=MTpSGgMAAAAJ&amp;hl=en&amp;authuser=1" id="http___vivo_brown_edu_individual_nd0f88350_b9fe_11e4_84a8_005056aa66a3_link" target="_blank">google scholar</a>
+</span>
+<br/>
+</div>
+<br/><br/>
+</div>
+<div class="panel panel-default hidden" id="tabPublications">
+<h3 style="padding-bottom: 21px;">Publications
+      <a class="btn btn-default hidden" href="https://vivo.brown.edu/display/therbert/viz/coauthor" id="viz_coauthor" style="float:right;" target="_blank" title="Visualize coauthors network">Visualize it 
+        <i class="glyphicon glyphicon-signal" style="color:rgb(232, 217, 139);"></i>
+</a>
+</h3>
+<div class="panel-body">
+<div aria-label="filter contributor to by" class="btn-group" role="group">
+<button class="btn btn-default active btn-filter-pub" id="btn-for_all" onclick="javascript:publicationsShowAll()" type="button">View All (44)
+              </button>
+<button class="btn btn-default btn-filter-pub" id="btn-for__article" onclick="javascript:publicationsShowOnly('_article')" type="button"> Article (43)</button>
+<button class="btn btn-default btn-filter-pub" id="btn-for__no_i_d" onclick="javascript:publicationsShowOnly('_no_i_d')" type="button"> No I D (1)</button>
+</div>
+<table class="table table-hover">
+<tbody>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Herbert, Timothy D., Lawrence, Kira T., Tzanova, Alexandrina, Peterson, Laura Cleaveland, Caballero-Gill, Rocio, Kelly, Christopher S.</span>
+<i>Late Miocene global cooling and the rise of modern ecosystems.</i>
+                Nature Geoscience/Nature Geoscience. 2016; 9 (11) : 843-847. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1038/ngeo2813" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Bova, Samantha C., Herbert, Timothy D., Fox-Kemper, Baylor</span>
+<i>Rapid variations in deep ocean temperature detected in the Holocene.</i>
+                Geophysical Research Letters/Geophys. Res. Lett.. 2016; 43 (23) : 12,190-12,198. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1002/2016gl071450" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Tzanova, Alexandrina, Herbert, Timothy D., Peterson, Laura</span>
+<i>Cooling Mediterranean Sea surface temperatures during the Late Miocene provide a climate context for evolutionary transitions in Africa and Eurasia.</i>
+                Earth and Planetary Science Letters. 2015; 419 : 71-80. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.epsl.2015.03.016" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Herbert, Timothy D., Ng, Gideon, Cleaveland Peterson, Laura</span>
+<i>Evolution of Mediterranean sea surface temperatures 3.5–1.5 Ma: Regional and hemispheric influences.</i>
+                Earth and Planetary Science Letters. 2015; 409 : 307-318. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.epsl.2014.10.006" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Bova, Samantha C., Herbert, Timothy, Rosenthal, Yair, Kalansky, Julie, Altabet, Mark, Chazen, Caitlin, Mojarro, Angel, Zech, Jana</span>
+<i> Links between eastern equatorial Pacific stratification and atmospheric CO 2 rise during the last deglaciation .</i>
+                Paleoceanography. 2015; 30 (11) : 1407-1424. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1002/2015pa002816" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Tzanova, Alexandrina, Herbert, Timothy D.</span>
+<i>Regional and global significance of Pliocene sea surface temperatures from the Gulf of Cadiz (Site U1387) and the Mediterranean.</i>
+                Global and Planetary Change. 2015; 133 : 371-377. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.gloplacha.2015.07.001" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Kalansky, Julie, Rosenthal, Yair, Herbert, Timothy, Bova, Samantha, Altabet, Mark</span>
+<i>Southern Ocean contributions to the Eastern Equatorial Pacific heat content during the Holocene.</i>
+                Earth and Planetary Science Letters. 2015; 424 : 158-167. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.epsl.2015.05.013" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__no_i_d">
+<span class="listDateTime">Herbert, T.D.</span>
+<i>Alkenone Paleotemperature Determinations.</i>
+                2014; v. 8 : p. 399-433. 
+                <div class="no-orphans">
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Thomas, E. K., Clemens, S. C., Prell, W. L., Herbert, T. D., Huang, Y., Liu, Z., Sinninghe Damste, J. S., Sun, Y., Wen, X.</span>
+<i>Temperature and leaf wax  2H records demonstrate seasonal and regional controls on Asian monsoon proxies.</i>
+                Geology. 2014; 42 (12) : 1075-1078. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1130/g36289.1" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Venti, Nicholas L., Billups, Katharina, Herbert, Timothy D.</span>
+<i>Increased sensitivity of the Plio-Pleistocene northwest Pacific to obliquity forcing.</i>
+                Earth and Planetary Science Letters. 2013; 384 : 121-131. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.epsl.2013.10.007" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Lawrence, K. T., Sigman, D. M., Herbert, T. D., Riihimaki, C. A., Bolton, C. T., Martinez-Garcia, A., Rosell-Mele, A., Haug, G. H.</span>
+<i>Time-transgressive North Atlantic productivity changes upon Northern Hemisphere glaciation.</i>
+                Paleoceanography. 2013; 28 (4) : 740-751. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1002/2013pa002546" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Kienast, M., MacIntyre, G., Dubois, N., Higginson, S., Normandeau, C., Chazen, C., Herbert, T. D.</span>
+<i>Alkenone unsaturation in surface sediments from the eastern equatorial Pacific: Implications for SST reconstructions.</i>
+                Paleoceanography. 2012; 27 (1) : n/a-n/a. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2011pa002254" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Lyle, M., L. Heusser, C. Ravelo, M. Yamamoto, J. Barron, N. Diffenbaugh, T. Herbert,
+and D. Andreasen</span>
+<i>Out of the tropics: The Pacific, Great Basin Lakes, and Late
+Pleistocene Water Cycle in the Western US.</i>
+                Science. 2012; 337 : 1629-1633. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1126/science.1218390" target="_blank">Full Text</a>
+<a class="pub-item-tag full-text-link" href="http://www.ncbi.nlm.nih.gov/pubmed/?term=23019644" target="_blank">PubMed</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Bolton, Clara T., Lawrence, Kira T., Gibbs, Samantha J., Wilson, Paul A., Herbert, Timothy D.</span>
+<i>Biotic and geochemical evidence for a global latitudinal shift in ocean biogeochemistry and export productivity during the late Pliocene.</i>
+                Earth and Planetary Science Letters. 2011; 308 (1-2) : 200-210. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.epsl.2011.05.046" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Dubois, Nathalie, Kienast, Markus, Kienast, Stephanie, Normandeau, Claire, Calvert, Stephen E., Herbert, Timothy D., Mix, Alan</span>
+<i>Millennial-scale variations in hydrography and biogeochemistry in the Eastern Equatorial Pacific over the last 100 kyr.</i>
+                Quaternary Science Reviews. 2011; 30 (1-2) : 210-223. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.quascirev.2010.10.012" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Huang, C., Hinnov, L., Fischer, A. G., Grippo, A., Herbert, T.</span>
+<i>Astronomical tuning of the Aptian Stage from Italian reference sections.</i>
+                Geology. 2010; 38 (10) : 899-902. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1130/g31177.1" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Bolton, Clara T., Lawrence, Kira T., Gibbs, Samantha J., Wilson, Paul A., Cleaveland, Laura C., Herbert, Timothy D.</span>
+<i>Glacial–interglacial productivity changes recorded by alkenones and microfossils in late Pliocene eastern equatorial Pacific and Atlantic upwelling zones.</i>
+                Earth and Planetary Science Letters. 2010; 295 (3-4) : 401-411. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.epsl.2010.04.014" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Herguera, J.C., Herbert, T., Kashgarian, M., Charles, C.</span>
+<i>Intermediate and deep water mass distribution in the Pacific during the Last Glacial Maximum inferred from oxygen and carbon stable isotopes.</i>
+                Quaternary Science Reviews. 2010; 29 (9-10) : 1228-1245. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.quascirev.2010.02.009" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Caissie, Beth E., Brigham-Grette, Julie, Lawrence, Kira T., Herbert, Timothy D., Cook, Mea S.</span>
+<i>Last Glacial Maximum to Holocene sea surface conditions at Umnak Plateau, Bering Sea, as inferred from diatom, alkenone, and stable isotope records.</i>
+                Paleoceanography. 2010; 25 (1) 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2008pa001671" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Malinverno, A., Erba, E., Herbert, T. D.</span>
+<i>Orbital tuning as an inverse problem: Chronology of the early Aptian oceanic anoxic event 1a (Selli Level) in the Cismon APTICORE.</i>
+                Paleoceanography. 2010; 25 (2) 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2009pa001769" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Miller, G.H., Brigham-Grette, J., Alley, R.B., Anderson, L., Bauch, H.A., Douglas, M.S.V., Edwards, M.E., Elias, S.A., Finney, B.P., Fitzpatrick, J.J., Funder, S.V., Herbert, T.D., Hinzman, L.D., Kaufman, D.S., MacDonald, G.M., Polyak, L., Robock, A., Serreze, M.C., Smol, J.P., Spielhagen, R., White, J.W.C., Wolfe, A.P., Wolff, E.W.</span>
+<i>Temperature and precipitation history of the Arctic.</i>
+                Quaternary Science Reviews. 2010; 29 (15-16) : 1679-1715. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.quascirev.2010.03.001" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Herbert TD, Peterson LC, Lawrence KT, Liu Z</span>
+<i>Tropical ocean temperatures over the past 3.5 million years..</i>
+                Science. 2010; 328 (5985) : 1530-4. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1126/science.1185435" target="_blank">Full Text</a>
+<a class="pub-item-tag full-text-link" href="http://www.ncbi.nlm.nih.gov/pubmed/?term=20558711" target="_blank">PubMed</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Chazen, Caitlin R., Altabet, Mark A., Herbert, Timothy D.</span>
+<i>Abrupt mid-Holocene onset of centennial-scale climate variability on the Peru-Chile Margin.</i>
+                Geophys. Res. Lett.. 2009; 36 (18) 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2009gl039749" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Ruggieri, Eric, Herbert, Tim, Lawrence, Kira T., Lawrence, Charles E.</span>
+<i> Change point method for detecting regime shifts in paleoclimatic time series: Application to δ 18 O time series of the Plio-Pleistocene .</i>
+                Paleoceanography. 2009; 24 (1) : n/a-n/a. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2007pa001568" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Dubois, Nathalie, Kienast, Markus, Normandeau, Claire, Herbert, Timothy D.</span>
+<i>Eastern equatorial Pacific cold tongue during the Last Glacial Maximum as seen from alkenone paleothermometry.</i>
+                Paleoceanography. 2009; 24 (4) : n/a-n/a. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2009pa001781" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Brierley CM, Fedorov AV, Liu Z, Herbert TD, Lawrence KT, Lariviere JP</span>
+<i>Greatly expanded tropical warm pool and weakened Hadley circulation in the early Pliocene..</i>
+                Science. 2009; 323 (5922) : 1714-8. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1126/science.1167625" target="_blank">Full Text</a>
+<a class="pub-item-tag full-text-link" href="http://www.ncbi.nlm.nih.gov/pubmed/?term=19251592" target="_blank">PubMed</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Lawrence, Kira T., Herbert, Timothy D., Brown, Catherine M., Raymo, Maureen E., Haywood, Alan M.</span>
+<i>High-amplitude variations in North Atlantic sea surface temperature during the early Pliocene warm period.</i>
+                Paleoceanography. 2009; 24 (2) : n/a-n/a. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2008pa001669" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Cleaveland, L. C., Herbert, T. D.</span>
+<i>Preservation of the alkenone paleotemperature proxy in uplifted marine sequences: A test from the Vrica outcrop, Crotone, Italy.</i>
+                Geology. 2009; 37 (2) : 179-182. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1130/g25148a.1" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Liu, Zhonghui, Cleaveland, Laura C., Herbert, Timothy D.</span>
+<i>Early onset and origin of 100-kyr cycles in Pleistocene tropical SST records.</i>
+                Earth and Planetary Science Letters. 2008; 265 (3-4) : 703-715. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.epsl.2007.11.016" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Liu, Zhonghui, Altabet, Mark A., Herbert, Timothy D.</span>
+<i>Plio-Pleistocene denitrification in the eastern tropical North Pacific: Intensification at 2.1 Ma.</i>
+                Geochemistry, Geophysics, Geosystems. 2008; 9 (11) : n/a-n/a. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2008gc002044" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Agnihotri, Rajesh, Altabet, Mark A., Herbert, Timothy D., Tierney, Jessica E.</span>
+<i>Subdecadally resolved paleoceanography of the Peru margin during the last two millennia.</i>
+                Geochemistry, Geophysics, Geosystems. 2008; 9 (5) : n/a-n/a. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2007gc001744" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Li, Yong-Xiang, Bralower, Timothy J., Montañez, Isabel P., Osleger, David A., Arthur, Michael A., Bice, David M., Herbert, Timothy D., Erba, Elisabetta, Premoli Silva, Isabella</span>
+<i>Toward an orbital chronology for the early Aptian Oceanic Anoxic Event (OAE1a, ~120 Ma).</i>
+                Earth and Planetary Science Letters. 2008; 271 (1-4) : 88-100. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.epsl.2008.03.055" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">D'Andrea, William J., Liu, Zhonghui, Alexandre, Marcelo Da Rosa, Wattley, Sarah, Herbert, Timothy D., Huang, Yongsong</span>
+<i>An Efficient Method for Isolating Individual Long-Chain Alkenones for Compound-Specific Hydrogen Isotope Analysis.</i>
+                Analytical Chemistry. 2007; 79 (9) : 3430-5. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1021/ac062067w" target="_blank">Full Text</a>
+<a class="pub-item-tag full-text-link" href="http://www.ncbi.nlm.nih.gov/pubmed/?term=17391004" target="_blank">PubMed</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Lisiecki, Lorraine E., Herbert, Timothy D.</span>
+<i>Automated composite depth scale construction and estimates of sediment core extension.</i>
+                Paleoceanography. 2007; 22 (4) : n/a-n/a. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2006pa001401" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Cleaveland, Laura C., Herbert, Timothy D.</span>
+<i>Coherent obliquity band and heterogeneous precession band responses in early Pleistocene tropical sea surface temperatures.</i>
+                Paleoceanography. 2007; 22 (2) : n/a-n/a. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2006pa001370" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Lawrence KT, Liu Z, Herbert TD</span>
+<i>Evolution of the eastern tropical Pacific through Plio-Pleistocene glaciation..</i>
+                Science. 2006; 312 (5770) : 79-83. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1126/science.1120395" target="_blank">Full Text</a>
+<a class="pub-item-tag full-text-link" href="http://www.ncbi.nlm.nih.gov/pubmed/?term=16601186" target="_blank">PubMed</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Agnihotri, Rajesh, Altabet, Mark A., Herbert, T. D.</span>
+<i> Influence of marine denitrification on atmospheric N 2 O variability during the Holocene .</i>
+                Geophys. Res. Lett.. 2006; 33 (13) 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2006gl025864" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Liu, Zhonghui, Altabet, Mark A., Herbert, Timothy D.</span>
+<i>Glacial-interglacial modulation of eastern tropical North Pacific denitrification over the last 1.8-Myr.</i>
+                Geophys. Res. Lett.. 2005; 32 (23) 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2005gl024439" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Lawrence, K.T., Herbert, T.D.</span>
+<i>Late Quaternary sea-surface temperatures in the western Coral Sea: Implications for the growth of the Australian Great Barrier Reef.</i>
+                Geology. 2005; 33 (8) : 677. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1130/g21595.1" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Higginson, Matthew J., Altabet, Mark A., Wincze, Lauren, Herbert, Timothy D., Murray, David W.</span>
+<i>A solar (irradiance) trigger for millennial-scale abrupt changes in the southwest monsoon?.</i>
+                Paleoceanography. 2004; 19 (3) : n/a-n/a. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1029/2004pa001031" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Higginson, Matthew J., Altabet, Mark A., Murray, David W., Murray, Richard W., Herbert, Timothy D.</span>
+<i>Geochemical evidence for abrupt changes in relative strength of the Arabian monsoons during a stadial/interstadial climate transition.</i>
+                Geochimica et Cosmochimica Acta. 2004; 68 (19) : 3807-3826. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1016/j.gca.2004.03.015" target="_blank">Full Text</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Liu Z, Herbert TD</span>
+<i>High-latitude influence on the eastern equatorial Pacific climate in the early Pleistocene epoch..</i>
+                J. Geophys. Res.. 2004; 427 (6976) : 720-3. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1038/nature02338" target="_blank">Full Text</a>
+<a class="pub-item-tag full-text-link" href="http://www.ncbi.nlm.nih.gov/pubmed/?term=14973481" target="_blank">PubMed</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Herbert TD, Schuffert JD, Andreasen D, Heusser L, Lyle M, Mix A, Ravelo AC, Stott LD, Herguera JC</span>
+<i>Collapse of the California Current during glacial maxima linked to climate change on land..</i>
+                Science. 2001; 293 (5527) : 71-6. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1126/science.1059290" target="_blank">Full Text</a>
+<a class="pub-item-tag full-text-link" href="http://www.ncbi.nlm.nih.gov/pubmed/?term=11441174" target="_blank">PubMed</a>
+</div>
+</td>
+</tr>
+<tr class="publicationTableRow" role="listitem">
+<td class="citation-data pub-item pub-type__article">
+<span class="listDateTime">Herbert TD</span>
+<i>A long marine history of carbon cycle modulation by orbital-climatic changes..</i>
+                Proceedings of the National Academy of Sciences. 1997; 94 (16) : 8362-9. 
+                <div class="no-orphans">
+<a class="pub-item-tag full-text-link" href="https://doi.org/10.1073/pnas.94.16.8362" target="_blank">Full Text</a>
+<a class="pub-item-tag full-text-link" href="http://www.ncbi.nlm.nih.gov/pubmed/?term=11607746" target="_blank">PubMed</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="panel panel-default hidden" id="tabResearch">
+<h3>Research</h3>
+<div class="panel-heading">
+<h4 class="panel-title" id="relatedBy-Authorship" title="">Research Overview</h4>
+</div>
+<div class="panel-body">
+<div class="property-list" displaylimit="5" id="relatedBy-Authorship-List" role="list">
+      Understanding how the earth's climatic system, particularly the ocean, adjusts itself to perturbation on various timescales drives most aspects of my research. My recent projects include application of alkenone paleotemperature determinations to reconstructing El Nino conditions in the eastern Pacific, and to understanding drivers of Plio-Pleistocene climate change.  I also work on developing  new tools to scan sediment cores non-destructively, and applying orbital stratigraphy to solve problems in earth history over Cenozoic and Mesozoic time.
+    </div>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title" id="relatedBy-Authorship" title="">Research Statement</h4>
+</div>
+<div class="panel-body">
+<div class="property-list" displaylimit="5" id="relatedBy-Authorship-List" role="list">
+      Most of my current research centers on reconstructing two vital aspects of the past surface ocean: the distribution of temperatures and patterns of biological production. The ocean holds nearly all the heat at the surface of our planet, and therefore plays a crucial role in determining past global and regional temperatures. In addition, conditions in the ocean drive the cycle of water vapor in the atmosphere, and this cycle very much depends on ocean surface temperatures. The surface ocean also exchanges large quantities of CO <sub> 2 </sub> with the atmosphere. The net transfer of carbon into or out of the atmosphere depends on both the surface temperature of the ocean and on carbon synthesis in the upper ocean by plankton. Plankton activity in turn responds in a complex way to climate change; we do not yet understand how these feedbacks work between global climate, carbon cycle changes, and paleoecological changes in the ocean.<br/>
+<br/>
+Some of the exciting areas that my group is now investigating include high-resolution oceanographic reconstructions (decadal to century-scale) in the El Nino-dominated regions off the Peru and California coasts, and the evolution high and low latitude climate linkages as the Earth has moved from a warm state in the late Miocene (~14 Ma) to its present heavily glaciated state.<br/>
+<br/>
+The principal tools for my work include:
+<ul><br/>
+<li>Alkenone paleotemperature determinations</li>
+<br/>
+<li>Alkenone and other biomarker determinations for estimating past ocean productivity</li>
+<br/>
+<li>Sediment Nitrogen isotope analyses for estimating the past intensity of oceanic anoxic zones (in collaboration with Mark Altabet, UMass Dartmouth)</li>
+<br/>
+<li>Oxygen isotope stratigraphy</li>
+<br/>
+<li>Non-destructive methods of sediment core analysis</li>
+<br/>
+<li>Time series analysis for extracting cyclic patterns from sediment data in order to develop paleoclimatic models</li>
+<br/>
+<br/>
+	 
+</ul>
+</div>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title" id="relatedBy-Authorship" title="">Funded Research</h4>
+</div>
+<div class="panel-body">
+<div class="property-list" displaylimit="5" id="relatedBy-Authorship-List" role="list">
+<p><strong>Recent Funding:</strong></p>
+<p>National Science Foundation, "DUST PIRE: Dust stimulated drawdown of atmospheric CO<sub>2</sub> as a trigger for Northern Hemisphere Glaciation "</p>
+<p>National Science Foundation, “A New View of Pliocene Glaciations”</p>
+<p>National Science Foundation, "Collaborative Research: High resolution<br/>
+paleoceanography in the heart of the Equatorial Pacific Cold Tongue",<br/>
+<br/>
+National Science Foundation, "SGER: Coring in the Eastern Equatorial Pacific to Obtain Long Climate Records".</p>
+<p>Rhode Island Research Alliance,  “Understanding Coastal Environmental Change, Past, Present and Future: A Novel Approach Combining Algal Physiology, Genetics and Lipid Biomarkers”, P.I. Herbert , Co-PI(s) Amaral-Zettler (MBL), and Rynearson (U.R.I. )</p>
+Petroleum Research Fund of the American Chemical Society "Preservation of Biomarker Environmental Proxies in Uplifted Marine Sections: a Test from the Mediterranean Region".<br/>
+<br/>
+National Science Foundation Educational Division, "GK-12: Physical Processes in the Environment".<br/>
+<br/>
+National Science Foundation, "Collaborative Research: High Latitude Temperature and Biological Responses to Plio-Pleistocene Global Change".<br/>
+<br/>
+National Science Foundation, "SGER: The Deuterium-Hydrogen Ratio in Alkenones as a Proxy for the Paleo-hydrological Cycle".<br/>
+<br/>
+National Science Foundation, "A polar signal dominating the tropical oceans, 1.2-1.8 Ma?".
+    </div>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title" id="relatedBy-Authorship" title="">Scholarly Work</h4>
+</div>
+<div class="panel-body">
+<div class="property-list" displaylimit="5" id="relatedBy-Authorship-List" role="list">
+<p>Herbert, T.D., *G. Ng, and *L.C. Peterson, 2015, Evolution of Mediterranean sea surface temperatures 3.5-1.5 ma: regional and hemispheric influences, <em>Earth &amp; Planetary Science Letters</em>.</p>
+<p>Herbert, T.D., 2014, Alkenone Paleotemperature Determinations,  chapter, in <u>The Oceans and Marine Geochemistry:Treatise in</u> <u>Marine Geochemistry v. 8</u>, H. D. Holland and K. Turekian (eds.), Elsevier, p. 399-433.</p>
+<p>*Thomas E. K., S.C. Clemens, W. L. Prell, T. D. Herbert, Y. Huang, Z. Liu, J. S. Sinninghe Damsté, Y. Sun,  and X. Wen,  2014, Temperature and leaf wax δ2H demonstrate the importance of seasonality in interpreting Asian monsoon proxies, <em>Geology</em>. </p>
+<p>*Tzanova, A., T.D. Herbert, and* L.C. Peterson, Cooling Mediterranean Sea Surface Temperatures during the Late Miocene provide a climate context for evolutionary transitions in Africa and Eurasian flora and fauna, <em>Earth &amp; Planetary Science Letters</em>, accepted. </p>
+<p>*Lawrence, Kira T., Daniel M. Sigman, Timothy D. Herbert, Catherine A. Riihimaki, Clara T. Bolton, Alfredo Martinez-Garcia, Antoni Rosell-Mele, and Gerald H. Haug, 2013, Time-transgressive North Atlantic productivity changes upon Northern Hemisphere glaciation, <em>Paleoceanography</em>, <em>28</em>, 2013PA002546.</p>
+<p>Venti, N. L., K. Billups, and T.D. Herbert, Increased sensitivity of the Plio-Pleistocene northwest Pacific to obliquity forcing, 2013, <em>Earth and Planetary Science Letters </em>384: 121-131<em>.</em></p>
+<p>Lyle, M., L. Heusser, C. Ravelo, M. Yamamoto, J. Barron, N. Diffenbaugh, T. Herbert, and D. Andreasen, 2012, Out of the tropics: The Pacific, Great Basin Lakes, and Late Pleistocene Water Cycle in the Western US, <em>Science </em>337: 1629-1633<em>.</em></p>
+<p>Kienast,  M., G. MacIntyre,  N. Dubois,  S. Higginson, C. Normandeau, *C. Chazen, and T.D. Herbert, 2012, Alkenone unsaturation in surface sediments from the eastern equatorial Pacific: Implications for SST reconstructions, <em>Paleoceanography</em> 27, PA1210, doi:10.1029/2011PA002254.</p>
+<p>*S. Hollen, *J. L. Toney, D. Bisaccio, K. Haberstroh, and T. Herbert, 2011, The case of lobster shell disease: Incorporating science standards into problem-based learning modules, <em>Science and Children</em> <strong>48</strong>:,</p>
+<p> C. T. Bolton, *K.T. Lawrence, S.J. Gibbs, P.A. Wilson <sup> </sup>&amp; T.D. Herbert, 2011, Biotic and geochemical evidence for a latitudinal shift in export productivity during the late Pliocene, <em>Earth and Planetary Science Letters</em> <strong>308</strong>: 200-210.</p>
+<p>Dubois, N., M. Kienast, S. Kienast, C. Normandeau, S.E. Calvert, T. D. Herbert, A. Mix, 2011, Millennial-scale variations in hydrography and biogeochemistry in the Eastern  Equatorial Paciﬁc over the last 100 kyr, <em>Quaternary Sci. Rev</em>. <strong>30</strong>: 210-223.</p>
+<p>Huang, C., L. Hinnov, A.G. Fischer, A. Grippo, and T.D. Herbert,  2010, Astronomical tuning of the Aptian Stage based on Italian reference sections, <em>Geology</em>, <strong>38</strong>, 899-202.<em>.</em></p>
+<p>Herbert, T.D., *L.C. Peterson, *K.T. Lawrence, and *Z. Liu, 2010, Tropical ocean temperatures over the past 3.5 Myr, <em>Science,</em> <strong>328, </strong> 1530 – 1534.</p>
+<p>G. H. Miller, J. Brigham-Grette, R.B. Alley, L. Anderson, H. A. Bauch, M. Douglas, M. E. Edwards, S. A. Elias, B. Finney, J.J. Fitzpatrick, S.V. Funder, T. D. Herbert, L. Hinzman, D. Kaufman, G.M. MacDonald, L. Polyak, A. Robock, M. Serreze, J. Smol, R. Spielhagen,, J.W.C. White, A.P. Wolfe, E. Wolff, 2010, Temperature and Precipitation History of the Arctic, <em>Quaternary Science Reviews</em>, <strong>29</strong>: 1679-1715.</p>
+<p>Herguera J. C., T. Herbert, M. Kashgarian, and C. Charles, 2010, <a href="http://apps.webofknowledge.com/full_record.do?product=WOS&amp;search_mode=GeneralSearch&amp;qid=2&amp;SID=1B3bfoH2fnK4H1flke6&amp;page=1&amp;doc=2">Intermediate and deep water mass distribution in the Pacific during the Last Glacial Maximum inferred from oxygen and carbon stable isotopes </a><em>Quaternary Science Reviews</em>, <strong>29</strong>,1228-1245.</p>
+<p>Bolton, C.T., *K.T. Lawrence, S.J. Gibbs, P.A. Wilson , L.C. Cleaveland,  and T.D. Herbert, Productivity of the late Pliocene eastern equatorial Pacific and Atlantic Oceans, 2010, <em>Earth &amp; Planetary Science Letters</em> <strong>295</strong>, 401-411. <a href="http://dx.doi.org/10.1016/j.epsl.2010.04.014">doi:10.1016/j.epsl.2010.04.014</a></p>
+<p>Caissie, B. E., J. Brigham-Grette, *K. T. Lawrence, T. D. Herbert, and M. S. Cook, 2010, Last Glacial Maximum to Holocene sea surface conditions at Umnak Plateau, Bering Sea, as inferred from diatom, alkenone, and stable isotope records, <em>Paleoceanography</em>, <strong>25</strong>, PA1206, doi:10.1029/2008PA001671.</p>
+<p>Malinverno, A., E. Erba, and T.D. Herbert, 2010, Orbital tuning as an inverse problem: Chronology of the early Aptian Oceanic Anoxic Event 1a (Selli Level) in the Cismon APTICORE<em>, Paleoceanography</em>, <strong>25</strong>, doi:10.1029/2009PA001669.</p>
+<p>N. Dubois, M. Kienast, C. Normandeau, and T. D. Herbert, 2009, The east equatorial Pacific cold tongue during the last glacial maximum as seen from alkenone paleothermometry, <em>Paleoceanography </em><strong>24</strong>, PA4207. doi: 10.1029/2009PA001781.</p>
+<p>*Chazen, C.R., M. A. Altabet &amp; T. D. Herbert, 2009, Centennial scale oceanographic variability along the Peru margin over the Holocene epoch, <em>Geophysical Research Letters </em><strong>36, </strong>L18704, doi:10.1029/2009GL039749.</p>
+<p>*Lawrence, K.T., T. D. Herbert, *C. M. Brown, M. E. Raymo, and A.M. Haywood<sup>, </sup>2009, High Amplitude Variations in North Atlantic Sea Surface Temperature During the Early Pliocene Warm Period<sup>,, </sup><em>Paleoceanography</em>, <strong>24</strong>: PA2218, doi:10.1029/2008PA001669.</p>
+<p>Brierley<sup>, </sup>C. M., A. V. Fedorov, <strong>√</strong>Z. Liu, T. D. Herbert, *K. T. Lawrence, and J. P. LaRiviere, 2009, Greatly expanded tropical warm pool and weakened Hadley circulation in the Early Pliocene, <em>Science</em><strong> </strong><strong>323</strong>, 1714- 1718</p>
+<p>*Cleaveland, L. C. and T.D. Herbert, 2009, Preservation of the alkenone paleotemperature proxy in uplifted marine sequences: a test from the Vrica outcrop, Crotone, Italy, <em>Geology  </em><strong>37</strong>: 179-182.</p>
+<p>*Ruggieri, E., T. Herbert, *K. T. Lawrence, and C. E. Lawrence, 2009, Change point method for detecting regime shifts in paleoclimatic time series: Application to δ<sup>18</sup>O time series of the Plio-Pleistocene, <em>Paleoceanography</em>  <strong>24</strong>, PA1204, doi:10.1029/2007PA001568.</p>
+<p><strong>√</strong>Liu, Z., M. A. Altabet, and T. D. Herbert, 2008, Plio-Pleistocene Denitrification in the Eastern North Tropical Pacific: Intensification at 2.1 Ma,  <em>GEOCHEMISTRY GEOPHYSICS GEOSYSTEMS   </em>Volume: 9 Article Number: Q11006 </p>
+<p>Li., Y.-X., T. J. Bralower,  I. P. Montañez, D.A. Osleger,  M.A. Arthur, D.M. Bice, T.D. Herbert, E. Erba,I. Premoli Silva, 2008, Toward an orbital chronology for the early Aptian Oceanic Anoxic Event (OAE1a, ~120 Ma), <em>Earth and Planetary Science Letters</em> <em> </em><strong>271</strong>: 88-100.</p>
+<p>Z. Liu, L. C. Cleaveland, and T.D. Herbert, 2008, Early onset and origin of 100-kyr cycles in Pleistocene tropical SST records, Earth and Planetary Science Letters 265: 703–715.</p>
+<p>Agnihotri R., M.A. Altabet, T.D. Herbert, and J.E. Tierney, 2008, Subdecadally resolved paleoceanography of the Peru margin during the last two millennia, GEOCHEMISTRY GEOPHYSICS GEOSYSTEMS Volume: 9 Article Number: Q05013.</p>
+<p>Li., Y.-X., T. J. Bralower, I. P. Montañez, D.A. Osleger, M.A. Arthur, D.M. Bice, T.D. Herbert, E. Erba,I. Premoli Silva, 2008, Toward an orbital chronology for the early Aptian Oceanic Anoxic Event (OAE1a, ~120 Ma), Earth and Planetary Science Letters. 271: 88-100.</p>
+<p>T.D. Herbert, credited contributor to<strong>: </strong>Past Climate Variability and Change in the Arctic and at High Latitudes, Final Report, Synthesis and Assessment Product 1.2, A report by the U.S. Climate Change Science Program and the Subcommittee on Global Change Research, 2009, [Alley R.B., Brigham-Grette J., Miller G.H., Polyak L., and White J.W.C.]. U.S. Geological Survey, Department of the Interior, Washington D.C., USA.</p>
+<p>*Lawrence, K.T. , T.D. Herbert, P.S. Dekens, and A.C. Ravelo,  2007, The application of the alkenone organic proxy to the study of Plio-Pleistocene climate, In Williams, M., Haywood, A.,  Gregory, J<u>. Deep-Time Perspectives on Climate Change: Marrying the Signal from Computer Models and Biological Proxies. </u> The Geological Society.</p>
+<p>Ravelo, A.C., K. Billups, P.S.  Dekens,. T.  Herbert,  and *K. Lawrence, 2007, Onto the Ice Ages: Proxy evidence for the onset of Northern Hemisphere Glaciation. In Williams, M., Haywood, A.,  Gregory, J. <u>Deep-Time Perspectives on Climate Change: Marrying the Signal from Computer Models and Biological Proxies</u> . The Geological Society.</p>
+<p>Cleaveland, L.C., and T.D. Herbert, 2007, Coherent obliquity band and heterogeneous precession band responses in early Pleistocene tropical sea surface temperatures, Paleoceanography 22: Art. No. PA2216.</p>
+<p>Lisiecki, L., and T.D. Herbert, 2007, Automated composite depth scale construction and an analysis of deformation in sediment cores from the Ocean Drilling Program, Paleoceanography,. 22, PA4213, doi:10.1029/2006PA001401.</p>
+<p>D'Andrea, W.J., Z. Liu, M. Da Rosa Alexandre, S. Wattley, T. D. Herbert, and Y. Huang, 2007, An efficient method for isolating individual long-chain alkenones for compound-specific hydrogen isotope analysis, Anal. Chem. 2007, 79: 3430-3435.</p>
+<p>Lawrence, K.T., Z. Liu, and T.D. Herbert, 2006, Evolution of the Eastern Tropical Pacific through Plio-Pleistocene glaciation, Science 312: 79-83.</p>
+<p>Agnihotri, R., M.A. Altabet, and T.D. Herbert, 2006, Influence of marine denitrification on atmospheric N2O variability during the Holocene, accepted, Geophys. Res. Lett., 33: Art. No. L13704.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default hidden" id="tabBackground">
+<h3>Background</h3>
+<div class="panel-heading">
+<h4 class="panel-title" id="relatedBy-Authorship" title="">Education and Training</h4>
+</div>
+<div class="panel-body">
+<table class="table table-hover background__education">
+<tbody>
+<tr>
+<th>Year</th>
+<th>Degree</th>
+<th>Institution</th>
+</tr>
+<tr class="tableRow" role="listitem">
+<td class="citation-data">
+<span class="listDateTime">1987</span>
+</td>
+<td>
+<span class="listDateTime">PhD</span>
+</td>
+<td>
+<span class="listDateTime">
+<a href='https://vivo.brown.edu/search?q=alumni_of:"Princeton+University"' title="Find researchers that also graduated from this institution">
+                          Princeton University</a>
+</span>
+</td>
+</tr>
+<tr class="tableRow" role="listitem">
+<td class="citation-data">
+<span class="listDateTime">1980</span>
+</td>
+<td>
+<span class="listDateTime">BS</span>
+</td>
+<td>
+<span class="listDateTime">
+<a href='https://vivo.brown.edu/search?q=alumni_of:"Yale+University"' title="Find researchers that also graduated from this institution">
+                          Yale University</a>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title" id="relatedBy-Authorship" title="">Honors and Awards</h4>
+</div>
+<div class="panel-body">
+<div class="property-list" displaylimit="5" id="relatedBy-Authorship-List" role="list">
+<p>Henry L. Doherty Professor of Oceanography &amp; Departmental  Chair<br/>
+Fellow, American Association for the Advancement of Science<br/>
+Joint Oceanographic Institutions Distinguished Lecturer</p>
+<p>National Science Foundation Graduate Fellowship, 1982-1985</p>
+<p>Yale College Wilde Prize in Marine Geology, 1980<br/>
+ </p>
+</div>
+</div>
+</div>
+<div class="panel panel-default hidden" id="tabAffiliations">
+<h3 style="padding-bottom: 21px;">Affiliations
+      <a class="btn btn-default hidden" href="https://vivo.brown.edu/display/therbert/viz/collab" id="viz_collab" style="float:right;" target="_blank" title="Visualize collaborators network">Visualize it 
+        <i class="glyphicon glyphicon-signal" style="color:rgb(232, 217, 139);"></i>
+</a>
+</h3>
+<div class="panel-heading">
+<h4 class="panel-title" id="relatedBy-Authorship" title="">Affiliations</h4>
+</div>
+<div class="panel-body">
+<div class="property-list" displaylimit="5" id="relatedBy-Authorship-List" role="list">
+<p>American Geophysical Union, Fellow of AAAS, Geological Society of America</p>
+<p>Principal Investigator, NSF GK-12 outreach program to Providence Public Schools</p>
+<p>Editorial Board Member, Geology (2002-2006)<br/>
+Member, Ocean History Panel, Ocean Drilling Program (1991-1994)<br/>
+Co-director, SIO summer undergraduate research program for minorities in science<br/>
+National Science Foundation Marine Geology and Geophysics panelist<br/>
+Member, United States Scientific Advisory Committee for the Ocean Drilling Program (1997-2000)<br/>
+<br/>
+Member, "Extreme Climates" international advisory group to the O.D.P. (1998-2000)<br/>
+<br/>
+ </p>
+</div>
+</div>
+</div>
+<div class="panel panel-default hidden" id="tabTeaching">
+<h3>Teaching</h3>
+<div class="panel-heading">
+<h4 class="panel-title" id="relatedBy-Authorship" title="">Teaching Overview</h4>
+</div>
+<div class="panel-body">
+<div class="property-list" displaylimit="5" id="relatedBy-Authorship-List" role="list">
+<p>GEOL 0160: First Year Seminar: Global Change: Ecology &amp; Climate<br/>
+GEOL 0240: Earth: Evolution of a Habitable Planet<br/>
+GEOL 1120: Paleoceanography (w/Warren Prell)<br/>
+GEOL 1130: Biogeochemical Cycles in the Ocean<br/>
+GEOL 2920: Past Variations in the Global Carbon Cycle<br/>
+GEOL 2920: The Enigma of Warm Climates in the Geological Record<br/>
+<br/>
+<strong>ADVISING </strong><br/>
+Current Graduate Students:<br/>
+Samantha Bova<br/>
+Rocio Caballero</p>
+<p>Chris Kelly<br/>
+Alexa Tzanova<br/>
+<br/>
+Former Graduate Students:</p>
+<p>Jeffrey Salacup, Ph.D. '14<br/>
+Caitlin Chazen, Ph.D. '10<br/>
+Laura Cleaveland, Ph.D. '08<br/>
+Scott Kreitz, Sc.M. '98<br/>
+Kira Lawrence, Ph.D. '06<br/>
+Lorraine Lisiecki, Ph.D. '05<br/>
+Zhonghui Liu, Ph.D. '04<br/>
+Shuo Yang, Sc.M. '12<br/>
+Lauren Wincze, Sc.M. '02</p>
+</div>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title" id="relatedBy-Authorship" title="">Teaching</h4>
+</div>
+<div class="panel-body">
+<table class="table table-hover">
+<tbody>
+<tr class="tableRow" role="listitem">
+<td class="citation-data">
+<span class="listDateTime">GEOL 0240 - Earth: Evolution of a Habitable Planet</span>
+</td>
+</tr>
+<tr class="tableRow" role="listitem">
+<td class="citation-data">
+<span class="listDateTime">GEOL 1120 - Paleoceanography</span>
+</td>
+</tr>
+<tr class="tableRow" role="listitem">
+<td class="citation-data">
+<span class="listDateTime">GEOL 1130 - Ocean Biogeochemical Cycles</span>
+</td>
+</tr>
+<tr class="tableRow" role="listitem">
+<td class="citation-data">
+<span class="listDateTime">GEOL 2920H - Past Variations in the Global Carbon Cycle</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer col-sm-12" role="contentinfo">
+<div class="row">
+<div class="container">
+<div class="col-md-12">
+<nav role="navigation">
+<ul id="footer-nav" role="list">
+<li role="listitem">
+<a href="https://vivo.brown.edu/about" title="About Researchers@Brown">About</a>
+</li><li role="listitem">
+<a href="https://vivo.brown.edu/help" title="Help and Frequently Asked Questions">Help</a>
+</li><li role="listitem">
+<a href="http://brown.edu/" target="_blank">Brown University</a>
+</li><li role="listitem">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSe9_8wO8f6Vd0E0N_ZVXiBN2YSO7NmWvP-utEGiQLJXz3nkJA/viewform?usp=pp_url&amp;entry.1922592043&amp;entry.911094868&amp;entry.1400327620&amp;entry.197578216&amp;entry.19651479=https%3A%2F%2Fvivo.brown.edu%2Fdisplay%2Ftherbert" target="_blank" title="Submit feedback about Researchers@Brown">Feedback</a>
+</li></ul>
+</nav>
+<p class="copyright">
+					© 2017 <a href="http://brown.edu/" target="_blank">Brown University</a> |
+					<a class="terms" href="https://vivo.brown.edu/termsOfUse" title="Terms of Use">Terms of Use</a> |
+					Powered by <a href="http://vivoweb.org/" target="_blank" title="Powered by VIVO"><strong>VIVO</strong></a>
+</p>
+</div>
+</div>
+</div>
+</footer>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-3203647-20"></script>
+<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-3203647-20');
+	</script>
+</body></html>

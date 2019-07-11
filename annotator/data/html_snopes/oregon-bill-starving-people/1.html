@@ -1,0 +1,464 @@
+<html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><head>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<meta charset="utf-8"/>
+<title>HB4135 2018 Regular Session -  Oregon Legislative Information System</title>
+<link href="https://olis.leg.state.or.us/liz/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<link href="https://apps.leg.state.or.us/cdn/bootstrap/3.2.0/css/bootstrap-bundle.min.css" rel="stylesheet"/>
+<link href="https://apps.leg.state.or.us/cdn/Leg/1.1.1/css/LegStandard.min.css" rel="stylesheet"/>
+<link href="https://apps.leg.state.or.us/cdn/jquery.dataTables/1.10.2/media/css/jquery.dataTables.min.css" rel="stylesheet"/>
+<link href="https://apps.leg.state.or.us/cdn/toastr/2.0.3/css/toastr.min.css" rel="stylesheet"/>
+<link href="https://olis.leg.state.or.us/liz/Content/Application.css" rel="stylesheet"/>
+<link href="https://olis.leg.state.or.us/liz/Content/legFooter.css" rel="stylesheet"/>
+<script async="" src="https://ssl.google-analytics.com/ga.js" type="text/javascript"></script><script src="//apps.leg.state.or.us/cdn/modernizr/2.8.3/modernizr-2.8.3.min.js"></script>
+<script src="//apps.leg.state.or.us/cdn/jquery-custom-bundle/1.1.2/jquery-bundle.min.js"></script>
+<script src="//apps.leg.state.or.us/cdn/jquery.dataTables/1.10.2/jquery.dataTables.min.js"></script>
+<script src="//apps.leg.state.or.us/cdn/typeahead.jquery/0.10.4/typeahead.jquery.min.js"></script>
+<script src="//apps.leg.state.or.us/cdn/bootstrap/3.2.0/js/bootstrap-bundle.min.js"></script>
+<script src="//apps.leg.state.or.us/cdn/jquery.cookie/1.4/jquery.cookie.min.js"></script>
+<script src="//apps.leg.state.or.us/cdn/Leg/1.1.2/js/leg-bundle.min.js"></script>
+<script>
+   var require = {
+      baseUrl: '/liz/Scripts'
+   };
+</script>
+<script src="//apps.leg.state.or.us/cdn/toastr/2.0.3/js/toastr.min.js"></script>
+<script src="https://olis.leg.state.or.us/liz/Scripts/dataLoadAction.js"></script>
+</head>
+<body style="">
+<div class="container-fluid" id="mainWrapper" style="padding-right: 0">
+<header class="row hidden-xs" style="margin-left: -20px">
+<div class="top-menu">
+<a class="oregon-leg-icon-link hidden-xs" href="http://www.oregonlegislature.gov/" target="_blank"></a>
+<div class="col-sm-4 col-md-5" style="margin: 0px 0px 0px 180px; padding-left: 5px;">
+<h4 class="banner-header"><a class="visible-md visible-lg" href="http://www.oregonlegislature.gov/" style="line-height:20px; font-weight: 600" target="_blank">Oregon State Legislature</a>
+</h4>
+<a href="https://olis.leg.state.or.us/liz/"><small class="banner-subheader"><span class="">Oregon Legislative Information</span></small></a>
+<div class="page-menu page-menu-text hidden-xs">
+<a href="https://www.oregonlegislature.gov/OLIS_help/Pages/Measures.aspx#Overview" target="_blank">Help</a>
+     | <a href="https://olis.leg.state.or.us/liz/2018R1/Account/Login">Staff Login</a>
+</div>
+</div>
+<div class="col-md-4 pull-right hidden-xs" id="navbar" style="margin-top: 31px; right: 382px;">
+<nav class="navbar navbar-default default-main-nav" style="">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand visible-xs" data-target="#main-menu-bar" data-toggle="collapse">
+                Oregon Legislative Information System
+            </a>
+<button class="navbar-toggle" data-target="#main-menu-bar" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+</div>
+<div class="navbar-collapse collapse" id="main-menu-bar">
+<ul id="navigation" style="margin-top: 6px; margin-left: -16px">
+<li class="button-group" data-action="/liz/2018R1/Navigation/SessionSelect" data-navigation="true" id="navigation-1">
+<a class="" href="https://olis.leg.state.or.us/#">
+<span>Session</span>
+</a>
+</li>
+<li class="button-group" data-action="/liz/2018R1/Navigation/BillSearchForm" data-navigation="true" id="navigation-2">
+<a class="current" href="https://olis.leg.state.or.us/#">
+<span>Bill</span>
+</a>
+</li>
+<li class="button-group" data-action="/liz/2018R1/Navigation/CommitteeMainNav" data-navigation="true" id="navigation-3">
+<a class="" href="https://olis.leg.state.or.us/liz/2018R1/Measures/#">
+<span>Committees</span>
+</a>
+</li>
+<li class="button-group" data-action="/liz/2018R1/Navigation/ReportsForm" data-navigation="true" id="navigation-4">
+<a class="" href="https://olis.leg.state.or.us/#">
+<span>Reports</span>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</header>
+<div class="mobile-nav visible-xs row">
+<div class="col-xs-12" id="mobile-navbar" style="width: 100%; margin-left: -15px; padding-right: 0px;">
+<nav class="navbar navbar-default default-main-nav" style="">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand visible-xs" data-target="#mobile-main-menu-bar-mobile-collapse" data-toggle="collapse" id="mobile-nav-brand" style="height: 35px !important">
+                Oregon Legislative Information
+            </a>
+<button class="navbar-toggle" data-target="#mobile-main-menu-bar-mobile-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+</div>
+<div class="navbar-collapse collapse" id="mobile-main-menu-bar-mobile-collapse">
+<ul id="navigation-mobile">
+<li class="mobile-menu-li" id="navigation-1-mobile" style="display: block">
+<a class="" data-collapsed-icon="glyphicon-plus" data-expanded-icon="glyphicon-minus" data-icon-element="#navigation-1-mobile-icon" data-target="#navigation-1-mobile-collapse" data-toggle="collapse" href="https://olis.leg.state.or.us/#">
+<span class="mobile-header-text" style="text-indent: 0px">
+                            Session
+                        </span>
+<i class="mobile-nav-icon glyphicon glyphicon-plus" id="navigation-1-mobile-icon"></i>
+</a>
+<div class="collapse" data-load-action="/liz/2018R1/Navigation/SessionSelect?mobile=True" id="navigation-1-mobile-collapse" style="background: rgb(218, 206, 191);">
+</div>
+</li>
+<li class="mobile-menu-li" id="navigation-2-mobile" style="display: block">
+<a class="current" data-collapsed-icon="glyphicon-plus" data-expanded-icon="glyphicon-minus" data-icon-element="#navigation-2-mobile-icon" data-target="#navigation-2-mobile-collapse" data-toggle="collapse" href="https://olis.leg.state.or.us/#">
+<span class="mobile-header-text" style="text-indent: 0px">
+                            Bill
+                        </span>
+<i class="mobile-nav-icon glyphicon glyphicon-plus" id="navigation-2-mobile-icon"></i>
+</a>
+<div class="collapse" data-load-action="/liz/2018R1/Navigation/BillSearchForm?mobile=True" id="navigation-2-mobile-collapse" style="background: rgb(218, 206, 191);">
+</div>
+</li>
+<li class="mobile-menu-li" id="navigation-3-mobile" style="display: block">
+<a class="" data-collapsed-icon="glyphicon-plus" data-expanded-icon="glyphicon-minus" data-icon-element="#navigation-3-mobile-icon" data-target="#navigation-3-mobile-collapse" data-toggle="collapse" href="https://olis.leg.state.or.us/liz/2018R1/#">
+<span class="mobile-header-text" style="text-indent: 0px">
+                            Committees
+                        </span>
+<i class="mobile-nav-icon glyphicon glyphicon-plus" id="navigation-3-mobile-icon"></i>
+</a>
+<div class="collapse" data-load-action="/liz/2018R1/Navigation/CommitteeMainNav?mobile=True" id="navigation-3-mobile-collapse" style="background: rgb(218, 206, 191);">
+</div>
+</li>
+<li class="mobile-menu-li" id="navigation-4-mobile" style="display: block">
+<a class="" data-collapsed-icon="glyphicon-plus" data-expanded-icon="glyphicon-minus" data-icon-element="#navigation-4-mobile-icon" data-target="#navigation-4-mobile-collapse" data-toggle="collapse" href="https://olis.leg.state.or.us/#">
+<span class="mobile-header-text" style="text-indent: 0px">
+                            More
+                        </span>
+<i class="mobile-nav-icon glyphicon glyphicon-plus" id="navigation-4-mobile-icon"></i>
+</a>
+<div class="collapse" data-load-action="/liz/2018R1/Navigation/ReportsForm?mobile=True" id="navigation-4-mobile-collapse" style="background: rgb(218, 206, 191);">
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<div class="visible-xs row mobile-page-menu">
+<a href="https://www.oregonlegislature.gov/OLIS_help/Pages/Measures.aspx#Overview" target="_blank">Help</a>
+     | <a href="https://olis.leg.state.or.us/liz/2018R1/Account/Login">Staff Login</a>
+</div>
+<section class="row">
+<div class="center-content-padding container" id="center-content">
+<div class="content-wrap">
+<div class="session-full-name">2018 Regular Session</div>
+<div class="row">
+<div class="col-md-5">
+<a data-original-title="Measure text PDF for the current version" href="https://olis.leg.state.or.us/liz/2018R1/Downloads/MeasureDocument/HB4135" target="_blank" title="">HB 4135 Enrolled</a>
+</div>
+<div class="col-md-3">
+<input id="hdnLockStatus" type="hidden"/>
+<div class="btn btn-default btn-custom hidden" id="lockbutton" onclick="SaveLockUnlock('39163')">
+<span>Lock Sponsors</span>
+<a class="glyphicon glyphicon-star-empty"></a>
+</div>
+</div>
+</div>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand visible-xs" data-target="#menu-bar" data-toggle="collapse">
+                Navigation
+            </a>
+<button class="navbar-toggle" data-target="#menu-bar" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+</div>
+<div class="navbar-collapse collapse" id="menu-bar">
+<ul class="nav navbar-nav">
+<li class="active">
+<a href="https://olis.leg.state.or.us/liz/2018R1/Measures/Overview/HB4135" target="_self">Overview</a>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="https://olis.leg.state.or.us/liz/2018R1/Measures/#">Text <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a class="menu-link padded-link" href="https://olis.leg.state.or.us/liz/2018R1/Downloads/MeasureDocument/HB4135/Introduced" target="_blank">Introduced</a>
+<span class="link-icons">
+<a class="inline-menu-link" data-original-title="Get the Pdf" href="https://olis.leg.state.or.us/liz/2018R1/Downloads/MeasureDocument/HB4135/Introduced" target="_blank" title="">
+<i class="pdf-link"></i>
+</a></span></li><li>
+<a class="current-measure-version menu-link padded-link" href="https://olis.leg.state.or.us/liz/2018R1/Downloads/MeasureDocument/HB4135/Enrolled" target="_blank">Enrolled</a>
+<span class="link-icons">
+<a class="inline-menu-link" data-original-title="Get the Pdf" href="https://olis.leg.state.or.us/liz/2018R1/Downloads/MeasureDocument/HB4135/Enrolled" target="_blank" title="">
+<i class="pdf-link"></i>
+</a></span></li>
+</ul>
+</li>
+<li class="">
+<a href="https://olis.leg.state.or.us/liz/2018R1/Measures/Analysis/HB4135" target="_self">Analysis</a>
+</li>
+<li class="">
+<a href="https://olis.leg.state.or.us/liz/2018R1/Measures/Exhibits/HB4135" target="_self">Meeting Material/Exhibits</a>
+</li>
+<li class="">
+<a href="https://olis.leg.state.or.us/liz/2018R1/Measures/ProposedAmendments/HB4135" target="_self">Amendments</a>
+</li>
+</ul>
+</div>
+</nav>
+<script>
+    // all properties of CommentedMeasureViewModel are copied to a javascript global variable, here
+    var Srv = {"ChiefSponsors":[{"WebAddress":"https://www.oregonlegislature.gov/kotek","SponsorName":"Kotek","DisplayName":"Representative Kotek, ","SponsorLevel":"Chief","PrintOrder":1,"Chamber":"H","SponsorType":"Member","MemberTitle":"Representative","AdUsername":"KotekT","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"https://www.oregonlegislature.gov/prozanski","SponsorName":"Prozanski","DisplayName":"Senator Prozanski, ","SponsorLevel":"Chief","PrintOrder":2,"Chamber":"S","SponsorType":"Member","MemberTitle":"Senator","AdUsername":"ProzanF","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"https://www.oregonlegislature.gov/steinerhayward","SponsorName":"Steiner Hayward","DisplayName":"Steiner Hayward","SponsorLevel":"Chief","PrintOrder":3,"Chamber":"S","SponsorType":"Member","MemberTitle":"Senator","AdUsername":"SteineE","CommitteeName":null,"SponsorableFlag":"Y"}],"RegularSponsors":[{"WebAddress":"https://www.oregonlegislature.gov/greenlick","SponsorName":"Greenlick","DisplayName":"Representative Greenlick, ","SponsorLevel":"Regular","PrintOrder":20,"Chamber":"H","SponsorType":"Member","MemberTitle":"Representative","AdUsername":"GreenlM","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"https://www.oregonlegislature.gov/holvey","SponsorName":"Holvey","DisplayName":"Holvey, ","SponsorLevel":"Regular","PrintOrder":20,"Chamber":"H","SponsorType":"Member","MemberTitle":"Representative","AdUsername":"HolveyP","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"https://www.oregonlegislature.gov/keny-guyer","SponsorName":"Keny-Guyer","DisplayName":"Keny-Guyer, ","SponsorLevel":"Regular","PrintOrder":20,"Chamber":"H","SponsorType":"Member","MemberTitle":"Representative","AdUsername":"KenyGuA","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"https://www.oregonlegislature.gov/marsh","SponsorName":"Marsh","DisplayName":"Marsh, ","SponsorLevel":"Regular","PrintOrder":20,"Chamber":"H","SponsorType":"Member","MemberTitle":"Representative","AdUsername":"MarshP","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"https://www.oregonlegislature.gov/power","SponsorName":"Power","DisplayName":"Power, ","SponsorLevel":"Regular","PrintOrder":20,"Chamber":"H","SponsorType":"Member","MemberTitle":"Representative","AdUsername":"PowerK","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"https://www.oregonlegislature.gov/salinas","SponsorName":"Salinas","DisplayName":"Salinas, ","SponsorLevel":"Regular","PrintOrder":20,"Chamber":"H","SponsorType":"Member","MemberTitle":"Representative","AdUsername":"SalinaA","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"https://www.oregonlegislature.gov/beyer","SponsorName":"Beyer","DisplayName":"Senator Beyer, ","SponsorLevel":"Regular","PrintOrder":20,"Chamber":"S","SponsorType":"Member","MemberTitle":"Senator","AdUsername":"BeyerL","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"https://www.oregonlegislature.gov/dembrow","SponsorName":"Dembrow","DisplayName":"Dembrow, ","SponsorLevel":"Regular","PrintOrder":20,"Chamber":"S","SponsorType":"Member","MemberTitle":"Senator","AdUsername":"DembroM","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"https://www.oregonlegislature.gov/gelser","SponsorName":"Gelser","DisplayName":"Gelser, ","SponsorLevel":"Regular","PrintOrder":20,"Chamber":"S","SponsorType":"Member","MemberTitle":"Senator","AdUsername":"GelserS","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"https://www.oregonlegislature.gov/Manning","SponsorName":"Manning Jr","DisplayName":"Manning Jr, ","SponsorLevel":"Regular","PrintOrder":20,"Chamber":"S","SponsorType":"Member","MemberTitle":"Senator","AdUsername":"ManninJ","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"https://www.oregonlegislature.gov/monnesanderson","SponsorName":"Monnes Anderson","DisplayName":"Monnes Anderson, ","SponsorLevel":"Regular","PrintOrder":20,"Chamber":"S","SponsorType":"Member","MemberTitle":"Senator","AdUsername":"MonnesL","CommitteeName":null,"SponsorableFlag":"Y"},{"WebAddress":"","SponsorName":"(Presession filed.)","DisplayName":" (Presession filed.)","SponsorLevel":"Regular","PrintOrder":20,"Chamber":null,"SponsorType":"Presession","MemberTitle":null,"AdUsername":"","CommitteeName":null,"SponsorableFlag":"Y"}],"ChiefSponsorEnabled":false,"RegSponsorEnabled":false,"AddChiefVisible":false,"RequestAddChiefVisible":false,"RemoveChiefVisible":false,"RequestRemoveChiefVisible":false,"AddChiefRequestExists":false,"RemoveChiefRequestExists":false,"AddRegVisible":false,"RemoveRegVisible":false,"RequestRemoveRegVisible":false,"RemoveRegRequestExists":false,"ButtonsLocked":false,"ChiefToolTip":null,"RegularToolTip":null,"ApproverName":null,"DebugInfo":"User not logged in.","DisplayInfo":null};
+
+    // other properties are added here for use by javascript
+    Srv.Measure = {"MeasureId":39163,"SessionId":108,"MeasLcNumId":0,"MeasurePrefix":"HB","MeasureNumber":4135,"CurrentVersion":"Enrolled","CatchLine":"Establishes Advance Directive Adoption Committee for purpose of adopting form of advance directive to be used in this state.","MinorityCatchline":null,"MeasureSummary":"\tEstablishes Advance Directive Adoption Committee for purpose of adopting form of advance directive to be used in this state. Specifies that form may not take effect unless form is ratified according to constitutional requirements for passage of legislative measures. \n\tRequires Advance Directive Adoption Committee to submit form of advance directive to interim committee of Legislative Assembly related to judiciary. Directs interim committee, upon receiving form, to file proposed legislative measure with Legislative Counsel. \n\tRepeals statute setting forth current form of advance directive used in this state. Sets forth alternative form of advance directive that may be used in this state until January 1, 2022. \n\tModifies means by which advance directive is executed. \n\tModifies law by which individual is selected to make health care decisions for another individual who becomes incapable of making health care decisions. \n\tMakes certain other changes to provisions governing individuals who become incapable of making health care decisions. \n\tBecomes operative January 1, 2019. \n\tTakes effect on 91st day following adjournment sine die.","RelatingTo":"Relating to health care decisions; and prescribing an effective date.","AtRequestOf":null,"EmergencyClauseFlag":null,"EffectiveDate":null,"ChapterNumber":"36","ChapAssignDate":null,"Vetoed":null,"CurrentLocationId":361,"CurrentCommitteeId":null,"FiscalImpactId":null,"RevenueImpactId":null,"CurrentSubcommId":null,"RelatingToFull":null,"CurrentLocation":"Chapter Number Assigned","DrafterName":null,"PublishFlag":null,"HseSponsorLockDate":null,"FiscalImpactLookup":{"LookupId":0,"Domain":null,"Code":null,"Meaning":"Fiscal impact issued","AbbreviatedMeaning":null,"ActiveFlag":null,"SortOrder":null,"ReportHeader":null,"ExtraData":null,"DescColumn":null,"SortColumn":null,"IdColumn":null},"RevenueImpactLookup":{"LookupId":0,"Domain":null,"Code":null,"Meaning":"No revenue impact","AbbreviatedMeaning":null,"ActiveFlag":null,"SortOrder":null,"ReportHeader":null,"ExtraData":null,"DescColumn":null,"SortColumn":null,"IdColumn":null},"CommitteeActionDocuments":null,"CommitteeReports":null,"CurrentCommittee":{"CommitteeId":0,"SessionId":0,"CommTypeId":0,"CommitteeName":null,"ActiveFlag":null,"OfficeAddress":null,"OfficePhone":null,"ParentId":null,"CommitteeCode":null,"FaxNumber":null,"WebAddress":null,"EmailAddress":null,"ReleaseFlag":null,"SubSortOrder":null,"HideTypeFlag":null,"CcNumber":null,"CategoryId":null,"ShortName":null,"Meaning":null,"SessionName":null,"CommitteeWebsite":null,"CommitteeActionDocuments":[],"CommitteeMeetings":[],"CommitteeReports":[],"CommitteeReports1":[],"CommitteeReports2":[],"CommitteeReports3":[],"CommitteeReports4":[],"CommitteeReports5":[],"CommitteeReports6":[],"LegislativeSession":null,"CommitteeReferrals":[],"CommitteeMembers":[],"CommitteeStaff":[],"CommitteeType":{"CommTypeId":0,"CommTypeCode":null,"HouseOfAction":null,"TypeDescription":null,"PubTypeDescription":null,"TsmGroupDescription":null,"MainCommFlag":null,"SortOrder":null},"CommitteeDefaultMeetings":[],"CommitteeAssignedMeasures":[],"ParentCommittee":null,"MeasureSponsors":[],"Category":null,"SubCommitteeAssignedMeasures":[],"Acitve":false},"CurrentSubCommittee":null,"LegislativeSession":{"SessionId":0,"SessionName":"2018 Regular Session","SessionType":null,"BeginDate":"\/Date(-62135568000000)\/","EndDate":null,"DefaultFlag":"N","SessionFullName":null,"SessionNumericName":null,"DisplayOnMenuFlag":null,"SessionKey":"2018R1","PresessionFiledMessages":[],"IsDefaultSession":false},"MeasureHistoryActions":null,"MeasureSponsors":null,"LcNumber":{"LcnumberId":0,"SessionId":0,"Number":57,"MeasLcNumId":0,"Suffix":null,"LcDrafts":[]},"AgendaSchedules":null,"DeskThirdReadReleaseds":null,"CommitteeAgendaItems":null,"UserAttachedDocuments":null,"FloorLetters":null,"UserComments":null,"UserAttachedDocumentInfoes":null,"CommitteeReferrals":null,"PrimaryEconomist":null,"FiscalAnalyst":null,"CommitteeExhibits":null,"SessionReadings":null,"MeasureBasicInfo":null,"MeasureVersions":null,"CommitteeAdministrators":null,"MeasureIdentifier":{"SessionKey":"2018R1","MeasureNumberWithPrefix":"HB4135","MeasureVersionId":null,"Prefix":"HB","MeasureNumber":4135,"HasReadableComments":false,"HasUploads":false,"UploadCount":0},"MeasureGroupNumber":41,"CurrentReferralInfo":{"CommReferId":0,"MeasureId":null,"ExecApptId":null,"CommreportId":null,"Chamber":null,"ListNumber":null,"ActionId":null,"CommitteeId":null,"SubsequentId":0,"Subsequent2Id":0,"ReferralDate":"\/Date(-62135568000000)\/","ReferralTime":"\/Date(-62135568000000)\/","AcceptFlag":null,"PostFlag":null,"Committee":null,"Measure":null,"SubsequentCommittee":null,"MeasureBasicInfo":null,"SecondSubSequentCommittee":null},"Published":false,"ChiefSponsors":null,"RegularSponsors":null,"VersionsMatch":true};
+    Srv.MeasurePrefix = 'HB';
+    Srv.MeasureNumber = '4135';
+    Srv.SessionKey = '2018R1';
+    Srv.UserName = '';
+
+    Srv.AddChiefUrl = '/liz/2018R1/Overview/AddChiefSponsor';
+    Srv.RemoveChiefUrl = '/liz/2018R1/Overview/RemoveChiefSponsor';
+    Srv.RequestRemoveChiefUrl = '/liz/2018R1/Overview/RequestRemoveChiefSponsor';
+    Srv.RequestChiefUrl = '/liz/2018R1/Overview/RequestChiefSponsor';
+    Srv.AddRegularUrl = '/liz/2018R1/Overview/AddRegularSponsor';
+    Srv.RemoveRegularUrl = '/liz/2018R1/Overview/RemoveRegularSponsor';
+    Srv.RequestRemoveRegularUrl = '/liz/2018R1/Overview/RequestRemoveRegularSponsor';
+    Srv.RefreshSponsorsUrl = '/liz/2018R1/Overview/SponsorInfo';
+</script>
+<h5 class="header">
+<a data-collapse-state="Open" data-collapsed-icon="glyphicon-chevron-right" data-expanded-icon="glyphicon-chevron-down" data-icon-element="#overview-icon" data-ignore-children="false" data-toggle="collapse" href="https://olis.leg.state.or.us/#measureOverview">
+<span class="link-header-text">Overview</span>
+<i class="glyphicon glyphicon-chevron-down" id="overview-icon"></i>
+</a>
+</h5>
+<div class="collapse in" id="measureOverview">
+<table class="table-striped col-md-12" id="measureOverviewTable">
+<tbody><tr>
+<td class="col-md-4 row-title">At the request of:</td>
+<td></td>
+</tr>
+<tr id="Sponsors">
+<td class="row-title">
+                Chief Sponsors:
+                <div class="btn btn-default btn-custom" data-bind="visible: addChiefVisible, enable: enableChfBtn, click: clickAddChfBtn" data-original-title="Click to add yourself as a chief sponsor." style="display:none; margin-left:18px;" title="">
+<span>Add</span><a class="glyphicon glyphicon-star-empty col-lg-push-1"></a>
+</div>
+<div class="btn btn-default btn-custom" data-bind="visible: removeChiefVisible, enable: enableChfBtn, click: clickRemoveChfBtn" data-original-title="Click to remove yourself as a chief sponsor." style="display:none; margin-left:18px;" title="">
+<span>Remove</span><a class="glyphicon glyphicon-star-empty col-lg-push-1"></a>
+</div>
+<div class="btn btn-default btn-custom" data-bind="visible: requestAddChiefVisible, enable: enableChfBtn, click: clickRequestChfBtn" data-original-title="Click to request that null add you as a chief sponsor." id="requestAddChiefBtn" style="display:none; margin-left:18px;" title="">
+<span>Request Add</span><a class="glyphicon glyphicon-star-empty col-lg-push-1"></a>
+</div>
+<div class="btn btn-default btn-custom" data-bind="visible: requestRemoveChiefVisible, enable: enableChfBtn, click: clickRequestRemoveChfBtn" data-original-title="Click to request that null remove you as a chief sponsor." id="requestRemoveChiefBtn" style="display:none; margin-left:18px;" title="">
+<span>Request Remove</span><a class="glyphicon glyphicon-star-empty col-lg-push-1"></a>
+</div>
+</td>
+<td data-bind="foreach: chiefSponsors">
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/kotek">Representative Kotek, </a>
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/prozanski">Senator Prozanski, </a>
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/steinerhayward">Steiner Hayward</a>
+</td>
+</tr>
+<tr>
+<td class="row-title">
+                Regular Sponsors:
+                <div class="btn btn-default btn-custom" data-bind="visible: addRegVisible, enable: enableRegBtn, click: clickAddRegBtn" data-original-title="Click to add yourself as a regular sponsor." style="display:none" title="">
+<span>Add</span><a class="glyphicon glyphicon-star-empty col-lg-push-1"></a>
+</div>
+<div class="btn btn-default btn-custom" data-bind="visible: removeRegVisible, enable: enableRegBtn, click: clickRemoveRegBtn" data-original-title="Click to remove yourself as a regular sponsor." style="display:none" title="">
+<span>Remove</span><a class="glyphicon glyphicon-star-empty col-lg-push-1"></a>
+</div>
+<div class="btn btn-default btn-custom" data-bind="visible: requestRemoveRegVisible, enable: enableRegBtn, click: clickRequestRemoveRegBtn" data-original-title="Click to request that null remove you as a regular sponsor." id="requestRemoveRegBtn" style="display:none; margin-left:18px;" title="">
+<span>Request Remove</span><a class="glyphicon glyphicon-star-empty col-lg-push-1"></a>
+</div>
+</td>
+<td data-bind="foreach: regularSponsors">
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/greenlick">Representative Greenlick, </a>
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/holvey">Holvey, </a>
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/keny-guyer">Keny-Guyer, </a>
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/marsh">Marsh, </a>
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/power">Power, </a>
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/salinas">Salinas, </a>
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/beyer">Senator Beyer, </a>
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/dembrow">Dembrow, </a>
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/gelser">Gelser, </a>
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/Manning">Manning Jr, </a>
+<a data-bind="attr: { href: $data.WebAddress }" href="https://www.oregonlegislature.gov/monnesanderson">Monnes Anderson, </a>
+                
+                
+            
+                
+                
+                 (Presession filed.)
+                
+            </td>
+</tr>
+<tr>
+<td class="row-title">Bill Title: </td>
+<td> Relating to health care decisions; and prescribing an effective date.</td>
+</tr>
+<tr>
+<td class="row-title">Catchline/Summary:</td>
+<td>
+<span id="catchline">Establishes Advance Directive Adoption Committee for purpose of adopting form of advance directive to be used in this state.</span>
+<a data-collapsed-icon="glyphicon glyphicon-plus-sign" data-expanded-icon="glyphicon glyphicon-minus-sign" data-icon-element="#summaryCollapseIcon" data-ignore-children="true" data-original-title="Click to expand summary" data-toggle="collapse" href="https://olis.leg.state.or.us/#collapseMeasureSummary" title="">
+<i class="glyphicon glyphicon-plus-sign" id="summaryCollapseIcon"></i>
+</a>
+<div class="collapse" id="collapseMeasureSummary">
+                    	 Specifies that form may not take effect unless form is ratified according to constitutional requirements for passage of legislative measures. 
+	Requires Advance Directive Adoption Committee to submit form of advance directive to interim committee of Legislative Assembly related to judiciary. Directs interim committee, upon receiving form, to file proposed legislative measure with Legislative Counsel. 
+	Repeals statute setting forth current form of advance directive used in this state. Sets forth alternative form of advance directive that may be used in this state until January 1, 2022. 
+	Modifies means by which advance directive is executed. 
+	Modifies law by which individual is selected to make health care decisions for another individual who becomes incapable of making health care decisions. 
+	Makes certain other changes to provisions governing individuals who become incapable of making health care decisions. 
+	Becomes operative January 1, 2019. 
+	Takes effect on 91st day following adjournment sine die.
+                </div>
+</td>
+</tr>
+<tr>
+<td class="row-title">Chapter Number:</td>
+<td>
+Chapter 36
+            </td>
+</tr>
+<tr>
+<td class="row-title">Fiscal Impact:</td>
+<td>
+Fiscal Impact Issued            </td>
+</tr>
+<tr>
+<td class="row-title">Revenue Impact:</td>
+<td>
+No Revenue Impact            </td>
+</tr>
+<tr>
+<td class="row-title">Measure Analysis:</td>
+<td>
+<a href="https://olis.leg.state.or.us/liz/2018R1/Measures/Analysis/HB4135">Staff Measure Summary / Impact Statements</a>
+</td>
+</tr>
+<tr>
+<td class="col-md-4 row-title">Current Location: </td>
+<td>Chapter Number Assigned</td>
+</tr>
+<tr>
+<td class="row-title">Current Committee:  </td>
+<td>
+<a data-original-title="Committee Overview" href="https://olis.leg.state.or.us/" title=""> </a> </td>
+</tr>
+<tr>
+<td class="row-title">Current Subcommittee: </td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="row-title">Subsequent Referral(s): </td>
+<td>
+<div>
+<ul class="no-list-style pending-subsequent-list">
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="row-title">Potential Conflicts of Interest/Vote Explanations: </td>
+<td>
+<a href="https://www.oregonlegislature.gov/pcive/Forms/Display.aspx?View={55B3C8F7-2A7D-440A-970E-9E9C88208AAB}&amp;FilterField1=Session&amp;FilterValue1=2018R1&amp;FilterField2=Measure&amp;FilterValue2=HB4135" target="_blank">Potential Conflicts of Interest/Vote Explanation Documents</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div aria-hidden="true" aria-labelledby="sponsorModalLabel" class="modal fade" id="sponsorModal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+<h3 id="sponsorModalLabel">Sponsor Change Confirmation</h3>
+</div>
+<div class="modal-body">
+<p><span id="confirmText"></span>
+<button class="btn btn-success" id="sponsorChangeButton" type="button">Yes</button>
+<button aria-hidden="true" class="btn btn-danger" data-dismiss="modal">No</button>
+</p>
+</div>
+<div class="modal-footer"></div>
+</div>
+</div>
+</div>
+<h5 class="header">
+<a data-collapse-state="Closed" data-collapsed-icon="glyphicon-chevron-right" data-expanded-icon="glyphicon-chevron-down" data-icon-element="#measure-history-icon" data-ignore-children="true" data-toggle="collapse" href="https://olis.leg.state.or.us/#MeasureHistory">
+<span class="link-header-text">Measure History</span>
+<i class="glyphicon glyphicon-chevron-right" id="measure-history-icon"></i>
+</a>
+</h5>
+<div class="collapse" data-load-action="/liz/2018R1/Measures/Overview/GetHistory/HB4135" id="MeasureHistory"></div>
+<h5 class="header">
+<a data-collapse-state="Closed" data-collapsed-icon="glyphicon-chevron-right" data-expanded-icon="glyphicon-chevron-down" data-icon-element="#scheduled-events-icon" data-ignore-children="true" data-toggle="collapse" href="https://olis.leg.state.or.us/#ScheduledEvents">
+<span class="link-header-text">Scheduled Events</span>
+<i class="glyphicon glyphicon-chevron-right" id="scheduled-events-icon"></i>
+</a>
+</h5>
+<div class="collapse" data-load-action="/liz/2018R1/Measures/Overview/GetScheduledEvents/HB4135" id="ScheduledEvents"></div>
+</div>
+</div>
+<div id="navigation-flyout">
+</div>
+</section>
+</div>
+<div class="container-fluid" style="padding:0px">
+<div class="row-fluid">
+<footer class="span12">
+<div class="right">
+<span><b>Oregon State Legislature</b></span> <span><b>Building Hours:</b> Monday - Friday, 7:00am - 5:30pm</span> <span>1-800-332-2313 | 900 Court St. NE, Salem Oregon 97301</span>
+</div>
+<div class="left">
+<div class="social">
+<a href="https://www.facebook.com/OregonCapitol#!/OregonCapitol">
+<img alt="Follow us on Facebook" src="https://olis.leg.state.or.us/liz/2018R1/Measures/Overview/HB4135/liz/Images/social-footer-fb.png"/>
+</a>
+<a href="https://twitter.com/OregonCapitol">
+<img alt="Follow us on Twitter" src="https://olis.leg.state.or.us/liz/Images/social-footer-tw.png"/>
+</a>
+<a href="https://www.oregonlegislature.gov/Pages/pressrelease.aspx">
+<img alt="Subscribe to our RSS" src="https://olis.leg.state.or.us/liz/Images/social-footer-rss.png"/>
+</a>
+<a href="https://www.oregonlegislature.gov/citizen_engagement/Pages/e-Subscribe.aspx">
+<img alt="Subscribe to recieve email notifications" src="https://olis.leg.state.or.us/liz/Images/social-footer-esub.png"/>
+</a>
+</div>
+<div class="links">
+<a href="https://www.oregonlegislature.gov/Pages/disclaimer.aspx">Disclaimer</a>
+                    | <a href="https://www.oregonlegislature.gov/Pages/universalAccess.aspx">Universal Access</a>
+                    | <a href="https://www.oregonlegislature.gov/la/Pages/employment.aspx">Employment</a>
+                    | <a href="http://www.oregon.gov/Pages/index.aspx">Oregon.Gov</a>
+<!-- |
+                    <a href="/_layouts/authenticate.aspx" onclick="document.location='/_layouts/authenticate.aspx?Source='+document.location.href; return false;">
+                        Sign in
+                    </a> -->
+</div>
+</div>
+</footer>
+</div>
+</div>
+<form action="/liz/2018R1/Account/LogOff" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="e2J3Oq4WM-EPPcNsKbmf-cpmywshQAyFo6W9uE_2CuofPZ1pVhTxz97PC3EZJr_iujDMX_rVlfEZ826TniXVkqiBF6IT5peVmQdVt67ab_I1"/></form>
+<script>
+         var CSharpConstants = {
+            sponsorSearch: '/liz/2018R1/Navigation/BillSponsorSearch',
+            collapseStateSave: '/liz/2018R1/Home/SaveCollapseState'
+         };
+      </script>
+<script src="https://olis.leg.state.or.us/liz/2018R1/Measures/Overview/HB4135/liz/Scripts/Shared/_Layout.js"></script>
+<script src="https://olis.leg.state.or.us/liz/Scripts/knockout-3.4.2.js"></script>
+<script src="https://olis.leg.state.or.us/liz/2018R1/Measures/Overview/HB4135/liz/Areas/Measures/Scripts/Overview/sponsors.js"></script>
+<script src="https://olis.leg.state.or.us/liz/Scripts/googleAnalytics.js"></script>
+</body></html>

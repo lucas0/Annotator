@@ -1,0 +1,212 @@
+<html class="js" dir="ltr" lang="en" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><head>
+<meta charset="utf-8"/><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://embryo.asu.edu/sites/default/files/googleanalytics/analytics.js?pud6sy"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<link href="https://embryo.asu.edu/sites/embryo/themes/custom/embryo/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<meta content="Diprosopus (Craniofacial Duplication)" name="description"/>
+<meta content="Drupal 7 (http://drupal.org)" name="generator"/>
+<link href="https://embryo.asu.edu/pages/diprosopus-craniofacial-duplication" rel="canonical"/>
+<link href="https://embryo.asu.edu/node/15248" rel="shortlink"/>
+<title>Diprosopus (Craniofacial Duplication) | The Embryo Project Encyclopedia</title>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width" name="viewport"/>
+<style>
+@import url("https://embryo.asu.edu/modules/system/system.base.css?pud6sy");
+@import url("https://embryo.asu.edu/modules/system/system.messages.css?pud6sy");
+@import url("https://embryo.asu.edu/modules/system/system.theme.css?pud6sy");
+</style>
+<style>
+@import url("https://embryo.asu.edu/profiles/hps/modules/contributed/adaptive_image/css/adaptive-image.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/modules/contributed/date/date_api/date.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/modules/contributed/fences/field.css?pud6sy");
+@import url("https://embryo.asu.edu/modules/node/node.css?pud6sy");
+@import url("https://embryo.asu.edu/modules/user/user.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/modules/contributed/views/css/views.css?pud6sy");
+</style>
+<style>
+@import url("https://embryo.asu.edu/profiles/hps/modules/contributed/ctools/css/ctools.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/modules/contributed/lexicon/css/lexicon.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/modules/contributed/panels/css/panels.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/modules/contributed/print/print_ui/css/print_ui.theme.css?pud6sy");
+</style>
+<style>
+@import url("https://embryo.asu.edu/sites/embryo/themes/custom/embryo/css/normalize.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/themes/custom/hpszen/css/wireframes.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/themes/custom/hpszen/css/layouts/responsive.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/themes/custom/hpszen/css/tabs.css?pud6sy");
+@import url("https://embryo.asu.edu/sites/embryo/themes/custom/embryo/css/pages.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/themes/custom/hpszen/css/blocks.css?pud6sy");
+@import url("https://embryo.asu.edu/sites/embryo/themes/custom/embryo/css/navigation.css?pud6sy");
+@import url("https://embryo.asu.edu/sites/embryo/themes/custom/embryo/css/views-styles.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/themes/custom/hpszen/css/nodes.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/themes/custom/hpszen/css/comments.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/themes/custom/hpszen/css/forms.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/themes/custom/hpszen/css/fields.css?pud6sy");
+@import url("https://embryo.asu.edu/sites/embryo/themes/custom/embryo/css/slideshow.css?pud6sy");
+@import url("https://embryo.asu.edu/profiles/hps/themes/custom/hpszen/css/print.css?pud6sy");
+</style>
+<script>document.cookie = 'adaptive_image=' + Math.max(screen.width, screen.height) + '; path=/';</script>
+<script src="https://embryo.asu.edu/profiles/hps/modules/contributed/jquery_update/replace/jquery/1.5/jquery.min.js?v=1.5.2"></script>
+<script src="https://embryo.asu.edu/misc/jquery-extend-3.4.0.js?v=1.5.2"></script>
+<script src="https://embryo.asu.edu/misc/jquery.once.js?v=1.2"></script>
+<script src="https://embryo.asu.edu/misc/drupal.js?pud6sy"></script>
+<script src="https://embryo.asu.edu/sites/all/modules/google_analytics/googleanalytics.js?pud6sy"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://embryo.asu.edu/sites/default/files/googleanalytics/analytics.js?pud6sy","ga");ga("create", "UA-38074049-1", {"cookieDomain":"auto"});ga("send", "pageview");</script>
+<script src="https://embryo.asu.edu/profiles/hps/themes/custom/hpszen/js/script.js?pud6sy"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"embryo","theme_token":"zAaq92DQjWQVCCN56pDGGr9waWlQkvv_fnfLWZ9KPFw","js":{"0":1,"profiles\/hps\/modules\/contributed\/jquery_update\/replace\/jquery\/1.5\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"1":1,"profiles\/hps\/themes\/custom\/hpszen\/js\/script.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"profiles\/hps\/modules\/contributed\/adaptive_image\/css\/adaptive-image.css":1,"profiles\/hps\/modules\/contributed\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"profiles\/hps\/modules\/contributed\/views\/css\/views.css":1,"profiles\/hps\/modules\/contributed\/ctools\/css\/ctools.css":1,"profiles\/hps\/modules\/contributed\/lexicon\/css\/lexicon.css":1,"profiles\/hps\/modules\/contributed\/panels\/css\/panels.css":1,"profiles\/hps\/modules\/contributed\/print\/print_ui\/css\/print_ui.theme.css":1,"profiles\/hps\/themes\/custom\/hpszen\/system.menus.css":1,"sites\/embryo\/themes\/custom\/embryo\/css\/normalize.css":1,"profiles\/hps\/themes\/custom\/hpszen\/css\/wireframes.css":1,"profiles\/hps\/themes\/custom\/hpszen\/css\/layouts\/responsive.css":1,"profiles\/hps\/themes\/custom\/hpszen\/css\/page-backgrounds.css":1,"profiles\/hps\/themes\/custom\/hpszen\/css\/tabs.css":1,"sites\/embryo\/themes\/custom\/embryo\/css\/pages.css":1,"profiles\/hps\/themes\/custom\/hpszen\/css\/blocks.css":1,"sites\/embryo\/themes\/custom\/embryo\/css\/navigation.css":1,"sites\/embryo\/themes\/custom\/embryo\/css\/views-styles.css":1,"profiles\/hps\/themes\/custom\/hpszen\/css\/nodes.css":1,"profiles\/hps\/themes\/custom\/hpszen\/css\/comments.css":1,"profiles\/hps\/themes\/custom\/hpszen\/css\/forms.css":1,"profiles\/hps\/themes\/custom\/hpszen\/css\/fields.css":1,"sites\/embryo\/themes\/custom\/embryo\/css\/slideshow.css":1,"profiles\/hps\/themes\/custom\/hpszen\/css\/print.css":1}},"urlIsAjaxTrusted":{"\/search":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});</script>
+<!--[if lt IE 9]>
+    <script src="/profiles/hps/themes/contributed/zen/js/html5-respond.js"></script>
+    <![endif]-->
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-15248 node-type-dspaced-entities-item section-pages page-panels node-view hpszen-primary-box">
+<p id="skip-link">
+<a class="element-invisible element-focusable" href="https://embryo.asu.edu/#content">Skip navigation</a>
+</p>
+<div id="page">
+<header id="header" role="banner">
+<a href="https://embryo.asu.edu/" id="logo" rel="home" title="Home"><img alt="Home" src="https://embryo.asu.edu/sites/embryo/themes/custom/embryo/logo.gif"/></a>
+<hgroup id="name-and-slogan">
+<h1 id="site-name">
+<a href="https://embryo.asu.edu/" rel="home" title="Home"><span>The Embryo Project Encyclopedia</span></a>
+</h1>
+<h2 id="site-slogan">Recording and contextualizing the science of embryos, development, and reproduction.</h2>
+</hgroup>
+<nav id="secondary-menu" role="navigation">
+<h2 class="element-invisible">User menu</h2><ul class="links"><li class="menu-login first last"><a href="https://embryo.asu.edu/user/login">Log in</a></li>
+</ul> </nav>
+<div class="header__region region region-header">
+<div class="block block-views first odd" id="block-views-exp-hps-search-page-search">
+<form accept-charset="UTF-8" action="/search" id="views-exposed-form-hps-search-page-search" method="get"><div><div class="views-exposed-form">
+<div class="views-exposed-widgets clearfix">
+<div class="views-exposed-widget views-widget-filter-search_api_views_fulltext" id="edit-text-wrapper">
+<label for="edit-text">
+            Search          </label>
+<div class="views-widget">
+<div class="form-item form-type-textfield form-item-text">
+<input class="form-text" id="edit-text" maxlength="128" name="text" placeholder="Search..." size="30" type="text" value=""/>
+</div>
+</div>
+<div class="description">
+            Enter keywords.          </div>
+</div>
+<div class="views-exposed-widget views-submit-button">
+<input class="form-submit" id="edit-submit-hps-search" name="" type="submit" value="Search"/> </div>
+</div>
+</div>
+</div></form>
+</div>
+<div class="block block-block last even" id="block-block-2">
+<p style="overflow: hidden;"><a href="https://giving.asu.edu/OrderApi__campaign?id=a1Y30000000sgEEEAY&amp;site=a0J3000000D2jwmEAB&amp;catalogid=a0V3000000B7zBB" style="display: block; width: 89px; float: right; margin-left: 0.5em;" target="_blank"><img alt="Donate to the Embryo Project Encyclopedia" class="hpszen-responsive" src="https://embryo.asu.edu/sites/default/files/hps/embryo_donate_button2.png"/><!--
+<a href="/info/rss" style="display: block; width: 32px; float: right; margin-left: 0.5em;"><img alt="Follow our RSS feeds to get the latest news, events and recent additions to the Embryo Project Encyclopedia." src="/sites/embryo/files/hps/rss_64x64.gif" class="hpszen-responsive"></a>
+--></a><a href="http://www.facebook.com/TheEmbryoProjectEncyclopedia" style="display: block; width: 32px; float: right; margin-left: 0.5em;"><img alt="Find the Embryo Project on Facebook." class="hpszen-responsive" src="https://embryo.asu.edu/sites/embryo/files/hps/facebook_64x64.png"/></a>
+<a href="http://twitter.com/embryoproject" style="display: block; width: 32px; float: right;"><img alt="Follow the Embryo Project on Twitter." class="hpszen-responsive" src="https://embryo.asu.edu/sites/embryo/files/hps/twitter_64x64.png"/></a></p>
+</div>
+</div>
+</header>
+<div id="main">
+<div class="hpszen-processed adjustnavigation-processed" id="navigation">
+<div class="region region-navigation">
+<div class="block block-system block-menu first last odd" id="block-system-main-menu" role="navigation">
+<h2 class="block__title block-title">Menu</h2>
+<ul class="menu"><li class="menu__item is-leaf first leaf"><a class="menu__link" href="https://embryo.asu.edu/home">Home</a></li>
+<li class="menu__item is-expanded expanded"><a class="submenu-toggle" href="https://embryo.asu.edu/#" title="Javascript trigger to add or remove this item's submenu from the visual display.">∨</a><a class="menu__link" href="https://embryo.asu.edu/info/about">About</a><ul class="menu element-invisible"><li class="menu__item is-leaf first leaf"><a class="menu__link" href="https://embryo.asu.edu/info/how-use-site">How to Use this Site</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/info/encyclopedia">The Encyclopedia</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/info/editorial-team">Editorial Team</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/info/embryo-project">The Embryo Project</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/info/original-research">Original Research</a></li>
+<li class="menu__item is-leaf last leaf"><a class="menu__link" href="https://embryo.asu.edu/info/use-our-tools">Use Our Tools</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded"><a class="submenu-toggle" href="https://embryo.asu.edu/#" title="Javascript trigger to add or remove this item's submenu from the visual display.">∨</a><a class="menu__link" href="https://embryo.asu.edu/browse/browse-topic">Browse by Topic</a><ul class="menu element-invisible"><li class="menu__item is-leaf first leaf"><a class="menu__link" href="https://embryo.asu.edu/info/reproductive-health-arizona" title="Content Related to Reproductive Health Arizona.">RHAZ</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/reproductive-health-arizona" title="Reproductive Health Arizona">Reproductive Health Arizona</a></li>
+<li class="menu__item is-expanded expanded"><a class="submenu-toggle" href="https://embryo.asu.edu/#" title="Javascript trigger to add or remove this item's submenu from the visual display.">∨</a><a class="menu__link" href="https://embryo.asu.edu/topics/science" title="Science">Science</a><ul class="menu element-invisible"><li class="menu__item is-leaf first leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/publications" title="Publications">Publications</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/technologies" title="Technologies">Technologies</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/processes" title="Processes">Processes</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/theories" title="Theories">Theories</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/experiments" title="Experiments">Experiments</a></li>
+<li class="menu__item is-leaf last leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/organisms" title="Organisms">Organisms</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded"><a class="submenu-toggle" href="https://embryo.asu.edu/#" title="Javascript trigger to add or remove this item's submenu from the visual display.">∨</a><a class="menu__link" href="https://embryo.asu.edu/topics/people-and-places" title="People and Places">People and Places</a><ul class="menu element-invisible"><li class="menu__item is-leaf first leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/organizations" title="Organizations">Organizations</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/people" title="People">People</a></li>
+<li class="menu__item is-leaf last leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/places" title="Places">Places</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded"><a class="submenu-toggle" href="https://embryo.asu.edu/#" title="Javascript trigger to add or remove this item's submenu from the visual display.">∨</a><a class="menu__link" href="https://embryo.asu.edu/topics/medicine" title="Medicine">Medicine</a><ul class="menu element-invisible"><li class="menu__item is-leaf first leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/reproduction" title="Reproduction">Reproduction</a></li>
+<li class="menu__item is-leaf last leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/disorders" title="Disorders">Disorders</a></li>
+</ul></li>
+<li class="menu__item is-expanded last expanded"><a class="submenu-toggle" href="https://embryo.asu.edu/#" title="Javascript trigger to add or remove this item's submenu from the visual display.">∨</a><a class="menu__link" href="https://embryo.asu.edu/topics/science-and-society" title="Science and Society">Science and Society</a><ul class="menu element-invisible"><li class="menu__item is-leaf first leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/outreach" title="Outreach">Outreach</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/legal" title="Legal">Legal</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/ethics" title="Ethics">Ethics</a></li>
+<li class="menu__item is-leaf last leaf"><a class="menu__link" href="https://embryo.asu.edu/topics/religion" title="Religion">Religion</a></li>
+</ul></li>
+</ul></li>
+<li class="menu__item is-expanded expanded"><a class="submenu-toggle" href="https://embryo.asu.edu/#" title="Javascript trigger to add or remove this item's submenu from the visual display.">∨</a><a class="menu__link" href="https://embryo.asu.edu/browse/browse-format" title="">Browse by Format</a><ul class="menu element-invisible"><li class="menu__item is-expanded first expanded"><a class="submenu-toggle" href="https://embryo.asu.edu/#" title="Javascript trigger to add or remove this item's submenu from the visual display.">∨</a><a class="menu__link" href="https://embryo.asu.edu/formats/multimedia" title="Multimedia">Multimedia</a><ul class="menu element-invisible"><li class="menu__item is-leaf first leaf"><a class="menu__link" href="https://embryo.asu.edu/formats/audio" title="Audio">Audio</a></li>
+<li class="menu__item is-leaf last leaf"><a class="menu__link" href="https://embryo.asu.edu/formats/video" title="Video">Video</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded"><a class="submenu-toggle" href="https://embryo.asu.edu/#" title="Javascript trigger to add or remove this item's submenu from the visual display.">∨</a><a class="menu__link" href="https://embryo.asu.edu/formats/text" title="Text">Text</a><ul class="menu element-invisible"><li class="menu__item is-leaf first leaf"><a class="menu__link" href="https://embryo.asu.edu/formats/essays-and-theses" title="Essays and Theses">Essays and Theses</a></li>
+<li class="menu__item is-leaf leaf"><a class="menu__link" href="https://embryo.asu.edu/formats/publications-ep" title="Publications on the EP">Publications on the EP</a></li>
+<li class="menu__item is-leaf last leaf"><a class="menu__link" href="https://embryo.asu.edu/formats/articles" title="Articles">Articles</a></li>
+</ul></li>
+<li class="menu__item is-expanded last expanded"><a class="submenu-toggle" href="https://embryo.asu.edu/#" title="Javascript trigger to add or remove this item's submenu from the visual display.">∨</a><a class="menu__link" href="https://embryo.asu.edu/formats/images" title="Images">Images</a><ul class="menu element-invisible"><li class="menu__item is-leaf first leaf"><a class="menu__link" href="https://embryo.asu.edu/formats/photographs" title="Photographs">Photographs</a></li>
+<li class="menu__item is-leaf last leaf"><a class="menu__link" href="https://embryo.asu.edu/formats/graphics" title="Graphics">Graphics</a></li>
+</ul></li>
+</ul></li>
+<li class="menu__item is-collapsed last collapsed"><a class="menu__link" href="https://embryo.asu.edu/search">Search</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="column" id="content" role="main">
+<a id="main-content"></a>
+<h1 class="title" id="page-title">Diprosopus (Craniofacial Duplication)</h1>
+<div class="panel-hpszen-primary-box">
+<div class="panel-pane pane-views-row">
+<div class="views-row views-row-1 node-15248">
+<div class="top">
+<div class="dc-creator">By: <span class="byline-value">Corinne DeRuiter</span></div>
+<div class="dc-date-created">Published: <span class="byline-value">2011-08-16</span></div>
+<div class="dc-subject-tag">Keywords: <span class="byline-value"><a datatype="" href="https://embryo.asu.edu/keywords/fetus" property="rdfs:label skos:prefLabel" typeof="skos:Concept">Fetus</a>, <a datatype="" href="https://embryo.asu.edu/keywords/congenital-disorders" property="rdfs:label skos:prefLabel" typeof="skos:Concept">Congenital disorders</a></span></div>
+</div>
+<div> <title>&lt;a href="/search?text=Diprosopus" title="" class="lexicon-term"&gt;Diprosopus&lt;/a&gt; (Craniofacial Duplication)</title><p><a class="lexicon-term" href="https://embryo.asu.edu/search?text=Diprosopus" title="">Diprosopus</a> is a congenital defect also known as craniofacial duplication. The exact description of diprosopus refers to a <a class="lexicon-term" href="https://embryo.asu.edu/search?text=fetus" title="">fetus</a> with a single trunk, normal limbs, and facial features that are duplicated to a certain degree. A less severe instance is when the <a class="lexicon-term" href="https://embryo.asu.edu/search?text=fetus" title="">fetus</a> has a duplicated nose and the eyes are spaced far apart. In the most extreme instances, the entire face is duplicated, hence the name diprosopus, which is Greek for two-faced. Fetuses with diprosopus often also lack brains (anencephaly), have <a class="lexicon-term" href="https://embryo.asu.edu/search?text=neural%20tube" title="">neural tube</a> defects, or heart malformations. In some cases, if the brain is formed, it may have duplicated structures. Most infants with diprosopus are stillborn and there are fewer than fifty cases documented since 1864.</p><p>Researchers have proposed several mechanisms to explain the phenomenon of craniofacial duplication. When two completed identical faces are present, researchers often class diprosopus as a rare variant of conjoined twinning. They consider the two faces to result from cranial bifurcation of the <a class="lexicon-term" href="https://embryo.asu.edu/search?text=notochord" title="">notochord</a> during <a class="lexicon-term" href="https://embryo.asu.edu/search?text=neurulation" title="">neurulation</a>. The bifurcation causes two vertebral axes and neural plates to develop alongside each other, complete with <a class="lexicon-term" href="https://embryo.asu.edu/search?text=neural%20crest" title="">neural crest</a> derivatives. Only 0.4 percent of <a class="lexicon-term" href="https://embryo.asu.edu/search?text=conjoined%20twins" title="">conjoined twins</a> have diprosopus.</p><p>Another possible cause for the anomaly is an increase in the expression of the protein Sonic hedgehog (SHH), which is essential for craniofacial patterning during development. In experiments on chicks, researchers replicated many of the phenotypes associated with craniofacial duplication by exposing the embryos to an excess of SHH. In those experiments, chicks were born with two beaks and the eyes spaced far apart. Too little SHH can also affect midline facial structuring, and cause the developing eyes to fuse together (<a class="lexicon-term" href="https://embryo.asu.edu/search?text=cyclopia" title="">cyclopia</a>). </p><p><a class="lexicon-term" href="https://embryo.asu.edu/search?text=Diprosopus" title="">Diprosopus</a> can be discovered <i>in utero</i> using technology such as <a class="lexicon-term" href="https://embryo.asu.edu/search?text=ultrasound" title="">ultrasound</a>, computer tomography (CT) scanning, <a class="lexicon-term" href="https://embryo.asu.edu/search?text=magnetic%20resonance%20imaging" title="">magnetic resonance imaging</a> (MRI), and MR angiography. One of the first indications of craniofacial duplication is polyhydramnios, a condition in which there is an abnormally high amount of amniotic fluid present within the <a class="lexicon-term" href="https://embryo.asu.edu/search?text=amniotic%20sac" title="">amniotic sac</a>. No treatment exists to cure diprosopus, although therapeutic <a class="lexicon-term" href="https://embryo.asu.edu/search?text=abortion" title="">abortion</a> is sometimes an option if the condition is discovered early enough in the <a class="lexicon-term" href="https://embryo.asu.edu/search?text=pregnancy" title="">pregnancy</a>. Because of the rarity of diprosopus, there are few treatment options or corrective surgery techniques documented.</p><p>Duplication of the face and its structures enables embryologists to hypothesize about the mechanism of the duplication. The diverse range of expression involving craniofacial duplication varies so much that it is possible that more than one mechanism may explain the phenomenon. Further examination of such cases may elucidate the mechanisms responsible for diprosopus, as well as the mechanisms responsible for normal development.</p>
+<div id="references">
+<h2>Sources</h2>
+<ol><li>D’Armiento, Massimo, Jessica Falleti, Maria Marilotti, and Pasquale Mertinelli. “Diprosopus Conjoined Twins: Radiologic, Autopic, and Histological Study of a Case,” <i>Fetal and Pediatric Pathology</i> 29 (2010): 431–38. </li>
+<li>Dhaliwal, Harjit, Paul Adinkra, Diane Ennis, and Pauline Green. “Monocephalus <a class="lexicon-term" href="https://embryo.asu.edu/search?text=Diprosopus" title="">Diprosopus</a> (Complete Craniofacial Duplication)  Associated with Hydrancephaly and Other Congenital Anomalies.” Priory Lodge Education Limited, 2007. <a href="http://priory.com/medicine/Birth_Abnormality.htm">http://priory.com/medicine/Birth_Abnormality.htm</a> (Accessed November, 16, 2010).</li>
+<li>Hannel, Stefan, Peter Schramm, Stefan Hassfeld, Hans Steiner, and Angelika Seitz. “Craniofacial Duplication (<a class="lexicon-term" href="https://embryo.asu.edu/search?text=Diprosopus" title="">Diprosopus</a>): CT, MR Imaging, and MR Angiography Findings—Case Report,” <i>Radiology</i> 226 (2003): 210–13. </li>
+<li>Okazaki, Joel, James Wilson, Stephen Holmes, and Linda Vandermark. “Diprosopus: Diagnosis <i>in Utero</i>,” <i>American Journal of Roentgenology</i> 149 (1987): 147–48. </li>
+<li>Turpin, Ivan, David Furnas, and Ragnar Amlie. “Craniofacial Duplication (<a class="lexicon-term" href="https://embryo.asu.edu/search?text=Diprosopus" title="">Diprosopus</a>),” <i>Plastic and Reconstructive Surgery</i> 67 (1981): 139–42.</li>
+</ol></div>
+</div>
+<h4>How to cite</h4>
+DeRuiter, Corinne, "Diprosopus (Craniofacial Duplication)". <em>Embryo Project Encyclopedia</em> (2011-08-16). ISSN: 1940-5030 http://embryo.asu.edu/handle/10776/2286.
+
+<p><a href="https://hpsrepository.asu.edu/handle/10776/2286">Show full item record</a></p>
+<h4>Publisher</h4>
+Arizona State University. School of Life Sciences. Center for Biology and Society. Embryo Project Encyclopedia.
+
+<h4>Rights</h4>
+<p>
+  © Arizona Board of Regents   Licensed as Creative Commons Attribution-NonCommercial-Share Alike 3.0 Unported (CC BY-NC-SA 3.0) http://creativecommons.org/licenses/by-nc-sa/3.0/ </p>
+<h4>Last modified</h4>
+<span class="date-display-single" content="2018-07-04T04:40:59-04:00" datatype="xsd:dateTime" property="dc:date">Wednesday, July 4, 2018 - 04:40</span>
+<h4>Topic</h4>
+<a datatype="" href="https://embryo.asu.edu/topics/disorders" property="rdfs:label skos:prefLabel" typeof="skos:Concept">Disorders</a>, <a datatype="" href="https://embryo.asu.edu/topics/reproduction" property="rdfs:label skos:prefLabel" typeof="skos:Concept">Reproduction</a>
+<h4>Subject</h4>
+Craniofacial Abnormalities;  Concept 
+    </div>
+</div>
+<div class="panel-pane pane-block pane-print-ui-print-links">
+<span class="print_html"><a class="print-page" href="https://embryo.asu.edu/print/pages/diprosopus-craniofacial-duplication" rel="nofollow" title="Display a printer-friendly version of this page."><span class="hpszen-responsive"><img alt="Printer-friendly version" class="print-icon print-icon-margin" height="16px" src="https://embryo.asu.edu/profiles/hps/modules/contributed/print/icons/print_icon.png" title="Printer-friendly version" typeof="foaf:Image" width="16px"/></span>Printer-friendly version</a></span><span class="print_pdf"><a class="print-pdf" href="https://embryo.asu.edu/printpdf/pages/diprosopus-craniofacial-duplication" rel="nofollow" title="Display a PDF version of this page."><span class="hpszen-responsive"><img alt="PDF version" class="print-icon print-icon-margin" height="16px" src="https://embryo.asu.edu/profiles/hps/modules/contributed/print/print_pdf/icons/pdf_icon.png" title="PDF version" typeof="foaf:Image" width="16px"/></span>PDF version</a></span>
+</div>
+</div>
+</div>
+</div>
+<footer class="region region-footer" id="footer">
+<div class="block block-menu first odd" id="block-menu-menu-hps-tertiary" role="navigation">
+<ul class="menu"><li class="menu__item is-leaf first last leaf"><a class="menu__link" href="https://embryo.asu.edu/contact" title="">Contact Us</a></li>
+</ul>
+</div>
+<div class="block block-block last even" id="block-block-7">
+<p>© 2018 Arizona Board of Regents</p><ul><li>The Embryo Project at Arizona State University, 1711 South Rural Road, Tempe Arizona 85287, United States   </li></ul>
+</div>
+</footer>
+</div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"330b60573e","applicationID":"2858868","transactionName":"MlZRMRQDWkdUABUMDQsccgYSC1taGhMAAgc6XlILBwVRRmoNDgEHOkVaABE9RFVSBg==","queueTime":0,"applicationTime":651,"atts":"HhFSR1wZSUk=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+</body></html>

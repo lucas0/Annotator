@@ -1,0 +1,53 @@
+<html lang="en"><head>
+<meta content="en_US" http-equiv="Content-Language"/>
+<script>
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', 'UA-5883199-3', 'auto');
+			ga('send', 'pageview');
+		</script>
+<script async="" src="https://www.google-analytics.com/analytics.js">
+</script>
+<script type="text/javascript">
+			(function () {
+				function isValidUrl(toURL) {
+					// Regex taken from welcome ad.
+					return (toURL || '').match(/^(?:https?:?\/\/)?(?:[^.(){}\\\/]*)?\.?forbes\.com(?:\/|\?|$)/i);
+				}
+
+				function getUrlParameter(name) {
+					name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+					var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+					var results = regex.exec(location.search);
+					return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+				};
+
+				function consentIsSet(message) {
+					console.log(message);
+					var result = JSON.parse(message.data);
+					if(result.message == "submit_preferences"){
+						var toURL = getUrlParameter("toURL");
+						if(!isValidUrl(toURL)){
+							toURL = "https://www.forbes.com/";
+						}
+						location.href=toURL;
+					}
+				}
+
+				var apiObject = {
+					PrivacyManagerAPI:
+					{
+						action: "getConsent",
+						timestamp: new Date().getTime(),
+						self: "forbes.com"
+					}
+				};
+				var json = JSON.stringify(apiObject);
+				window.top.postMessage(json,"*");
+				window.addEventListener("message", consentIsSet, false);
+			})();
+		</script>
+</head>
+<body><div consent="undefined" id="teconsent" style="display: block;">
+<script async="async" crossorigin="" id="truste_0.9275917348147162" src="//consent.truste.com/notice?domain=forbes.com&amp;c=teconsent&amp;behavior=expressed" type="text/javascript"></script>
+<script async="async" crossorigin="" src="https://consent.trustarc.com/asset/notice.js/v/v1.7-2" type="text/javascript"></script><a id="icon-id026977834835475467" lang="en" role="button" tabindex="0"><img alt="Cookie Preference" src="https://consent.trustarc.com/get?name=forbes.png" style="border: none; cursor: pointer;"/></a></div>
+<div class="truste_overlay" id="pop-div020667524475431076" style="background-color: rgb(0, 0, 0); opacity: 0.4; position: fixed; z-index: 1000000; width: 100%; height: 100%; top: 0px; left: 0px; overflow: hidden;"></div><div class="truste_box_overlay" id="pop-div202815271885675097" style='position: absolute; z-index: 2000000; top: 0px; left: 0px; bottom: 0px; right: 0px; border-radius: 5px; padding: 10px; background: url("https://consent.trustarc.com/get?name=trans.png"); width: 80%; max-width: 840px; min-width: 220px; margin: 20px auto; box-sizing: content-box; height: 270px;'><div aria-label="Your choices regarding the use of cookies on this site" class="truste_box_overlay_inner" id="pop-div30849862294930378" role="dialog" style="position: relative; width: 100%; height: 100%; outline: none;" tabindex="1"><img alt="transparent background" src="https://consent.trustarc.com/get?name=transparent.png" style="display: block; width: 100%; height: 100%;"/><iframe id="pop-frame06418335688318111" scrolling="no" src="https://consent-pref.trustarc.com/?type=forbes&amp;site=forbes.com&amp;action=notice&amp;country=de&amp;locale=en&amp;behavior=expressed&amp;layout=default_eu&amp;from=https://consent.trustarc.com/" style="border: 0px; border-radius: 2px; overflow: hidden; background: rgb(255, 255, 255); display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" tabindex="1" title="TrustArc Cookie Consent Manager"></iframe></div></div></body></html>

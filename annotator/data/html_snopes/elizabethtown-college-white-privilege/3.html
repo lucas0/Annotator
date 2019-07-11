@@ -1,0 +1,971 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://www.google-analytics.com/plugins/ua/linkid.js" type="text/javascript"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KSKHBZV"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://encyclopedia.ushmm.org/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://encyclopedia.ushmm.org/content/ar/article/jewish-badge-during-the-nazi-era" hreflang="ar" rel="alternate"/>
+<link href="https://encyclopedia.ushmm.org/content/es/article/jewish-badge-during-the-nazi-era" hreflang="es" rel="alternate"/>
+<link href="https://encyclopedia.ushmm.org/content/fr/article/jewish-badge-during-the-nazi-era" hreflang="fr" rel="alternate"/>
+<link href="https://encyclopedia.ushmm.org/content/pt-br/article/jewish-badge-during-the-nazi-era" hreflang="pt-br" rel="alternate"/>
+<link href="https://encyclopedia.ushmm.org/content/en/article/jewish-badge-during-the-nazi-era" hreflang="en" rel="alternate"/>
+<meta content="https://encyclopedia.ushmm.org/content/en/article/jewish-badge-during-the-nazi-era" property="og:url"/>
+<meta content="Jewish Badge: During the Nazi Era" property="og:title"/>
+<meta content="Nazi officials implemented the Jewish badge (an identifying badge to mark Jews) between 1939 and 1945. They did so in systematic manner, as a prelude to deporting Jews to ghettos ..." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://encyclopedia.ushmm.org/images/large/315f3216-df2c-4856-a75c-c55ce3181d29.jpg" property="og:image"/>
+<meta content="800" property="og:image:width"/>
+<meta content="585" property="og:image:height"/>
+<meta content="Nazi officials implemented the Jewish badge (an identifying badge to mark Jews) between 1..." name="description"/>
+<meta content="Jewish Badge: During the Nazi Era" name="twitter:title"/>
+<meta content="Nazi officials implemented the Jewish badge (an identifying badge to mark Jews) between 1939 and 1945. They did so in systematic manner, as a prelude to deporting Jews to ghettos ..." name="twitter:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://encyclopedia.ushmm.org/images/large/315f3216-df2c-4856-a75c-c55ce3181d29.jpg" name="twitter:image"/>
+<meta content="800" property="twitter:image:width"/>
+<meta content="585" property="twitter:image:height"/>
+<meta content="@HolocaustMuseum" name="twitter:site"/>
+<meta content="en" name="langcode"/>
+<meta content="11750" name="stemId"/>
+<title>
+                    Jewish Badge: During the Nazi Era | The Holocaust Encyclopedia
+            </title>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KSKHBZV');</script>
+<link href="https://encyclopedia.ushmm.org/css/A.main.css,,qid==a8b0bf7d5f0179fbc2de+global-footer.css,,qid==06b908daffe98d20280b+article.css,,qid==bbf2db471deabbf1f6e8+title-area.css,,qid==b5a0ddf3ed46e340fe93+tools-bar.css,,qid==3b785d2f4237e777d9c9+related-content.css,,qid==2e7423e23171fb34da56+series.css,,qid==8f05c180c88eb1d991e0+critical-thinking-questions.css,,qid==81b40727dd38361151f8,Mcc.7OKOV5Ob7L.css.pagespeed.cf.pro-J2ceuN.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet"/>
+<link href="//cloud.typography.com/683468/6184392/css/fonts.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">#open-feedback{position:fixed;bottom:12px;right:12px;background:#ffc;z-index:10;padding:1em;text-align:center}#open-feedback a{font-size:1.35em}#open-feedback a span{color:#333}</style></head>
+<body class="">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-KSKHBZV" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<section class="" id="nav-box">
+<a aria-label="Close Nav Box" href="https://encyclopedia.ushmm.org/#" id="close-nav-box">
+<i aria-hidden="true" class="fa fa-times"></i>
+</a>
+<div class="nav-box-child" id="searchBox" title="search">
+<form action="https://encyclopedia.ushmm.org/search" method="get">
+<div class="search-bar-filters">
+<div class="content-inner">
+<h2 class="optical-shadow-orange pb-5px">Search the Encyclopedia</h2>
+<div class="flex-wrapper search-fields">
+<div class="input-group filters">
+<input aria-label="..." class="form-control" name="query" placeholder="Enter your search term here" type="text"/>
+<div class="input-group-btn content-types-search">
+<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+<span class="hidden-xs">Content Types</span>
+<span class="visible-xs"><i aria-hidden="true" class="fa fa-filter"></i></span>
+                             - <span class="filters-count" data-all-text="all ">all </span>
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu dropdown-filter">
+<li><label><input name="types[]" type="checkbox" value="33"/> Animated Map</label></li>
+<li><label><input name="types[]" type="checkbox" value="34"/> Article</label></li>
+<li><label><input name="types[]" type="checkbox" value="35"/> Artifact</label></li>
+<li><label><input name="types[]" type="checkbox" value="36"/> Document</label></li>
+<li><label><input name="types[]" type="checkbox" value="37"/> Film</label></li>
+<li><label><input name="types[]" type="checkbox" value="39"/> ID Card</label></li>
+<li><label><input name="types[]" type="checkbox" value="40"/> Map</label></li>
+<li><label><input name="types[]" type="checkbox" value="42"/> Oral History</label></li>
+<li><label><input name="types[]" type="checkbox" value="43"/> Photo</label></li>
+<li><label><input name="types[]" type="checkbox" value="47"/> Song</label></li>
+<li><label><input name="types[]" type="checkbox" value="48"/> Timeline</label></li>
+<li class="divider" role="separator"></li>
+<li><button class="btn btn-info clear-filter" type="button">Clear Selections</button></li>
+</ul>
+</div>
+<button class="btn btn-default input-group-btn hidden-xs" type="submit">Search</button>
+</div>
+</div>
+<button class="btn btn-default input-group-btn visible-xs mobile-submit" type="submit">Search</button>
+<div class="language-instruction">You are searching in <strong>English</strong>.
+                <div class="btn-group">
+<button class="btn btn-link dropdown-toggle" data-toggle="dropdown" type="button">
+                        Select another language(s)
+                    </button>
+<ul class="dropdown-menu dropdown-filter">
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="ar"/> عربي
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="el"/> Ελληνικά
+                                </label>
+</li>
+<li>
+<label>
+<input checked="" name="languages[]" type="checkbox" value="en"/> English
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="es"/> Español
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="fa"/> فارسی
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="fr"/> Français
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="hu"/> Magyar
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="id"/> Bahasa Indonesia
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="it"/> Italiano
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="ja"/> 日本語
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="ko"/> 한국어
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="pt-br"/> Português do Brasil
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="ru"/> русский
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="tr"/> Türkçe
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="ur"/> اُردو
+                                </label>
+</li>
+<li>
+<label>
+<input name="languages[]" type="checkbox" value="zh"/> 简体中文
+                                </label>
+</li>
+</ul>
+</div>
+                .
+            </div>
+</div>
+</div>
+</form>
+</div>
+<div class="nav-box-child" id="tagsBox">
+<h2>Tags</h2>
+<h3>Filter Tags:</h3>
+<ul class="pipe-separated" id="nav-tag-filter-letters">
+<li><a href="https://encyclopedia.ushmm.org/#" id="nav-show-all-tags">Show All</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">A</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">B</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">C</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">D</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">E</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">F</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">G</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">H</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">I</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">J</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">K</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">L</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">M</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">N</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">O</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">P</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">Q</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">R</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">S</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">T</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">U</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">V</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">W</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">X</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">Y</a></li>
+<li><a href="https://encyclopedia.ushmm.org/#">Z</a></li>
+</ul>
+<div class="tag-overflow">
+<ul class="tag-menu-grid">
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/aachen">Aachen</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/abba-kovner">Abba Kovner</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/adolf-eichmann">Adolf Eichmann</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/adolf-hitler">Adolf Hitler</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/african-americans">African Americans</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/aftermath-of-the-holocaust">aftermath of the Holocaust</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/aid">aid</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/albert-speer">Albert Speer</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/albums">albums</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/alfred-rosenberg">Alfred Rosenberg</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/aliyah-bet">Aliyah Bet</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/allied-powers">Allied powers</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/amsterdam">Amsterdam</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/anne-frank">Anne Frank</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/anti-jewish-legislation">anti-Jewish legislation</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/anti-nazi-opposition">anti-Nazi opposition</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/antisemitism">antisemitism</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/antwerp">Antwerp</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/architecture">architecture</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/armenian-genocide">Armenian genocide</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/art">art</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/artists">artists</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/assassination-attempts">assassination attempts</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/athletes-and-sports">athletes and sports</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/auschwitz">Auschwitz</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/austria">Austria</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/authors">authors</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/axis-alliance">Axis alliance</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/babi-yar">Babi Yar</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/badges">badges</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/baldur-von-schirach">Baldur von Schirach</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/baltic-countries">Baltic countries</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/beer-hall-putsch">Beer Hall Putsch</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/belgium">Belgium</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/belongings">belongings</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/belzec">Belzec</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/benjamin-ferencz">Benjamin Ferencz</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/bergen-belsen">Bergen-Belsen</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/berlin">Berlin</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/bialystok">Bialystok</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/bielski-partisans">Bielski partisans</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/boats">boats</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/book-burning">book burning</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/bosnia">Bosnia</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/boycotts">boycotts</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/breendonk">Breendonk</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/brihah">brihah</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/buchenwald">Buchenwald</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/budapest">Budapest</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/bulgaria">Bulgaria</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/camps">camps</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/chelmno">Chelmno</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/children">children</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/childrens-diaries">children's diaries</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/china">China</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/churches">churches</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/clergy">clergy</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/collaboration">collaboration</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/concentration-camps">concentration camps</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/conferences">conferences</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/crematoria">crematoria</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/croatia">Croatia</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/cuba">Cuba</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/culture">culture</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/cyprus">Cyprus</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/czechoslovakia">Czechoslovakia</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/d-day">D-Day</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/dachau">Dachau</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/danube-river">Danube River</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/danzig">Danzig</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/darfur">Darfur</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/death-marches">death marches</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/denazification">denazification</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/denial">denial</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/denmark">Denmark</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/denunciation">denunciation</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/deportations">deportations</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/der-stuermer">Der Stürmer</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/diaries">diaries</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/diplomats">diplomats</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/displaced-persons">displaced persons</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/displaced-persons-camps">displaced persons camps</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/doctors-trial">Doctors Trial</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/documenting-the-holocaust">documenting the Holocaust</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/dora-mittelbau">Dora-Mittelbau</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/drancy">Drancy</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/eastern-front">eastern front</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/ebensee">Ebensee</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/einsatzgruppen">Einsatzgruppen</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/elections">elections</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/elie-wiesel">Elie Wiesel</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/emigration">emigration</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/ernst-kaltenbrunner">Ernst Kaltenbrunner</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/escape">escape</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/estonia">Estonia</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/eugenics">eugenics</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/euthanasia-program">Euthanasia Program</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/exodus-1947">Exodus 1947</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/film">film</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/final-solution">Final Solution</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/flossenbuerg">Flossenbürg</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/forced-labor">forced labor</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/forced-labor-camps">forced-labor camps</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/france">France</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/franklin-d-roosevelt">Franklin D. Roosevelt</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/freemasonry">freemasonry</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/gardelegen">Gardelegen</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/genocide">genocide</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/george-kadish">George Kadish</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/german-military">German military</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/german-soviet-pact">German-Soviet Pact</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/germany">Germany</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/gestapo">Gestapo</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/ghettos">ghettos</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/great-depression">Great Depression</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/greece">Greece</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/gross-rosen">Gross-Rosen</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/gunskirchen">Gunskirchen</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/gurs">Gurs</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/gusen">Gusen</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/hadamar">Hadamar</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/haifa">Haifa</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/hamburg">Hamburg</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/hans-frank">Hans Frank</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/hartheim">Hartheim</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/heinrich-himmler">Heinrich Himmler</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/hermann-goering">Hermann Göring</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/hiding">hiding</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/hitler-youth">Hitler Youth</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/holocaust">Holocaust</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/hungary">Hungary</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/immigration">immigration</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/industry">industry</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/international-military-tribunal">International Military Tribunal</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/internment-camps">internment camps</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/invasion-of-poland">invasion of Poland</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/iran">Iran</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/israel">Israel</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/italy">Italy</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/jan-karski">Jan Karski</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/janowska">Janowska</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/japan">Japan</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/jasenovac">Jasenovac</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/jazz">Jazz</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/jdc">JDC</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/jehovahs-witnesses">Jehovah's Witnesses</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/jewish-brigade-group">Jewish Brigade Group</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/jewish-communities-before-the-war">Jewish communities before the war</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/jewish-councils">Jewish councils</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/jewish-resistance">Jewish resistance</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/joachim-von-ribbentrop">Joachim von Ribbentrop</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/joseph-goebbels">Joseph Goebbels</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/judaism">Judaism</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/juergen-stroop">Juergen Stroop</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/julien-bryan">Julien Bryan</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/julius-streicher">Julius Streicher</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/kaiserwald">Kaiserwald</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/kalisz">Kalisz</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/karl-doenitz">Karl Dönitz</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/kaufering">Kaufering</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/key-dates">key dates</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/kielce">Kielce</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/kiev">Kiev</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/killing-centers">killing centers</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/kindertransport">Kindertransport</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/klaus-barbie">Klaus Barbie</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/kovno">Kovno</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/krakow">Kraków</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/kristallnacht">Kristallnacht</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/latin-america">Latin America</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/latvia">Latvia</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/le-chambon-sur-lignon">Le Chambon-sur-Lignon</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/lebensraum">Lebensraum</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/legal-professions">legal professions</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/legislation">legislation</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/letters">letters</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/liberating-units">liberating units</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/liberation">liberation</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/lidice">Lidice</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/lisbon">Lisbon</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/lithuania">Lithuania</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/lodz">Lodz</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/lom">Lom</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/london">London</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/lublin">Lublin</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/luxembourg">Luxembourg</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/lvov">Lvov</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/macedonia">Macedonia</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/majdanek">Majdanek</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/malmedy">Malmedy</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/marseilles">Marseilles</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/mass-atrocities">mass atrocities</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/mass-shootings">mass shootings</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/mauthausen">Mauthausen</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/medical-experiments">medical experiments</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/medical-professions">medical professions</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/mein-kampf">Mein Kampf</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/mengele">Mengele</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/military-campaigns">military campaigns</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/minsk">Minsk</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/mir">Mir</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/monastir-bitola">Monastir (Bitola)</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/munich">Munich</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/munkacs">Munkács</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/music">music</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/musicians">musicians</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/nazi-camps">Nazi camps</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/nazi-hunting">Nazi hunting</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/nazi-party">Nazi Party</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/nazi-rise-to-power">Nazi rise to power</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/neuengamme">Neuengamme</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/new-york">New York</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/north-africa">North Africa</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/norway">Norway</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/nuremberg">Nuremberg</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/occupation">occupation</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/occupied-poland">occupied Poland</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/odessa">Odessa</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/ohrdruf">Ohrdruf</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/olympics">Olympics</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/operation-reinhard">Operation Reinhard</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/oradour">Oradour</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/oskar-schindler">Oskar Schindler</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/pacific-theater">Pacific theater</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/palestine">Palestine</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/paris">Paris</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/partisans">partisans</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/perpetrators">perpetrators</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/persecution-of-gays-and-lesbians">persecution of gays and lesbians</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/photographers">photographers</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/piotrkow-trybunalski">Piotrkow Trybunalski</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/plaszow">Płaszów</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/pogroms">pogroms</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/poland">Poland</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/police">police</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/political-prisoners">political prisoners</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/poniatowa">Poniatowa</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/portugal">Portugal</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/postcards">postcards</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/postwar">postwar</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/pows">POWs</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/prague">Prague</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/press">press</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/professions">professions</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/propaganda">propaganda</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/protocols-of-the-elders-of-zion">Protocols of the Elders of Zion</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/quakers">Quakers</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/quotations">quotations</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/racism">racism</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/radio">radio</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/radom">Radom</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/railroads">railroads</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/raoul-wallenberg">Raoul Wallenberg</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/ravensbrueck">Ravensbrück</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/red-cross">Red Cross</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/refugee-ships">refugee ships</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/refugees">refugees</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/reichstag">Reichstag</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/reinhard-heydrich">Reinhard Heydrich</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/remembrance">remembrance</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/reprisals">reprisals</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/rescue">rescue</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/rescuers">rescuers</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/resistance">resistance</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/rhine">Rhine</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/riga">Riga</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/righteous-among-the-nations">Righteous Among the Nations</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/roma">Roma</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/romania">Romania</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/rome">Rome</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/rudolf-hess">Rudolf Hess</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/rudolf-hoess">Rudolf Höss</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/rudolf-kasztner">Rudolf Kasztner</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/rwanda">Rwanda</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/sa">SA</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/sachsenhausen">Sachsenhausen</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/salonika">Salonika</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/school">school</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/schools">schools</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/sephardic-jews">Sephardic Jews</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/serbia">Serbia</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/shanghai">Shanghai</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/shoes">shoes</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/siedlce">Siedlce</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/sighet">Sighet</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/simon-wiesenthal">Simon Wiesenthal</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/skopje">Skopje</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/slonim">Slonim</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/slovakia">Slovakia</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/sobibor">Sobibor</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/soviet-pows">Soviet POWs</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/soviet-union">Soviet Union</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/spain">Spain</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/ss">SS</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/st-louis">St. Louis</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/stanislawow">Stanislawow</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/state-department">State Department</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/struma">Struma</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/students">students</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/stutthof">Stutthof</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/subcamps">subcamps</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/subsequent-nuremberg-proceedings">Subsequent Nuremberg Proceedings</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/sudan">Sudan</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/sudetenland">Sudetenland</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/swastika">swastika</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/sweden">Sweden</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/switzerland">Switzerland</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/synagogues">synagogues</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/szeged">Szeged</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/tarnopol">Tarnopol</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/tarnow">Tarnow</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/teddy-bears-and-toys">teddy bears and toys</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/the-netherlands">The Netherlands</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/theresienstadt">Theresienstadt</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/third-reich">Third Reich</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/transit-camps">transit camps</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/trawniki">Trawniki</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/treaty-of-versailles">Treaty of Versailles</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/treblinka">Treblinka</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/trials">trials</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/ukraine">Ukraine</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/united-kingdom">United Kingdom</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/united-states">United States</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/unrra">UNRRA</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/us-army">US Army</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/us-army-trials">US Army trials</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/velodrome-dhiver">Vélodrome d'Hiver</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/vienna">Vienna</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/vilna">Vilna</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/vittel">Vittel</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/volary">Volary</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/wannsee-conference">Wannsee Conference</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/war">war</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/war-crimes-trials">war crimes trials</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/war-refugee-board">War Refugee Board</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/warning-signs">warning signs</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/warsaw">Warsaw</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/warsaw-ghetto-uprising">Warsaw ghetto uprising</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/weimar-germany">Weimar Germany</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/westerbork">Westerbork</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/wilhelm-frick">Wilhelm Frick</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/wilhelm-keitel">Wilhelm Keitel</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/woebbelin">Wöbbelin</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/women">women</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/world-war-i">World War I</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/world-war-ii">World War II</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/writers">writers</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/youth">youth</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/yugoslavia">Yugoslavia</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/zdzieciol">Zdzieciol</a></li>
+<li><a href="https://encyclopedia.ushmm.org/tags/en/tag/zionism">Zionism</a></li>
+</ul>
+</div>
+</div>
+<div class="nav-box-child" id="menuBox">
+<h2>Menu</h2>
+<div class="btn-group" id="global-lang-switch">
+<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+                Language (English) <span class="caret"></span>
+</button>
+<ul class="dropdown-menu">
+<li>
+<a href="https://encyclopedia.ushmm.org/ar">عربي</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/el">Ελληνικά</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/en">English</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/es">Español</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/fa">فارسی</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/fr">Français</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/hu">Magyar</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/id">Bahasa Indonesia</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/it">Italiano</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/ja">日本語</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/ko">한국어</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/pt-br">Português do Brasil</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/ru">русский</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/tr">Türkçe</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/ur">اُردو</a>
+</li>
+<li>
+<a href="https://encyclopedia.ushmm.org/zh">简体中文</a>
+</li>
+</ul>
+</div>
+<div class="flex-wrapper menu-cols">
+<div class="hidden-xs" id="must-reads">
+<h4>Must Reads</h4>
+<ul>
+<li><a href="https://encyclopedia.ushmm.org/content/en/article/introduction-to-the-holocaust"><i aria-hidden="true" class="fa fa-angle-double-right"></i> Introduction to the Holocaust</a></li>
+<li><a href="https://encyclopedia.ushmm.org/content/en/article/nazi-propaganda"><i aria-hidden="true" class="fa fa-angle-double-right"></i> Nazi Propaganda</a></li>
+<li><a href="https://encyclopedia.ushmm.org/content/en/article/the-aftermath-of-the-holocaust"><i aria-hidden="true" class="fa fa-angle-double-right"></i> The Aftermath of the Holocaust</a></li>
+<li><a href="https://encyclopedia.ushmm.org/content/en/article/world-war-ii-in-europe"><i aria-hidden="true" class="fa fa-angle-double-right"></i> World War II in Europe</a></li>
+<li><a href="https://encyclopedia.ushmm.org/content/en/article/nazi-camps"><i aria-hidden="true" class="fa fa-angle-double-right"></i> Nazi Camps</a></li>
+<li><a href="https://encyclopedia.ushmm.org/content/en/article/antisemitism"><i aria-hidden="true" class="fa fa-angle-double-right"></i> Antisemitism</a></li>
+<li><a href="https://encyclopedia.ushmm.org/content/en/article/the-united-states-and-the-holocaust"><i aria-hidden="true" class="fa fa-angle-double-right"></i> The United States and the Holocaust</a></li>
+<li><a href="https://encyclopedia.ushmm.org/content/en/article/voyage-of-the-st-louis"><i aria-hidden="true" class="fa fa-angle-double-right"></i> Voyage of the St. Louis</a></li>
+<li><a href="https://encyclopedia.ushmm.org/content/en/article/documenting-numbers-of-victims-of-the-holocaust-and-nazi-persecution"><i aria-hidden="true" class="fa fa-angle-double-right"></i> Documenting Numbers of Victims of the Holocaust and Nazi Persecution</a></li>
+</ul>
+</div>
+<div class="flex-wrapper" id="projects-pages">
+<div class="overview-item flex-wrapper">
+<figure>
+<i aria-hidden="true" class="fa fa-tags"></i>
+</figure>
+<div>
+<a href="https://encyclopedia.ushmm.org/landing/en/tags">
+<h4>Tags</h4>
+<p>Find topics of interest and explore encyclopedia content related to those topics</p>
+</a>
+</div>
+</div>
+<div class="overview-item flex-wrapper">
+<figure>
+<i aria-hidden="true" class="fa fa-id-card"></i>
+</figure>
+<div>
+<a href="https://encyclopedia.ushmm.org/landing/en/id-cards">
+<h4>ID Cards</h4>
+<p>Explore the ID Cards to learn more about personal experiences during the Holocaust</p>
+</a>
+</div>
+</div>
+<div class="overview-item flex-wrapper">
+<figure>
+<i aria-hidden="true" class="fa fa-graduation-cap"></i>
+</figure>
+<div>
+<a href="https://encyclopedia.ushmm.org/content/en/article/an-overview-of-the-holocaust-topics-to-teach">
+<h4>For Teachers</h4>
+<p>Recommended resources and topics if you have limited time to teach about the Holocaust.</p>
+</a>
+</div>
+</div>
+<div class="overview-item flex-wrapper">
+<figure>
+<i aria-hidden="true" class="fa fa-image"></i>
+</figure>
+<div>
+<a href="https://encyclopedia.ushmm.org/en/a-z/landing">
+<h4>Browse A-Z</h4>
+<p>Find articles, photos, maps, films, and more listed alphabetically</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row mt-10">
+<div class="col-md-8 col-md-offset-4 text-center">
+<a class="btn btn-default" href="https://encyclopedia.ushmm.org/en/about">About This Site</a>
+</div>
+</div>
+</div>
+<div class="pt-100px nav-box-child" id="glossaryBox">
+<h2 class="text-center">Glossary</h2>
+<p class="w-700px max768-w-90pc mx-auto border-top-blue pt-10px fs-1_3em">
+<strong class="fs-1_1em"><span id="glossaryBox__term"></span>:</strong>
+<span id="glossaryBox__definition"></span>
+</p>
+<div class="row mt-10">
+<div class="col-md-12 text-center">
+<a class="btn btn-default" href="https://encyclopedia.ushmm.org/en/glossary">Full Glossary</a>
+</div>
+</div>
+</div>
+</section>
+<header>
+<div class="content-inner">
+<div class="logo-box">
+<a href="https://www.ushmm.org">
+<img alt="United States Holocaust Memorial Museum logo" src="https://encyclopedia.ushmm.org/images/USHMM_WhiteWhite.png.pagespeed.ce.uWP55BMMPv.png"/>
+</a>
+</div>
+<div class="" id="he-logo">
+<a aria-label="Holocaust Encyclopedia logo" href="https://encyclopedia.ushmm.org/en">
+<img alt="Holocaust Encyclopedia" class="hidden-xs" src="https://encyclopedia.ushmm.org/images/logo_v4.png.pagespeed.ce.c6owVfxi2G.png"/>
+</a>
+<a aria-label="Holocaust Encyclopedia logo" href="https://encyclopedia.ushmm.org/en">
+<img alt="Holocaust Encyclopedia" class="visible-xs" src="https://encyclopedia.ushmm.org/images/HE-LOGO-Mobile.png.pagespeed.ce.l-hlQweKte.png"/>
+</a>
+<h3>Jewish Badge: During the Nazi Era</h3>
+</div>
+<div id="nav-tools">
+<a aria-label="Open search box" data-original-title="Search" data-placement="bottom" data-title="searchBox" data-toggle="tooltip" href="https://encyclopedia.ushmm.org/#" id="navbar_open_search" title="">
+<i aria-hidden="true" class="fa fa-search"></i>
+</a>
+<a aria-label="Open tags" class="hidden-xs" data-original-title="Tags" data-placement="bottom" data-title="tagsBox" data-toggle="tooltip" href="https://encyclopedia.ushmm.org/#" id="navbar_open_tags" title="">
+<i aria-hidden="true" class="fa fa-tags"></i>
+</a>
+<a aria-label="Open menu" data-original-title="Menu" data-placement="bottom" data-title="menuBox" data-toggle="tooltip" href="https://encyclopedia.ushmm.org/#" id="navbar_open_menu" title="">
+<i aria-hidden="true" class="fa fa-bars"></i>
+</a>
+</div>
+</div>
+</header>
+<div class="content-wrapper">
+<section class="article-contents" id="story-body">
+<div class="top-section">
+<div class="title-area">
+<figure class="content-lead-img lead-image-start has-overview">
+<img alt="&lt;p&gt;Portrait of the Weidenfeld family wearing Jewish badges in the Czernowitz (Cernauti) ghetto shortly before their deportation to Transnistria. Pictured from left to right are Yetty, Meshulem-Ber, Sallie, and Simche Weidenfeld. Cernauti, Romania, October 1941.&lt;/p&gt;" class="lazy" data-src="https://encyclopedia.ushmm.org/images/large/edb76d2f-b23d-4838-8d63-18390973ac6d.jpg.pagespeed.ce.-JuyYbikcz.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+<div class="title-text w-100pc">
+<h1 class="black-text-shadow text-align-center pb-35px mx-auto">Jewish Badge: During the Nazi Era</h1>
+<div class="overview"><p>Nazi officials implemented the Jewish badge (an identifying badge to mark Jews) between 1939 and 1945. They did so in a systematic manner, as a prelude to deporting Jews to ghettos and killing centers in German-occupied eastern Europe.</p></div>
+</div>
+</figure>
+</div>
+</div>
+<div class="text-right">
+<a class="content-inner lightbox" data-featherlight-type="ajax" href="https://encyclopedia.ushmm.org/asset/4835/captioned?langcode=en&amp;t=1501854647" id="photo-details">More information about this image</a>
+</div>
+<div id="extended-story">
+<div class="content-inner flex-wrapper">
+<div class="story-flex">
+<div id="tools-bar">
+<ul>
+<li>
+<a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fencyclopedia.ushmm.org%2Fcontent%2Fen%2Farticle%2Fjewish-badge-during-the-nazi-era&amp;lang=en&amp;related=HolocaustMuseum&amp;via=HolocaustMuseum" target="_blank">
+<i aria-hidden="true" class="fa fa-twitter"></i>
+</a>
+<span>Twitter</span>
+</li>
+<li>
+<a aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fencyclopedia.ushmm.org%2Fcontent%2Fen%2Farticle%2Fjewish-badge-during-the-nazi-era" target="_blank">
+<i aria-hidden="true" class="fa fa-facebook"></i>
+</a>
+<span>Facebook</span>
+</li>
+<li>
+<a aria-label="How to cite museum materials" href="https://www.ushmm.org/collections/ask-a-research-question/how-to-cite-museum-materials" target="_blank">
+<i aria-hidden="true" class="fa fa-comment"></i>
+</a>
+<span>Cite</span>
+</li>
+<li>
+<a aria-label="Print" class="trigger-print" href="https://encyclopedia.ushmm.org/#">
+<i aria-hidden="true" class="fa fa-print"></i>
+</a>
+<span>Print</span>
+</li>
+<li class="tag-list">
+<ul class="list-unstyled">
+<li><h4>Tags</h4></li>
+<li><a class="he-tag" href="https://encyclopedia.ushmm.org/tags/en/tag/badges">badges</a></li>
+</ul>
+</li>
+<li class="language-list popper" data-target="article-lang-box">
+<a aria-label="Language switcher" data-title="Select a Language" href="https://encyclopedia.ushmm.org/#" id="language-switcher">
+<i aria-hidden="true" class="fa fa-globe"></i>
+</a>
+<span>English</span>
+<div class="nav-box-child" id="article-lang-box">
+<h3>This content is available in the following languages</h3>
+<div class="scroll-lang">
+<ul class="flex-wrapper">
+<li><a class="language-link" href="https://encyclopedia.ushmm.org/content/ar/article/jewish-badge-during-the-nazi-era">عربي</a></li>
+<li><a class="language-link" href="https://encyclopedia.ushmm.org/content/es/article/jewish-badge-during-the-nazi-era">Español</a></li>
+<li><a class="language-link" href="https://encyclopedia.ushmm.org/content/fr/article/jewish-badge-during-the-nazi-era">Français</a></li>
+<li><a class="language-link" href="https://encyclopedia.ushmm.org/content/pt-br/article/jewish-badge-during-the-nazi-era">Português do Brasil</a></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="story-flex">
+<div class="article-main-text" id="story-text">
+<h2>Summary: Historical Origins of the Jewish Badge</h2>
+<p>Over the course of more than ten centuries, Muslim caliphs, medieval bishops, and, eventually, Nazi leaders used an <a href="https://encyclopedia.ushmm.org/narrative/11767/en">identifying badge</a> to mark Jews.</p>
+<p>Decrees ordering identifying badges were rarely isolated acts. They were often part of a series of anti-Jewish measures designed to segregate Jews from the rest of the population and reinforce their inferior status.</p>
+<p>With the coming of the French Revolution in the 18th century and Jewish emanicipation in the 19th century, the "Jewish badge" disappeared in western Europe.</p>
+<p>When Nazi officials implemented the Jewish badge between 1939 and 1945, they did so in an intensified, systematic manner, as a prelude to deporting Jews to <a href="https://encyclopedia.ushmm.org/narrative/286/en">ghettos</a> and <a href="https://encyclopedia.ushmm.org/narrative/2746/en">killing centers</a> in German-occupied eastern Europe.</p>
+<h2>The Jewish Badge during the Nazi Era</h2>
+<p><img alt="Jewish children wearing the compulsory yellow badge." class="image-embed embedded-narrative" data-featherlight="/asset/11757/captioned?undefined" data-featherlight-type="ajax" data-narrative-langcode="en" data-narrative-slug="jewish-children-wearing-the-compulsory-yellow-badge" data-narrative-stem-id="11757" data-narrative-type-id="43" data-narrative-type-name="photo" data-narrative-width="full" src="https://encyclopedia.ushmm.org/narrative/11757/thumb.pagespeed.ce.RXwKI7Baw4.jpg"/></p>
+<p>During the Nazi era, German authorities reintroduced the Jewish badge as a key element in their plan to persecute and eventually to <a href="https://encyclopedia.ushmm.org/narrative/2816/en">destroy the Jewish population of Europe</a>. They used the badge not only to stigmatize and humiliate Jews but also to segregate them and to watch and control their movements. The badge also facilitated <a href="https://encyclopedia.ushmm.org/narrative/5041/en">deportation</a>.</p>
+<p>Nazi propaganda minister Josef Goebbels was the first to suggest a "general distinguishing mark" for German Jews in a memorandum in May 1938. Security Police chief <a href="https://encyclopedia.ushmm.org/narrative/10812/en">Reinhard Heydrich</a> reiterated the idea at a November 12, 1938, meeting convened by Herman Göring following <a href="https://encyclopedia.ushmm.org/narrative/4063/en"><em>Kristallnacht</em></a>. In both cases no immediate action was taken.</p>
+<h2>When and Where was the Jewish Badge Imposed?</h2>
+<p><img alt="White armband with blue Star of David" class="image-embed embedded-narrative" data-featherlight="/asset/2004/captioned?undefined" data-featherlight-type="ajax" data-narrative-langcode="en" data-narrative-slug="white-armband-with-blue-star-of-david-1" data-narrative-stem-id="2004" data-narrative-type-id="35" data-narrative-type-name="artifact" data-narrative-width="half" src="https://encyclopedia.ushmm.org/narrative/2004/thumb.pagespeed.ce.fy4FDhra3d.jpg"/>In September 1939, following the <a href="https://encyclopedia.ushmm.org/narrative/2103/en">German invasion of <strong>Poland</strong></a>, individual German military and civilian authorities imposed the Jewish badge in certain Polish towns and villages, the first being decreed in the town of Wloclawek on October 29, 1939. In the General Government, that part of Poland directly occupied by Germany, Governor General Hans Frank ordered on November 23, 1939, that all Jews over the age of ten wear a "Jewish Star": a white armband affixed with a blue six-sided star, worn over the right upper sleeve of one's outer garments. There were heavy penalties for those caught not wearing it.</p>
+<p>Immediately following the <a href="https://encyclopedia.ushmm.org/narrative/2972/en">German invasion of the <strong>Soviet Union</strong></a> on June 22, 1941, the Jewish badge was introduced, although there was no general order. A variety of badges were worn in different regions during the short time between the German invasion and the mass killing of Jews throughout the Soviet Union.</p>
+<p><img alt="An elderly German Jewish woman wearing the compulsory Jewish badge." class="image-embed embedded-narrative" data-featherlight="/asset/6502/captioned?undefined" data-featherlight-type="ajax" data-narrative-langcode="en" data-narrative-slug="an-elderly-german-jewish-woman-wearing-the-compulsory-jewish-badge" data-narrative-stem-id="6502" data-narrative-type-id="43" data-narrative-type-name="photo" data-narrative-width="half" src="https://encyclopedia.ushmm.org/narrative/6502/thumb.pagespeed.ce.2wbt67-Q4w.jpg"/>Then, on September 1, 1941, Reinhard Heydrich decreed that all Jews in <strong>the Reich </strong>six years of age or older were to wear a badge which consisted of a yellow Star of David on a black field to be worn on the chest, with the word "Jew" inscribed inside the star in German or in the local language. This applied to all German Jews and Jews in Germany's annexed territories: Alsace, Bohemia-Moravia and the <em>Warthegau </em>(the German-annexed territory of western Poland).</p>
+<p>In German-occupied western Europe, attempts to introduce the badge were met by varying degrees of opposition by the local population, officials, and even the German military.</p>
+<p>German occupiers imposed the badge in <a href="https://encyclopedia.ushmm.org/narrative/5505/en"><strong>Belgium </strong></a>and the <a href="https://encyclopedia.ushmm.org/narrative/5566/en"><strong>Netherlands </strong></a>in the spring of 1942. The German military commander in <a href="https://encyclopedia.ushmm.org/narrative/4997/en"><strong>France </strong></a>ordered all Jews over six years of age to wear, on the left side of the chest, a yellow star the size of a person's palm, with the inscription "<em>Juif" </em>inside. This ordinance was issued on June 7, 1942, although bureaucratic resistance on the part of French officials meant that a similar measure was never applied in Vichy France, even when German forces occuped those regions of France in November 1942.</p>
+<p>In <a href="https://encyclopedia.ushmm.org/narrative/4236/en"><strong>Denmark</strong></a>, the "Jewish badge" was never introduced. There is no truth to the much-repeated story that Danish King <a href="https://encyclopedia.ushmm.org/narrative/11567/en">Christian X</a> wore a yellow star in solidarity with the Jews. This myth may owe its origins to a remark the king is said to have made to his finance minister, Vilhelm Buhl, that if the Germans introduced the star in Denmark, "perhaps we should all wear it."</p>
+<p>In <a href="https://encyclopedia.ushmm.org/narrative/6313/en"><strong>Norway</strong></a>, the badge was never introduced, although after January 10, 1942 all Jews had to carry identification cards stamped with the letter "J."</p>
+<p>Many of Germany's allies followed the Nazis' lead and imposed variations of the badge upon their own Jewish populations. In <a href="https://encyclopedia.ushmm.org/narrative/6153/en"><strong>Croatia</strong></a>, following the appearance of German troops in Zagreb and the creation of an independent Croat Republic allied with Germany, Jews were ordered to wear a badge in May 1941. The badge was unusual in that it consisted of a large yellow rectangle with the Star of David in it and the letter Ž for <em>Židov</em>: ("Jew" in Croatian), or sometimes the word itself, at the bottom.</p>
+<p>In the <a href="https://encyclopedia.ushmm.org/narrative/10724/en"><strong>Slovak Republic</strong></a>, established in 1939 as a Roman Catholic ally of Nazi Germany, the badge was introduced on September 9, 1941, as part of comprehensive anti-Jewish legislation which redefined Jews along racial lines.</p>
+<p>In <a href="https://encyclopedia.ushmm.org/narrative/6206/en"><strong>Hungary</strong></a>, there was resistance to the badge, and it was not introduced until March 1944, after the <a href="https://encyclopedia.ushmm.org/narrative/6229/en">German invasion of the country</a> and the ouster of the Kallay government which had previously rejected the measure.</p>
+<p>The <a href="https://encyclopedia.ushmm.org/narrative/5955/en"><strong>Bulgarian </strong></a>cabinet ordered the wearing of the badge, which was made of yellow plastic, on August 26, 1942, but the measure was unpopular with Bulgarians. Noncompliance was widespread, with only a fifth of the Jews in Sofia wearing it.</p>
+<p>In <a href="https://encyclopedia.ushmm.org/narrative/6527/en"><strong>Romania</strong></a>, the yellow Star of David was introduced in the occupied provinces of Bessarabia and Bukovina from September 1941 and in Transnistria in July 1942. However, in the Regat (or the "Old Romanian Kingdom," because it represented the original pre-1914 borders of the country) there was little enthusiasm for the introduction of the badge, except in Moldova (Moldavia) where Jews were forced to wear the badge under German pressure beginning in May 1944.</p>
+<h2>Individual Exemptions</h2>
+<p>Certain individuals were exempted from wearing the badge, although such exceptions were more common in western than in eastern Europe. Those who were allowed to not wear the badge included, among others,</p>
+<ul>
+<li>foreign Jews, especially those from neutral countries</li>
+<li>Jews whose work was especially important to the Germans, such as managers of large workshops</li>
+<li>some officials of the Jewish councils</li>
+<li>collaborators</li>
+<li>and Jews of mixed marriages</li>
+</ul>
+<h2>Badges in the Camp System</h2>
+<p><img alt="Chart of Prisoner Markings" class="image-embed embedded-narrative" data-featherlight="/asset/5061/captioned?undefined" data-featherlight-type="ajax" data-narrative-langcode="en" data-narrative-slug="chart-of-prisoner-markings" data-narrative-stem-id="5061" data-narrative-type-id="35" data-narrative-type-name="artifact" data-narrative-width="half" src="https://encyclopedia.ushmm.org/narrative/5061/thumb.pagespeed.ce.5urnAe6Lws.jpg"/>The Germans implemented a complex system of<a href="https://encyclopedia.ushmm.org/narrative/5056/en"> identifying badges for inmates in concentration camps</a>, usually consisting of inverted triangles whose color denoted the category of the prisoner.</p>
+<p>Jews incarcerated in camps were marked with two yellow triangles forming a Star of David. Made of fabric, these were sewn onto camp clothing. Other categories of prisoners were identified by the red triangle (political prisoners), green (criminals), black (asocials), brown (Sinti-Roma, originally black), pink (homosexuals), among others.</p>
+<p>These categories could be further refined by combining them. Thus, a Jew incarcerated for political reasons would have a red triangle superimposed on a yellow triangle. For non-German nationals, a letter denoting the country of origin was placed inside the badge, such as a P for Polish prisoners.</p>
+<div class="font-italic clear-both article-metadata">
+</div>
+</div>
+</div>
+<div class="story-flex" id="relations">
+<section id="framing-questions">
+<h4>Discussion Questions</h4>
+<ul class="list-unstyled m-auto slick-initialized slick-slider" id="question-slider">
+<div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 300px; transform: translate3d(0px, 0px, 0px);"><li aria-hidden="false" class="slick-slide slick-current slick-active" data-slick-index="0" style="width: 300px;" tabindex="0">
+<h5><a href="https://encyclopedia.ushmm.org/content/en/question/how-did-the-nazis-and-their-collaborators-implement-the-holocaust" tabindex="0">How did the Nazis and their collaborators implement the Holocaust?</a></h5>
+</li></div></div>
+</ul>
+</section>
+<div id="related-content">
+<h4>See Also</h4>
+<div class="r-item">
+<figure>
+<a href="https://encyclopedia.ushmm.org/content/en/gallery/jewish-badge?parent=en%2F11750">
+<img alt="" class="lazy" src="https://encyclopedia.ushmm.org/images/thumb/b6e1a30e-0afc-4926-bc21-9f89d5643aa4.jpg.pagespeed.ce.J_4gT85geL.jpg" style=""/>
+<h5>
+<i class="fa fa-film"></i>
+<span class="type">Media Gallery</span>
+<span class="title">Jewish Badge</span>
+</h5>
+</a>
+</figure>
+</div>
+</div>
+<div class="related-content-list" id="related-websites">
+</div>
+<div class="hidden" id="matched-glossary-terms">
+<h4>Glossary Terms</h4>
+<ul class="list-unstyled mt-5"></ul>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto w-90pc" id="series">
+</div>
+<div class="hidden" id="footnotes">
+</div>
+</section>
+</div>
+<div id="open-feedback">
+<a aria-hidden="true" href="https://docs.google.com/forms/d/e/1FAIpQLSfPMrYmuqQuI04ilh8hT-NMC_DKiRKsbVXkjidOw49P-mK4Cw/viewform" target="_blank">
+<i aria-hidden="true" class="fa fa-commenting"></i> Feedback
+    </a>
+</div>
+<div class="donor-strip p-30px">
+<h4>Thank you for supporting our work</h4>
+<p class="pt-10px">
+        We would like to thank The Crown and Goodman Family and the Abe and Ida Cooper Foundation for supporting the ongoing
+        work to create content and resources for the Holocaust Encyclopedia.
+        <a href="https://encyclopedia.ushmm.org/en/about">View the list of all donors</a>.
+    </p>
+</div>
+<footer id="main-footer">
+<div class="content-inner">
+<div class="footer-left-side">
+<a href="//www.ushmm.org" name="United States Holocaust Memorial Museum logo">
+<img alt="United States Holocaust Memorial Museum logo" id="site-logo-footer" src="https://encyclopedia.ushmm.org/images/USHMM_WhiteWhite.png.pagespeed.ce.uWP55BMMPv.png"/>
+</a>
+<a href="//plus.google.com/100561664959124518865?rel=author" style="text-decoration: none; display:none;"></a>
+<p>
+                100 Raoul Wallenberg Place, SW<br/>
+                Washington, DC 20024-2126<br/>
+                Main telephone: 202.488.0400<br/>
+                TTY: 202.488.0406
+            </p>
+</div>
+<form>
+<label for="get-news2">Get the Latest News</label>
+<input aria-label="Email address" class="filled" id="get-news2" name="email" placeholder="Your e-mail address" type="email"/>
+<input aria-label="Postal Code" class="filled" id="get-news3" name="postalCode" placeholder="Postal Code" type="postalCode"/>
+<input aria-label="Submit button" class="btn" id="get-news4" name="submit-btn" type="button" value="Subscribe"/>
+</form>
+<div class="footer-menu-links-group">
+<div class="footer-menu-links">
+<a href="//www.ushmm.org/information/visit-the-museum/today-at-the-museum">Today at the Museum</a>
+<a href="//www.ushmm.org/information/visit-the-museum/plan-your-visit">Plan Your Visit</a>
+<a href="//www.ushmm.org/information/visit-the-museum/admission-tickets">Admission and Tickets</a>
+<a href="//www.ushmm.org/online/calendar/">Calendar of Events</a>
+<a href="//www.ushmm.org/support">Support the Museum</a>
+</div>
+<div class="footer-menu-links">
+<a href="//www.ushmm.org/learn/holocaust-encyclopedia">Holocaust Encyclopedia</a>
+<a href="//www.ushmm.org/learn/students">Information for Students</a>
+<a href="//www.ushmm.org/professionals-and-student-leaders">Resources for Professionals and Student Leaders</a>
+<a href="//www.ushmm.org/educators">Resources for Educators</a>
+<a href="//www.ushmm.org/research">Resources for Academics and Research</a>
+<a href="//collections.ushmm.org/search/">Collections Search</a>
+<a href="//www.ushmm.org/remember/the-holocaust-survivors-and-victims-resource-center">Holocaust Survivors and Victims Resource Center</a>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="footer-links">
+<ul>
+<li>
+<a href="//www.ushmm.org/information/about-the-museum">ABOUT THE MUSEUM</a>
+</li>
+<li>
+<a href="//www.ushmm.org/information/contact-the-museum">CONTACT THE MUSEUM</a>
+</li>
+<li>
+<a href="//www.ushmm.org/copyright-and-legal-information/terms-of-use">TERMS OF USE</a>
+</li>
+<li>
+<a href="//www.ushmm.org/copyright-and-legal-information/privacy-policy">PRIVACY</a>
+</li>
+<li>
+<a href="//www.ushmm.org/information/visit-the-museum/website-accessibility">ACCESSIBILITY</a>
+</li>
+<li>
+<a href="//www.ushmm.org/copyright-and-legal-information/legal-and-tax-status-information">LEGAL</a>
+</li>
+</ul>
+</div>
+</div>
+</footer>
+<script type="text/javascript">//<![CDATA[
+!function(r){var n=window.webpackJsonp;window.webpackJsonp=function(e,u,c){for(var f,i,p,a=0,l=[];a<e.length;a++)i=e[a],o[i]&&l.push(o[i][0]),o[i]=0;for(f in u)Object.prototype.hasOwnProperty.call(u,f)&&(r[f]=u[f]);for(n&&n(e,u,c);l.length;)l.shift()();if(c)for(a=0;a<c.length;a++)p=t(t.s=c[a]);return p};var e={},o={36:0};function t(n){if(e[n])return e[n].exports;var o=e[n]={i:n,l:!1,exports:{}};return r[n].call(o.exports,o,o.exports,t),o.l=!0,o.exports}t.m=r,t.c=e,t.d=function(r,n,e){t.o(r,n)||Object.defineProperty(r,n,{configurable:!1,enumerable:!0,get:e})},t.n=function(r){var n=r&&r.__esModule?function(){return r.default}:function(){return r};return t.d(n,"a",n),n},t.o=function(r,n){return Object.prototype.hasOwnProperty.call(r,n)},t.p="/",t.oe=function(r){throw console.error(r),r}}([]);
+//]]></script>
+<script src="https://encyclopedia.ushmm.org/js/main/vendor.js?id=1df21034da9b2dbef8c6" type="text/javascript"></script>
+<script src="https://encyclopedia.ushmm.org/js/main/main.js?id=26411ab05d4c29af5bc4" type="text/javascript"></script><script id="" type="text/javascript">(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-457019-1","ushmm.org");ga("require","linkid","linkid.js");ga("send","pageview");</script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">$.ajaxSetup({headers:{'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')}});window.HE={langcode:'en',direction:'ltr',beforePrint:[],newDataCount:0,isRtl:false}</script>
+<script src="https://encyclopedia.ushmm.org/js/main/article.js,qid==4f3913a63b6b38a2b006+title-area.js,qid==274203a63aa36e99291e+series.js,qid==0b3921272bd12ae6ae58.pagespeed.jc.l8033m_b5-.js"></script><script>eval(mod_pagespeed_zfZGn3xhw6);</script>
+<script>eval(mod_pagespeed_81alBUZYG1);</script>
+<script>eval(mod_pagespeed_tLLSkVFPzz);</script>
+<script type="text/javascript">$(document).ready(function(){$('#nav-tag-filter-letters li:not(#nav-show-all-tags) a').on('click',function(event){event.preventDefault();var $this=$(this);var letter=$this.text().toLowerCase();$('#nav-tag-filter-letters li').removeClass('selected');$this.closest('li').addClass('selected');$('#tagsBox .tag-menu-grid li').each(function(){var $this=$(this);$this.addClass('transparent');var liText=$this.children('a').text().toLowerCase();if(liText.startsWith(letter)){$this.removeClass('transparent').show();}else{$this.hide();}});return false;});$('#nav-show-all-tags').click(function(){$('#tagsBox .tag-menu-grid li').removeClass('transparent').show();return false;});});</script>
+<script type="text/javascript">//<![CDATA[
+webpackJsonp([29],{22:function(e,n,t){e.exports=t("j7CZ")},j7CZ:function(e,n){$(document).ready(function(){$("#get-news2, #get-news3").on("click",function(){$("#get-news4").val("Subscribe")}),$("#get-news4").on("click",function(){var e=$("#get-news2").val(),n=$("#get-news3").val();if(e){var t=new XMLHttpRequest;t.open("POST","https://www.ushmm.org/api/emailSubscribe",!0),t.setRequestHeader("Content-type","application/x-www-form-urlencoded"),t.send("formId=1198&email="+e+"&postalCode="+n),$("#get-news2").val(""),$("#get-news3").val(""),this.value="Thank You",window.open("https://engage.ushmm.org/subscription-confirmation.html","_blank")}else $("#get-news4").val("Enter your e-mail address")})})}},[22]);
+//]]></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"83f95c517c","applicationID":"351633534","transactionName":"Z1RSZBZXWRVRARZdDF4ecVMQX1gIHxAHWgdVQx1eBURFB0QLFFE=","queueTime":0,"applicationTime":382,"atts":"SxNREl5NShs=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<div aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible" role="log"></div><div aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible" role="log"></div><div aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible" role="log"></div></body></html>

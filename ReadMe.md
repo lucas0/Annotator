@@ -1,4 +1,4 @@
-#Start service in port 0.0.0.0
+# Start service in port 5000
 
 python3 manage.py runserver 0.0.0.0:5000
 

@@ -1,31 +1,16 @@
-#Start service in port 0.0.0.0
+# Commands
+
+## Start service in port 5000
 
 python3 manage.py runserver 0.0.0.0:5000
 
-# Issues to be addressed
-
-## ~~Reset User Database~~
+## Reset user database
 
 Using ```python manage.py flush```
 
-
-## ~~Skip ```save_annotation()``` if username has "test" in it~~
+# Issues to be addressed
 
 ## Make sure ```save_source.py``` is running
-
-## ~~Change radiobuttons to buttons~~
-
-Also add function to take care of setting value of op and submitting form
-
-## ~~Add print to see which rows are selected an if they are found~~
-
-## ~~Use shuffled samples dataframe in ```get_least_annotated_page()```~~
-
-Change shufling so that a new row is retrieved each time (to avoid infinite loops)
-
-## ~~Remove automatic annotation~~
-
-Instead just call the function again using ```aPage = none```
 
 ## Deal with Snopes "Learn More" message width issue
 

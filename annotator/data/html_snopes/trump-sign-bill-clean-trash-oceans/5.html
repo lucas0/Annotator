@@ -1,0 +1,381 @@
+<html class="js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><head>
+<script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script>
+		document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+		document.createElement('picture');
+	</script>
+<meta charset="utf-8"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQ4FUVdTCBAIVVFUBQUGVQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(21)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(21)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(21)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(21)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(21)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(16);n.exports={generateTraceHeader:r}},{}],11:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(12),u=t(10).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(15),w=t(14),v=window.XMLHttpRequest;s.features.xhr=!0,t(9),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],12:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],13:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],14:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],15:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],16:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],18:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],19:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],20:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],21:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:x,userAgent:d};t(13),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(20)},{}]},{},["loader",2,11,4,3]);</script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Remarks by President Trump at Signing of S. 3508, the "Save Our Seas Act of 2018" | The White House</title>
+<link href="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-signing-s-3508-save-seas-act-2018/" rel="canonical"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content='Remarks by President Trump at Signing of S. 3508, the "Save Our Seas Act of 2018" | The White House' property="og:title"/>
+<meta content="Oval Office 11:27 A.M. EDT THE PRESIDENT: Okay. Thank you very much. I very much appreciate your being here. We have hurricane reports on Hurricane Michael. Unbelievably destructive, powerful. The one good thing we can say — we were just discussing — is that it was the fastest hurricane anybody has seen. It just was …" property="og:description"/>
+<meta content="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-signing-s-3508-save-seas-act-2018/" property="og:url"/>
+<meta content="The White House" property="og:site_name"/>
+<meta content="https://facebook.com/whitehouse" property="article:publisher"/>
+<meta content="1790466490985150" property="fb:app_id"/>
+<meta content="https://www.whitehouse.gov/wp-content/uploads/2017/12/wh.gov-share-img_03-1024x538.png" property="og:image"/>
+<meta content="https://www.whitehouse.gov/wp-content/uploads/2017/12/wh.gov-share-img_03-1024x538.png" property="og:image:secure_url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Oval Office 11:27 A.M. EDT THE PRESIDENT: Okay. Thank you very much. I very much appreciate your being here. We have hurricane reports on Hurricane Michael. Unbelievably destructive, powerful. The one good thing we can say — we were just discussing — is that it was the fastest hurricane anybody has seen. It just was […]" name="twitter:description"/>
+<meta content='Remarks by President Trump at Signing of S. 3508, the "Save Our Seas Act of 2018" | The White House' name="twitter:title"/>
+<meta content="@whitehouse" name="twitter:site"/>
+<meta content="https://www.whitehouse.gov/wp-content/uploads/2017/12/wh.gov-share-img_03-1024x538.png" name="twitter:image"/>
+<meta content="@whitehouse" name="twitter:creator"/>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.whitehouse.gov\/","name":"The White House","alternateName":"White House","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.whitehouse.gov\/search\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/www.whitehouse.gov\/briefings-statements\/remarks-president-trump-signing-s-3508-save-seas-act-2018\/","sameAs":["https:\/\/facebook.com\/whitehouse","https:\/\/instagram.com\/whitehouse","https:\/\/www.youtube.com\/user\/whitehouse","https:\/\/twitter.com\/whitehouse"],"@id":"#organization","name":"The White House","logo":"https:\/\/www.whitehouse.gov\/wp-content\/uploads\/2017\/12\/wh.gov-share-img_03.png"}</script>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link crossorigin="" href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://www.whitehouse.gov/wp-includes/css/dist/block-library/style.min.css?ver=5.2.1" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=latin-ext" id="google-fonts-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/dist/site.min.css?ver=37980d93" id="site-css" media="all" rel="stylesheet" type="text/css"/>
+<script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/dist/polyfills.min.js?ver=37980d93" type="text/javascript"></script>
+<script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/vendor/picturefill/dist/picturefill.min.js?ver=37980d93" type="text/javascript"></script>
+<link href="https://www.whitehouse.gov/favicon.ico?ver=37980d93" rel="icon" type="image/x-icon"/>
+<link href="https://www.whitehouse.gov/favicon-32x32.png?ver=37980d93" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://www.whitehouse.gov/favicon-16x16.png?ver=37980d93" rel="icon" sizes="16x16" type="image/png"/>
+<link href="https://www.whitehouse.gov/apple-touch-icon-precomposed.png?ver=37980d93" rel="apple-touch-icon-precomposed" sizes="180x180"/>
+<link href="https://www.whitehouse.gov/touch-icon-256x256.png?ver=37980d93" rel="icon" sizes="256x256" type="image/png"/>
+<link href="https://www.whitehouse.gov/touch-icon-192x192.png?ver=37980d93" rel="icon" sizes="192x192" type="image/png"/>
+<link href="https://www.whitehouse.gov/site.webmanifest?ver=37980d93" rel="manifest"/>
+<link color="#336799" href="https://www.whitehouse.gov/safari-pinned-tab.svg?ver=37980d93" rel="mask-icon"/>
+<meta content="The White House" name="apple-mobile-web-app-title"/>
+<meta content="The White House" name="application-name"/>
+<meta content="#0c2644" name="msapplication-TileColor"/>
+<meta content="#f5f5f5" name="theme-color"/>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-12099831-10"></script>
+<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-12099831-10');
+		window.gtag_id = 'UA-12099831-10';
+	</script>
+</head>
+<body class="briefing-statement-template-default single single-briefing-statement postid-112823">
+<a class="skip-link" href="https://www.whitehouse.gov/#main-content"><span>Skip to content</span></a>
+<div class="body-overflow">
+<header class="header header--has-share header--show">
+<div class="header__container">
+<div class="header__inner">
+<button class="header__hamburger" type="button">
+<b class="svg svg--hamburger" data-icon="hamburger" data-img-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/hamburger.png" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/hamburger.svg"><svg aria-label="Open Menu" height="20" role="img" viewbox="0 0 24 14" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M.64,12H16.36c.36,0,.64.43.64,1s-.28,1-.64,1H.64C.28,14,0,13.57,0,13s.28-1,.64-1M23.1,2H.9A.94.94,0,0,1,0,1,.94.94,0,0,1,.9,0H23.1A.94.94,0,0,1,24,1a.94.94,0,0,1-.9,1M.9,8A.94.94,0,0,1,0,7,.94.94,0,0,1,.9,6H23.1A.94.94,0,0,1,24,7a.94.94,0,0,1-.9,1Z" fill="#a98860"></path></svg><title>open-menu</title>
+</b> </button>
+<div class="header__wrap">
+<div class="header__logo">
+<a href="https://www.whitehouse.gov">
+<img alt="" class="logo--white" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-wh.png" srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-wh.png 1x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-md-wh.png 2x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-lg-wh.png 3x"/>
+<img alt="" class="logo--blue" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-bl.png" srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-bl.png 1x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-md-bl.png 2x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-lg-bl.png 3x"/>
+<span class="visually-hidden">White House Logo</span>
+</a>
+</div>
+<div class="header__share">
+<a class="header__share--copy" data-clipboard-text="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-signing-s-3508-save-seas-act-2018/?utm_source=link&amp;utm_medium=header" href="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-signing-s-3508-save-seas-act-2018/?utm_source=link&amp;utm_medium=header">
+<b class="svg svg--share-link" data-icon="share-link" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-link.svg"><svg aria-label="Copy URL to your clipboard" height="15" role="img" width="17"><g fill="#30669B"><path d="M3.96 9.65c.85.8 2 1.22 3.2 1.22 1.2 0 2.35-.43 3.2-1.22l.94-.88c.35-.33.35-.85 0-1.2-.36-.32-.92-.32-1.28 0l-.94.9c-.5.47-1.2.74-1.92.74-.74 0-1.4-.26-1.93-.74L2.66 6.08c-1.07-1-1.07-2.6 0-3.6 1.08-.98 2.8-.98 3.85 0l.84.77c.35.33.9.33 1.27 0s.37-.85 0-1.2L7.8 1.3c-1.76-1.65-4.63-1.65-6.4 0-1.74 1.64-1.74 4.3 0 5.93l2.58 2.42zM5.7 6.25c-.35.33-.35.85 0 1.2.36.32.92.32 1.28 0l.94-.9c.5-.47 1.2-.74 1.92-.74s1.4.28 1.93.76l2.57 2.4c1.07 1 1.07 2.6 0 3.6-1.08 1-2.8 1-3.87 0l-.83-.77c-.36-.34-.92-.34-1.27 0-.36.32-.36.85 0 1.18l.82.77c.87.8 2.03 1.23 3.2 1.23 1.16 0 2.3-.42 3.2-1.23 1.76-1.65 1.76-4.3 0-5.96l-2.56-2.45c-.85-.8-2-1.22-3.2-1.22-1.2 0-2.35.43-3.2 1.22l-.94.9z"></path></g></svg><title>copy-url-to-your-clipboard</title></b> Share
+						</a>
+</div>
+<nav class="nav nav--primary header__nav"><ul class="nav__menu nav__menu--depth0 menu"><li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-692"><a class="nav__link" href="https://www.whitehouse.gov/issues/economy-jobs/">Economy</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-693"><a class="nav__link" href="https://www.whitehouse.gov/issues/national-security-defense/">National Security</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-16229"><a class="nav__link" href="https://www.whitehouse.gov/issues/budget-spending/">Budget</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-16236"><a class="nav__link" href="https://www.whitehouse.gov/issues/immigration/">Immigration</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-148559"><a class="nav__link" href="https://www.whitehouse.gov/opioids/">The Opioid Crisis</a></li>
+</ul></nav> </div>
+<a class="header__search" href="https://www.whitehouse.gov/search/">
+<span class="visually-hidden">Search WhiteHouse.gov</span>
+<b class="svg svg--search" data-icon="search" data-img-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/search.png" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/search.svg"><svg aria-label="Open Search" height="20" role="img" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><title>open-search</title>
+<path d="M20,18.7l-5.1-5.1c2.6-3.3,2.4-8.1-0.6-11.2C12.7,0.9,10.6,0,8.4,0C6.1,0,4,0.9,2.5,2.5
+	C0.9,4,0,6.1,0,8.4s0.9,4.3,2.5,5.9c1.6,1.6,3.7,2.5,5.9,2.5c1.9,0,3.8-0.7,5.3-1.8l5.1,5.1L20,18.7z M8.5,15
+	c-1.7,0-3.4-0.7-4.6-1.9C2.7,11.9,2,10.2,2,8.5s0.7-3.4,1.9-4.6C5.1,2.7,6.8,2,8.5,2c1.7,0,3.4,0.7,4.6,1.9c2.5,2.5,2.5,6.7,0,9.2
+	C11.9,14.3,10.2,15,8.5,15z" fill="#A98860"></path>
+</svg>
+</b> </a>
+</div>
+</div>
+</header>
+<main id="main-content">
+<div class="page-header page-header--small-title">
+<div class="page-header__wrap">
+<p class="page-header__section">
+				Remarks			</p>
+<h1 class="page-header__title">Remarks by President Trump at Signing of S. 3508, the “Save Our Seas Act of 2018”</h1>
+<div class="meta meta--mobile-wrap">
+<div class="meta__issue">
+<p class="issue-flag">
+<a href="https://www.whitehouse.gov/issues/land-agriculture/">
+			Land &amp; Agriculture		</a>
+</p>
+</div>
+<p class="meta__date">
+<span class="meta__label">Issued on:</span>
+<time>October 11, 2018</time>
+</p>
+</div>
+<span class="divider"><hr/><hr/></span>
+</div>
+</div>
+<div class="page-content">
+<div class="page-content__wrap">
+<div class="page-content__content editor">
+<aside class="editor__module editor__module--left editor__module--named editor__module-share"><div class="share">
+<ul>
+<li class="share__item share__label">
+							Share:
+					</li>
+<li class="share__item share__item--facebook">
+<a class="share__link share__link--facebook" href="https://www.facebook.com/dialog/share?app_id=1790466490985150&amp;display=popup&amp;quote=Remarks%20by%20President%20Trump%20at%20Signing%20of%20S.%203508%2C%20the%20%22Save%20Our%20Seas%20Act%20of%202018%22&amp;href=https%3A%2F%2Fwww.whitehouse.gov%2Fbriefings-statements%2Fremarks-president-trump-signing-s-3508-save-seas-act-2018%2F%3Futm_source%3Dfacebook" target="_blank">
+<b class="svg svg--share-facebook" data-icon="share-facebook" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-facebook.svg"><svg aria-label="Share this page on Facebook" height="18" role="img" width="10"><g fill="#30669B"><path d="M2.86 6.56V4.94c0-.6.1-1.15.3-1.68.2-.52.5-.97.84-1.35.36-.37.77-.67 1.25-.9.47-.22.98-.33 1.52-.33H9.4v3.2H6.76c-.15 0-.3.1-.44.3-.13.2-.2.43-.2.7v1.7H9.4V9.8H6.12v7.92H2.86V9.82H.24V6.56h2.62z"></path></g></svg><title>share-this-page-on-facebook</title></b> </a>
+</li>
+<li class="share__item share__item--twitter">
+<a class="share__link share__link--twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.whitehouse.gov%2Fbriefings-statements%2Fremarks-president-trump-signing-s-3508-save-seas-act-2018%2F%3Futm_source%3Dtwitter&amp;text=Remarks%20by%20President%20Trump%20at%20Signing%20of%20S.%203508%2C%20the%20%22Save%20Our%20Seas%20Act%20of%202018%22&amp;via=whitehouse" target="_blank">
+<b class="svg svg--share-twitter" data-icon="share-twitter" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-twitter.svg"><svg aria-label="Share this page on Twitter" height="14" role="img" width="17"><path d="M16.75 2.13c-.44.65-1 1.24-1.67 1.76v.38c0 1.1-.2 2.24-.63 3.4-.42 1.13-1.03 2.16-1.84 3.08-.8.93-1.8 1.67-2.98 2.25-1.18.6-2.54.88-4.08.88-.95 0-1.86-.14-2.72-.4-.87-.28-1.68-.66-2.44-1.14.13.02.26.03.4.03h.4c1.6 0 3-.48 4.16-1.42-.74-.02-1.4-.25-1.96-.7-.57-.42-.96-.98-1.16-1.65.22.06.43.1.6.1.18 0 .33-.02.47-.04.13-.02.28-.05.42-.1-.78-.15-1.42-.54-1.94-1.14-.5-.6-.76-1.32-.76-2.14v-.03c.22.12.46.2.7.28.26.08.54.1.86.1-.48-.28-.86-.67-1.12-1.16-.26-.48-.4-1.02-.4-1.62 0-.6.16-1.16.46-1.7.84 1.04 1.85 1.88 3.04 2.5 1.2.62 2.48.96 3.88 1.02-.06-.23-.08-.47-.08-.73 0-.46.08-.9.26-1.32.18-.42.42-.78.73-1.1.3-.3.66-.54 1.06-.72.4-.17.84-.26 1.3-.26.5 0 .96.1 1.37.3.4.2.77.44 1.1.76.36-.06.73-.16 1.1-.3.38-.16.72-.3 1.04-.48-.3.78-.78 1.4-1.47 1.84.35-.04.7-.1 1-.2.32-.1.63-.2.92-.33z" fill="#30669B"></path></svg><title>share-this-page-on-twitter</title></b> </a>
+</li>
+<li class="share__item share__item--clipboard">
+<a class="share__link share__link--copy" data-clipboard-text="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-signing-s-3508-save-seas-act-2018/?utm_source=link" href="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-signing-s-3508-save-seas-act-2018/?utm_source=link">
+<b class="svg svg--share-link" data-icon="share-link" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-link.svg"><svg aria-label="Copy URL to your clipboard" height="15" role="img" width="17"><g fill="#30669B"><path d="M3.96 9.65c.85.8 2 1.22 3.2 1.22 1.2 0 2.35-.43 3.2-1.22l.94-.88c.35-.33.35-.85 0-1.2-.36-.32-.92-.32-1.28 0l-.94.9c-.5.47-1.2.74-1.92.74-.74 0-1.4-.26-1.93-.74L2.66 6.08c-1.07-1-1.07-2.6 0-3.6 1.08-.98 2.8-.98 3.85 0l.84.77c.35.33.9.33 1.27 0s.37-.85 0-1.2L7.8 1.3c-1.76-1.65-4.63-1.65-6.4 0-1.74 1.64-1.74 4.3 0 5.93l2.58 2.42zM5.7 6.25c-.35.33-.35.85 0 1.2.36.32.92.32 1.28 0l.94-.9c.5-.47 1.2-.74 1.92-.74s1.4.28 1.93.76l2.57 2.4c1.07 1 1.07 2.6 0 3.6-1.08 1-2.8 1-3.87 0l-.83-.77c-.36-.34-.92-.34-1.27 0-.36.32-.36.85 0 1.18l.82.77c.87.8 2.03 1.23 3.2 1.23 1.16 0 2.3-.42 3.2-1.23 1.76-1.65 1.76-4.3 0-5.96l-2.56-2.45c-.85-.8-2-1.22-3.2-1.22-1.2 0-2.35.43-3.2 1.22l-.94.9z"></path></g></svg><title>copy-url-to-your-clipboard</title></b> </a>
+</li>
+</ul>
+</div>
+</aside>
+<aside class="editor__module editor__module--left editor__module--named editor__module-all"><div class="sidebar-button">
+<a class="sidebar-button__text" href="https://www.whitehouse.gov/news/"><img alt="menu" class="sidebar-button__icon" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/menu-large.svg"/>All News</a>
+</div>
+</aside>
+<p>Oval Office</p>
+<p>11:27 A.M. EDT</p>
+<p>THE PRESIDENT: Okay. Thank you very much. I very much appreciate your being here. We have hurricane reports on Hurricane Michael. Unbelievably destructive, powerful.</p>
+<p>The one good thing we can say — we were just discussing — is that it was the fastest hurricane anybody has seen. It just was speedy. If it wasn’t, there would be absolutely nothing left. It was incredibly powerful. You’ve seen the destruction.</p>
+<p>It’s moving through Georgia now at a much lesser pace both in terms of speed and in terms of its power — 50, 60-mile-an-hour winds. But some of those winds reached almost 200 miles an hour, which is unheard of. People are saying it’s the third most powerful that they’ve seen hit our country anywhere.</p>
+<p>We’ve done — I’ll tell you, FEMA has gotten rave reviews. The first responders, law enforcement — everybody has gotten rave reviews. I just spoke with Governor Scott. They’re very happy. Food is being now — following the hurricane — being now brought in. We have unbelievable large amounts of water and food and everything that people can want.</p>
+<p>The electric companies have been terrific. They’re already working. The roads are being cleared out. Many trees are in the path of the electric companies.</p>
+<p>The roads are being cleaned right now. They’re being — for the most part, they’re open enough to get the electric companies in. And a lot of electricity is already back on. Some of the off electricity is already back on. That’s in Florida. They’re following up in Georgia.</p>
+<p>A lot of water will be in North and South Carolina, added to the horrible situation they had with Florence two weeks ago. But they’re incredible people and they know how to do it. They’ve done it before and they’ll do it again. But they know how to do it.</p>
+<p>So we’ve had great reports in everything. The only — the big problem with this hurricane was the tremendous power. And fortunately, it was very fast. It went through Florida very, very quickly. It didn’t linger. It didn’t come back as we had in Texas, where it actually came back a second time and then a third time. It went out, filled up, came back. This one went very quickly. But it’s tremendous destruction in the areas where it — the path that it chose is incredible, the kind of destruction. We’ve not seen destruction like that in a long time.</p>
+<p>But it’s — the rebuilding, I can actually say — the rebuilding process and the survivor-looking process, we hope we don’t have too much of that. The area most affected was, hopefully, 100 percent evacuated, but there’s always somebody that stays. And in this case, they would have been in big trouble.</p>
+<p>But so far, the reports, as you know, are very good. So I want to thank you for that.</p>
+<p>And I don’t know if you have any questions on the hurricane. Does anybody have any questions?</p>
+<p>Q Do you have enough time to focus on the hurricane? You have a very busy day at the White House. Obviously, Kanye West is here and —</p>
+<p>THE PRESIDENT: Yeah, I do. I have a very busy day today. We’re doing — as you know, we’re doing — having to do with copyright music. We’re doing, right now, the Save Our Seas Act of 2018, which is a very important thing. But I — and yesterday I had a tremendous rally in Pennsylvania, and we had thousands of people lined up. And I just couldn’t — you couldn’t tell those people — and they were there for a day and a half before.</p>
+<p>And I couldn’t tell people that had been standing in line for a day and a half, wanting to get into the arena, that I’m not going. I went there. We had great control over what we were doing both on Air Force One, at the White House, and in Florida.</p>
+<p>And I think you’re seeing we’re getting tremendous marks for the job that we did. And I wasn’t going to disappoint thousands and thousands of people who have been standing in line for, in some cases, a day and a half. I wasn’t going to do that.</p>
+<p>But I think we’ve really, really done a job. This is a particularly busy day because we’re signing a number of bills. Very different kinds of bills. So you’ll be seeing me a little while later, I think with a couple of the senators standing behind me right now. And you’ll be seeing me and us in a little while.</p>
+<p>And we’re having lunch with Jim Brown, one of the great football players of all time and a great guy, and Kanye West. He’s coming in — they’re coming in for lunch. And after that, we’re doing some additional interesting things.</p>
+<p>But we have a busy day. But I always have a busy day.</p>
+<p>And the economy is doing really well. Jobs are looking — we think jobs are going to be better than ever. And we think records are broken already, but we’re going to continue to break the records.</p>
+<p>So let’s talk about the Save Our Seas Act, if we could. And again, thank you all for being here. I want to thank also the members of Congress that are with us. That’s Senator Dan Sullivan, who’s been absolutely terrific; worked along with Sheldon Whitehouse. And these two have been spearheading something that’s very important, and we want to thank you both.</p>
+<p>Sheldon, thank you very much.</p>
+<p>SENATOR WHITEHOUSE: Thank you, Mr. President.</p>
+<p>THE PRESIDENT: Thank you very much. We appreciate it. Really do. I know you worked very hard on that.</p>
+<p>SENATOR WHITEHOUSE: Worked well together.</p>
+<p>THE PRESIDENT: And, Mr. Sullivan, thank you very much for being here. We appreciate it very much.</p>
+<p>We have Secretary of Commerce Wilbur Ross who worked along with the senators, and Acting NOAA Administrator Admiral Tim Gallaudet. You’re here, and thank you for being here, Tim. Thank you very much. Great job you’re doing.</p>
+<p>Every year, over 8 million tons of garbage is dumped into our beautiful oceans by many countries of the world. That includes China, that includes Japan, and that includes many, many countries.</p>
+<p>This waste, trash, and debris harms not only marine life, but also fishermen, coastal economies along America’s vast stretches. The bad news is it floats toward us. I’ve seen pictures recently, and some of you have seen them, where there’s — a vast, tremendous, unthinkable amount of garbage is floating right into our coast, in particular along the West Coast.</p>
+<p>And we’re charged with removing it, which is a very unfair situation. It comes from other countries very far away. It takes six months and a year to float over, but it gets here, and it’s a very unfair situation. It’s also unbelievably bad for the oceans.</p>
+<p>Every year, over 8 million tons of garbage is dumped into our beautiful oceans. And when you think of that number — I mean, to think 8 million tons — and I would say it’s probably — Senators, I think it’s probably more than that, based on what I’ve seen and based on the kind of work that I’ve seen being done.</p>
+<p>This dumping has happened for years and even for decades. Previous administrations did absolutely nothing to take on the foreign countries responsible. We’ve already notified most of them and we’ve notified them very strongly.</p>
+<p>The Save Our Seas Act will help address this problem by extending the Marine Debris Program for five additional years. We also are strengthening that up to improve waste management overseas and clean up our nation’s water. We will boost the federal government’s response to ocean waste by authorizing the National Oceanic and Atmospheric Administration to declare severe marine debris events, which happen all the time. It’s incredible. It’s incredible when you look at it. People don’t realize it, but all the time we’re being inundated by debris from other countries.</p>
+<p>This legislation will release funds to states for cleanup and for response efforts. And we will be responding and very strongly.</p>
+<p>The legislation also encourages the executive branch to engage with those nations responsible for dumping garbage into our oceans. My administration is doing exactly that. For example, the new United States-Mexico-Canada Agreement is the first U.S. trade agreement ever to include commitments by the parties to cooperate to address land- and sea-based pollution and improve waste management.</p>
+<p>And I can tell you that Dan and Sheldon were very insistent on trying to get that into the USMCA, the new agreement that we have with Canada and Mexico. And we’ll be putting it into other agreements also.</p>
+<p>The United States has some of the most beautiful beaches and oceans in the world, and the coastlines are incredible. As President, I will continue to do everything I can to stop other nations from making our oceans into their landfills. That’s why I’m pleased — very pleased, I must say — to put my signature on this important legislation.</p>
+<p>And again, I’d like to thank Dan and Sheldon, and all of the people — the Admiral and Wilbur — all of the people that worked so hard on this. This was a tough one, but it had great bipartisan support.</p>
+<p>What was the final vote?</p>
+<p>SENATOR SULLIVAN: It was unanimous consent in the Senate.</p>
+<p>THE PRESIDENT: Unanimous.</p>
+<p>SENATOR SULLIVAN: Yes, sir.</p>
+<p>THE PRESIDENT: Bipartisan. Did you ever think, Jon, you’d hear that? Bipartisan.</p>
+<p>Q It’s unusual to see Sheldon Whitehouse here.</p>
+<p>THE PRESIDENT: Well, that’s pretty good. Can you imagine Trump and Whitehouse in the same area? It’s all right. Hey, I have a lot of respect.</p>
+<p>SENATOR SULLIVAN: And what the President said about the administration — the Trump administration — doing a great job on this, it’s an underreported story but they are really taking the lead globally. And, Mr. President, we want to thank you for (inaudible) very bipartisan.</p>
+<p>THE PRESIDENT: Well, I want to thank you, and I want to thank Sheldon. Thank you. Come here, Sheldon. See, we can shake hands.</p>
+<p>SENATOR SULLIVAN: Thank you, Mr. President. Thank you very much.</p>
+<p>THE PRESIDENT: Thank you, Wilbur. Thank you. Admiral, thank you.</p>
+<p>All right. Let’s get this done properly here.</p>
+<p>(The bill is signed.)</p>
+<p>So with that, we’re all completed. And I just want to say it’s an honor. And hopefully that goes a long way for our oceans.</p>
+<p>We’ve notified other countries that have been abusers. They abuse the ocean. We have notified them already about this. And they’re doing things. They tell us they’re doing things. And I think some cases at least they are. But they will be.</p>
+<p>And I want to thank you very much.</p>
+<p>SENATOR WHITEHOUSE: Thank you, Mr. President. The Philippines is up next, Mr. President.</p>
+<p>THE PRESIDENT: Yes, that’s right.</p>
+<p>SENATOR WHITEHOUSE: The Philippines is up next. They’re one of the worst three.</p>
+<p>THE PRESIDENT: Well, that’s right. That’s going to be interesting.</p>
+<p>SENATOR WHITEHOUSE: So, thank you.</p>
+<p>THE PRESIDENT: So you’re working on that?</p>
+<p>SENATOR WHITEHOUSE: We are.</p>
+<p>THE PRESIDENT: That’s very good.</p>
+<p>SENATOR WHITEHOUSE: With your trade team on the Philippine trade agreement. We’ll make sure this is part of that.</p>
+<p>THE PRESIDENT: We’re okay with that. I understand. A lot comes from there.</p>
+<p>Yes.</p>
+<p>Q Mr. President, what exactly is the U.S. doing to investigate the missing Saudi journalist? You said there were U.S. investigators over there.</p>
+<p>THE PRESIDENT: Yes, we’re looking at it.</p>
+<p>Q Could you explain what exactly that means?</p>
+<p>THE PRESIDENT: We’re looking at it very strongly. We’ll be having a report out soon. We’re working with Turkey, we’re working with Saudi Arabia. What happened is a terrible thing, assuming that happened. I mean, maybe we’ll be pleasantly surprised, but somehow I tend to doubt it. And we take it very seriously.</p>
+<p>Q Does the U.S. have any kind of responsibility to warn him if (inaudible) were picked up?</p>
+<p>THE PRESIDENT: Well, it’s not our country. It’s in Turkey, and it’s not a citizen, as I understand it. But a thing like that shouldn’t happen. It is a reporter with the Washington Post, and it’s — something like that should not be allowed to happen. Something like that should not happen. And we intend to get to the bottom of it.</p>
+<p>Yes.</p>
+<p>Q Mr. President, you have talked a little bit about the markets. The markets are down again, today. How long do you think this correction, which you said was coming anyway, is expected to last?</p>
+<p>THE PRESIDENT: Well, we’re still up 40 percent for the period of time. So, I mean, the markets are way up over what they were. It’s a correction that I think is caused by the Federal Reserve with interest rates. The dollar has become very strong, which, frankly, people can debate whether or not they like a strong dollar or not.</p>
+<p>The dollar is very strong, very powerful. And that causes a little difficulty with doing business, frankly. A strong dollar doesn’t necessarily mean all good, but we do have a very strong dollar. And we have interest rates going up at a clip that’s much faster than certainly a lot of people, including myself, would have anticipated.</p>
+<p>I think the Fed is out of control. I think what they’re doing it wrong. Under the Obama administration, you had a lot of help because they had very little interest. You know, when you talk about economies, our economy is far better than that. But we have actually — we’re paying interest. And they weren’t. They were using funny money.</p>
+<p>But I think the Fed is far too stringent, and they’re making a mistake and it’s not right.</p>
+<p>And it’s — despite that, we’re doing very well but it’s not necessary, in my opinion. And I think I know about it better than they do. Believe me.</p>
+<p>Q Would you consider firing the Fed Chairman? I mean, is his job secure?</p>
+<p>THE PRESIDENT: No, I’m not going to fire him. I’m just disappointed at the clip. I think it’s far too fast. Far too rigid, far too fast.</p>
+<p>Q Mr. President, after what happened with the Soyuz capsule today, are you at all worried that American astronauts have to rely on the Russians to get into space? Because you’ve been talking about Space Force.</p>
+<p>THE PRESIDENT: No, I’m not worried. We have a tremendous space program going right now, in addition to which you’re going to have the Space Force. I think by next year we intend to have that. It’s already in this budget. And we’ll have our own everything. But no, I’m not at all. Not at all worried at all.</p>
+<p>Q Will Jamal Khashoggi’s case affect the way you deal with MBS or other Saudi officials?</p>
+<p>THE PRESIDENT: We’ll have to see what happens. A lot of work is being done on that, and we’re going to have to see what happens. I don’t like stopping massive amounts of money that’s being poured into our country on — I know they’re talking about different kinds of sanctions, but they’re spending $110 billion on military equipment and on things that create jobs, like jobs and others, for this country.</p>
+<p>I don’t like the concept of stopping an investment of $110 billion into the United States. Because you know what they’re going to do? They’re going to take that money and spend it in Russia or China, or someplace else. So I think there are other ways. If it turns out to be as bad as it might be, there are certainly other ways of handling the situation.</p>
+<p>But I will tell you, upfront, right now, and I’ll say it in front of senators: They’re spending $110 billion purchasing military equipment and other things. If we don’t sell it to them, they’ll say, “Well, thank you very much. We’ll buy it from Russia.” Or “Thank you very much. We’ll buy it from China.” That doesn’t help us — not when it comes to jobs and not when it comes to our companies losing out on that work.</p>
+<p>But there are other things we can do. Let’s find out what the problem is first. Okay?</p>
+<p>Q You mean sanctions in that case? You oppose sanctions against Saudi Arabia?</p>
+<p>THE PRESIDENT: I oppose — I would not be in favor of stopping a country from spending $110 billion — which is an all-time record — and letting Russia have that money and letting China have that money. Because all they’re going to do is say, “That’s okay. We don’t have to buy it from Boeing. We don’t have to buy it from Lockheed. We don’t have to buy it from Raytheon and all these great companies. We’ll buy it from Russia. We’ll but it from China.”</p>
+<p>So what good does that do us? There are other things we can do.</p>
+<p>Q Well, do you think they should pay a price if it turns out that the Saudis are responsible?</p>
+<p>THE PRESIDENT: Yeah. There’ll be something that has to take place. First, I want to find out what happened. And we’re looking. Again, this took place in Turkey. And to the best of our knowledge, Khashoggi is not a United States citizen. Is that right? Or is that —</p>
+<p>Q Permanent resident.</p>
+<p>THE PRESIDENT: He’s a permanent resident. Okay.</p>
+<p>We don’t like it, Jon. We don’t like. And we don’t like even a little bit. But as to whether or not we should stop $110 billion from being spent in this country, knowing they have four or five alternatives, two very good alternatives — that would not be acceptable to me.</p>
+<p>Okay. But we’re looking for the answer. And I think probably you’ll have an answer sooner than people think.</p>
+<p>Thank you very much. I’ll see you in a little while.</p>
+<p>Q We’ll see you with Kanye later? Are you going to —</p>
+<p>THE PRESIDENT: Yeah. We’re going to have you come in for Kanye for just a couple of seconds, okay?</p>
+<p>Q Okay, great.</p>
+<p>THE PRESIDENT: He’ll be here and we’re going to do a little — you’ll have a little fun. Okay?</p>
+<p>Everybody asks about Kanye. You know, we have Kanye West and Jim Brown coming in. And everybody wants to know about —</p>
+<p>Q (Inaudible) Jim Brown too.</p>
+<p>THE PRESIDENT: I like Jim Brown. That Jim Brown is some running back. Hey, do you think the NFL would be paying him a couple of dollars nowadays?</p>
+<p>What people don’t know — he might have been — he was the greatest football player, perhaps. He may have been an even better lacrosse player. Did you know that? At Syracuse. He may have been an even better lacrosse player. And he’s a great guy. And he’s been with me for a long time. He’s been a big supporter.</p>
+<p>Thank you all very much. You’ll come back in a little while.</p>
+<p>END</p>
+<p>11:45 A.M. EDT</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="footer__wrap">
+<div class="footer__logo">
+<a href="https://www.whitehouse.gov">
+<img alt="White House Logo" class="footer__img" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-sm.png" srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-sm.png 1x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-md.png 2x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-lg.png 3x"/>
+</a>
+</div>
+<div class="footer__site-title">The White House</div>
+<span class="footer__divider divider"><hr/><hr/></span>
+<div class="footer__nav">
+<nav class="nav nav--footer"><ul class="nav__menu nav__menu--depth0 menu"><li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-17230"><a class="nav__link" href="https://www.whitehouse.gov/live/">Live</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-custom menu-item-object-custom menu-item-8288"><a class="nav__link" href="https://apply.whitehouse.gov/">Jobs</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-8093"><a class="nav__link" href="https://www.whitehouse.gov/get-involved/">Get Involved</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-8092"><a class="nav__link" href="https://www.whitehouse.gov/copyright/">Copyright Policy</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-8095"><a class="nav__link" href="https://www.whitehouse.gov/privacy-policy/">Privacy Policy</a></li>
+</ul></nav> </div>
+</div>
+<div class="footer__social">
+<nav class="nav nav--social-links-menu"><ul class="nav__menu nav__menu--depth0 menu"><li class="nav__menu-item nav__menu-item--depth0 footer__social-link__twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-21"><a class="nav__link" href="https://twitter.com/whitehouse" rel="noopener noreferrer" target="_blank"><span>Twitter</span></a></li>
+<li class="nav__menu-item nav__menu-item--depth0 footer__social-link__facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a class="nav__link" href="https://www.facebook.com/WhiteHouse/" rel="noopener noreferrer" target="_blank"><span>Facebook</span></a></li>
+<li class="nav__menu-item nav__menu-item--depth0 footer__social-link__instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-22"><a class="nav__link" href="https://www.instagram.com/whitehouse/" rel="noopener noreferrer" target="_blank"><span>Instagram</span></a></li>
+<li class="nav__menu-item nav__menu-item--depth0 footer__social-link__email menu-item menu-item-type-custom menu-item-object-custom menu-item-23"><a class="nav__link" href="https://www.whitehouse.gov/contact/"><span>Contact</span></a></li>
+</ul></nav> </div>
+</footer>
+</div>
+<section id="wp-footer">
+<script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/vendor/jquery/dist/jquery.min.js?ver=37980d93" type="text/javascript"></script>
+<script src="https://www.whitehouse.gov/wp-includes/js/clipboard.min.js?ver=5.2.1" type="text/javascript"></script>
+<script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/vendor/bows/dist/bows.min.js?ver=37980d93" type="text/javascript"></script>
+<script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/dist/site.min.js?ver=37980d93" type="text/javascript"></script>
+<script type="text/javascript">
+window.site = new Site();
+</script>
+</section><div class="popover" role="dialog">
+<div class="popover__bar">
+<button class="popover__hamburger-toggle" type="button">
+<img alt="Close Menu" class="popover__hamburger-toggle-close" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/close.svg" width="20"/>
+<img alt="Open Menu" class="popover__hamburger-toggle-open" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/hamburger.svg" width="28"/>
+</button>
+<button class="popover__search-toggle" type="button">
+<img alt="Close Search" class="popover__search-toggle-close" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/close.svg" width="20"/>
+<img alt="Open Search" class="popover__search-toggle-open" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/search.svg" width="20"/>
+</button>
+</div>
+<div class="popover__content">
+<div class="popover__hamburger">
+<div class="popover__nav">
+<nav class="nav nav--popover"><ul class="nav__menu nav__menu--depth0 menu"><li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu nav__menu-item--active-ancestor menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current-menu-parent current-menu-ancestor nav__menu-item--has-menu-5 menu-item-658" data-index="0"><a class="nav__link" href="https://www.whitehouse.gov/news/">News</a>
+<ul class="nav__menu nav__menu--depth1 sub-menu"><li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--back"><button class="nav__link" tabindex="-1">News</button></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-152066"><a class="nav__link" href="https://www.whitehouse.gov/remarks/" tabindex="-1">Remarks</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--active menu-item menu-item-type-post_type_archive menu-item-object-briefing-statement current-menu-item menu-item-105680"><a class="nav__link" href="https://www.whitehouse.gov/briefings-statements/" tabindex="-1">Briefings &amp; Statements</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type_archive menu-item-object-presidential-action menu-item-105687"><a class="nav__link" href="https://www.whitehouse.gov/presidential-actions/" tabindex="-1">Presidential Actions</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-105701"><a class="nav__link" href="https://www.whitehouse.gov/articles/" tabindex="-1">Articles</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105694"><a class="nav__link" href="https://www.whitehouse.gov/news/" tabindex="-1">All News</a></li>
+</ul>
+</li>
+<li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-6 menu-item-659" data-index="1"><a class="nav__link" href="https://www.whitehouse.gov/issues/">Issues</a>
+<ul class="nav__menu nav__menu--depth1 sub-menu"><li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--back"><button class="nav__link" tabindex="-1">Issues</button></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105708"><a class="nav__link" href="https://www.whitehouse.gov/issues/education/" tabindex="-1">Education</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105715"><a class="nav__link" href="https://www.whitehouse.gov/issues/national-security-defense/" tabindex="-1">National Security &amp; Defense</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105729"><a class="nav__link" href="https://www.whitehouse.gov/issues/budget-spending/" tabindex="-1">Budget &amp; Spending</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105722"><a class="nav__link" href="https://www.whitehouse.gov/issues/immigration/" tabindex="-1">Immigration</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105736"><a class="nav__link" href="https://www.whitehouse.gov/issues/healthcare/" tabindex="-1">Healthcare</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105743"><a class="nav__link" href="https://www.whitehouse.gov/issues/" tabindex="-1">All Issues</a></li>
+</ul>
+</li>
+<li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-6 menu-item-795" data-index="2"><a class="nav__link" href="https://www.whitehouse.gov/the-trump-administration/">The Administration</a>
+<ul class="nav__menu nav__menu--depth1 sub-menu"><li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--back"><button class="nav__link" tabindex="-1">The Administration</button></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105757"><a class="nav__link" href="https://www.whitehouse.gov/people/donald-j-trump/" tabindex="-1">President Donald J. Trump</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105764"><a class="nav__link" href="https://www.whitehouse.gov/people/mike-pence/" tabindex="-1">Vice President Michael R. Pence</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105750"><a class="nav__link" href="https://www.whitehouse.gov/people/melania-trump/" tabindex="-1">First Lady Melania Trump</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105771"><a class="nav__link" href="https://www.whitehouse.gov/people/karen-pence/" tabindex="-1">Mrs. Karen Pence</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105778"><a class="nav__link" href="https://www.whitehouse.gov/the-trump-administration/the-cabinet/" tabindex="-1">The Cabinet</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105785"><a class="nav__link" href="https://www.whitehouse.gov/disclosures/" tabindex="-1">Disclosures</a></li>
+</ul>
+</li>
+<li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav__menu-item--has-menu-6 menu-item-105792" data-index="3"><a class="nav__link" href="https://www.whitehouse.gov/#">Executive Offices</a>
+<ul class="nav__menu nav__menu--depth1 sub-menu"><li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--back"><button class="nav__link" tabindex="-1">Executive Offices</button></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105806"><a class="nav__link" href="https://www.whitehouse.gov/cea/" tabindex="-1">Council of Economic Advisers</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105799"><a class="nav__link" href="https://www.whitehouse.gov/ceq/" tabindex="-1">Council on Environmental Quality</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105813"><a class="nav__link" href="https://www.whitehouse.gov/nsc/" tabindex="-1">National Security Council</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-106142"><a class="nav__link" href="https://www.whitehouse.gov/omb/" tabindex="-1">Office of Management and Budget</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105827"><a class="nav__link" href="https://www.whitehouse.gov/ondcp/" tabindex="-1">Office of National Drug Control Policy</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105834"><a class="nav__link" href="https://www.whitehouse.gov/ostp/" tabindex="-1">Office of Science and Technology Policy</a></li>
+</ul>
+</li>
+<li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-5 menu-item-1548" data-index="4"><a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/">About The White House</a>
+<ul class="nav__menu nav__menu--depth1 sub-menu"><li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--back"><button class="nav__link" tabindex="-1">About The White House</button></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105848"><a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/tours-events/" tabindex="-1">Tours &amp; Events</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105855"><a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/presidents/" tabindex="-1">Past Presidents</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105862"><a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/first-ladies/" tabindex="-1">Past First Ladies</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-5 menu-item-105995"><a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/the-grounds/" tabindex="-1">The Grounds</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-7 menu-item-106079"><a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/our-government/" tabindex="-1">Our Government</a></li>
+</ul>
+</li>
+<li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-3 menu-item-5738" data-index="5"><a class="nav__link" href="https://www.whitehouse.gov/get-involved/">Get Involved</a>
+<ul class="nav__menu nav__menu--depth1 sub-menu"><li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--back"><button class="nav__link" tabindex="-1">Get Involved</button></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105869"><a class="nav__link" href="https://www.whitehouse.gov/get-involved/write-or-call/" tabindex="-1">Write or Call the White House</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-3 menu-item-105876"><a class="nav__link" href="https://www.whitehouse.gov/get-involved/internships/" tabindex="-1">White House Internship Program</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-4 menu-item-105904"><a class="nav__link" href="https://www.whitehouse.gov/get-involved/fellows/" tabindex="-1">White House Fellows</a></li>
+</ul>
+</li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-105988" data-index="6"><a class="nav__link" href="https://www.whitehouse.gov/contact/">Contact</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page nav__menu-item--live menu-item-105974" data-index="7"><a class="nav__link" href="https://www.whitehouse.gov/live/"><span class="nav__menu-item-label">Live</span></a></li>
+</ul></nav> </div>
+<div class="popover__seal">
+<img alt="Presidential Crest" height="435" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/presidential-crest-gray.svg" width="435"/>
+</div>
+</div>
+<div class="popover__search">
+<form action="https://www.whitehouse.gov/search/" class="popover__search-form">
+<label class="visually-hidden" for="popover__search-input">
+					Type Your Search
+				</label>
+<input autocomplete="off" class="popover__search-input" id="popover__search-input" name="s" placeholder="Type Your Search..." type="text"/>
+<button class="popover__search-submit" type="submit"><span>Press enter to search</span></button>
+</form>
+</div>
+</div>
+</div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9360826e15","applicationID":"81062413","transactionName":"MVNbZhQFXEAEVBBfWQgZeFESDV1dSkQNWFEKUxRQFA1XVQxZAxtFEldNVwsBXEc=","queueTime":0,"applicationTime":902,"atts":"HRRYEFwfT04=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+</body></html>

@@ -1,0 +1,257 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width; initial-scale=1; maximum-scale=1.0;" name="viewport"/>
+<title>Bill Maher</title>
+<link href="http://www.billmaher.com//portrait.css" media="all and (orientation:portrait)" rel="stylesheet"/>
+<link href="http://www.billmaher.com//landscape.css" media="all and (orientation:landscape)" rel="stylesheet"/>
+<script src="http://www.billmaher.com//SetCookies.js" type="text/javascript"></script>
+<script src="http://www.billmaher.com//SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
+<script src="http://www.billmaher.com//jquery.js" type="text/javascript"></script>
+<script src="http://www.billmaher.com//jquery.cycle.all.min.js" type="text/javascript"></script>
+<script src="http://www.billmaher.com//XMLstuff.js" type="text/javascript"></script>
+<script src="http://www.billmaher.com//iscroll/iscroll.js" type="application/javascript"></script>
+<script type="text/javascript">
+var myScroll;
+function loaded() {
+myScroll2 = new iScroll('wrapper-video', { bounce: true, hScrollbar: false} );
+myScroll = new iScroll('wrapper-headlines', { bounce: true, vScrollbar: true});
+
+}
+document.addEventListener('touchmove', function (e) { e.preventDefaultx(); }, false);
+document.addEventListener('DOMContentLoaded', loaded, true);
+</script>
+<style>
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6{
+	margin:0;
+	padding:0;
+	 -webkit-text-size-adjust:100%;  /*This stops the iPhone from automatically changing the size of the text when you flip the phone */
+	 color:#FFF;
+     background-color:#000000;
+	 font-family:Verdana, Geneva, sans-serif;
+	 font-weight:normal;
+	}
+body{
+	font-size: 15px;
+}
+
+p {background-color: transparent;}
+
+#wrapper-headlines {
+	position:relative; 
+	top:0px; bottom:48px; left:0;
+	width:100%;
+	height:250px;
+	background-color:transparent;
+	overflow:auto;
+	
+}
+
+#scroller-headlines {
+	position:absolute;
+/*	-webkit-touch-callout:none;*/
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	height:auto;
+	padding:0;
+	padding-right:15px;
+	background-color:transparent;
+}
+</style></head>
+<body>
+<script type="text/javascript">  
+     window.onorientationchange = detectIPadOrientation;  
+     function detectIPadOrientation () {  
+      /*
+        if ( orientation == 0 ) {  
+         alert ('Portrait Mode, Home Button bottom');  
+        }  
+        else if ( orientation == 90 ) {  
+         alert ('Landscape Mode, Home Button right');  
+        }  
+        else if ( orientation == -90 ) {  
+         alert ('Landscape Mode, Home Button left');  
+        }  
+        else if ( orientation == 180 ) {  
+         alert ('Portrait Mode, Home Button top');  
+        } 
+	*/
+		ResetQuotes(); 
+     }  
+    </script>
+<script type="text/javascript">
+    function JumpVideoRight() {
+    myScroll2.scrollTo(-705, 0, 400)
+}
+    function JumpVideoLeft() { 
+    myScroll2.scrollTo(0, 0, 400)
+}
+    </script>
+<div id="containertophome">
+<div style="position:relative; z-index:200; top:0px; background-color:transparent "><img border="0" src="http://www.billmaher.com//Images/TopLeft1.png" usemap="#Map"/>
+<map id="Map" name="Map">
+<area alt="index" coords="9,31,346,78" href="index.htm"/>
+<area alt="schedule" coords="182,77,293,108" href="schedule.htm"/>
+<area alt="video" coords="88,77,183,106" href="video.htm"/>
+<area alt="headlines" coords="292,77,422,110" href="headlines.htm"/>
+<area alt="twitter" coords="460,45,568,78" href="http://www.twitter.com/billmaher"/>
+<area alt="facebook" coords="353,45,461,78" href="http://www.facebook.com/Maher"/>
+<area alt="home" coords="10,77,89,107" href="index.htm"/>
+</map>
+</div>
+<div style="width:50%; float:left; background-color:transparent">
+<div id="topleft">
+<div style="padding:20px 20px 0px 20px; font-size:15px; vertical-align:top; background-color: transparent;">
+<b>RECENT HEADLINES
+<a href="http://www.billmaher.com/headlines.htm"><img align="right" border="0" src="http://www.billmaher.com//Images/ViewAll.png"/></a><br/><span style="font-size:12px;">FROM BILL'S DESK</span></b>
+<div id="headlinestext" style="height:20px; background-color:transparent; text-align:right; color:#2AA8EF; font-size:12px; height:20px; padding:2px 0px 0px 0px; height:20px; background-color:transparent;">Scroll up/down to view more</div>
+<script type="text/javascript">
+                      
+                            xmlDoc = getMyXML("/xml/homepage/news.xml") 
+                            document.write("<div style='background-color:transparent;'><div id='wrapper-headlines'><div id='scroller-headlines' >");
+                            var x=xmlDoc.getElementsByTagName("item");
+                                    
+                                    for (i=0;i<5;i++)
+                                      { 
+                                      document.write("<span style='color:#01AAEF; text-decoration:none; font-size:13px;'>" + x[i].getAttribute("thetitle") + "</>" );
+                                      document.write("<br>");
+                                      document.write("<a style='color:#FFF; text-decoration:none; font-size:13px; ' href='" + x[i].getAttribute('link') + "'>" + x[i].childNodes[0].nodeValue + "</a>");
+                                      document.write("<br><br>");
+                                      }
+                                    document.write("</div></div></div>");
+                                    
+                   </script><div style="background-color:transparent;"><div id="wrapper-headlines" style="overflow: hidden;"><div id="scroller-headlines" style="transition-property: top, left; transform-origin: 0px 0px; top: 0px; left: 0px; transition-duration: 0ms;"><span style="color:#01AAEF; text-decoration:none; font-size:13px;">HBO Real Time June 28th<br/><a href="https://billmaher.tumblr.com/post/185844662236/hbo-real-time-guests-friday-june-28-2019" style="color:#FFF; text-decoration:none; font-size:13px; ">Bill will be talking to Congresswoman  Tulsi Gabbard - (D) Hawaii - actor and comedian Seth MacFarlane - who stars in the new Showtime mini-series The Loudest Voice  - Max Brooks - author of the book  GERM WARFARE:  A Very Graphic History &amp; More!<font color="#00B4FF"> Click for more</font></a><br/><br/><span style="color:#01AAEF; text-decoration:none; font-size:13px;">Real Time Hits 500 Episodes!<br/><a href="https://variety.com/2019/tv/news/bill-maher-real-time-hbo-trump-politically-incorrect-1203249574/" style="color:#FFF; text-decoration:none; font-size:13px; ">Variety: Bill Maher: As He Hits 500 Episodes, the ‘Real Time’ Host Can’t Talk About Trump Much Longer...<font color="#00B4FF"> Click for more</font></a><br/><br/><span style="color:#01AAEF; text-decoration:none; font-size:13px;">HBO Real Time June 21st<br/><a href="https://billmaher.tumblr.com/post/185663614046/hbo-real-time-guests-friday-june-21-2019" style="color:#FFF; text-decoration:none; font-size:13px; ">Bill will be talking to Allan Lichtman is a Distinguished Professor of History at American University  - Liz Mair is a Republican political consultant and former RNC Online Communications Director  - Dr. Debra Soh is a columnist for Quillette and Canada’s national newspaper, The Globe and Mail &amp; More!<font color="#00B4FF"> Click for more</font></a><br/><br/><span style="color:#01AAEF; text-decoration:none; font-size:13px;">DEAD MAN TALKING<br/><a href="https://billmaher.tumblr.com/post/185664401796/dead-man-talking" style="color:#FFF; text-decoration:none; font-size:13px; ">NEW BLOG POST: This sounds like a clumsy plot twist in a John Grisham movie, but it’s not...<font color="#00B4FF"> Click for more</font></a><br/><br/><span style="color:#01AAEF; text-decoration:none; font-size:13px;">HBO Real Time June 14th<br/><a href="https://billmaher.tumblr.com/post/185522529876/hbo-real-time-guests-friday-june-14-2019" style="color:#FFF; text-decoration:none; font-size:13px; ">Bill will be talking to George Will -  Washington Post syndicated columnist  - Martin Short a Tony Award-winning actor and comedian  - Eliot Spitzer -  Former Democratic Attorney General and Governor of New York  &amp; More!<font color="#00B4FF"> Click for more</font></a><br/><br/></span></span></span></span></span></div><div style="position: absolute; z-index: 100; width: 7px; bottom: 7px; top: 2px; right: 1px; pointer-events: none; transition-property: opacity; transition-duration: 350ms; overflow: hidden; opacity: 1;"><div style="position: absolute; z-index: 100; background: padding-box padding-box rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.9); box-sizing: border-box; width: 100%; border-radius: 3px 4px; pointer-events: none; transition-property: -webkit-transform; transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); transform: translate3d(0px, 0px, 0px); height: 204px;"></div></div></div></div>
+</div>
+</div>
+</div>
+<div style="width:50%; float:left; background-color:transparent">
+<div id="topright">
+<table cellpadding="0" cellspacing="0" height="330" width="100%"><tbody><tr><td style="vertical-align:bottom">
+<div id="newsflash" style="position: relative; width: 942px; height: 200px;"><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>The battle for good health is won on the cellular<span style="white-space:nowrap;"> level<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Somali pirates, Gaddafi's son, now Bin Laden - do NOT fuck with Obama, he's<span style="white-space:nowrap;"> Gangsta!!<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 1; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Every asshole who ever chanted 'Drill baby drill' should have to report to the Gulf coast today for cleanup<span style="white-space:nowrap;"> duty<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: block; z-index: 33; opacity: 1;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>We owe China a trillion dollars.  I opened a fortune cookie the other day, it said, 'Pay up,<span style="white-space:nowrap;"> deadbeat.'<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 31; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>The Pope has a Facebook page.  That's true, I'm not making that up.  What's creepy is that under the relationship status, he put 'It's<span style="white-space:nowrap;"> complicated.'<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 30; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>We fear different things.  I fear climate change.  They fear a demon in a red bodysuit… with a<span style="white-space:nowrap;"> pitchfork.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 29; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>There's a reason small towns are small.  No one wants to live<span style="white-space:nowrap;"> there.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 28; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Isn't the problem that almost all Republicans are conservative, but not all Democrats are<span style="white-space:nowrap;"> liberal?<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 27; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>It is being reported that a third of the world watched the royal wedding - and yet they claim gays are only 3 pct of<span style="white-space:nowrap;"> population?<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 26; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Wow just read Oxford Dictionary added OMG and LOL as words!<span style="white-space:nowrap;"> WTF??<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 25; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Sarah Palin, a reporter asked what she liked most about Hong Kong and she said, 'The part at the end when he climbs the Empire State<span style="white-space:nowrap;"> Building.'<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 24; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>George Bush, compared to these tea baggers, he looks like a<span style="white-space:nowrap;"> professor.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 23; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>The BP oil spill is the worst thing to happen to beaches since the<span style="white-space:nowrap;"> Speedo.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 22; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Michelle Bachman for President. As a comedian, all I can say is, where can I donate to this<span style="white-space:nowrap;"> cause?<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 21; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Sarah Palin visited Israel and stood at the Wailing Wall and said 'I stood here for 45 minutes and didn't see one<span style="white-space:nowrap;"> whale.'<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 20; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Sarah Palin finally heard what happened to Japan and she's demanding that we invade<span style="white-space:nowrap;"> Tsunami.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 19; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>When you tolerate intolerance, you are not really being a<span style="white-space:nowrap;"> liberal.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 18; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>The Real Axis of Evil in America is the Genius of our marketing and the gullibility of our<span style="white-space:nowrap;"> people<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 17; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>State of Union speeches - always remind me of the old Ed Sullivan show: something for everybody! The Beatles, Kate Smith, a fucking<span style="white-space:nowrap;"> juggler<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 16; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Over half of Republicans believe in Creationism - for those too young to recall, they didn't used to be the party of ignorance-what<span style="white-space:nowrap;"> happened?<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 15; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>"Ha, we're changing Operation Iraqi Freedom to Operation New Dawn - sounds like a Twilight movie - we're not occupiers, we're sexy<span style="white-space:nowrap;"> vampires!<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 14; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Laura Bush coming out for gay marriage! I guess if you're married to W for 30 yrs you know you don't have to be gay to have sex with an<span style="white-space:nowrap;"> asshole.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 13; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Is it just me or does Times Square look like Tokyo<span style="white-space:nowrap;"> now?<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 12; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>What do you think would happen if tomorrow Obama showed up with Kanye's crop circles shaved into his head? Stock market would lose 5,000<span style="white-space:nowrap;"> pts.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 11; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>I do think the patriotic thing to do is to critique my country. How else do you make a country better but by pointing out its<span style="white-space:nowrap;"> flaws?<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 10; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>I believe in the death penalty, but with better DNA testing - my slogan is 'Let's Kill The right<span style="white-space:nowrap;"> People'<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 9; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>If you think you have it tough, read history<span style="white-space:nowrap;"> books.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 8; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Men are only as loyal as their<span style="white-space:nowrap;"> options.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 7; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>The Bible looks like it started out as a game of Mad<span style="white-space:nowrap;"> Libs.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 6; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Tea baggers. The one thing they hate is when you call them racist. The other thing they hate is black<span style="white-space:nowrap;"> people.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 5; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>We have the Bill of Rights. What we need is a Bill of<span style="white-space:nowrap;"> Responsibilities.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div><div style="height: 200px; width: 100%; background-color: transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 4; opacity: 0;"><table cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td align="center"><img src="http://www.billmaher.com//Images/QuoteL.png" style="display:inline-block"/>Women cannot complain about men anymore until they start getting better taste in<span style="white-space:nowrap;"> them.<img src="http://www.billmaher.com//Images/QuoteR.png" style="vertical-align:middle"/></span></td></tr></tbody></table></div></div>
+</td></tr></tbody></table>
+</div>
+</div>
+<div style="clear:both; overflow:hidden; height:0px"></div>
+</div>
+<div style="clear:both; height:10px; overflow:hidden;"> </div>
+<div style=" height:6px; background:url(Images/NEWS_DIVIDER2.png) repeat-x;"></div>
+<div style="width:100%; text-align:center">
+<table width="100%">
+<tbody><tr>
+<td width="25%"> </td>
+<td style="text-align:center; font-size:16px; font-weight:bold; color: #FFF;" width="50%">Most Recent Videos<br/>
+<span style="color:#2AA8EF; font-size:12px; font-weight:normal; height:20px;">Scroll left/right view more </span></td>
+<td width="25%"><a href="http://www.billmaher.com/video.htm"><img border="0" src="http://www.billmaher.com//Images/VideoLibrary2.png"/></a></td>
+</tr>
+</tbody></table>
+<script type="text/javascript">
+		  
+	document.write("<table style='background:#0B2831; height:185px; width:100%'><tr><td><a href='#' onclick='JumpVideoLeft();'><img align='left' src='Images/ArrowLeft.png' border='0'  /></a></td><td><div id='wrapper-video'><div id='scroller-video'>");
+	xmlDoc = getMyXML("/xml/media/videos.xml")
+	var x=xmlDoc.getElementsByTagName("item");
+	xmlLength = x.length
+	iMovieCount = 10
+	if (xmlLength < iMovieCount) iMovieCount = xmlLength;
+	iMovieWidth = (100 / iMovieCount)-5;
+	for (i=0;i<iMovieCount;i++)
+	  { 
+	  sVideo = x[i].getAttribute("flv")
+	  sVideo = sVideo.replace(".flv",".mp4")
+	  //document.write("<div style='padding-top:10px; float:left; height:150px; width:" + iMovieWidth + "%; background-color:transparent;'><a href='" + sVideo + "'><center><img border='0' src='" + x[i].getAttribute("thumb") + "'></img></center></a>" );
+	  xx = "<div style='position:absolute; padding-left:2px; text-align:center; background-color:transparent;'><a href='/" + sVideo + "'><img border='0' src='Images/PlayOverlay2.png'></img></a>"
+       document.write("<div style='height:175px; padding-top:10px; width:141px; float:left; background-color:transparent;'>" + xx + "</div>" );
+	  //document.write("<tr><td><a href='#' onClick='alert(\"mp4 Video to be called\")'><img border='0' src='" + x[i].getAttribute("thumb") + "'></img></a></td>" );
+	  document.write("<img style='border: 1px #01AAEF solid;' width='125' height='77' src='/" + x[i].getAttribute("thumb") + "'></img> " );
+      document.write("<br><img src='Images/arrow.png'>&nbsp;</img><span style='color:#01AAEF;  font-size:13px; text-decoration:none;'>" + x[i].getAttribute("thetitle") + "</span><br>" );			
+	  document.write("<span style='color:#FFF;  font-size:13px; text-decoration:none;'>" + x[i].childNodes[0].nodeValue + "</span></div>");			  
+	
+	  }
+	document.write("</div></div></td><td><a href='#' onclick='JumpVideoRight();'><img align='right' src='Images/ArrowRight.png' border='0'  /></a></td></tr></table>");
+			
+</script><table style="background:#0B2831; height:185px; width:100%"><tbody><tr><td><a href="http://www.billmaher.com/#" onclick="JumpVideoLeft();"><img align="left" border="0" src="http://www.billmaher.com//Images/ArrowLeft.png"/></a></td><td><div id="wrapper-video" style="overflow: hidden;"><div id="scroller-video" style="transition-property: top, left; transform-origin: 0px 0px; top: 0px; left: 0px; transition-duration: 0ms;"><div style="height:175px; padding-top:10px; width:141px; float:left; background-color:transparent;"><div style="position:absolute; padding-left:2px; text-align:center; background-color:transparent;"><a href="http://www.billmaher.com/media/videos/planetb-m.mp4"><img border="0" src="http://www.billmaher.com//Images/PlayOverlay2.png"/></a></div><img height="77" src="http://www.billmaher.com/media/videos/planetb-s.jpg" style="border: 1px #01AAEF solid;" width="125"/> <br/><img src="http://www.billmaher.com//Images/arrow.png"/> <span style="color:#01AAEF;  font-size:13px; text-decoration:none;">No Planet B</span><br/><span style="color:#FFF;  font-size:13px; text-decoration:none;">HBO Real Time June 28, 2019</span></div><div style="height:175px; padding-top:10px; width:141px; float:left; background-color:transparent;"><div style="position:absolute; padding-left:2px; text-align:center; background-color:transparent;"><a href="http://www.billmaher.com/media/videos/deadbeat-m.mp4"><img border="0" src="http://www.billmaher.com//Images/PlayOverlay2.png"/></a></div><img height="77" src="http://www.billmaher.com/media/videos/deadbeat-s.jpg" style="border: 1px #01AAEF solid;" width="125"/> <br/><img src="http://www.billmaher.com//Images/arrow.png"/> <span style="color:#01AAEF;  font-size:13px; text-decoration:none;">Deadbeat Party</span><br/><span style="color:#FFF;  font-size:13px; text-decoration:none;">HBO Real Time June 14, 2019</span></div><div style="height:175px; padding-top:10px; width:141px; float:left; background-color:transparent;"><div style="position:absolute; padding-left:2px; text-align:center; background-color:transparent;"><a href="http://www.billmaher.com/media/videos/demcoach-m.mp4"><img border="0" src="http://www.billmaher.com//Images/PlayOverlay2.png"/></a></div><img height="77" src="http://www.billmaher.com/media/videos/demcoach-s.jpg" style="border: 1px #01AAEF solid;" width="125"/> <br/><img src="http://www.billmaher.com//Images/arrow.png"/> <span style="color:#01AAEF;  font-size:13px; text-decoration:none;">Democrats Need a Coach</span><br/><span style="color:#FFF;  font-size:13px; text-decoration:none;">HBO Real Time May 31, 2019</span></div><div style="height:175px; padding-top:10px; width:141px; float:left; background-color:transparent;"><div style="position:absolute; padding-left:2px; text-align:center; background-color:transparent;"><a href="http://www.billmaher.com/media/videos/prig-m.mp4"><img border="0" src="http://www.billmaher.com//Images/PlayOverlay2.png"/></a></div><img height="77" src="http://www.billmaher.com/media/videos/prig-s.jpg" style="border: 1px #01AAEF solid;" width="125"/> <br/><img src="http://www.billmaher.com//Images/arrow.png"/> <span style="color:#01AAEF;  font-size:13px; text-decoration:none;">The Morality Police</span><br/><span style="color:#FFF;  font-size:13px; text-decoration:none;">HBO Real Time May 17, 2019</span></div><div style="height:175px; padding-top:10px; width:141px; float:left; background-color:transparent;"><div style="position:absolute; padding-left:2px; text-align:center; background-color:transparent;"><a href="http://www.billmaher.com/media/videos/wifehope-m.mp4"><img border="0" src="http://www.billmaher.com//Images/PlayOverlay2.png"/></a></div><img height="77" src="http://www.billmaher.com/media/videos/wifehope-s.jpg" style="border: 1px #01AAEF solid;" width="125"/> <br/><img src="http://www.billmaher.com//Images/arrow.png"/> <span style="color:#01AAEF;  font-size:13px; text-decoration:none;">The Great Wife Hope</span><br/><span style="color:#FFF;  font-size:13px; text-decoration:none;">HBO Real Time May 10, 2019</span></div><div style="height:175px; padding-top:10px; width:141px; float:left; background-color:transparent;"><div style="position:absolute; padding-left:2px; text-align:center; background-color:transparent;"><a href="http://www.billmaher.com/media/videos/asmr-m.mp4"><img border="0" src="http://www.billmaher.com//Images/PlayOverlay2.png"/></a></div><img height="77" src="http://www.billmaher.com/media/videos/asmr-s.jpg" style="border: 1px #01AAEF solid;" width="125"/> <br/><img src="http://www.billmaher.com//Images/arrow.png"/> <span style="color:#01AAEF;  font-size:13px; text-decoration:none;">Bill Maher ASMR feat. Moby</span><br/><span style="color:#FFF;  font-size:13px; text-decoration:none;">HBO Real Time May 3, 2019</span></div><div style="height:175px; padding-top:10px; width:141px; float:left; background-color:transparent;"><div style="position:absolute; padding-left:2px; text-align:center; background-color:transparent;"><a href="http://www.billmaher.com/media/videos/cp-m.mp4"><img border="0" src="http://www.billmaher.com//Images/PlayOverlay2.png"/></a></div><img height="77" src="http://www.billmaher.com/media/videos/cp-s.jpg" style="border: 1px #01AAEF solid;" width="125"/> <br/><img src="http://www.billmaher.com//Images/arrow.png"/> <span style="color:#01AAEF;  font-size:13px; text-decoration:none;">Crime and No Punishment</span><br/><span style="color:#FFF;  font-size:13px; text-decoration:none;">HBO Real Time Apr. 26, 2019</span></div><div style="height:175px; padding-top:10px; width:141px; float:left; background-color:transparent;"><div style="position:absolute; padding-left:2px; text-align:center; background-color:transparent;"><a href="http://www.billmaher.com/media/videos/bde-m.mp4"><img border="0" src="http://www.billmaher.com//Images/PlayOverlay2.png"/></a></div><img height="77" src="http://www.billmaher.com/media/videos/bde-s.jpg" style="border: 1px #01AAEF solid;" width="125"/> <br/><img src="http://www.billmaher.com//Images/arrow.png"/> <span style="color:#01AAEF;  font-size:13px; text-decoration:none;">Pro-Profanity President</span><br/><span style="color:#FFF;  font-size:13px; text-decoration:none;">HBO Real Time Apr. 5, 2019</span></div><div style="height:175px; padding-top:10px; width:141px; float:left; background-color:transparent;"><div style="position:absolute; padding-left:2px; text-align:center; background-color:transparent;"><a href="http://www.billmaher.com/media/videos/capplus-m.mp4"><img border="0" src="http://www.billmaher.com//Images/PlayOverlay2.png"/></a></div><img height="77" src="http://www.billmaher.com/media/videos/capplus-s.jpg" style="border: 1px #01AAEF solid;" width="125"/> <br/><img src="http://www.billmaher.com//Images/arrow.png"/> <span style="color:#01AAEF;  font-size:13px; text-decoration:none;">Capitalism Plus</span><br/><span style="color:#FFF;  font-size:13px; text-decoration:none;">HBO Real Time Mar. 29, 2019</span></div><div style="height:175px; padding-top:10px; width:141px; float:left; background-color:transparent;"><div style="position:absolute; padding-left:2px; text-align:center; background-color:transparent;"><a href="http://www.billmaher.com/media/videos/upgrade-m.mp4"><img border="0" src="http://www.billmaher.com//Images/PlayOverlay2.png"/></a></div><img height="77" src="http://www.billmaher.com/media/videos/upgrade-s.jpg" style="border: 1px #01AAEF solid;" width="125"/> <br/><img src="http://www.billmaher.com//Images/arrow.png"/> <span style="color:#01AAEF;  font-size:13px; text-decoration:none;">The Upgrade Bug</span><br/><span style="color:#FFF;  font-size:13px; text-decoration:none;">HBO Real Time Mar. 22, 2019</span></div></div></div></td><td><a href="http://www.billmaher.com/#" onclick="JumpVideoRight();"><img align="right" border="0" src="http://www.billmaher.com//Images/ArrowRight.png"/></a></td></tr></tbody></table>
+</div>
+<div style="height:10px; clear:both;"> </div>
+<div style=" height:6px; background:url(Images/NEWS_DIVIDER2.png) repeat-x;"></div>
+<div style="width:100%; text-align:center">
+<table width="100%">
+<tbody><tr>
+<td width="25%"> </td>
+<td style="text-align: center; font-size:16px; font-weight:bold; color: #FFF;" wdith="50%">Schedule</td>
+<td width="25%"><a href="http://www.billmaher.com/schedule.htm"><img border="0" src="http://www.billmaher.com//Images/FullSchedule.png"/></a></td>
+</tr>
+</tbody></table>
+</div>
+<div style="height:3px; overflow:hidden; clear:both;"> </div>
+<div style="float:left; width:50%; border:0px red solid ">
+<script type="text/javascript">
+                                
+                                xmlDoc = getMyXML("/xml/schedule/standupSchedule.xml")
+                                document.write("<table width='100%' style='padding:0px 20px 20px 20px;'><tr style='background:#0B2831; line-height:22px;'><td colspan='3' valign='top'><img style='vertical-align:middle; align='left' src='Images/SmallArrowRight.png' border='0' ' />STAND UP CONCERTS</td></tr>");
+                                var x=xmlDoc.getElementsByTagName("item");
+                                document.write("<tr><td align='center' colspan='4' style='color:#01AAEF; text-decoration:none; font-size:13px;'>Click on any date to purchase tickets.</td></tr>")
+                                for (i=0;i<10;i++)
+                                  { 
+                                  document.write("<tr onClick=\"document.location.href='" + x[i].getAttribute("link") + "'\"><td width='20%'><span style='color:#FFF; text-decoration:none; font-size:13px;'>" + x[i].getAttribute("date") + "</></td>" );
+                                  document.write("<td width='35%'><span style='color:#FFF; text-decoration:none; font-size:13px;'>" + x[i].getAttribute("venue") + "</></td>");
+								  document.write("<td width='35%'><span style='color:#FFF; text-decoration:none; font-size:13px;'>" + x[i].getAttribute("location") + "</></td></tr>");
+                                  }
+                                document.write("</table>");
+                                
+        </script><table style="padding:0px 20px 20px 20px;" width="100%"><tbody><tr style="background:#0B2831; line-height:22px;"><td colspan="3" valign="top"><img border="0" left="" src="http://www.billmaher.com//Images/SmallArrowRight.png" style="vertical-align:middle; align="/>STAND UP CONCERTS</td></tr><tr><td align="center" colspan="4" style="color:#01AAEF; text-decoration:none; font-size:13px;">Click on any date to purchase tickets.</td></tr><tr onclick="document.location.href='https://www1.ticketmaster.com/bill-maher/event/1D00558DC1492011'"><td width="20%"><span style="color:#FFF; text-decoration:none; font-size:13px;">4 May</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Chicago Theatre</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Chicago, IL</span></td></tr><tr onclick="document.location.href='https://pabsttheater.org/event/billmaher2019'"><td width="20%"><span style="color:#FFF; text-decoration:none; font-size:13px;">5 May</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Riverside Theatre</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Milwaukee, WI</span></td></tr><tr onclick="document.location.href='https://www1.ticketmaster.com/bill-maher/event/1D00558DC1492011'"><td width="20%"><span style="color:#FFF; text-decoration:none; font-size:13px;">24 May</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Count Basie Theater</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Red Bank, NJ</span></td></tr><tr onclick="document.location.href='https://www1.ticketmaster.com/bill-maher/event/1D005629A9A30FBF?dma_id=324'"><td width="20%"><span style="color:#FFF; text-decoration:none; font-size:13px;">25 May</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Foxwoods Casino</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Mashantucket, CT</span></td></tr><tr onclick="document.location.href='https://concerts1.livenation.com/event/02005629D2716654?_ga=2.40303970.1134193601.1548954352-1930243348.1548954352'"><td width="20%"><span style="color:#FFF; text-decoration:none; font-size:13px;">8 Jun.</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">The Met</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Philadelphia PA</span></td></tr><tr onclick="document.location.href='https://www1.ticketmaster.com/event/15005624C63330C5?dma_id=324'"><td width="20%"><span style="color:#FFF; text-decoration:none; font-size:13px;">9 Jun.</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Lyric Theater</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Baltimore, MD</span></td></tr><tr onclick="document.location.href='https://www1.ticketmaster.com/event/08005641DE4E6EDF?dma_id=324'"><td width="20%"><span style="color:#FFF; text-decoration:none; font-size:13px;">22 Jun.</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Fox Theatre</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Detroit, MI</span></td></tr><tr onclick="document.location.href='https://www1.ticketmaster.com/event/0800563DB54145CF?f_PPL=true&amp;ab=efeat5787v1'"><td width="20%"><span style="color:#FFF; text-decoration:none; font-size:13px;">23 Jun.</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">DeVos Hall</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Grand Rapids, MI</span></td></tr><tr onclick="document.location.href='https://concerts1.livenation.com/event/0D005655B21C9C12?_ga=2.157238140.63244002.1553273536-2107854608.1553273536'"><td width="20%"><span style="color:#FFF; text-decoration:none; font-size:13px;">3 Aug.</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">The Fillmore</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Miami Beach, FL</span></td></tr><tr onclick="document.location.href='https://www.rutheckerdhall.com/event/bill-maher'"><td width="20%"><span style="color:#FFF; text-decoration:none; font-size:13px;">4 Aug</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Ruth Eckerd Hall</span></td><td width="35%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Clearwater, FL</span></td></tr></tbody></table>
+</div>
+<div style="float:left; width:50%; border:0px red solid">
+<script type="text/javascript">
+                                
+                                xmlDoc = getMyXML("/xml/schedule/tvappearances.xml")
+                                document.write("<table width='100%' style='padding:0px 20px 0px 20px; margin-top:-20px' border='0' ><tr style='background:#0B2831;line-height:22px;'><td colspan='2'  valign='top'><img style='vertical-align:middle; align='left' src='Images/SmallArrowRight.png' border='0' ' />TV APPEARANCES</td></tr>");
+                                var x=xmlDoc.getElementsByTagName("item");
+                                
+                                for (i=0;i<6;i++)
+                                  { 
+                                  document.write("<tr><td width='25%'><span style='color:#FFF; text-decoration:none; font-size:13px;'>" + x[i].getAttribute("date") + "</></td>" );
+                                  document.write("<td width='75%'><span style='color:#FFF; text-decoration:none; font-size:13px;'>" + x[i].getAttribute("venue") + "</></td></tr>");
+                                  }
+                                document.write("</table>");
+                                
+        </script><br/><table border="0" style="padding:0px 20px 0px 20px; margin-top:-20px" width="100%"><tbody><tr style="background:#0B2831;line-height:22px;"><td colspan="2" valign="top"><img border="0" left="" src="http://www.billmaher.com//Images/SmallArrowRight.png" style="vertical-align:middle; align="/>TV APPEARANCES</td></tr><tr><td width="25%"><span style="color:#FFF; text-decoration:none; font-size:13px;">NetFlix</span></td><td width="75%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Religulous (2008)</span></td></tr><tr><td width="25%"><span style="color:#FFF; text-decoration:none; font-size:13px;">2019</span></td><td width="75%"><span style="color:#FFF; text-decoration:none; font-size:13px;">HBO Real Time LIVE! Fridays</span></td></tr><tr><td width="25%"><span style="color:#FFF; text-decoration:none; font-size:13px;">HBO GO</span></td><td width="75%"><span style="color:#FFF; text-decoration:none; font-size:13px;">Bill Maher Live from Oklahoma</span></td></tr><tr><td width="25%"><span style="color:#FFF; text-decoration:none; font-size:13px;">HBO GO</span></td><td width="75%"><span style="color:#FFF; text-decoration:none; font-size:13px;">HBO Real Time Anniversary Special</span></td></tr>
+<script type="text/javascript">
+                                
+                                xmlDoc = getMyXML("/xml/schedule/realtime.xml")
+                                document.write("<table width='100%' style='padding:10px 20px 0px 20px;' ><tr style='background:#0B2831;line-height:22px;'><td><img style='vertical-align:middle; align='left' src='Images/SmallArrowRight.png' border='0' ' />REAL TIME WITH BILL MAHER</td></tr>");
+                                var x=xmlDoc.getElementsByTagName("item");
+                                
+                                for (i=0;i<1;i++)
+                                  { 
+                                  document.write("<tr><td><a style='text-decoration:none;' href='" + x[i].getAttribute("link") + "'><span style='color:#FFF; text-decoration:none; font-size:13px;'>" + x[i].getAttribute("info") + "</></a></td></tr>" );
+                                  }
+                                document.write("</table>");
+                                
+        </script></tbody></table><table style="padding:10px 20px 0px 20px;" width="100%"><tbody><tr style="background:#0B2831;line-height:22px;"><td><img border="0" left="" src="http://www.billmaher.com//Images/SmallArrowRight.png" style="vertical-align:middle; align="/>REAL TIME WITH BILL MAHER</td></tr><tr><td><a href="http://www.hbo.com/billmaher" style="text-decoration:none;"><span style="color:#FFF; text-decoration:none; font-size:13px;">FRIDAYS LIVE! 10pm (ET/PT) on HBO with replay at 11pm</span></a></td></tr></tbody></table>
+</div>
+<div style="height:20px; clear:both"> </div>
+<div id="footer" style="text-align:center; background:#141414; padding-top:20px; border-top:2px solid #2F8EAA;">
+<table><tbody><tr>
+<td width="25%"> </td>
+<td width="500px">
+<img border="0" src="http://www.billmaher.com//Images/BillMaherFooter.png"/><br/>
+<span style="line-height:24px; color:#6E6E6E; font-size:12px;">Copyright© 2011. All Rights Reserved</span><br/>
+</td><td width="25%">
+<a href="http://www.hbogo.com"><img border="0" src="http://www.billmaher.com//Images/HBOGO.png"/></a><br/>
+<span style="line-height:24px; color:#6E6E6E; font-size:12px;"><a href="http://www.hbogo.com" style="color:#6e6e6e;">http://www.hbogo.com</a></span>
+</td></tr></tbody></table>
+<div style="height:20px; background:#141414;"> </div>
+</div>
+<script type="text/javascript">
+ sPortraitWidth = "340px"
+ sLandscapeWidth = "450px"
+ 
+  $(document).ready(function () { 
+      h = $("#scroller-headlines").height();
+	  //alert("size is " + h + "")
+	   if(h>250)
+	  $("#headlinestext").html("Scroll up/down to view more");
+	   else
+      $("#headlinestext").html("");
+
+    });
+</script>
+<script src="http://www.billmaher.com//quotes.js" type="text/javascript"></script>
+</body></html>

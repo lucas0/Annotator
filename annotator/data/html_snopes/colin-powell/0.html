@@ -1,0 +1,931 @@
+<html><head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app41.us.archive.org';v.server_ms=951;archive_analytics.send_pageview({});});</script><script charset="utf-8" src="http://web.archive.org/_static/js/ait-client-rewrite.js" type="text/javascript"></script>
+<script type="text/javascript">
+WB_wombat_Init("http://web.archive.org/web", "20050223091222", "www.weforum.org:80");
+</script>
+<script charset="utf-8" src="http://web.archive.org/_static/js/wbhack.js" type="text/javascript"></script>
+<script type="text/javascript">
+__wbhack.init('http://web.archive.org/web');
+</script>
+<link href="http://web.archive.org/_static/css/banner-styles.css" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/_static/css/iconochive.css" rel="stylesheet" type="text/css"/>
+<meta content="powered by aptrix(r) 3.2, www.aptrix.com" name="generator"/>
+<style>
+.menu,.menuAlt {font-family:arial,helvetica,sans-serif;font-size:12px;margin:5px;text-decoration:none;}
+.menu {color:#ffffff;}
+.menuAlt {color:#003399;text-decoration:none;}
+.subHeadBlue {color:#003399;font-weight:bold;font-size:13px;}
+.smallPrint {font-weight:bold;font-size:10px;color:#999999;}
+th.list {font-size:11pt;color:"#000099"}
+</style>
+<!--
+<style>
+.menu,.menuAlt {font-family:arial,helvetica,sans-serif;font-size:12px;margin:5px;text-decoration:none;}
+.menu {color:#000066}
+.menuAlt {color:#FF9900;text-decoration:none}
+.subHeadBlue {color:#003399;font-weight:bold;font-size:13px}
+.smallPrint {font-weight:bold;font-size:10px;color:#999999;}
+</style>
+-->
+<style type="text/css">
+<!--
+BODY {OVERFLOW:scroll;OVERFLOW-X:auto}
+.DEK {POSITION:absolute;VISIBILITY:hidden;Z-INDEX:2;BACKGROUND-COLOR:red;}
+-->
+</style>
+<style type="text/css">
+<!--
+DIV {}
+.DEK {POSITION:absolute;VISIBILITY:hidden;Z-INDEX:2;BACKGROUND-COLOR:red;}
+.listDate {font-size:13px;text-align:center;}
+.listText {font-size:11px;text-align:left;}
+-->
+</style>
+<link href="http://web.archive.org/web/20050223091222cs_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/wefstyle.css/$file/wefstyle2.css" rel="stylesheet"/>
+<link href="http://web.archive.org/web/20050223091222cs_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/wefstyle.css/$file/wefstyle.css" rel="stylesheet"/>
+<link href="http://web.archive.org/web/20050223091222cs_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/wefstyle.css/$file/wefstyle3.css" rel="stylesheet"/>
+<style type="text/css">
+a.submenulink:link, a.submenulink:hover, a.submenulink:active, a.submenulink:visited {line-height:12pt;}
+</style>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script language="JavaScript">
+<!--
+var currentArea=""; // named area - one of 1st level branches
+var fixedImage="";  // do not swap image for this
+var fixedImageSrc="";  // do not swap image for this
+
+var doHideMenu=false; // this will be overriden if an inline menu (links) will contain no items
+/* HeaderScript - called from onLoad from all pages */
+var isLoaded = false;
+var isMenuInitialized = false;
+var isMenuGenerated = false; // set by return value - generateMenu call
+var isStructureLoaded = false; // this is set by initMenus() called from layer providing structure
+var StructureLayer; // here goes site structure layer
+
+function init () {
+  isLoaded = true;
+  //initMenus ();
+  isMenuInitialized = isLoaded && isStructureLoaded;
+  preloadImages (); 
+  if (isMenuInitialized) isMenuGenerated = generateMenu(); // if structure has been loaded then generate menu
+  theImage = document.images[fixedImage];
+  if (theImage) theImage.src=fixedImageSrc;
+}
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}} // alert(j + " " + a[i]);}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_swapImage() { //v3.0
+
+  var i,j=0,x,a=MM_swapImage.arguments; 
+    document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if (a[i]!=fixedImage &&(x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2]; } 
+// a[i]!=fixedImage && 
+}
+
+
+
+function MM_showHideLayers() { //v3.0
+    var i,p,v,obj,args=MM_showHideLayers.arguments;
+    return('');
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function preloadImages () {
+MM_preloadImages('/site/homepublic.nsf/AttachmentsByTitle/tnbb_home_on.gif/$file/tnbb_home_on.gif','/site/homepublic.nsf/AttachmentsByTitle/tnbb_initiatives_on.gif/$file/tnbb_initiatives_on.gif','/site/homepublic.nsf/AttachmentsByTitle/tnbb_events_on.gif/$file/tnbb_events_on.gif','/site/homepublic.nsf/AttachmentsByTitle/tnbb_media_on.gif/$file/tnbb_media_on.gif','/site/homepublic.nsf/AttachmentsByTitle/tnbb_about_on.gif/$file/tnbb_about_on.gif','/site/homepublic.nsf/AttachmentsByTitle/tnbt_faqs_on.gif/$file/tnbt_faqs_on.gif','/site/homepublic.nsf/AttachmentsByTitle/tnbt_sitemap_on.gif/$file/tnbt_sitemap_on.gif','/site/homepublic.nsf/AttachmentsByTitle/tnbt_contact_on.gif/$file/tnbt_contact_on.gif'); 
+MM_preloadImages('/site/homepublic.nsf/AttachmentsByTitle/print_on.gif/$file/print_on.gif','/site/homepublic.nsf/AttachmentsByTitle/send_on.gif/$file/send_on.gif');
+} // preloadImages
+
+/////////////////////////Rollover script for text////////////////////////////////
+function hover(layer) {
+
+var link, str;
+link = layer.document.links[0];
+str = '<a href="' + link.href + '"';
+if (link.target) str += ' target= "' + link.target + '"'
+
+   str += '><font class="toolheadhl">' + link.text + '</font>';
+
+   layer.hoverLayer = new Layer(layer.clip.width, layer);
+   layer.hoverLayer.document.open("text/html", "replace");
+   layer.hoverLayer.document.write(str);
+   layer.hoverLayer.document.close();
+   layer.hoverLayer.bgColor = "#FFFFFF";
+
+   layer.hoverLayer.visibility =  "show";
+
+   layer.onMouseOver = hoverOn;
+   layer.onMouseOut  = hoverOff;
+}
+
+function hoverOn() {
+  this.hoverLayer.visibility = "show";
+}
+
+function hoverOff() {
+  this.hoverLayer.visibility = "hide";
+}
+
+function doCookieL(name,value) {
+document.cookie=name+"="+value+"; expires=Saturday, 01-Apr-2200 08:00:00 GMT ; path=/";
+return true;
+}
+
+//-->
+</script>
+<script language="JavaScript">
+<!--
+var DocUnid = '14C4AE36B14FC415C1256CBA006B5E93';
+var RelPath = '/site/homepublic.nsf';
+var PreviewPageStyle = 'BD8B6AAB5ED10F3BC1256A9200419537&Preview=1';
+var theQueryString = document.location.search;
+var theURL = RelPath + "/Content/" + DocUnid + ((theQueryString=="")?"?OpenDocument":theQueryString) ; // NK 12-9-2001 // NK 27-8-2001
+var URLString = theURL + '&PreviewStyle='+ PreviewPageStyle; // NK 21-8-2001
+
+var CompoundPageStyle = "3E698ACC1ABBA821C1256AC0004C5A9B" ;
+var CompoundURLString = theURL + '&PreviewStyle='+ CompoundPageStyle; 
+
+ winStats='toolbar=no,location=no,directories=no,menubar=no,';
+ winStats+='resizable=yes,scrollbars=yes,width=600,height=500';
+
+   if (navigator.appName.indexOf("Microsoft")>=0) {
+      winStats+=',left=10,top=25';
+    }else{
+      winStats+=',screenX=10,screenY=25';
+    }
+
+function OpenPrintPreview(){floater=window.open(URLString,'',winStats);}
+function OpenCompoundPrintPreview(){floater=window.open(CompoundURLString,'',winStats);}
+
+//-->
+</script>
+<!-- </HEAD>
+<BODY TEXT="000000" BGCOLOR="FFFFFF">
+-->
+<title>
+World Economic Forum - Remarks from Colin Powell, US Secretary of State
+</title>
+</head>
+<body alink="#FF0000" bgcolor="#FFFFFF" leftmargin="0" link="#000099" marginheight="0" marginwidth="0" onload="init();" text="#000000" topmargin="0" vlink="#663366">
+<script charset="utf-8" src="http://web.archive.org/_static/js/timestamp.js" type="text/javascript"></script>
+<script charset="utf-8" src="http://web.archive.org/_static/js/graph-calc.js" type="text/javascript"></script>
+<script charset="utf-8" src="http://web.archive.org/_static/js/auto-complete.js" type="text/javascript"></script>
+<script charset="utf-8" src="http://web.archive.org/_static/js/toolbar.js" type="text/javascript"></script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+.wb-autocomplete-suggestions {
+    text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: -1px 1px 3px rgba(0,0,0,.1);
+    position: absolute; display: none; z-index: 2147483647; max-height: 254px; overflow: hidden; overflow-y: auto; box-sizing: border-box;
+}
+.wb-autocomplete-suggestion { position: relative; padding: 0 .6em; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.02em; color: #333; }
+.wb-autocomplete-suggestion b { font-weight: bold; }
+.wb-autocomplete-suggestion.selected { background: #f0f0f0; }
+</style>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><script type="text/javascript">
+__wm.bt(600,27,25,2,"web","http://www.weforum.org/site/homepublic.nsf/Content/Remarks+from+Colin+Powell,+US+Secretary+of+State","2005-02-23",1996,"/_static/",['css/banner-styles.css','css/iconochive.css']);
+</script><div class="wb-autocomplete-suggestions"></div>
+<a name="top">
+</a><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td align="left" valign="top"><script>
+// <!--
+isNN4 = document.layers;
+var hasInitForm=false; // if form block present will get initialized
+
+/* This function is called by init() */
+function initMenus(){
+  StructureLayer = (document.all) ? document.frames["SiteStructure"]:document.layers.SiteStructure;
+  if (!StructureLayer || !StructureLayer.Items) return;
+
+  Items = StructureLayer.Items; 
+  NamedItems = StructureLayer.NamedItems;
+  window.item = StructureLayer.item;
+  window.item = StructureLayer.item;
+  menuWidth = StructureLayer.menuWidth;
+  StructureLayer.BaseLayer = (document.all) ? document:window; // menus are created in BaseLayer - so we provide current window
+  includeItems (); // include additional menus/menu items
+
+  var isStructureLoaded = true;
+  isMenuInitialized = isLoaded && isStructureLoaded; /* if this page has been loaded by this moment, else the menu get generated by init() called by onLoad event of this page */
+  join(); // join both arrays
+  if (isMenuInitialized) isMenuGenerated = generateMenu(); // if structure has been loaded then generate menu
+  window.menus = StructureLayer.menus; // get back an array of menus
+
+  if (hasInitForm) initForm ();
+} // initMenus
+
+/* this retrieves absolute offsets of an element */
+function absOffsetX (oX) {
+return (isNN4 ? (oX.parentLayer ? oX.x - absOffsetX (oX):oX.x) : ((oX.offsetParent==document.body) ? oX.offsetLeft: 
+oX.offsetLeft + absOffsetX(oX.offsetParent)));
+}
+function absOffsetY (o) {
+ return (isNN4 ? (o.parentLayer ? o.y - absOffsetY (o):o.y): ((o.offsetParent==document.body) ? o.offsetTop: o.offsetTop + absOffsetY(o.offsetParent)));
+}
+
+function showMenu (eventName, ev, im){
+ if (!isLoaded) {return;} // do not attempt menus unless the page has been loaded
+ if (!Menus[eventName]) {generateNamedMenu(eventName);} // attempt to create if missing
+
+ m = Menus[eventName];
+ if (m) {
+    /* move menu relative to the bottom left of the named image */
+    anch = document.images[im]; // anchor image
+    /* IE does not have x & y properties, so we use custom sub to get this info */
+    m.moveTo (absOffsetX(anch), absOffsetY(anch) + anch.height) ; 
+    for (mm in Menus) {
+       if (Menus[mm] && Menus[mm]!=m) {
+        mmm=Menus[mm];
+        mmm.hideBranch();
+       }
+    } // hide all other menus 
+    m.showDelayedClear(); // show with delay and clear hide action after delay
+  	if (m.timer) {clearTimeout(m.timer);}
+} else {
+   window.status = ("No menu:" + eventName);
+}
+} // showMenu
+
+
+/* hide branch  */
+function hideBranch(m) {
+    if (!isLoaded ||!m) {return;} // do not attempt to hide menus unless the page has been loaded
+	m.hideBranch();
+} // hideBranch
+
+function join() {
+Items["0"] = new item ("capo", "dummy"); // root item
+
+/* build menu item structure/hierarchy out of items 
+generated from Site Framework and Publications */
+var hasProblem=false;
+
+for (it in Items) {
+thisItem = Items[it];
+
+// do not create menu items out of simple web pages (these must be defined in framework)
+if (thisItem.form!="WebPage") {
+   /* check if we need to substitute parent doc with framework*/
+   if (thisItem.parentid) {
+      parentItem = Items[thisItem.parentid];
+      if (parentItem) {
+        if (parentItem.form == "WebPage" &&parentItem.siteArea!="") {
+          // attempt to substitue parent with corresponding site structure element
+           parentItem = Items[parentItem.siteArea];  // siteArea = UNID of site area
+        }
+          if (! parentItem.children) {parentItem.children = new Array();}
+          parentItem.children[parentItem.children.length] = thisItem;
+      } else {
+      /* some problem
+      log(thisItem.title +  " " + thisItem.parentid);
+      hasProblem=true; */
+      }
+    }
+  } else {
+   if (thisItem.parentid) {
+      parentItem = Items[(thisItem.parentid="0")?thisItem.siteArea:thisItem.parentid];
+      if (parentItem && parentItem.url!=thisItem.url) {
+          if (! parentItem.children) {parentItem.children = new Array();}
+          parentItem.children[parentItem.children.length] = thisItem;
+      } 
+
+    }
+  }
+
+} 
+
+
+
+
+
+if (hasProblem){
+log("** PROBLEMS GENERATING MENU - ALL ITEMS ***")
+for (ii in Items) {
+ log(ii + " " + Items[ii].title + " " + Items[ii].id);
+}
+} // -->
+} // join
+</script>
+<script>
+function includeItems () {
+
+}
+
+// define areas we want as separate menus - RHS - site framework area title, LHS alias used for menu reference in header
+var NamedAreas = new Array ();
+NamedAreas ["Initiatives"] = "Initiatives";
+NamedAreas["Events"] = "Events";
+NamedAreas["Media Centre"] = "Media Centre";
+NamedAreas["About Forum"] = "About Us"; // listtag is alias
+NamedAreas["Private Area"] = "Members Area";
+
+/* init menus */
+var Menus = new Array();
+
+function generateMenu() {
+
+/*
+for (na in NamedAreas) {
+  theItem = window.NamedItems[NamedAreas[na]];
+  if (theItem) {
+    Menus[na]=theItem.makeMenu (menuWidth, "popup");
+    } else {
+    window.status=("missing area:" + na + "\n" + NamedAreas[na])}
+  }
+*/
+  return true;
+} // generateMenu
+
+//
+function generateNamedMenu(na) {
+
+  var theItem = window.NamedItems[NamedAreas[na]];
+  if (theItem) {
+//    Menus[na]=theItem.makeMenu (menuWidth, "popup", 2); // 2 levels
+      Menus[na]=theItem.makeMenu (figureOutWidth(theItem.children), "popup", 1); // 1 level finally NK#7-12-2001
+
+    } else {
+    window.status=("missing area:" + na + "\n" + NamedAreas[na])}
+} // generateNamedMenu
+var ScaleFactor = 7; // pixels per character
+
+function figureOutWidth (a) {
+  // approximate a menu width so that any text in array will display in one line
+  var i; var chars =0;
+  for (i=0;i<a.length;i++) {
+    if (a[i].title.length>chars) {chars =a[i].title.length ;}
+  }
+  return chars * ScaleFactor + 10;
+} // figureOutWidth
+</script>
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/homepublic.nsf/Content/Homepage"><img border="0" height="75" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/tnbt_logo_white.gif/$FILE/tnbt_logo_white.gif" width="137"/></a></td><td width="70%"><img border="0" height="2" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/1pixel.gif/$FILE/1pixel.gif" width="2"/></td><td><table border="0" cellpadding="0" cellspacing="0" width="192"><tbody><tr>
+<td width="190">
+<script language="javascript">
+if (navigator.appName!="Netscape") document.write("<div align=right>")
+</script>
+<ilayer><layer onmouseover="hover(this, true);">
+<span class="toolhead"><a class="toolhead" href="http://web.archive.org/web/20050223091222/http://wef.typepad.com/blog/"><b>Weblog</b></a></span>
+</layer></ilayer>
+<script language="javascript">
+if (navigator.appName!="Netscape") document.write("</div>")
+</script>
+</td>
+<td width="1">
+<img src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/1pixel.gif/$File/1pixel.gif" width="1"/>
+</td>
+<td bgcolor="#000099" width="1">
+<img src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/1pixel.gif/$File/1pixel.gif" width="1"/>
+</td>
+</tr><tr>
+<td width="190">
+<script language="javascript">
+if (navigator.appName!="Netscape") document.write("<div align=right>")
+</script>
+<ilayer><layer onmouseover="hover(this, true);">
+<span class="toolhead"><a class="toolhead" href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/homepublic.nsf/Content/_SiteMap">Site map</a></span>
+</layer></ilayer>
+<script language="javascript">
+if (navigator.appName!="Netscape") document.write("</div>")
+</script>
+</td>
+<td width="1">
+<img src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/1pixel.gif/$File/1pixel.gif" width="1"/>
+</td>
+<td bgcolor="#000099" width="1">
+<img src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/1pixel.gif/$File/1pixel.gif" width="1"/>
+</td>
+</tr><tr>
+<td width="190">
+<script language="javascript">
+if (navigator.appName!="Netscape") document.write("<div align=right>")
+</script>
+<ilayer><layer onmouseover="hover(this, true);">
+<span class="toolhead"><a class="toolhead" href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/homepublic.nsf/Content/Contact+Us">Contact us</a></span>
+</layer></ilayer>
+<script language="javascript">
+if (navigator.appName!="Netscape") document.write("</div>")
+</script>
+</td>
+<td width="1">
+<img src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/1pixel.gif/$File/1pixel.gif" width="1"/>
+</td>
+<td bgcolor="#000099" width="1">
+<img src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/1pixel.gif/$File/1pixel.gif" width="1"/>
+</td>
+</tr><tr><td width="190"><table border="0" cellpadding="0" cellspacing="0" width="90">
+<tbody><tr>
+<td align="left" colspan="3" valign="top">
+<form action="http://web.archive.org/web/20050223091222/http://search.weforum.org/cgi-bin/MsmFind.exe" method="get">
+<input name="QUERY_ENCODING" type="hidden" value="UTF-8"/>
+<input name="CFGNAME" type="hidden" value="MssFind.cfg"/>
+</form></td>
+</tr>
+<tr>
+<td align="left" valign="top" width="10">
+<table border="0" cellpadding="2" cellspacing="2">
+<tbody><tr>
+<td valign="bottom">
+<font color="#000099">
+<i><font face="Arial, Helvetica, sans-serif" size="2">Search</font></i>
+</font>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td align="left" valign="top" width="70">
+<input maxlength="255" name="QUERY" size="15" type="text" value=""/>
+</td>
+<td align="left" valign="top" width="10">
+<input alt="Search" border="0" height="27" name="Search" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/tnbt_go_button.gif/$FILE/tnbt_go_button.gif" type="image" value="" width="28"/></td></tr><tr><td align="left" colspan="3" valign="top"></td></tr></tbody></table></td><td bgcolor="#FFFFFF" width="1"><img src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/1pixel.gif/$File/1pixel.gif" width="1"/></td>
+<td bgcolor="#000099" width="1"><img src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/1pixel.gif/$File/1pixel.gif" width="1"/></td></tr></tbody></table></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td> <img height="20" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/top_nav_bar_bottom_01.gif/$file/top_nav_bar_bottom_01.gif" width="50"/></td>
+<td> <a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/homepublic.nsf/Content/Homepage" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','/site/homepublic.nsf/AttachmentsByTitle/tnbb_home_on.gif/$file/tnbb_home_on.gif',1)"><img border="0" height="20" name="Image1" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/tnbb_home_off.gif/$file/tnbb_home_off.gif" width="60"/></a></td>
+<td> <img height="20" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/top_nav_bar_bottom_03.gif/$file/top_nav_bar_bottom_03.gif" width="44"/></td>
+<td> <a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/homepublic.nsf/Content/Initiatives+subhome" onmouseout="MM_swapImgRestore();//hideBranch(Menus['Initiatives'])" onmouseover="MM_swapImage('Image2','','/site/homepublic.nsf/AttachmentsByTitle/tnbb_initiatives_on.gif/$file/tnbb_initiatives_on.gif',1); //showMenu('Initiatives', event, 'Image2')">
+<img border="0" height="20" name="Image2" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/tnbb_initiatives_off.gif/$file/tnbb_initiatives_off.gif" width="86"/></a></td>
+<td><a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/homepublic.nsf/Content/Events+subhome" onmouseout="MM_swapImgRestore(); //hideBranch(Menus['Events'])" onmouseover="MM_swapImage('Image3','','/site/homepublic.nsf/AttachmentsByTitle/tnbb_events_on.gif/$file/tnbb_events_on.gif',1);//showMenu('Events', event, 'Image3')">
+<img border="0" height="20" name="Image3" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/tnbb_events_off.gif/$file/tnbb_events_off.gif" width="68"/></a></td>
+<td>
+<a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/homepublic.nsf/Content/Media+Centre+Subhome" onmouseout="MM_swapImgRestore(); //hideBranch(Menus['Media Centre'])" onmouseover="MM_swapImage('Image4','','/site/homepublic.nsf/AttachmentsByTitle/tnbb_media_on.gif/$file/tnbb_media_on.gif',1);//showMenu('Media Centre', event, 'Image4')">
+<img border="0" height="20" name="Image4" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/tnbb_media_off.gif/$file/tnbb_media_off.gif"/></a></td>
+<td>
+<a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/homepublic.nsf/Content/About+the+Forum+Subhome" onmouseout="MM_swapImgRestore(); //hideBranch(Menus['About Us'])" onmouseover="MM_swapImage('Image5','','/site/homepublic.nsf/AttachmentsByTitle/tnbb_about_on.gif/$file/tnbb_about_on.gif',1);//showMenu('About Us', event, 'Image5')">
+<img border="0" height="20" name="Image5" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/tnbb_about_off.gif/$file/tnbb_about_off.gif"/></a></td>
+<td>
+<a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/knowledgenavigator.nsf/Content/KB+Home+Page" onmouseout="MM_swapImgRestore(); //hideBranch(Menus['KN'])" onmouseover="MM_swapImage('Image7','','/site/homepublic.nsf/AttachmentsByTitle/tnbb_knavigator_on.gif/$file/tnbb_knavigator_on.gif',1);//showMenu('KN', event, 'Image7')">
+<img border="0" height="20" name="Image7" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/tnbb_knavigator_off.gif/$file/tnbb_knavigator_off.gif"/></a></td>
+<td> <a href="http://web.archive.org/web/20050223091222/https://members.weforum.org/site/homeprivate.nsf?Open&amp;login" onmouseout="MM_swapImgRestore(); //hideBranch(Menus['Private Area'])" onmouseover="MM_swapImage('Image6','','/site/homepublic.nsf/AttachmentsByTitle/tnbb_members_on.gif/$file/tnbb_members_on.gif',1);//showMenu('Private Area', event, 'Image6')"><img border="0" name="Image6" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/tnbb_members_off.gif/$file/tnbb_members_off.gif"/></a></td>
+<td style="background-image:url(/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/top_nav_bar_bottom_09.gif/$file/top_nav_bar_bottom_09.gif);background-repeat:repeat-x" width="100%"> </td>
+</tr></tbody></table>
+<!-- previously for Akamai 
+style="background-image:url(http://mirror.weforum.org.edgesuite.net/site/homepublic.nsf/AttachmentsByTitle/top_nav_bar_bottom_09.gif/$file/top_nav_bar_bottom_09.gif);background-repeat:repeat-x">&nbsp;</td>--><script>
+var areaList = new Array();
+var srcList = new Array();
+areaList ["Initiatives"] = "Image2";
+areaList ["Events"] = "Image3";
+areaList ["Media Centre"] = "Image4";
+areaList ["About Us"] = "Image5";
+areaList ["Members Area"] = "Image6";
+srcList ["Initiatives"] = '/site/homepublic.nsf/AttachmentsByTitle/tnbb_initiatives_on.gif/$file/tnbb_initiatives_on.gif';
+srcList ["Events"] = '/site/homepublic.nsf/AttachmentsByTitle/tnbb_events_on.gif/$file/tnbb_events_on.gif';
+srcList ["Media Centre"] =  '/site/homepublic.nsf/AttachmentsByTitle/tnbb_media_on.gif/$file/tnbb_media_on.gif';
+srcList ["About Us"] =  '/site/homepublic.nsf/AttachmentsByTitle/tnbb_about_on.gif/$file/tnbb_about_on.gif';
+srcList ["Members Area"] =  '/site/homepublic.nsf/AttachmentsByTitle/tnbb_members_on.gif/$file/tnbb_members_on.gif';
+
+/*  */
+key = "World Economic Forum";
+if (areaList[key]) {currentArea=key;fixedImage=areaList[key];fixedImageSrc=srcList[key];}
+/*  */
+</script>
+</td>
+</tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+<td valign="top" width="200"><table border="0" cellpadding="6" cellspacing="6" width="100%">
+<tbody><tr>
+<td align="left" valign="top"><a href="http://web.archive.org/web/javascript:history.go(-1);">Return</a></td>
+</tr>
+</tbody></table></td>
+<td height="10" width="10"><img height="10" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/spacer.gif/$FILE/spacer.gif" width="10"/></td>
+<td valign="top" width="100%">
+<table border="0" width="100%">
+<tbody><tr><td colspan="3" height="10" width="100%"><img height="1" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/pixel.gif/$FILE/pixel.gif" width="100%"/></td></tr>
+<tr><td valign="top" width="100%">
+<table border="0" width="100%">
+<tbody><tr><td><p></p><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td align="left" valign="top"><table align="right" border="0" cellpadding="0" cellspacing="0" width="320"><tbody><tr>
+<td bgcolor="#003399" width="160"><img height="1" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/spacer.gif/$file/spacer.gif" width="1"/></td>
+<td bgcolor="#003399" width="15"><img height="1" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/spacer.gif/$file/spacer.gif" width="1"/></td>
+<td width="20"><img height="1" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/spacer.gif/$file/spacer.gif" width="20"/></td>
+<td bgcolor="#003399" width="110"><img height="1" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/spacer.gif/$file/spacer.gif" width="1"/></td>
+<td bgcolor="#003399" width="15"><img height="1" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/spacer.gif/$file/spacer.gif" width="15"/></td></tr><tr><td>
+<div align="right"><font color="#003399" face="Arial, Helvetica, sans-serif" size="2">
+<a class="subMenuLink" href="http://web.archive.org/web/javascript:OpenPrintPreview()"><nobr>Printer friendly version</nobr></a><nobr>   </nobr></font></div></td>
+<td bgcolor="#003399" width="20"><div align="center"><font size="2"><script>
+idtmp = "img" + Math.random();
+tmpstr= "<a href=\"javascript:OpenPrintPreview()\" onMouseOut=\"MM_swapImgRestore()\" ";
+tmpstr += "onMouseOver=\"MM_swapImage(\'" + idtmp + "\',\'\',\'/site/homepublic.nsf/AttachmentsByTitle/print_on.gif/$file/print_on.gif\',1)\"><img ";
+tmpstr += "src=\"/site/homepublic.nsf/AttachmentsByTitle/print_off.gif/$file/print_off.gif\" width=\"15\" height=\"15\" border=\"0\" name=\"" + idtmp + "\"></a>";
+document.write(tmpstr);
+</script><a href="http://web.archive.org/web/javascript:OpenPrintPreview()" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('img0.34311901717443094','','/site/homepublic.nsf/AttachmentsByTitle/print_on.gif/$file/print_on.gif',1)"><img border="0" height="15" name="img0.34311901717443094" src="http://web.archive.org/site/homepublic.nsf/AttachmentsByTitle/print_off.gif/$file/print_off.gif" width="15"/></a>
+</font></div></td><td width="20"> </td>
+<td width="120">
+<div align="right"><font color="#003399" face="Arial, Helvetica, sans-serif" size="2">
+<a class="subMenuLink" href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/homepublic.nsf/Content/Form+Send+A+Link"><nobr>Send to a friend</nobr></a><nobr>   </nobr></font></div></td>
+<td bgcolor="#003399" width="20">
+<div align="center"><font size="2"><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"><script>
+idtmp = "img" + Math.random();
+tmpstr= "<a href=\"/site/homepublic.nsf/Content/Form+Send+A+Link\" onMouseOut=\"MM_swapImgRestore()\" ";
+tmpstr += "onMouseOver=\"MM_swapImage(\'" + idtmp + "\',\'\',\'/site/homepublic.nsf/AttachmentsByTitle/send_on.gif/$file/send_on.gif\',1)\"><img ";
+tmpstr += "src=\"/site/homepublic.nsf/AttachmentsByTitle/send_off.gif/$file/send_off.gif\" width=\"15\" height=\"15\" border=\"0\" name=\"" + idtmp + "\"></a>";
+document.write(tmpstr);
+</script><a href="http://web.archive.org/web/site/homepublic.nsf/Content/Form+Send+A+Link" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('img0.8200408478699528','','/site/homepublic.nsf/AttachmentsByTitle/send_on.gif/$file/send_on.gif',1)"><img border="0" height="15" name="img0.8200408478699528" src="http://web.archive.org/site/homepublic.nsf/AttachmentsByTitle/send_off.gif/$file/send_off.gif" width="15"/></a>
+<!-- 
+<a href="/site/homepublic.nsf/Content/Form+Send+A+Link" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('ImageSend','','/site/homepublic.nsf/AttachmentsByTitle/send_on.gif/$file/send_on.gif',1)"><img src="/site/homepublic.nsf/AttachmentsByTitle/send_off.gif/$file/send_off.gif" width="15" height="15" border="0" name="ImageSend"></a>
+--></font></font></div></td></tr></tbody></table></td></tr><tr>
+<td align="left" valign="top"></td>
+</tr>
+</tbody></table><p class="heading">Remarks from Colin Powell, US Secretary of State</p><p></p></td></tr><tr><td>
+<p><font face="Arial">On 26 January 2003, US Secretary of State Colin Powell (</font><a href="http://web.archive.org/web/web/20050223091222/http://www.weforum.org/site/knowledgenavigator.nsf/Content/Powell%20Colin"><u><font face="Arial">profile</font></u></a><font face="Arial">) spoke at the </font><a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/annualmeeting"><u><font face="Arial">Annual Meeting 2003</font></u></a><font face="Arial"> in the session </font><a href="http://web.archive.org/web/web/20050223091222/http://www.weforum.org/site/knowledgenavigator.nsf/Content/Dialogue%20with%20the%20US%20Secretary%20of%20State_2003?open"><u><font face="Arial">Dialogue with the US Secretary of State</font></u></a><font face="Arial">. The transcript of his full remarks is below.</font><br/>
+<br/>
+<img align="left" alt="Colin Powell, US Secretary of State" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/am03_home_powell/$FILE/powell.jpg"/><font face="Arial">SECRETARY POWELL:  Thank you so very much, Klaus, for a very gracious and warm introduction.  It's a great honor to be here and to see so many distinguished persons from around the world, and I welcome the opportunity to share some thoughts with you this morning.</font>
+</p><p><br/>
+<font face="Arial">I am especially pleased that the theme of this year's gathering is "Building Trust," because trust is a crucial commodity, not only in this but in all eras.  I've been here for just over a day, long enough to speak and meet with a number of you, long enough to hear directly and from others much of what has been said about the United States over the last two or three days, about whether America can be trusted to use its enormous political, economic, and above all, military power, wisely and fairly.  </font><br/>
+<br/>
+<font face="Arial">I believe -- no, I know with all of my heart -- that the United States can.  I believe no less strongly that the United States has earned the trust of men, women and children around the world.  Let's just go to Afghanistan.  Ten thousand American soldiers are in that country, helping to create conditions of security.  A new government, a new representative government, is in place.  We see new roads, new hospitals, new schools -- where girls can attend and gain the skills they will need to lead productive, meaningful lives.</font><br/>
+<br/>
+<font face="Arial">Afghanistan is one example of what we have accomplished in the global war against terrorism.  The United States, together with the countries represented by many of you in this room, is making it more difficult for terrorists to move about, for them to communicate, for them to transfer money, for them to acquire weapons to carry out attacks against innocent people.  </font><br/>
+<br/>
+<font face="Arial">We should be very proud of what has been accomplished in Afghanistan since we met in New York last year.  But I want to say one more thing about Afghanistan which is reflective about the manner in which America carries out its responsibilities in the world.  The American troops who are there went there in peace, working alongside now thousands of troops from more than a dozen countries.  And they're all working together to help train Afghan police and military forces that will take their place, and as soon as our troops are needed no longer, they will depart.</font><br/>
+<br/>
+<font face="Arial">Afghanistan's leaders and Afghanistan's people know that they can trust America to do just this, to do the right thing.  The people of Bosnia, the people of Kosovo, of Macedonia -- they too know that they can trust us to do our jobs and then leave.  We seek nothing for ourselves other than to help bring about security for people that have already suffered too much.</font><br/>
+<br/>
+<font face="Arial">The same holds true for the people of Kuwait.  Twelve years ago, we helped liberate their country, and then we left.  We did not seek any special benefits for ourselves.  That is not the American way.  </font><br/>
+<br/>
+<font face="Arial">Trust is also at the core of our ties and our work in Africa, where the United States is promoting trade and democracy while we struggle against wars and disease that rob so many Africans of their lives and of their futures.  </font><br/>
+<br/>
+<font face="Arial">In Latin America, where for decades many often questioned our motives, doubts now are giving way to trust as the Western Hemisphere is bound by a new Democratic Charter and is being transformed into a zone of freedom, trade and investment, and relative stability.  </font><br/>
+<br/>
+<font face="Arial">More than a half a century ago, the United States helped to rescue Europe from the tyranny of fascism that had led to World War II.  We stayed to help Europe regain its vitality.  We supported and continue to support a strong, united Europe, and congratulate Europeans on the recent enlargement of the European Union.</font><br/>
+<br/>
+<font face="Arial">Americans and Europeans together built the greatest political-military alliance in history.  NATO was at the core of our efforts to keep the peace in Europe for more than four decades.  The Cold War ended, and yet ten nations have joined the Alliance since the Cold War's end.  Why were they so anxious to join?  And why do still others wait on the list to become members of this grand alliance?</font><br/>
+<br/>
+<font face="Arial">The answer, I think, is rather simple.  They want to join to be part of Europe, a Europe whole and free, but they also want to be part of a body that links the United States and Canada to Europe.  They want to be part of a transatlantic community, a transatlantic community that at one and the same time promotes peace, prosperity and democratic values.  The power of men and women to choose, to sustain government of the people.</font><br/>
+<br/>
+<font face="Arial">Now, I'm aware, as everyone in this room is aware, that Americans and Europeans do not always see things the same way in every instance.  I would quickly point out that this is hardly a new development.  (Laughter.)  Henry Kissinger, decades ago, wrote a book on the Atlantic alliance, and he called it, "The Troubled Partnership."  I am told that later Henry had second doubts about the title when he found that some bookstores were placing it on the shelf reserved for books about marriage counseling.  (Laughter.)  But maybe the bookstore owners knew what they were doing, because problems with some of our friends across the Atlantic go back a long time, more than two centuries by my count.  In fact, one or two of our friends we have been in marriage counseling with for over 225 years nonstop, and yet the marriage is intact, remains strong, will weather any differences that come along because of our mutual shared values.</font><br/>
+<br/>
+<font face="Arial">Differences are inevitable, but differences should not be equated with American unilateralism or American arrogance.  Sometimes differences are just that -- differences.  On occasion, our experiences, our interests, will lead us to see things in a different way.  For our part, we will not join a consensus if we believe it compromises our core principles.  Nor would we expect any other nation to join in a consensus that would compromise its core principles.  When we feel strongly about something, we will lead.  We will act even if others are not prepared to join us.  But the United States will always work, will always endeavor, to get others to join in a consensus.  We want to work closely with Europe, home of our closest friends and partners.  We want to work closely with Europe on challenges inside Europe and beyond, and you can trust us on that.</font><br/>
+<br/>
+<font face="Arial">When we talk about trust, let me use that as a bridge to one of the major issues of the day, Iraq.  Let me try to explain why we feel so strongly about Iraq and why we are determined that the current situation cannot be allowed to continue.  We are where we are today with Iraq because Saddam Hussein and his regime have repeatedly violated the trust of the United Nations, his people and his neighbors, to such an extent as to pose a grave danger to international peace and security.  </font><br/>
+<br/>
+<font face="Arial">The United Nation’s Security Council recognized this situation and unanimously passed Resolution 1441, giving Iraq one last chance to disarm peacefully after 11 years of defying the world community.  Today, not a single nation, not one, trusts Saddam and his regime.  And those who know him best trust him least:  his own citizens, whom he has terrorized and oppressed; his neighbors, whom he has threatened and invaded.  Citizens and neighbors alike have been killed by his chemical weapons. </font><br/>
+<br/>
+<font face="Arial">That is why Resolution 1441 was carefully crafted to be far tougher and far more thorough than the many resolutions that preceded it.  1441 places the burden squarely on Iraq to provide accurate, full and complete information on its weapons of mass destruction.</font><br/>
+<br/>
+<font face="Arial">1441 is not about inspectors exposing new evidence of Iraq's established failure to disarm.  It is about Iraq disclosing the entire extent of its illicit biological, chemical, nuclear and missile activities, and disarming itself of them with the help of inspectors to verify what Iraq is doing.</font><br/>
+<br/>
+<font face="Arial">This is not about inspectors finding smoking guns.  It is about Iraqis failure -- Iraq's failure to tell the inspectors where to find its weapons of mass destruction.  </font><br/>
+<br/>
+<font face="Arial">The 12,200-page declaration Iraq submitted to the United Nations Security Council on December 7th utterly failed to meet the requirements of the resolution, utterly failed to meet the requirements of being accurate, full and complete.  Iraq attempted to conceal with volume what it lacked in veracity.  Not one nation in the Security Council rose to defend that declaration.  Not one person in this room could do so.  The requirement for a declaration was put in as an early test of Iraq's intent to change its behavior.  It failed the test.</font><br/>
+<br/>
+<font face="Arial">This past week, United Nations Inspector Blix and International Atomic Energy Agency Inspector El Baradei went to Baghdad to deliver the message that Iraq's cooperation has been inadequate.  Iraq's response did nothing to alter the fact that Baghdad still is not providing the inspectors with the information they need to do their job.  There is no indication whatever that Iraq has made the strategic decision to come clean and to comply with its international obligation to disarm.</font><br/>
+<br/>
+<font face="Arial">The support of U.S. intelligence and the intelligence of other nations can take the inspectors only so far.  Without Iraq's full and active cooperation, 100 or so inspectors would have to look under every roof and search the back of every truck in a country the size of California to find the munitions and programs for which Iraq has failed to account for.</font><br/>
+<br/>
+<font face="Arial">After six weeks of inspections, the international community still needs to know the answers to key questions.  For example:  Where is the evidence -- where is the evidence -- that Iraq has destroyed the tens of thousands of liters of anthrax and botulinum we know it had before it expelled the previous inspectors?  This isn't an American determination.  This is the determination of the previous inspectors.  Where is this material?  What happened to it?  It's not a trivial question.  We're not talking about aspirin.  We're talking about the most deadly things one can imagine, that can kill thousands, millions of people.  We cannot simply turn away and say, "Well, never mind."  Where is it?  Account for it.  Let it be verified through the inspectors.</font><br/>
+<br/>
+<font face="Arial">What happened to nearly 30,000 munitions capable of carrying chemical agents?  The inspectors can only account for only 16 of them.  Where are they?  It's not a matter of ignoring the reality of the situation.  Just think, all of these munitions, which perhaps only have a short range if fired out of an artillery weapon in Iraq, but imagine if one of these weapons were smuggled out of Iraq and found its way into the hands of a terrorist organization who could transport it anywhere in the world.  </font><br/>
+<br/>
+<font face="Arial">What happened -- please, what happened -- to the three metric tons of growth material that Iraq imported which can be used for producing early, in a very rapid fashion, deadly biological agents?</font><br/>
+<br/>
+<font face="Arial">Where are the mobile vans that are nothing more than biological weapons laboratories on wheels?  Why is Iraq still trying to procure uranium and the special equipment needed to transform it into material for nuclear weapons?  </font><br/>
+<br/>
+<font face="Arial">These questions are not academic.  They are not trivial.  They are questions of life and death, and they must be answered.  </font><br/>
+<br/>
+<font face="Arial">To those who say, "Why not give the inspection process more time?", I ask:  "How much more time does Iraq need to answer those questions?  It is not a matter of time alone, it is a matter of telling the truth, and so far Saddam Hussein still responds with evasion and with lies.</font><br/>
+<br/>
+<font face="Arial">Saddam should tell the truth, and tell the truth now.  The more we wait, the more chance there is for this dictator with clear ties to terrorist groups, including al-Qaida, more time for him to pass a weapon, share a technology, or use these weapons again.  </font><br/>
+<br/>
+<font face="Arial">The nexus of tolerance and terror, of terrorists and weapons of mass destruction, is the greatest danger of our age.  The international community knows what real disarmament looks like.  We saw it in Kazakhstan.  We saw it take place in the Ukraine.  We saw it in South Africa.  We see none of the telltale signs of real disarmament, honest disarmament, in Iraq.  Instead of a high-level determination to work with inspectors, we have continued defiance.  Instead of a transparent disarmament process, we get the same old tactics of deceit and delay, documents hidden in private homes, denial of reconnaissance flights, denial of access to people and facilities, the kind of access that must be unimpeded and unrestricted in order to be successful.</font><br/>
+<br/>
+<font face="Arial">Tomorrow, Chief Inspectors Blix and El Baradei will make their report to the United Nations Security Council.  My government will study their report carefully, will study it with gravity, and we will exchange views on its findings that were presented with other members of the Council.</font><br/>
+<br/>
+<font face="Arial">We are in no great rush to judgment tomorrow or the day after, but clearly time is running out.  There is no longer an excuse for Iraqi denial of its obligation.  We must have Iraq participate in the disarmament or be disarmed.</font><br/>
+<br/>
+<font face="Arial">We should not (sic) understand what is at stake here.  Saddam Hussein's hidden weapons of mass destruction are meant to intimidate Iraq's neighbors.  These illegal weapons threaten international peace and security.  These terrible weapons put millions of innocent people at risk.</font><br/>
+<br/>
+<font face="Arial">It is more than that.  Saddam's naked defiance also challenges the relevance and credibility of the Security Council and the world community.  When all 15 members of the Council voted to pass UN Resolution 1441, they assumed a heavy responsibility to put their will behind their words.  Multilateralism cannot become an excuse for inaction.  Saddam Hussein and others of his ilk would like nothing better to see the world community back away from this resolution, instead of backing it with their solemn resolve.</font><br/>
+<br/>
+<font face="Arial">We will work through these issues patiently and deliberately with our friends and with our allies.  These are serious matters before us.  Let the Iraqi regime have no doubt, however, if it does not disarm peacefully at this juncture, it will be disarmed down the road.  </font><br/>
+<br/>
+<font face="Arial">The United States believes that time is running out.  We will not shrink from war if that is the only way to rid Iraq of its weapons of mass destruction.  </font><br/>
+<br/>
+<font face="Arial">We continue to reserve our sovereign right to take military action against Iraq alone or in a coalition of the willing.  As the President has said:  "We cannot defend America and our friends by hoping for the best.  History will judge harshly those who saw a coming danger but failed to act."</font><br/>
+<br/>
+<font face="Arial">It is our hope, however -- it is our will -- that we can do this peacefully.  It is our hope, if we will it to happen, that Iraq would participate in its disarmament.  If it does not, it is also our hope that the international community will stand behind the elements of 1441, and as a great coalition, we will deal with this problem once and for all.  </font><br/>
+<br/>
+<font face="Arial">North Korea is another example of a country where trust is at issue. Over the past nine years, the international community engaged North Korea in good faith, with nuclear agreements which we now know Pyongyang violated.  </font><br/>
+<br/>
+<font face="Arial">At the same time, North Korea's policies have dragged its people into a dark, cold, hungry hell.</font><br/>
+<br/>
+<font face="Arial">In a collection of works published in 1978 under the title Alarm and Hope, the embattled Soviet physicist and Nobel Peace Laureate Andrei Sakharov, stated:  "I am convinced that international trust, mutual understanding, disarmament, and international security are inconceivable without an open society."  </font><br/>
+<br/>
+<font face="Arial">And so, in consultation with South Korea and Japan, the United States was ready last summer to pursue a bold approach with Pyongyang.  The approach would have entailed political and economic steps to improve the lives of the North Korean people and move our relationship with the North toward normalcy.</font><br/>
+<br/>
+<font face="Arial">It was then that we discovered that the North had been pursuing a covert uranium enrichment program in egregious violation of its international obligations.  When confronted with the bald facts, Pyongyang admitted what it had been doing.  </font><br/>
+<br/>
+<font face="Arial">The United States is willing to talk to North Korea about how it will meet its obligations to completely dismantle its nuclear weapons program.  But this is not just a matter between the United States and North Korea.  Pyongyang's behavior affects the stability of both the immediate region and of the world.  And that's why the IAEA Board of Governors deplored in the strongest terms North Korea's actions.</font><br/>
+<br/>
+<font face="Arial">Once again, we are working with our allies and others in the region and across the international community to address through diplomacy our common concerns over North Korea's programs.    </font><br/>
+<br/>
+<font face="Arial">The United States has no intention of attacking North Korea, President Bush has said that repeatedly, and we are prepared to convey this in a way that makes it unmistakable for North Korea.  At the same time, we keep all of our options on the table.</font><br/>
+<font face="Arial"> </font><br/>
+<font face="Arial">Meanwhile, the United States has been the world's biggest donor of humanitarian assistance to North Korea and we will continue to contribute to their humanitarian requirements and needs.  </font><br/>
+<br/>
+<font face="Arial">Let me be clear:  The United States stands ready to build a different kind of relationship with North Korea once Pyongyang comes into verifiable compliance with its commitments.  The North must be willing to act in a manner that builds trust. </font><br/>
+<br/>
+<font face="Arial">As an old soldier who came of age during the Cold War, I find it interesting to take a step back from time to time and note the important role being played by Russia and China in efforts to resolve the challenges posed by Iraq and North Korea.  They voted along with the rest of the Security Council members for 1441, for example.  Just imagine how different and how difficult things would be if it were still the Cold War and our relations with Moscow and Beijing were marked by intense rivalry, and we looked through every aspect of international politics through that lens of the Cold War.  But gone are the days of superpower confrontation.  The major threats that each of us faces are shared with others, and so are the solutions.  With this new perspective, Presidents Bush and Putin have established a new strategic partnership which they are determined to deepen in the years ahead.  </font><br/>
+<br/>
+<font face="Arial">We also support Russia's efforts to become fully integrated into the international economic community.  That include Russia's membership on commercial terms in the World Trade Organization, as well as full membership in the G-8 in 2006.</font><br/>
+<br/>
+<font face="Arial">The United States still has important concerns and disagreements with Russia, and Russia with us, however we are building a relationship worthy of two great countries with great responsibilities and much to contribute to the 21st century world we live in.</font><br/>
+<br/>
+<font face="Arial">We have also brought new momentum to our relationship with China.  As President Bush told China's next generation of leaders, the students at Qinghua University:  "China is on a rising path, and America welcomes the emergence of a strong, peaceful and prosperous China."</font><br/>
+<br/>
+<font face="Arial">China's participation in world affairs is a positive and welcome development.  We look to China to play a responsible role in world affairs, following international standards on trade, on proliferation, on human rights, and on international peace and cooperation.  </font><br/>
+<br/>
+<font face="Arial">The United States seeks to work with China as it rises so that the choices that it makes build international confidence instead of distrust and create Hope among the people of China for a better, freer life.</font><br/>
+<br/>
+<font face="Arial">Another way we are building habits of cooperation with Russia and China is by working with them to help parties in war-torn regions bring peaceful ends to conflicts.  A good example of this is how we are working together in South Asia and in the Middle East.  </font><br/>
+<br/>
+<font face="Arial">From the outset, the Bush Administration has viewed both India and Pakistan as countries with which we wished to pursue expanded agendas.  From the outset, we were determined not to have a policy toward India-hyphen-Pakistan, but to seek productive relationships with each in its own right.</font><br/>
+<br/>
+<font face="Arial">And we believe that our improved relationships with India and Pakistan were significant in helping the international community ease them back from the brink of war last year.</font><br/>
+<br/>
+<font face="Arial">No American "Hidden Hand," however, can remove the distrust between India and Pakistan.  This they must do themselves.  The United States has extended a helping hand to both India and Pakistan and we stand ready to do so again.  But it is crucial that they both take risks for peace, risks for peace on that great Subcontinent, and that they work to normalize their relations.  </font><br/>
+<br/>
+<font face="Arial">The situation in the Middle East is proving to be among our most challenging, based however on the President's vision, President Bush's vision of two states, living side-by-side, in peace and security.  And with the help of the international community, we and our Quartet partners have drawn up a roadmap that shows the way to a lasting peace.</font><br/>
+<br/>
+<font face="Arial">To achieve this vision, the Palestinians must build trust by establishing a new and different leadership and new institutions and by putting an end to all terror, all violence.  Israel also will be required to build trust by easing the economic plight of ordinary Palestinians and by putting an end to settlement construction. </font><br/>
+<br/>
+<font face="Arial">With intensive effort by all, the creation of a democratic, viable Palestine is possible in 2005.  And the United States will be engaging fully in this prospect, in this effort, in the coming months and years.</font><br/>
+<br/>
+<font face="Arial">With respect to the broader Middle East, Saudi Crown Prince Abdullah is right:  Arab governments must introduce meaningful political and economic reforms if their people are to realize their potential.  Indeed, all of us must work with citizens and governments of the region to close what Jordan's Queen Rania eloquently calls the "Hope Gap."</font><br/>
+<br/>
+<font face="Arial">That is why my government has launched a new US-Middle East Partnership Initiative.  The Initiative supports public-private efforts in the political, economic and educational spheres to help create conditions under which the young men and women of the Middle East feel they have a stake in rejecting terror and supporting a comprehensive peace.  </font><br/>
+<font face="Arial">Once again, what is missing here, what must be created, is trust.  If trust between states is crucial, so is trust between ordinary people and their governments.</font><br/>
+<br/>
+<font face="Arial">New democracies created with high hopes can founder if ordinary citizens do not see direct improvements in their lives.  Transitions can be chaotic and wrenching.  Democratic systems take time to develop and to deliver.  Meanwhile, autocrats will sing siren songs of stability.  Corruption will squander a nation's treasure.  Extremists will feed on frustration and fears.  Populists will pander and make false promises of fairness.  </font><br/>
+<br/>
+<font face="Arial">By strengthening civil society, independent media, democratic institutions and the rule of law, we can build confidence among citizens to stay on the difficult course of reform.    </font><br/>
+<br/>
+<font face="Arial">And governments striving to do right must have good reason to count on other members of the world community to help them through the rough times to the point where democracy and development are stable and self-sustaining.</font><br/>
+<br/>
+<font face="Arial">The global economic engine needs to operate on all cylinders if developing countries are to achieve growth rates high enough to halve the proportion of people in the world living in poverty by 2015.  A dynamic US economy will continue to be a prime mover of those cylinders.  </font><br/>
+<br/>
+<font face="Arial">President Bush fully recognizes that economic growth is not as strong as it should be in the United States.  And it is for that reason he announced a growth and jobs plan that will promote investment at home and abroad, encourage consumer spending, and deliver critical help to unemployed Americans. </font><br/>
+<br/>
+<font face="Arial">A growing U.S. economy, however, will not suffice to expand the global market to the extent needed for dramatic strides in development.  Japan should quickly implement Prime Minister Koizumi's reform program, notably with regard to non-performing loans, and start growing its domestic economy.  Europe needs to put into action a "pro-growth" agenda that involves labor-market and regulatory reforms.  And China needs to implement fully its market opening commitments to the WTO.</font><br/>
+<br/>
+<font face="Arial">Concluding the Doha Development Round by the end of 2004 also will deliver a much-needed boost to global growth.  According to the World Bank, free trade in all goods, including agriculture, would result in a gain in world income of some $830 billion; 65 percent would flow to developing countries, helping an estimated 300 million people escape from poverty.  </font><br/>
+<br/>
+<font face="Arial">The United States has already stepped forward with bold and sweeping proposals to liberalize trade in both agriculture and in industrial goods.  Now other major players must join us.  Governments must resist the temptation to erect new barriers such as those blocking trade in agriculture and biotechnology which have the effect of reducing trade while depriving food assistance, for example, to hungry -- nay, starving -- people.  </font><br/>
+<br/>
+<font face="Arial">To be sure, only substantial and rapidly expanding trade and investment can generate economic growth on the scale needed to lift entire nations out of misery.  But wisely channeled foreign assistance can play an important part in creating conditions that attract trade and investment in the first place. </font><br/>
+<br/>
+<font face="Arial">Last Spring, at the Financing for Development Conference in Monterrey, Mexico, donors and developing countries reached a consensus on mutual responsibilities:  for donor nations, a new commitment to development assistance of the kind needed to open more markets; for developing countries, a new commitment to create the political and economic conditions needed to use assistance in ways that attract investment and empower its citizens.</font><br/>
+<font face="Arial"> </font><br/>
+<font face="Arial">At the same time, President Bush proposed the groundbreaking Millennium Challenge Account.  When approved by Congress, the Millennium Challenge Account will dramatically increase our development assistance, ramping up to an additional $5 billion every year, and we'll get that ramp up over the next three years, targeting poor countries that govern well, invest in their people and open their economies to enterprise and entrepreneurship.  This new program has the potential to fundamentally change the situation in so many developing countries.  </font><br/>
+<br/>
+<font face="Arial">And last September in Johannesburg, at the World Summit on Sustainable Development, the world community deepened and extended the Monterrey consensus by setting development goals and recognizing the critical role that public-private partnerships play in helping countries achieve these goals, especially in the areas of energy, water and health. </font><br/>
+<br/>
+<font face="Arial">Indeed, building trust is not just a job for governments.  In a globalized world, states confront problems of such complexity and such scale that they cannot hope to address them without help from non-governmental actors, such as are assembled here, so many of them, today.   </font><br/>
+<br/>
+<font face="Arial">We in government bear the responsibility foremost for providing a secure environment in which confidence, well-being and freedom can grow and spread.  We need your help to set high standards of accountability and habits of integrity throughout society.  We need you to use your positions of leadership to foster tolerance, promote democratic principles, stem the HIV/AIDS pandemic.  We need your innovations and investments to expand the global economic, sustain development and eradicate poverty.  We need you to use your vast resources, your vast networks, to link the least of God's children living in the farthest corners of the Earth with the knowledge that they need to succeed.   </font><br/>
+<br/>
+<font face="Arial">A good number of opinion leaders here today from the corporate world and the NGO community already are making greater contributions to international well-being than many governments are.  Some of you even conduct your own foreign policies.  Welcome to the club.  (Laughter.)</font><br/>
+<br/>
+<font face="Arial">Certainly, certainly, all of us gathered here in Davos have great opportunities to build trust in a better future.  The United States looks forward to working with you in this endeavor.  We understand full well that whatever we can do, whatever we can do as one nation, is nothing compared to what we call can do if we unite, if we become part of a great partnership of freedom-loving nations, nations that are committed not only to our own development, but nations that are committed to the hungriest, most desperate people anywhere in the world.  </font><br/>
+<br/>
+<font face="Arial">If all of us can use meetings such as this to once again revitalize our commitment once again, to remember that our obligation to ourselves, to our nations and to our world is to make sure that as we generate wealth, as we create wealth, we recognize that ultimately the purpose of that wealth has to be to touch the lives of every one of God's children.  </font><br/>
+<br/>
+<font face="Arial">Let that be our solemn obligation and let that be our charge for today.  And in that great crusade, the United States is aligned with each and every country and institution represented in this room.</font><br/>
+<br/>
+<font face="Arial">Thank you very much.</font><br/>
+<br/>
+<font face="Arial">(Applause.)</font><br/>
+<br/>
+<font face="Arial">MR. SCHWAB:  Mr. Secretary, you really brought us a message of responsible globality, and I am sure your words will so much contribute to the theme of our meeting, "Building Trust."  Not only your words, but the following actions of all of us here in this room.</font><br/>
+<br/>
+<font face="Arial">We have 50 minutes time, as the Secretary graciously retarded his departure, and we have some possibility to interact.  In view of the short time, I would like to ask you to be very short with your comment, if any, and your question, and please indicate your name and your affiliation to give the Secretary an opportunity to see that here in the room we have really a multi-stakeholder, probably the foremost multi-stakeholder platform in the world.</font><br/>
+<br/>
+<font face="Arial">So let me see who would like to ask a question.  I see here -- oh, let's start with the lady.  Let's start with the lady.</font><br/>
+<br/>
+<font face="Arial">QUESTION:  Thank you.  Mr. Secretary of State, I am Irene Khan, Secretary General of Amnesty International, a global human rights movement.  I would like to thank you for coming to speak to us.  And I have a question for you which I know is troubling many civil society groups around the world, including many of us who are represented here today.</font><br/>
+<br/>
+<font face="Arial">My question is:  Do you believe that the threat which Iraq poses today is so great, so grave and so imminent, that it justifies provoking a massive human rights and humanitarian crisis?</font><br/>
+<br/>
+<font face="Arial">I say this because the humanitarian situation in Iraq is very fragile and military action could easily precipitate, in our view would certainly precipitate, a huge humanitarian disaster.  We have seen -- we remember in 1991 -- the millions of refugees who were trapped on the border.  There could be a bloodbath inside, a ripple effect as well.</font><br/>
+<br/>
+<font face="Arial">And my question is:  How does one balance the human rights and humanitarian concerns with that military action, the threat, the military action both with the humanitarian concern?  Thank you.</font><br/>
+<br/>
+<font face="Arial">SECRETARY POWELL:  Thank you very much.  </font><br/>
+<br/>
+<font face="Arial">(Applause.)</font><br/>
+<br/>
+<font face="Arial">SECRETARY POWELL:  We do believe the threat is great and the Security Council believes the threat is great, and it's reflected in the 15-0 vote on 1441.  Iraq must be disarmed.</font><br/>
+<br/>
+<font face="Arial">We are sensitive to the plight of the Iraqi people, not only in the case of a conflict, but their plight right now.  The Iraqi leadership has more than enough money to take care of the needs of the Iraqi people if the money would be spent in the right way, as opposed to being used to punish the Iraqi people by withholding aid.  </font><br/>
+<br/>
+<font face="Arial">And perhaps if a conflict were necessary -- and once again, we are hoping it will not be necessary -- but if it is necessary, the contingency planning that we are doing in the United States includes actions directly related to ensuring that the humanitarian needs of the Iraqi people would be taken care of, and perhaps with a regime that is more responsive to the needs of its people and more interested in using the wealth of the Iraqi people for the benefit of the Iraqi people, and not for weapons of mass destruction and not wasting the money on armies that invaded Kuwait, armies that invaded Iran.</font><br/>
+<br/>
+<font face="Arial">Perhaps not only would the Iraqi people be better off in the aftermath of such a conflict, but so would the whole region.</font><br/>
+<br/>
+<font face="Arial">MR. SCHWAB:  Thank you.  I saw another question here.</font><br/>
+<br/>
+<font face="Arial">QUESTION:  Mr. Secretary of State, I'm George Carey, the former Archbishop of Canterbury.  I'm now happily retired and here at the World Economic Forum.  And I thank you very much indeed for your address and for all that you are personally doing to improve the state of the world.</font><br/>
+<br/>
+<font face="Arial">Mr. Secretary of State, at this conference, among the language that has been used has been a phrase, the difference between hard power and soft power:  hard power and military power, and perhaps expressed in America as the only superpower with a grave responsibility to create and help to forward the cause of peace in the world; and then soft power, soft power which binds us all, which has something to do with values, human values and all the things that you and I passionately believe in.</font><br/>
+<br/>
+<font face="Arial">Here at WEF, we are thinking of creating a Council of 100 which includes business leaders, politicians, religious leaders -- trying to cross all of the boundaries of media and so on.  That may be something that you may wish to give your support to in the days ahead.</font><br/>
+<br/>
+<font face="Arial">But I've got two questions, if I may.  The first one:  Do you feel that in the present situation, and I'm following on my colleague who just spoke, and regarding Iraq but also Palestine as well, that we are doing enough in drawing upon the common values expressed by soft power in uniting what is called West and the Middle East in Islam and Christianity, in Judaism and other religions?  </font><br/>
+<br/>
+<font face="Arial">And would you not agree, as a very significant political figure in the United States, Colin, that America, at the present time, is in danger of relying too much upon the hard power and not enough upon building the trust from which the soft values, which of course all of our family life that actually at the bottom, when the bottom line is reached, is what makes human life valuable?</font><br/>
+<br/>
+<font face="Arial">(Applause.)</font><br/>
+<br/>
+<font face="Arial">SECRETARY POWELL:  The United States believes strongly in what you call soft power, the value of democracy, the value of the free economic system, the value of making sure that each citizen is free and free to pursue their own God-given ambitions and to use the talents that they were given by God.  And that is what we say to the rest of the world.  That is why we participated in establishing a community of democracy within the Western Hemisphere.  It's why we participate in all of these great international organizations.</font><br/>
+<br/>
+<font face="Arial">There is nothing in American experience or in American political life or in our culture that suggests we want to use hard power.  But what we have found over the decades is that unless you do have hard power -- and here I think you're referring to military power -- then sometimes you are faced with situations that you can't deal with.  </font><br/>
+<br/>
+<font face="Arial">I mean, it was not soft power that freed Europe.  It was hard power.  And what followed immediately after hard power?  Did the United States ask for dominion over a single nation in Europe?  No.  Soft power came in the Marshall Plan.  Soft power came with American GIs who put their weapons down once the war was over and helped all those nations rebuild.  We did the same thing in Japan.</font><br/>
+<br/>
+<font face="Arial">So our record of living our values and letting our values be an inspiration to others I think is clear.  And I don't think I have anything to be ashamed of or apologize for with respect to what America has done for the world.  </font><br/>
+<br/>
+<font face="Arial">(Applause.)</font><br/>
+<br/>
+<font face="Arial">We have gone forth from our shores repeatedly over the last hundred years and we’ve done this as recently as the last year in Afghanistan and put wonderful young men and women at risk, many of whom have lost their lives, and we have asked for nothing except enough ground to bury them in, and otherwise we have returned home to seek our own, you know, to seek our own lives in peace, to live our own lives in peace.  But there comes a time when soft power or talking with evil will not work where, unfortunately, hard power is the only thing that works.</font><br/>
+<br/>
+<font face="Arial">We have seen these sorts of evil leaders before.  We have seen them throughout history.  And they are still alive today.  There are still leaders around who will say, "You do not have the will to prevail over my evil."  And I think we are facing one of those times now.</font><br/>
+<br/>
+<font face="Arial">We have done everything.  President Bush carefully analyzed the situation with respect to Iraq.  We have felt strongly for years that they must be disarmed.  The previous administration felt just as strongly.  This isn't something that just arrived when the Bush Administration came in.  The previous administration had the same concerns.  It's been a problem for us for the last 11 years, for the international community.</font><br/>
+<br/>
+<font face="Arial">And so finally, we decided it is time to deal with it.  And we rallied the international community.  President Bush came before the Security Council on the 12th of September and put down a powerful indictment.  I worked very hard, I can assure you, seven weeks, to satisfy the concerns that people had about what kind of a resolution should be put forward.  </font><br/>
+<br/>
+<font face="Arial">A resolution was put forward.  It's a resolution that puts the burden on Iraq, not on the inspectors.  And it is not the United States, it is not the international community, it is not the United Nations that is the source of the problem.  The source of the problem is Saddam Hussein and the Iraqi regime and their use of the treasures of the Iraqi people to develop weapons of mass destruction.  </font><br/>
+<br/>
+<font face="Arial">And let there be no doubt that the intent to do so is still there, as the inspectors are trying to do their job.</font><br/>
+<br/>
+<font face="Arial">My heart grieves when I think about the situation in the Middle East.  I've worked very hard on this for two years, and for years before that.  But trust is broken down.  We have to do everything we can in our power -- all of us, the United States, the European Union, any other nation that has the ability to influence the situation in the Middle East -- to work with the Palestinians to put in place a leadership that is responsible, with representative institutions of government that will clamp down on terrorism, that will say to its people, "Terrorism is not getting us anywhere.  It is not producing what we want:  a Palestinian state.  It is keeping us away from a Palestinian state."</font><br/>
+<br/>
+<font face="Arial">And we also have to say to our Israeli friends that you have to do more to deal with the humanitarian concerns of the Palestinian people, and you have to understand that a Palestinian state, when it's created, must be a real state, not a phony state that's diced into a thousand different pieces.  </font><br/>
+<br/>
+<font face="Arial">And that's what we're going to be concentrating on in the months ahead with the roadmap that's been created.</font><br/>
+<br/>
+<font face="Arial">(Applause.)</font><br/>
+<br/>
+<font face="Arial">MR. SCHWAB:  We have time for one last question. We have in the room, Mr. Secretary, the CEOs of one thousand foremost companies, so let’s give the floor to a corporate leader.  </font><br/>
+<br/>
+<font face="Arial">QUESTION:  So far, Mr. Secretary of State, I’ve been applauding for everything you’ve said.  </font><br/>
+<br/>
+<font face="Arial">MR. SCHWAB:   Your name, please?  </font><br/>
+<br/>
+<font face="Arial">QUESTION:  Bert Heemskerk, chairman of Rabobank.  There’s no difference of opinion on values.  There’s no difference of opinion on whether or not Mr. Saddam Hussein is a criminal.  There’s no difference of opinion that he had weapons which were extremely destructive.  There’s no difference of opinion that he should disarm.  There’s seems to be only one slight difference of opinion.  That’s on the course of justice.  </font><br/>
+<br/>
+<font face="Arial">We were all raised in a system in and outside our countries that before you hang somebody, when he’s a criminal, when you know he’s a criminal, that you deliver evidence.  And if he does not want to cooperate with delivering evidence, you cannot do like we did in the medieval centuries, maybe we wish that we could put him into the chamber and torture him, that we go to war.  I agree that we are all very impatient, but what we first want to see is evidence and we should look for evidence and once there’s evidence we Europeans will cooperate with you, the Americans, to put him to justice and also we will go to war with you then.  Thank you.</font><br/>
+<br/>
+<font face="Arial">(Applause)</font><br/>
+<br/>
+<font face="Arial">SECRETARY POWELL:  I think the evidence is there and I think the evidence is clear.  The inspections that ended in 1998 under the auspices of the IEAE and UNSCOM made it absolutely clear that there were weapons of mass destruction and there were programs to develop more weapons of mass destruction.  That is not speculation, it is fact.  It’s a given.  </font><br/>
+<br/>
+<font face="Arial">The inspectors, for the seven or so years that they were there, uncovered many holes and there were many gaps that were not closed with Iraqi answers.  The Iraqis tried to deceive and lie during that entire period of time.  They said they had no biological programs but then a defector gave us additional evidence that proved that in 1996.  We have seen evidence, we’ve listed some of it here and we’ll be presenting more in the days and weeks ahead.  So I don’t think the case is unconvincing, I think it’s quite convincing.  And the question before us is, are we unwilling to acknowledge the evidence because we’re unwilling to take the action that the evidence may require us to.  And I think that’s the debate we’re going to have after the two inspectors give their report tomorrow, and then we’ll have to make a judgment on what steps are appropriate.  </font><br/>
+<br/>
+<font face="Arial">The President will be listening carefully to Dr. Blix and Dr. El Baradei tomorrow.  And we will have consultations between the President Bush and other heads of state and government and I will do the same with my foreign minister colleagues and we’ll have discussions within the United Nations, and then we will have to make a judgment as to how to move forward.  But I think the case is persuasive unless you don’t want to ever see a case because that requires you to take action.  </font><br/>
+<br/>
+<font face="Arial">But 1441 was clear.  It didn’t say there was no case.  It started with a case.  The very first operative paragraphs of 1441 made it clear that Iraq was in material breach of its previous obligations and remains in material breach.  And then it said you’ve got one last chance to come clean.  It doesn’t say you’re clean, it says come clean, and any further resistance on your part, false declarations, non-cooperation with the inspectors, is further evidence of your unwillingness to come clean.  And every member that voted for that resolution understood that in those circumstances it would all come back to the Council and the Council would make a judgment as to what it would have to do and that what it might have to do included the use of military force.  So there’s no confusion on that point?  </font><br/>
+<br/>
+<font face="Arial">“The most serious consequences” are referred to in one of the final operative paragraphs of the resolution.  Everyone knew what that meant.  So the issue will come back to the Council and we will see what the Council chooses to do with respect to Saddam Hussein’s uncooperative attitude and with respect to what the inspectors say, what the inspectors say they need in order to get their job done.  And what they need is not just time.  What they need is a change on the part of the Iraqi government so that they can do their job. And what we’ll have to measure is is that change going to be forthcoming or not.</font><br/>
+<br/>
+<font face="Arial">MR. SCHWAB:   Mr. Secretary, instead of making a conclusion I would like to use the rest of the time to ask you a personal question.  How did 9/11 impact on your life?  Did it really change you as a person?  Having seen so much in your life, when this event happened, this tragedy, how did it change you?           </font><br/>
+<br/>
+<font face="Arial">SECRETARY POWELL:  I served for 35 years as a soldier and I’ve been in combat, I fought in Vietnam for two years and was responsible for military operations in Panama, military operations in the Gulf during the early 90s and for many years I was part of the Cold War deterrence force in Korea and in Europe, especially in Germany.  So I know about war.  And on that morning I was in Peru talking peace, I was talking about democratic values.  I didn’t go there with hard power, I went to Peru that morning with soft power.  </font><br/>
+<br/>
+<font face="Arial">(Applause.)</font><br/>
+<br/>
+<font face="Arial">We were in Peru for a meeting of the Organization of American States and we were going to sign a charter that said if you wanted to be a member in good standing of this community of democracies you have to adhere to certain basic principles, certain basic values.  That’s what I was there for.  And I was with President Toledo for breakfast and we were talking about trade issues.  Not building up his army or anything that we were doing with our military.  We were talking about trade, we were talking about textile quotas.  And a note came in that said there had been an attack of some kind.  It wasn’t clear.  A plane had hit the World Trade Center.  </font><br/>
+<br/>
+<font face="Arial">It wasn’t immediately clear until the second note saying there were two planes.  It made it clear it couldn’t be an accident.  And as the realization of this overwhelmed me I asked my assistant to get a plane ready to return to the United States, without knowing any more.  I knew I had to go home.  It suddenly dawned on me what might have happened.  And then more reports came in with respect to the level of damage at the World Trade Center and then the word came in that the Pentagon had been hit, and there were other planes in the air and we didn’t know where they were going.  My own department, the State Department, was at risk, the White House was at risk, all of our nation’s institutions were at risk.  </font><br/>
+<br/>
+<font face="Arial">Before 11:00, as a plane was being readied, I went into a meeting hall.  All the foreign ministers of the Americas, the OAS, 34 of the 35, assembled and expressed their solidarity with the United States and expressed their condolences for the lives lost.  And by acclamation they all stood up and adopted that charter.  </font><br/>
+<br/>
+<font face="Arial">It took me seven hours to fly home.  And during that time the thought overwhelmed me that I was back at war again.  This time it was not against the Russian army on the north German plain, it wasn’t going to be along the 38th parallel in Korea.  It was going to be against an enemy that had no borders, no territory, an enemy that was going to be difficult to fight, but an enemy we had to fight, not just that day but for a long period of time until we prevailed.  It was going to be an enemy that was not just threatening the United States, it was threatening every civilized nation on earth.  And every civilized nation on earth was going to have to come together to fight this enemy.  </font><br/>
+<br/>
+<font face="Arial">So for me this was a new war.  And I’d be doing it not as a soldier but as Secretary of State.  I had to help President Bush bring together a powerful coalition and not be afraid of what was ahead.  To deal with individuals who are terrorists, to deal with terrorist organizations, but also--we recognized early on--to deal with those states that harbor terrorism, those states that were developing capabilities, horrible capabilities, that if they fell into the hands of terrorists, would do more damage than those planes did on 9/11.  </font><br/>
+<br/>
+<font face="Arial">And President Bush dedicated himself, his administration, and I think every international organization in the world came together, to dedicate themselves to the proposition that in this new century with the Cold War behind us, with fascism and communism and Hitlerism all in the dustbin of history, this new enemy was just as real and we knew it would be difficult and we knew there would be days when our anxieties would well up and our fears would well up and we would be afraid to take the next step.  </font><br/>
+<br/>
+<font face="Arial">But we knew we would have to take that next step.  And we are probably approaching one such moment now where we will have to take that next step.  And history will judge us as to whether or not we have the strength and fortitude and the willingness to take that next step.  </font><br/>
+<br/>
+<font face="Arial">(Applause.)    </font><br/>
+<br/>
+<font face="Arial">For more information: </font><a href="http://web.archive.org/web/20050223091222/http://www.state.gov/"><u><font face="Arial">http://www.state.gov</font></u></a><br/>
+</p></td></tr><tr><td></td></tr></tbody></table>
+</td>
+<td height="10" width="10"><img height="10" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/spacer.gif/$FILE/spacer.gif" width="10"/></td><td valign="top" width="200"><table><tbody><tr><td><br/><br/><br/><br/><table align="right" border="1" bordercolor="#DCE7EF" cellpadding="10" cellspacing="0" width="210">
+<tbody><tr>
+<td bgcolor="#FFFFFF" bordercolor="#000066" colspan="1" valign="top">
+<div style="margin-top:2"><b><font color="#000000" font="" size="2&lt;/font">Related Information</font></b><br/>
+<font size="1">The links listed below will take you to the Knowledge Navigator:</font>
+<br/>
+<li><a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/knowledgenavigator.nsf/Content/Peace+and+Security">Peace and Security Issues</a>
+</li><li><a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/knowledgenavigator.nsf/Content/Politics+and+Diplomacy">Politics and Diplomacy Issues</a>
+<br/>
+</li></div></td></tr></tbody></table><br/></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></tbody></table></td>
+</tr></tbody></table>
+</td></tr>
+</tbody></table>
+<table height="10" width="100%">
+<tbody><tr><td height="10" width="100%">
+<img height="10" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/spacer.gif/$FILE/spacer.gif" width="100%"/>
+</td></tr></tbody></table>
+<table align="center" bgcolor="#FFFFFF" border="0" cellpadding="10" cellspacing="0" hspace="0" vspace="0" width="100%">
+<tbody><tr valign="top">
+<td width="100%">
+<table align="center" border="0" cellspacing="0" width="450">
+<tbody><tr border="0" valign="top">
+<td width="50%"><div class="smallPrint" style="text-align:left;">Copyright © 2003 World Economic Forum</div></td>
+<td width="50%"><div class="smallPrint" style="text-align:right;">Last updated: 16 May   2003</div></td>
+</tr>
+<tr>
+<td colspan="3"><img height="2" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/icons/ecblank.gif" width="100%"/></td>
+</tr>
+<tr>
+<td colspan="3"><img height="2" src="http://web.archive.org/web/20050223091222im_/http://www.weforum.org/site/homepublic.nsf/AttachmentsByTitle/grey_pixel.gif/$file/grey_pixel.gif" width="100%"/></td>
+</tr>
+</tbody></table><table align="center" border="0" cellspacing="0" width="450">
+<tbody><tr>
+<td width="150"><a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/homepublic.nsf/Content/Terms+of+use"><div class="smallPrint" style="text-align:left;">Terms of Use</div></a></td>
+<td width="150"><a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/homepublic.nsf/Content/Privacy+Statement"><div class="smallPrint" style="text-align:center;">Privacy Statement</div></a></td>
+<td width="150"><a href="http://web.archive.org/web/20050223091222/http://www.weforum.org/site/homepublic.nsf/Content/About+this+site"><div class="smallPrint" style="text-align:right;">About this site</div></a></td>
+</tr>
+</tbody></table>
+</td></tr></tbody></table>
+<script language="JavaScript">
+	var wtl_loc = document.URL.indexOf('https:')==0?'http://web.archive.org/web/20050223091222/https://a248.e.akamai.net/v/248/2120/1d/download.akamai.com/crs/lgsitewise.js':'http://web.archive.org/web/20050223091222/http://crs.akamai.com/crs/lgsitewise.js';
+	document.write("<SCR" + "IPT Language = 'JavaScript' SRC = '" + wtl_loc + "'></SCR" + "IPT>");
+</script><script language="JavaScript" src="http://web.archive.org/web/20050223091222/http://crs.akamai.com/crs/lgsitewise.js"></script>
+<script language="JavaScript">
+
+	var wtl_TagVer = 6;
+	var wtl_FWD = 1;
+	var wtl_url = document.URL;
+	var wtl_title = document.title;
+	var wtl_TagID = 144700;
+	var wtl_SID = "144700";
+	var wtl_Offset = "100";
+	WTL_TAG = new Image;
+	WTL_TAG.ID = "WTL_TAG";
+
+	var ORDER= "";
+	var SERVER= "";
+	var INVOICE= "";
+	var CARTVIEW= "";
+	var CARTADD= "";
+	var CARTREMOVE= "";
+	var CHECKOUT= "";
+	var CARTBUY= "";
+	var ADCAMPAIGN= "";
+
+	//wtl_Tag6(TAG,SID,wtl_url,wtl_title,"MainContentGroup,SubContentGroup");
+	wtl_Tag6(wtl_TagID,wtl_SID,wtl_url,wtl_title);
+
+</script>
+<noscript>
+<img border="0" height="1" src="http://web.archive.org/web/20050223091222im_/http://statse.webtrendslive.com/S144700/button6.asp?tagver=6&amp;si=144700&amp;offset=100&amp;fw=1&amp;js=No&amp;" width="1"/>
+</noscript><iframe name="SiteStructure" src="/web/20050223091222if_/http://www.weforum.org/site/homepublic.nsf/Content/_SystemSiteStructure" style="position:absolute;top:0;visibility:hidden"></iframe>
+<layer id="SiteStructure" src="_SystemSiteStructure" top="0" visibility="HIDE"></layer>
+<!--
+     FILE ARCHIVED ON 09:12:22 Feb 23, 2005 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:07:29 Jul 11, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  LoadShardBlock: 562.092 (3)
+  esindex: 0.016
+  captures_list: 646.574
+  CDXLines.iter: 18.258 (3)
+  PetaboxLoader3.datanode: 407.119 (4)
+  exclusion.robots: 0.597
+  exclusion.robots.policy: 0.567
+  RedisCDXSource: 59.417
+  PetaboxLoader3.resolve: 78.445
+  load_resource: 290.719
+--></body></html>

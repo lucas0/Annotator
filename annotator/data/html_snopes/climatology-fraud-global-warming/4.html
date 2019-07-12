@@ -1,0 +1,377 @@
+<html lang="en"><head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<link href="https://www.giss.nasa.gov/css/css1608.css" media="all" rel="stylesheet" type="text/css"/>
+<meta content="IE=edge;" http-equiv="X-UA-Compatible"/>
+<title>Data.GISS: GISTEMP HISTORY</title>
+<style>
+#cpad {
+/*
+  padding: 10px 25px 10px 25px !important;
+  overflow: hidden;
+*/
+}
+
+.mpld3-figure {
+  /* margin-left: -105px; */
+  margin-left: -55px;
+  float: left;
+}
+
+#loti_graph .mpld3-figure, #met_mean_graph .mpld3-figure, #ann_loti_graph .mpld3-figure, #ann_met_graph .mpld3-figure {
+  height: 620px;
+}
+
+.highlighted {
+  background-color: #fbe54e
+}
+
+figure {
+  margin:0;
+  padding:0;
+}
+figcaption {
+  text-align: center;
+}
+</style>
+<link href="https://www.giss.nasa.gov/gfx/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://www.giss.nasa.gov/gfx/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76"/>
+<meta content="611" name="orgcode"/>
+<meta content="Gavin.A.Schmidt.1" name="rno"/>
+<meta content="Robert.B.Schmunk.1" name="content-owner"/>
+<meta content="Robert.B.Schmunk.1" name="webmaster"/>
+<meta content="width=954" name="viewport"/>
+<script async="" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflPBjLfx/www-widgetapi.js" type="text/javascript"></script><script src="https://www.youtube.com/iframe_api"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="async" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&amp;subagency=GISS&amp;yt=true&amp;dclink=true&amp;pua=UA-52099626-1"></script>
+</head>
+<body>
+<div id="bkg1"><div id="bkg2"></div></div>
+<div id="page">
+<div class="hidden">
+<a accesskey="2" href="https://data.giss.nasa.gov/#content" title="Go to Main Content">Go to Main Content (Accesskey 2)</a><br/><a accesskey="3" href="https://data.giss.nasa.gov/#nav" title="Go to Site Menu">Go to Site Menu (Accesskey 3)</a></div>
+<div id="header">
+<div id="headerlogo">
+<a href="https://www.nasa.gov/"><img alt="NASA Logo, National Aeronautics and Space Administration" src="https://www.giss.nasa.gov/gfx/2013/nasa.png" style="width:140px;height:98px"/></a></div>
+<div id="centername">
+<h1><a href="https://www.nasa.gov/">National Aeronautics and Space Administration</a></h1>
+<h2><a href="https://www.giss.nasa.gov/">Goddard Institute for Space Studies</a></h2></div>
+<div id="hierarchy">
+<h2><a href="https://www.nasa.gov/centers/goddard/">Goddard Space Flight Center</a><br/><a href="http://sciences.gsfc.nasa.gov/sed/">Sciences and Exploration Directorate</a><br/><a href="http://sciences.gsfc.nasa.gov/earth/">Earth Sciences Division</a></h2></div></div>
+<div id="paper">
+<div class="widepage" id="content"><div id="cpad">
+<h2>GISS Surface Temperature Analysis</h2>
+<h3>History of GISTEMP</h3>
+<p>
+In the late 1970s, scientists at GISS led by Dr. James Hansen became increasingly concerned that anthropogenic increases in greenhouse gases were large enough that their impact on surface temperatures would soon become apparent. However, tracking what was happening to Earth temperatures was at a relatively primitive state. Much of the relevant weather station data had not been digitized and what had been, was not widely available. Previous estimates of temperature changes (<a href="https://data.giss.nasa.gov/#ref_callendar1938">Callendar, 1938</a>; <a href="https://data.giss.nasa.gov/#ref_mitchell1961">Mitchell, 1961</a>; <a href="https://data.giss.nasa.gov/#ref_budyko1969">Budyko, 1969</a>) had focused on the northern hemisphere, but that obviously missed half the planet.  <a href="https://data.giss.nasa.gov/#ref_hansen1981">Hansen et al. (1981)</a> were the first to try and systematically estimate the global mean trends by also using what southern hemisphere data there was. The methodology used then was relatively simple: Stations were grouped into 80 equal area boxes, the various anomaly series in a box were combined into a single anomaly series; these then were averaged across each of eight latitude belts. The global mean was estimated from an area weighing of the latitudinal means. From this beginning, estimates of global mean surface temperatures by scientists at GISS eventually morphed into the GISTEMP analysis that is available today.
+</p>
+<p>
+Over the years the estimates of what the global mean temperature anomaly has been have changed. There are two main reasons for these changes – updates to the analysis method and expansions to the sources of raw data. Both have the effect of changing the specifics of the global estimates.
+</p>
+<p>
+We have gone through the archives to show exactly how these estimates have changed over time and why.
+Since 1981 the following aspects of the temperature analysis have changed:
+</p>
+<ul>
+<li>The simple procedure used in 1981 was refined as documented in
+        <a href="https://data.giss.nasa.gov/#ref_hansen1987">Hansen and Lebedeff (1987)</a>, using 8000 grid
+        boxes to allow mapping and analysis of
+        regional patterns.
+    </li>
+<li>Surface air temperature anomalies above the ocean were estimated using sea surface temperatures from ships and
+        buoys starting in 1995 as documented in <a href="https://data.giss.nasa.gov/#ref_hansen1996">Hansen et al. (1996)</a>.
+    </li>
+<li>Starting in the 1990s, the methodology took into account documented non-climatic biases in the raw data (e.g.
+        station moves) and eliminated or corrected
+        unrealistic outliers (<a href="https://data.giss.nasa.gov/#ref_hansen1999">Hansen et al., 1999</a>).
+    </li>
+<li>Areas with missing data were filled in — using means over large zonal bands — rather than
+        restricting the
+        averaging to areas with a defined temperature change
+        (<a href="https://data.giss.nasa.gov/#ref_hansen1999">Hansen et al., 1999</a>).
+    </li>
+<li>A method was devised in 1998 and refined in 2000 to adjust urban time series to match the long term mean trend
+        of the surrounding rural stations, Hansen et al.
+        (<a href="https://data.giss.nasa.gov/#ref_hansen1999">1999</a>,
+        <a href="https://data.giss.nasa.gov/#ref_hansen2001">2001</a>). This
+        adjustment uses the full data series
+        to make the best estimate of the rural/urban difference and so can change as the time-series are extended (and
+        more data comparisons are available). Starting in 2010 night-light radiance rather than population data were
+        used to classify stations (<a href="https://data.giss.nasa.gov/#ref_hansen2010">Hansen et al., 2010</a>).
+    </li>
+<li>
+        Usage of water temperatures as proxy for air temperatures was more accurately restricted to areas without sea
+        ice starting in April 2006.
+    </li>
+</ul>
+<p>
+    Additionally, the amount of raw data and its quality have also increased as more data has been digitized and quality
+    controlled. The station data sources over the years were:
+</p>
+<ul>
+<li>Monthly Climatic Data of the World (MCDW) — about 1000 stations (1981)</li>
+<li>MCDW and data provided by NCAR and NOAA — 2200 stations (1987)</li>
+<li>NOAA/NCDC’s GHCN v2 — 7200 stations (1999)</li>
+<li>NOAA/NCDC’s GHCN v2 and adjusted USHCN (2000)</li>
+<li>GHCN v2 and adjusted USHCN and SCAR (2/2005) — better Antarctica coverage</li>
+<li>Homogenized GHCN v3.1 and SCAR (2011)</li>
+<li>Homogenized GHCN v3.2 and SCAR (9/2012)</li>
+<li>Beta release: GHCN v4 — 26,000 stations (2/2019)</li>
+<li>Official release: GHCN v4 — 26,000 stations (6/2019)</li>
+</ul>
+<p>
+Over time the sources of sea surface temperature (SST) data have also changed:
+</p>
+<ul>
+<li>Before 1995, no SST data was used.</li>
+<li>1995: Reynolds/Smith EOF SST (1950-1981) and OISST data (1982-present)</li>
+<li>2000: Hadley Centre’s HadISST1 (1880-1981) and OISST data</li>
+<li>2013: ERSST v3b</li>
+<li>July 2015: ERSST v4</li>
+<li>August 2017: ERSST v5</li>
+</ul>
+<p>
+So although the specific numbers and the uncertainty associated with them have changed over the years, what is remarkable is that the basic picture they paint of the temperature changes over time is robust as can be seen in the following figures.
+</p>
+<p>
+Note that historical data came from various sources. GISTEMP results were first made available over the web in 1995, and some versions are retrievable from the "Wayback Machine” website as far back as 1997 (see <a href="https://web.archive.org/web/19970714131920/https://www.giss.nasa.gov/Data/GISTEMP/">1</a>, <a href="https://web.archive.org/web/20020202065544/https://www.giss.nasa.gov/data/update/gistemp/">2</a>, <a href="https://web.archive.org/web/*/https://data.giss.nasa.gov/gistemp/">3</a>). Our own archive goes back to 2008.  Versions before 1997 were copied or digitized from our publications.
+</p>
+<hr style="text-align:center;width:75%;margin:16px auto"/>
+<p>
+In the figures, the three toolbar icons beneath each graph may be used to
+zoom in and out on the figure, to move the centering horizontally or vertically, and to reset
+the figure to its initial position.
+</p>
+<p>
+In Figs. 1-4, the plots are in two parts, the upper part showing the temperature means from the selected analyses, and the lower showing the difference <i> most recent analysis</i> minus <i>selected analysis</i>. Hovering the cursor on a legend entry will highlight the respective curves on the graph. Use clicks to highlight/un-highlight several selected lines simultaneously.
+</p>
+<figure>
+<div id="loti_graph"></div>
+<figcaption style="clear:both">
+<b>Figure 1:</b>
+        The history of GISTEMP estimates of the global five-year mean surface temperature anomaly. All but the 1981 and 1987 estimates include the use of ocean data.
+    </figcaption>
+</figure>
+<hr style="text-align:center;width:75%;margin:16px auto"/>
+<figure>
+<div id="ann_loti_graph"></div>
+<figcaption style="clear:both">
+<b>Figure 2:</b>
+        The history of GISTEMP estimates of the global annual surface temperature anomaly. All but the 1987 estimates include the use of ocean data.
+    </figcaption>
+</figure>
+<h4 style="clear: both;margin-top:16px">Downloads</h4>
+<ul>
+<li>Plot data as zipped <a href="https://data.giss.nasa.gov/gistemp/history/output/loti_used.zip">text and CSV</a> files.</li>
+<li>Figure 1: Five-year means plot as <a href="https://data.giss.nasa.gov/gistemp/history/output/history_loti.png">PNG</a>, <a href="https://data.giss.nasa.gov/gistemp/history/output/history_loti.pdf">PDF</a>,
+        or <a href="https://data.giss.nasa.gov/gistemp/history/output/history_loti.html">HTML</a> file.
+    </li>
+<li>Figure 2: Annual plot as <a href="https://data.giss.nasa.gov/gistemp/history/output/history_loti_ann.png">PNG</a>, <a href="https://data.giss.nasa.gov/gistemp/history/output/history_loti_ann.pdf">PDF</a>,
+        or <a href="https://data.giss.nasa.gov/gistemp/history/output/history_loti_ann.html">HTML</a> file.
+    </li>
+</ul>
+<hr style="text-align:center;width:75%;margin:16px auto"/>
+<p>
+    For historical reasons we also maintain a calculation of the anomalies that would result if one only used the
+    meteorological station data. This estimate is not affected by issues in ocean data processing, but because the land
+    is warming faster than the ocean, it has a larger trend than the land-ocean index that is now our standard product.
+    That too has been remarkably stable over the years:
+</p>
+<figure>
+<div id="met_mean_graph"></div>
+<figcaption style="clear:both">
+<b>Figure 3:</b>
+        The history of GISTEMP estimates of the global 5-year mean surface temperature anomaly. Meteorological
+        station data only.
+    </figcaption>
+</figure>
+<hr style="text-align:center;width:75%;margin:16px auto"/>
+<figure>
+<div id="ann_met_graph"></div>
+<figcaption style="clear:both">
+<b>Figure 4:</b>
+        The history of GISTEMP estimates of the global annual surface temperature anomaly. Meteorological
+        station data only.
+    </figcaption>
+</figure>
+<h4 style="clear: both;margin-top:16px">Downloads</h4>
+<ul>
+<li>Plot data as zipped <a href="https://data.giss.nasa.gov/gistemp/history/output/met_used.zip">text and CSV</a> files.</li>
+<li>Figure 3: Five-year means plot as <a href="https://data.giss.nasa.gov/gistemp/history/output/history_met.png">PNG</a>, <a href="https://data.giss.nasa.gov/gistemp/history/output/history_met.pdf">PDF</a>,
+        or <a href="https://data.giss.nasa.gov/gistemp/history/output/history_met.html">HTML</a> file.
+    </li>
+<li>Figure 4: Annual plot as <a href="https://data.giss.nasa.gov/gistemp/history/output/history_ann_met.png">PNG</a>, <a href="https://data.giss.nasa.gov/gistemp/history/output/history_ann_met.pdf">PDF</a>,
+        or <a href="https://data.giss.nasa.gov/gistemp/history/output/history_ann_met.html">HTML</a> file.
+    </li>
+</ul>
+<hr style="text-align:center;width:75%;margin:16px auto"/>
+<p>
+In Fig. 5 below, the influence of the additional station data can be seen in the station counts and
+coverage statistics comparing Hansen and Lebedeff (1987) and the present.
+Although the number of stations has increased significantly, the total area covered has not
+changed as much.
+Decreased coverage occurs when urban stations without nearby rural
+stations have been dropped in order to avoid bias due to urban heat island effects.
+</p>
+<div class="floatcenter" style="width:860px">
+<img alt="Multiple line plots showing number of stations and the coverage in each hemisphere" src="https://data.giss.nasa.gov/gistemp/history/output/history_numStations_coverage.gif" style="width:859px;border:0;height:320px"/>
+</div>
+<figure>
+<figcaption style="clear:both"><b>Figure 5:</b>
+        (a) The number of stations used in the GISTEMP analysis; and
+        (b) the percentage of the land surface area represented by the stations.
+    </figcaption>
+</figure>
+<hr style="text-align:center;width:75%;margin:16px auto"/>
+<p>
+To summarize, no raw data has changed over the years (except for minor quality control, elimination of duplicate data, etc.), but the GISTEMP analysis has varied because of the addition of more observations and changes in methodology. The GISTEMP analysis does not change the raw observations over time (these are curated by weather services around the world), but rather the estimate of the global mean change varies as we discover and correct for contaminating influences, as well as increasing the amount of raw data used. The differences over time can be helpful in giving an idea of the structural uncertainty in these estimates — particularly in the pre-war years and before 1900.
+</p>
+<p>
+Nonetheless, the overall trends are very clear.
+</p>
+<h4>References</h4>
+<p id="ref_budyko1969">
+    Budyko, M.I., 1969:
+    The effect of solar radiation variations on the climate of the Earth,
+    <cite>Tellus</cite>, <b>21</b>, 611-619,
+    <a href="http://dx.doi.org/10.1111/j.2153-3490.1969.tb00466.x">doi:10.1111/j.2153-3490.1969.tb00466.x</a>.
+</p>
+<p id="ref_callendar1938">
+    Callendar, G.S., 1938:
+    The artificial production of carbon dioxide and its influence on temperature,
+    <cite>Q. J. Roy. Meteorol. Soc.</cite>, <b>64</b>, 223-240,
+    <a href="http://dx.doi.org/10.1002/qj.49706427503">doi: 10.1002/qj.49706427503</a>.
+</p>
+<p id="ref_hansen1981">
+    Hansen, J., D. Johnson, A. Lacis, S. Lebedeff, P. Lee, D. Rind, and G. Russell, 1981:
+    <a href="https://pubs.giss.nasa.gov/abs/ha04600x.html">
+        Climate impact of increasing atmospheric carbon dioxide</a>.
+    <cite>Science</cite>, <b>213</b>, 957-966,
+    doi:10.1126/science.213.4511.957.
+</p>
+<p id="ref_hansen1987">
+    Hansen, J.E., and S. Lebedeff, 1987:
+    <a href="https://pubs.giss.nasa.gov/abs/ha00700d.html">Global trends of measured surface air temperature</a>.
+    <cite>J. Geophys. Res.</cite>, <b>92</b>, 13345-13372,
+    doi:10.1029/JD092iD11p13345.
+</p>
+<p id="ref_hansen1996">
+    Hansen, J., R. Ruedy, M. Sato and R. Reynolds, 1996:
+    <a href="https://pubs.giss.nasa.gov/abs/ha04000r.html">
+        Global surface air temperature in 1995: Return to pre-Pinatubo level</a>.
+    <cite>Geophys. Res. Lett.</cite> <b>23</b>, 1665-1668.
+</p>
+<p id="ref_hansen1999">
+    Hansen, J., R. Ruedy, J. Glascoe, and M. Sato, 1999:
+    <a href="https://pubs.giss.nasa.gov/abs/ha03200f.html">GISS analysis of surface temperature change</a>.
+    <cite>J. Geophys. Res.</cite>, <b>104</b>, 30997-31022,
+    doi:10.1029/1999JD900835.
+</p>
+<p id="ref_hansen2001">
+    Hansen, J.E., R. Ruedy, M. Sato, M. Imhoff, W. Lawrence, D. Easterling, T. Peterson, and T. Karl, 2001:
+    <a href="https://pubs.giss.nasa.gov/abs/ha02300a.html">
+        A closer look at United States and global surface temperature change</a>.
+    <cite>J. Geophys. Res.</cite>, <b>106</b>, 23947-23963, doi:10.1029/2001JD000354.
+</p>
+<p id="ref_hansen2010">
+    Hansen, J., R. Ruedy, M. Sato, and K. Lo, 2010:
+    <a href="https://pubs.giss.nasa.gov/abs/ha00510u.html">
+        Global surface temperature change</a>.
+    <cite>Rev. Geophys.</cite>, <b>48</b>, RG4004,
+    doi:10.1029/2010RG000345.
+</p>
+<p id="ref_lenssen2019">
+    Lenssen, N., G. Schmidt, J. Hansen, M. Menne, A. Persin, R. Ruedy, and D. Zyss, 2019:
+    <a href="https://pubs.giss.nasa.gov/abs/le05800h.html">
+    Improvements in the uncertainty model in the Goddard Institute for Space Studies Surface Temperature (GISTEMP) analysis</a>.
+    <cite>J. Geophys. Res. Atmos.</cite>, in press, doi:10.1029/2018JD029522.
+</p>
+<p id="ref_mitchell1961">
+    Mitchell, J. M., 1961:
+    Recent secular changes of global temperature,
+    <cite>Ann. N.Y. Acad. Sci.</cite>, <b>95</b>, 235-250,
+    <a href="http://dx.doi.org/10.1111/j.1749-6632.1961.tb50036.x/abstract">
+        doi:10.1111/j.1749-6632.1961.tb50036.x</a>.
+</p>
+<script src="https://data.giss.nasa.gov/js/jquery-2.1.4.min.js"></script>
+<script src="https://data.giss.nasa.gov/js/jquery-ui.js"></script>
+<script src="https://data.giss.nasa.gov/js/d3.v3.min.js"></script>
+<script src="https://data.giss.nasa.gov/gistemp/history/js/mpld3.v0.2.min.js"></script>
+<script src="https://data.giss.nasa.gov/gistemp/js/setup.js"></script>
+<script src="https://data.giss.nasa.gov/gistemp/history/js/AnnLOTIsetup.js"></script>
+<script src="https://data.giss.nasa.gov/gistemp/history/js/5MeanLOTISetup.js"></script>
+<script src="https://data.giss.nasa.gov/gistemp/history/js/AnnMetsetup.js"></script>
+<script src="https://data.giss.nasa.gov/gistemp/history/js/LOTIAnnsetup.js"></script>
+<h4 class="goback">• <a href="https://data.giss.nasa.gov/gistemp/">Return to GISTEMP homepage</a></h4>
+<div class="clear"></div></div></div>
+<div class="widepage" id="nav"><h3><img alt="Site Menu" class="menuicon" src="https://www.giss.nasa.gov/gfx/menu_icon1.png" style="width:28px;height:28px" title="Site Menu"/></h3>
+<ul id="mnav">
+<li><a href="https://www.giss.nasa.gov/">GISS Home</a></li>
+<li><a href="https://www.giss.nasa.gov/research/">News &amp; Features</a><ul><li><a href="https://www.giss.nasa.gov/research/">Recent News &amp; Features</a></li>
+<li><a href="https://www.giss.nasa.gov/research/2018.html">2018 News &amp; Features</a></li>
+<li><a href="https://www.giss.nasa.gov/research/2017.html">2017 News &amp; Features</a></li>
+<li><a href="https://www.giss.nasa.gov/research/2016.html">2016 News &amp; Features</a></li>
+<li><a href="https://www.giss.nasa.gov/research/2015.html">2015 News &amp; Features</a></li>
+<li><a href="https://www.giss.nasa.gov/research/news/">NASA Releases</a></li>
+<li><a href="https://www.giss.nasa.gov/research/briefs/">Science Briefs</a></li>
+<li><a href="https://www.giss.nasa.gov/research/features/">Other Features</a></li>
+<li><a href="https://www.giss.nasa.gov/research/video/">News/Feature Video</a></li></ul></li>
+<li><a href="https://www.giss.nasa.gov/projects/">Projects &amp; Groups</a><ul><li><a href="https://www.giss.nasa.gov/projects/">Projects Overview</a></li>
+<li><a href="https://www.giss.nasa.gov/projects/gcm/">Global Climate Modeling</a></li>
+<li><a href="https://www.giss.nasa.gov/projects/astrobio/">Astrobiology / NExSS</a></li>
+<li><a href="https://www.giss.nasa.gov/projects/impacts/">Climate Impacts</a></li>
+<li><a href="https://isccp.giss.nasa.gov/">ISCCP</a></li>
+<li><a href="https://www.giss.nasa.gov/projects/swing2/">SWING2</a></li></ul></li><li class="sel"><a href="https://data.giss.nasa.gov/">Datasets</a><ul><li><a href="https://data.giss.nasa.gov/">Datasets Overview</a></li>
+<li><a href="https://data.giss.nasa.gov/gistemp/">Surface Temperature</a></li>
+<li><a href="https://data.giss.nasa.gov/modelE/">Model E Simulations</a></li>
+<li><a href="https://data.giss.nasa.gov/modelforce/">Model Forcings</a></li>
+<li><a href="https://data.giss.nasa.gov/rocke3d/maps/">ROCKE-3D Simulations</a></li>
+<li><a href="https://isccp.giss.nasa.gov/products/onlineData.html">ISCCP Data Products</a></li>
+<li><a href="https://gacp.giss.nasa.gov/datasets/">GACP Data Products</a></li></ul></li>
+<li><a href="https://pubs.giss.nasa.gov/">Publications</a><ul><li><a href="https://pubs.giss.nasa.gov/">Publications Overview</a></li>
+<li><a href="https://pubs.giss.nasa.gov/year/early.html">Early On-Line</a></li>
+<li><a href="https://pubs.giss.nasa.gov/year/inpress.html">Accepted &amp; In Press</a></li>
+<li><a href="https://pubs.giss.nasa.gov/year/2019.html">2019 Publications</a></li>
+<li><a href="https://pubs.giss.nasa.gov/year/2018.html">2018 Publications</a></li>
+<li><a href="https://pubs.giss.nasa.gov/year/2017.html">2017 Publications</a></li>
+<li><a href="https://pubs.giss.nasa.gov/year/2016.html">2016 Publications</a></li>
+<li><a href="https://pubs.giss.nasa.gov/year/2015.html">2015 Publications</a></li>
+<li><a href="https://pubs.giss.nasa.gov/authors/">Authors</a></li>
+<li><a href="https://pubs.giss.nasa.gov/best.html">Annual Best</a></li>
+<li><a href="https://pubs.giss.nasa.gov/cited.html">Most Cited</a></li>
+<li><a href="https://pubs.giss.nasa.gov/dissertations.html">Dissertations</a></li>
+<li><a href="https://pubs.giss.nasa.gov/help.html">Help</a></li></ul></li>
+<li><a href="https://www.giss.nasa.gov/tools/">Software</a><ul><li><a href="https://www.giss.nasa.gov/tools/">Software Overview</a></li>
+<li><a href="https://www.giss.nasa.gov/tools/modelE/">GCM Model E</a></li>
+<li><a href="https://www.giss.nasa.gov/tools/modelii/">GCM Model II</a></li>
+<li><a href="https://www.giss.nasa.gov/tools/panoply/">Panoply Data Viewer</a></li>
+<li><a href="https://www.giss.nasa.gov/tools/gprojector/">G.Projector</a></li>
+<li><a href="https://www.giss.nasa.gov/tools/mars24/">Mars24 Sunclock</a></li></ul></li>
+<li><a href="https://www.giss.nasa.gov/edu/">Education</a><ul><li><a href="https://www.giss.nasa.gov/edu/">Education Overview</a></li>
+<li><a href="https://www.giss.nasa.gov/edu/grad/">Graduate Study</a></li>
+<li><a href="https://www.giss.nasa.gov/about/jobs/postdoc.html">Postdoc Research</a></li>
+<li><a href="https://www.giss.nasa.gov/edu/ccri/">CCRI</a></li>
+<li><a href="https://www.giss.nasa.gov/edu/intern/">Internships</a></li>
+<li><a href="https://www.giss.nasa.gov/edu/ask.html">Ask a Scientist</a></li></ul></li>
+<li><a href="https://www.giss.nasa.gov/meetings/">Events</a><ul><li><a href="https://www.giss.nasa.gov/meetings/">Events Overview</a></li>
+<li><a href="https://www.giss.nasa.gov/meetings/past.html">Past Events</a></li></ul></li>
+<li><a href="https://www.giss.nasa.gov/about/">About GISS</a><ul><li><a href="https://www.giss.nasa.gov/about/">About GISS</a></li>
+<li><a href="https://www.giss.nasa.gov/about/management.html">Management Staff</a></li>
+<li><a href="https://www.giss.nasa.gov/staff/">Personnel Directory</a></li>
+<li><a href="https://www.giss.nasa.gov/about/visiting/">Visitors' Info</a></li>
+<li><a href="https://www.giss.nasa.gov/about/jobs/">Employment</a></li></ul></li></ul></div>
+<div id="endpaper"></div></div>
+<div id="footer">
+<div id="footerlogo">
+<a href="https://www.nasa.gov"><img alt="NASA Logo, National Aeronautics and Space Administration" src="https://www.giss.nasa.gov/gfx/2013/nasa.png" style="width:140px;height:98px"/></a></div>
+<div id="footersig"><a class="imageLink" href="https://www.nasa.gov/goddard/"><img alt="Goddard Space Flight Center" src="https://www.giss.nasa.gov/gfx/2013/gsig.png" style="width:172px;height68px"/></a></div>
+<div id="footerlinks">
+<ul>
+<li>NASA Official:
+<a href="https://www.giss.nasa.gov/staff/gschmidt.html">
+Gavin A. Schmidt</a></li>
+<li>Website Curator:
+<a href="https://www.giss.nasa.gov/staff/rschmunk.html">
+Robert B. Schmunk</a></li>
+<li>Page updated: 2019-06-14 18:31</li></ul></div>
+<div id="footerplus">
+<ul><li><a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Privacy Policy &amp; Important Notices</a></li>
+<li><a href="https://data.giss.nasa.gov/gistemp/history//mailto:webmaster@giss.nasa.gov?subject=DATA%20website%20page%20/gistemp/history/">Contact Us</a></li></ul></div></div></div>
+</body></html>

@@ -110,7 +110,7 @@ def get_least_annotated_page(name,aPage=None):
     print("done: ", len(done_by_annotator), " | total: ", len(s_p))
 
     if len(after_merge) == len(s_p):
-        return "Last annotation done! Thank you!", None, None, None, None, None, None, None
+        return "Last annotation done! Thank you!", None, None, None, None, None, None, None, None
 
     #Creates or reads countfile:
     count_file = get_count_file(s_p)
@@ -151,7 +151,7 @@ def get_least_annotated_page(name,aPage=None):
     print(o_page)
     print("CHOSEN SOURCE")
     src_lst = entry.source_list.strip()
-
+    claim_text = (entry.claim).replace("-"," ").lower()
     #To avoid "deformed node" ast error
     try :
         src_lst = ast.literal_eval(src_lst)
@@ -185,7 +185,7 @@ def get_least_annotated_page(name,aPage=None):
     a_done  = len(done_by_annotator.loc[done_by_annotator["page"] == a_page])
     print("PATH FOUND")
 
-    return a_page, o_page, a_html, str(o_html), src_lst, a_done, a_total, total_done
+    return a_page, o_page, a_html, str(o_html), src_lst, a_done, a_total, total_done, claim_text
 
 # VIEWS
 def home(request):
@@ -219,7 +219,7 @@ def home(request):
 
 					apage = session.get('claim') if op in ["3","2"] else None
 
-					a_url, o_url, a_html, o_html, src_lst, a_done, a_total, t_done = get_least_annotated_page(name, apage)
+					a_url, o_url, a_html, o_html, src_lst, a_done, a_total, t_done, c_text = get_least_annotated_page(name, apage)
 					# Turn string representation of a list to a list
 					print("")
 					print(a_url)
@@ -239,8 +239,9 @@ def home(request):
 				a_done = session.get('a_done')
 				a_total = session.get('a_total')
 				t_done = session.get('t_done')
+				c_text = session.get('c_text')
 		else:
-			a_url, o_url, a_html, o_html, src_lst, a_done, a_total, t_done = get_least_annotated_page(name)
+			a_url, o_url, a_html, o_html, src_lst, a_done, a_total, t_done, c_text = get_least_annotated_page(name)
 			# Turn string representation of a list to a list
 			print("")
 			print(a_url)
@@ -266,6 +267,7 @@ def home(request):
 		session['a_done'] = a_done
 		session['a_total'] = a_total
 		session['t_done'] = t_done
+		session['c_text'] = c_text
 
 		#Render home page (annotator)
 		assert a_html is not None, "A_HTML IS NONE"
@@ -275,14 +277,11 @@ def home(request):
 		assert a_done is not None, "A_DONE IS NONE"
 		assert a_total is not None, "A_TOTAL IS NONE"
 		assert t_done is not None, "T_DONE IS NONE"
-
+		assert c_text is not None, "C_TEXT IS NONE"
 		print(a_url)
 		print(o_url)
 
-		return render(request, 'home.html', {'t1':a_html, 't2':o_html, 't3':a_url, 't4':o_url, 'a_done':a_done, 'a_total':a_total, 't_done':t_done})
-
-def test(request):
-	return render(request, 'test.html')
+		return render(request, 'home.html', {'t1':a_html, 't2':o_html, 't3':a_url, 't4':o_url, 'a_done':a_done, 'a_total':a_total, 't_done':t_done, 'claim':c_text})
 
 def signup(request):
 	if request.method == 'POST':

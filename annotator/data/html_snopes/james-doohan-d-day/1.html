@@ -1,0 +1,1223 @@
+<html lang="en"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_rendering_2019070101.js?21064184"></script><script async="" src="https://a.quora.com/qevents.js"></script><script async="" src="https://connect.facebook.net/signals/plugins/inferredEvents.js?v=2.8.51"></script><script async="" src="https://connect.facebook.net/signals/config/808569529203838?v=2.8.51&amp;r=stable"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//www.googletagservices.com/tag/js/gpt.js" type="text/javascript"></script><script async="" defer="" src="https://www.warhistoryonline.com/l.js"></script><script type="text/javascript">!function(){var e="m.warhistoryonline.com",t="www.warhistoryonline.com",n=767,i=60,o=null,r=function(e,t){t||(t=window.location.href),e=e.replace(/[\[\]]/g,"\\$&");var n=new RegExp("[?&]"+e+"(=([^&#]*)|&|#|$)","i"),i=n.exec(t);return i?i[2]?decodeURIComponent(i[2].replace(/\+/g," ")):"":null},l=function(){if(null!==o)return o;var e=navigator.userAgent.match(/(FB_IAB|FB4A|FBAV)/i);return e||(e=screen.width<=n),o=!!e},a=function(e){for(var t=e+"=",n=document.cookie.split(";"),i=0;i<n.length;i++){for(var o=n[i];" "==o.charAt(0);)o=o.substring(1);if(0==o.indexOf(t))return parseInt(o.substring(t.length,o.length))}return 0},c=function(e,n,i){var o=new Date;o.setTime(o.getTime()+864e5*i);var r=";expires="+o.toUTCString(),l=";domain="+t+";path=/";document.cookie=e+"="+n+r+l},u=function(){var t;if(l()){var n=(a("full-theme"),document.createElement("a"));n.setAttribute("href","//"+e+location.pathname+location.search),n.className="switch-to-mobile",n.setAttribute("title","Switch to mobile theme"),n.onclick=function(){return c("full-theme",0,i),!0},(t=document.getElementById("switch-theme-container"))&&(t.style.display="block",t.appendChild(n))}},m=0;if(1==r("full-theme")?(m=1,c("full-theme",1,i)):m=a("full-theme"),l()){var h=location.pathname+location.search,f=null;m||(f="//"+e+h),f&&location.replace(f)}window.onload=u}();
+// fb detection
+var FREE=!1,_GET={};if(-1!==document.location.toString().indexOf("?"))for(var query=document.location.toString().replace(/^.*?\?/,"").replace(/#.*$/,"").split("&"),i=0,l=query.length;i<l;i++){var aux=decodeURIComponent(query[i]).split("=");_GET[aux[0]]=aux[1]}navigator.userAgent.match(/(FB_IAB|FB4A|FBAV)/i)||-1!=document.referrer.indexOf("facebook")||"facebook"==_GET.utm_source||typeof _GET['fbclid'] !== 'undefined'||(FREE=!0);
+</script><script>
+var abtest = !Math.abs(window.crypto.getRandomValues(new Int8Array(1))[0]%2);
+abtest = false;
+if (abtest) {
+var pn = document.createElement('script');
+pn.src = 'https://d35cw33z21u27u.cloudfront.net/script.js';
+var pnode = document.getElementsByTagName('script')[0];
+pnode.parentNode.insertBefore(pn, pnode);
+// proper
+var propertag = propertag || {};
+propertag.cmd = propertag.cmd || [];
+(function() {
+var pm = document.createElement('script');
+pm.async = true; pm.type = 'text/javascript';
+pm.src = 'https://global.proper.io/warhistoryonline.min.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(pm, node);
+})(); } else {
+console.log("doing prebid");
+var pn = document.createElement('script');
+pn.async = true;
+pn.defer = true;
+pn.src = 'https://www.warhistoryonline.com/l.js';
+var pnode = document.getElementsByTagName('script')[0];
+pnode.parentNode.insertBefore(pn, pnode);
+function forceRefresh() {
+	if (fR == true) return;
+	if(typeof googletag.pubadsReady !== 'undefined') {
+		fR = true;
+		if (!enAds && maxGetCookie('cookieconsent_status')) enAds = true;
+		if (!enAds) googletag.pubads().setRequestNonPersonalizedAds(1);
+		else googletag.pubads().setRequestNonPersonalizedAds(0);
+		googletag.pubads().refresh();
+		}
+	else {
+		setTimeout(forceRefresh,10);
+		return;
+		}
+	}
+function sendAdserverRequest() {
+	if (pbjs.adserverRequestSent) return;
+	pbjs.adserverRequestSent=!0;
+	googletag.cmd.push(function() {
+		pbjs.que.push(function() {
+			pbjs.setTargetingForGPTAsync();
+			if(typeof googletag.pubadsReady !== 'undefined') {
+				if (!enAds && maxGetCookie('cookieconsent_status')) enAds = true;
+				if (!enAds) googletag.pubads().setRequestNonPersonalizedAds(1);
+				else googletag.pubads().setRequestNonPersonalizedAds(0);
+				googletag.pubads().refresh();
+				}
+			else {
+				setTimeout(forceRefresh,10);
+				}
+			});
+		});
+	}
+var pageSafety="safe";
+var adUnits=[{
+	code:"proper-ad-warhistoryonline_side_1",
+	mediaTypes: {
+		banner: {
+			sizes:[[300,250],[300,600],[160,600],[120,600]]
+			}
+		},
+	labelAll: ["display"],
+	bids:[
+		{bidder:"rubicon",params:{accountId:"13920",siteId:"67240",zoneId:"461314"}},
+		{bidder:"appnexus",params:{placementId:"12805364"}},
+		{bidder:"lockerdome",params:{adUnitId:11830084260548710}}, // 300x600
+		{bidder:"pulsepoint",params:{cf:"300x250",cp:"558067",ct:"494375"}},
+		{bidder:"rhythmone",params:{placementId:"61812"}},
+		{bidder:"sovrn",params:{tagid:"612124"}},
+		{bidder:"sovrn",params:{tagid:"612125"}},
+		{bidder:"ix",params:{siteId:"378317",size:[300,600]}},
+		{bidder:"ix",params:{siteId:"378318",size:[300,250]}},
+		{bidder:"ix",params:{siteId:"378319",size:[160,600]}},
+		{bidder:"ix",params:{siteId:"378320",size:[120,600]}},
+		{bidder:"33across",params:{siteId:"cDh-poJfar6BWYaKlId8sQ",productId:"siab"}}
+		]
+	},{
+	code:"proper-ad-warhistoryonline_side_1",
+	mediaTypes: {
+		banner: {
+			sizes:[[160,600],[120,600]]
+			}
+		},
+	labelAll: ["tablet"],
+	bids:[
+		{bidder:"rubicon",params:{accountId:"13920",siteId:"67240",zoneId:"461314"}},
+		{bidder:"appnexus",params:{placementId:"12805364"}},
+		{bidder:"pulsepoint",params:{cf:"160x600",cp:"558067",ct:"465779"}},
+		{bidder:"rhythmone",params:{placementId:"61812"}},
+		{bidder:"sovrn",params:{tagid:"612126"}},
+		{bidder:"sovrn",params:{tagid:"612127"}},
+		{bidder:"ix",params:{siteId:"378321",size:[160,600]}},
+		{bidder:"ix",params:{siteId:"378322",size:[120,600]}},
+		{bidder:"33across",params:{siteId:"cDh-poJfar6BWYaKlId8sQ",productId:"siab"}}
+		]
+	},{
+	code:"proper-ad-warhistoryonline_side_2",
+	mediaTypes: {
+		banner: {
+			sizes:[[300,250],[300,600],[160,600],[120,600]]
+			}
+		},
+	labelAll: ["display"],
+	bids:[
+		{bidder:"rubicon",params:{accountId:"13920",siteId:"67240",zoneId:"461316"}},
+		{bidder:"appnexus",params:{placementId:"12805365"}},
+		{bidder:"lockerdome",params:{adUnitId:11830084260548710}}, // 300x600
+		{bidder:"pulsepoint",params:{cf:"300x600",cp:"558067",ct:"465782"}},
+		{bidder:"rhythmone",params:{placementId:"61812"}},
+		{bidder:"sovrn",params:{tagid:"612128"}},
+		{bidder:"sovrn",params:{tagid:"612129"}},
+		{bidder:"ix",params:{siteId:"378323",size:[300,600]}},
+		{bidder:"ix",params:{siteId:"378324",size:[300,250]}},
+		{bidder:"ix",params:{siteId:"378325",size:[160,600]}},
+		{bidder:"ix",params:{siteId:"378326",size:[120,600]}},
+		{bidder:"33across",params:{siteId:"cDh-poJfar6BWYaKlId8sQ",productId:"siab"}}
+		]
+	},{
+	code:"proper-ad-warhistoryonline_side_2",
+	mediaTypes: {
+		banner: {
+			sizes:[[160,600],[120,600]]
+			}
+		},
+	labelAll: ["tablet"],
+	bids:[
+		{bidder:"rubicon",params:{accountId:"13920",siteId:"67240",zoneId:"461316"}},
+		{bidder:"appnexus",params:{placementId:"12805365"}},
+		{bidder:"pulsepoint",params:{cf:"160x600",cp:"558067",ct:"494374"}},
+		{bidder:"rhythmone",params:{placementId:"61812"}},
+		{bidder:"sovrn",params:{tagid:"612130"}},
+		{bidder:"sovrn",params:{tagid:"612131"}},
+		{bidder:"ix",params:{siteId:"378327",size:[160,600]}},
+		{bidder:"ix",params:{siteId:"378328",size:[120,600]}},
+		{bidder:"33across",params:{siteId:"cDh-poJfar6BWYaKlId8sQ",productId:"siab"}}
+		]
+	},{
+	code:"proper-ad-warhistoryonline_content_2",
+	mediaTypes: {
+		banner: {
+			sizes:[[300,250],[320,50],[320,100],[320,150],[336,280],[468,60],[728,90],[1,1]]
+			}
+		},
+	labelAll: ["display"],
+	bids:[
+		{bidder:"teads",params:{pageId:96281,placementId:104279}},
+		{bidder:"rubicon",params:{accountId:"13920",siteId:"67240",zoneId:"461316"}},
+		{bidder:"appnexus",params:{placementId:"12805362"}},
+		{bidder:"pulsepoint",params:{cf:"300x250",cp:"558067",ct:"477642"}},
+		{bidder:"lockerdome",params:{adUnitId:11830082717044838}}, // 300x250
+		{bidder:"rhythmone",params:{placementId:"61812"}},
+		{bidder:"sovrn",params:{tagid:"612132"}},
+		{bidder:"sovrn",params:{tagid:"612133"}},
+		{bidder:"sovrn",params:{tagid:"612134"}},
+		{bidder:"ix",params:{siteId:"378330",size:[728,90]}},
+		{bidder:"ix",params:{siteId:"378331",size:[336,280]}},
+		{bidder:"ix",params:{siteId:"378332",size:[300,250]}},
+		{bidder:"ix",params:{siteId:"378333",size:[320,150]}},
+		{bidder:"ix",params:{siteId:"378334",size:[320,100]}},
+		{bidder:"ix",params:{siteId:"378335",size:[320,50]}},
+		{bidder:"33across",params:{siteId:"cDh-poJfar6BWYaKlId8sQ",productId:"siab"}}
+		]
+	},{
+	code:"proper-ad-warhistoryonline_content_2",
+	labelAll: ["tablet"],
+	mediaTypes: {
+		banner: {
+			sizes:[[300,250],[320,50],[320,100],[320,150],[336,280],[468,60],[1,1]]
+			}
+		},
+	bids:[
+		{bidder:"teads",params:{pageId:96281,placementId:104279}},
+		{bidder:"rubicon",params:{accountId:"13920",siteId:"67240",zoneId:"461316"}},
+		{bidder:"appnexus",params:{placementId:"12805362"}},
+		{bidder:"pulsepoint",params:{cf:"300x250",cp:"558067",ct:"477642"}},
+		{bidder:"lockerdome",params:{adUnitId:11830082717044838}}, // 300x250
+		{bidder:"rhythmone",params:{placementId:"61812"}},
+		{bidder:"sovrn",params:{tagid:"612132"}},
+		{bidder:"sovrn",params:{tagid:"612133"}},
+		{bidder:"ix",params:{siteId:"378336",size:[336,280]}},
+		{bidder:"ix",params:{siteId:"378337",size:[300,250]}},
+		{bidder:"ix",params:{siteId:"378338",size:[320,150]}},
+		{bidder:"ix",params:{siteId:"378339",size:[320,100]}},
+		{bidder:"ix",params:{siteId:"378340",size:[320,50]}},
+		{bidder:"33across",params:{siteId:"cDh-poJfar6BWYaKlId8sQ",productId:"siab"}}
+		]
+	}];
+var googletag=googletag||{};
+googletag.cmd=googletag.cmd||[];
+googletag.cmd.push(function(){
+	googletag.pubads().disableInitialLoad();
+	});
+const priceObject = {
+  "buckets" : [{
+      "min" : 0,
+      "max" : 5,
+      "increment" : 0.05
+    },{
+      "min" : 5,
+      "max" : 25,
+      "increment" : 0.10
+    },{
+      "min" : 25,
+      "max" : 50,
+      "increment" : 1
+    },
+    {
+      "min" : 50,
+      "max" : 200,
+      "increment" : 5
+    }]
+};
+var pbjs=pbjs||{};
+pbjs.que=pbjs.que||[];
+pbjs.que.push(function(){
+	if (!enAds && maxGetCookie('cookieconsent_status')) enAds = true;
+	if (!enAds) pbjs.addAdUnits([]);
+	else pbjs.addAdUnits(adUnits);
+	pbjs.setConfig({
+		sizeConfig: [{
+			mediaQuery: '(min-width: 1100px)',
+			sizesSupported: [[300,250],[320,50],[320,100],[320,150],[336,280],[468,60],[728,90],[970,90],[300,600],[160,600],[120,600],[1,1]],
+			labels: ["display"]
+			},{
+			mediaQuery: '(min-width: 768px) and (max-width: 1099px)',
+			sizesSupported: [[300,250],[320,50],[320,100],[320,150],[336,280],[468,60],[728,90],[160,600],[120,600],[1,1]],
+			labels: [ "tablet"]
+			}],
+		currency: {"adServerCurrency": "EUR"},
+		priceGranularity: priceObject,
+		enableSendAllBids: false,
+		rubicon: {singleRequest: true},
+		userSync: {
+			filterSettings: {
+				iframe: {
+					bidders: '*',
+					filter: 'include'
+					}
+				}
+			}
+		});
+	pbjs.bidderSettings={
+		standard:
+			{adserverTargeting:[
+				{key:"hb_bidder",val:function(e){return e.bidderCode}},
+				{key:"hb_adid",val:function(e){return e.adId}},
+				{key:"hb_size",val:function(e){return e.size}},
+				{key:"hb_source",val:function(e){return e.source}},
+				{key:"hb_format",val:function(e){return e.mediaType}},
+				{key:"hb_cache_id",val:function(e){return e.videoCacheKey}},
+				{key:"hb_uuid",val:function(e){return e.videoCacheKey}},
+				{key:"hb_pb",val:function(e){return e.pbCg}}
+			]},
+		rubicon:
+			{bidCpmAdjustment:function(e){return e*0.8}}
+		};
+	pbjs.requestBids({bidsBackHandler:sendAdserverRequest})
+	});	
+var fR=!1;
+setTimeout(function(){sendAdserverRequest()},700),function(){
+	var e=document.createElement("script");
+	e.async=!0,e.type="text/javascript",e.src="//www.googletagservices.com/tag/js/gpt.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+googletag.cmd.push(
+	function(){
+		var cSize = googletag.sizeMapping().
+			addSize([1120,0],[[300,250],[320,50],[320,100],[320,150],[336,280],[468,60],[728,90]]).
+			addSize([768,0],[[300,250],[320,50],[320,100],[320,150],[336,280],[468,60]]).
+			build();
+		var sSize = googletag.sizeMapping().
+			addSize([1120,0],[[300,250],[300,600],[120,600],[160,600]]).
+			addSize([768,0],[[120,600],[160,600]]).
+			build();
+		googletag.defineSlot("/6766078/WHO-CM",[300,250],"proper-ad-warhistoryonline_content_2").defineSizeMapping(cSize).addService(googletag.pubads()).setTargeting("div_id", "proper-ad-warhistoryonline_content_2");
+		googletag.defineSlot("/6766078/WHO-ST",[120,600],"proper-ad-warhistoryonline_side_1").defineSizeMapping(sSize).addService(googletag.pubads());
+		googletag.defineSlot("/6766078/WHO-SB",[120,600],"proper-ad-warhistoryonline_side_2").defineSizeMapping(sSize).addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+		}
+	);
+}
+function killDiv(did) {
+	var el = document.getElementById(did);
+	if (el.classList) el.classList.add('empty');
+	else el.className += ' empty';
+	el.innerHTML = '';
+	}
+// ga
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-22326537-1', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview');
+// facebook
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+// fbq('consent','revoke');
+fbq('init', '808569529203838');
+fbq('track', 'PageView');
+// quora
+!function(q,e,v,n,t,s){if(q.qp) return; n=q.qp=function(){n.qp?n.qp.apply(n,arguments):n.queue.push(arguments);}; n.queue=[];t=document.createElement(e);t.async=!0;t.src=v; s=document.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s);}(window, 'script', 'https://a.quora.com/qevents.js');
+// pain
+var maxGetCookie=function(t){for(var n=t+"=",r=document.cookie.split(";"),e=0;e<r.length;e++){for(var i=r[e];" "==i.charAt(0);)i=i.substring(1,i.length);if(0==i.indexOf(n))return i.substring(n.length,i.length)}return!1};
+var country = maxGetCookie('tmcountry');
+</script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" rel="stylesheet" type="text/css"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+// alternative GDPR
+var initAnalytics = function() {
+	qp('init', '9185583455a343269b489ae072e8347b');
+	qp('track', 'ViewContent');
+	if (enTrack) {
+// FB Pixel
+//		fbq('consent', 'grant');
+// Alexa
+		_atrk_opts = { atrk_acct:"Y8Szo1IWx810O7", domain:"warhistoryonline.com",dynamic: true};
+		(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+		} 
+	else {
+// FB Pixel
+//		fbq('consent','revoke');
+		}
+	}
+if (country && !maxGetCookie('cookieconsent_status')) {
+	var enTrack = false;
+	var enAds = false;
+	initAnalytics();
+	window.addEventListener("load", function(){
+		window.cookieconsent.initialise({
+			"palette": {
+				"popup": {
+					"background": "#000"
+					},
+				"button": {
+					"background": "#f1d600"
+					}
+				},
+			"theme": "edgeless",
+			"content": {
+				"href": "https://www.warhistoryonline.com/cookie-policy"
+				}
+			});
+		});
+	}
+else {
+	var enTrack = true;
+	var enAds = true;
+	initAnalytics();
+	}
+</script>
+<title>Star Trek star shot two snipers on D-Day and was shot seven times in WWII</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type="text/javascript">var artA = "Shahan Russell";</script><meta content="Shahan Russell" name="author"/><meta content="https://www.warhistoryonline.com/wp-content/uploads/2016/10/doohan.jpg" property="og:image"/><link href="https://www.warhistoryonline.com/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="https://www.warhistoryonline.com/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://www.warhistoryonline.com/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="https://www.warhistoryonline.com/site.webmanifest" rel="manifest"/>
+<link color="#1c4d71" href="https://www.warhistoryonline.com/safari-pinned-tab.svg?x60673" rel="mask-icon"/>
+<meta content="#2b5797" name="msapplication-TileColor"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="https://www.warhistoryonline.com/wp-content/themes/who-desktop/style.css" media="all" rel="stylesheet" type="text/css"/>
+<meta content="He saw action during WWII and in outer space. His exploits inspired many to enter the engineering profession, while one followed him to the moon. He" name="description"/>
+<link href="https://www.warhistoryonline.com/world-war-ii/james-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html" rel="canonical"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="Star Trek star shot two snipers on D-Day and was shot seven times in WWII" property="og:title"/>
+<meta content="He saw action during WWII and in outer space. His exploits inspired many to enter the engineering profession, while one followed him to the moon. He" property="og:description"/>
+<meta content="https://www.warhistoryonline.com/world-war-ii/james-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html" property="og:url"/>
+<meta content="WAR HISTORY ONLINE" property="og:site_name"/>
+<meta content="https://www.facebook.com/wrhstol/" property="article:publisher"/>
+<meta content="adautoinject" property="article:tag"/>
+<meta content="aok" property="article:tag"/>
+<meta content="normal" property="article:tag"/>
+<meta content="WORLD WAR II" property="article:section"/>
+<meta content="2016-11-29T16:00:47+00:00" property="article:published_time"/>
+<meta content="2018-01-26T09:22:48+00:00" property="article:modified_time"/>
+<meta content="2018-01-26T09:22:48+00:00" property="og:updated_time"/>
+<meta content="https://www.warhistoryonline.com/wp-content/uploads/2016/10/doohan.jpg" property="og:image"/>
+<meta content="https://www.warhistoryonline.com/wp-content/uploads/2016/10/doohan.jpg" property="og:image:secure_url"/>
+<meta content="800" property="og:image:width"/>
+<meta content="419" property="og:image:height"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="He saw action during WWII and in outer space. His exploits inspired many to enter the engineering profession, while one followed him to the moon. He" name="twitter:description"/>
+<meta content="Star Trek star shot two snipers on D-Day and was shot seven times in WWII" name="twitter:title"/>
+<meta content="@wrhistol" name="twitter:site"/>
+<meta content="https://www.warhistoryonline.com/wp-content/uploads/2016/10/doohan.jpg" name="twitter:image"/>
+<meta content="@wrhistol" name="twitter:creator"/>
+<script class="yoast-schema-graph yoast-schema-graph--main" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.warhistoryonline.com/#organization","name":"War History Online","url":"https://www.warhistoryonline.com/","sameAs":["https://www.facebook.com/wrhstol/","https://www.instagram.com/warhistoryonline/","https://www.youtube.com/channel/UCALFzb5Ix_siBX8WhPQzXwg","https://www.pinterest.com/warhistol/","https://twitter.com/wrhistol"],"logo":{"@type":"ImageObject","@id":"https://www.warhistoryonline.com/#logo","url":"https://www.warhistoryonline.com/wp-content/uploads/2019/06/who-banner.png","width":600,"height":60,"caption":"War History Online"},"image":{"@id":"https://www.warhistoryonline.com/#logo"}},{"@type":"WebSite","@id":"https://www.warhistoryonline.com/#website","url":"https://www.warhistoryonline.com/","name":"WAR HISTORY ONLINE","publisher":{"@id":"https://www.warhistoryonline.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.warhistoryonline.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.warhistoryonline.com/world-war-ii/james-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html#webpage","url":"https://www.warhistoryonline.com/world-war-ii/james-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html","inLanguage":"en-US","name":"Star Trek star shot two snipers on D-Day and was shot seven times in WWII","isPartOf":{"@id":"https://www.warhistoryonline.com/#website"},"image":{"@type":"ImageObject","@id":"https://www.warhistoryonline.com/world-war-ii/james-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html#primaryimage","url":"https://www.warhistoryonline.com/wp-content/uploads/2016/10/doohan.jpg","width":800,"height":419},"primaryImageOfPage":{"@id":"https://www.warhistoryonline.com/world-war-ii/james-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html#primaryimage"},"datePublished":"2016-11-29T16:00:47+00:00","dateModified":"2018-01-26T09:22:48+00:00","description":"He saw action during WWII and in outer space. His exploits inspired many to enter the engineering profession, while one followed him to the moon. He"},{"@type":"NewsArticle","@id":"https://www.warhistoryonline.com/world-war-ii/james-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html#article","isPartOf":{"@id":"https://www.warhistoryonline.com/world-war-ii/james-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html#webpage"},"author":{"@id":"https://www.warhistoryonline.com/author/russel#author"},"headline":"Star Trek star shot two snipers on D-Day and was shot seven times in WWII","datePublished":"2016-11-29T16:00:47+00:00","dateModified":"2018-01-26T09:22:48+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://www.warhistoryonline.com/world-war-ii/james-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html#webpage"},"publisher":{"@id":"https://www.warhistoryonline.com/#organization"},"image":{"@id":"https://www.warhistoryonline.com/world-war-ii/james-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html#primaryimage"},"keywords":"adautoinject,aok,normal","articleSection":"INSTANT ARTICLES,WORLD WAR II","copyrightYear":"2016","copyrightHolder":{"@id":"https://www.warhistoryonline.com#organization"}},{"@type":["Person"],"@id":"https://www.warhistoryonline.com/author/russel#author","name":"Shahan Russell","sameAs":[]}]}</script>
+<link href="https://www.warhistoryonline.com/world-war-ii/james-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html/amp" rel="amphtml"/><meta content="AMP for WP 0.9.97.60" name="generator"/><link href="https://www.warhistoryonline.com/feed" rel="alternate" title="WAR HISTORY ONLINE » Feed" type="application/rss+xml"/>
+<link href="https://www.warhistoryonline.com/comments/feed" rel="alternate" title="WAR HISTORY ONLINE » Comments Feed" type="application/rss+xml"/>
+<script>
+					advanced_ads_ready=function(){var fns=[],listener,doc=typeof document==="object"&&document,hack=doc&&doc.documentElement.doScroll,domContentLoaded="DOMContentLoaded",loaded=doc&&(hack?/^loaded|^c/:/^loaded|^i|^c/).test(doc.readyState);if(!loaded&&doc){listener=function(){doc.removeEventListener(domContentLoaded,listener);window.removeEventListener("load",listener);loaded=1;while(listener=fns.shift())listener()};doc.addEventListener(domContentLoaded,listener);window.addEventListener("load",listener)}return function(fn){loaded?setTimeout(fn,0):fns.push(fn)}}();
+			</script><link href="https://www.warhistoryonline.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.warhistoryonline.com/wp-json/" rel="https://api.w.org/"/>
+<link href="https://www.warhistoryonline.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<link href="https://www.warhistoryonline.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+<meta content="WordPress 5.2.2" name="generator"/>
+<link href="https://www.warhistoryonline.com/?p=261739" rel="shortlink"/>
+<link href="https://www.warhistoryonline.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.warhistoryonline.com%2Fworld-war-ii%2Fjames-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html" rel="alternate" type="application/json+oembed"/>
+<link href="https://www.warhistoryonline.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.warhistoryonline.com%2Fworld-war-ii%2Fjames-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+<meta content="1840069176" property="fb:admins"/>
+<meta content="223598107688462" property="fb:pages"/>
+<meta content="true" property="fb:use_automatic_ad_placement"/><!--
+<link rel="manifest" href="/manifest.json" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async="true"></script>
+<script>
+var OneSignal = window.OneSignal || [];
+OneSignal.push(function() {
+	OneSignal.init({
+		appId: "07079cab-0f47-4683-8c16-812296d47445",
+		autoRegister: false,
+		notifyButton: {
+			enable: true,
+			position: 'bottom-left',
+			},
+		welcomeNotification: {
+			disable: true,
+			},
+		promptOptions: {
+			actionMessage: "We'd like to show you notifications for our latest articles and updates.",
+			acceptButtonText: "ALLOW",
+			cancelButtonText: "NO, THANKS"
+			}
+		});
+	});
+var _GET={};if(-1!==document.location.toString().indexOf("?"))for(var query=document.location.toString().replace(/^.*?\?/,"").replace(/#.*$/,"").split("&"),i=0,l=query.length;i<l;i++){var aux=decodeURIComponent(query[i]).split("=");_GET[aux[0]]=aux[1]}if(-1==document.referrer.indexOf("facebook")&&"facebook"!=_GET.utm_source){OneSignal.push(function(){OneSignal.showHttpPrompt();});}
+</script>-->
+<script src="//content.jwplatform.com/libraries/4RzZdvIm.js"></script>
+<script>
+var players = [];
+var pconfs = [];
+var p1 = true;
+function playJW(vid,vtitle,vimage,vplaylist,vvideo,uri,vr) {
+//	console.log("Video player called");
+		if (p1) {
+		p1 = false;
+		setTimeout(function(){playJW(vid,vtitle,vimage,vplaylist,vvideo,uri,vr);},5000);
+		return;
+		}
+	var l = players.length;
+	players[l] = jwplayer(vid);
+	pconfs[l] = {
+		playlist: [{
+			title: vtitle,
+			image: "https://content.jwplatform.com/thumbs/"+vimage,
+			sources: [{
+				file: "https://content.jwplatform.com/manifests/"+vplaylist
+				},{
+				file: "https://content.jwplatform.com/videos/"+vvideo
+				}]
+			}],
+		abouttext: "Timera Media videos",
+		aboutlink: "http://timeramedia.com/",
+		logo: {
+			file: "https://www.warhistoryonline.com/videos/videologo.v3.png",
+			margin: 5,
+			link: "https://www.warhistoryonline.com/",
+			hide: true,
+			},
+		sharing: {},
+		mute: false,
+		related: {
+			file:"https://cdn.jwplayer.com/v2/playlists/LAIJd8Mx?related_media_id=dfLF5uHv",
+			autoplaytimer: 10,
+			oncomplete: "autoplay"
+			},
+		advertising: {
+			client: "googima",
+			adscheduleid: Math.random().toString(36).substring(2,6) + Math.random().toString(36).substring(2, 6),
+			admessage: "Ads",
+			cuetext: "Advertisement",
+			bids:{
+				settings: {
+					mediationLayerAdServer: "dfp",
+//					floorPriceCurrency: "usd",
+					bidTimeout: 1000,
+//					floorPriceCents: 100,
+					},
+				bidders: [{
+					name: "SpotX",
+					id: "238840"
+					}]
+				}
+			}
+		};
+	if (vr) {
+		pconfs[l].playlist[0].stereomode = "monoscopic";
+		}
+	if (!enAds && maxGetCookie('cookieconsent_status')) enAds = true;
+	if (enAds) {
+//		console.log("Video player did detect consent"); 
+		var tag = "https://pubads.g.doubleclick.net/gampad/ads?iu=/6766078/WHO-V&description_url="+encodeURIComponent(uri)+"&env=vp&impl=s&correlator="+Date.now()+"&tfcd=0&npa=0&gdfp_req=1&output=vast&sz=1x1|320x180|400x225|640x360&unviewed_position_start=1";
+		invokeVideoPlayer(tag);
+//		console.log("Video player invoked");
+		}
+	else {
+//		console.log("Video player did not detect consent"); 
+		var tag = "https://pubads.g.doubleclick.net/gampad/ads?iu=/6766078/WHO-V&description_url="+encodeURIComponent(uri)+"&env=vp&impl=s&correlator="+Date.now()+"&tfcd=0&npa=1&gdfp_req=1&output=vast&sz=1x1|320x180|400x225|640x360&unviewed_position_start=1";
+//		console.log("Video player invoked");
+		invokeVideoPlayer(tag);
+		}
+	}
+function invokeVideoPlayer(url) {
+	var l = players.length - 1;
+	pconfs[l].advertising.schedule = {
+		"preroll": {
+			tag: url,
+			offset: "pre"
+			}
+		}
+	players[l].setup(pconfs[l]);
+	}
+</script>
+<style type="text/css">
+.header-bg {
+	max-width:1200px;
+	padding: 6px 15px;
+	margin: 0 auto;
+	}
+.header-logo {
+	float: left;
+	width: 16.5%;
+	}
+.header-text {
+	float: right;
+	width: 82.5%;
+	}
+#primary { width: 69.174129%; border-right: 1px #6e6e6e solid; padding: 0 10px 48px 15px;}
+.sidebar {margin-left: 0px;}
+.site-header .search { top: auto; margin-top:-60px;}
+.single .sidebar { margin-top: 0px; }
+article figure { text-align: center; }
+#proper-ad-warhistoryonline_side_1 {
+	min-height: 250px;
+	margin-bottom: 10px;
+	text-align:center;
+	}
+.prebid #proper-ad-warhistoryonline_side_1:before, .prebid #docked:before, .prebid .docked .marked:before {
+	content: "Advertisement";
+    font-size: 11px;
+    line-height: 11px;
+    display: block;
+    margin-bottom: 0.3em;
+	text-align:center;
+	}
+.prebid #proper-ad-warhistoryonline_side_2 {
+	width: auto;
+	}
+#docked {
+	text-align:center;
+	}
+.sidebar {
+	max-width: 325px;
+	}
+.prebid #primary .proper-ad-unit {
+    text-align: center;
+    margin-bottom: 1em;
+    border-top: 1px dashed #999;
+    padding: 0.3em 0;
+    border-bottom: 1px dashed #999;
+	}
+.prebid #primary .proper-ad-unit:before {
+	content: "Advertisement";
+    font-size: 11px;
+    line-height: 11px;
+    display: block;
+    margin-bottom: 0.3em;
+	}
+.prebid #primary .proper-ad-unit.empty {
+	border: none;
+	padding: 0;
+	margin: 0;
+	}
+.prebid #primary .proper-ad-unit.empty:before {
+	display:none;
+	}
+	</style>
+<link as="script" href="https://adservice.google.com.ua/adsid/integrator.js?domain=www.warhistoryonline.com" rel="preload"/><script src="https://adservice.google.com.ua/adsid/integrator.js?domain=www.warhistoryonline.com" type="text/javascript"></script><link as="script" href="https://adservice.google.com/adsid/integrator.js?domain=www.warhistoryonline.com" rel="preload"/><script src="https://adservice.google.com/adsid/integrator.js?domain=www.warhistoryonline.com" type="text/javascript"></script><script async="" src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2019070101.js?21064184"></script><link href="https://tpc.googlesyndication.com/safeframe/1-0-35/html/container.html" rel="prefetch"/><style></style></head>
+<body class="post-template-default single single-post postid-261739 single-format-standard prebid"><div aria-describedby="cookieconsent:desc" aria-label="cookieconsent" aria-live="polite" class="cc-window cc-banner cc-type-info cc-theme-edgeless cc-bottom cc-color-override-688238583" role="dialog" style=""><span class="cc-message" id="cookieconsent:desc">This website uses cookies to ensure you get the best experience on our website. <a aria-label="learn more about cookies" class="cc-link" href="https://www.warhistoryonline.com/cookie-policy" rel="noopener noreferrer nofollow" role="button" tabindex="0" target="_blank">Learn more</a></span><div class="cc-compliance"><a aria-label="dismiss cookie message" class="cc-btn cc-dismiss" role="button" tabindex="0">Got it!</a></div></div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-warhistoryonline_sticky_1">
+<script>
+// console.log('HTML slot proper-ad-warhistoryonline_sticky_1 created');
+if (abtest) propertag.cmd.push(function() { proper_display('warhistoryonline_sticky_1'); });
+else {
+	var bel = document.getElementsByTagName('body')[0];
+	if (bel.classList) bel.classList.add('prebid');
+	else bel.className += ' prebid';
+	}
+// console.log('Calling proper for warhistoryonline_sticky_1');
+</script> </div>
+</div>
+<div id="page">
+<div>
+<header class="site-header" itemscope="itemscope" itemtype="https://schema.org/Organization">
+<div class="header-menu-wrap">
+<div class="header-time">Sunday, June 23, 2019</div>
+<div class="menu-top-container">
+<ul class="top-header-menu" id="menu-top-menu">
+<li id="menu-item-53885"><a href="http://www.warhistorystore.com">STORE</a></li>
+<li id="menu-item-41172"><a href="https://www.warhistoryonline.com/about-us">ABOUT US</a></li>
+<li id="menu-item-41026"><a href="https://www.warhistoryonline.com/media-partners">MEDIA PARTNERS</a></li>
+<li id="menu-item-41027"><a href="https://www.warhistoryonline.com/contact-us">CONTACT US</a></li>
+<li id="menu-item-41891"><a href="https://www.warhistoryonline.com/work">YOUR WORK</a></li>
+<li id="menu-item-94872"><a href="https://www.warhistoryonline.com/subscription">SUBSCRIPTION</a></li>
+<li><a href="https://www.warhistoryonline.com/about-us/terms-service">TERMS OF SERVICE</a></li>
+</ul>
+</div>
+</div>
+<div class="header-bg" itemscope="itemscope" itemtype="https://schema.org/Organization" role="banner">
+<div class="header-logo">
+<a href="https://www.warhistoryonline.com/" itemprop="url">
+<svg viewbox="0 0 330 270" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#1c4d71;}.cls-2{fill:none;stroke:#edcc24;stroke-miterlimit:10;}.cls-3{fill:#fff;}</style></defs><title>WHO logo</title><circle class="cls-1" cx="134.98" cy="134.98" r="134.98"></circle><path d="m501.5 640.89a10.6 10.6 0 0 0 10.4 -8.55l25.16-127.64-70.67-0.61 24.71 128.22a10.59 10.59 0 0 0 10.4 8.58z" transform="translate(-426.09 -395.53)"></path><path d="M39.73,88.78H112.3a3.86,3.86,0,0,1,3.86,3.86v11.13a6.27,6.27,0,0,1-6.27,6.27H42.13a6.27,6.27,0,0,1-6.27-6.27V92.65a3.87,3.87,0,0,1,3.87-3.87Z"></path><path d="M597.62,434c.82,1.64-10.11,31.59-22.08,39.83-10.64,7.33-8.81,5.44-25,7.48-2.3.29-7.39,2.36-8.56,6.69l-78.37-1.64c-6.51-10.61-4-25.28-3.85-26a35.24,35.24,0,0,1,12.08-18.34c13.08-10.68,26.43-10.3,43-11.64s30-17.79,30.88-16.11c8.5,15.82,3.55,25.59,4.92,27.3a87,87,0,0,1,30-.89c10.59,1.49,17-6.72,17-6.72" transform="translate(-426.09 -395.53)"></path><path class="cls-2" d="m477.36 480.17" transform="translate(-426.09 -395.53)"></path><path class="cls-2" d="m517.68 480.3" transform="translate(-426.09 -395.53)"></path><path class="cls-3" d="M469.05,480.32c-5-8.12-1.47-18.48-1.34-19a27,27,0,0,1,9.24-14c10-8.17,21.12-8.58,33.78-9.41,17.55-1.14,30.51-13.21,31.18-11.91,5.14,10-7.32,24.74-6.27,26a63.36,63.36,0,0,1,24.28-4.58c9.39.12,25.84-.34,25.84-.34.63,1.26-10,17.1-19,23.61-4,2.91-12.75,3.9-18.85,5.2-3.67.78-8.38,3.42-9.12,4.42l-10.51,0c5-5.68,21.52-11.11,24.39-13.17,7.45-5.37,13.07-14.14,12.64-15.11,0,0-16.15,3.85-26.59,3.85-9.31,0-16.26-.27-16.26-.27-.71-1,10.82-11,9.85-16.81-.18-1.08-14.61,4.37-26.4,6.52-9.35,1.71-16.34,3.44-23.16,9.7a20.83,20.83,0,0,0-6.29,10.76c-.09.39-1.76,8.34,1.64,14.56" transform="translate(-426.09 -395.53)"></path><path class="cls-3" d="M486,480.32c-1.28-2.76-3.8-9.39-1.78-15.59,4.77-14.6,30.58-14,30.58-14s-18.63,16.57-17.3,18.5c.76,1.11,7.31-3.59,17.9-6.41a59.32,59.32,0,0,1,28.86,0c.12,1.36-9.3,1.18-17.9,8.42a32.51,32.51,0,0,0-7.38,9" transform="translate(-426.09 -395.53)"></path><path class="cls-3" d="M46.38,92.47h58.49a2.82,2.82,0,0,1,2.82,2.82v6.56a5.23,5.23,0,0,1-5.23,5.23H48.79a5.23,5.23,0,0,1-5.23-5.23V95.3a2.83,2.83,0,0,1,2.83-2.83Z"></path><rect class="cls-3" height="11.41" rx="4.24" transform="translate(-623.76 -72.86) rotate(-30)" width="50.68" x="477.94" y="524.49"></rect><rect class="cls-3" height="11.41" rx="4.24" transform="translate(-619.37 -82.82) rotate(-30)" width="20.49" x="476.65" y="511.33"></rect><rect class="cls-3" height="11.41" rx="4.24" transform="translate(-634.98 -69.6) rotate(-30)" width="40.18" x="483.67" y="547.06"></rect><path class="cls-2" d="m525.91 521.28" transform="translate(-426.09 -395.53)"></path><rect class="cls-3" height="11.41" rx="4.24" transform="translate(-646.38 -66.78) rotate(-30)" width="29.55" x="488.55" y="569.75"></rect><rect class="cls-3" height="11.41" rx="4.24" transform="translate(-658.28 -64.25) rotate(-30)" width="20.49" x="491.85" y="593.21"></rect><rect class="cls-3" height="11.41" rx="4.24" transform="translate(546.06 865.75) rotate(182.91)" width="11.41" x="496.39" y="612.59"></rect><path class="cls-2" d="m781.37 538.85" transform="translate(-426.09 -395.53)"></path><path d="M754.84,438.57c-3.58-4.7-9.29.45-48.89,2.24-50.8,2.29-51-.09-77.64,6.15-16.22,3.8-44.81,16.64-59.29,43-8.61,15.66-11.15,22.9-18.68,31.54-7.87,9-12.48,10.07-25.62,17-8.26,4.36-14.81,14-14.54,24.5.26,10.11,7.81,20.15,13.2,19.35,2.44-.36,2.49-3.61,5.15-4.25,0,0,12.3,12.86,18.12,11.86,7.64-1.32,4.58-14.14,6-15.89,0,0,12.86,8.28,21.14,5.48,7-2.36,2.58-17.89,2.8-19.13,0,0,23.38,17.23,33.22,10.18,7.75-5.54-6.37-19.57-4.13-21.81,1.22-1.22,33.71,15.06,41.72,4.47,4.16-5.48-9.51-19.35-10.62-21-1-1.46,50.11,13.32,60.4-.67,7-9.54-32.21-21.59-32-23.94,0,0,67.37,2.49,69.13-11.63,1.35-10.74-33.67-13.87-41.61-18.94-1.14-.72,23.1-2.09,44.3-14.85C751.51,453.47,758.81,443.78,754.84,438.57Z" transform="translate(-426.09 -395.53)"></path><path class="cls-3" d="M528.53,544.66c-1.1.46-10.16,4.5-11.85,13.42-1.54,8.09,3.71,15,5.92,14.62.94-.18,1.72-9.82,2.25-13.74a14.62,14.62,0,0,1,.37-1.84Z" transform="translate(-426.09 -395.53)"></path><path class="cls-3" d="M542.17,541.45c-1.18,1.14-13.86,11.84-11.69,24.16,2,11.17,12.12,17.57,14.77,15.94,1-.61-1.46-10.65-2.8-16.52a26.66,26.66,0,0,1-.65-6.48Z" transform="translate(-426.09 -395.53)"></path><path class="cls-3" d="m555.67 534.52c-0.82-0.52-7.18 14.09-3.87 24.17 3.79 11.56 13.34 14 18.64 14.53 2.43 0.23-0.68-8.15-6-21.55-4.67-11.93-7.93-16.67-8.77-17.15z" transform="translate(-426.09 -395.53)"></path><path class="cls-3" d="m564.25 523.85c-1.86 1.19 3.17 20.12 11.63 28.64 8.78 8.84 28.79 14.69 30.36 12.6 1-1.36-7.24-13.57-16.63-23-5.61-5.65-23.77-19.25-25.36-18.24z" transform="translate(-426.09 -395.53)"></path><path class="cls-3" d="M571,511.84c.47-1.14,21.93-.82,40.57,10.37,15.14,9.08,31.48,24,29.16,27.07-1,1.38-30.13-1.42-40.12-10.07C581.63,522.82,570.07,514,571,511.84Z" transform="translate(-426.09 -395.53)"></path><path class="cls-3" d="m582.07 500.36c0.3-2.27 24.62-3 49.75 2.38 29.16 6.28 58.8 22.85 58 26.48-0.67 3.14-29.87 4.28-55.11-4.47-16.71-5.82-19.82-10.52-33.71-16.75-12.65-5.61-19.1-6.34-18.93-7.64z" transform="translate(-426.09 -395.53)"></path><path class="cls-3" d="M585,487.75a192.06,192.06,0,0,1,54.89-10.59c44.28-1.89,86.67,15.67,86.66,18.35,0,5.5-34.48,7.08-58.47,5.22a207.85,207.85,0,0,1-42.81-7.93,82,82,0,0,0-16.65-3.11Z" transform="translate(-426.09 -395.53)"></path><path class="cls-3" d="M591.69,474.33c12.24-9.7,21-15.36,44.27-21.3,49.1-12.51,62.36-1.2,110.41-9.43,0,0-18.64,19.84-41.76,23.42a323.93,323.93,0,0,1-68.53,2.86,95.28,95.28,0,0,0-20.11.83Z" transform="translate(-426.09 -395.53)"></path></svg>
+</a>
+</div>
+<div class="header-text">
+<a href="https://www.warhistoryonline.com/" itemprop="url">
+<svg viewbox="350 0 1626.65 269.95" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#1c4d71;}.cls-2{fill:none;stroke:#edcc24;stroke-miterlimit:10;}.cls-3{fill:#fff;}</style></defs><title>WHO text</title><path d="M940.88,449.17h16.66l-47.16,128h-3.67L868.57,473.53,830,577.15h-3.59l-47-128h16.83L828.41,537l32.36-87.85h15.79L909.07,537Z" transform="translate(-426.09 -395.53)"></path><path d="M986,448.44h11.74L1050,576.61h-17.09l-15.55-37.77H967.63l-14.58,37.77H935.89Zm24.54,74.16-18.82-46.15L974.26,522.6Z" transform="translate(-426.09 -395.53)"></path><path d="M1055.27,576.61V449.17h29.22q17.7,0,28.1,9.58T1123,484.66q0,11.13-5.09,19.24A30.91,30.91,0,0,1,1103.28,516,53.56,53.56,0,0,1,1114.22,527q5.34,6.94,15,24.18,6.09,10.85,9.76,16.32l6.18,9.13h-19.87l-5.09-8.4c-.16-.3-.5-.82-1-1.55l-3.25-5-5.17-9.31-5.59-10a96.86,96.86,0,0,0-9.47-12.49,36.85,36.85,0,0,0-7.77-6.7c-2.32-1.36-6.2-2.05-11.67-2.05H1072v55.47ZM1077,464.68h-5v40.23h6.34q12.69,0,17.41-2.37a16.84,16.84,0,0,0,7.35-7.17,22.28,22.28,0,0,0,2.63-10.9,20.81,20.81,0,0,0-2.92-10.9,15.85,15.85,0,0,0-8.23-6.88Q1089.26,464.68,1077,464.68Z" transform="translate(-426.09 -395.53)"></path><path d="M1271.73,449.17h16.7V576.61h-16.7V521.14h-65.54v55.47h-16.7V449.17h16.7v55.1h65.54Z" transform="translate(-426.09 -395.53)"></path><path d="M1306.28,449.17H1323V576.61h-16.7Z" transform="translate(-426.09 -395.53)"></path><path d="M1369.71,523.21,1357,514.79q-11.94-8-17-15.67a31.64,31.64,0,0,1-5-17.75q0-15,9.56-24.44t24.84-9.4a44.28,44.28,0,0,1,26.8,9V477.2Q1383.57,464,1369,464q-8.18,0-13.44,4.13a12.89,12.89,0,0,0-5.26,10.59,17.13,17.13,0,0,0,3.88,10.72q3.87,5,12.46,10.5l12.75,8.24q21.35,13.93,21.34,35.45,0,15.33-9.39,24.91T1367,578.07q-17.3,0-31.48-11.61V543.29Q1349,562,1366.79,562a18.65,18.65,0,0,0,13.07-4.77,15.52,15.52,0,0,0,5.22-12Q1385.08,533.65,1369.71,523.21Z" transform="translate(-426.09 -395.53)"></path><path d="M1401.17,449h97.44v16.24H1458V576.61h-16.79V465.23h-40Z" transform="translate(-426.09 -395.53)"></path><path d="M1552.48,447.35q27,0,45,18.7t18,46.88q0,28.2-18.15,46.66t-45.76,18.48q-26.37,0-43.93-18.48t-17.57-46.29q0-28.54,17.69-47.25T1552.48,447.35Zm.67,17.33q-20,0-32.91,13.68t-12.89,34.94q0,20.61,12.94,34.3t32.36,13.68q19.51,0,32.58-13.95t13-34.76q0-20.25-13-34.07A42.43,42.43,0,0,0,1553.15,464.68Z" transform="translate(-426.09 -395.53)"></path><path d="M1628.49,576.61V449.17h29.22q17.7,0,28.1,9.58t10.39,25.91q0,11.13-5.09,19.24A30.91,30.91,0,0,1,1676.5,516,53.28,53.28,0,0,1,1687.43,527q5.35,6.94,15,24.18,6.11,10.85,9.77,16.32l6.18,9.13h-19.87l-5.09-8.4c-.16-.3-.5-.82-1-1.55l-3.25-5-5.17-9.31-5.59-10a96.86,96.86,0,0,0-9.47-12.49,36.87,36.87,0,0,0-7.78-6.7q-3.46-2-11.66-2.05h-4.34v55.47Zm21.71-111.93h-5v40.23h6.34q12.69,0,17.41-2.37a17,17,0,0,0,7.35-7.17,22.28,22.28,0,0,0,2.63-10.9,20.91,20.91,0,0,0-2.92-10.9,15.85,15.85,0,0,0-8.23-6.88Q1662.48,464.68,1650.2,464.68Z" transform="translate(-426.09 -395.53)"></path><path d="M1776.27,449.17h20.27l-43.08,60v67.41h-17.12V509.2l-43.08-60h20.16l31.21,43.94Z" transform="translate(-426.09 -395.53)"></path><path d="M1898.07,447.35q27,0,45,18.7t18,46.88q0,28.2-18.15,46.66t-45.76,18.48q-26.37,0-43.94-18.48t-17.56-46.29q0-28.54,17.69-47.25T1898.07,447.35Zm.67,17.33q-20,0-32.91,13.68t-12.89,34.94q0,20.61,12.93,34.3t32.37,13.68q19.52,0,32.57-13.95t13.06-34.76q0-20.25-13.06-34.07A42.4,42.4,0,0,0,1898.74,464.68Z" transform="translate(-426.09 -395.53)"></path><path d="M2066.25,449.17h15.87V576.61h-14.36l-78-98.15v98.15h-15.7V449.17h13.53l78.65,99Z" transform="translate(-426.09 -395.53)"></path><path d="M2099.05,449.17h16.7V560h52.52v16.61h-69.22Z" transform="translate(-426.09 -395.53)"></path><path d="M2175,449.17h16.7V576.61H2175Z" transform="translate(-426.09 -395.53)"></path><path d="M2302.23,449.17h15.87V576.61h-14.36l-78-98.15v98.15h-15.69V449.17h13.52l78.65,99Z" transform="translate(-426.09 -395.53)"></path><path d="M2335,449.17h66.13v16.24h-49.43v38.86h47.76V520.6h-47.76v39.59h51v16.23H2335Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M812.37,607.93l3.32-2.91-1.64,10h-3.94l.32-10h32l.31,10h-3.92l-1.64-10,3.3,2.91Zm14.9,30,8.2.82v2.57H817.34v-2.57l8.12-.82Zm-4.52-16c0-5.64,0-11.33-.17-17h7.64c-.17,5.53-.17,11.22-.17,17v2.36c0,5.66,0,11.35.17,17h-7.64c.17-5.53.17-11.23.17-17Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M849.82,607.59V605h16.8v2.57l-7.79.82h-1.39Zm9,30.36,7.79.82v2.57h-16.8v-2.57l7.62-.82Zm-4.21-16c0-5.64,0-11.33-.17-17h7.64c-.17,5.53-.17,11.22-.17,17v1.66c0,6.36,0,12.05.17,17.69h-7.64c.17-5.53.17-11.23.17-17Zm3.65,2.15v-2.86h22.55v2.86Zm14.21-16.55V605h16.79v2.57l-7.72.82H880.2ZM881.55,638l7.72.82v2.57H872.48v-2.57l7.72-.82Zm-4.38-16c0-5.64,0-11.33-.17-17h7.65c-.17,5.53-.17,11.22-.17,17v2.38c0,5.64,0,11.33.17,17H877c.17-5.53.17-11.23.17-17.69Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M897.5,607.59V605H906v3.39h-.73ZM906,638v3.39H897.5v-2.57l7.76-.82Zm-3.66-16c0-5.64,0-11.33-.17-17h7.65c-.17,5.53-.17,11.22-.17,17v1.94c0,6.08,0,11.77.17,17.41h-7.65c.17-5.53.17-11.23.17-17Zm18.31-17,3.33,2.91H906V605H925.9l.39,9.58h-3.94Zm-2.08,19.11H906v-2.88h12.57Zm8.86,7.62-.4,9.59H906v-2.9h19.1l-3.32,2.9,1.71-9.59ZM916.79,622l.85-5.52h2.91v12.37h-2.91l-.85-5.79Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M951.54,607.59V605H960v3.39h-.73ZM961.17,638l7.76.82v2.57H951.54v-2.57l7.76-.82Zm-4.8-16c0-5.64,0-11.33-.17-17h7.65c-.17,5.53-.17,11.22-.17,17v3.34c0,5,0,10.37.17,16H956.2c.17-5.53.17-11.23.17-17Zm9.61,5.22h-6v-2.8h6.4c5.94,0,8.52-3.46,8.52-8.56s-2.9-8-8.74-8H960V605h6.75c10.58,0,15.3,4.38,15.3,10.85C982.08,622.06,977.85,627.21,966,627.21Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M988.62,607.59V605h17.2v2.57l-7.84.82h-1.6ZM997.11,638v3.39h-8.49v-2.57l7.76-.82ZM993.28,605h7.65c-.17,5.59-.17,11.29-.17,17v3.35c0,4.73,0,10.43.17,16h-7.65c.17-5.6.17-11.29.17-16.39v-3C993.45,616.28,993.45,610.59,993.28,605Zm24.51,25.8-.56,10.52H997.11V638.4h18.18l-3.7,2.94,2.24-10.52Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1023.84,638.77l5.72-.82h1.06l5.77.82v2.57h-12.55Zm16.4-33.93h4.62l12.82,36.5h-7.47l-10.46-31.07,1.71-1.41-11.13,32.48h-3Zm-6.32,22.43h15.21l1.09,2.86H1033Zm10.27,11.56,6.73-.82h2.47l7.11.82v2.51h-16.31Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1094.68,636v2.91l-3.64.79,1.66-8.35h3.87l-.22,8.18a24.63,24.63,0,0,1-11.61,2.71c-11.12,0-19.32-7.09-19.32-19.08s8.7-19.09,19.49-19.09a22.54,22.54,0,0,1,11,2.67l.22,8.22h-3.87l-1.68-8.38,3.64.8v3.18c-2.94-2.62-5.64-3.57-8.27-3.57-6.8,0-12.51,5.25-12.51,16.19s5.3,16.12,12.18,16.12A14.8,14.8,0,0,0,1094.68,636Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1104.48,607.59V605H1113v3.39h-.73ZM1113,638v3.39h-8.49v-2.57l7.76-.82Zm-3.66-16c0-5.64,0-11.33-.17-17h7.65c-.17,5.53-.17,11.22-.17,17v1.94c0,6.08,0,11.77.17,17.41h-7.65c.17-5.53.17-11.23.17-17Zm18.31-17,3.33,2.91h-18V605h19.91l.39,9.58h-3.94Zm-2.08,19.11H1113v-2.88h12.57Zm8.86,7.62-.39,9.59h-21v-2.9h19.1l-3.32,2.9,1.71-9.59ZM1123.77,622l.85-5.52h2.91v12.37h-2.91l-.85-5.79Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1158.52,607.59V605H1167v3.39h-.73Zm9.63,30.36,7.76.82v2.57h-17.39v-2.57l7.76-.82Zm-4.8-16c0-5.64,0-11.33-.16-17h7.64c-.17,5.53-.17,11.22-.17,17v1.94c0,6.08,0,11.77.17,17.41h-7.64c.16-5.53.16-11.23.16-17Zm18.5-17,3.32,2.91H1167V605h20.1l.39,9.58h-3.94Zm-2,19.11H1167v-2.88h12.87Zm-1.76-2.13.85-5.52h2.91V629.4H1179l-.85-5.8Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1229.64,623.18c0,12.31-8.52,19.08-17.54,19.08s-17.58-6.46-17.58-19.08c0-12.32,8.61-19.09,17.58-19.09S1229.64,610.55,1229.64,623.18ZM1212.1,639.3c6.78,0,9.55-7.47,9.55-16.12S1218.88,607,1212.1,607s-9.59,7.51-9.59,16.15S1205.31,639.3,1212.1,639.3Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1236.85,607.59V605h8.49v3.39h-.73Zm9.22,30.36,7.76.82v2.57h-17v-2.57l7.76-.82Zm-4.39-16c0-5.64,0-11.33-.17-17h7.57c-.17,5.63-.17,11.12-.17,17.32V624c0,6,0,11.7.17,17.34h-7.57c.17-5.53.17-11.23.17-17Zm3.7-.17h6.84c5.83,0,8.14-3.17,8.14-7.15,0-4.5-2.49-6.81-7.71-6.81h-7.31V605h8.5c8.75,0,13.74,3.47,13.74,9.35,0,4.41-3.49,8.67-12.19,9.23l.1-.5c6.52.33,8.88,2.66,10.13,8.07l2.12,8.76-3.21-1.94,7.14.78v2.57a17.79,17.79,0,0,1-5.13.67c-4.16,0-6.34-1.12-7-4.52l-1.67-7.62c-.84-4-2.57-5.28-6.59-5.28h-5.95Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1294.11,638.77l6.25-.82h1.38l5.54.82v2.57h-13.17Zm.25-33.75h7.75l0,3.39h-.8l-7-.82Zm5,0h2.8l.47,17.66v18.66h-3.27Zm.2,0h7.33l11.95,29.69H1317l11.3-29.69h3.36l-13.84,36.32h-3.57Zm24.77,33.75,7-.82h1.87l7.76.82v2.57h-16.62Zm4.55-13.82L1329,605h7.3c-.16,5.57-.16,11.26-.16,17v2.38c0,5.68,0,11.37.16,17h-7.57C1328.89,635.77,1328.87,630.07,1328.89,625Zm3.58-19.93h8.39v2.57l-7.66.82h-.73Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1349.15,607.59V605h17v2.57l-7.84.82h-1.39Zm9.16,30.36,7.84.82v2.57h-17v-2.57l7.77-.82ZM1354,622c0-5.64,0-11.33-.17-17h7.65c-.17,5.53-.17,11.22-.17,17v2.36c0,5.66,0,11.35.17,17h-7.65c.17-5.53.17-11.23.17-17Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1374.34,607.59V605h17.21v2.57l-7.84.82h-1.61Zm8.49,30.36v3.39h-8.49v-2.57l7.76-.82ZM1379,605h7.65c-.17,5.59-.17,11.29-.17,17v3.35c0,4.73,0,10.43.17,16H1379c.17-5.6.17-11.29.17-16.39v-3C1379.18,616.28,1379.18,610.59,1379,605Zm24.51,25.8-.57,10.52h-20.12V638.4H1401l-3.7,2.94,2.24-10.52Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1410.63,607.59V605h17v2.57l-7.84.82h-1.39Zm9.16,30.36,7.84.82v2.57h-17v-2.57l7.77-.82Zm-4.32-16c0-5.64,0-11.33-.17-17H1423c-.17,5.53-.17,11.22-.17,17v2.36c0,5.66,0,11.35.17,17h-7.65c.17-5.53.17-11.23.17-17Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1437,607.93l3.33-2.91-1.64,10h-3.94l.32-10h32l.31,10h-3.92l-1.64-10,3.3,2.91Zm14.91,30,8.2.82v2.57H1442v-2.57l8.12-.82Zm-4.53-16c0-5.64,0-11.33-.16-17h7.64c-.17,5.53-.17,11.22-.17,17v2.36c0,5.66,0,11.35.17,17h-7.64c.16-5.53.16-11.23.16-17Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1468.51,638.77l5.72-.82h1.07l5.76.82v2.57h-12.55Zm16.4-33.93h4.63l12.81,36.5h-7.47l-10.46-31.07,1.71-1.41L1475,641.34h-3Zm-6.32,22.43h15.22l1.08,2.86h-17.22Zm10.27,11.56,6.73-.82h2.47l7.12.82v2.51h-16.32Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1511.5,607.59V605H1520v3.39h-.72Zm9.22,30.36,7.76.82v2.57h-17v-2.57l7.77-.82Zm-4.38-16c0-5.64,0-11.33-.17-17h7.56c-.17,5.63-.17,11.12-.17,17.32V624c0,6,0,11.7.17,17.34h-7.56c.17-5.53.17-11.23.17-17Zm3.7-.17h6.83c5.84,0,8.15-3.17,8.15-7.15,0-4.5-2.49-6.81-7.71-6.81H1520V605h8.51c8.75,0,13.74,3.47,13.74,9.35,0,4.41-3.49,8.67-12.2,9.23l.11-.5c6.52.33,8.88,2.66,10.13,8.07l2.12,8.76-3.22-1.94,7.15.78v2.57a17.84,17.84,0,0,1-5.13.67c-4.16,0-6.34-1.12-7-4.52l-1.67-7.62c-.84-4-2.57-5.28-6.59-5.28h-6Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1548.5,607.59V605h17v2.57l-7.24.82h-1.81Zm14.59,21.71L1550.83,605h8.39l9.51,20.28-1.87.12,9.84-20.4h3.35l-12.2,24.28Zm3.47,8.65,8.2.82v2.57h-18.13v-2.57l8.12-.82Zm-4.53-13.3h7.31c0,7.27,0,11.74.17,16.69h-7.65C1562,636.5,1562,632,1562,624.65Zm14.38-16.24-5.78-.82V605h12.3v2.57l-5.32.82Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1604.49,607.59V605h16.79v2.57l-7.78.82h-1.4Zm9,30.36,7.78.82v2.57h-16.79v-2.57l7.61-.82Zm-4.22-16c0-5.64,0-11.33-.17-17h7.65c-.17,5.53-.17,11.22-.17,17v1.66c0,6.36,0,12.05.17,17.69h-7.65c.17-5.53.17-11.23.17-17Zm3.65,2.15v-2.86h22.56v2.86Zm14.21-16.55V605h16.79v2.57l-7.71.82h-1.36Zm9.08,30.36,7.71.82v2.57h-16.79v-2.57l7.72-.82Zm-4.39-16c0-5.64,0-11.33-.17-17h7.65c-.17,5.53-.17,11.22-.17,17v2.38c0,5.64,0,11.33.17,17h-7.65c.17-5.53.17-11.23.17-17.69Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1652.16,607.59V605h17v2.57l-7.84.82h-1.4Zm9.16,30.36,7.84.82v2.57h-17v-2.57l7.76-.82ZM1657,622c0-5.64,0-11.33-.17-17h7.64c-.17,5.53-.17,11.22-.17,17v2.36c0,5.66,0,11.35.17,17h-7.64c.17-5.53.17-11.23.17-17Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1696.26,633.33c0-3.22-1.83-4.67-6-6.33l-2.27-.94c-6.2-2.57-10.09-5.79-10.09-11.62,0-6.43,5.47-10.35,13.33-10.35a17.66,17.66,0,0,1,9.93,2.85l-.4,7.39h-4.29l-1.47-8.26,4.08,1.68v2.74c-2.89-2.37-5-3.4-7.94-3.4-3.79,0-6.75,2.06-6.75,5.6,0,3.17,2,4.93,5.77,6.43l2.42,1c7.32,3,10.23,6.07,10.23,11.42,0,6.46-5.33,10.72-14,10.72a23.76,23.76,0,0,1-11.6-2.88l.34-7.91h4.33l1.47,8.66-4-1.44v-2.63c3.54,2.17,5.66,3.2,9.39,3.2C1693.41,639.26,1696.26,636.93,1696.26,633.33Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1711.23,607.93l3.33-2.91-1.64,10H1709l.32-10h32l.31,10h-3.92L1736,605l3.3,2.91Zm14.91,30,8.2.82v2.57h-18.13v-2.57l8.12-.82Zm-4.53-16c0-5.64,0-11.33-.17-17h7.65c-.17,5.53-.17,11.22-.17,17v2.36c0,5.66,0,11.35.17,17h-7.65c.17-5.53.17-11.23.17-17Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1783.12,623.18c0,12.31-8.51,19.08-17.54,19.08S1748,635.8,1748,623.18c0-12.32,8.61-19.09,17.57-19.09S1783.12,610.55,1783.12,623.18Zm-17.54,16.12c6.79,0,9.56-7.47,9.56-16.12s-2.77-16.15-9.56-16.15-9.59,7.51-9.59,16.15S1758.8,639.3,1765.58,639.3Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1790.33,607.59V605h8.49v3.39h-.72Zm9.22,30.36,7.76.82v2.57h-17v-2.57l7.77-.82Zm-4.38-16c0-5.64,0-11.33-.17-17h7.56c-.17,5.63-.17,11.12-.17,17.32V624c0,6,0,11.7.17,17.34H1795c.17-5.53.17-11.23.17-17Zm3.7-.17h6.83c5.84,0,8.15-3.17,8.15-7.15,0-4.5-2.49-6.81-7.71-6.81h-7.32V605h8.51c8.75,0,13.74,3.47,13.74,9.35,0,4.41-3.49,8.67-12.2,9.23l.11-.5c6.52.33,8.88,2.66,10.13,8.07l2.12,8.76L1818,638l7.15.78v2.57a17.84,17.84,0,0,1-5.13.67c-4.16,0-6.34-1.12-7-4.52l-1.66-7.62c-.84-4-2.58-5.28-6.59-5.28h-6Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1827.33,607.59V605h17v2.57l-7.24.82h-1.81Zm14.59,21.71L1829.66,605h8.39l9.51,20.28-1.87.12,9.83-20.4h3.35l-12.19,24.28Zm3.47,8.65,8.2.82v2.57h-18.13v-2.57l8.12-.82Zm-4.53-13.3h7.31c0,7.27,0,11.74.16,16.69h-7.64C1840.86,636.5,1840.86,632,1840.86,624.65Zm14.38-16.24-5.78-.82V605h12.3v2.57l-5.32.82Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1883.05,638.77l6-.82h1.38l6.87.82v2.57h-14.21Zm3.24-31.94,3.37,1.44-6.43-.66V605h10.63l21.77,29.07v7.49h-3.31Zm1.55-1.81,3.24,2.59v33.73h-3.24Zm18.37,0h14.21v2.57l-5.67.82h-1.36l-7.18-.82Zm6.19,0h3.23v36.56l-3.23-3.14Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1927.78,607.59V605h8.49v3.39h-.73Zm8.49,30.36v3.39h-8.49v-2.57l7.76-.82Zm-3.66-16c0-5.64,0-11.33-.17-17h7.65c-.17,5.53-.17,11.22-.17,17v1.94c0,6.08,0,11.77.17,17.41h-7.65c.17-5.53.17-11.23.17-17Zm18.32-17,3.32,2.91h-18V605h19.91l.39,9.58h-3.94Zm-2.09,19.11h-12.57v-2.88h12.57Zm8.86,7.62-.39,9.59h-21v-2.9h19.1l-3.32,2.9,1.71-9.59ZM1947.08,622l.84-5.52h2.91v12.37h-2.91l-.84-5.79Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M1970.83,608.41l-7.63-.82V605h16.37v2.57l-7.21.82ZM1990,605h3.81l9.27,29.59-2.36,2.95,9.4-32.54h3.21l-10.67,36.56h-3.91L1988.9,612l2.11-.91-9.71,30.46h-3.87l-11-36.56H1974l8,29.59-2.53,2.95Zm1.13,3.39-7.05-.82V605h16.06v2.57l-6.91.82Zm19,0-5.58-.82V605h12.37v2.57l-5.47.82Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M2041.08,633.33c0-3.22-1.83-4.67-6-6.33l-2.26-.94c-6.21-2.57-10.09-5.79-10.09-11.62,0-6.43,5.47-10.35,13.33-10.35a17.66,17.66,0,0,1,9.93,2.85l-.4,7.39h-4.29l-1.48-8.26,4.09,1.68v2.74c-2.89-2.37-5-3.4-7.94-3.4-3.8,0-6.75,2.06-6.75,5.6,0,3.17,2,4.93,5.76,6.43l2.43,1c7.31,3,10.23,6.07,10.23,11.42,0,6.46-5.33,10.72-14,10.72a23.72,23.72,0,0,1-11.59-2.88l.34-7.91h4.33l1.47,8.66-4-1.44v-2.63c3.54,2.17,5.66,3.2,9.39,3.2C2038.23,639.26,2041.08,636.93,2041.08,633.33Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M2070.3,638.77,2076,638h1.07l5.76.82v2.57H2070.3Zm16.4-33.93h4.62l12.82,36.5h-7.48l-10.46-31.07,1.71-1.41-11.12,32.48h-3Zm-6.33,22.43h15.22l1.09,2.86h-17.23Zm10.28,11.56,6.72-.82h2.48l7.11.82v2.51h-16.31Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M2113,638.77,2119,638h1.38l6.87.82v2.57H2113Zm3.24-31.94,3.37,1.44-6.44-.66V605h10.63l21.77,29.07v7.49h-3.31Zm1.55-1.81,3.23,2.59v33.73h-3.23Zm18.37,0h14.2v2.57l-5.67.82h-1.36l-7.17-.82Zm6.18,0h3.23v36.56l-3.23-3.14Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M2157.75,607.59V605h8.49v3.39h-.73Zm8.49,30.36v3.39h-8.49v-2.57l7.76-.82Zm-3.65-16c0-5.64,0-11.33-.17-17h7.64c-.17,5.53-.17,11.22-.17,17v1.94c0,6.08,0,11.77.17,17.41h-7.64c.17-5.53.17-11.23.17-17.39Zm3.65,16.51h7c7.63,0,12-5.58,12-15.31,0-10-4.41-15.33-11.74-15.33h-7.28V605h8.2c11.37,0,18.7,6.64,18.7,18.13s-8.13,18.19-19.77,18.19h-7.13Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M2222.4,608.41l-7.76-.82V605h16.72v2.64l-7.4.75Zm-5.08-3.39h7.83l10.36,29.37-1.41.6,10.43-30h3.35L2235,641.58h-3.91Zm27.19,3.39-5.82-.75V605h12.6v2.57l-5.8.82Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M2257.66,607.59V605h17v2.57l-7.84.82h-1.4Zm9.16,30.36,7.84.82v2.57h-17v-2.57l7.76-.82Zm-4.32-16c0-5.64,0-11.33-.17-17H2270c-.17,5.53-.17,11.22-.17,17v2.36c0,5.66,0,11.35.17,17h-7.64c.17-5.53.17-11.23.17-17Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M2282.85,607.59V605h8.49v3.39h-.73Zm8.49,30.36v3.39h-8.49v-2.57l7.76-.82Zm-3.65-16c0-5.64,0-11.33-.17-17h7.64c-.17,5.53-.17,11.22-.17,17v1.94c0,6.08,0,11.77.17,17.41h-7.64c.17-5.53.17-11.23.17-17ZM2306,605l3.32,2.91h-18V605h19.91l.4,9.58h-4Zm-2.09,19.11h-12.57v-2.88h12.57Zm8.86,7.62-.39,9.59h-21v-2.9h19.11l-3.32,2.9,1.7-9.59ZM2302.15,622l.84-5.52h2.91v12.37H2303l-.84-5.79Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M2325.91,608.41l-7.64-.82V605h16.38v2.57l-7.22.82Zm19.16-3.39h3.81l9.27,29.59-2.36,2.95,9.4-32.54h3.21l-10.67,36.56h-3.91L2344,612l2.11-.91-9.7,30.46h-3.88L2321.45,605h7.66l8,29.59-2.52,2.95Zm1.13,3.39-7-.82V605h16.07v2.57l-6.92.82Zm19,0-5.59-.82V605H2372v2.57l-5.47.82Z" transform="translate(-426.09 -395.53)"></path><path class="cls-1" d="M2396.15,633.33c0-3.22-1.83-4.67-6-6.33l-2.27-.94c-6.2-2.57-10.08-5.79-10.08-11.62,0-6.43,5.46-10.35,13.32-10.35a17.66,17.66,0,0,1,9.93,2.85l-.4,7.39h-4.29l-1.47-8.26,4.08,1.68v2.74c-2.89-2.37-5-3.4-7.94-3.4-3.79,0-6.75,2.06-6.75,5.6,0,3.17,2,4.93,5.77,6.43l2.42,1c7.32,3,10.23,6.07,10.23,11.42,0,6.46-5.33,10.72-14,10.72a23.76,23.76,0,0,1-11.6-2.88l.34-7.91h4.33l1.47,8.66-4-1.44v-2.63c3.54,2.17,5.66,3.2,9.39,3.2C2393.3,639.26,2396.15,636.93,2396.15,633.33Z" transform="translate(-426.09 -395.53)"></path></svg>
+</a>
+</div>
+<meta content="War History Online" itemprop="name"/>
+</div><div class="clear"></div>
+<div class="menu-placeholder">
+<div id="top-menu" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" role="navigation">
+<ul id="menu-main-menu-1"><li><a href="https://www.warhistoryonline.com/category/war-articles">NEWS</a></li><li><a href="https://www.warhistoryonline.com/category/guest-bloggers">GUEST BLOGGERS</a></li><li><a href="https://www.warhistoryonline.com/category/articles">WORLDWIDE</a></li><li><a href="https://www.warhistoryonline.com/category/reviews">REVIEW</a></li><li><a href="https://www.warhistoryonline.com/category/press-releases">MEDIA</a></li><li><a href="https://www.warhistoryonline.com/category/military-vehicle-news">MILITARY VEHICLES</a></li><li><a href="https://www.warhistoryonline.com/category/whotube-2">VIDEO</a></li><li><a href="https://boards.warhistoryonline.com/">FORUM</a></li><li><a href="http://www.warhistorystore.com">STORE</a></li></ul>
+</div>
+<div class="search"><div class="header-search-wrap"><div class="header-search"><a href="https://www.warhistoryonline.com/#" id="search-button" onclick="javascript:toggleSearch();" role="button"><span class="ico-search"></span></a><div aria-labelledby="search-button" class="dropdown-menu" id="dropdown-menu"><form action="/" method="get" role="search"><div><input autocomplete="off" id="header-search" name="s" type="text" value=""/><input class="btn" id="header-search-top" type="submit" value="Search"/></div></form><div id="td-aj-search"></div></div></div></div></div>
+<div class="switch-theme" id="switch-theme-container"></div>
+</div>
+</header>
+<div id="conwrap">
+<div id="content" style="max-width:1200px;">
+<div class="clear"> </div><div id="primary" style="width:69.174129%;">
+<main id="main">
+<article class="post-261739 post type-post status-publish format-standard has-post-thumbnail hentry category-instant-articles category-world-war-ii tag-adautoinject tag-aok tag-normal" id="post-261739">
+<header>
+<h1 class="entry-title">Star Trek star shot two snipers on D-Day and was shot seven times in WWII</h1> <div class="meta-info"><ul class="post-categories">
+<li><a href="https://www.warhistoryonline.com/category/instant-articles" rel="category tag">INSTANT ARTICLES</a></li>
+<li><a href="https://www.warhistoryonline.com/category/world-war-ii" rel="category tag">WORLD WAR II</a></li></ul><time datetime="2016-11-29T16:00:47+01:00">Nov 29, 2016</time> <span class="author"><a href="https://www.warhistoryonline.com/author/russel">Shahan Russell</a></span></div><div class="clear"> </div>
+<style type="text/css">.inad{min-height:250px}.inad:before{content: "Advertisement";font-size: 11px;line-height: 11px;display: block}</style>
+<div class="post-featured-image"><figure><img alt="" src="https://www.warhistoryonline.com/wp-content/uploads/2016/10/doohan.jpg" title=""/>
+</figure></div>
+<div class="clear"> </div>
+<table class="altshare" id="maxaltshare"><tbody><tr><td class="addthis_32x32_white_style at4-share-container"><span class="altsharer" style="margin-top:20px;font-size:28px;color:#333;">SHARE:</span><a class="at4-share-btn at-svc-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.warhistoryonline.com%2Fworld-war-ii%2Fjames-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html" target="_blank"><span class="at4-icon aticon-facebook"></span><span class="label" title="Facebook">Facebook</span></a><a class="at4-share-btn at-svc-twitter" href="https://twitter.com/intent/tweet?text=Star+Trek+star+shot+two+snipers+on+D-Day+and+was+shot+seven+times+in+WWII&amp;url=https%3A%2F%2Fwww.warhistoryonline.com%2Fworld-war-ii%2Fjames-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html" target="_blank"><span class="at4-icon aticon-twitter"></span><span class="label" title="Twitter">Twitter</span></a></td></tr></tbody></table>
+</header>
+<div class="entry-content">
+<p>He saw action during WWII and in outer space. His exploits inspired many to enter the engineering profession, while one followed him to the moon. He speaks with a Scottish accent even though he is not Scottish. As far as the Scots are concerned, he has yet to be born.</p>
+<p>James Montgomery “Jimmy” Doohan was born to Irish immigrants in Vancouver, British Columbia, Canada on March 3, 1920. His father, William, was a pharmacist who apparently invented a form of high-octane gas in 1923. Whether or not that is true, Doohan grew up in a house familiar with science and creative invention.</p>
+<figure aria-describedby="caption-attachment-261745" class="wp-caption aligncenter" id="attachment_261745" style="width: 512px"><img alt="Doohan (left) with Bruce Peterson at Nasa's Dryden Flight Research Center on April 13, 1967. Both are standing in front of the Northrop M2-F2" class="wp-image-261745 size-large" src="https://www.warhistoryonline.com/wp-content/uploads/2016/10/doohan_james_nasa_19670413-512x640.jpg"/><figcaption class="wp-caption-text" id="caption-attachment-261745">Doohan (left) with Bruce Peterson at Nasa’s Dryden Flight Research Center on April 13, 1967. Both are standing in front of the Northrop M2-F2</figcaption></figure><p>When the family moved to Ontario, he enrolled at the Sarnia Collegiate Institute and Technical School (SCITS) where he showed an aptitude for maths and science. In 1938, he joined the 102<sup>nd</sup> Royal Canadian Army Cadet Corps. The year after saw him with the Royal Canadian Artillery, 14<sup>th</sup> (Midland) Field Battery of the 2<sup>nd</sup> Canadian Infantry Division.</p><div class="warhi-inline2" id="warhi-1303386249"><div class="proper-ad-unit"><div id="proper-ad-warhistoryonline_content_2"><script>
+if (abtest) propertag.cmd.push(function() { proper_display('warhistoryonline_content_2'); });
+</script><div id="google_ads_iframe_/6766078/WHO-CM_0__container__" style="border: 0pt none; width: 300px; height: 250px;"></div></div></div></div>
+<p>Doohan did so well he became a Commissioned Lieutenant with the 14<sup>th</sup> Field Artillery Regiment of the 3<sup>rd</sup> Canadian Infantry Division. In 1940, he was sent to England for further training.</p>
+<p>Fast forward to D-Day – the Allied Invasion of France on June 6, 1944. The British, Americans and Canadians were each assigned a portion of France’s Normandy beaches.</p>
+<p> </p>
+<p>The Canadians were allocated the area from the village of Courseulles all the way to Saint-Aubin-sur-Mer – codenamed Juno Beach. Doohan’s division was to secure the Caen-Bayeux road and take the Carpiquet Airport, west of Caen.</p>
+<p>It would not be easy. Facing them were two battalions of the German 716<sup>th</sup> Infantry Division. There were also troops from the 21<sup>st</sup> Panzer Division holed up near Caen. As a final precaution, the Germans had strewn the beaches with anti-tank mines.</p>
+<p>The Allies had prepared. The night before, their planes had blasted the German positions. As the landings would happen before dawn the next day, the Canadians would not be visible. Or so the thinking went.</p>
+<p>It did not turn as planned. The aerial bombardment had not been as effective as the Allies had hoped due to lousy weather and poor visibility – the pilots could not hit their targets. The coastal defenses at Juno were almost unscathed.</p>
+<p>It got worse. Rough weather and high waves delayed the landings until well after the sun had risen on June 6. No cover of darkness.</p>
+<p>Out at sea, Doohan felt queasy, but it was not because of what lay ahead. He later told the Associated Press, “We were more afraid of drowning than (we were of) the Germans.”</p>
+<figure aria-describedby="caption-attachment-261754" class="wp-caption aligncenter" id="attachment_261754" style="width: 620px"><img alt="Taylorcraft Auster, a British military liaison and observation plane" class="size-large wp-image-261754" src="https://www.warhistoryonline.com/wp-content/uploads/2016/10/auster-aop9-tw511-arp-640x427.jpg"/><figcaption class="wp-caption-text" id="caption-attachment-261754">Taylorcraft Auster, a British military liaison and observation plane</figcaption></figure><div class="proper-ad-unit"><div id="proper-ad-warhistoryonline_content_3"></div></div><p>It would not last. The first Canadians reached Juno Beach at 7:35 AM and were cut down. Fortunately for them, the HMS <em>Ajax</em> had bombed Juno earlier, doing more damage to the coastal defenses than the planes had. After two hours, they had swept aside most of the Germans on their stretch of the beach.</p>
+<p>Doohan led his men across the sands and got lucky. Despite the anti-tank mines beneath their feet, none went off, as the men were not heavy enough to activate them. As they made their way to higher ground, Doohan managed to take out two German snipers – his first kills of the war.</p>
+<p>By noon, they had secured their positions. They could rest, as well as deal with their dead and wounded. There was, however, a problem.</p>
+<figure aria-describedby="caption-attachment-261757" class="wp-caption aligncenter" id="attachment_261757" style="width: 511px"><img alt='Doohan as "Scotty" on the deck of the Enterprise in 1966' class="size-large wp-image-261757" src="https://www.warhistoryonline.com/wp-content/uploads/2016/10/james_doohan_scotty_star_trek-511x640.jpg"/><figcaption class="wp-caption-text" id="caption-attachment-261757">Doohan as “Scotty” on the deck of the <em>Enterprise</em> in 1966</figcaption></figure><p>The beach was so thick with Canadians the later arrivals could not advance. As darkness fell, there was a risk they would end up shooting at each other – which was exactly what happened; not just at Juno Beach, but also at the other landing sites.</p>
+<p>At about 11:20 that evening, Doohan finished a cigarette and patted the silver cigarette case he kept in his breast pocket. It had been given to him by his brother as a good luck charm… and a good thing, too.</p><div class="proper-ad-unit"><div id="proper-ad-warhistoryonline_content_4"></div></div>
+<p>Some ten minutes later, he was walking back to his command post when he was shot. Six times. By a Bren Gun. The first four bullets slammed into his leg, the fourth whacked him in the chest, while the sixth took off his right middle finger.</p>
+<figure aria-describedby="caption-attachment-261760" class="wp-caption aligncenter" id="attachment_261760" style="width: 325px"><img alt='James Montgomery "Jimmy" Doohan' class="wp-image-261760" src="https://www.warhistoryonline.com/wp-content/uploads/2016/10/james_doohan_actor.jpg"/><figcaption class="wp-caption-text" id="caption-attachment-261760">James Montgomery “Jimmy” Doohan. – By C Thomas – CC BY 2.0</figcaption></figure><p>It was not a German sniper.  He had been shot by a nervous, trigger-happy Canadian sentry. Fortunately, the cigarette case stopped the bullet aimed at his chest. Doohan later joked it was the only time being a smoker saved his life.</p>
+<p>After recovering, he learned to fly a Taylorcraft Auster Mark IV plane for the 666 (AOP) Squadron. By then, he was an Officer with the Royal Canadian Artillery, supporting the 1<sup>st</sup> Army Group Royal Artillery at RAF Andover, Hampshire.</p>
+<p>In early 1945, he flew his plane between two telegraph poles to prove it could be done. He got into trouble for that, and everyone called him the “craziest pilot in the Canadian Air Force.”</p>
+<figure aria-describedby="caption-attachment-261763" class="wp-caption aligncenter" id="attachment_261763" style="width: 620px"><img alt="Doohan's star on Hollywood Boulevard" class="wp-image-261763 size-large" src="https://www.warhistoryonline.com/wp-content/uploads/2016/10/james_doohan_-_walk_of_fame_-_july_21_2005-640x480.jpg"/><figcaption class="wp-caption-text" id="caption-attachment-261763">Doohan’s star on Hollywood Boulevard. – By AllyUnion – CC BY-SA 3.0</figcaption></figure><p>After the war, he returned to Canada where he heard a radio drama. Believing he could do a better job than the voice actors, Doohan took up drama and earned a scholarship to New York City.</p>
+<p>His first job was with CBC radio on January 12, 1946. He would go on to do 4,000 shows on radio, 450 on TV, and earn a reputation as the most versatile voice actor in the business.</p>
+<p>It was in 1965, however, that he indeed entered history when he landed the role of Montgomery “Scotty” Scott in Star Trek. As well as playing the role of Chief Engineer for the Starship <em>Enterprise</em>, Doohan also helped develop the Klingon and Vulcan languages.</p>
+<p>He became so iconic that fans credit him with their interest in engineering, astronomy, and other technical fields. Among these was the engineer-turned-astronaut, Neil Armstrong, who personally thanked Doohan in 2004.</p>
+<p>Doohan died in 2005. To honor him, the SpaceLoft XL rocket took some of his ashes into space. Two years later, the Scottish town of Linlithgow claimed him as one of their own with a predictive commemorative plaque. “Predictive,” because it claims he will be born there on 2222.</p>
+<p>We hope you enjoy our content.  We think it’s important to keep war history alive. If you do too, please consider becoming a supporter. Thanks.</p><a href="https://www.facebook.com/becomesupporter/223598107688462/" style="display: inline-block;background-color:#4267b2;margin-bottom:1.5em;color:#fff;font-family: Helvetica, Arial, sans-serif;text-shadow: none;text-align: center;font-size: 14px;height: 28px;width: 288px;line-height: 28px;"><span style="background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjEuNv1OCegAAAC1SURBVDhPtZKxDcIwFEQzAbMwAYNQUFBRsggFJQVDMASzRAxAhZC5Z/lLZ5tICRJPepJz9/2LJENKKbzKuTCb7/mCpXQLftIflvK/BQ+5kSu5L3ImowsmFxyl5y5dkDMvg6303KULcuZlcJOeu3RBzrx0DtI7JHNy7gPOS+5kdJzJnNzFAD5ly6XYwmy34CTnwmy3AHnLo5yCrvpKfjnkpznLtww4k9FV89VD41rei5y/zKThA5Dqd4Q/hqp+AAAAAElFTkSuQmCC');display:inline-block;width: 16px;height: 16px;vertical-align: middle;"></span> Become a Supporter</a>
+</div><div class="clearfix"></div>
+<footer>
+<div class="clear"></div><div class="clear"></div>
+<script type="text/javascript">/*
+Array.prototype.shuffle = function() {
+    var input = this;    
+    for (var i = input.length-1; i >=0; i--) {
+        var randomIndex = Math.floor(Math.random()*(i+1)); 
+        var itemAtIndex = input[randomIndex]; 
+        input[randomIndex] = input[i]; 
+        input[i] = itemAtIndex;
+    }
+    return input;
+}
+var wvideos = [{
+	vtitle:"Additional Scenes Of Battle Of Okinawa",
+	vvideo:"VLSomP5Z-nHs8w8vz.mp4",
+	vimage:"VLSomP5Z-720.jpg",
+	vplaylist:"VLSomP5Z.m3u8"
+	},{
+	vtitle:"Gen. Dwight D. Eisenhower Troop Carrier And Airborne Inspection England, June 5, 1944",
+	vvideo:"4pJskyrW-nHs8w8vz.mp4",
+	vimage:"4pJskyrW-720.jpg",
+	vplaylist:"4pJskyrW.m3u8"
+	},{
+	vtitle:"Victory on Iwo Jima",
+	vvideo:"WCK42pLL-nHs8w8vz.mp4",
+	vimage:"WCK42pLL-720.jpg",
+	vplaylist:"WCK42pLL.m3u8"
+	},{
+	vtitle:"Maginot Line",
+	vvideo:"eNyampYN-0lvj2bb8.mp4",
+	vimage:"eNyampYN-720.jpg",
+	vplaylist:"eNyampYN.m3u8"
+	},{
+	vtitle:"Vostok 2018 Games",
+	vvideo:"VESGBos4-tbgem5hq.mp4",
+	vimage:"VESGBos4-720.jpg",
+	vplaylist:"VESGBos4.m3u8"
+	}];
+wvideos.shuffle(); */
+var vc = 0;
+function gM(pid,nid) {
+var request = new XMLHttpRequest();
+request.open('GET', '//www.warhistoryonline.com/wp-admin/admin-ajax.php?action=max_dore_post_ajax&p='+pid+'&r='+nid, true);
+request.onload = function() {
+var resp = JSON.parse(request.responseText);
+mTitle = resp.tit;
+mURI = resp.uri;
+mPost = resp.pid;
+mPage = resp.pg;
+if (vc > 0) {
+//	var tid = parseInt(Math.floor(Math.random()*2) + 2);
+//	elcnt[tid]++;
+	if (newcnt < 8) var tid = newcnt;
+	else var tid = '7-'+parseInt(newcnt - 6);
+	var elid = 'proper-ad-warhistoryonline_content_'+ tid;
+	var res=resp.htm.replace('<div class="inad" id="rcjsload_###RANDRC###"></div>','<div class="proper-ad-unit"><div id="'+elid+'"></div></div>');
+//	var res=resp.htm.replace('<div class="inad" id="rcjsload_###RANDRC###"></div>','<div class="proper-ad-unit"><div id="proper-ad-warhistoryonline_content_'+ tid + '-' + elcnt[tid]+'"></div></div>');
+//	var laz1 = 'proper-ad-warhistoryonline_content_'+ tid + '-' + elcnt[tid];
+	var laz1 = elid;
+	newcnt++;
+	}
+else {
+	var res=resp.htm.replace('<div class="'+'inad" id="'+'rcjsload_###RANDRC###"'+'></div>','<div id="'+'5c75626647e8a27bac71208b" class="'+'vdb_player vdb_5c75626647e8a27bac71208b57d325e276a6057ba4a05a00"></div>');
+	
+/*
+	var res=resp.htm.replace('<div class="'+'inad" id="'+'rcjsload_###RANDRC###"'+'></div>','<st'+'yle type="tex'+'t/css">#intervid'+vc+'{marg'+'in:0 a'+'uto;max-w'+'idth:6'+'40p'+'x !imp'+'ortant'+'}</st'+'yle><h4 style="text-align:center;margin:0.5em">War History Online Videos</h4><div class="jwvideo" id="intervid'+vc+'"></div><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="playJW(\'intervid'+vc+'\',\''+wvideos[vc].vtitle+'\',\''+wvideos[vc].vimage+'\',\''+wvideos[vc].vplaylist+'\',\''+wvideos[vc].vvideo+'\',\''+window.location.href+'\',false);" />');
+*/
+	}
+	if (newcnt < 8) var tid = newcnt;
+	else var tid = '7-'+parseInt(newcnt - 6);
+	var elid = 'proper-ad-warhistoryonline_content_'+ tid;
+	res = res.replace("<div class=\"inad\" id=\"###MIDRAND###\"></div>",'<div class="proper-ad-unit"><div id="'+elid+'"></div></div>');
+	newcnt++;
+	var laz2 = elid;
+// var tid = parseInt(Math.floor(Math.random()*2) + 2);
+// elcnt[tid]++;
+// res = res.replace("<div class=\"inad\" id=\"###MIDRAND###\"></div>",'<div class="proper-ad-unit"><div id="proper-ad-warhistoryonline_content_'+ tid + '-' + elcnt[tid]+'"></div></div>');
+// var laz2 = 'proper-ad-warhistoryonline_content_'+ tid + '-' + elcnt[tid];
+res = res.replace("<div class=\"inad\" id=\"###TOPRAND###\"></div>",'');
+res = res.replace("<div class=\"inad\" id=\"###BOTRAND###\"></div>",'');
+document.querySelectorAll('article')[document.querySelectorAll('article').length-1].insertAdjacentHTML('afterend', res);
+// if (typeof document.getElementById(aslots) !== 'undefined' && document.getElementById(aslots) != null) lazy.push(document.getElementById(aslots));
+// if (vc > 4) {
+	if (typeof document.getElementById(laz1) !== 'undefined' && document.getElementById(laz1) != null) {
+		lazy.push(document.getElementById(laz1));
+		// console.log('HTML slot '+laz1+' created');
+		}
+// 	}
+if(typeof document.getElementById(laz2)!=='undefined'&&document.getElementById(laz2)!=null) {
+	lazy.push(document.getElementById(laz2));
+	// console.log('HTML slot '+laz2+' created');
+	}
+// vc++;
+mGot = true;
+// if (timera_egami < 50 && FREE) {
+if (vc == 0) {
+	vc++;
+	var egami = document.createElement("script");
+	egami.async=!0,egami.type="text/javascript",egami.src="https://delivery.vidible.tv/jsonp/pid=5c75626647e8a27bac71208b/57d325e276a6057ba4a05a00.js?";var eplace=document.getElementById("5c75626647e8a27bac71208b");eplace.parentNode.insertBefore(egami,eplace);
+//	timera_egami = 55;
+	}
+// else if (timera_egami < 50 && timera_egami > 1) {
+//	var egami = document.createElement("script");
+//	egami.async=!0,egami.type="text/javascript",egami.src="https://delivery.vidible.tv/jsonp/pid=5c75626647e8a27bac71208b/57d325e276a6057ba4a05a00.js?";var eplace=document.getElementsByTagName("script")[0];eplace.parentNode.insertBefore(egami,eplace);
+//	timera_egami = 55;
+//	}
+// timera_egami++;
+utmIt(document.querySelectorAll('article')[document.querySelectorAll('article').length-1]);
+setTimeout(endlessAds,5000);
+};
+request.send();}
+window.onscroll=function(){
+	if (abtest) {
+		var e=void 0!==window.pageXOffset,t="CSS1Compat"===(document.compatMode||""),o=e?window.pageYOffset:t?document.documentElement.scrollTop:document.body.scrollTop;0==dc&&o>mInit?(mEl.style.top=0,mEl.style.position="fixed",dc=!0):mInit>=o&&1==dc&&(mEl.style.position="relative",mEl.style.top="auto",dc=!1),0==mc&&o>500&&(mInit=mEl.getBoundingClientRect().top+o,mc=!0);
+		}
+	else {
+		var e=void 0!==window.pageXOffset,t="CSS1Compat"===(document.compatMode||""),o=e?window.pageYOffset:t?document.documentElement.scrollTop:document.body.scrollTop;
+		if (!mc && o > 500) {
+			tops[0] = document.getElementById(sides[0]).getBoundingClientRect().top+o;
+			mc = true;
+			}
+		else if (mc) {
+			for (var i = 0; i < sides.length; i++) {
+				if (tops[i] >= o) {
+					if (i == 0) {
+						document.getElementById(sides[i]).style.position = "relative";
+						document.getElementById(sides[i]).style.top = "auto";
+						}
+					else {
+						document.getElementById(sides[i]).style.position = "absolute";
+						document.getElementById(sides[i]).style.top = (tops[i] - (o + document.getElementById('primary').getBoundingClientRect().top))+"px";
+						}
+					}
+				else if (o > tops[i] && o < foots[i]) {
+					document.getElementById(sides[i]).style.position = "fixed";
+					document.getElementById(sides[i]).style.top = 0;
+					}
+				else if (o >= foots[i]) {
+					document.getElementById(sides[i]).style.position = "absolute";
+					document.getElementById(sides[i]).style.top = (foots[i] - (o + document.getElementById('primary').getBoundingClientRect().top))+"px";
+					}
+				}
+			}	var e=void 0!==window.pageXOffset,t="CSS1Compat"===(document.compatMode||""),o=e?window.pageYOffset:t?document.documentElement.scrollTop:document.body.scrollTop;
+		if (!mc && o > 500) {
+			tops[0] = document.getElementById(sides[0]).getBoundingClientRect().top+o;
+			mc = true;
+			}
+		else if (mc) {
+			for (var i = 0; i < sides.length; i++) {
+				if (tops[i] >= o) {
+					if (i == 0) {
+						document.getElementById(sides[i]).style.position = "relative";
+						document.getElementById(sides[i]).style.top = "auto";
+						}
+					else {
+						document.getElementById(sides[i]).style.position = "absolute";
+						document.getElementById(sides[i]).style.top = (tops[i] - (o + document.getElementById('primary').getBoundingClientRect().top))+"px";
+						}
+					}
+				else if (o > tops[i] && o < foots[i]) {
+					document.getElementById(sides[i]).style.position = "fixed";
+					document.getElementById(sides[i]).style.top = 0;
+					}
+				else if (o >= foots[i]) {
+					document.getElementById(sides[i]).style.position = "absolute";
+					document.getElementById(sides[i]).style.top = (foots[i] - (o + document.getElementById('primary').getBoundingClientRect().top))+"px";
+					}
+				}
+			}
+		}
+    var l=document.querySelectorAll("article")[document.querySelectorAll("article").length-1].getBoundingClientRect();
+    if(o>l.bottom-1080&&0==fired)mGot=!1,gM(mPost,mPage),fired=!0;else if(1==fired&&1==mGot&&l.top<0){
+		if (typeof _GET['utm_campaign'] !== 'undefined' && _GET['utm_campaign'].length > 0) var tURI = mURI + '?utm_campaign=' + _GET['utm_campaign'];
+		else var tURI = mURI;
+		window.history.pushState(null,"",tURI);
+		document.title=mTitle;
+		fbq("track","PageView");
+		ga("set","page",tURI.replace("ht"+"tps://www"+".warhis"+"toryonline.com",""));
+		ga("send","pageview");
+		fired=!1;
+		}
+    };
+	var dc=!1,mv=!1,mc=!1,fired=!1,mGot=!1,sA=!1,aslots=new Array,formerSlots=["ad-slot3","ad-slot2","ad-slot4","ad-slot5"],mPost=285523,mPage=1;
+var timera_egami = 1;
+</script><div class="clear"></div>
+</footer>
+<div class="fb-comments" data-colorscheme="light" data-href="https://www.warhistoryonline.com/world-war-ii/james-montgomery-doohan-wwii-veteran-chief-mechanic-starship-enterprise.html" data-numposts="5" data-width="100%"></div>
+</article>
+</main>
+</div>
+<div class="sidebar" style="width:26.348259%;"><aside class="widget_text"> <div class="textwidget"><div class="proper-ad-unit">
+<div id="proper-ad-warhistoryonline_side_1"><script>
+// console.log('HTML slot proper-ad-warhistoryonline_side_1 created');
+if (abtest) propertag.cmd.push(function() { proper_display('warhistoryonline_side_1'); });
+// console.log('Calling proper for warhistoryonline_side_1');
+</script><div id="google_ads_iframe_/6766078/WHO-ST_0__container__" style="border: 0pt none; width: 300px; height: 250px;"></div></div>
+</div>
+</div>
+</aside><aside class="widget_text"> <div class="textwidget"><div style="text-align: center;"><a href="https://www.facebook.com/wrhstol"><img src="https://www.warhistoryonline.com/wp-content/uploads/2019/05/facebook.png" style="max-width: 100%;"/></a><p></p>
+<p><a href="https://www.instagram.com/warhistoryonline/"><img alt="" src="https://www.warhistoryonline.com/wp-content/uploads/2019/05/instagram.jpg" style="max-width: 100%;"/></a></p></div>
+</div>
+</aside><aside class="widget_text"><div class="block-title"><span>Most Read</span></div> <div class="textwidget"><p><script>
+if (!FREE) document.querySelectorAll('aside')[0].style.display = 'none';
+</script></p>
+<ol style="font-size: 1.25em; font-weight: bold;">
+<li style="margin-bottom: 0.5em; padding: 0.5em; border-bottom: 1px solid #ccc;"><a href="https://www.warhistoryonline.com/whotube-2/missile-at-sr-71-blackbird.html">The Day North Korea Fired A Missile At SR 71 Blackbird</a></li>
+<li style="margin-bottom: 0.5em; padding: 0.5em; border-bottom: 1px solid #ccc;"><a href="https://www.warhistoryonline.com/instant-articles/v8-ford-gaa.html">The Biggest Petrol V8 Ever Built That Powered The Sherman Tank</a></li>
+<li style="margin-bottom: 0.5em; padding: 0.5em; border-bottom: 1px solid #ccc;"><a href="https://www.warhistoryonline.com/world-war-ii/silent-forest.html">PANERIAL – The Silent Forest</a></li>
+<li style="margin-bottom: 0.5em; padding: 0.5em; border-bottom: 1px solid #ccc;"><a href="https://www.warhistoryonline.com/instant-articles/a-british-destroyer-rammed.html">When A British Destroyer Rammed a German Cruiser In World War Two</a></li>
+<li style="margin-bottom: 0.5em; padding: 0.5em; border-bottom: 1px solid #ccc;"><a href="https://www.warhistoryonline.com/whotube-2/hercules-plane.html">US Hercules Plane Lands On &amp; Takes Off From An Aircraft Carrier</a></li>
+<li style="margin-bottom: 0.5em; padding: 0.5em; border-bottom: 1px solid #ccc;"><a href="https://www.warhistoryonline.com/war-articles/bielefeld-museum-nazi-youth.html">Exhibition shows the dark side of the Nazi Youth Movement</a></li>
+<li style="margin-bottom: 0.5em; padding: 0.5em; border-bottom: 1px solid #ccc;"><a href="https://www.warhistoryonline.com/whotube-2/tomb-of-the-unknown-soldier.html">Footage taken at The Tomb of The Unknown Soldier</a></li>
+<li style="margin-bottom: 0.5em; padding: 0.5em; border-bottom: 1px solid #ccc;"><a href="https://www.warhistoryonline.com/american-civil-war/jack-ninson-civil-war-sniper-hell.html">Jack Hinson: A Civil War Sniper Hell Bent on Revenge</a></li>
+<li style="margin-bottom: 0.5em; padding: 0.5em; border-bottom: 1px solid #ccc;"><a href="https://www.warhistoryonline.com/war-articles/museum-fray-bentos-boys.html">Museum Uncovers Remarkable Account of the Fray Bentos Boys’ Three Days of Hell in WWI</a></li>
+<li style="margin-bottom: 1em;"><a href="https://www.warhistoryonline.com/war-articles/wwii-plane-crashes-naval-air-station.html">WWII-era Plane Crashes at Naval Air Station, Killing Two</a></li>
+</ol>
+</div>
+</aside><aside class="widget_text"> <div class="textwidget"><div class="proper-ad-unit" id="docked" style="width: 300px;">
+<div id="proper-ad-warhistoryonline_side_2"><script>
+// console.log('HTML slot proper-ad-warhistoryonline_side_2 created');
+if (abtest) propertag.cmd.push(function() { proper_display('warhistoryonline_side_2'); });
+// console.log('Calling proper for warhistoryonline_side_2');
+</script><div id="google_ads_iframe_/6766078/WHO-SB_0__container__" style="border: 0pt none; width: 300px; height: 250px;"></div></div>
+</div>
+<p><script type="text/javascript">
+if (abtest) var mEl=document.getElementById("docked"),mInit=mEl.getBoundingClientRect().top+document.body.scrollTop+1e3;
+</script></p>
+</div>
+</aside></div> </div>
+</div>
+<div class="clear"> </div>
+<div class="footer-wrap"></div>
+<footer class="site-footer">
+<div class="site-info">© Copyright 2019 - War History Online</div>
+</footer>
+</div>
+</div>
+<script>
+function labnolIframe(cont,tid) {
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute("src", "https://www.youtube.com/embed/" + tid + "?autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&controls=1&showinfo=0");
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("id", "youtube-iframe");
+    cont.parentNode.replaceChild(iframe, cont);
+}
+</script><script>
+if (abtest) var tout = 800;
+else var tout = 600;
+function registerListener(e,d){window.addEventListener?window.addEventListener(e,d):window.attachEvent("on"+e,d)}
+function lazyLoad(){for(var e=lazy.length;e--;)if(isInViewport(lazy[e])){
+	var d=lazy[e].id;
+	lazy.splice(e,1);
+	getSlot(d);
+	if (abtest) return;
+	var e=void 0!==window.pageXOffset,t="CSS1Compat"===(document.compatMode||""),o=e?window.pageYOffset:t?document.documentElement.scrollTop:document.body.scrollTop;
+	var f = sides.length;
+	foots[f-1] = document.getElementById(d).getBoundingClientRect().top + o - document.getElementById(sides[f-1]).offsetHeight;
+	if (foots[f-1] - tops[f-1] > 50) {
+		var sid = 'side'+Date.now();
+		var g = document.getElementById(sides[f-1]);
+		g.insertAdjacentHTML('afterend','<div class="docked" id="'+sid+'" style="width:100%;max-width:300px;"><div style="margin:0 auto; text-align: center;" id="'+sid+'ad"></div>');
+		sides[f] = sid;
+		tops[f] = foots[f-1] + g.offsetHeight+1;
+		foots[f] = tops[f] + 5000;
+		getHSlot(sid+'ad');
+		}
+	}}
+function isInViewport(e){var d=e.getBoundingClientRect();return d.bottom>=0&&d.top-tout<=(window.innerHeight||document.documentElement.clientHeight)}
+function getSlot(e){
+	if (abtest) {
+		propertag.cmd.push(function() { proper_display(e.replace('proper-ad-',''));});
+		return;
+		}
+	var cSize = googletag.sizeMapping().
+		addSize([1120,0],[[300,250],[320,50],[320,100],[320,150],[336,280],[468,60],[728,90]]).
+		addSize([768,0],[[300,250],[320,50],[320,100],[320,150],[336,280],[468,60]]).
+		build();
+	if (!enAds && maxGetCookie('cookieconsent_status')) enAds = true;
+	if(enAds){
+		var t=[{
+			code:e,
+			mediaTypes: {
+				banner: {
+					sizes:[[300,250],[320,50],[320,100],[320,150],[336,280],[468,60],[728,90],[1,1]]
+					}
+				},
+			labelAll: ["display"],
+			bids:[
+				{bidder:"teads",params:{pageId:96281,placementId:104279}},
+				{bidder:"rubicon",params:{accountId:"13920",siteId:"67240",zoneId:"461316"}},
+				{bidder:"appnexus",params:{placementId:"12805363"}},
+				{bidder:"lockerdome",params:{adUnitId:11830086240260198}}, // 728x90
+				{bidder:"pulsepoint",params:{cf:"300x250",cp:"558067",ct:"465780"}},
+				{bidder:"rhythmone",params:{placementId:"61812"}},
+				{bidder:"sovrn",params:{tagid:"612135"}},
+				{bidder:"sovrn",params:{tagid:"612136"}},
+				{bidder:"sovrn",params:{tagid:"612137"}},
+				{bidder:"ix",params:{siteId:"378343",size:[728,90]}},
+				{bidder:"ix",params:{siteId:"378344",size:[336,280]}},
+				{bidder:"ix",params:{siteId:"378345",size:[300,250]}},
+				{bidder:"ix",params:{siteId:"378346",size:[320,150]}},
+				{bidder:"ix",params:{siteId:"378347",size:[320,100]}},
+				{bidder:"ix",params:{siteId:"378348",size:[320,50]}},
+				{bidder:"33across",params:{siteId:"cDh-poJfar6BWYaKlId8sQ",productId:"siab"}}
+				]
+			},{
+			code:e,
+			labelAll: ["tablet"],
+			mediaTypes: {
+				banner: {
+					sizes:[[300,250],[320,50],[320,100],[320,150],[336,280],[468,60],[1,1]]
+					}
+				},
+			bids:[
+				{bidder:"teads",params:{pageId:96281,placementId:104279}},
+				{bidder:"rubicon",params:{accountId:"13920",siteId:"67240",zoneId:"461316"}},
+				{bidder:"appnexus",params:{placementId:"12805363"}},
+				{bidder:"lockerdome",params:{adUnitId:11830085334290534}}, // 336x280
+				{bidder:"pulsepoint",params:{cf:"300x250",cp:"558067",ct:"465780"}},
+				{bidder:"rhythmone",params:{placementId:"61812"}},
+				{bidder:"sovrn",params:{tagid:"612135"}},
+				{bidder:"sovrn",params:{tagid:"612136"}},
+				{bidder:"ix",params:{siteId:"378349",size:[336,280]}},
+				{bidder:"ix",params:{siteId:"378350",size:[300,250]}},
+				{bidder:"ix",params:{siteId:"378351",size:[320,150]}},
+				{bidder:"ix",params:{siteId:"378352",size:[320,100]}},
+				{bidder:"ix",params:{siteId:"378353",size:[320,50]}},
+				{bidder:"33across",params:{siteId:"cDh-poJfar6BWYaKlId8sQ",productId:"siab"}}
+				]
+			}];
+		pbjs.que.push(function(){
+			pbjs.addAdUnits(t);
+			pbjs.requestBids({adUnitCodes:[e],timeout:1000,bidsBackHandler:function(){
+				var x=googletag.defineSlot("/6766078/WHO-CI",[300,250],e).defineSizeMapping(cSize).addService(googletag.pubads()).setTargeting("div_id",e);
+				pbjs.setTargetingForGPTAsync([e]);
+				googletag.pubads().setRequestNonPersonalizedAds(0);
+				googletag.pubads().refresh([x]);
+				}
+				});
+			});
+		}
+	else{
+		var x=googletag.defineSlot("/6766078/WHO-CI",[300,250],e).defineSizeMapping(cSize).setTargeting("div_id",x).addService(googletag.pubads()).setTargeting("div_id",x);
+		googletag.pubads().setRequestNonPersonalizedAds(1);
+		googletag.pubads().refresh([x]);
+		}
+	}
+var sbslot = 0;
+function getHSlot(e){
+	sbslot++;
+	if (sbslot % 2 == 1) return false;
+	var a = document.getElementById(e);
+	var l="marked";a.classList?a.classList.add(l):a.className+=" "+l;
+	var sSize = googletag.sizeMapping().
+		addSize([1120,0],[[300,250],[300,600],[120,600],[160,600]]).
+		addSize([768,0],[[120,600],[160,600]]).
+		build();
+	if (!enAds && maxGetCookie('cookieconsent_status')) enAds = true;
+	if(enAds){
+		var t=[{
+			code:e,
+			mediaTypes: {
+				banner: {
+					sizes:[[300,250],[300,600],[160,600],[120,600]]
+					}
+				},
+			labelAll: ["display"],
+			bids:[
+				{bidder:"rubicon",params:{accountId:"13920",siteId:"67240",zoneId:"461316"}},
+				{bidder:"appnexus",params:{placementId:"12805365"}},
+				{bidder:"lockerdome",params:{adUnitId:11830084260548710}}, // 300x600
+				{bidder:"pulsepoint",params:{cf:"300x600",cp:"558067",ct:"465782"}},
+				{bidder:"rhythmone",params:{placementId:"61812"}},
+				{bidder:"sovrn",params:{tagid:"612128"}},
+				{bidder:"sovrn",params:{tagid:"612129"}},
+				{bidder:"ix",params:{siteId:"378323",size:[300,600]}},
+				{bidder:"ix",params:{siteId:"378324",size:[300,250]}},
+				{bidder:"ix",params:{siteId:"378325",size:[160,600]}},
+				{bidder:"ix",params:{siteId:"378326",size:[120,600]}},
+				{bidder:"33across",params:{siteId:"cDh-poJfar6BWYaKlId8sQ",productId:"siab"}}
+				]
+			},{
+			code:e,
+			mediaTypes: {
+				banner: {
+					sizes:[[160,600],[120,600]]
+					}
+				},
+			labelAll: ["tablet"],
+			bids:[
+				{bidder:"rubicon",params:{accountId:"13920",siteId:"67240",zoneId:"461316"}},
+				{bidder:"appnexus",params:{placementId:"12805365"}},
+				{bidder:"pulsepoint",params:{cf:"160x600",cp:"558067",ct:"494374"}},
+				{bidder:"rhythmone",params:{placementId:"61812"}},
+				{bidder:"sovrn",params:{tagid:"612130"}},
+				{bidder:"sovrn",params:{tagid:"612131"}},
+				{bidder:"ix",params:{siteId:"378327",size:[160,600]}},
+				{bidder:"ix",params:{siteId:"378328",size:[120,600]}},
+				{bidder:"33across",params:{siteId:"cDh-poJfar6BWYaKlId8sQ",productId:"siab"}}
+				]
+			}];
+		pbjs.que.push(function(){
+			pbjs.addAdUnits(t);
+			pbjs.requestBids({adUnitCodes:[e],timeout:1000,bidsBackHandler:function(){
+				var x=googletag.defineSlot("/6766078/WHO-SB",[120,600],e).defineSizeMapping(sSize).addService(googletag.pubads());
+				pbjs.setTargetingForGPTAsync([e]);
+				googletag.pubads().setRequestNonPersonalizedAds(0);
+				googletag.pubads().refresh([x]);
+				}
+				});
+			});
+		}
+	else{
+		var x=googletag.defineSlot("/6766078/WHO-SB",[120,600],e).defineSizeMapping(sSize).addService(googletag.pubads());
+		googletag.pubads().setRequestNonPersonalizedAds(1);
+		googletag.pubads().refresh([x]);
+		}
+	}
+var weredone = -1;
+(function(){
+	'use strict';
+	var api;
+	api = function(x,y) {
+		var elements, scrollX, scrollY, newX, newY, h;
+		var h = parseInt(Math.max(document.documentElement.clientHeight, window.innerHeight || 0)/2);
+		scrollX = window.pageXOffset;
+		scrollY = window.pageYOffset;
+		window.scrollTo(scrollX,y-h);
+		newX = x;
+		newY = y - window.pageYOffset;
+		elements = this.elementsFromPoint(newX,newY);
+		window.scrollTo(scrollX,scrollY);
+		return elements;
+		};
+	this.document.elementsFromAbsolutePoint = api;
+	}).call(this);
+function getP(x,y,cut) {
+	var result = false;
+	if (y > cut) return result;
+	var elements = document.elementsFromAbsolutePoint(x,y);
+	result = -1;
+	for (var i = 0; i < elements.length; i++) {
+		if (elements[i].tagName == 'P' && elements[i].className.indexOf('wp-caption-text') == -1) result = elements[i];
+		else if (elements[i].className.indexOf('wp-caption ') != -1 || elements[i].className.indexOf('wp-caption"') != -1) result = elements[i];
+		else if (elements[i].tagName == 'ARTICLE') break;
+		}
+	if (result == -1) result = getP(x,y+25,cut);
+	return result;
+	}
+function endlessAds() {
+	parsing = true;
+	var h = parseInt(Math.max(document.documentElement.clientHeight, window.innerHeight || 0));
+	var articles = document.querySelectorAll('article');
+	var current = false;
+	for (var i = 0; i < articles.length; i++) {
+		if (i > weredone) {
+			var place = articles[i].getBoundingClientRect();
+			var current = articles[i];
+			var cutoff = parseInt(place.bottom - h + window.pageYOffset);
+			break;
+			}
+		}
+	if (current) {
+		var ads = current.querySelectorAll('.proper-ad-unit');
+		var m = ads.length;
+		if (m > 0) {
+			var e = ads[m-1].getBoundingClientRect();
+			var newHeight = parseInt(h + e.bottom + window.pageYOffset);
+			if (!FREE & i == 0) newHeight = newHeight + h;
+			var newWidth = parseInt(e.x + (e.width/2));
+			var el = getP(newWidth, newHeight, cutoff);
+			if (el) {
+//				var tid = parseInt(Math.floor(Math.random()*2) + 2);
+//				elcnt[tid]++;
+//				var elid = 'proper-ad-warhistoryonline_content_'+ tid + '-' + elcnt[tid];
+				if (newcnt < 8) var tid = newcnt;
+				else var tid = '7-'+parseInt(newcnt - 6);
+				var elid = 'proper-ad-warhistoryonline_content_'+ tid;
+				el.insertAdjacentHTML('afterend','<div class="proper-ad-unit"><div id="'+elid+'"></div></div>');
+				lazy.push(document.getElementById(elid));
+				newcnt++;
+//				console.log('HTML slot '+elid+' created');
+				endlessAds();
+				}
+			else weredone = i;
+			}
+		else weredone = i;
+		}
+	parsing = false;
+	}
+var utmIt = function(elem) {
+    var utm_campaign = _GET["utm_campaign"];
+	var utmParamQueryString = '',
+    utmParamQueryStringTrimmed = '';
+    if (utm_campaign) {
+        utmParamQueryString += '&utm_campaign=' + utm_campaign;
+    }
+    if(utmParamQueryString.length > 0) {
+        utmParamQueryString = utmParamQueryString.substring(1);
+        utmParamQueryStringTrimmed = utmParamQueryString;
+        utmParamQueryString = utmParamQueryString;
+    }
+    if (!utmParamQueryString) return;
+    var navLinks = elem.querySelectorAll('a');
+
+    navLinks.forEach(function(item) {
+      if (item.href.indexOf('/') === 0 || item.href.indexOf('https://'+location.host) === 0 || item.href.indexOf('http://'+location.host) === 0) {
+        if (item.href.indexOf('?') === -1) {
+            item.href += '?';
+        } else {
+          item.href += '&';
+        }
+        item.href += utmParamQueryString;
+      }
+	  else if ((item.href.indexOf('/sharer/sharer.php') !== -1 || item.href.indexOf('/intent/tweet') !== -1) && item.href.indexOf(location.host) !== -1) {
+		item.href += encodeURIComponent('?'+utmParamQueryString);  
+		}
+    });
+};
+var lazy=[];
+var newcnt = 3;
+var foots=[5000];
+var sides=['docked'];
+var tops=[];
+var parsing = false;
+registerListener("scroll",lazyLoad);
+registerListener("load",endlessAds);
+utmIt(document);
+// if (abtest) ga('send', 'event', 'ABTest', 'Proper');
+// else ga('send', 'event', 'ABTest', 'Prebid');
+</script>
+<script type="text/javascript">
+function toggleSearch() {var el = document.getElementById('dropdown-menu');el.style.display = (el.style.display == 'block') ? 'none' : 'block';}
+</script>
+<!--
+Object Caching 39/83 objects using memcache
+Page Caching using memcache 
+
+Served from: www.warhistoryonline.com @ 2019-06-23 17:30:54 by W3 Total Cache
+--><iframe id="GoogleSetNPA" name="GoogleSetNPA" style="display:none;position:fixed;left:-999px;top:-999px;width:0px;height:0px;"></iframe></body></html>

@@ -1,0 +1,776 @@
+<html lang="en-GB"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="8795EC2CB748EE3499EC0F1E2C766E82" name="msvalidate.01"/>
+<title>5G Frequency Bands and Spectrum Allocation in the UK</title>
+<meta content="Ofcom has worked with other European spectrum regulators to identify three key bands that will enable 5G in Europe: 700 MHz, 3.4-3.8 GHz, and 24.25-27.5 GHz. However, the UK regulator is committed to exploring and utilising other bands for 5G in the UK.." name="description"/>
+<link href="https://5g.co.uk/guides/5g-frequencies-in-the-uk-what-you-need-to-know/" rel="canonical"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@5gcouk" name="twitter:creator"/>
+<meta content="5G" name="twitter:site"/>
+<meta content="5G Frequency Bands and Spectrum Allocation in the UK" name="twitter:title"/>
+<meta content="Ofcom has worked with other European spectrum regulators to identify three key bands that will enable 5G in Europe: 700 MHz, 3.4-3.8 GHz, and 24.25-27.5 GHz. However, the UK regulator is committed to exploring and utilising other bands for 5G in the UK.." name="twitter:description"/>
+<meta content="https://5g.co.uk/userfiles/guides/guides_rectangle/t_4029.jpg" name="twitter:image"/>
+<meta content="7EmozlaxWSqIZzUgNc2OQzd3tcw8IZC2dX1ybx0B9JE" name="google-site-verification"/>
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69732232-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="application/ld+json">
+	{
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "5G",
+        "logo": "https://5g.co.uk/img/5g_logo-1.jpg",
+        "url": "https://5g.co.uk",
+        "address": {
+		    "@type": "PostalAddress",
+		    "addressLocality": "Newport",
+		    "addressRegion": "Wales",
+		    "streetAddress": "16 Gold Tops"
+	    },
+	    "description": "The premier source for information on making 5G a success in the UK.",
+	    "sameAs" : [
+	    "https://www.facebook.com/5g.co.uk/",
+		"https://twitter.com/5gcouk"]
+	}
+	</script>
+<link href="https://5g.co.uk/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://5g.co.uk/stylesheets/screen.min.css?v=190713051017" rel="stylesheet" type="text/css"/>
+<style>
+		.slideMenu {
+			display: none;
+		}
+	</style>
+<script charset="utf-8" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/2.0/popup.js" type="text/javascript"></script><script data-dojo-config="usePlainJson: true, isDebug: false" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" type="text/javascript"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"43e4bd592a44b2532424a831b","lid":"01aee87b90","uniqueMethods":true}) })</script>
+<script async="" src="//5gcouk.disqus.com/embed.js" type="text/javascript"></script><link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet"/><link as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.90bbe7dd462e64a6c99045d2dadef75c.css" rel="preload"/><link as="script" href="https://c.disquscdn.com/next/embed/common.bundle.4f78a44956523083e2be1589c3559f2b.js" rel="preload"/><link as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.ea36f75b54a9a94de9a101cd1513ac52.js" rel="preload"/><link as="script" href="https://disqus.com/next/config.js" rel="preload"/><link href="//downloads.mailchimp.com/css/signup-forms/popup/2.0/modal.css" media="all" rel="stylesheet" type="text/css"/><style id="" type="text/css"></style></head>
+<body style="overflow: auto;">
+<!-- 	<style>
+		/* line 182, ../sass/screen.scss */
+BODY { font-family: "Encode Sans"; position: relative; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+
+		#loader{
+			position: fixed;
+			z-index: 99999;
+			top: 0;
+			left: 0;
+			width:  100%;
+			height:  100%;
+			bottom: 0;
+			right: 0;
+			transition: all 1s ease-in-out;
+			background: #050e16;
+		}
+		#progress{
+			height: 100%;
+			background: #ff414d;
+			position: absolute;
+			width: 0;                /* will be increased by JS */
+			margin: auto;
+    		left: 0;
+		}
+		#progstat{font-size: 20px;
+			letter-spacing:  3px;
+			width: 100%;
+			text-align: center;
+			color: #fff;
+		}
+		.progress-wrap {
+			display: block;
+			margin-top: 30px;
+			border-radius: 30px;
+			position: relative;
+			max-width: 300px;
+		    margin: auto;
+		    margin-top: 30px;
+		    overflow: hidden;
+			height: 7px;
+		}
+		.prog-outer {
+			position: absolute;
+			top: 45%;
+			margin-top: -40px;
+			width: 100%;
+		}
+
+		
+	</style> -->
+<!-- 
+	<div id="loader">
+		<div class="prog-outer text-center">
+			<img src="/5g_spinner_icon.gif" alt="Loading Spinner" style="max-width: 100px; margin-bottom: 30px;">
+			<div id="progstat"></div>
+			<div class="progress-wrap">
+				<div id="progress"></div>
+			</div>
+		</div>
+	</div> -->
+<div class="slideMenu slideout-menu slideout-menu-right" id="menu">
+<ul>
+<li>
+<span class="search-cont">
+<a href="https://5g.co.uk/"><img alt="5G Logo" src="https://5g.co.uk/img/5g_new_logo.png" style="max-width: 180px;"/></a>
+</span>
+</li>
+<li>
+<span class="search-cont">
+<!-- <svg id="this" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#ffffff" id="svg_1" d="m15.7,14.3l-3.105,-3.105c0.878,-1.171 1.405,-2.619 1.405,-4.195c0,-3.866 -3.134,-7 -7,-7s-7,3.134 -7,7s3.134,7 7,7c1.576,0 3.024,-0.527 4.194,-1.405l3.106,3.105c0.184,0.184 0.38,0.3 0.7,0.3c0.553,0 1,-0.447 1,-1c0,-0.219 -0.054,-0.454 -0.3,-0.7zm-13.7,-7.3c0,-2.762 2.238,-5 5,-5s5,2.238 5,5s-2.238,5 -5,5s-5,-2.238 -5,-5z"/>
+					</svg> -->
+<form action="/search/" class="mobile-search" method="post">
+<fieldset>
+<input name="q" placeholder="Search..." type="text" value=""/>
+</fieldset>
+<button class="submitbutton" type="submit">Go</button>
+</form>
+</span>
+</li>
+<li><a class="underlineMenu" href="https://5g.co.uk/guides/what-is-5g/">What is 5G</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/coverage/">Coverage</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/phones/">Phones</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/sims/">SIM Only</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/guides/which-networks-offer-5g-home-broadband/">Broadband</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/news/">News</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/guides/">Guides</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/newsletter/">Newsletter</a>
+</li><li>
+<div class="search-cont social-media-icons text-center" id="nav-social">
+<a href="https://www.facebook.com/5g.co.uk/" rel="noopener" target="_blank"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/5gcouk" rel="noopener" target="_blank"><i class="fa fa-twitter"></i></a>
+</div>
+</li>
+</ul>
+</div>
+<main class="slideout-panel slideout-panel-right" id="panel">
+<div class="logo mobile">
+<a href="https://5g.co.uk/"><img alt="5G Logo" src="https://5g.co.uk/img/5g_new_logo.png"/></a>
+</div>
+<div class="mobile-nav-button">
+<button class="toggle-button" title="Nav Button" type="button">
+<div class="navbar-toggle" data-toggle="navbar">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</button>
+</div>
+<div class="container" id="nav-wrap" style="position: relative;">
+<div class="logo desktop">
+<a href="https://5g.co.uk/"><img alt="5G Logo" src="https://5g.co.uk/img/5g_new_logo.png"/></a>
+</div>
+<div class="clearfix">
+<nav>
+<div class="nav-wrap">
+<div class="home-icon">
+<a href="https://5g.co.uk/">
+<svg height="19.999999999999996" width="19.999999999999996" xmlns="http://www.w3.org/2000/svg">
+<g id="svg_8" stroke="null"></g>
+<g id="svg_9" stroke="null">
+<path d="m16.980879,18.632337l-5.449651,0l0,-5.060391l-3.114086,0l0,5.060391l-5.449651,0l0,-8.174477c0,-0.214872 0.174,-0.389261 0.389261,-0.389261s0.389261,0.174389 0.389261,0.389261l0,7.395955l3.892608,0l0,-5.060391l4.67113,0l0,5.060391l3.892608,0l0,-7.006695c0,-0.214872 0.174,-0.389261 0.389261,-0.389261s0.389261,0.174389 0.389261,0.389261l0,7.785216z" fill="#ff414d" id="svg_3" stroke="null"></path>
+<path d="m18.927183,10.457861c-0.096926,0 -0.193463,-0.035812 -0.268979,-0.107825l-8.684019,-8.306436l-8.684019,8.306436c-0.155315,0.148308 -0.401717,0.143248 -0.550415,-0.012067c-0.148698,-0.155315 -0.142859,-0.401717 0.012067,-0.550415l9.222367,-8.821428l9.221978,8.821039c0.154926,0.148698 0.160765,0.3951 0.012067,0.550415c-0.076295,0.079798 -0.178281,0.120282 -0.281046,0.120282z" fill="#ff414d" id="svg_5" stroke="null"></path>
+<path d="m15.813096,5.786731c-0.215261,0 -0.389261,-0.174389 -0.389261,-0.389261l0,-2.335565l-2.335565,0c-0.215261,0 -0.389261,-0.174389 -0.389261,-0.389261s0.174,-0.389261 0.389261,-0.389261l3.114086,0l0,3.114086c0,0.214872 -0.174,0.389261 -0.389261,0.389261z" fill="#ff414d" id="svg_7" stroke="null"></path>
+</g>
+</svg>
+</a>
+</div>
+<div class="search-bar">
+<form action="/search/" method="post">
+<fieldset>
+<input name="q" placeholder="Search the website..." type="text" value=""/>
+</fieldset>
+<!-- 		<button class="submit-button" type="submit">Submit
+			  					</button> -->
+</form>
+</div>
+<ul id="menu">
+<li><a class="underlineMenu" href="https://5g.co.uk/guides/what-is-5g/">What is 5G</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/coverage/">Coverage</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/phones/">Phones</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/sims/">SIM Only</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/guides/which-networks-offer-5g-home-broadband/">Broadband</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/news/">News</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/guides/">Guides</a>
+</li><li><a class="underlineMenu" href="https://5g.co.uk/newsletter/">Newsletter</a>
+</li></ul>
+</div>
+<div class="search-icon">
+<svg height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+<path d="m15.7,14.3l-3.105,-3.105c0.878,-1.171 1.405,-2.619 1.405,-4.195c0,-3.866 -3.134,-7 -7,-7s-7,3.134 -7,7s3.134,7 7,7c1.576,0 3.024,-0.527 4.194,-1.405l3.106,3.105c0.184,0.184 0.38,0.3 0.7,0.3c0.553,0 1,-0.447 1,-1c0,-0.219 -0.054,-0.454 -0.3,-0.7zm-13.7,-7.3c0,-2.762 2.238,-5 5,-5s5,2.238 5,5s-2.238,5 -5,5s-5,-2.238 -5,-5z" fill="#ffffff" id="svg_1"></path>
+</svg>
+</div>
+</nav>
+</div>
+</div>
+<style>
+	.author-bio {
+	    padding: 30px;
+	    margin-top: 30px;
+	    background: #eeeeee4d;
+	    border: 1px solid #dfdfdfcc;
+	}
+</style>
+<div class="position-relative center-mobile">
+<header id="internal">
+</header>
+</div>
+<div class="breadcrumbs">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a class="home" href="https://5g.co.uk/" itemprop="url">
+<span itemprop="name">Home</span>
+<meta content="1" itemprop="position"/>
+</a>
+</span>
+						/
+										<span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a href="https://5g.co.uk/guides/" itemprop="url">
+<span itemprop="name">5G guides</span>
+<meta content="2" itemprop="position"/>
+</a>
+</span>
+						/
+						<span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<span itemprop="name">5G Frequencies in the UK</span>
+<meta content="3" itemprop="position"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section white main-text">
+<div class="container">
+<div class="news-parent">
+<div class="row">
+<div class="col-xs-12">
+<div class="upper-bar">
+<h1>5G Frequencies in the UK</h1>
+<div class="author">
+<div class="image">
+<a href="https://5g.co.uk/author/james-rogerson/">
+<img alt="James Rogerson" class="author reponsive" src="https://5g.co.uk/userfiles/authors/t_3.jpg"/>
+</a>
+</div>
+<span class="name"> By <a href="https://5g.co.uk/author/james-rogerson/">James Rogerson</a></span>
+<span class="name">and <a href="https://5g.co.uk/author/sacha-kavanagh/">Sacha Kavanagh</a></span>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="news-child" id="main">
+<div class="share-wrapper">
+<a class="twitter customer share" href="https://twitter.com/share?text=5G Frequencies in the UK&amp;url=https://5g.co.uk/guides/5g-frequencies-in-the-uk-what-you-need-to-know/" target="_blank"><i class="fa fa-twitter"></i></a>
+<a class="facebook customer share" href="https://www.facebook.com/sharer/sharer.php?u=https://5g.co.uk/guides/5g-frequencies-in-the-uk-what-you-need-to-know/" target="_blank"><i class="fa fa-facebook-f"></i></a>
+<a href="https://5g.co.uk/mailto:?body=Hi, I found this webpage and thought you might like it https://5g.co.uk/guides/5g-frequencies-in-the-uk-what-you-need-to-know/" target="_blank"><i class="fa fa-envelope"></i></a>
+</div>
+<div class="text">
+<h3 style="text-align: justify;"><img alt="5G frequencies" src="https://5g.co.uk/userfiles/images/5g-frequencies.jpg" style="width: 750px; height: 413px;"/></h3>
+<p style="text-align: justify;">Updated: 6th June, 2019</p>
+<p style="text-align: justify;"><strong><span style="font-size:18px;">All mobile data has to travel on a frequency band and those bands have different properties, with some carrying data further than others and some being better at passing through walls and other obstacles.</span></strong></p>
+<p style="text-align: justify;">There’s also varying amounts of different frequency bands available, all of which adds up to a big puzzle as to what bands 5G will use.</p>
+<p style="text-align: justify;">5G needs to be able to access enough spectrum to keep up with the super high demands that are expected of it.  But the spectrum also needs to be versatile enough for all different usage scenarios, which will likely mean using multiple different frequency bands.</p>
+<p style="text-align: justify;">Each operator will need a wide block of spectrum in the different bands in order to allow the data throughput required for 5G. Furthermore, mobile spectrum will need to be globally harmonised to ensure 5G delivers its full potential.</p>
+<p style="text-align: justify;">While not all the 5G spectrum bands have been finalised yet there’s a lot of research taking place and bands being freed up, so we’re narrowing down on the bands we’re likely to see used.</p>
+<h2 style="text-align: justify;">What frequencies will be used?</h2>
+<p style="text-align: justify;">Ofcom, its European counterparts and the International Telecommunication Union (ITU) have worked with other international organisations to ensure there is global harmonisation over the spectrum to be used for 5G. There is no indication that Ofcom will move away from any agreements already reached for 5G frequencies within Europe once the UK leaves the EU. So far, three main spectrum bands that have been specified for use in 5G:</p>
+<ul>
+<li style="text-align: justify;">Sub 1GHz, dubbed the ‘coverage layer’, will provide wide area and deep indoor coverage, and in Europe encompasses the 700MHz band. These frequencies will combine with the next band to enable operators to roll out 5G quickly and more cost-effectively.</li>
+<li style="text-align: justify;">1GHz-6GHz, aka the ‘coverage and capacity layer’, relies on C-band spectrum around the 3.5GHz mark to deliver the best compromise between capacity and coverage. European regulators have identified the 3.4-3.8GHz band and plan to harmonise it to make it suitable for 5G. It will be the main frequency band for the launch of 5G.</li>
+<li style="text-align: justify;">Above 6GHz, aka the ‘super data layer’, uses higher frequency millimetre-wave (mmWave) spectrum to deliver high data rates for specific use cases. Europe has agreed to harmonise frequencies in the 24.25-27.5GHz band, although it’s commonly referred to the 26GHz band. It will be the key enabler of future 5G services and be critical to 5G networks.</li>
+</ul>
+<p style="text-align: justify;">It is highly like that additional spectrum will be opened up or auctioned for 5G use, and work is ongoing to identify what that spectrum might be. For example, <a href="https://5g.co.uk/news/ofcom-consults-5g-priorities-radio-spectrum/4400/">Ofcom plans</a> to put the 37-43.5 and 66-71GHz bands forward for discussion at the World Radiocommunications Conference 2019 (WRC-19) in late 2019. It may also raise the 32GHz (31.8 – 33.4GHz) band for further discussion.</p>
+<h2 style="text-align: justify;">What frequencies are available in the UK?</h2>
+<p style="text-align: justify;">It’s likely that the UK’s mobile operators will repurpose some of their existing spectrum for 5G use, as we’ve seen in the past with 4G. But given the speed and capacity requirements of 5G, they’ll all need more spectrum than they currently have if they want to deliver the full promise of 5G.</p>
+<p style="text-align: justify;">The first auction of 5G spectrum concluded in April 2018 when Ofcom sold 150MHz of 3.4GHz spectrum previously used by the Ministry of Defence (MoD). All <u><a href="https://5g.co.uk/guides/5g-uk-auction/">four operators secured spectrum</a></u>, although the fifth bidder, Airspan Spectrum Holdings, failed in its bid. The 3.4GHz spectrum will be used for – and central to – rolling out 5G networks.</p>
+<p style="text-align: justify;">Ofcom also auctioned off 40MHz of 2.3GHz spectrum (also recovered from the MoD) for immediate use to provide additional capacity for 4G networks, which can also be used for 5G in the future. O2 won all the available 2.3GHz spectrum.</p>
+<p style="text-align: justify;">Ofcom took the decision to clear the 700MHz band for mobile use in November 2014, in line with similar moves across Europe. The spectrum band is currently used for digital terrestrial television (DTT) and wireless microphones for programme making and special events (PMSE).</p>
+<p style="text-align: justify;">The process began in 2017 and is expected to be complete by May 2020. It’s a process that will involve – among other things – compensating and supporting PMSE equipment owners, a task for which Equiniti Limited <a href="https://5g.co.uk/news/equiniti-chosen-to-help-clear-the-700mhz-band-for-5g-use/4660/">has recently been chosen</a>.</p>
+<p style="text-align: justify;">Ofcom intends to auction the 700MHz spectrum in early 2020, with auction applications expected to begin in December 2019 and with the process set to be complete by Spring 2020.</p>
+<p style="text-align: justify;">80MHz of this band will be auctioned, likely alongside 120MHz in the 3.6-3.8GHz band, for 200MHz of spectrum in total.</p>
+<p style="text-align: justify;">However, unlike the previous spectrum auction, obligations are likely to be attached to this spectrum. Ofcom has spoken vaguely about improving coverage in rural areas as well as Scotland and Wales, and has more specifically highlighted the following things that would have to be achieved within four years of being awarded the spectrum:</p>
+<ul>
+<li style="text-align: justify;">Extending good, outdoor data coverage to at least 90% of the UK.</li>
+<li style="text-align: justify;">Improve coverage for at least 140,000 homes and offices that they don’t already cover.</li>
+<li style="text-align: justify;">Providing coverage from at least 500 new mobile mast stations in rural areas.</li>
+</ul>
+<p style="text-align: justify;">In return for this, Ofcom proposes reducing the cost of the spectrum by up to £300 million to £400 million. It’s not currently clear though whether all spectrum at this auction will be sold under these terms.</p>
+<p style="text-align: justify;">Ofcom has <a href="https://5g.co.uk/news/ofcom-additional-spectrum-5g/4922/">more recently revealed</a> that it will repurpose 168MHz of spectrum between the 7.9GHz and 8.4GHz frequencies from the MoD. This doesn’t seem to be specifically earmarked for 5G, but Ofcom has stated that it envisions it being used in part as backhaul for fixed and mobile networks, so 5G certainly sounds like a likely use case.</p>
+<p style="text-align: justify;">It will apparently be released on a first come, first served basis, with exact details of the availability set to be revealed soon.</p>
+<p style="text-align: justify;">In the same breath, Ofcom stated that it’s looking to make 2.25GHz of spectrum between the 24.25GHz and 26.5GHz frequencies available, with this spectrum supposedly set to “support 5G indoor applications.” Details of the availability of this spectrum should be revealed during summer 2019.</p>
+<p style="text-align: justify;">Finally, Ofcom has also revealed that it plans to make the 1492-1517MHz spectrum band available for future wireless broadband services by December 2022.</p>
+<p style="text-align: justify;">Future auctions are also likely to be held for other spectrum, but there are no timetables at present.</p>
+<h2 style="text-align: justify;">What is mmWave?</h2>
+<p style="text-align: justify;">mmWave spectrum sits between microwave and infrared waves. It’s been around for a while but hasn’t really been used for much. It’s only recently that its use for high-speed wireless communications has come to the fore as a key enabler of 5G services. mmWave spectrum technically encompasses frequencies in the 30-300GHz range (extremely high frequency, EHF) but it more commonly refers to bands above 24GHz.</p>
+<p style="text-align: justify;">mmWave spectrum is highly desirable for 5G because there’s a lot of it and it can deliver very high data transfer rates. Cells can be located close to each other without causing interference, making them ideal for high capacity networks in specific locations.</p>
+<p style="text-align: justify;">However, the disadvantages of of mmWave are that signals don’t travel as far as in lower spectrum bands and are unable to easily pass through physical objects like buildings or trees. They are also subject to other interferences, such as rain scattering the signal, system performance degraded by brightness, and atmospheric absorption, all of which contribute to the low range.</p>
+<p style="text-align: justify;">mmWave frequency bands will therefore require many more antennas and antenna sites to overcome these shortcomings, and new technologies like Massive MIMO and beamforming will be key to unlocking the potential of mmWave frequencies. mmWave frequencies will also be used in tandem with lower frequency bands to deliver both the coverage and capacity that 5G will require.</p>
+<p style="text-align: justify;"><strong>Useful reading: </strong><strong><u><a href="https://5g.co.uk/guides/what-is-massive-mimo-technology/">What is Massive MIMO technology?</a></u></strong></p>
+<h2 style="text-align: justify;">Defragmenting spectrum</h2>
+<p style="text-align: justify;">As well as acquiring additional spectrum, it is desirable for networks to have at least 80MHz of contiguous spectrum, as this can allow for higher peak speeds and potentially better coverage.</p>
+<p style="text-align: justify;">Ofcom has considered using future auctions to rearrange spectrum holdings so that this is possible, but its provisional view is that the market should be allowed to determine the best allocation of spectrum.</p>
+<p style="text-align: justify;">Ofcom likely will however facilitate post-auction trades between networks, so that they can rearrange their spectrum holdings on their own.</p>
+<p style="text-align: justify;">We’ve already seen an example of <a href="https://5g.co.uk/news/ofcom-three-link-up-5g-spectrum/4648/">spectrum being linked up by Three</a>, which was allowed by Ofcom to switch from holding the 3580-3600MHz and 3605-3689MHz parts of a band (with a 5MHz gap in the middle), to holding a contiguous block covering 3580-3680Mhz. So there’s a good chance more rearrangements like this will happen in future, just handled by the networks themselves.</p>
+<h2 style="text-align: justify;">Where are we now?</h2>
+<p style="text-align: justify;">There’s enough viable spectrum in place for operators to begin launching their 5G networks. Indeed, EE has already launched its 5G service in a <a href="https://5g.co.uk/news/ee-first-5g-network-six-cities/4912/">handful of cities</a>, with more to come soon, while Vodafone plans to launch 5G <a href="https://5g.co.uk/news/vodafone-is-launching-5g-on-july-3rd-in-seven-cities/4884/">on July 3rd</a>, and Three and O2 will both be launching their services before the end of 2019.</p>
+<p style="text-align: justify;">But more spectrum will be needed to build comprehensive 5G networks that live up to the technology’s potential.</p>
+<p style="text-align: justify;">Much has been done to identify and harmonise the spectrum that will be needed for this. In the UK, Ofcom is on track to clear the 700MHz spectrum so it can be used for 5G, and as noted above numerous other spectrum bands have been identified for potential use.</p>
+<p style="text-align: justify;">Further auctions will likely take place soon to make more spectrum available, and work is ongoing to identify more frequency bands that can be utilised for 5G.</p>
+<p style="text-align: justify;">The lower frequency spectrum will underpin the early stages of 5G, but it is the higher frequencies that will be the true future of 5G. There are technical challenges that need to be overcome to unleash the full potential of mmWave frequencies, but equipment manufacturers and operators are on the case. We’ll keep you up to date every step of the way!</p>
+<p style="text-align: justify;"><strong>Useful reading: <a href="https://5g.co.uk/coverage/">5G Coverage and Networks</a></strong></p>
+</div>
+<div class="lower-box">
+<a class="back" href="https://5g.co.uk/guides/">Back</a>
+</div>
+<div class="author-bio" style="padding-top: 30px;">
+<div class="author">
+<div class="image">
+<a href="https://5g.co.uk/author/james-rogerson/">
+<img alt="James Rogerson" class="author reponsive" src="https://5g.co.uk/userfiles/authors/t_3.jpg"/>
+</a>
+</div>
+<span class="name"> About <a href="https://5g.co.uk/author/james-rogerson/">James Rogerson</a>
+<div class="content" style="line-height: 1.5 !important; padding-top: 15px;">
+<h3>Sub-Editor at 5G.co.uk</h3>
+<p style="text-align: justify;">James is sub-editor at both 5G.co.uk and TechRadar. Also works as a researcher/ technical writer for 5G.co.uk and several other websites including TechRadar, T3, Smart TV Radar, 3G.co.uk with work on the web, in print and on TV.</p>
+</div>
+<span class="div" style="display: block; margin-top: 10px;">
+<a href="https://5g.co.uk/author/james-rogerson/">View more posts by James Rogerson &gt;&gt;&gt;</a>
+</span>
+</span>
+</div>
+</div>
+<div class="" style="margin-top: 30px;">
+<div id="disqus_thread"><iframe allowtransparency="true" frameborder="0" horizontalscrolling="no" id="dsq-app8476" name="dsq-app8476" scrolling="no" src="https://disqus.com/embed/comments/?base=default&amp;f=5gcouk&amp;t_u=https%3A%2F%2F5g.co.uk%2Fguides%2F5g-frequencies-in-the-uk-what-you-need-to-know%2F&amp;t_d=5G%20Frequency%20Bands%20and%20Spectrum%20Allocation%20in%20the%20UK&amp;t_t=5G%20Frequency%20Bands%20and%20Spectrum%20Allocation%20in%20the%20UK&amp;s_o=default#version=0675b286a8e2b63f1d34621e45544923" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 1201px !important;" tabindex="0" title="Disqus" verticalscrolling="no" width="100%"></iframe></div>
+<script type="text/javascript">
+									    /* * * CONFIGURATION VARIABLES * * */
+									    var disqus_shortname = '5gcouk';
+
+									    /* * * DON'T EDIT BELOW THIS LINE * * */
+									    (function() {
+									        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+									        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+									        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+									    })();
+									</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div id="latest-news">
+<div class="row">
+<div class="col-sm-12">
+<div class="news-child">
+<div class="image-container">
+<a href="https://5g.co.uk/news/salford-tender-5g-infrastructure-project/4974/">
+<img alt="Salford Launches Tender for 5G Infrastructure Project" class="full" src="https://5g.co.uk/userfiles/news/news_images/n_4974.jpg"/>
+</a> <span class="date">11 July</span>
+</div>
+<div class="text">
+<a href="https://5g.co.uk/news/salford-tender-5g-infrastructure-project/4974/"><h3>Salford Launches Tender for 5G Infrastructure Project</h3></a>
+<p class="hidden-mo">Salford City Council issued a tender for partnerships...</p>
+</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="news-child">
+<div class="image-container">
+<a href="https://5g.co.uk/news/huddersfield-uni-grant-5g-training-research/4972/">
+<img alt="Huddersfield Uni wins £1M grant for 5G training and research" class="full" src="https://5g.co.uk/userfiles/news/news_images/n_4972.jpg"/>
+</a> <span class="date">10 July</span>
+</div>
+<div class="text">
+<a href="https://5g.co.uk/news/huddersfield-uni-grant-5g-training-research/4972/"><h3>Huddersfield Uni wins £1M grant for 5G training and research</h3></a>
+<p class="hidden-mo">EU research scheme to fund four PhD researchers at...</p>
+</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="news-child">
+<div class="image-container">
+<a href="https://5g.co.uk/news/quickline-5g-broadband-lincolnshire/4970/">
+<img alt="Quickline is bringing 5G broadband to Lincolnshire" class="full" src="https://5g.co.uk/userfiles/news/news_images/n_4970.jpg"/>
+</a> <span class="date">10 July</span>
+</div>
+<div class="text">
+<a href="https://5g.co.uk/news/quickline-5g-broadband-lincolnshire/4970/"><h3>Quickline is bringing 5G broadband to Lincolnshire</h3></a>
+<p class="hidden-mo">5G broadband is in the works for caravan parks in...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="banner hidden-xs">
+<a href="https://5g.co.uk/newsletter/">
+<img alt="News banner right" class="banners" height="347" src="https://5g.co.uk/userfiles/banners/16-News-banner.jpg" width="360"/>
+</a></div> </div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="container-fluid">
+<div class="dib logo-container" id="logo-section">
+<img alt="" src="https://5g.co.uk/img/5g_new_logo.png"/>
+</div>
+<div class="dib links">
+<ul class="footerLinks">
+<li><a href="https://5g.co.uk/guides/what-is-5g/">What Is 5G</a></li>
+<li><a href="https://5g.co.uk/news/">5G News</a></li>
+<li><a href="https://5g.co.uk/events/">5G Events</a></li>
+<li><a href="https://5g.co.uk/guides/">5G Guides</a></li>
+<li><a href="https://5g.co.uk/newsletter/">5G Newsletter</a></li>
+</ul> </div>
+<div class="dib links">
+<ul class="footerLinks">
+<li><a href="https://5g.co.uk/events/">Add a 5G Event</a></li>
+<li><a href="https://5g.co.uk/guides/how-fast-is-5g/">How Fast is 5G?</a></li>
+<li><a href="https://5g.co.uk/newsletter/">Subscribe to 5G Newsletter</a></li>
+</ul>
+</div>
+<div class="dib links">
+<ul class="footerLinks">
+<li><a href="https://5g.co.uk/about-us/">About us</a></li>
+<li><a href="https://5g.co.uk/sponsorship/">Advertising</a></li>
+<li><a href="https://5g.co.uk/contact-us/">Contact us</a></li>
+<li><a href="https://5g.co.uk/editorial-team/">The Team</a></li>
+<li><a href="https://5g.co.uk/privacy-policy/">Privacy Policy</a></li>
+<li><a href="https://5g.co.uk/how-we-use-cookies/">Cookie Policy</a></li>
+</ul>
+</div>
+<div class="dib" id="signup">
+<h5>5G Newsletter</h5>
+<p style="margin-top: 10px; margin-bottom: 10px;">Stay up-to-date with 5G and sign up to our newsletter.</p>
+<a class="button-main block-red" href="https://5g.co.uk/newsletter/" style="display: inline-block;">Sign Up</a>
+</div>
+</div>
+</footer>
+<div class="footer-lower">
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-6">
+<p>2019 Copyright 5G.co.uk All rights reserved.</p>
+</div>
+<div class="col-xs-6">
+<div class="social-media">
+<a href="https://www.facebook.com/5g.co.uk/" rel="noopener" target="_blank" title="5G Facebook Link"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/5gcouk" rel="noopener" target="_blank" title="5G Twitter Link"><i class="fa fa-twitter"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="cookieRow" style="position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;">
+<div id="cookiePane" style="width: 100%; z-index: 999; padding: 10px;"><div class="container"><p style="text-align: center; line-height: initial;">This site uses cookies. We'll assume you are happy to receive cookies. <a href="https://5g.co.uk/how-we-use-cookies/">Find out more</a> <button class="cookieAgree" style="background: none; border-radius: 5px; padding: 2px 5px; margin-left: 20px;">Okay</button></p><div class="clear"></div></div></div></div>
+<script src="https://5g.co.uk/js/jquery.min.js"></script>
+<script>
+		$(document).ready(function() {
+						// cookie acceptance
+			var $cookiePane = $('<div id="cookiePane" style="display: none;  width: 100%; z-index: 999; padding: 10px;" />').appendTo('#cookieRow');
+
+			$cookiePane.html('<div class="container"><p style="text-align: center; line-height: initial;">This site uses cookies. We\'ll assume you are happy to receive cookies. <a href="/how-we-use-cookies/">Find out more</a> <button class="cookieAgree" style="background: none; border-radius: 5px; padding: 2px 5px; margin-left: 20px;">Okay</button><div class="clear"></div></div>').delay(1500).slideDown();
+
+			$('.cookieAgree').click(function() {
+				$cookiePane.slideUp();
+				return false;
+			});
+					});
+	</script>
+<script src="https://5g.co.uk/js/bootstrap.min.js"></script>
+<script src="https://5g.co.uk/js/jquery.matchHeight-min.js"></script>
+<script src="https://5g.co.uk/js/bootstrap-select.min.js"></script>
+<script src="https://5g.co.uk/js/slick.js"></script>
+<script src="https://5g.co.uk/js/slideout.js"></script>
+<script>
+
+
+	
+		$(function() {
+			$('.back-to-top').click(function() {
+				$("html, body").animate({ scrollTop: 0 }, "slow");
+				return false;
+			});
+		});
+
+		if($(this).width() < 768) {
+			$('#signup').insertAfter('#logo-section');
+		}
+
+		if($(this).width() < 500) {
+			var textElement = $('DIV.home-upper-news DIV.news-child DIV.text H3');
+			textElement.each(function() {
+				var textContent = $(this).text(),
+					subbed = textContent.substr(0,90)+'...';
+					$(this).text(subbed);
+			});
+		} else if ($(this).width() < 400) {
+			var textElement = $('DIV.home-upper-news DIV.news-child DIV.text H3');
+			textElement.each(function() {
+				var textContent = $(this).text(),
+					subbed = textContent.substr(0,80)+'...';
+					$(this).text(subbed);
+			});
+		}
+
+
+		var matchHeightTimeout;
+		$(function() {
+			$(window).resize(function() {
+				if(typeof matchHeightTimeout != 'undefined') {
+					clearTimeout(matchHeightTimeout);
+				}
+				matchHeightTimeout = setTimeout(function(){
+					resizeElements();
+				}, 250);
+			});
+		});
+
+		$(function() {
+			resizeElements();
+
+		});
+
+		
+		function resizeElements() {
+			$('#papers-events .large,.makemethesame,#papers-events .news-child.white-papers.guides-child, .editorial-team').matchHeight({
+				byRow: true,
+				property: 'height',
+				target: null,
+				remove: false
+            });
+		}
+
+        $('.selectpicker').selectpicker({
+		  	size: 4
+		});
+
+	</script>
+<script>
+		;(function($){
+  
+  /**
+   * jQuery function to prevent default anchor event and take the href * and the title to make a share popup
+   *
+   * @param  {[object]} e           [Mouse event]
+   * @param  {[integer]} intWidth   [Popup width defalut 500]
+   * @param  {[integer]} intHeight  [Popup height defalut 400]
+   * @param  {[boolean]} blnResize  [Is popup resizeabel default true]
+   */
+  $.fn.customerPopup = function (e, intWidth, intHeight, blnResize) {
+    
+    // Prevent default anchor event
+    e.preventDefault();
+    
+    // Set values for window
+    intWidth = intWidth || '500';
+    intHeight = intHeight || '400';
+    strResize = (blnResize ? 'yes' : 'no');
+
+    // Set title and open popup with focus on it
+    var strTitle = ((typeof this.attr('title') !== 'undefined') ? this.attr('title') : 'Social Share'),
+        strParam = 'width=' + intWidth + ',height=' + intHeight + ',resizable=' + strResize,            
+        objWindow = window.open(this.attr('href'), strTitle, strParam).focus();
+  }
+  
+  /* ================================================== */
+  
+  $(document).ready(function ($) {
+    $('.customer.share').on("click", function(e) {
+      $(this).customerPopup(e);
+    });
+  });
+    
+}(jQuery));
+</script>
+<script>
+	// ;(function(){
+	//   function id(v){ return document.getElementById(v); }
+	//   function loadbar() {
+	//     var ovrl = id("loader"),
+	//         prog = id("progress"),
+	//         stat = id("progstat"),
+	//         img = document.images,
+	//         c = 0,
+	//         tot = img.length;
+	//     if(tot == 0) return doneLoading();
+
+	//     function imgLoaded(){
+	//       c += 1;
+	//       var perc = ((100/tot*c) << 0) +"%";
+	//       prog.style.width = perc;
+	//       stat.innerHTML = "Loading "+ perc;
+	//       if(c===tot) return doneLoading();
+	//     }
+	//     function doneLoading(){
+	//       ovrl.style.opacity = 0;
+	//       setTimeout(function(){
+	//         ovrl.style.display = "none";
+	//       }, 1200);
+	//     }
+	//     for(var i=0; i<tot; i++) {
+	//       var tImg     = new Image();
+	//       tImg.onload  = imgLoaded;
+	//       tImg.onerror = imgLoaded;
+	//       tImg.src     = img[i].src;
+	//     }
+	//   }
+	//   document.addEventListener('DOMContentLoaded', loadbar, false);
+	// }());
+
+	$('.disabled-link').click(function(e) {
+	    e.preventDefault();
+	    //do other stuff when a click happens
+	});
+</script>
+<script>
+
+			///// HEADER SCRIPTS
+
+			$(document).ready(function(){
+
+				
+
+				var top_header = $('header#home');
+				if($(this).width() > 600) {
+					// Parallax
+					$(window).scroll(function () {
+						var st = $(this).scrollTop();
+						top_header.css({'transform':'translate3d(0, '+(st*.5)+'px, 0) scale(1.2)'});
+					});
+				}
+
+				var headerPostHeight = $('.header-news-posts').height();
+				$('span.support-wrap').css('min-height', headerPostHeight);
+			});
+
+			///// END HEADER SCRIPTS
+
+
+			///// NAVIGATION SCRIPTS
+
+			// Slideout plugin
+			var slideout = new Slideout({
+				'panel': document.getElementById('panel'),
+				'menu': document.getElementById('menu'),
+				'padding': 256,
+				'tolerance': 70,
+				'touch' : false
+			});
+
+			// Toggle button
+			document.querySelector('.toggle-button').addEventListener('click', function() {
+				slideout.toggle();
+			});
+			
+			// Navigation
+			var navUl = $('#nav-wrap nav ul'),
+			navLi = $('#nav-wrap nav ul li'),
+			searchBar = $('#nav-wrap nav .search-bar'),
+			searchIcon = $('#nav-wrap nav .search-icon');
+
+			// Search icon 
+			searchIcon.click(function(){
+				navLi.toggleClass('hideMe');
+				searchBar.toggleClass('inview');
+				navUl.toggleClass('hideMe');
+			});
+
+			// Navigation toggle button
+			$(document).ready( function() {
+				$('.toggle-button').click( function() {
+					$('[data-toggle="navbar"]').toggleClass('open');
+				});
+			});
+
+			var ua = navigator.userAgent.toLowerCase();
+			var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+			if(isAndroid) {
+				$('header').addClass('is-android');
+			    $('.header-news-posts, .logo').addClass('is-android');
+			}
+
+			///// END NAVIGATION SCRIPTS
+			$(document).ready(function(){
+
+				if($('select').length) {
+					$('head').append('<link href="/stylesheets/bootstrap-select.css" rel="stylesheet" type="text/css" />');
+				}
+
+				if($('.fa').length) {
+					$('head').append('<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">');
+				}
+
+
+				$('#slick-wrapper').slick({
+				  dots: true,
+				  infinite: false,
+				  arrows: false,
+				  speed: 300,
+				  slidesToShow: 4,
+				  slidesToScroll: 4,
+				  responsive: [
+				    {
+				      breakpoint: 1024,
+				      settings: {
+				        slidesToShow: 3,
+				        slidesToScroll: 3,
+				        infinite: true,
+				        dots: true
+				      }
+				    },
+				    {
+				      breakpoint: 600,
+				      settings: {
+				        slidesToShow: 2,
+				        slidesToScroll: 2
+				      }
+				    },
+				    {
+				      breakpoint: 480,
+				      settings: {
+				        slidesToShow: 1,
+				        slidesToScroll: 1
+				      }
+				    }
+				    // You can unslick at a given breakpoint now by adding:
+				    // settings: "unslick"
+				    // instead of a settings object
+				  ]
+				});
+				$('.slick-dots button').text('');
+			});
+
+			$(document).ready(function(){
+				$("#loadOverlay").css("display","none");
+			});
+
+
+		</script>
+</main>
+<iframe style="display: none;"></iframe><div id="PopupSignupForm_0" widgetid="PopupSignupForm_0">
+<div class="mc-banner" data-dojo-attach-point="bannerContainer" style="display: none;">
+<div class="mc-layout__bannerContent">
+<iframe data-dojo-attach-point="iframeBannerContainer" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="about:blank" style="width: 100%; height: 24px;"></iframe>
+</div>
+</div>
+<div class="mc-modal" data-dojo-attach-point="modalContainer" style="display: none;">
+<div class="mc-closeModal" data-action="close-mc-modal" data-dojo-attach-point="modalClose"></div>
+<div class="mc-layout__modalContent" style="max-height: 0px;">
+<iframe data-dojo-attach-point="iframeModalContainer" frameborder="0" marginheight="0" marginwidth="0" src="about:blank" style="width: 100%; height: 0px;"></iframe>
+</div>
+</div>
+<div class="mc-modal-bg" data-dojo-attach-point="modalOverlay" style="display: none;"></div>
+</div></body></html>

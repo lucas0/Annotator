@@ -1,0 +1,1160 @@
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase no-indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths closeNav" lang="en"><head><style type="text/css"></style>
+<meta charset="utf-8"/>
+<meta content="authenticity_token" name="csrf-param"/>
+<meta content="YK6O+/4rXf3aMkcGO6d48bK2AIFSdEK+qMPar+VMMtrYlYYzFdzNVId+HUkSc6Vbk5Rj8CGjvO7IsBa60v5Vdw==" name="csrf-token"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"d4a97ca1fb","applicationID":"508316","transactionName":"dVhXEkFaCV5cSh5VQkJeWgpWRkpBUVdG","queueTime":0,"applicationTime":37,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcFVldUGwYAXFJTAQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(21)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(21)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(21)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(21)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(21)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(16);n.exports={generateTraceHeader:r}},{}],11:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(12),u=t(10).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(15),w=t(14),v=window.XMLHttpRequest;s.features.xhr=!0,t(9),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],12:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],13:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],14:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],15:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],16:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],18:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],19:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],20:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],21:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:x,userAgent:d};t(13),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(20)},{}]},{},["loader",2,11,4,3]);</script>
+<title>Unilever To Pay $10M Over Hair Loss Tied To Suave Product - Law360</title>
+<meta content="Unilever PLC will pay $10.2 million to settle a class action accusing it of misleading consumers about a Suave brand hair treatment that allegedly causes unwanted, significant hair loss, according to a proposal filed Friday in Illinois federal court." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Unilever PLC will pay $10.2 million to settle a class action accusing it of misleading consumers about a Suave brand hair treatment that allegedly causes unwanted, significant hair loss, according to a proposal filed Friday in Illinois federal court." name="twitter:description"/>
+<meta content="Unilever PLC will pay $10.2 million to settle a class action accusing it of misleading consumers about a Suave brand hair treatment that allegedly causes unwanted, significant hair loss, according to a proposal filed Friday in Illinois federal court." property="og:description"/>
+<meta content="@law360" name="twitter:site"/>
+<meta content="@law360" name="twitter:creator"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Unilever To Pay $10M Over Hair Loss Tied To Suave Product - Law360" property="og:title"/>
+<meta content="Unilever To Pay $10M Over Hair Loss Tied To Suave Product - Law360" name="twitter:title"/>
+<link href="https://www.law360.com/amp/articles/508409" rel="amphtml"/>
+<link href="https://www.law360.com/articles/508409/unilever-to-pay-10m-over-hair-loss-tied-to-suave-product" rel="canonical"/>
+<meta content="https://www.law360.com/articles/508409/unilever-to-pay-10m-over-hair-loss-tied-to-suave-product" property="og:url"/>
+<meta content="https://www.law360.com/articles/508409/unilever-to-pay-10m-over-hair-loss-tied-to-suave-product" name="twitter:url"/>
+<meta content="https://www.law360.com/images/360.png" property="og:image"/>
+<meta content="https://www.law360.com/images/360.png" property="og:image:url"/>
+<meta content="https://www.law360.com/images/360.png" name="twitter:image"/>
+<meta content="app-id=934560389, app-argument=law360://www.law360.com/articles/508409/unilever-to-pay-10m-over-hair-loss-tied-to-suave-product" name="apple-itunes-app"/>
+<meta content="37104962b33535907ce4aab271111581" name="p:domain_verify"/>
+<link href="https://www.law360.com/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link data-turbolinks-track="true" href="https://static.law360news.com/assets/responsive-next-8dcfa2fdd363c96b3380f47eae7aa03e.css" media="screen" rel="stylesheet"/>
+<script data-turbolinks-track="true" src="https://static.law360news.com/assets/responsive-18f1f1a410427855d7faac55e64168e2.js"></script>
+<!--[if lt IE 9 ]>
+		<link rel="stylesheet" media="screen" href="https://static.law360news.com/assets/ie8-74a0ea2afd2e8b606d3021121574d06c.css" />
+
+	    <script src="https://static.law360news.com/javascripts/respond/respond.min.js"></script>
+	    <link href="https://static.law360news.com/respond/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+	    <link href="/respond/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+	    <script src="https://static.law360news.com/javascripts/respond/respond.proxy.js"></script>
+
+		<![endif]-->
+</head>
+<body class="modal-open" data-no-turbolink="" id="show-page">
+<div id="container">
+<header id="Masthead">
+<nav class="navbar visible-xs" role="navigation">
+<div class="container-fluid mobile-navigation" data-no-turbolink="">
+<div class="dropdown">
+<a class="mobile-menu-open" href="https://www.law360.com/#" title="Site menu"><i class="fa fa-bars"></i></a>
+</div>
+<div class="search-icon-btn">
+<a class="open-mobile-search" href="https://www.law360.com/#" title="Search button"><i class="fa fa-search"></i></a>
+</div>
+<div class="mobile-logo">
+<a href="https://www.law360.com/" style="padding:0;"><img alt="Law360 - The Newswire for Business Lawyers" border="0" height="30" src="https://static.law360news.com/images/Law360-mini.png"/></a>
+</div>
+<div class="mobile-acct-link"><a href="https://www.law360.com/account/login?return_url=https%3A%2F%2Fwww.law360.com%2Farticles%2F508409%2Funilever-to-pay-10m-over-hair-loss-tied-to-suave-product"><i class="fa fa-user"></i> Sign In</a>
+</div>
+<span class="filler" style="height:25px"> 
+  	</span></div>
+</nav>
+<div class="row">
+<div class="mobile-search col-xs-12">
+<form action="/search" class="navbar-form navbar-left" role="search">
+<div class="input-group">
+<input class="form-control" name="q" placeholder="News, cases, companies, firms" type="text" value=""/>
+<span class="input-group-btn">
+<input style="display:none;" type="submit" value="GO"/>
+<button class="btn btn-primary" id="btnGlobalSearchMobile" title="Search button" type="button"><i class="fa fa-search"></i></button>
+</span>
+</div>
+</form>
+<p class="advsearch">
+				Try our <strong><a data-no-turbolink="" href="https://www.law360.com/advanced_search">Advanced Search</a></strong> for more refined results
+			</p>
+</div>
+</div>
+<div class="visible-sm visible-md visible-lg" id="navigation_new">
+<div class="lexis-advance-bar" style="display:none;"><a href="https://advance.lexis.com/" target="_blank" title="Lexis Advance"><img alt="Lexis Advance" border="0" height="30" src="https://static.law360news.com/images/lexisadvance-bar-logo.png"/></a></div>
+<div class="law360-nav" style="border-top: 0;">
+<div class="col-md-4">
+<span class="user"><a href="https://www.law360.com/account/login?return_url=https%3A%2F%2Fwww.law360.com%2Farticles%2F508409%2Funilever-to-pay-10m-over-hair-loss-tied-to-suave-product"><i class="fa fa-user"></i> Sign In</a></span>
+<div style="padding:10px 0 0 0;">
+<a class="open-menu-options" href="https://www.law360.com/#"><i class="fa fa-bars"></i></a>
+</div>
+</div>
+<div class="hidden-xs col-md-4" style="text-align:center;">
+<a href="https://www.law360.com/" style="padding:0;"><img alt="Law360 - The Newswire for Business Lawyers" border="0" height="80" id="main-menu-logo" src="https://static.law360news.com/images/Law360-ln-mini.png"/></a>
+</div>
+<div class="col-md-4" style="text-align:right;">
+<div class="hidden-xs">
+<div class="search-box-wrapper">
+<form action="/search" class="navbar-form navbar-left" id="SearchField" role="search">
+<div class="input-group">
+<input class="form-control" id="global_search_field" name="q" placeholder="News, cases, companies, firms" type="text" value=""/>
+<div class="input-group-btn">
+<input id="submitSearchField" name="submit" style="display:none;" type="submit" value="Submit"/>
+<button class="btn btn-primary" id="btnSearchResults">Search</button>
+<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span> </button>
+<ul class="dropdown-menu dropdown-menu-right" id="search_specific">
+<li><a class="search-type" href="https://www.law360.com/search" rel="" title="Everything">Search Law360</a></li>
+<li><a class="search-type" href="https://www.law360.com/search/articles" rel="articles" title="News">Search News Only</a></li>
+<li><a class="search-type" href="https://www.law360.com/search/cases" rel="cases" title="Cases">Search Cases Only</a></li>
+<li><a class="search-type" href="https://www.law360.com/search/ptab_cases" rel="ptab_cases" title="PTAB">Search PTAB Only</a></li>
+<li><a class="search-type" href="https://www.law360.com/search/ttab_cases" rel="ttab_cases" title="TTAB">Search TTAB Only</a></li>
+</ul>
+</div>
+</div>
+<span class="advsearch hidden-xs pull-right" style="clear:both;font-size:10px;color:#be151d;display:block;margin-top:5px;"><a data-no-turbolink="" href="https://www.law360.com/advanced_search" style="color:#be151d;">Advanced Search</a></span>
+<input id="facet" name="facet" type="hidden" value=""/>
+<input id="facet_added" name="facet_added" type="hidden" value=""/>
+<input id="facet_removed" name="facet_removed" type="hidden" value=""/>
+<input id="range_filter" name="range_filter" type="hidden" value=""/>
+<input id="date_start" name="date_start" type="hidden" value=""/>
+<input id="date_end" name="date_end" type="hidden" value=""/>
+<input id="per_page" name="per_page" type="hidden" value=""/>
+<input id="view_style" name="view_style" type="hidden" value=""/>
+<input id="filter" name="filter" type="hidden" value=""/>
+<input id="c_sort" name="c_sort" type="hidden" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="sections-menu col-md-12">
+<a href="https://www.law360.com/ip">Intellectual Property</a>
+<a href="https://www.law360.com/securities">Securities</a>
+<a href="https://www.law360.com/bankruptcy">Bankruptcy</a>
+<a href="https://www.law360.com/competition">Competition</a>
+<a href="https://www.law360.com/employment">Employment</a>
+<a href="https://www.law360.com/whitecollar">White Collar</a>
+<a class="special" href="https://www.law360.com/legalindustry">Legal Industry</a>
+<a class="special" href="https://www.law360.com/access-to-justice">Access To Justice</a>
+<a class="special" href="https://www.law360.com/in-depth">In-Depth</a>
+<a class="special" href="https://www.law360.co.uk">Law360 UK</a>
+<span>||</span>
+<a class="section-all" href="https://www.law360.com/#sections_menu">See all <em>60</em> sections</a>
+</div>
+<div class="rule"> </div>
+<div class="rule"> </div>
+<div class="rule"> </div>
+</div>
+<div id="sections_menu" style="display:none;">
+<h2>US Sections</h2>
+<div class="col-md-4">
+<a class="section" href="https://www.law360.com/access-to-justice" title="Access to Justice">Access to Justice</a>
+<a class="section" href="https://www.law360.com/aerospace" title="Aerospace &amp; Defense">Aerospace &amp; Defense</a>
+<a class="section" href="https://www.law360.com/appellate" title="Appellate">Appellate</a>
+<a class="section" href="https://www.law360.com/assetmanagement" title="Asset Management">Asset Management</a>
+<a class="section" href="https://www.law360.com/banking" title="Banking">Banking</a>
+<a class="section" href="https://www.law360.com/bankruptcy" title="Bankruptcy">Bankruptcy</a>
+<a class="section" href="https://www.law360.com/benefits" title="Benefits">Benefits</a>
+<a class="section" href="https://www.law360.com/california" title="California">California</a>
+<a class="section" href="https://www.law360.com/capitalmarkets" title="Capital Markets">Capital Markets</a>
+<a class="section" href="https://www.law360.com/classaction" title="Class Action">Class Action</a>
+<a class="section" href="https://www.law360.com/commercialcontracts" title="Commercial Contracts">Commercial Contracts</a>
+<a class="section" href="https://www.law360.com/competition" title="Competition">Competition</a>
+<a class="section" href="https://www.law360.com/compliance" title="Compliance">Compliance</a>
+<a class="section" href="https://www.law360.com/construction" title="Construction">Construction</a>
+<a class="section" href="https://www.law360.com/consumerprotection" title="Consumer Protection">Consumer Protection</a>
+<a class="section" href="https://www.law360.com/corporate" title="Corporate">Corporate</a>
+<a class="section" href="https://www.law360.com/cybersecurity-privacy" title="Cybersecurity &amp; Privacy">Cybersecurity &amp; Privacy</a>
+<a class="section" href="https://www.law360.com/delaware" title="Delaware">Delaware</a>
+<a class="section" href="https://www.law360.com/employment" title="Employment">Employment</a>
+<a class="section" href="https://www.law360.com/energy" title="Energy">Energy</a>
+</div>
+<div class="col-md-4">
+<a class="section" href="https://www.law360.com/environmental" title="Environmental">Environmental</a>
+<a class="section" href="https://www.law360.com/fintech" title="Fintech">Fintech</a>
+<a class="section" href="https://www.law360.com/florida" title="Florida">Florida</a>
+<a class="section" href="https://www.law360.com/foodbeverage" title="Food &amp; Beverage">Food &amp; Beverage</a>
+<a class="section" href="https://www.law360.com/governmentcontracts" title="Government Contracts">Government Contracts</a>
+<a class="section" href="https://www.law360.com/health" title="Health">Health</a>
+<a class="section" href="https://www.law360.com/hospitality" title="Hospitality">Hospitality</a>
+<a class="section" href="https://www.law360.com/illinois" title="Illinois">Illinois</a>
+<a class="section" href="https://www.law360.com/immigration" title="Immigration">Immigration</a>
+<a class="section" href="https://www.law360.com/insurance" title="Insurance">Insurance</a>
+<a class="section" href="https://www.law360.com/ip" title="Intellectual Property">Intellectual Property</a>
+<a class="section" href="https://www.law360.com/internationalarbitration" title="International Arbitration">International Arbitration</a>
+<a class="section" href="https://www.law360.com/internationaltrade" title="International Trade">International Trade</a>
+<a class="section" href="https://www.law360.com/legalethics" title="Legal Ethics">Legal Ethics</a>
+<a class="section" href="https://www.law360.com/legalindustry" title="Legal Industry">Legal Industry</a>
+<a class="section" href="https://www.law360.com/lifesciences" title="Life Sciences">Life Sciences</a>
+<a class="section" href="https://www.law360.com/massachusetts" title="Massachusetts">Massachusetts</a>
+<a class="section" href="https://www.law360.com/media" title="Media &amp; Entertainment">Media &amp; Entertainment</a>
+<a class="section" href="https://www.law360.com/mergersacquisitions" title="Mergers &amp; Acquisitions">Mergers &amp; Acquisitions</a>
+</div>
+<div class="col-md-4">
+<a class="section" href="https://www.law360.com/nativeamerican" title="Native American">Native American</a>
+<a class="section" href="https://www.law360.com/newjersey" title="New Jersey">New Jersey</a>
+<a class="section" href="https://www.law360.com/newyork" title="New York">New York</a>
+<a class="section" href="https://www.law360.com/pennsylvania" title="Pennsylvania">Pennsylvania</a>
+<a class="section" href="https://www.law360.com/personal-injury-medical-malpractice" title="Personal Injury &amp; Medical Malpractice">Personal Injury &amp; Medical Malpractice</a>
+<a class="section" href="https://www.law360.com/privateequity" title="Private Equity">Private Equity</a>
+<a class="section" href="https://www.law360.com/productliability" title="Product Liability">Product Liability</a>
+<a class="section" href="https://www.law360.com/projectfinance" title="Project Finance">Project Finance</a>
+<a class="section" href="https://www.law360.com/publicpolicy" title="Public Policy">Public Policy</a>
+<a class="section" href="https://www.law360.com/realestate" title="Real Estate">Real Estate</a>
+<a class="section" href="https://www.law360.com/retail" title="Retail &amp; E-Commerce">Retail &amp; E-Commerce</a>
+<a class="section" href="https://www.law360.com/securities" title="Securities">Securities</a>
+<a class="section" href="https://www.law360.com/sports-and-betting" title="Sports &amp; Betting">Sports &amp; Betting</a>
+<a class="section" href="https://www.law360.com/tax" title="Tax">Tax</a>
+<a class="section" href="https://www.law360.com/technology" title="Technology">Technology</a>
+<a class="section" href="https://www.law360.com/telecom" title="Telecommunications">Telecommunications</a>
+<a class="section" href="https://www.law360.com/texas" title="Texas">Texas</a>
+<a class="section" href="https://www.law360.com/transportation" title="Transportation">Transportation</a>
+<a class="section" href="https://www.law360.com/trials" title="Trials">Trials</a>
+<a class="section" href="https://www.law360.com/whitecollar" title="White Collar">White Collar</a>
+</div>
+<div class="col-md-12"> </div>
+<h2>Global Sections</h2>
+<div class="col-md-12">
+<a class="section" href="https://www.law360.com/corporate-crime-uk" title="UK Corporate Crime &amp; Compliance UK">Corporate Crime &amp; Compliance UK</a>
+<a class="section" href="https://www.law360.com/financial-services-uk" title="UK Financial Services UK">Financial Services UK</a>
+<a class="section" href="https://www.law360.com/insurance-uk" title="UK Insurance UK">Insurance UK</a>
+</div>
+</div>
+<div id="menu-options">
+<div style="text-align:right;padding:5px 10px;">
+<a class="close-menu-options visible-sm visible-md visible-lg" href="https://www.law360.com/#"><i class="fa fa-times-circle"></i> Close</a>
+</div>
+<ul class="list-group">
+<li class="list-heading">Products</li>
+<li class="list-group-item"><a href="https://advance.lexis.com/" target="_blank" title="Lexis Advance">Lexis Advance</a></li>
+<li class="list-group-item" style="background-color:#fff;padding:3px 8px;display:none;"><a data-no-turbolink="" href="https://www.law360.com/tax-authority"><img alt="Law360 Tax Authority" border="0" height="35" src="https://static.law360news.com/images/law360-taxauthority-logo.png"/></a></li>
+<li class="list-group-item"><a href="https://www.law360.com/in-depth">Law360 In-Depth</a></li>
+<li class="list-group-item"><a data-no-turbolink="" href="//www.law360.co.uk/">Law360 UK</a></li>
+<li class="list-group-item"><a href="http://blogs.law360.com/" target="_new" title="Law360 Blog Updates">Law360 Updates</a></li>
+<li class="list-heading">Beta Tools</li>
+<li class="list-group-item"><a href="https://www.law360.com/advanced_search/dockets" title="Track docs">Track docs</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/advanced_search/attorneys" title="Track attorneys">Track attorneys</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/advanced_search/judges" title="Track judges">Track judges</a></li>
+</ul>
+<ul class="list-group">
+<li class="list-group-item"><a data-no-turbolink="" href="https://www.law360.com/advanced_search">Adv. Search &amp; Platform Tools</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/sections" style="font-weight:bold;">Browse all sections <i class="fa fa-chevron-circle-right"></i></a></li>
+<li class="list-group-item"><a href="https://www.law360.com/banking">Banking</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/bankruptcy">Bankruptcy</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/classaction">Class Action</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/competition">Competition</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/employment">Employment</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/energy">Energy</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/expertanalysis">Expert Analysis</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/insurance">Insurance</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/ip">Intellectual Property</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/productliability">Product Liability</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/securities">Securities</a></li>
+<li class="list-heading">Rankings</li>
+<li class="list-group-item"><a href="https://www.law360.com/articles/1105965/the-data-driven-lawyers-of-2018?site-menu=1">Data-Driven Lawyers</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/articles/1078420/the-2018-regional-powerhouses?site-menu=1">Regional Powerhouses</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/legalindustry/articles/992207/law360-mvp-awards-go-to-top-attorneys-from-78-firms?site-menu=1">Law360's MVPs</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/legalindustry/articles/1164440?site-menu=1">Glass Ceiling Report</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/legalindustry/articles/1060304?site-menu=1">Global 20</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/legalindustry/articles/1159548/the-law360-400?site-menu=1">Law360 400</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/articles/1177089/the-2019-law360-diversity-snapshot?site-menu=1">Diversity Snapshot</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/articles/998948/law360-names-practice-groups-of-the-year?site-menu=1">Practice Groups of the Year</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/articles/1064240/law360-names-top-attorneys-under-40?site-menu=1">Rising Stars</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/articles/1150639?site-menu=1">Titans of the Plaintiffs Bar</a></li>
+<li class="list-heading">Site Menu</li>
+<li class="list-group-item"><a href="https://www.law360.com/careers" title="Join the Law360 team">Join the Law360 team</a></li>
+<li class="list-group-item"><a href="http://jobs.law360.com/" target="_blank">Search legal jobs</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/about" title="Learn more about Law360">Learn more about Law360</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/testimonials" title="Read testimonials">Read testimonials</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/about/contact" title="Contact Law360">Contact Law360</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/newsletters" title="Sign up for our newsletters">Sign up for our newsletters</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/site_index">Site Map</a></li>
+<li class="list-group-item"><a href="https://www.law360.com/faq" title="Help: Frequently Asked Questions">Help</a></li>
+</ul>
+</div>
+</header>
+<div id="Page">
+<div class="clearfix" id="Main">
+<div class="container-fluid">
+<div class="alert alert-warning" id="gdpr" style="">
+	We use cookies on this site to enable your digital experience. By continuing to use this site, you are agreeing to our <a href="https://www.lexisnexis.com/global/privacy/privacy-cookies/default.aspx">cookie policy</a>. <a class="cookie-agree pull-right" href="https://www.law360.com/#">close <i class="fa fa-times"></i></a>
+</div>
+<div class="row" id="Page_Messaging" style="padding:12px;">
+</div>
+<div id="chrome_extension_download" style="display: block;">
+<span class="pull-right" id="btn-close-banner"><i class="fa fa-times-circle"></i></span>
+<img border="0" class="chrome-icon" src="https://static.law360news.com/images/google-chrome-icon.png"/>
+<p>Make sure you don't miss any Law360 breaking news.</p>
+<a class="btn btn-default" href="https://chrome.google.com/webstore/detail/law360/dcfplimfcdkilcpohpccnfgkghbimblp" id="btn-download-chrome-ext" target="_new">Download our plug-in for Chrome to get customizable, real-time news alerts <i class="fa fa-arrow-down"></i></a>
+</div>
+<div class="row" id="article_template">
+<script>
+		ArticleID = '508409';
+		ArticlesCDN = 'https://assets.law360news.com';
+		AssetHost = 'https://static.law360news.com';
+		SectionName = 'Class Action';
+	</script>
+<style>
+	#teaser {font-size:18px; line-height: 160%;}
+	#teaser .fade1 {color:#a1a1a1;}
+	#teaser .fade2 {color:#b5b5b5;}
+	#teaser .fade3 {color:#e8e8e8;}
+	#teaser .fade4 {color:#f1f1f1;}
+	#teaser .fade5 {color:#f9f9f9;}
+	#article h1.entry-title {font-size: 36px; margin-bottom: 40px;}
+	#article_right #article-utils {font-size:16px; line-height: 20px;}
+	@media (max-device-width: 736px) {
+			#article h1.entry-title,
+			#article-full-width h1.entry-title {
+			    font-size: 24px;
+			    font-weight: normal;
+			    margin-top: 0px;
+			    margin-bottom: 15px;
+			}
+			#teaser {font-size:16px; line-height: 150%;}
+	}
+</style>
+<div class="col-sm-8 col-md-8">
+<div class="hnews hentry" id="article">
+<h1 class="entry-title">Unilever To Pay $10M Over Hair Loss Tied To Suave Product</h1>
+<div class="entry-content" id="article-body" onmousedown="return false;" onselectstart="return false;" style="min-height:275px; -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on">
+<div id="teaser">
+						Law360, New York (February 10, 2014,  1:09 PM EST) -- Unilever PLC will pay $10. 2 million to settle a <span class="fade1">class </span><span class="fade1">action </span><span class="fade1">accusing </span><span class="fade1">it </span><span class="fade1">of </span><span class="fade1">misleading </span><span class="fade1">consumers </span><span class="fade1">about </span><span class="fade1">a </span><span class="fade1">Suave </span><span class="fade2">brand </span><span class="fade2">hair </span><span class="fade2">treatment </span><span class="fade2">that </span><span class="fade2">allegedly </span><span class="fade2">causes </span><span class="fade2">unwanted, </span><span class="fade2">significant </span><span class="fade2">hair </span><span class="fade2">loss, </span><span class="fade2">according </span><span class="fade2">to </span><span class="fade2">a </span><span class="fade2">proposal </span><span class="fade2">filed </span><span class="fade3">Friday </span><span class="fade3">in </span><span class="fade3">Illinois </span><span class="fade3">federal </span><span class="fade3">court. </span><span class="fade3">The </span><span class="fade3">plaintiffs </span><span class="fade3">brought </span><span class="fade3">the </span><span class="fade3">suit </span><span class="fade3">in </span><span class="fade3">August </span><span class="fade3">2012, </span><span class="fade3">seeking </span><span class="fade3">redress </span><span class="fade3">for </span><span class="fade3">consumers </span><span class="fade3">who </span><span class="fade3">purchased </span><span class="fade3">or </span><span class="fade3">used </span><span class="fade3">the </span><span class="fade3">Suave </span><span class="fade3">Professionals </span><span class="fade3">Keratin </span><span class="fade4">Infusion </span><span class="fade4">30-Day </span><span class="fade4">Smoothing </span><span class="fade4">Kit, </span><span class="fade4">which </span><span class="fade4">was </span><span class="fade4">marketed </span><span class="fade4">in </span><span class="fade4">the </span><span class="fade4">U. </span><span class="fade4">S. </span><span class="fade4"> </span><span class="fade4">for </span><span class="fade4">approximately </span><span class="fade4">five </span><span class="fade4">months, </span><span class="fade4">until </span><span class="fade4">its </span><span class="fade4">recall </span><span class="fade4">in </span><span class="fade5">early </span><span class="fade5">May </span><span class="fade5">2012, </span><span class="fade5">according </span><span class="fade5">to </span><span class="fade5">a </span><span class="fade5">joint </span><span class="fade5">memorandum </span><span class="fade5">in </span><span class="fade5">support </span><span class="fade5">of </span><span class="fade5">the </span><span class="fade5">proposed </span><span class="fade5">settlement. </span><span class="fade5">Unilever </span><span class="fade5">will </span><span class="fade5">actually </span><span class="fade5">escape </span><span class="fade5">three </span><span class="fade5">proposed </span><span class="fade5">class </span><span class="fade5">actions </span><span class="fade5">with </span><span class="fade5">the. </span><span class="fade5">. </span><span class="fade5">. </span><span class="fade5">
+</span></div>
+</div>
+<div class="feature-box">
+<h3>Stay ahead of the curve</h3>
+<p>In the legal profession, information is the key to success. You have to know what’s happening with clients, competitors, practice areas, and industries. Law360 provides the intelligence you need to remain an expert and beat the competition.
+						</p>
+<br/>
+<ul>
+<li>Access to case data within articles (numbers, filings, courts, nature of suit, and more.)</li>
+<li>Access to attached documents such as <strong>briefs, petitions, complaints, decisions, motions, etc.</strong></li>
+<li>Create custom alerts for specific article and case topics and <a href="https://www.law360.com/about" title="About Law360">so much more!</a></li>
+</ul>
+<p class="try-free">TRY LAW360 <strong>FREE</strong> FOR SEVEN DAYS</p>
+<input id="hdnTeaserIndicator" type="hidden" value="true"/>
+<div class="instant_access">
+<div class="call-to-action">
+<a class="btn btn-success btn-block btn-lg" data-target="#FreeTrialModal" data-toggle="modal" href="https://www.law360.com/#" id="btnTrialFormTest" title="Read the full article"><i aria-hidden="true" class="fa fa-key"></i>  Read the full article</a>
+<p class="already-subscribed-copy">Already a subscriber? <a href="https://www.law360.com/account/login?return_url=https%3A%2F%2Fwww.law360.com%2Farticles%2F508409%2Funilever-to-pay-10m-over-hair-loss-tied-to-suave-product" style="text-decoration: underline">Click here to login</a></p>
+</div>
+</div>
+</div>
+<div id="additional_articles"></div>
+</div>
+</div>
+<div class="col-sm-4 col-md-4">
+<div id="article_right">
+<div id="article-utils">
+<div class="util-content">
+<div class="attached-docs">
+<h3>Attached Documents</h3>
+<ul data-no-turbolink="">
+<li class="document">
+<a href="https://www.law360.com/articles/508409/attachments/0"><i class="fa fa-file-pdf-o"></i> Memorandum</a>
+</li>
+</ul>
+</div>
+<h3>Related</h3>
+<h4>Sections</h4>
+<ul>
+<li>
+<a class="signup" href="https://www.law360.com/classaction/newsletter" title="Sign up for the Class Action daily newsletter."><i class="fa fa-envelope-o"></i></a>
+<span class="trackable"><a href="https://www.law360.com/classaction?article_sidebar=1" title="Class Action">Class Action</a></span>
+</li>
+<li>
+<a class="signup" href="https://www.law360.com/consumerprotection/newsletter" title="Sign up for the Consumer Protection daily newsletter."><i class="fa fa-envelope-o"></i></a>
+<span class="trackable"><a href="https://www.law360.com/consumerprotection?article_sidebar=1" title="Consumer Protection">Consumer Protection</a></span>
+</li>
+<li>
+<a class="signup" href="https://www.law360.com/illinois/newsletter" title="Sign up for the Illinois daily newsletter."><i class="fa fa-envelope-o"></i></a>
+<span class="trackable"><a href="https://www.law360.com/illinois?article_sidebar=1" title="Illinois">Illinois</a></span>
+</li>
+<li>
+<a class="signup" href="https://www.law360.com/productliability/newsletter" title="Sign up for the Product Liability daily newsletter."><i class="fa fa-envelope-o"></i></a>
+<span class="trackable"><a href="https://www.law360.com/productliability?article_sidebar=1" title="Product Liability">Product Liability</a></span>
+</li>
+</ul>
+<h3>Case Information</h3>
+<h4>Case Title</h4>
+<p>
+<a href="https://www.law360.com/subscribe?article_sidebar=1">Subscribers Only</a>
+</p>
+<h4 style="margin-top: 10px">Case Number</h4>
+<p>
+<a href="https://www.law360.com/subscribe?article_sidebar=1">Subscribers Only</a>
+</p>
+<h4>Court</h4>
+<p>Illinois Northern</p>
+<h4>Nature of Suit</h4>
+<p>190(Contract: Other)</p>
+<h4>Judge</h4>
+<p><a href="https://www.law360.com/subscribe?article_sidebar=1">Subscribers Only</a></p>
+<h4>Date Filed</h4>
+<p>August  1, 2012</p>
+<h4>Law Firms</h4>
+<ul>
+<li><a class="track" href="https://www.law360.com/tracked_entities/create?entity_type=firms&amp;entity_id=4c52dd5dcc956f21c4002144&amp;entity_name=Morgan+%26+Morgan&amp;entity_url_name=morgan-morgan &amp;entity_model=Organization" title="Receive daily reports every time a new story is published or case is filed involving this firm."><i class="fa fa-envelope-o"></i></a> <span class="trackable"><a href="https://www.law360.com/firms/morgan-morgan?article_related_content=1">Morgan &amp; Morgan</a></span></li>
+<li><a class="track" href="https://www.law360.com/tracked_entities/create?entity_type=firms&amp;entity_id=4c52dd5fcc956f21c400243b&amp;entity_name=Schiff+Hardin&amp;entity_url_name=schiff-hardin &amp;entity_model=Organization" title="Receive daily reports every time a new story is published or case is filed involving this firm."><i class="fa fa-envelope-o"></i></a> <span class="trackable"><a href="https://www.law360.com/firms/schiff-hardin?article_related_content=1">Schiff Hardin</a></span></li>
+</ul>
+<h4>Companies</h4>
+<ul>
+<li><a class="track track-company" href="https://www.law360.com/tracked_entities/create?entity_type=companies&amp;entity_id=4c52dd53cc956f21c4001149&amp;entity_name=Unilever+PLC&amp;entity_url_name=unilever-plc &amp;entity_model=Organization" title="Receive daily reports every time a new story is published or case is filed involving this company."><i class="fa fa-envelope-o"></i></a> <span class="trackable"><a href="https://www.law360.com/companies/unilever-plc?article_related_content=1">Unilever PLC</a></span></li>
+</ul>
+</div>
+</div>
+<div id="promotional_article"><img border="0" class="loader" src="https://static.law360news.com/images/loading-icon.gif" style="margin-left:70px;"/></div>
+<div id="trending_articles"></div>
+</div>
+</div>
+<script>
+	var $el = $("#article-body"), 
+	body = $("#teaser"),
+	text = $el.text();
+	text = text.replace(/\./g,'. ');
+	text = text.replace(/\?/g,'? ');
+	var words = text.split(" ");
+
+	var html = "";
+	for (var i = 0; i < words.length; i++) {
+		if(i > 20 && i <= 30){
+	    	html += "<span class='fade1'>" + words[i] + " </span>";
+	    }
+	    else if(i > 30 && i <= 45){
+	    	html += "<span class='fade2'>" + words[i] + " </span>";
+	    }
+	    else if(i > 45 && i <= 70){
+	    	html += "<span class='fade3'>" + words[i] + " </span>";
+	    }
+	    else if(i > 70 && i <= 90){
+	    	html += "<span class='fade4'>" + words[i] + " </span>";
+	    }
+	    else if(i > 90){
+	    	html += "<span class='fade5'>" + words[i] + " </span>";
+	    }
+	    else {
+	    	html += words[i] + " ";
+	    }
+	};
+
+	body.html(html);
+
+	$('#btnTrialFormTest').on('click', function(e){
+        var button_copy = $(this).attr('title');
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'free trial button copy',
+            eventAction: 'click',
+            eventLabel: button_copy + ' : Unilever To Pay $10M Over Hair Loss Tied To Suave Product'
+        });
+    });
+</script>
+<script src="https://static.law360news.com/assets/www/article_sidebar-2352fa9363bdf7364b3737288a46832e.js"></script>
+</div>
+</div>
+</div>
+</div>
+<footer id="Footer">
+<img alt="RELX Group" border="0" class="pull-right" src="https://static.law360news.com/images/relxgroup-logo-footer.png" style="padding:8px 0 0 0;"/>
+<img alt="Lexis Nexis" border="0" class="pull-left" src="https://static.law360news.com/images/lexisnexis-logo-footer.png" style="padding:8px 0 0 8px;"/>
+<p class="copyright" style="text-align:center;">© 2019, Portfolio Media, Inc. <a href="https://www.law360.com/about" title="About Law360">About</a> | <a href="https://www.law360.com/about/contact" title="Contact Us">Contact Us</a> | <a href="http://jobs.law360.com/">Legal Jobs</a> | <a href="https://www.law360.com/careers" title="Careers at Law360">Careers at Law360</a> | <a href="https://www.law360.com/terms" title="Terms of Use">Terms</a> | <a href="https://www.law360.com/privacy_policy" target="_blank" title="Privacy Policy">Privacy Policy</a> | <a href="https://www.lexisnexis.com/global/privacy/privacy-cookies/default.aspx" target="_blank">Cookie Policy</a> | <a href="https://www.law360.com/faq" title="FAQ Help">Help</a> | <a href="https://www.law360.com/site_index" title="Site Map">Site Map</a>
+</p>
+</footer>
+</div>
+<script type="text/javascript">
+	//GA Universal
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	//domain = 'www.law360.com';
+	ga('create', 'UA-3460073-1', 'auto', {'allowLinker': true});
+    ga('require', 'linker');
+    ga('linker:autoLink', ['law360.com','law360.co.uk'] );
+    ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+	
+
+			ga('set', 'dimension6', 'Anonymous');
+			ga('set', 'dimension7', 'Unpaid');
+			ga('set', 'dimension9', 'Unknown');
+			ga('set', 'dimension3', 'Unspecified');
+			ga('set', 'dimension4', 'Unilever-To-Pay-$10M-Over-Hair-Loss-Tied-To-Suave-Product');
+			ga('set', 'dimension10', '508409');
+			ga('set', 'dimension5', 'Partial');
+
+			ga('send', 'event', 'Sections', 'Unspecified' , 'Unilever To Pay $10M Over Hair Loss Tied To Suave Product');
+			ga('send', 'event', 'Article Free Trial Views', 'Unilever To Pay $10M Over Hair Loss Tied To Suave Product' );
+			ga('send', 'event', 'Article Partial Views by ID', '508409' , 'Free Trial');
+	
+</script>
+<div aria-hidden="false" aria-labelledby="myModalLabel" class="modal in" id="FreeTrialModal" role="dialog" style="display: block;" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="myModalLabel">Already have access? <a href="https://www.law360.com/account/login?return_url=https%3A%2F%2Fwww.law360.com%2Farticles%2F508409%2Funilever-to-pay-10m-over-hair-loss-tied-to-suave-product" style="text-decoration: underline">Click here to login</a></h4>
+</div>
+<div class="modal-body">
+<div class="mobile-register visible-xs">
+<h2>Get instant access to the one-stop news source for business lawyers</h2>
+<a class="btn btn-danger btn-block" href="https://www.law360.com/subscribe/get_instant_access?target_url=https%3A%2F%2Fwww.law360.com%2Farticles%2F508409%2Funilever-to-pay-10m-over-hair-loss-tied-to-suave-product">Register Now!</a>
+</div>
+<style>
+	.ui-widget-content .btn-danger {color:#FFFFFF;outline:none;}
+	#FreeTrialLogin .checkbox {display:block; float:left;width:33%; margin: 5px 0;}
+	#FreeTrialLogin .checkbox input[type="checkbox"] {margin-top: 1px;}
+	#FreeTrialLogin .show_more_interests {margin:10px 0 20px; float: left; clear:both;}
+	#FreeTrialLogin .show_more_interests h6 {color:#333;cursor: pointer;}
+	#FreeTrialLogin #no-account p.privacy { font-size:11px; color:#444; height:40px;}
+	#FreeTrialLogin #no-account p.privacy a {color:#444; text-decoration: underline;}
+	#FreeTrialLogin #no-account p.instruction {color:#fff; height:40px; font-size:11px; }
+</style>
+<div id="FreeTrialLogin">
+<div class="hidden-xs" id="no-account">
+<h2>Sign up now for free access to this content</h2>
+<p class="instruction">Enter your details below and select your area(s) of interest to stay ahead of the curve and receive Law360's daily newsletters</p>
+<div class="msgcontainer">
+<div id="PersonalizeFormValidation"><p></p></div>
+<div id="PersonalizeFormSuccess"><p></p></div>
+<div id="ValidationMessage"><p></p></div>
+</div>
+<form action="/subscribe/free_trial_login" id="FreeTrialForm" method="post">
+<input type="hidden"/>
+<input name="ab_template" type="hidden" value="Free Trial Standard Modal Desktop"/>
+<input name="authenticity_token" type="hidden" value="YK6O+/4rXf3aMkcGO6d48bK2AIFSdEK+qMPar+VMMtrYlYYzFdzNVId+HUkSc6Vbk5Rj8CGjvO7IsBa60v5Vdw=="/>
+<input name="target_url" type="hidden" value="https://www.law360.com/articles/508409/unilever-to-pay-10m-over-hair-loss-tied-to-suave-product"/>
+<div class="row">
+<div class="col-md-12">
+<p>
+<label for="user_email">Email <span class="req">(NOTE: Free email domains not supported)</span></label>
+<input alt="Email" class="input email" id="user_email" name="user[email]" size="30" tabindex="1" type="email" value=""/>
+</p>
+</div>
+<div class="col-md-6">
+<div class="user_password">
+<p>
+<label for="user_fn">First Name</label>
+<input alt="First Name" class="input required" id="user_fn" name="user[first_name]" size="30" tabindex="2" type="text" value=""/>
+</p>
+<p>
+<label for="user_ln">Last Name</label>
+<input alt="Last Name" class="input required" id="user_ln" name="user[last_name]" size="30" tabindex="3" type="text" value=""/>
+</p>
+</div>
+</div>
+<div class="col-md-6">
+<div class="interest_confirm">
+<p style="display:none;">
+<span style="display:block;padding:5px;color:#000;background-color:#fff;border-radius:3px;"><strong>PLEASE NOTE:</strong> A verification email will be sent to your address before you can access your trial.</span>
+</p>
+<p>
+<label for="user_password">Password <span class="req">(at least 8 characters required)</span></label>
+<input alt="Password" class="input password" id="user_password" name="user[password]" size="30" tabindex="4" type="password" value=""/>
+</p>
+<p>
+<label for="confirm_password">Confirm Password</label>
+<input alt="Confirm Password" class="input confirm" id="confirm_password" name="confirm[password]" size="30" tabindex="5" type="password" value=""/>
+</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<label for="areas_of_interest">Select at least one primary interest:</label>
+<div class="mustselect" id="areas_of_interest" title="Select an Interest Area">
+<label class="checkbox" for="newsletter_classaction">
+<input id="newsletter_classaction" name="user[areas_of_interest][]" title="Class Action" type="checkbox" value="classaction"/> Class Action
+										</label>
+<label class="checkbox" for="newsletter_consumerprotection">
+<input id="newsletter_consumerprotection" name="user[areas_of_interest][]" title="Consumer Protection" type="checkbox" value="consumerprotection"/> Consumer Protection
+										</label>
+<label class="checkbox" for="newsletter_illinois">
+<input id="newsletter_illinois" name="user[areas_of_interest][]" title="Illinois" type="checkbox" value="illinois"/> Illinois
+										</label>
+<label class="checkbox" for="newsletter_productliability">
+<input id="newsletter_productliability" name="user[areas_of_interest][]" title="Product Liability" type="checkbox" value="productliability"/> Product Liability
+										</label>
+<div class="show_more_interests">
+<h6 id="toggle_more_interests"><i class="fa fa-plus-circle"></i> Show all interests</h6>
+<div class="more_interests_checkboxes" style="display:none;">
+<label class="checkbox" for="newsletter_access-to-justice">
+<input id="newsletter_access-to-justice" name="user[areas_of_interest][]" title="Access to Justice" type="checkbox" value="access-to-justice"/> Access To Justice
+												</label>
+<label class="checkbox" for="newsletter_aerospace">
+<input id="newsletter_aerospace" name="user[areas_of_interest][]" title="Aerospace &amp; Defense" type="checkbox" value="aerospace"/> Aerospace &amp; Defense
+												</label>
+<label class="checkbox" for="newsletter_appellate">
+<input id="newsletter_appellate" name="user[areas_of_interest][]" title="Appellate" type="checkbox" value="appellate"/> Appellate
+												</label>
+<label class="checkbox" for="newsletter_assetmanagement">
+<input id="newsletter_assetmanagement" name="user[areas_of_interest][]" title="Asset Management" type="checkbox" value="assetmanagement"/> Asset Management
+												</label>
+<label class="checkbox" for="newsletter_banking">
+<input id="newsletter_banking" name="user[areas_of_interest][]" title="Banking" type="checkbox" value="banking"/> Banking
+												</label>
+<label class="checkbox" for="newsletter_bankruptcy">
+<input id="newsletter_bankruptcy" name="user[areas_of_interest][]" title="Bankruptcy" type="checkbox" value="bankruptcy"/> Bankruptcy
+												</label>
+<label class="checkbox" for="newsletter_benefits">
+<input id="newsletter_benefits" name="user[areas_of_interest][]" title="Benefits" type="checkbox" value="benefits"/> Benefits
+												</label>
+<label class="checkbox" for="newsletter_california">
+<input id="newsletter_california" name="user[areas_of_interest][]" title="California" type="checkbox" value="california"/> California
+												</label>
+<label class="checkbox" for="newsletter_capitalmarkets">
+<input id="newsletter_capitalmarkets" name="user[areas_of_interest][]" title="Capital Markets" type="checkbox" value="capitalmarkets"/> Capital Markets
+												</label>
+<label class="checkbox" for="newsletter_commercialcontracts">
+<input id="newsletter_commercialcontracts" name="user[areas_of_interest][]" title="Commercial Contracts" type="checkbox" value="commercialcontracts"/> Commercial Contracts
+												</label>
+<label class="checkbox" for="newsletter_competition">
+<input id="newsletter_competition" name="user[areas_of_interest][]" title="Competition" type="checkbox" value="competition"/> Competition
+												</label>
+<label class="checkbox" for="newsletter_compliance">
+<input id="newsletter_compliance" name="user[areas_of_interest][]" title="Compliance" type="checkbox" value="compliance"/> Compliance
+												</label>
+<label class="checkbox" for="newsletter_construction">
+<input id="newsletter_construction" name="user[areas_of_interest][]" title="Construction" type="checkbox" value="construction"/> Construction
+												</label>
+<label class="checkbox" for="newsletter_corporate">
+<input id="newsletter_corporate" name="user[areas_of_interest][]" title="Corporate" type="checkbox" value="corporate"/> Corporate
+												</label>
+<label class="checkbox" for="newsletter_uk-corporate-crime">
+<input id="newsletter_uk-corporate-crime" name="user[areas_of_interest][]" title="Corporate Crime &amp; Compliance UK" type="checkbox" value="uk-corporate-crime"/> Corporate Crime &amp; Compliance Uk
+												</label>
+<label class="checkbox" for="newsletter_cybersecurity-privacy">
+<input id="newsletter_cybersecurity-privacy" name="user[areas_of_interest][]" title="Cybersecurity &amp; Privacy" type="checkbox" value="cybersecurity-privacy"/> Cybersecurity &amp; Privacy
+												</label>
+<label class="checkbox" for="newsletter_delaware">
+<input id="newsletter_delaware" name="user[areas_of_interest][]" title="Delaware" type="checkbox" value="delaware"/> Delaware
+												</label>
+<label class="checkbox" for="newsletter_employment">
+<input id="newsletter_employment" name="user[areas_of_interest][]" title="Employment" type="checkbox" value="employment"/> Employment
+												</label>
+<label class="checkbox" for="newsletter_energy">
+<input id="newsletter_energy" name="user[areas_of_interest][]" title="Energy" type="checkbox" value="energy"/> Energy
+												</label>
+<label class="checkbox" for="newsletter_environmental">
+<input id="newsletter_environmental" name="user[areas_of_interest][]" title="Environmental" type="checkbox" value="environmental"/> Environmental
+												</label>
+<label class="checkbox" for="newsletter_uk-financial-services">
+<input id="newsletter_uk-financial-services" name="user[areas_of_interest][]" title="Financial Services UK" type="checkbox" value="uk-financial-services"/> Financial Services Uk
+												</label>
+<label class="checkbox" for="newsletter_fintech">
+<input id="newsletter_fintech" name="user[areas_of_interest][]" title="Fintech" type="checkbox" value="fintech"/> Fintech
+												</label>
+<label class="checkbox" for="newsletter_florida">
+<input id="newsletter_florida" name="user[areas_of_interest][]" title="Florida" type="checkbox" value="florida"/> Florida
+												</label>
+<label class="checkbox" for="newsletter_foodbeverage">
+<input id="newsletter_foodbeverage" name="user[areas_of_interest][]" title="Food &amp; Beverage" type="checkbox" value="foodbeverage"/> Food &amp; Beverage
+												</label>
+<label class="checkbox" for="newsletter_governmentcontracts">
+<input id="newsletter_governmentcontracts" name="user[areas_of_interest][]" title="Government Contracts" type="checkbox" value="governmentcontracts"/> Government Contracts
+												</label>
+<label class="checkbox" for="newsletter_health">
+<input id="newsletter_health" name="user[areas_of_interest][]" title="Health" type="checkbox" value="health"/> Health
+												</label>
+<label class="checkbox" for="newsletter_hospitality">
+<input id="newsletter_hospitality" name="user[areas_of_interest][]" title="Hospitality" type="checkbox" value="hospitality"/> Hospitality
+												</label>
+<label class="checkbox" for="newsletter_immigration">
+<input id="newsletter_immigration" name="user[areas_of_interest][]" title="Immigration" type="checkbox" value="immigration"/> Immigration
+												</label>
+<label class="checkbox" for="newsletter_insurance">
+<input id="newsletter_insurance" name="user[areas_of_interest][]" title="Insurance" type="checkbox" value="insurance"/> Insurance
+												</label>
+<label class="checkbox" for="newsletter_uk-insurance">
+<input id="newsletter_uk-insurance" name="user[areas_of_interest][]" title="Insurance UK" type="checkbox" value="uk-insurance"/> Insurance Uk
+												</label>
+<label class="checkbox" for="newsletter_ip">
+<input id="newsletter_ip" name="user[areas_of_interest][]" title="Intellectual Property" type="checkbox" value="ip"/> Intellectual Property
+												</label>
+<label class="checkbox" for="newsletter_internationalarbitration">
+<input id="newsletter_internationalarbitration" name="user[areas_of_interest][]" title="International Arbitration" type="checkbox" value="internationalarbitration"/> International Arbitration
+												</label>
+<label class="checkbox" for="newsletter_internationaltrade">
+<input id="newsletter_internationaltrade" name="user[areas_of_interest][]" title="International Trade" type="checkbox" value="internationaltrade"/> International Trade
+												</label>
+<label class="checkbox" for="newsletter_in-depth">
+<input id="newsletter_in-depth" name="user[areas_of_interest][]" title="Law360 In-Depth" type="checkbox" value="in-depth"/> Law360 In Depth
+												</label>
+<label class="checkbox" for="newsletter_legalethics">
+<input id="newsletter_legalethics" name="user[areas_of_interest][]" title="Legal Ethics" type="checkbox" value="legalethics"/> Legal Ethics
+												</label>
+<label class="checkbox" for="newsletter_lifesciences">
+<input id="newsletter_lifesciences" name="user[areas_of_interest][]" title="Life Sciences" type="checkbox" value="lifesciences"/> Life Sciences
+												</label>
+<label class="checkbox" for="newsletter_massachusetts">
+<input id="newsletter_massachusetts" name="user[areas_of_interest][]" title="Massachusetts" type="checkbox" value="massachusetts"/> Massachusetts
+												</label>
+<label class="checkbox" for="newsletter_media">
+<input id="newsletter_media" name="user[areas_of_interest][]" title="Media &amp; Entertainment" type="checkbox" value="media"/> Media &amp; Entertainment
+												</label>
+<label class="checkbox" for="newsletter_mergersacquisitions">
+<input id="newsletter_mergersacquisitions" name="user[areas_of_interest][]" title="Mergers &amp; Acquisitions" type="checkbox" value="mergersacquisitions"/> Mergers &amp; Acquisitions
+												</label>
+<label class="checkbox" for="newsletter_nativeamerican">
+<input id="newsletter_nativeamerican" name="user[areas_of_interest][]" title="Native American" type="checkbox" value="nativeamerican"/> Native American
+												</label>
+<label class="checkbox" for="newsletter_newjersey">
+<input id="newsletter_newjersey" name="user[areas_of_interest][]" title="New Jersey" type="checkbox" value="newjersey"/> New Jersey
+												</label>
+<label class="checkbox" for="newsletter_newyork">
+<input id="newsletter_newyork" name="user[areas_of_interest][]" title="New York" type="checkbox" value="newyork"/> New York
+												</label>
+<label class="checkbox" for="newsletter_pennsylvania">
+<input id="newsletter_pennsylvania" name="user[areas_of_interest][]" title="Pennsylvania" type="checkbox" value="pennsylvania"/> Pennsylvania
+												</label>
+<label class="checkbox" for="newsletter_personal-injury-medical-malpractice">
+<input id="newsletter_personal-injury-medical-malpractice" name="user[areas_of_interest][]" title="Personal Injury &amp; Medical Malpractice" type="checkbox" value="personal-injury-medical-malpractice"/> Personal Injury &amp; Medical Malpractice
+												</label>
+<label class="checkbox" for="newsletter_privateequity">
+<input id="newsletter_privateequity" name="user[areas_of_interest][]" title="Private Equity" type="checkbox" value="privateequity"/> Private Equity
+												</label>
+<label class="checkbox" for="newsletter_projectfinance">
+<input id="newsletter_projectfinance" name="user[areas_of_interest][]" title="Project Finance" type="checkbox" value="projectfinance"/> Project Finance
+												</label>
+<label class="checkbox" for="newsletter_publicpolicy">
+<input id="newsletter_publicpolicy" name="user[areas_of_interest][]" title="Public Policy" type="checkbox" value="publicpolicy"/> Public Policy
+												</label>
+<label class="checkbox" for="newsletter_realestate">
+<input id="newsletter_realestate" name="user[areas_of_interest][]" title="Real Estate" type="checkbox" value="realestate"/> Real Estate
+												</label>
+<label class="checkbox" for="newsletter_retail">
+<input id="newsletter_retail" name="user[areas_of_interest][]" title="Retail &amp; E-Commerce" type="checkbox" value="retail"/> Retail &amp; E Commerce
+												</label>
+<label class="checkbox" for="newsletter_securities">
+<input id="newsletter_securities" name="user[areas_of_interest][]" title="Securities" type="checkbox" value="securities"/> Securities
+												</label>
+<label class="checkbox" for="newsletter_sports">
+<input id="newsletter_sports" name="user[areas_of_interest][]" title="Sports &amp; Betting" type="checkbox" value="sports"/> Sports &amp; Betting
+												</label>
+<label class="checkbox" for="newsletter_tax">
+<input id="newsletter_tax" name="user[areas_of_interest][]" title="Tax" type="checkbox" value="tax"/> Tax
+												</label>
+<label class="checkbox" for="newsletter_technology">
+<input id="newsletter_technology" name="user[areas_of_interest][]" title="Technology" type="checkbox" value="technology"/> Technology
+												</label>
+<label class="checkbox" for="newsletter_telecom">
+<input id="newsletter_telecom" name="user[areas_of_interest][]" title="Telecommunications" type="checkbox" value="telecom"/> Telecommunications
+												</label>
+<label class="checkbox" for="newsletter_texas">
+<input id="newsletter_texas" name="user[areas_of_interest][]" title="Texas" type="checkbox" value="texas"/> Texas
+												</label>
+<label class="checkbox" for="newsletter_transportation">
+<input id="newsletter_transportation" name="user[areas_of_interest][]" title="Transportation" type="checkbox" value="transportation"/> Transportation
+												</label>
+<label class="checkbox" for="newsletter_trials">
+<input id="newsletter_trials" name="user[areas_of_interest][]" title="Trials" type="checkbox" value="trials"/> Trials
+												</label>
+<label class="checkbox" for="newsletter_whitecollar">
+<input id="newsletter_whitecollar" name="user[areas_of_interest][]" title="White Collar" type="checkbox" value="whitecollar"/> White Collar
+												</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="alert alert-warning">
+<p class="privacy">We take your privacy seriously. As detailed in our <a href="https://www.law360.com/privacy_policy" target="_blank">Privacy Policy</a> we will use your personal information to administer your account and provide the products and services that you have requested from us.</p>
+</div>
+<div class="trial_register">
+<input id="FreeTrialSubmit" name="submit" style="display:none;" type="submit"/>
+<a class="btn btn-danger" href="https://www.law360.com/subscribe/free_trial_login" id="btnReSubmit">Register</a>
+</div>
+</form>
+</div>
+<div id="LoginForm" style="display:none;">
+<h2>Already have access?</h2>
+<form action="/account/login" id="SignInForm" method="post" name="SignInForm">
+<input type="hidden"/>
+<ol>
+<li>
+<label for="email">Email:</label>
+<input alt="Email Required" class="text email" id="email" name="email" type="email"/>
+</li>
+<li style="margin-bottom: 0px">
+<label for="password">Password:</label>
+<input alt="Password Required" class="text required" id="password" name="password" type="password"/>
+<a class="forgot" href="https://www.law360.com/account/forgot_password" style="padding: 5px">Forgot your password?</a>
+</li>
+<li>
+<input checked="checked" id="keep_signed_in" name="keep_signed_in" type="checkbox" value="1"/><label class="inline" for="keep_signed_in" style="font-size: 14px">Remember login</label>
+</li>
+<li>
+<div class="hidden-submit"><input name="submit" type="submit"/></div>
+<a class="btn btn-warning" href="https://www.law360.com/#" id="btnSignIn">Sign In</a>
+</li>
+</ol>
+<input name="authenticity_token" type="hidden" value="YK6O+/4rXf3aMkcGO6d48bK2AIFSdEK+qMPar+VMMtrYlYYzFdzNVId+HUkSc6Vbk5Rj8CGjvO7IsBa60v5Vdw=="/>
+</form>
+</div>
+</div>
+<script>
+	ga('send', {
+	    hitType: 'event',
+		eventCategory: 'Free Trial A/B Test',
+		eventAction: 'view',
+		eventLabel: 'Free Trial Standard Modal'
+	});
+</script>
+</div>
+</div>
+</div>
+</div>
+<style>
+	.validation-message {margin: 8px 0;color:#ffffff;}
+	.all-newsletters {display: none;}
+	.all-newsletters h3 {color:#fff;border-bottom: 1px solid #fff; padding-bottom: 3px;font-weight:normal;font-size:16px;}
+	a.show-more {color: #FFF;font-size:14px; display: block; margin-bottom: 15px;}
+    div.invalid { background: #fdeef4; color: #990000; font-weight: bold; padding: 5px; border-radius: 3px;}
+    #NewsletterModal p.privacy { font-size:11px; color:#444; height:30px;}
+	#NewsletterModal p.privacy a {color:#444; text-decoration: underline;}
+</style>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal" id="NewsletterModal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="myModalLabel">Sign up for our Class Action newsletter</h4>
+</div>
+<div class="modal-body">
+<div id="bluebox">
+<div class="msgcontainer">
+<div id="PersonalizeFormValidation"><p></p></div>
+<div id="PersonalizeFormSuccess"><p></p></div>
+<div id="ValidationMessage"><h3>You must correct or enter the following before you can sign up:</h3><p></p></div>
+</div>
+<form id="subscribe_newsletter_form" method="post">
+<input type="hidden"/>
+<div class="form-group">
+<label>Please provide a professional email:</label>
+<input alt="Email" class="form-control email" id="user_email" name="email" size="30" type="email" value=""/>
+<input name="section[]" type="hidden" value="classaction"/>
+</div>
+<a class="show-more" href="https://www.law360.com/#"><i class="fa fa-plus-square"></i> Select more newsletters to receive for free</a>
+<div class="all-newsletters">
+<div style="float:left;width:50%;">
+<div class="checkbox">
+<label for="newsletter_202">
+<input id="newsletter_202" name="section[]" title="Access to Justice" type="checkbox" value="access-to-justice"/> Access to Justice
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_138">
+<input id="newsletter_138" name="section[]" title="Aerospace &amp; Defense" type="checkbox" value="aerospace"/> Aerospace &amp; Defense
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_104">
+<input id="newsletter_104" name="section[]" title="Appellate" type="checkbox" value="appellate"/> Appellate
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_143">
+<input id="newsletter_143" name="section[]" title="Asset Management" type="checkbox" value="assetmanagement"/> Asset Management
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_7">
+<input id="newsletter_7" name="section[]" title="Banking" type="checkbox" value="banking"/> Banking
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_5">
+<input id="newsletter_5" name="section[]" title="Bankruptcy" type="checkbox" value="bankruptcy"/> Bankruptcy
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_200">
+<input id="newsletter_200" name="section[]" title="Benefits" type="checkbox" value="benefits"/> Benefits
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_115">
+<input id="newsletter_115" name="section[]" title="California" type="checkbox" value="california"/> California
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_145">
+<input id="newsletter_145" name="section[]" title="Capital Markets" type="checkbox" value="capitalmarkets"/> Capital Markets
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_111">
+<input checked="checked" disabled="true" id="newsletter_111" name="section[]" title="Class Action" type="checkbox" value="classaction"/> Class Action
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_106">
+<input id="newsletter_106" name="section[]" title="Commercial Contracts" type="checkbox" value="commercialcontracts"/> Commercial Contracts
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_6">
+<input id="newsletter_6" name="section[]" title="Competition" type="checkbox" value="competition"/> Competition
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_235">
+<input id="newsletter_235" name="section[]" title="Compliance" type="checkbox" value="compliance"/> Compliance
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_201">
+<input id="newsletter_201" name="section[]" title="Construction" type="checkbox" value="construction"/> Construction
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_137">
+<input id="newsletter_137" name="section[]" title="Consumer Protection" type="checkbox" value="consumerprotection"/> Consumer Protection
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_133">
+<input id="newsletter_133" name="section[]" title="Corporate" type="checkbox" value="corporate"/> Corporate
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_127">
+<input id="newsletter_127" name="section[]" title="Cybersecurity &amp; Privacy" type="checkbox" value="cybersecurity-privacy"/> Cybersecurity &amp; Privacy
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_156">
+<input id="newsletter_156" name="section[]" title="Delaware" type="checkbox" value="delaware"/> Delaware
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_3">
+<input id="newsletter_3" name="section[]" title="Employment" type="checkbox" value="employment"/> Employment
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_9">
+<input id="newsletter_9" name="section[]" title="Energy" type="checkbox" value="energy"/> Energy
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_11">
+<input id="newsletter_11" name="section[]" title="Environmental" type="checkbox" value="environmental"/> Environmental
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_301">
+<input id="newsletter_301" name="section[]" title="Fintech" type="checkbox" value="fintech"/> Fintech
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_136">
+<input id="newsletter_136" name="section[]" title="Florida" type="checkbox" value="florida"/> Florida
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_144">
+<input id="newsletter_144" name="section[]" title="Food &amp; Beverage" type="checkbox" value="foodbeverage"/> Food &amp; Beverage
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_112">
+<input id="newsletter_112" name="section[]" title="Government Contracts" type="checkbox" value="governmentcontracts"/> Government Contracts
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_8">
+<input id="newsletter_8" name="section[]" title="Health" type="checkbox" value="health"/> Health
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_139">
+<input id="newsletter_139" name="section[]" title="Hospitality" type="checkbox" value="hospitality"/> Hospitality
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_155">
+<input id="newsletter_155" name="section[]" title="Illinois" type="checkbox" value="illinois"/> Illinois
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_147">
+<input id="newsletter_147" name="section[]" title="Immigration" type="checkbox" value="immigration"/> Immigration
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_103">
+<input id="newsletter_103" name="section[]" title="Insurance" type="checkbox" value="insurance"/> Insurance
+													</label>
+</div>
+</div>
+<div style="float:right;width:50%;">
+<div class="checkbox">
+<label for="newsletter_1">
+<input id="newsletter_1" name="section[]" title="Intellectual Property" type="checkbox" value="ip"/> Intellectual Property
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_152">
+<input id="newsletter_152" name="section[]" title="International Arbitration" type="checkbox" value="internationalarbitration"/> International Arbitration
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_105">
+<input id="newsletter_105" name="section[]" title="International Trade" type="checkbox" value="internationaltrade"/> International Trade
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_154">
+<input id="newsletter_154" name="section[]" title="Law360 In-Depth" type="checkbox" value="in-depth"/> Law360 In-Depth
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_146">
+<input id="newsletter_146" name="section[]" title="Legal Ethics" type="checkbox" value="legalethics"/> Legal Ethics
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_100">
+<input id="newsletter_100" name="section[]" title="Legal Industry" type="checkbox" value=""/> Legal Industry
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_131">
+<input id="newsletter_131" name="section[]" title="Life Sciences" type="checkbox" value="lifesciences"/> Life Sciences
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_196">
+<input id="newsletter_196" name="section[]" title="Massachusetts" type="checkbox" value="massachusetts"/> Massachusetts
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_126">
+<input id="newsletter_126" name="section[]" title="Media &amp; Entertainment" type="checkbox" value="media"/> Media &amp; Entertainment
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_107">
+<input id="newsletter_107" name="section[]" title="Mergers &amp; Acquisitions" type="checkbox" value="mergersacquisitions"/> Mergers &amp; Acquisitions
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_148">
+<input id="newsletter_148" name="section[]" title="Native American" type="checkbox" value="nativeamerican"/> Native American
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_135">
+<input id="newsletter_135" name="section[]" title="New Jersey" type="checkbox" value="newjersey"/> New Jersey
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_116">
+<input id="newsletter_116" name="section[]" title="New York" type="checkbox" value="newyork"/> New York
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_134">
+<input id="newsletter_134" name="section[]" title="Pennsylvania" type="checkbox" value="pennsylvania"/> Pennsylvania
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_158">
+<input id="newsletter_158" name="section[]" title="Personal Injury &amp; Medical Malpractice" type="checkbox" value="personal-injury-medical-malpractice"/> Personal Injury &amp; Medical Malpractice
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_128">
+<input id="newsletter_128" name="section[]" title="Private Equity" type="checkbox" value="privateequity"/> Private Equity
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_4">
+<input id="newsletter_4" name="section[]" title="Product Liability" type="checkbox" value="productliability"/> Product Liability
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_130">
+<input id="newsletter_130" name="section[]" title="Project Finance" type="checkbox" value="projectfinance"/> Project Finance
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_132">
+<input id="newsletter_132" name="section[]" title="Public Policy" type="checkbox" value="publicpolicy"/> Public Policy
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_129">
+<input id="newsletter_129" name="section[]" title="Real Estate" type="checkbox" value="realestate"/> Real Estate
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_142">
+<input id="newsletter_142" name="section[]" title="Retail &amp; E-Commerce" type="checkbox" value="retail"/> Retail &amp; E-Commerce
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_2">
+<input id="newsletter_2" name="section[]" title="Securities" type="checkbox" value="securities"/> Securities
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_150">
+<input id="newsletter_150" name="section[]" title="Sports &amp; Betting" type="checkbox" value="sports"/> Sports &amp; Betting
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_140">
+<input id="newsletter_140" name="section[]" title="Tax" type="checkbox" value="tax"/> Tax
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_10">
+<input id="newsletter_10" name="section[]" title="Technology" type="checkbox" value="technology"/> Technology
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_149">
+<input id="newsletter_149" name="section[]" title="Telecommunications" type="checkbox" value="telecom"/> Telecommunications
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_117">
+<input id="newsletter_117" name="section[]" title="Texas" type="checkbox" value="texas"/> Texas
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_151">
+<input id="newsletter_151" name="section[]" title="Transportation" type="checkbox" value="transportation"/> Transportation
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_153">
+<input id="newsletter_153" name="section[]" title="Trials" type="checkbox" value="trials"/> Trials
+													</label>
+</div>
+<div class="checkbox">
+<label for="newsletter_110">
+<input id="newsletter_110" name="section[]" title="White Collar" type="checkbox" value="whitecollar"/> White Collar
+													</label>
+</div>
+</div>
+</div>
+<div class="alert alert-warning" style="clear:both;">
+<p class="privacy">We take your privacy seriously. As detailed in our <a href="https://www.law360.com/privacy_policy" target="_blank">Privacy Policy</a> we will use your personal information to administer your account and provide the products and services that you have requested from us.</p>
+</div>
+<div style="width:100%;clear:both;text-align:right;">
+<button aria-hidden="true" class="btn" data-dismiss="modal">No Thanks</button>
+<a class="btn btn-danger submit" href="https://www.law360.com/#" id="signUpNow" rel="/newsletters/signup">Sign up now</a>
+</div>
+<input id="event_action" type="hidden" value="Section Newsletter Signup Modal"/>
+</form>
+<div class="page-messaging">
+<div id="Success">
+<h3>Thank You!</h3>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://static.law360news.com/assets/www/free_trial_modal-904a7b0c2684e09801c4c7ac0e71a0e8.js"></script><div class="modal-backdrop in"></div>
+</body></html>

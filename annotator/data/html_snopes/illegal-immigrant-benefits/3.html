@@ -1,0 +1,585 @@
+<html class="responsive jetpack-lazy-images-js-enabled" lang="en-us"><head>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<meta charset="utf-8"/><script id="hs-script-loader" src="https://js.hs-scripts.com/292449.js" type="text/javascript"></script><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://connect.facebook.net/signals/plugins/inferredEvents.js?v=2.8.51"></script><script async="" src="https://connect.facebook.net/signals/config/456490988021154?v=2.8.51&amp;r=stable"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script id="hs-analytics" src="//js.hubspot.com/analytics/1563184500000/292449.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-PPSVK8"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<title>Health Coverage of Immigrants | The Henry J. Kaiser Family Foundation</title>
+<meta content="width=device-width" name="viewport"/>
+<script type="text/javascript"> if (!window.console) console = {log: function() {}}; </script>
+<script type="text/javascript">
+	var kff_context = { id: 245329, type: "post", post_type: "fact-sheet" };</script>
+<script type="text/javascript">
+	var kff_twitter_handle = "@KaiserFamFound";</script>
+<!--[if IE lte 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/js/lib/css3-multi-column.min.js"></script>
+<![endif]-->
+<link href="//s0.wp.com" rel="dns-prefetch"/>
+<link href="//secure.gravatar.com" rel="dns-prefetch"/>
+<link href="//ajax.googleapis.com" rel="dns-prefetch"/>
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<script type="text/javascript">var ajaxurl = 'https://www.kff.org/wp-admin/admin-ajax.php';</script>
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.kff.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script defer="" src="https://www.kff.org/wp-includes/js/wp-emoji-release.min.js?ver=5.2.2" type="text/javascript"></script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="https://www.kff.org/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+<link crossorigin="anonymous" href="https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C400i%2C600%2C600i%2C700%2C700i&amp;ver=1.0" id="kff-webfonts-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/stylesheets/jquery-ui.css?ver=1.7.19" id="jquery-style-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/stylesheets/screen.css?ver=1.7.19" id="screen-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/stylesheets/print.css?ver=1.7.19" id="print-css" media="print" rel="stylesheet" type="text/css"/>
+<link href="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/stylesheets/mobile-768px.css?ver=1.7.19" id="mobile-768px-css" media="screen and (max-width: 768px) and (min-width: 480px)" rel="stylesheet" type="text/css"/>
+<link href="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/stylesheets/mobile-320px.css?ver=1.7.19" id="mobile-320px-css" media="screen and (max-width: 480px)" rel="stylesheet" type="text/css"/>
+<link href="https://www.kff.org/wp-includes/css/dashicons.min.css?ver=5.2.2" id="dashicons-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.kff.org/wp-includes/js/thickbox/thickbox.css?ver=5.2.2" id="thickbox-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.kff.org/wp-content/mu-plugins/jetpack/css/jetpack.css?ver=7.4" id="jetpack_css-css" media="all" rel="stylesheet" type="text/css"/>
+<script src="https://www.kff.org/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4" type="text/javascript"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script src="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/js/jquery_plugins/jquery.customSelect.min.js?ver=1.7.19" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-includes/js/underscore.min.js?ver=1.8.3" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/js/jquery_plugins/jquery.hoverIntent.minified.js?ver=1.7.19" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/js/jquery_plugins/jquery.stickytableheaders.js?ver=1.7.19" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/js/jquery_plugins/jquery.history.js?ver=1.7.19" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js?ver=5.2.2" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var kff_shortlink = {"ajaxurl":"https:\/\/www.kff.org\/wp-admin\/admin-ajax.php","ajax_security":"5f7895197e"};
+/* ]]> */
+</script>
+<script src="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/js/global.bundle.min.js?ver=1.7.19" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/js/attachments.js?ver=1.7.19" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/js/navigation.js?ver=1.7.19" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/js/jquery_plugins/jquery.livesearch.js?ver=1.7.19" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/js/jquery_plugins/jquery.simple-lightbox.js?ver=1.7.19" type="text/javascript"></script>
+<link href="https://www.kff.org/wp-json/" rel="https://api.w.org/"/>
+<link href="https://www.kff.org/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<link href="https://www.kff.org/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+<meta content="WordPress 5.2.2" name="generator"/>
+<link href="https://www.kff.org/disparities-policy/fact-sheet/health-coverage-of-immigrants/" rel="canonical"/>
+<link href="https://www.kff.org/12f8928/" rel="shortlink"/>
+<link href="https://www.kff.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.kff.org%2Fdisparities-policy%2Ffact-sheet%2Fhealth-coverage-of-immigrants%2F" rel="alternate" type="application/json+oembed"/>
+<link href="https://www.kff.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.kff.org%2Fdisparities-policy%2Ffact-sheet%2Fhealth-coverage-of-immigrants%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+<link href="//v0.wordpress.com" rel="dns-prefetch"/>
+<style type="text/css">img#wpstats{display:none}</style> <style type="text/css">
+				/* If html does not have either class, do not show lazy loaded images. */
+				html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+<script>
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script>
+<link href="https://www.kff.org/disparities-policy/fact-sheet/health-coverage-of-immigrants/amp/" rel="amphtml"/>
+<meta content="article" property="og:type"/>
+<meta content="Health Coverage of Immigrants" property="og:title"/>
+<meta content="https://www.kff.org/disparities-policy/fact-sheet/health-coverage-of-immigrants/" property="og:url"/>
+<meta content="This brief provides an overview of health coverage for noncitizens and discusses key issues for health coverage and care for immigrant families today" property="og:description"/>
+<meta content="2019-02-15T19:03:29+00:00" property="article:published_time"/>
+<meta content="2019-02-15T19:12:24+00:00" property="article:modified_time"/>
+<meta content="The Henry J. Kaiser Family Foundation" property="og:site_name"/>
+<meta content="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png" property="og:image"/>
+<meta content="960" property="og:image:width"/>
+<meta content="720" property="og:image:height"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="Health Coverage of Immigrants" name="twitter:text:title"/>
+<meta content="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?w=640" name="twitter:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="539445989434974" property="fb:app_id"/>
+<meta content="@KaiserFamFound" name="twitter:site"/>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', "UA-36655148-1", 'auto');
+  ga('send', 'pageview');
+</script>
+<script async="async" src="//script.crazyegg.com/pages/scripts/0024/5869.js" type="text/javascript"></script>
+<link href="https://www.kff.org/wp-content/uploads/2019/05/cropped-KFF-Favicon.png?w=32" rel="icon" sizes="32x32"/>
+<link href="https://www.kff.org/wp-content/uploads/2019/05/cropped-KFF-Favicon.png?w=192" rel="icon" sizes="192x192"/>
+<link href="https://www.kff.org/wp-content/uploads/2019/05/cropped-KFF-Favicon.png?w=180" rel="apple-touch-icon-precomposed"/>
+<meta content="https://www.kff.org/wp-content/uploads/2019/05/cropped-KFF-Favicon.png?w=270" name="msapplication-TileImage"/><link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700%7CDroid+Serif:400,700" media="all" rel="stylesheet"/>
+<link href="https://secure.gravatar.com/dist/css/hovercard.min.css?ver=2019Julaa" id="gravatar-card-css" rel="stylesheet" type="text/css"/><link href="https://secure.gravatar.com/dist/css/services.min.css?ver=2019Julaa" id="gravatar-card-services-css" rel="stylesheet" type="text/css"/></head>
+<body class="fact-sheet-template-default single single-fact-sheet postid-245329 legacy-layout-active health-coverage-of-immigrants report-tabs"><style type="text/css">div#hs-eu-cookie-confirmation{background:#fff;height:auto;left:0;position:absolute;top:0;width:100%;z-index:100000000 !important;border-bottom:1px solid #cbd6e2;border-top:1px solid #cbd6e2;box-shadow:0 1px 5px #eaf0f6;color:#33475b;font-family:inherit;font-size:inherit;font-weight:normal !important;line-height:inherit;text-align:left;text-shadow:none !important;font-size:12px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:18px}div#hs-eu-cookie-confirmation *{box-sizing:border-box !important}div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner{background:#fff;margin:0 auto;max-width:1000px;padding:20px}div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a{background:none !important;border:none !important;box-shadow:none !important;color:#0091ae;font-family:inherit;font-size:inherit;font-weight:normal !important;line-height:inherit;text-align:left;text-shadow:none !important;text-decoration:none !important}div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a:hover{background:none !important;border:none !important;box-shadow:none !important;color:#0091ae;font-family:inherit;font-size:inherit;font-weight:normal !important;line-height:inherit;text-align:left;text-shadow:none !important;text-decoration:underline !important}div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area{margin:10px 0 0 !important;text-align:right !important}div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-confirmation-button,div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-decline-button{border-radius:3px;display:inline-block;padding:10px 16px !important;text-decoration:none !important}div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-confirmation-button{background-color:#425b76 !important;border:1px solid #425b76 !important;margin-right:12px !important;color:#fff;font-family:inherit;font-size:inherit;font-weight:normal !important;line-height:inherit;text-align:left;text-shadow:none !important}div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-decline-button{border:1px solid #425b76 !important;color:#425b76;font-family:inherit;font-size:inherit;font-weight:normal !important;line-height:inherit;text-align:left;text-shadow:none !important}div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner p{margin:0 0 12px;color:#33475b;font-family:inherit;font-size:inherit;font-weight:normal !important;line-height:inherit;text-align:left;text-shadow:none !important}@media print{div#hs-eu-cookie-confirmation{display:none !important}}@media screen and (max-width: 480px){div#hs-eu-cookie-confirmation{font-size:12px !important}div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner{padding:8px 14px 14px !important}div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a{font-size:12px !important}div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-confirmation-button{font-size:12px !important}div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner p{font-size:12px !important;margin-bottom:12px !important;line-height:15px !important}}@media only screen and (min-width: 960px){div#hs-eu-cookie-confirmation{position:fixed}div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom{border-bottom:0;bottom:0;top:auto;box-shadow:0 -1px 3px #eaf0f6}div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom-left{border-bottom:0;border-right:1px solid #cbd6e2;bottom:0;box-shadow:1px -1px 3px #eaf0f6;left:0;max-width:600px;right:auto;top:auto;width:45%}}
+</style><div class="hs-cookie-notification-position-bottom can-use-gradients" id="hs-eu-cookie-confirmation"><div id="hs-eu-cookie-confirmation-inner"><p style=""></p><p>This website stores cookies on your computer to collect information about how you interact with our website. We use this information in order to improve and customize your browsing experience and for analytics and metrics about our visitors both on this website and other media. To find out more about the cookies we use, see our <strong><a href="https://www.kff.org/privacy-policy/">Privacy Policy</a></strong>.</p><p></p><div id="hs-en-cookie-confirmation-buttons-area"><a href="https://www.kff.org/#" id="hs-eu-confirmation-button">Accept</a></div></div></div>
+<noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-PPSVK8" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PPSVK8');</script>
+<div class="viewport">
+<div class="pane">
+<nav class="primary"><ul class="menu" id="menu-main-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-180518" id="menu-item-180518"><a href="https://www.kff.org/">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-180520 open" id="menu-item-180520"><a href="https://www.kff.org/#">Topics</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-185314" id="menu-item-185314"><a href="https://www.kff.org/disparities-policy/">Disparities Policy</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-185315" id="menu-item-185315"><a href="https://www.kff.org/global-health-policy/">Global Health Policy</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-185316" id="menu-item-185316"><a href="https://www.kff.org/health-costs/">Health Costs</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-185317" id="menu-item-185317"><a href="https://www.kff.org/health-reform/">Health Reform</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-185318" id="menu-item-185318"><a href="https://www.kff.org/hivaids/">HIV/AIDS</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-185320" id="menu-item-185320"><a href="https://www.kff.org/medicaid/">Medicaid</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-185319" id="menu-item-185319"><a href="https://www.kff.org/medicare/">Medicare</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-185321" id="menu-item-185321"><a href="https://www.kff.org/private-insurance/">Private Insurance</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-185322" id="menu-item-185322"><a href="https://www.kff.org/uninsured/">Uninsured</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-185323" id="menu-item-185323"><a href="https://www.kff.org/womens-health-policy/">Women’s Health Policy</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180531" id="menu-item-180531"><a href="https://www.kff.org/polling">Polling</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180540" id="menu-item-180540"><a href="https://www.kff.org/perspectives/">Perspectives</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-180537" id="menu-item-180537"><a href="https://www.kff.org/statedata">State Health Facts</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-254102" id="menu-item-254102"><a href="https://www.kff.org/statedata">State Health Facts</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-254101" id="menu-item-254101"><a href="https://www.kff.org/statedata/custom-state-report/">Custom State Reports</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180539" id="menu-item-180539"><a href="https://www.kff.org/graphics/search/">Graphics &amp; Interactives</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180538" id="menu-item-180538"><a href="https://www.kff.org/charts-slides/">Charts &amp; Slides</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180551" id="menu-item-180551"><a href="http://www.khn.org">Kaiser Health News</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180553" id="menu-item-180553"><a href="https://www.kff.org/health-communication-media-partnerships/">Media Campaigns</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-227302" id="menu-item-227302"><a href="http://www.healthsystemtracker.org/">Peterson-Kaiser Health System Tracker</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-180555" id="menu-item-180555"><a href="https://www.kff.org/newsroom">Newsroom</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189647" id="menu-item-189647"><a href="https://www.kff.org/newsroom">Newsroom</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180556" id="menu-item-180556"><a href="https://www.kff.org/search/?post_type=press-release">News Releases</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180557" id="menu-item-180557"><a href="https://www.kff.org/search/?post_type=event">Events</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180558" id="menu-item-180558"><a href="https://www.kff.org/email/">Subscribe to Emails</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180559" id="menu-item-180559"><a href="https://www.kff.org/cite-and-reprint-kff/">Cite Us/Reprint</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180560" id="menu-item-180560"><a href="https://www.kff.org/newsroom/#media-contacts">Media Contacts</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-180561" id="menu-item-180561"><a href="https://www.kff.org/about-us/">About Us</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189648" id="menu-item-189648"><a href="https://www.kff.org/about-us">About Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180562" id="menu-item-180562"><a href="https://www.kff.org/our-programs/">Our Programs</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180563" id="menu-item-180563"><a href="https://www.kff.org/people/key-staff/">Key Staff</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180552" id="menu-item-180552"><a href="https://www.kff.org/media-internships-fellowships/">Media Fellowships</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180564" id="menu-item-180564"><a href="https://www.kff.org/barbara-jordan-conference-center/">Barbara Jordan Conference Center</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180565" id="menu-item-180565"><a href="https://www.kff.org/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180566" id="menu-item-180566"><a href="https://www.kff.org/employment-opportunities/">Employment Opportunities</a></li>
+</ul>
+</li>
+</ul></nav>
+<header class="primary legacy">
+<div id="print-logo">
+<img alt="The Henry J. Kaiser Family Foundation" src="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/images/kff-logo.png"/>
+<p class="disparities-policy-project">
+            Filling the need for trusted information on national health issues        </p>
+</div>
+<div class="header-main site-header__layer--primary">
+<div class="site-header__inner inner">
+<a class="menu site-header__menu-toggle" href="https://www.kff.org/#" role="button">
+<span>
+                    menu                </span>
+</a>
+<a class="site-header__logo" href="https://www.kff.org/" rel="home" title="Health Coverage of Immigrants"></a>
+<div class="site-header__share share">
+<a class="link facebook" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.kff.org%2F12f8928%2F" target="_blank">
+<span class="screen-reader-text">
+                        Share on Facebook. Opens in a new window.                    </span>
+</a>
+<a class="link twitter" href="http://twitter.com/share?text=Health+Coverage+of+Immigrants&amp;url=https%3A%2F%2Fwww.kff.org%2F12f8928%2F" target="_blank">
+<span class="screen-reader-text">
+                        Share on Twitter. Opens in a new window.                    </span>
+</a>
+<a class="link email" href="https://www.kff.org/disparities-policy/fact-sheet/health-coverage-of-immigrants//mailto:?subject=Health%20Coverage%20of%20Immigrants&amp;body=https%3A%2F%2Fwww.kff.org%2F12f8928%2F">
+<span class="screen-reader-text">
+                        Email. Opens in a new window.                    </span>
+</a>
+</div>
+<form action="https://www.kff.org/search/" class="site-header__search-form search-form">
+<label class="screen-reader-text" for="search-field">
+                    Search KFF.org                </label>
+<input class="search-form__input--text" id="search-field" name="s" placeholder="Search KFF.org" type="text"/>
+<input class="search-form__input--submit" id="search-submit" type="submit" value="search"/>
+</form>
+<div class="site-header__social-links">
+<a class="link twitter" href="https://twitter.com/KaiserFamFound" target="_blank">
+<span>
+                        Twitter                    </span>
+</a>
+<a class="link facebook" href="https://www.facebook.com/KaiserFamilyFoundation" target="_blank">
+<span>
+                        Facebook                    </span>
+</a>
+<a class="link instagram" href="https://www.instagram.com/KaiserFamilyFoundation/" target="_blank">
+<span>
+                        Instagram                    </span>
+</a>
+<a class="link email" href="https://www.kff.org/email/" target="_blank">
+<span>
+                        Email                    </span>
+</a>
+</div>
+</div>
+</div>
+<div class="site-header__layer--secondary inner">
+<p class="site-header__tagline">
+            Filling the need for trusted information on national health issues        </p>
+<nav class="site-header__trending" data-label="Trending on KFF">
+<ul class="menu" id="menu-trending-links"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180652" id="menu-item-180652"><a href="https://www.kff.org/tag/abortion/?utm_source=web&amp;utm_medium=trending&amp;utm_campaign=abortion">Abortion</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180653" id="menu-item-180653"><a href="https://www.kff.org/search/?s=%22medicare-for-all%22&amp;fs=search&amp;orderby=date&amp;tab&amp;layout&amp;facets%5Bstart_date%5D&amp;facets%5Bend_date%5D&amp;s=%22medicare-for-all%22&amp;?utm_source=web&amp;utm_medium=trending&amp;utm_campaign=%22medicare-for-all%22">Medicare-for-all</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180654" id="menu-item-180654"><a href="https://www.kff.org/tag/prescription-drugs/?utm_source=web&amp;utm_medium=trending&amp;utm_campaign=prescription-drugs">Prescription Drugs</a></li>
+</ul> </nav>
+</div>
+</header>
+<nav class="tertiary">
+<div class="inner">
+<h2 class="disparities-policy has-icon dark-blue">
+<a class="topic" href="https://www.kff.org/disparities-policy/">
+					Disparities Policy				</a>
+</h2>
+<ul class="title-icons">
+<li>
+<a class="magnifying-glass" href="https://www.kff.org/topic/disparities-policy/">
+								Search							</a>
+</li>
+<li>
+<a class="pie-graph" href="https://www.kff.org/graphics/disparities-policy/">
+								Graphics &amp; Interactives							</a>
+</li>
+<li>
+<a class="poll" href="https://www.kff.org/polling/disparities-policy/">
+								Polls							</a>
+</li>
+</ul>
+</div>
+</nav>
+<nav class="page-meta">
+<ul id="breadcrumbs"><li><a href="https://www.kff.org/">Home</a></li><li><a href="https://www.kff.org/disparities-policy/">Disparities Policy</a></li><li><a href="https://www.kff.org/disparities-policy/fact-sheet/health-coverage-of-immigrants/">Health Coverage of Immigrants</a></li></ul> </nav>
+<div class="inner" id="content">
+<div id="report-wrapper">
+<div class="left-column">
+<div class="box primary">
+<h2 class="post_title">Health Coverage of Immigrants</h2>
+<p class="byline">
+<br/>
+<span>Published: Feb 15, 2019</span>
+</p>
+<div class="share">
+<a class="facebook" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.kff.org%2F12f8928%2F" target="_blank">Facebook</a>
+<a class="twitter" href="http://twitter.com/share?text=Health+Coverage+of+Immigrants&amp;url=https%3A%2F%2Fwww.kff.org%2F12f8928%2F" target="_blank">Twitter</a>
+<a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;title=Health+Coverage+of+Immigrants&amp;url=https%3A%2F%2Fwww.kff.org%2F12f8928%2F" target="_blank">LinkedIn</a>
+<a class="email" href="https://www.kff.org/disparities-policy/fact-sheet/health-coverage-of-immigrants//mailto:?subject=Health%20Coverage%20of%20Immigrants&amp;body=https%3A%2F%2Fwww.kff.org%2F12f8928%2F">Email</a>
+<a class="print" href="https://www.kff.org/#">Print</a>
+</div>
+</div>
+<div class="box full-post">
+<table class="bordered table-p-font">
+<tbody>
+<tr class="header-blue">
+<td style="text-align:left;">Key Takeaways</td>
+</tr>
+<tr>
+<td>This brief provides an overview of health coverage for noncitizens and discusses key issues for health coverage and care for immigrant families today. It shows:<p></p>
+<ul>
+<li><strong>In 2017, there were 22 million noncitizens residing in the United States, accounting for about 7% of the total U.S. population.</strong> Noncitizens include lawfully present and undocumented immigrants. Many individuals lives in mixed immigration status families that may include lawfully present immigrants, undocumented immigrants, and/or citizens. One in four children has an immigrant parent and the majority of these children are citizens.</li>
+<li><strong>Noncitizens are significantly more likely than citizens to be uninsured. </strong>Among the nonelderly population, 23% of lawfully present immigrants and more than four in ten (45%) undocumented immigrants are uninsured compared to less than one in ten (8%) citizens<strong>.</strong> Moreover, among citizen children, those with at least one non-citizen parent are nearly twice as likely to be uninsured as those with citizen parents (7% vs. 4%).</li>
+<li><strong>Recent changes in immigration policy are leading to increased fears that may lead to declines in coverage among immigrant families and their citizen children.</strong> In particular, proposed changes to public charge policy that would newly consider use of certain non-cash programs, including Medicaid, when determining whether to deny an individual a green card or entry into the U.S., would likely lead to broad decreases in participation in Medicaid among immigrant families and their primarily U.S.-born children. Declines in coverage for families would increase barriers to care and financial instability, negatively affecting the growth and healthy development of their children.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Overview of Noncitizens</h3>
+<p><strong>In 2017, there were 22 million noncitizens residing in the U.S., accounting for about 7% of the total population (Figure 1).</strong> About six in ten noncitizens were lawfully present immigrants, while the remaining four in ten were undocumented immigrants:<a class="footnote-link" href="https://www.kff.org/#footnote-392857-1" id="endnote_link_392857-1" title="The estimate of the total number of non-citizens in the US is based on the 2017 American Community Survey (ACS). The ACS does not include a direct measure of whether a non-citizen has legal status or not. We impute documentation status by drawing on methods underlying the 2013 analysis by the State Health Access Data Assistance Center (SHADAC) and the recommendations made by Van Hook et. al.. This approach uses the second wave of the 2008 Survey of Income and Program Participation (SIPP) to develop a model that predicts immigration status for each person in the sample; it then applies the model to a second data source, controlling to state-level estimates of total undocumented population as well as the undocumented population in the labor force from the Pew Research Center. See, “U.S. Unauthorized Immigrant Total Dips to Lowest Level in Decade,” available here: http://www.pewhispanic.org/2018/11/27/u-s-unauthorized-immigrant-total-dips-to-lowest-level-in-a-decade/."><sup>1</sup></a> Many individuals live in mixed immigration status families that may include lawfully present immigrants, undocumented immigrants, and/or citizens.</p>
+<ul>
+<li><strong>Lawfully present immigrants are noncitizens who are lawfully residing in the U.S.</strong> This group includes legal permanent residents (LPRs, i.e., “green card” holders), refugees, asylees, and other individuals who are authorized to live in the U.S. temporarily or permanently.</li>
+<li><strong>Undocumented immigrants are foreign-born individuals residing in the U.S. without authorization.</strong> This group includes individuals who entered the country without authorization and individuals who entered the country lawfully and stayed after their visa or status expired.</li>
+</ul>
+<p><strong>Nearly 19 million or 25% of children had an immigrant parent as of 2017, and the large majority of these children were citizens.</strong> About 10 million or 13% were citizen children with a noncitizen parent.</p>
+<div class="wp-caption aligncenter" id="attachment_392945" style="width: 745px"><a href="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png"><img alt="" aria-describedby="caption-attachment-392945" class="size-kaiser-slide wp-image-392945 no-lazy-loaded" sizes="(max-width: 735px) 100vw, 735px" src="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?w=735&amp;h=551&amp;crop=1" srcset="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png 960w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=300,225 300w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=768,576 768w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=758,569 758w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=735,551 735w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=698,524 698w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=600,450 600w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=200,150 200w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=215,161 215w"/><noscript><img alt="" aria-describedby="caption-attachment-392945" class="size-kaiser-slide wp-image-392945 no-lazy-loaded" height="551" sizes="(max-width: 735px) 100vw, 735px" src="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?w=735&amp;h=551&amp;crop=1" srcset="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png 960w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=300,225 300w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=768,576 768w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=758,569 758w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=735,551 735w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=698,524 698w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=600,450 600w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=200,150 200w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-1.png?resize=215,161 215w" width="735"/></noscript></a><p class="wp-caption-text" id="caption-attachment-392945">Figure 1: Immigrants and Children of Immigrants as a Share of the Total U.S. Population, 2017</p></div>
+<h3>Health Coverage for Nonelderly Noncitizens</h3>
+<p><strong>While most of the uninsured are citizens, noncitizens are at significantly higher risk of being uninsured. In 2017, three-quarters of the 27.4 million nonelderly uninsured were citizens. However, noncitizens, including lawfully present and undocumented immigrants, were significantly more likely to be uninsured than citizens. </strong>Among the total nonelderly population, 23% of lawfully present immigrants and more than four in ten (45%) undocumented immigrants were uninsured compared to less than one in ten (8%) citizens<strong>.</strong> Among nonelderly adults, lawfully present immigrants were more than twice as likely as citizens to be uninsured, and the uninsured rate for adult undocumented immigrants was nearly five times the rate for citizens (Figure 2). Immigrant children also are more likely to be uninsured than their citizen counterparts. Moreover, among citizen children, those with at least one non-citizen parent are significantly more likely to be uninsured as those with citizen parents (Figure 3).</p>
+<div class="wp-caption aligncenter" id="attachment_392946" style="width: 745px"><a href="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png"><img alt="" aria-describedby="caption-attachment-392946" class="size-kaiser-slide wp-image-392946 no-lazy-loaded" sizes="(max-width: 735px) 100vw, 735px" src="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?w=735&amp;h=551&amp;crop=1" srcset="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png 960w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=300,225 300w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=768,576 768w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=758,569 758w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=735,551 735w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=698,524 698w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=600,450 600w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=200,150 200w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=215,161 215w"/><noscript><img alt="" aria-describedby="caption-attachment-392946" class="size-kaiser-slide wp-image-392946 no-lazy-loaded" height="551" sizes="(max-width: 735px) 100vw, 735px" src="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?w=735&amp;h=551&amp;crop=1" srcset="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png 960w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=300,225 300w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=768,576 768w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=758,569 758w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=735,551 735w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=698,524 698w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=600,450 600w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=200,150 200w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-2.png?resize=215,161 215w" width="735"/></noscript></a><p class="wp-caption-text" id="caption-attachment-392946">Figure 2: Uninsured Rates among Nonelderly Adults by Immigration Status, 2017</p></div>
+<div class="wp-caption aligncenter" id="attachment_392947" style="width: 745px"><a href="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png"><img alt="" aria-describedby="caption-attachment-392947" class="size-kaiser-slide wp-image-392947 no-lazy-loaded" sizes="(max-width: 735px) 100vw, 735px" src="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?w=735&amp;h=551&amp;crop=1" srcset="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png 960w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=300,225 300w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=768,576 768w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=758,569 758w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=735,551 735w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=698,524 698w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=600,450 600w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=200,150 200w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=215,161 215w"/><noscript><img alt="" aria-describedby="caption-attachment-392947" class="size-kaiser-slide wp-image-392947 no-lazy-loaded" height="551" sizes="(max-width: 735px) 100vw, 735px" src="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?w=735&amp;h=551&amp;crop=1" srcset="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png 960w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=300,225 300w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=768,576 768w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=758,569 758w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=735,551 735w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=698,524 698w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=600,450 600w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=200,150 200w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-3.png?resize=215,161 215w" width="735"/></noscript></a><p class="wp-caption-text" id="caption-attachment-392947">Figure 3: Uninsured Rates among Children by Immigration Status and Parent Immigration Status, 2017</p></div>
+<p>The higher uninsured rates among noncitizens reflect limited access to employer-sponsored coverage; eligibility restrictions for Medicaid, CHIP, and ACA Marketplace coverage; and barriers to enrollment among eligible individuals.</p>
+<h5><strong>Limited access to private coverage</strong></h5>
+<p><strong>Although most nonelderly noncitizens live in a family with a full-time worker, they face gaps in access to private coverage. Nonelderly noncitizens are more likely than nonelderly citizens to live in a family with at least one full-time worker, but they also are more likely to be low-income </strong>(Figure 4)<strong>.</strong> They have lower incomes because they are often employed in low-wage jobs and industries that are less likely to offer employer-sponsored coverage. Further, given their lower incomes, noncitizens face increased challenges affording employer-sponsored coverage when it is available or through the individual market.</p>
+<div class="wp-caption aligncenter" id="attachment_392948" style="width: 745px"><a href="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png"><img alt="" aria-describedby="caption-attachment-392948" class="size-kaiser-slide wp-image-392948 no-lazy-loaded" sizes="(max-width: 735px) 100vw, 735px" src="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?w=735&amp;h=551&amp;crop=1" srcset="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png 960w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=300,225 300w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=768,576 768w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=758,569 758w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=735,551 735w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=698,524 698w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=600,450 600w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=200,150 200w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=215,161 215w"/><noscript><img alt="" aria-describedby="caption-attachment-392948" class="size-kaiser-slide wp-image-392948 no-lazy-loaded" height="551" sizes="(max-width: 735px) 100vw, 735px" src="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?w=735&amp;h=551&amp;crop=1" srcset="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png 960w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=300,225 300w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=768,576 768w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=758,569 758w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=735,551 735w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=698,524 698w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=600,450 600w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=200,150 200w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-4.png?resize=215,161 215w" width="735"/></noscript></a><p class="wp-caption-text" id="caption-attachment-392948">Figure 4: Employment and Income among the Nonelderly Population by Citizenship Status, 2017</p></div>
+<h5><strong>eligibility restrictions for medicaid, chip, and aca coverage</strong></h5>
+<p><strong>Lawfully present immigrants may qualify for Medicaid and CHIP, but are subject to certain eligibility restrictions. </strong>In general, lawfully present immigrants must have a “qualified” immigration status to be eligible for Medicaid or CHIP and many, including most LPRs or “green card” holders, must wait five years after obtaining qualified status before they may enroll. Some immigrants with qualified status, such as refugees and asylees, do not have to wait five years before enrolling. Some immigrants, such as those with temporary protected status, are lawfully present but do not have a qualified status and are not eligible to enroll in Medicaid or CHIP regardless of their length of time in the country (Appendix A). For children and pregnant women, states can eliminate the five-year wait and extend coverage to lawfully present immigrants without a qualified status. Over half of states have taken up this option for children and nearly half have elected the option for pregnant women.<a class="footnote-link" href="https://www.kff.org/#footnote-392857-2" id="endnote_link_392857-2" title="Tricia Brooks, et al., Medicaid and CHIP Eligibility, March 2018 Enrollment, Renewal, and Cost Sharing Policies as of January 2018: Findings from a 50-State Survey, (Washington, DC: Kaiser Family Foundation, March 2018), https://www.kff.org/report-section/medicaid-and-chip-eligibility-enrollment-renewal-and-cost-sharing-policies-as-of-january-2018-findings-from-a-50-state-survey/."><sup>2</sup></a></p>
+<p><strong>Lawfully present immigrants can purchase coverage through the ACA Marketplaces and may receive subsidies for this coverage.</strong> These subsidies are available to people with incomes from 100% to 400% FPL who are not eligible for other coverage. In addition, lawfully present immigrants with incomes below 100% FPL may receive subsidies if they are ineligible for Medicaid based on immigration status. This group includes lawfully present immigrants who are not eligible for Medicaid or CHIP because they are in the five year waiting period or because they do not have a “qualified” status.</p>
+<p><strong>Undocumented immigrants are not eligible to enroll in Medicaid or CHIP or to purchase coverage through the ACA Marketplaces.</strong> Medicaid payments for emergency services may be made on behalf of individuals who are otherwise eligible for Medicaid but for their immigration status. These payments cover costs for emergency care for lawfully present immigrants who remain ineligible for Medicaid as well as undocumented immigrants. Since 2002, states have had the option to provide prenatal care to women regardless of immigration status by extending CHIP coverage to the unborn child. In addition, some states have state-funded health programs that provide coverage to some groups of immigrants regardless of immigration status. There are also some locally-funded programs that provide coverage or assistance without regard to immigration status. Under rules issued by the Centers for Medicare and Medicaid Services, individuals with Deferred Action for Childhood Arrivals (DACA) status are not considered lawfully present and remain ineligible for coverage options.<a class="footnote-link" href="https://www.kff.org/#footnote-392857-3" id="endnote_link_392857-3" title='Cindy Mann to State Official and Medicaid Director, August 28, 2012, Center for Medicaid and CHIP Services, "Re: Individuals with Deferred Action for Childhood Arrivals," SHO# 12-002, https://www.medicaid.gov/Federal-Policy-Guidance/downloads/SHO-12-002.pdf.'><sup>3</sup></a></p>
+<h5><strong>enrollment barriers among eligible individuals</strong></h5>
+<p><strong>Many uninsured lawfully present immigrants are eligible for coverage options under the ACA but remain uninsured, while uninsured undocumented immigrants are ineligible for coverage options.</strong> In 2017, nearly three-quarters of uninsured lawfully present immigrants were eligible for ACA coverage, including 29% who were eligible for Medicaid and 43% who were eligible for tax credit subsidies (Figure 5). Many lawfully present immigrants who are eligible for coverage remain uninsured because immigrant families face a range of enrollment barriers, including fear, confusion about eligibility policies, difficulty navigating the enrollment process, and language and literacy challenges. Uninsured undocumented immigrants are ineligible for coverage options due to their immigration status. In the absence of coverage, they remain reliant on safety net clinics and hospitals for care and often go without needed care.</p>
+<div class="wp-caption aligncenter" id="attachment_392949" style="width: 745px"><a href="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png"><img alt="" aria-describedby="caption-attachment-392949" class="size-kaiser-slide wp-image-392949 no-lazy-loaded" sizes="(max-width: 735px) 100vw, 735px" src="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?w=735&amp;h=551&amp;crop=1" srcset="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png 960w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=300,225 300w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=768,576 768w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=758,569 758w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=735,551 735w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=698,524 698w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=600,450 600w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=200,150 200w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=215,161 215w"/><noscript><img alt="" aria-describedby="caption-attachment-392949" class="size-kaiser-slide wp-image-392949 no-lazy-loaded" height="551" sizes="(max-width: 735px) 100vw, 735px" src="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?w=735&amp;h=551&amp;crop=1" srcset="https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png 960w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=300,225 300w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=768,576 768w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=758,569 758w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=735,551 735w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=698,524 698w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=600,450 600w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=200,150 200w, https://www.kff.org/wp-content/uploads/2019/02/9131-02-figure-5.png?resize=215,161 215w" width="735"/></noscript></a><p class="wp-caption-text" id="caption-attachment-392949">Figure 5: Eligibility for ACA Coverage among Nonelderly Uninsured by Immigration Status, 2017</p></div>
+<h3>Looking Ahead</h3>
+<p><a href="https://www.kff.org/disparities-policy/issue-brief/family-consequences-of-detention-deportation-effects-on-finances-health-and-well-being/">Research</a> shows that shifting immigration policies under the Trump administration that are focused on enhancing immigration enforcement and restricting immigration are leading to substantially increased fears among the immigrant community that are causing a growing number of families to turn away from programs and services, including Medicaid and CHIP.<a class="footnote-link" href="https://www.kff.org/#footnote-392857-4" id="endnote_link_392857-4" title="Samantha Artiga and Barbara Lyons, Family Consequences of Detention/Deportation: Effects on Finances, Health, and Well-Being, (Washington, DC: Kaiser Family Foundation, September 2018), https://www.kff.org/disparities-policy/issue-brief/family-consequences-of-detention-deportation-effects-on-finances-health-and-well-being/."><sup>4</sup></a> Further, in October 2018, the Trump administration published a <a href="https://www.kff.org/disparities-policy/fact-sheet/proposed-changes-to-public-charge-policies-for-immigrants-implications-for-health-coverage/" rel="noopener noreferrer" target="_blank">proposed rule</a> to make changes to public charge policy. Under these changes, officials would newly consider use of certain non-cash programs, including Medicaid, when determining whether someone is a public charge and should be denied a green card or entry into the United States. The changes would likely lead to broad <a href="https://www.kff.org/disparities-policy/issue-brief/estimated-impacts-of-the-proposed-public-charge-rule-on-immigrants-and-medicaid/" rel="noopener noreferrer" target="_blank">decreases in participation in Medicaid</a> and other programs among legal immigrant families and their primarily U.S.-born children.<a class="footnote-link" href="https://www.kff.org/#footnote-392857-5" id="endnote_link_392857-5" title="Samantha Artiga, Rachel Garfield, and Anthony Damico, Estimated Impacts of the Proposed Public Charge Rule on Immigrants and Medicaid, (Washington, DC: Kaiser Family Foundation, October 2018), https://www.kff.org/disparities-policy/issue-brief/estimated-impacts-of-the-proposed-public-charge-rule-on-immigrants-and-medicaid/."><sup>5</sup></a> Declines in coverage for families would increase barriers to care and financial instability, negatively affecting the growth and healthy development of their children.</p>
+<table class="bordered table-p-font">
+<tbody>
+<tr class="header-blue">
+<td colspan="2">
+<p style="text-align:center;">Appendix A: Lawfully Present immigrants by Qualified Status</p>
+</td>
+</tr>
+<tr>
+<td style="width:50%;"><strong>Qualified Immigrant Categories</strong></td>
+<td><strong>Other Lawfully Present Immigrants</strong></td>
+</tr>
+<tr>
+<td style="vertical-align:top;">
+<ul>
+<li>Lawful permanent resident (LPR or green card holder)</li>
+<li>Refugee</li>
+<li>Asylee</li>
+<li>Cuban/Haitian entrant</li>
+<li>Paroled into the US for at least one year</li>
+<li>Conditional entrant granted before 1980</li>
+<li>Granted withholding of deportation</li>
+<li>Battered non-citizen, spouse, child, or parent</li>
+<li>Victims of trafficking and his/her spouse, child, sibling, or parent or individuals with pending application for a victim of trafficking visa</li>
+<li>Member of a federally recognized Indian tribe or American Indian born in Canada</li>
+</ul>
+</td>
+<td style="vertical-align:top;">
+<ul>
+<li>Granted Withholding of Deportation or Withholding of Removal, under the immigration laws or under the Convention against Torture (CAT)</li>
+<li>Individual with Non-Immigrant Status, includes worker visas, student visas, U-visa, and other visas, and citizens of Micronesia, the Marshall Islands, and Palau</li>
+<li>Temporary Protected Status (TPS)</li>
+<li>Deferred Enforced Departure (DED)</li>
+<li>Deferred Action Status, except for Deferred Action for Childhood Arrivals (DACA) who are not eligible for health insurance options</li>
+<li>Lawful Temporary Resident</li>
+<li>Administrative order staying removal issued by the Department of Homeland Security</li>
+<li>Resident of American Samoa</li>
+<li>Applicants for certain statuses</li>
+<li>People with certain statuses who have employment authorization</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="2">Source: “Coverage for lawfully present immigrants,” <a href="http://HealthCare.gov" rel="noopener noreferrer" target="_blank">HealthCare.gov</a>, <a href="https://www.healthcare.gov/immigrants/lawfully-present-immigrants/" rel="noopener noreferrer" target="_blank">https://www.healthcare.gov/immigrants/lawfully-present-immigrants/</a>, accessed January 2019.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</div>
+<div class="box">
+<h6>Endnotes</h6><ol class="footnote-wrapper"><li class="footnote-target" id="footnote-392857-1"><p>The estimate of the total number of non-citizens in the US is based on the 2017 American Community Survey (ACS). The ACS does not include a direct measure of whether a non-citizen has legal status or not. We impute documentation status by drawing on methods underlying the 2013 analysis by the State Health Access Data Assistance Center (SHADAC) and the recommendations made by Van Hook et. al.. This approach uses the second wave of the 2008 Survey of Income and Program Participation (SIPP) to develop a model that predicts immigration status for each person in the sample; it then applies the model to a second data source, controlling to state-level estimates of total undocumented population as well as the undocumented population in the labor force from the Pew Research Center. See, “U.S. Unauthorized Immigrant Total Dips to Lowest Level in Decade,” available here: <a href="http://www.pewhispanic.org/2018/11/27/u-s-unauthorized-immigrant-total-dips-to-lowest-level-in-a-decade/">http://www.pewhispanic.org/2018/11/27/u-s-unauthorized-immigrant-total-dips-to-lowest-level-in-a-decade/</a>.</p>
+<p class="footnote-return"><a href="https://www.kff.org/disparities-policy/fact-sheet/health-coverage-of-immigrants/#endnote_link_392857-1">← Return to text</a></p></li><li class="footnote-target" id="footnote-392857-2"><p>Tricia Brooks, et al., <em>Medicaid and CHIP Eligibility, March 2018 Enrollment, Renewal, and Cost Sharing Policies as of January 2018: Findings from a 50-State Survey</em>, (Washington, DC: Kaiser Family Foundation, March 2018), <a href="https://www.kff.org/report-section/medicaid-and-chip-eligibility-enrollment-renewal-and-cost-sharing-policies-as-of-january-2018-findings-from-a-50-state-survey/" rel="noopener" target="_blank">https://www.kff.org/report-section/medicaid-and-chip-eligibility-enrollment-renewal-and-cost-sharing-policies-as-of-january-2018-findings-from-a-50-state-survey/</a>.</p>
+<p class="footnote-return"><a href="https://www.kff.org/disparities-policy/fact-sheet/health-coverage-of-immigrants/#endnote_link_392857-2">← Return to text</a></p></li><li class="footnote-target" id="footnote-392857-3"><p>Cindy Mann to State Official and Medicaid Director, August 28, 2012, Center for Medicaid and CHIP Services, "Re: Individuals with Deferred Action for Childhood Arrivals," SHO# 12-002, <a href="https://www.medicaid.gov/Federal-Policy-Guidance/downloads/SHO-12-002.pdf">https://www.medicaid.gov/Federal-Policy-Guidance/downloads/SHO-12-002.pdf</a>.</p>
+<p class="footnote-return"><a href="https://www.kff.org/disparities-policy/fact-sheet/health-coverage-of-immigrants/#endnote_link_392857-3">← Return to text</a></p></li><li class="footnote-target" id="footnote-392857-4"><p>Samantha Artiga and Barbara Lyons, <em>Family Consequences of Detention/Deportation: Effects on Finances, Health, and Well-Being</em>, (Washington, DC: Kaiser Family Foundation, September 2018), <a href="https://www.kff.org/disparities-policy/issue-brief/family-consequences-of-detention-deportation-effects-on-finances-health-and-well-being/">https://www.kff.org/disparities-policy/issue-brief/family-consequences-of-detention-deportation-effects-on-finances-health-and-well-being/</a>.</p>
+<p class="footnote-return"><a href="https://www.kff.org/disparities-policy/fact-sheet/health-coverage-of-immigrants/#endnote_link_392857-4">← Return to text</a></p></li><li class="footnote-target" id="footnote-392857-5"><p>Samantha Artiga, Rachel Garfield, and Anthony Damico, <em>Estimated Impacts of the Proposed Public Charge Rule on Immigrants and Medicaid</em>, (Washington, DC: Kaiser Family Foundation, October 2018), <a href="https://www.kff.org/disparities-policy/issue-brief/estimated-impacts-of-the-proposed-public-charge-rule-on-immigrants-and-medicaid/">https://www.kff.org/disparities-policy/issue-brief/estimated-impacts-of-the-proposed-public-charge-rule-on-immigrants-and-medicaid/</a>.</p>
+<p class="footnote-return"><a href="https://www.kff.org/disparities-policy/fact-sheet/health-coverage-of-immigrants/#endnote_link_392857-5">← Return to text</a></p></li></ol> </div>
+<div class="box primary" id="page-taxonomy">
+<div class="tax-wrapper">
+<h4>Topics</h4>
+<ul>
+<li><a href="https://www.kff.org/topic/disparities-policy/">Disparities Policy</a></li>
+</ul>
+</div>
+<div class="tax-wrapper">
+<h4>Tags</h4>
+<ul>
+<li><a href="https://www.kff.org/tag/immigrants/">Immigrants</a></li>
+<li><a href="https://www.kff.org/tag/access-to-care/">Access to Care</a></li>
+<li><a href="https://www.kff.org/tag/coverage/">Coverage</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="slab-container right-column sidebar">
+<div class="slab light-blue default attachments small">
+<h3 class="kicker">
+															DOWNLOAD									</h3>
+<section class="feature attachments">
+<ul>
+<li>
+<a class="pdf-document" href="http://files.kff.org/attachment/Fact-Sheet-Health-Coverage-for-Immigrants">
+					FACT SHEET				</a>
+</li>
+</ul>
+</section>
+</div>
+<div class="slab dark-blue default posts small">
+<h3 class="kicker">
+															Also of Interest									</h3>
+<section class="feature posts">
+<ul>
+<li>
+<a href="https://www.kff.org/disparities-policy/issue-brief/estimated-impacts-of-the-proposed-public-charge-rule-on-immigrants-and-medicaid/">
+						Estimated Impacts of the Proposed Public Charge Rule on Immigrants and Medicaid					</a>
+</li>
+<li>
+<a href="https://www.kff.org/disparities-policy/issue-brief/changes-in-health-coverage-by-race-and-ethnicity-since-implementation-of-the-aca-2013-2017/">
+						Changes in Health Coverage by Race and Ethnicity since Implementation of the ACA, 2013-2017					</a>
+</li>
+<li>
+<a href="https://www.kff.org/disparities-policy/issue-brief/nearly-20-million-children-live-in-immigrant-families-that-could-be-affected-by-evolving-immigration-policies/">
+						Nearly 20 Million Children Live in Immigrant Families that Could Be Affected by Evolving Immigration Policies					</a>
+</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+</div>
+<div class="site-footer--type--legacy">
+<footer class="site-footer site-footer--type--top">
+<div class="site-footer__inner inner">
+<nav class="site-footer__nav"><ul class="menu" id="menu-footer-menu"><li class="nav-group menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-251253" id="menu-item-251253"><a href="https://www.kff.org/#">Nav Group</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-landing-page menu-item-189674" id="menu-item-189674"><a href="https://www.kff.org/disparities-policy/">Disparities Policy</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-204540" id="menu-item-204540"><a href="https://www.kff.org/topic/global-health-policy/">Global Health Policy</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380424" id="menu-item-380424"><a href="https://www.kff.org/topic/health-costs/">Health Costs</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380421" id="menu-item-380421"><a href="https://www.kff.org/topic/health-reform/">Health Reform</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380422" id="menu-item-380422"><a href="https://www.kff.org/topic/hivaids/">HIV/AIDS</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380420" id="menu-item-380420"><a href="https://www.kff.org/topic/medicaid/">Medicaid</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-landing-page menu-item-189676" id="menu-item-189676"><a href="https://www.kff.org/medicare/">Medicare</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-landing-page menu-item-189675" id="menu-item-189675"><a href="https://www.kff.org/private-insurance/">Private Insurance</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-landing-page menu-item-189670" id="menu-item-189670"><a href="https://www.kff.org/uninsured/">Uninsured</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-202434" id="menu-item-202434"><a href="https://www.kff.org/womens-health-policy/">Women’s Health Policy</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189677" id="menu-item-189677"><a href="https://www.kff.org/polling/">Polling</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189678" id="menu-item-189678"><a href="https://www.kff.org/perspectives/">Perspectives</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189679" id="menu-item-189679"><a href="https://www.kff.org/statedata/">State Health Facts</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189680" id="menu-item-189680"><a href="https://www.kff.org/graphics/search/">Graphics &amp; Interactives</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189681" id="menu-item-189681"><a href="https://www.kff.org/charts-slides/">Charts &amp; Slides</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189682" id="menu-item-189682"><a href="http://khn.org/">Kaiser Health News</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189683" id="menu-item-189683"><a href="https://www.kff.org/health-communication-media-partnerships/">Media Campaigns</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-227304" id="menu-item-227304"><a href="http://www.healthsystemtracker.org/">Peterson-Kaiser Health System Tracker</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-189684" id="menu-item-189684"><a href="https://www.kff.org/newsroom/">Newsroom</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189685" id="menu-item-189685"><a href="https://www.kff.org/search/?post_type=press-release">News Releases</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189686" id="menu-item-189686"><a href="https://www.kff.org/search/?post_type=event">Events</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189687" id="menu-item-189687"><a href="https://www.kff.org/email/">Subscribe to Emails</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189688" id="menu-item-189688"><a href="https://www.kff.org/cite-and-reprint-kff/">Cite Us/Reprint</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189689" id="menu-item-189689"><a href="https://www.kff.org/newsroom/#media-contacts">Media Contacts</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-189690" id="menu-item-189690"><a href="https://www.kff.org/about-us/">About Us</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189691" id="menu-item-189691"><a href="https://www.kff.org/our-programs/">Our Programs</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189692" id="menu-item-189692"><a href="https://www.kff.org/people/key-staff/">Key Staff</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189694" id="menu-item-189694"><a href="https://www.kff.org/media-internships-fellowships/">Media Fellowships</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189695" id="menu-item-189695"><a href="https://www.kff.org/barbara-jordan-conference-center/">Barbara Jordan Conference Center</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189696" id="menu-item-189696"><a href="https://www.kff.org/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189698" id="menu-item-189698"><a href="https://www.kff.org/employment-opportunities/">Employment Opportunities</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-251254" id="menu-item-251254"><a href="https://www.kff.org/privacy-policy/">Privacy Policy</a></li>
+</ul>
+</li>
+</ul></nav> <section class="site-footer__signup">
+<p>
+<strong>Get the Latest on Health Policy</strong>
+				Sign Up for Email Alerts			</p>
+<form action="/email/" method="post">
+<input id="hubspot_contacts_nonce" name="hubspot_contacts_nonce" type="hidden" value="2e305b4dc3"/><input name="_wp_http_referer" type="hidden" value="/disparities-policy/fact-sheet/health-coverage-of-immigrants/"/> <input name="hubspot_contact[email]" placeholder="Enter Email Address" type="email"/>
+<button type="submit">
+					Sign Up				</button>
+</form>
+</section>
+</div>
+</footer>
+<footer class="site-footer site-footer--type--bottom">
+<div class="site-footer__inner inner">
+<section class="site-footer__copyright">
+				© 2019 Kaiser Family Foundation				<div class="site-footer__vip">
+					Powered by <a class="powered-by-wpcom" href="https://wpvip.com/?utm_source=vip_powered_wpcom&amp;utm_medium=web&amp;utm_campaign=VIP%20Footer%20Credit&amp;utm_term=www.kff.org" rel="generator nofollow">WordPress.com VIP</a> </div>
+</section>
+<section class="site-footer__social">
+<p>
+					Follow Us				</p>
+<a class="facebook" href="https://www.facebook.com/KaiserFamilyFoundation" target="_blank">
+<span>Facebook</span>
+</a>
+<a class="twitter" href="https://twitter.com/KaiserFamFound" target="_blank">
+<span>Twitter</span>
+</a>
+<a class="link instagram" href="https://www.instagram.com/KaiserFamilyFoundation/" target="_blank">
+<span>Instagram</span>
+</a>
+<a class="feeds" href="https://www.kff.org/rss_feeds/" target="_blank">
+<span>Feeds</span>
+</a>
+</section>
+</div>
+</footer>
+<footer class="print site-footer--type--print">
+<p>
+		The Henry J. Kaiser Family Foundation Headquarters: 185 Berry St., Suite 2000, San Francisco, CA 94170 | Phone 650-854-9400		<br/>
+		Washington Offices and Barbara Jordan Conference Center: 1330 G Street, NW, Washington, DC 20005 | Phone 202-347-5270	</p>
+<p>www.kff.org | Email Alerts: kff.org/email | facebook.com/KaiserFamilyFoundation | twitter.com/KaiserFamFound</p>
+<p class="tagline">
+<strong>Filling the need for trusted information on national health issues,</strong> the Kaiser Family Foundation is a nonprofit organization based in San Francisco, California.	</p>
+</footer></div>
+</div>
+</div>
+<div style="display:none">
+</div>
+<script type="text/javascript">
+			(
+				function ( d, s, i, r ) {
+					if ( d.getElementById( i ) ) {
+						return;
+					}
+					var n = d.createElement( s ), e = d.getElementsByTagName( s )[0];
+					n.id = i;
+					n.src = '//js.hubspot.com/analytics/' + (
+						Math.ceil( new Date() / r ) * r
+					) + '/292449.js';
+					e.parentNode.insertBefore( n, e );
+				}
+			)( document, "script", "hs-analytics", 300000 );
+		</script>
+<script src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201929" type="text/javascript"></script>
+<script src="https://secure.gravatar.com/js/gprofiles.js?ver=2019Julaa" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script src="https://www.kff.org/wp-content/mu-plugins/jetpack/modules/wpgroho.js?ver=5.2.2" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-includes/js/imagesloaded.min.js?ver=3.2.0" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-includes/js/masonry.min.js?ver=3.3.2" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-content/themes/kaiser-foundation-2016/static/js/jquery_plugins/jquery.cycle2.min.js?ver=1.7.19" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"https:\/\/www.kff.org\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script src="https://www.kff.org/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-content/mu-plugins/jetpack/_inc/build/lazy-images/js/lazy-images.min.js?ver=7.4" type="text/javascript"></script>
+<script src="https://www.kff.org/wp-includes/js/wp-embed.min.js?ver=5.2.2" type="text/javascript"></script>
+<script async="async" defer="defer" src="https://stats.wp.com/e-201929.js" type="text/javascript"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.4',blog:'158133116',post:'245329',tz:'-4',srv:'www.kff.org'} ]);
+	_stq.push([ 'clickTrackerInit', '158133116', '245329' ]);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1fa8b5b91a","applicationID":"211788170","transactionName":"YgMBZ0cFWUFUUBEICVtJIlBBDVhcGkAMDwFZAw==","queueTime":0,"applicationTime":436,"atts":"TkQWEQ8fSh4XUkdbHUgb","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<img alt=":)" height="5" id="wpstats" src="https://pixel.wp.com/g.gif?v=ext&amp;j=1%3A7.4&amp;blog=158133116&amp;post=245329&amp;tz=-4&amp;srv=www.kff.org&amp;host=www.kff.org&amp;ref=&amp;fcp=7491&amp;rand=0.9910140037838211" width="6"/>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","456490988021154");fbq("set","agent","tmgoogletagmanager","456490988021154");fbq("track","ViewContent");</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","456490988021154");fbq("set","agent","tmgoogletagmanager","456490988021154");fbq("track","PageView");</script>
+<script id="" type="text/javascript">/*
+ @preserve
+ jquery.scrolldepth.js | v0.4.1
+ Copyright (c) 2014 Rob Flaherty (@robflaherty)
+ Licensed under the MIT and GPL licenses.
+*/
+(function(c,h,m,u){var n={elements:[],minHeight:0,percentage:!0,testing:!1},k=c(h),f=[];c.scrollDepth=function(d){function l(a,b,e){d.testing?c("#console").html(a+": "+b):"undefined"!==typeof dataLayer?(dataLayer.push({event:"ScrollDistance",eventCategory:"Scroll Depth",eventAction:a,eventLabel:b,eventValue:1,eventNonInteraction:!0}),2<arguments.length&&dataLayer.push({event:"ScrollTiming",eventCategory:"Scroll Depth",eventAction:a,eventLabel:b,eventTiming:e})):("undefined"!==typeof ga&&(ga("send",
+"event","Scroll Depth",a,b,1,{nonInteraction:1}),2<arguments.length&&ga("send","timing","Scroll Depth",a,e,b)),"undefined"!==typeof _gaq&&(_gaq.push(["_trackEvent","Scroll Depth",a,b,1,!0]),2<arguments.length&&_gaq.push(["_trackTiming","Scroll Depth",a,e,b,100])))}function p(a,b,e){c.each(a,function(a,g){-1===c.inArray(a,f)&&b>=g&&(l("Percentage",a,e),f.push(a))})}function q(a,b,e){c.each(a,function(a,g){-1===c.inArray(g,f)&&c(g).length&&b>=c(g).offset().top&&(l("Elements",g,e),f.push(g))})}function r(a,
+b){var e,c,g,d=null,f=0,k=function(){f=new Date;d=null;g=a.apply(e,c)};return function(){var h=new Date;f||(f=h);var l=b-(h-f);e=this;c=arguments;0>=l?(clearTimeout(d),d=null,f=h,g=a.apply(e,c)):d||(d=setTimeout(k,l));return g}}var t=+new Date;d=c.extend({},n,d);c(m).height()<d.minHeight||(l("Percentage","Baseline"),k.on("scroll.scrollDepth",r(function(){var a=c(m).height(),b=h.innerHeight?h.innerHeight:k.height();b=k.scrollTop()+b;a={"25%":parseInt(.25*a,10),"50%":parseInt(.5*a,10),"75%":parseInt(.75*
+a,10),"100%":a-1};var e=+new Date-t;f.length>=4+d.elements.length?k.off("scroll.scrollDepth"):(d.elements&&q(d.elements,b,e),d.percentage&&p(a,b,e))},500)))}})(jQuery,window,document);jQuery.scrollDepth();</script></body></html>

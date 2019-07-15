@@ -1,0 +1,689 @@
+<html class="js" lang="en-US"><head>
+<meta charset="utf-8"/></head><body><div class="fit-vids-style">�<style>               .fluid-width-video-wrapper {                 width: 100%;                              position: relative;                       padding: 0;                            }                                                                                   .fluid-width-video-wrapper iframe,        .fluid-width-video-wrapper object,        .fluid-width-video-wrapper embed {           position: absolute;                       top: 0;                                   left: 0;                                  width: 100%;                              height: 100%;                          }                                       </style></div><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="http://gmpg.org/xfn/11" rel="profile"/>
+<!--[if lt IE 9]>
+	<script src="http://www.chattanoogabystander.com/wp-content/themes/fox/js/html5.js"></script>
+	<![endif]-->
+<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>“Hail Satan” license plates now available in Tenn. – Chattanooga Bystander</title>
+<link href="//s0.wp.com" rel="dns-prefetch"/>
+<link href="//secure.gravatar.com" rel="dns-prefetch"/>
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="http://www.chattanoogabystander.com/feed/" rel="alternate" title="Chattanooga Bystander » Feed" type="application/rss+xml"/>
+<link href="http://www.chattanoogabystander.com/comments/feed/" rel="alternate" title="Chattanooga Bystander » Comments Feed" type="application/rss+xml"/>
+<link href="http://www.chattanoogabystander.com/2017/07/06/hail-satan-license-plates-now-available-in-tenn/feed/" rel="alternate" title="Chattanooga Bystander » “Hail Satan” license plates now available in Tenn. Comments Feed" type="application/rss+xml"/>
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.chattanoogabystander.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script defer="" src="http://www.chattanoogabystander.com/wp-includes/js/wp-emoji-release.min.js?ver=5.2.2" type="text/javascript"></script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="http://www.chattanoogabystander.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://www.chattanoogabystander.com/wp-content/plugins/metronet-profile-picture/dist/blocks.style.build.css?ver=2.2.5" id="mpp_gutenberg-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://www.chattanoogabystander.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.3" id="contact-form-7-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://www.chattanoogabystander.com/wp-content/uploads/useanyfont/uaf.css?ver=1560126054" id="uaf_client_css-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,300italic,regular,italic,700,700italic,900,900italic|Oswald:200,300,regular,500,600,700&amp;subset=cyrillic-ext,latin,vietnamese,latin-ext,cyrillic" id="wi-fonts-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://www.chattanoogabystander.com/wp-content/themes/fox/css/font-awesome-4.7.0/css/font-awesome.min.css?ver=4.7" id="font-awesome-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://www.chattanoogabystander.com/wp-content/themes/fox/style.min.css?ver=5.2.2" id="style-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://www.chattanoogabystander.com/wp-content/plugins/jetpack/css/jetpack.css?ver=7.4" id="jetpack_css-css" media="all" rel="stylesheet" type="text/css"/>
+<script src="http://www.chattanoogabystander.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" type="text/javascript"></script>
+<script src="http://www.chattanoogabystander.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript"></script>
+<link href="http://www.chattanoogabystander.com/wp-json/" rel="https://api.w.org/"/>
+<link href="http://www.chattanoogabystander.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<link href="http://www.chattanoogabystander.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+<link href="http://www.chattanoogabystander.com/2017/06/16/toby-keith-cancels-riverbend-performance-to-join-church-of-urth/" rel="prev" title="Toby Keith cancels Riverbend performance to join Church of Urth"/>
+<link href="http://www.chattanoogabystander.com/2017/07/09/before-i-die-in-five-minutes-wall-installed-in-crime-ridden-east-chatt/" rel="next" title="“Before I Die in Five Minutes…” wall installed in crime-ridden East Chatt."/>
+<meta content="WordPress 5.2.2" name="generator"/>
+<link href="http://www.chattanoogabystander.com/2017/07/06/hail-satan-license-plates-now-available-in-tenn/" rel="canonical"/>
+<link href="https://wp.me/p3qp23-uP" rel="shortlink"/>
+<link href="http://www.chattanoogabystander.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.chattanoogabystander.com%2F2017%2F07%2F06%2Fhail-satan-license-plates-now-available-in-tenn%2F" rel="alternate" type="application/json+oembed"/>
+<link href="http://www.chattanoogabystander.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.chattanoogabystander.com%2F2017%2F07%2F06%2Fhail-satan-license-plates-now-available-in-tenn%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+</style><link href="http://www.chattanoogabystander.com/wp-content/uploads/2013/04/CB1.jpg" rel="icon"/>
+<link href="//v0.wordpress.com" rel="dns-prefetch"/>
+<style type="text/css">
+    
+    /* LOGO MARGIN */
+        
+        
+    /* Logo width */
+        
+    /* footer logo width */
+        
+    /* content width */
+        @media (min-width: 1200px) {
+        .container,
+        .cool-thumbnail-size-big .post-thumbnail {width:1020px;}
+        #wi-wrapper {max-width:1080px;}
+    }
+    
+    /* sidebar width */
+        @media (min-width: 783px) {
+    .has-sidebar #secondary {
+        width: 25.980392156863%;
+    }
+    .has-sidebar #primary {
+        width: 74.019607843137%;
+    }
+    }
+        
+    /* ================== FONT FAMILY ==================== */
+    body{font-family:Merriweather,sans-serif;}h1, h2, h3, h4, h5, h6, button, input[type="button"], input[type="reset"], input[type="submit"], .wi-btn, .wp-block-button__link, .wp-block-cover-text, .slide .slide-caption, .title-label span, .blog-slider .flex-direction-nav a, .slider-more, .post-item-meta, .big-meta, .post-big .more-link, .post-vertical .more-link, a.more-link span.post-more, #hero .hero-meta, .masonry-meta, figure .entry-view-count, .grid-meta, .masonry-meta, .readmore, .list-meta, .article-big .readmore, .pagination-inner, .single-date, .single-cats, .page-links-container, .single-tags, .authorbox-nav, .same-author-posts .viewall, .post-navigation .post-title, .review-criterion, .review-score, .review-text, .commentlist .fn, .comment-notes, .logged-in-as, #respond p label, #respond p .required, .widget_archive ul, .widget_nav_menu ul, .widget_meta ul, .widget_pages ul, .widget_recent_entries ul, .widget_categories ul, a.rsswidget, .widget_rss > ul > li > cite, .widget_recent_comments ul, .tagcloud a, .null-instagram-feed .clear a, .widget-pin-follow a, a.follow-us, .widget_post_views_counter_list_widget .post-thumbnail .view-count, .view-count, .wpcf7 p, .wpcf7 .wpcf7-submit, div.wpcf7-response-output, #backtotop span, button, input[type="button"], input[type="reset"], input[type="submit"], .woocommerce span.onsale, .woocommerce ul.products li.product .onsale, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce a.added_to_cart, .woocommerce nav.woocommerce-pagination ul, .woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce #reviews #comments ol.commentlist li .comment-text p.meta, .woocommerce table.shop_table th, .woocommerce table.shop_table td.product-name a, #respond #submit{font-family:Oswald,sans-serif;}.offcanvas-nav, .no-menu, #wi-mainnav, #footernav{font-family:Oswald,sans-serif;}    
+    /* ================== FONT WEIGHT ==================== */
+        
+        
+    /* ================== FONT SIZE ==================== */
+    
+    /* ================== SLOGAN LETTER SPACING ==================== */
+        
+    
+    /* ================== COLORS ==================== */
+    /* selection color */
+        
+    /* body text color */
+        
+    /* primary color */
+        
+    /* widget title bg color */
+            
+    /* link color */
+        
+    /* link hover color */
+        
+    /* active menu item */
+        
+    body {
+        /* body background color */
+                
+        /* body background */
+                
+        /* position */
+                
+        /* repeat */
+                
+        /* size */
+                
+        /* attachment */
+            }
+    
+     /* content bg opacity */
+        
+    /* CUSTOM CSS */
+        
+        
+</style>
+<meta content="http://www.chattanoogabystander.com/wp-content/uploads/2017/07/tn_plate_satan.jpg" property="og:image"/>
+<meta content="http://www.chattanoogabystander.com/wp-content/uploads/2017/07/tn_plate_satan.jpg" property="og:image:secure_url"/>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<meta content="article" property="og:type"/>
+<meta content="“Hail Satan” license plates now available in Tenn." property="og:title"/>
+<meta content="http://www.chattanoogabystander.com/2017/07/06/hail-satan-license-plates-now-available-in-tenn/" property="og:url"/>
+<meta content="After Tennessee legislators passed a bill to allow residents to get license plates that bear the phrase “In God We Trust,” in the interest of religious diversity, other plates were made…" property="og:description"/>
+<meta content="2017-07-07T02:46:58+00:00" property="article:published_time"/>
+<meta content="2017-07-07T02:46:58+00:00" property="article:modified_time"/>
+<meta content="Chattanooga Bystander" property="og:site_name"/>
+<meta content="http://www.chattanoogabystander.com/wp-content/uploads/2017/07/tn_plate_satan.jpg" property="og:image"/>
+<meta content="1070" property="og:image:width"/>
+<meta content="530" property="og:image:height"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="@ChattBystander" name="twitter:creator"/>
+<meta content="@ChattBystander" name="twitter:site"/>
+<meta content="“Hail Satan” license plates now available in Tenn." name="twitter:text:title"/>
+<meta content="http://www.chattanoogabystander.com/wp-content/uploads/2017/07/tn_plate_satan.jpg?w=640" name="twitter:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style id="color-preview"></style>
+<script async="" src="https://chattbystander.disqus.com/count.js" type="text/javascript"></script><link href="http://secure.gravatar.com/dist/css/hovercard.min.css?ver=2019Julaa" id="gravatar-card-css" rel="stylesheet" type="text/css"/><link href="http://secure.gravatar.com/dist/css/services.min.css?ver=2019Julaa" id="gravatar-card-services-css" rel="stylesheet" type="text/css"/>
+<div id="wi-all">
+<div id="wi-wrapper">
+<header class="site-header header-stack header-logo-below" id="masthead" itemscope="" itemtype="https://schema.org/WPHeader">
+<div class="header-sticky-wrapper" id="topbar-wrapper" style="height: 50px;">
+<div class="wi-topbar header-sticky-element" id="wi-topbar">
+<div class="container">
+<div class="topbar-inner">
+<nav class="navigation-ele wi-mainnav" id="wi-mainnav" itemscope="" itemtype="https://schema.org/SiteNavigationElement" role="navigation">
+<div class="menu"><ul class="menu" id="menu-top-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-143" id="menu-item-143"><a href="http://www.chattanoogabystander.com/category/business/">Business</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-301" id="menu-item-301"><a href="http://www.chattanoogabystander.com/category/politics/">Politics</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-235" id="menu-item-235"><a href="http://www.chattanoogabystander.com/category/culture/">Culture</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-303" id="menu-item-303"><a href="http://www.chattanoogabystander.com/category/opinion/">Op/Ed</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1451" id="menu-item-1451"><a href="http://www.chattanoogabystander.com/category/specials/">Specials</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1447" id="menu-item-1447"><a href="http://www.chattanoogabystander.com/category/sportsrecreation/">Sports/Rec</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1448" id="menu-item-1448"><a href="http://www.chattanoogabystander.com/category/health/">Health</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1449" id="menu-item-1449"><a href="http://www.chattanoogabystander.com/category/education/">Education</a></li>
+</ul></div> </nav>
+<div class="header-social social-list" id="header-social">
+<ul>
+<li class="li-facebook-square"><a href="http://facebook.com/chattanoogabystander" rel="alternate" target="_blank" title="Facebook"><i class="fa fa-facebook"></i> <span>Facebook</span></a></li>
+<li class="li-twitter"><a href="http://twitter.com/chattbystander" rel="alternate" target="_blank" title="Twitter"><i class="fa fa-twitter"></i> <span>Twitter</span></a></li>
+<li class="li-envelope"><a href="http://www.chattanoogabystander.com/2017/07/06/hail-satan-license-plates-now-available-in-tenn//mailto:chattanoogabystander@gmail.com%20(Don't%20bother%20with%20submissions.%20We%20won't%20use%20it)" rel="alternate" target="_blank" title="Email"><i class="fa fa-envelope"></i> <span>Email</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="wi-header" id="wi-header">
+<div class="container">
+<div id="logo-area">
+<div id="wi-logo">
+<a class="toggle-menu">
+<span></span>
+<span></span>
+<span></span>
+</a>
+<h2 class="wi-logo-main">
+<a href="http://www.chattanoogabystander.com/" rel="home">
+<img alt="Logo" class="retina-off" src="http://www.chattanoogabystander.com/wp-content/uploads/2016/01/cb.png"/>
+</a>
+</h2>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</header>
+<div id="wi-main">
+<div class="container">
+<div class="content wi-single-post post-1911 post type-post status-publish format-standard has-post-thumbnail hentry category-politics enable-dropcap">
+<main class="content-area primary" id="primary" role="main">
+<div class="theiaStickySidebar">
+<figure class="post-thumbnail" itemscope="" itemtype="http://schema.org/ImageObject">
+<meta content="http://www.chattanoogabystander.com/wp-content/uploads/2017/07/tn_plate_satan.jpg" itemprop="url"/>
+<meta content="1070" itemprop="width"/>
+<meta content="530" itemprop="height"/>
+<div class="post-thumbnail-inner">
+<img alt="" class="attachment-full size-full wp-post-image" height="530" sizes="(max-width: 1070px) 100vw, 1070px" src="http://www.chattanoogabystander.com/wp-content/uploads/2017/07/tn_plate_satan.jpg" srcset="http://www.chattanoogabystander.com/wp-content/uploads/2017/07/tn_plate_satan.jpg 1070w, http://www.chattanoogabystander.com/wp-content/uploads/2017/07/tn_plate_satan-300x149.jpg 300w, http://www.chattanoogabystander.com/wp-content/uploads/2017/07/tn_plate_satan-768x380.jpg 768w, http://www.chattanoogabystander.com/wp-content/uploads/2017/07/tn_plate_satan-1024x507.jpg 1024w, http://www.chattanoogabystander.com/wp-content/uploads/2017/07/tn_plate_satan-480x238.jpg 480w, http://www.chattanoogabystander.com/wp-content/uploads/2017/07/tn_plate_satan-1009x500.jpg 1009w" width="1070"/>
+</div>
+</figure>
+<header class="post-header">
+<h1 class="post-title single-title">“Hail Satan” license plates now available in Tenn.</h1>
+<div class="post-header-meta">
+<span class="entry-date meta-time human-time">2 years ago</span>
+<span class="entry-categories meta-categories">
+<span class="in-word">in</span> <a href="http://www.chattanoogabystander.com/category/politics/" rel="category tag">Politics</a>
+</span>
+</div>
+</header>
+<div class="single-body">
+<div class="entry-content dropcap-content">
+<p>After Tennessee legislators passed a bill to allow residents to get <a href="http://nooga.com/176486/new-in-god-we-trust-license-plates-available/">license plates that bear the phrase “In God We Trust,”</a> in the interest of religious diversity, other plates were made available that bear other religious phrases, including “Shalom,” “Namaste,” “Praise Jah” and “Hail Satan.”</p>
+<p>“It’s only fair,” said State Senator Brody Printrip. “We should celebrate our diversity.”</p>
+<p>“Yes, we are deep in the Bible Belt, but the freedom of religion is a constitutionally protected right,” said Printrip, holding up a license plate with the phrase “There’s No Prob With Bob.”</p>
+<div class="clearfix"></div>
+</div>
+<div class="post-share share-5">
+<h4 class="share-label">Share This</h4>
+<ul>
+<li class="li-facebook">
+<a class="share share-facebook" data-href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.chattanoogabystander.com%2F2017%2F07%2F06%2Fhail-satan-license-plates-now-available-in-tenn%2F" title="Facebook">
+<i class="fa fa-facebook"></i>
+<span>Facebook</span>
+</a>
+</li>
+<li class="li-twitter">
+<a class="share share-twitter" data-href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.chattanoogabystander.com%2F2017%2F07%2F06%2Fhail-satan-license-plates-now-available-in-tenn%2F&amp;text=%E2%80%9CHail+Satan%E2%80%9D+license+plates+now+available+in+Tenn." title="Twitter">
+<i class="fa fa-twitter"></i>
+<span>Twitter</span>
+</a>
+</li>
+<li class="li-pinterest">
+<a class="share share-pinterest" data-href="https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.chattanoogabystander.com%2F2017%2F07%2F06%2Fhail-satan-license-plates-now-available-in-tenn%2F&amp;description=%E2%80%9CHail+Satan%E2%80%9D+license+plates+now+available+in+Tenn." title="Pinterest">
+<i class="fa fa-pinterest"></i>
+<span>Pinterest</span>
+</a>
+</li>
+<li class="li-linkedin">
+<a class="share share-linkedin" data-href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.chattanoogabystander.com%2F2017%2F07%2F06%2Fhail-satan-license-plates-now-available-in-tenn%2F&amp;title=%E2%80%9CHail+Satan%E2%80%9D+license+plates+now+available+in+Tenn." title="Linkedin">
+<i class="fa fa-linkedin"></i>
+<span>Linkedin</span>
+</a>
+</li>
+<li class="li-email">
+<a class="email-share" href="http://www.chattanoogabystander.com/2017/07/06/hail-satan-license-plates-now-available-in-tenn//mailto:?subject=%26%238220%3BHail+Satan%26%238221%3B+license+plates+now+available+in+Tenn.&amp;body=http%3A%2F%2Fwww.chattanoogabystander.com%2F2017%2F07%2F06%2Fhail-satan-license-plates-now-available-in-tenn%2F" title="Email">
+<i class="fa fa-envelope"></i>
+<span>Email</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="authorbox" id="authorbox"><div class="authorbox-inner">
+<div class="author-avatar">
+<a href="http://www.chattanoogabystander.com/author/francisporkloin/" rel="author">
+<img alt="" class="avatar avatar-120 photo" height="120" src="http://www.chattanoogabystander.com/wp-content/uploads/2013/03/francisporkloin-e1471736170361-150x150.jpg" width="120"/> </a>
+</div>
+<div class="authorbox-content">
+<nav class="authorbox-nav">
+<ul>
+<li class="active"><a data-href="#authorbox-info">Francis Porkloin</a></li>
+<li><a data-href="#same-author">Latest posts</a></li>
+</ul>
+</nav>
+<div class="authorbox-info authorbox-tab active" id="authorbox-info">
+<div class="desc">
+<p>Francis Porkloin is a reporter for today, for you, for me, for us, for our children, for our children's children, and for our children's children's grandparents - which is us, again. Francis Porkloin is devoted to giving a voice to all people, including those who do not have mouths or have had them wired shut and can only make incomprehensible "Mmmrph! Mmmrph!" sounds. Francis Porkloin is committed to delivering the unbiased truth and telling the stories that others have no interest in telling - and that the public has no interest in hearing. Francis Porkloin is a Sagittarius.</p>
+</div>
+<div class="author-social social-list">
+<ul>
+</ul>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="authorbox-tab" id="same-author">
+<div class="same-author-posts">
+<ul class="same-author-list">
+<li>
+<a href="http://www.chattanoogabystander.com/2019/05/29/festival-rules-say-riverbend-wristbands-must-be-worn-until-death/">Festival rules say Riverbend wristbands must be worn until death</a>
+</li>
+<li>
+<a href="http://www.chattanoogabystander.com/2019/05/23/clippy-makes-surprise-visit-to-howard-school/">Clippy makes surprise visit to Howard School</a>
+</li>
+<li>
+<a href="http://www.chattanoogabystander.com/2019/05/21/tdot-safety-tips-for-roadside-fighting/">TDOT safety tips for roadside fighting</a>
+</li>
+<li>
+<a href="http://www.chattanoogabystander.com/2019/05/15/ala-lawmakers-declare-life-begins-when-stork-kisses-bee-in-cabbage-patch/">Ala. lawmakers declare life begins when stork kisses bee in cabbage patch</a>
+</li>
+</ul>
+<div class="clearfix"></div>
+<a class="viewall" href="http://www.chattanoogabystander.com/author/francisporkloin/" rel="author">
+<span>View all</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<aside class="secondary" id="secondary" itemptype="https://schema.org/WPSideBar" itemscope="" role="complementary">
+<div class="theiaStickySidebar">
+<div class="widget-area" id="widget-area">
+<div class="widget widget_search" id="search-2"><div class="searchform">
+<form action="http://www.chattanoogabystander.com" itemprop="potentialAction" itemscope="" itemtype="https://schema.org/SearchAction" method="get" role="search">
+<input class="s" name="s" placeholder="Search..." type="text" value=""/>
+<button class="submit" role="button" title="Go"><i class="fa fa-search"></i></button>
+</form>
+</div></div> <div class="widget widget_recent_entries" id="recent-posts-2"> <h3 class="widget-title"><span>Recent Posts</span></h3> <ul>
+<li>
+<a href="http://www.chattanoogabystander.com/2019/06/26/mayor-berke-apologizes-for-forgetting-to-pay-the-citys-internet-bill-yesterday/">Mayor Berke apologizes for forgetting to pay the city’s internet bill yesterday</a>
+</li>
+<li>
+<a href="http://www.chattanoogabystander.com/2019/06/16/riverbend-influence-is-seen-at-bonnaroo-as-stages-are-raised-50-feet-into-the-air/">Riverbend influence is seen at Bonnaroo as stages are raised 50 feet into the air</a>
+</li>
+<li>
+<a href="http://www.chattanoogabystander.com/2019/05/29/festival-rules-say-riverbend-wristbands-must-be-worn-until-death/">Festival rules say Riverbend wristbands must be worn until death</a>
+</li>
+<li>
+<a href="http://www.chattanoogabystander.com/2019/05/23/clippy-makes-surprise-visit-to-howard-school/">Clippy makes surprise visit to Howard School</a>
+</li>
+<li>
+<a href="http://www.chattanoogabystander.com/2019/05/21/tdot-safety-tips-for-roadside-fighting/">TDOT safety tips for roadside fighting</a>
+</li>
+</ul>
+</div><div class="widget widget_recent_comments" id="recent-comments-2"><h3 class="widget-title"><span>Recent Comments</span></h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Kendra</span> on <a href="http://www.chattanoogabystander.com/2018/01/14/local-upscale-supper-club-to-offer-artisanal-hand-jobs/#comment-4390">Local upscale supper club to offer artisanal hand jobs</a></li><li class="recentcomments"><span class="comment-author-link">Kathy</span> on <a href="http://www.chattanoogabystander.com/2017/12/19/trump-names-the-brian-joyce-as-his-favorite-twitter-account/#comment-4298">Trump names The Brian Joyce as his favorite Twitter account</a></li><li class="recentcomments"><span class="comment-author-link">Jason Walker</span> on <a href="http://www.chattanoogabystander.com/2017/12/19/trump-names-the-brian-joyce-as-his-favorite-twitter-account/#comment-4296">Trump names The Brian Joyce as his favorite Twitter account</a></li><li class="recentcomments"><span class="comment-author-link">Hester Pryne</span> on <a href="http://www.chattanoogabystander.com/2017/09/18/republic-parking-now-accepts-severed-arms-legs-as-payment/#comment-3668">Republic Parking now accepts severed arms, legs as payment</a></li><li class="recentcomments"><span class="comment-author-link"><a class="url" href="http://95.79.54.44/wiki/index.php?title=Phoenix_Cannabis_Events" rel="external nofollow">Tony Caloca</a></span> on <a href="http://www.chattanoogabystander.com/2017/07/06/hail-satan-license-plates-now-available-in-tenn/#comment-3404">“Hail Satan” license plates now available in Tenn.</a></li></ul></div><div class="widget widget_archive" id="archives-2"><h3 class="widget-title"><span>Archives</span></h3> <ul>
+<li><a href="http://www.chattanoogabystander.com/2019/06/">June 2019</a></li>
+<li><a href="http://www.chattanoogabystander.com/2019/05/">May 2019</a></li>
+<li><a href="http://www.chattanoogabystander.com/2019/04/">April 2019</a></li>
+<li><a href="http://www.chattanoogabystander.com/2019/03/">March 2019</a></li>
+<li><a href="http://www.chattanoogabystander.com/2019/02/">February 2019</a></li>
+<li><a href="http://www.chattanoogabystander.com/2019/01/">January 2019</a></li>
+<li><a href="http://www.chattanoogabystander.com/2018/12/">December 2018</a></li>
+<li><a href="http://www.chattanoogabystander.com/2018/11/">November 2018</a></li>
+<li><a href="http://www.chattanoogabystander.com/2018/10/">October 2018</a></li>
+<li><a href="http://www.chattanoogabystander.com/2018/09/">September 2018</a></li>
+<li><a href="http://www.chattanoogabystander.com/2018/08/">August 2018</a></li>
+<li><a href="http://www.chattanoogabystander.com/2018/07/">July 2018</a></li>
+<li><a href="http://www.chattanoogabystander.com/2018/06/">June 2018</a></li>
+<li><a href="http://www.chattanoogabystander.com/2018/05/">May 2018</a></li>
+<li><a href="http://www.chattanoogabystander.com/2018/04/">April 2018</a></li>
+<li><a href="http://www.chattanoogabystander.com/2018/03/">March 2018</a></li>
+<li><a href="http://www.chattanoogabystander.com/2018/02/">February 2018</a></li>
+<li><a href="http://www.chattanoogabystander.com/2018/01/">January 2018</a></li>
+<li><a href="http://www.chattanoogabystander.com/2017/12/">December 2017</a></li>
+<li><a href="http://www.chattanoogabystander.com/2017/11/">November 2017</a></li>
+<li><a href="http://www.chattanoogabystander.com/2017/10/">October 2017</a></li>
+<li><a href="http://www.chattanoogabystander.com/2017/09/">September 2017</a></li>
+<li><a href="http://www.chattanoogabystander.com/2017/08/">August 2017</a></li>
+<li><a href="http://www.chattanoogabystander.com/2017/07/">July 2017</a></li>
+<li><a href="http://www.chattanoogabystander.com/2017/06/">June 2017</a></li>
+<li><a href="http://www.chattanoogabystander.com/2017/05/">May 2017</a></li>
+<li><a href="http://www.chattanoogabystander.com/2017/04/">April 2017</a></li>
+<li><a href="http://www.chattanoogabystander.com/2017/03/">March 2017</a></li>
+<li><a href="http://www.chattanoogabystander.com/2017/02/">February 2017</a></li>
+<li><a href="http://www.chattanoogabystander.com/2017/01/">January 2017</a></li>
+<li><a href="http://www.chattanoogabystander.com/2016/12/">December 2016</a></li>
+<li><a href="http://www.chattanoogabystander.com/2016/11/">November 2016</a></li>
+<li><a href="http://www.chattanoogabystander.com/2016/10/">October 2016</a></li>
+<li><a href="http://www.chattanoogabystander.com/2016/09/">September 2016</a></li>
+<li><a href="http://www.chattanoogabystander.com/2016/08/">August 2016</a></li>
+<li><a href="http://www.chattanoogabystander.com/2016/07/">July 2016</a></li>
+<li><a href="http://www.chattanoogabystander.com/2016/06/">June 2016</a></li>
+<li><a href="http://www.chattanoogabystander.com/2016/05/">May 2016</a></li>
+<li><a href="http://www.chattanoogabystander.com/2016/04/">April 2016</a></li>
+<li><a href="http://www.chattanoogabystander.com/2016/03/">March 2016</a></li>
+<li><a href="http://www.chattanoogabystander.com/2016/02/">February 2016</a></li>
+<li><a href="http://www.chattanoogabystander.com/2016/01/">January 2016</a></li>
+<li><a href="http://www.chattanoogabystander.com/2015/12/">December 2015</a></li>
+<li><a href="http://www.chattanoogabystander.com/2015/11/">November 2015</a></li>
+<li><a href="http://www.chattanoogabystander.com/2015/10/">October 2015</a></li>
+<li><a href="http://www.chattanoogabystander.com/2015/09/">September 2015</a></li>
+<li><a href="http://www.chattanoogabystander.com/2015/08/">August 2015</a></li>
+<li><a href="http://www.chattanoogabystander.com/2015/07/">July 2015</a></li>
+<li><a href="http://www.chattanoogabystander.com/2015/06/">June 2015</a></li>
+<li><a href="http://www.chattanoogabystander.com/2015/05/">May 2015</a></li>
+<li><a href="http://www.chattanoogabystander.com/2015/04/">April 2015</a></li>
+<li><a href="http://www.chattanoogabystander.com/2015/03/">March 2015</a></li>
+<li><a href="http://www.chattanoogabystander.com/2015/02/">February 2015</a></li>
+<li><a href="http://www.chattanoogabystander.com/2015/01/">January 2015</a></li>
+<li><a href="http://www.chattanoogabystander.com/2014/12/">December 2014</a></li>
+<li><a href="http://www.chattanoogabystander.com/2014/11/">November 2014</a></li>
+<li><a href="http://www.chattanoogabystander.com/2014/10/">October 2014</a></li>
+<li><a href="http://www.chattanoogabystander.com/2014/09/">September 2014</a></li>
+<li><a href="http://www.chattanoogabystander.com/2014/08/">August 2014</a></li>
+<li><a href="http://www.chattanoogabystander.com/2014/07/">July 2014</a></li>
+<li><a href="http://www.chattanoogabystander.com/2014/06/">June 2014</a></li>
+<li><a href="http://www.chattanoogabystander.com/2014/05/">May 2014</a></li>
+<li><a href="http://www.chattanoogabystander.com/2014/04/">April 2014</a></li>
+<li><a href="http://www.chattanoogabystander.com/2014/03/">March 2014</a></li>
+<li><a href="http://www.chattanoogabystander.com/2014/02/">February 2014</a></li>
+<li><a href="http://www.chattanoogabystander.com/2014/01/">January 2014</a></li>
+<li><a href="http://www.chattanoogabystander.com/2013/12/">December 2013</a></li>
+<li><a href="http://www.chattanoogabystander.com/2013/11/">November 2013</a></li>
+<li><a href="http://www.chattanoogabystander.com/2013/10/">October 2013</a></li>
+<li><a href="http://www.chattanoogabystander.com/2013/09/">September 2013</a></li>
+<li><a href="http://www.chattanoogabystander.com/2013/08/">August 2013</a></li>
+<li><a href="http://www.chattanoogabystander.com/2013/07/">July 2013</a></li>
+<li><a href="http://www.chattanoogabystander.com/2013/06/">June 2013</a></li>
+<li><a href="http://www.chattanoogabystander.com/2013/05/">May 2013</a></li>
+<li><a href="http://www.chattanoogabystander.com/2013/04/">April 2013</a></li>
+<li><a href="http://www.chattanoogabystander.com/2013/03/">March 2013</a></li>
+</ul>
+</div><div class="widget widget_categories" id="categories-2"><h3 class="widget-title"><span>Categories</span></h3> <ul>
+<li class="cat-item cat-item-2"><a href="http://www.chattanoogabystander.com/category/business/">Business</a>
+</li>
+<li class="cat-item cat-item-3"><a href="http://www.chattanoogabystander.com/category/culture/">Culture</a>
+</li>
+<li class="cat-item cat-item-14"><a href="http://www.chattanoogabystander.com/category/education/">Education</a>
+</li>
+<li class="cat-item cat-item-4"><a href="http://www.chattanoogabystander.com/category/fooddrink/">Food/Drink</a>
+</li>
+<li class="cat-item cat-item-13"><a href="http://www.chattanoogabystander.com/category/business/gigtank/">GIGTANK!</a>
+</li>
+<li class="cat-item cat-item-5"><a href="http://www.chattanoogabystander.com/category/health/">Health</a>
+</li>
+<li class="cat-item cat-item-11"><a href="http://www.chattanoogabystander.com/category/specials/obamanooga-2013/">Obamanooga '13</a>
+</li>
+<li class="cat-item cat-item-6"><a href="http://www.chattanoogabystander.com/category/opinion/">Op/Ed</a>
+</li>
+<li class="cat-item cat-item-7"><a href="http://www.chattanoogabystander.com/category/politics/">Politics</a>
+</li>
+<li class="cat-item cat-item-10"><a href="http://www.chattanoogabystander.com/category/specials/riverbend/">Riverbend</a>
+</li>
+<li class="cat-item cat-item-15"><a href="http://www.chattanoogabystander.com/category/specials/shitstorm-2016/">Shitstorm 2016</a>
+</li>
+<li class="cat-item cat-item-8"><a href="http://www.chattanoogabystander.com/category/sportsrecreation/">Sports/Rec</a>
+</li>
+<li class="cat-item cat-item-16"><a href="http://www.chattanoogabystander.com/category/specials/trumpanooga-18/">Trumpanooga '18</a>
+</li>
+<li class="cat-item cat-item-1"><a href="http://www.chattanoogabystander.com/category/uncategorized/">Uncategorized</a>
+</li>
+</ul>
+</div>
+<div class="gutter-sidebar"></div>
+</div>
+</div>
+</aside>
+<div class="clearfix"></div>
+</div>
+</div>
+<nav class="post-nav">
+<div class="container">
+<nav class="navigation post-navigation" role="navigation">
+<h2 class="screen-reader-text">Post navigation</h2>
+<div class="nav-links"><div class="nav-previous"><a href="http://www.chattanoogabystander.com/2017/06/16/toby-keith-cancels-riverbend-performance-to-join-church-of-urth/" rel="prev"><span aria-hidden="true" class="meta-nav"><i class="fa fa-caret-left"></i>Previous Story</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Toby Keith cancels Riverbend performance to join Church of Urth</span></a></div><div class="nav-next"><a href="http://www.chattanoogabystander.com/2017/07/09/before-i-die-in-five-minutes-wall-installed-in-crime-ridden-east-chatt/" rel="next"><span aria-hidden="true" class="meta-nav">Next Story<i class="fa fa-caret-right"></i></span> <span class="screen-reader-text">Next post:</span> <span class="post-title">“Before I Die in Five Minutes…” wall installed in crime-ridden East Chatt.</span></a></div></div>
+</nav> </div>
+</nav>
+<div id="posts-small-wrapper">
+<div class="container">
+<h3 id="posts-small-heading"><span>Latest from Politics</span></h3>
+<div id="posts-small">
+<article class="post-small small-item post-2282 post type-post status-publish format-standard has-post-thumbnail hentry category-health category-politics enable-dropcap" id="post-2282" itemscope="" itemtype="http://schema.org/CreativeWork">
+<div class="small-inner">
+<figure class="small-thumbnail" itemscope="" itemtype="http://schema.org/ImageObject">
+<meta content="http://www.chattanoogabystander.com/wp-content/uploads/2019/05/baby.jpg" itemprop="url"/>
+<meta content="1280" itemprop="width"/>
+<meta content="853" itemprop="height"/>
+<a href="http://www.chattanoogabystander.com/2019/05/15/ala-lawmakers-declare-life-begins-when-stork-kisses-bee-in-cabbage-patch/"> <img alt="" class="attachment-thumbnail-medium size-thumbnail-medium wp-post-image" height="384" src="http://www.chattanoogabystander.com/wp-content/uploads/2019/05/baby-480x384.jpg" width="480"/>
+</a>
+</figure>
+<section class="small-body">
+<header class="small-header">
+<h3 class="small-title" itemprop="headline">
+<a href="http://www.chattanoogabystander.com/2019/05/15/ala-lawmakers-declare-life-begins-when-stork-kisses-bee-in-cabbage-patch/">Ala. lawmakers declare life begins when stork kisses bee in cabbage patch</a>
+</h3>
+</header>
+<div class="post-item-excerpt small-excerpt" itemprop="text">
+<p> 
+            Alabama state legislators passed a controversial bill today declaring that human life…            
+            
+                    </p>
+</div>
+<div class="clearfix"></div>
+</section>
+<div class="clearfix"></div>
+</div>
+</article>
+<article class="post-small small-item post-2250 post type-post status-publish format-standard has-post-thumbnail hentry category-fooddrink category-politics enable-dropcap" id="post-2250" itemscope="" itemtype="http://schema.org/CreativeWork">
+<div class="small-inner">
+<figure class="small-thumbnail" itemscope="" itemtype="http://schema.org/ImageObject">
+<meta content="http://www.chattanoogabystander.com/wp-content/uploads/2019/02/pickpocket.jpg" itemprop="url"/>
+<meta content="854" itemprop="width"/>
+<meta content="480" itemprop="height"/>
+<a href="http://www.chattanoogabystander.com/2019/02/11/police-recommend-putting-nacho-cheese-in-pockets-to-thwart-pickpockets/"> <img alt="" class="attachment-thumbnail-medium size-thumbnail-medium wp-post-image" height="384" src="http://www.chattanoogabystander.com/wp-content/uploads/2019/02/pickpocket-480x384.jpg" width="480"/>
+</a>
+</figure>
+<section class="small-body">
+<header class="small-header">
+<h3 class="small-title" itemprop="headline">
+<a href="http://www.chattanoogabystander.com/2019/02/11/police-recommend-putting-nacho-cheese-in-pockets-to-thwart-pickpockets/">Police recommend putting nacho cheese in pockets to thwart pickpockets</a>
+</h3>
+</header>
+<div class="post-item-excerpt small-excerpt" itemprop="text">
+<p> 
+            After video footage was released of a pickpocket stealing a woman’s phone…            
+            
+                    </p>
+</div>
+<div class="clearfix"></div>
+</section>
+<div class="clearfix"></div>
+</div>
+</article>
+<article class="post-small small-item post-2247 post type-post status-publish format-standard has-post-thumbnail hentry category-culture category-politics enable-dropcap" id="post-2247" itemscope="" itemtype="http://schema.org/CreativeWork">
+<div class="small-inner">
+<figure class="small-thumbnail" itemscope="" itemtype="http://schema.org/ImageObject">
+<meta content="http://www.chattanoogabystander.com/wp-content/uploads/2019/02/fleischmann_thewall.jpg" itemprop="url"/>
+<meta content="755" itemprop="width"/>
+<meta content="650" itemprop="height"/>
+<a href="http://www.chattanoogabystander.com/2019/02/06/fleischmann-changes-stance-on-border-wall-after-listening-to-pink-floyds-the-wall/"> <img alt="" class="attachment-thumbnail-medium size-thumbnail-medium wp-post-image" height="384" src="http://www.chattanoogabystander.com/wp-content/uploads/2019/02/fleischmann_thewall-480x384.jpg" width="480"/>
+</a>
+</figure>
+<section class="small-body">
+<header class="small-header">
+<h3 class="small-title" itemprop="headline">
+<a href="http://www.chattanoogabystander.com/2019/02/06/fleischmann-changes-stance-on-border-wall-after-listening-to-pink-floyds-the-wall/">Fleischmann changes stance on border wall after listening to Pink Floyd’s “The Wall”</a>
+</h3>
+</header>
+<div class="post-item-excerpt small-excerpt" itemprop="text">
+<p> 
+            Congressman Chuck Fleischmann withdrew his support for the proposed Mexican border wall…            
+            
+                    </p>
+</div>
+<div class="clearfix"></div>
+</section>
+<div class="clearfix"></div>
+</div>
+</article>
+<article class="post-small small-item post-2237 post type-post status-publish format-standard has-post-thumbnail hentry category-fooddrink category-politics enable-dropcap" id="post-2237" itemscope="" itemtype="http://schema.org/CreativeWork">
+<div class="small-inner">
+<figure class="small-thumbnail" itemscope="" itemtype="http://schema.org/ImageObject">
+<meta content="http://www.chattanoogabystander.com/wp-content/uploads/2019/01/beer-drinkers.jpg" itemprop="url"/>
+<meta content="1017" itemprop="width"/>
+<meta content="911" itemprop="height"/>
+<a href="http://www.chattanoogabystander.com/2019/01/24/city-bans-ipas-to-address-racial-displacement-issue/"> <img alt="" class="attachment-thumbnail-medium size-thumbnail-medium wp-post-image" height="384" src="http://www.chattanoogabystander.com/wp-content/uploads/2019/01/beer-drinkers-480x384.jpg" width="480"/>
+</a>
+</figure>
+<section class="small-body">
+<header class="small-header">
+<h3 class="small-title" itemprop="headline">
+<a href="http://www.chattanoogabystander.com/2019/01/24/city-bans-ipas-to-address-racial-displacement-issue/">City bans IPAs to address racial displacement issue</a>
+</h3>
+</header>
+<div class="post-item-excerpt small-excerpt" itemprop="text">
+<p> 
+            After Chattanooga Organized for Action (COA) released a report about racial displacement…            
+            
+                    </p>
+</div>
+<div class="clearfix"></div>
+</section>
+<div class="clearfix"></div>
+</div>
+</article>
+<article class="post-small small-item post-2180 post type-post status-publish format-standard has-post-thumbnail hentry category-politics category-trumpanooga-18 enable-dropcap" id="post-2180" itemscope="" itemtype="http://schema.org/CreativeWork">
+<div class="small-inner">
+<figure class="small-thumbnail" itemscope="" itemtype="http://schema.org/ImageObject">
+<meta content="http://www.chattanoogabystander.com/wp-content/uploads/2018/11/joda.png" itemprop="url"/>
+<meta content="923" itemprop="width"/>
+<meta content="446" itemprop="height"/>
+<a href="http://www.chattanoogabystander.com/2018/11/04/trump-rally-extended-for-one-hour-while-he-tries-to-pronounce-thongnopnua/"> <img alt="" class="attachment-thumbnail-medium size-thumbnail-medium wp-post-image" height="384" src="http://www.chattanoogabystander.com/wp-content/uploads/2018/11/joda-480x384.png" width="480"/>
+</a>
+</figure>
+<section class="small-body">
+<header class="small-header">
+<h3 class="small-title" itemprop="headline">
+<a href="http://www.chattanoogabystander.com/2018/11/04/trump-rally-extended-for-one-hour-while-he-tries-to-pronounce-thongnopnua/">Trump rally extended for one hour while he tries to pronounce Thongnopnua</a>
+</h3>
+</header>
+<div class="post-item-excerpt small-excerpt" itemprop="text">
+<p> 
+            A representative from the Trump caravan announced tonight’s rally will be extended…            
+            
+                    </p>
+</div>
+<div class="clearfix"></div>
+</section>
+<div class="clearfix"></div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="site-footer" id="wi-footer" itemscope="" itemtype="https://schema.org/WPFooter">
+<div id="footer-bottom" role="contentinfo">
+<div class="container">
+<div class="social-list skin-black" id="footer-social">
+<ul>
+<li class="li-facebook-square"><a href="http://facebook.com/chattanoogabystander" rel="alternate" target="_blank" title="Facebook"><i class="fa fa-facebook"></i> <span>Facebook</span></a></li>
+<li class="li-twitter"><a href="http://twitter.com/chattbystander" rel="alternate" target="_blank" title="Twitter"><i class="fa fa-twitter"></i> <span>Twitter</span></a></li>
+<li class="li-envelope"><a href="http://www.chattanoogabystander.com/2017/07/06/hail-satan-license-plates-now-available-in-tenn//mailto:chattanoogabystander@gmail.com%20(Don't%20bother%20with%20submissions.%20We%20won't%20use%20it)" rel="alternate" target="_blank" title="Email"><i class="fa fa-envelope"></i> <span>Email</span></a></li>
+</ul>
+</div>
+<div class="footer-search-container">
+<div class="footer-search" id="footer-search">
+<form action="http://www.chattanoogabystander.com" method="get">
+<input class="s" name="s" placeholder="Search..." type="text" value=""/>
+<button class="submit" type="submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+</div>
+<p class="copyright">Copyright 2019 Chattanooga Bystander. This site is satire, fiction, and intended only for those age 18 and over. Names used in articles are fictional, unless those of public figures or entities as the subject of satire.</p>
+</div>
+</div>
+</footer>
+</div>
+<div class="clearfix"></div>
+</div>
+<div id="offcanvas">
+<nav class="offcanvas-nav" id="mobilenav">
+<div class="menu"><ul class="menu" id="menu-top-menu-1"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-143"><a href="http://www.chattanoogabystander.com/category/business/" style="transition-delay: 0ms;">Business</a><span class="indicator"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-301"><a href="http://www.chattanoogabystander.com/category/politics/" style="transition-delay: 300ms;">Politics</a><span class="indicator"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-235"><a href="http://www.chattanoogabystander.com/category/culture/" style="transition-delay: 424.264ms;">Culture</a><span class="indicator"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-303"><a href="http://www.chattanoogabystander.com/category/opinion/" style="transition-delay: 519.615ms;">Op/Ed</a><span class="indicator"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1451"><a href="http://www.chattanoogabystander.com/category/specials/" style="transition-delay: 600ms;">Specials</a><span class="indicator"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1447"><a href="http://www.chattanoogabystander.com/category/sportsrecreation/" style="transition-delay: 670.82ms;">Sports/Rec</a><span class="indicator"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1448"><a href="http://www.chattanoogabystander.com/category/health/" style="transition-delay: 734.847ms;">Health</a><span class="indicator"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1449"><a href="http://www.chattanoogabystander.com/category/education/" style="transition-delay: 793.725ms;">Education</a><span class="indicator"></span></li>
+</ul></div>
+</nav>
+<div class="offcanvas-social header-social social-list">
+<ul>
+<li class="li-facebook-square"><a href="http://facebook.com/chattanoogabystander" rel="alternate" target="_blank" title="Facebook"><i class="fa fa-facebook"></i> <span>Facebook</span></a></li>
+<li class="li-twitter"><a href="http://twitter.com/chattbystander" rel="alternate" target="_blank" title="Twitter"><i class="fa fa-twitter"></i> <span>Twitter</span></a></li>
+<li class="li-envelope"><a href="http://www.chattanoogabystander.com/2017/07/06/hail-satan-license-plates-now-available-in-tenn//mailto:chattanoogabystander@gmail.com%20(Don't%20bother%20with%20submissions.%20We%20won't%20use%20it)" rel="alternate" target="_blank" title="Email"><i class="fa fa-envelope"></i> <span>Email</span></a></li>
+</ul>
+</div>
+</div>
+<div id="offcanvas-overlay"></div>
+<div style="display:none">
+<div class="grofile-hash-map-46cb738f90f7381e7c6945b5ea11c892">
+</div>
+</div>
+<div class="backtotop" id="backtotop">
+<span class="go">Go to</span>
+<span class="top">Top</span>
+</div>
+<script src="http://www.chattanoogabystander.com/wp-content/plugins/metronet-profile-picture/js/mpp-frontend.js?ver=2.2.5" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/www.chattanoogabystander.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script src="http://www.chattanoogabystander.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.3" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"chattbystander"};
+/* ]]> */
+</script>
+<script src="http://www.chattanoogabystander.com/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.17" type="text/javascript"></script>
+<script src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201928" type="text/javascript"></script>
+<script src="https://secure.gravatar.com/js/gprofiles.js?ver=2019Julaa" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script src="http://www.chattanoogabystander.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=5.2.2" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WITHEMES = {"l10n":{"prev":"Previous","next":"Next"},"enable_sticky_sidebar":"","enable_sticky_header":"1","ajaxurl":"http:\/\/www.chattanoogabystander.com\/wp-admin\/admin-ajax.php","nonce":"a6568aba37"};
+/* ]]> */
+</script>
+<script src="http://www.chattanoogabystander.com/wp-content/themes/fox/js/theme.min.js?ver=3.0" type="text/javascript"></script>
+<script src="http://www.chattanoogabystander.com/wp-includes/js/wp-embed.min.js?ver=5.2.2" type="text/javascript"></script>
+<script async="async" defer="defer" src="https://stats.wp.com/e-201928.js" type="text/javascript"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.4',blog:'50621763',post:'1911',tz:'-4',srv:'www.chattanoogabystander.com'} ]);
+	_stq.push([ 'clickTrackerInit', '50621763', '1911' ]);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"16de0a0f21","applicationID":"11228944","transactionName":"ZVMEZkJSDBUDAEMKDVwZJ1FEWg0ITRBeDQVeUw==","queueTime":0,"applicationTime":535,"atts":"SRQHEApIHxs=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<div id="cboxOverlay" style="display: none;"></div><div class="" id="colorbox" role="dialog" style="display: none;" tabindex="-1"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button id="cboxPrevious" type="button"></button><button id="cboxNext" type="button"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><img alt=":)" height="5" id="wpstats" src="http://pixel.wp.com/g.gif?v=ext&amp;j=1%3A7.4&amp;blog=50621763&amp;post=1911&amp;tz=-4&amp;srv=www.chattanoogabystander.com&amp;host=www.chattanoogabystander.com&amp;ref=&amp;fcp=11462&amp;rand=0.17199726432297502" width="6"/></body></html>

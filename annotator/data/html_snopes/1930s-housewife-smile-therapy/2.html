@@ -1,0 +1,828 @@
+<html class="js webgl no-touchevents cssanimations flexbox flexwrap wf-calluna-n4-active wf-calluna-i4-active wf-calluna-i6-active wf-calluna-n6-active wf-alternategothicno2d-n4-active wf-fftisasanswebpro-n7-active wf-fftisasanswebpro-i4-active wf-fftisasanswebpro-n4-active wf-active" dir="ltr" lang="en" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "><head><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style>
+<meta charset="utf-8"/><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://rules.quantcount.com/rules-p-RNnRJWdC4X39r.js"></script><script async="" src="https://secure.quantserve.com/quant.js" type="text/javascript"></script><script async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js" type="text/javascript"></script><script async="" src="https://connect.facebook.net/signals/plugins/inferredEvents.js?v=2.8.51"></script><script async="" src="https://connect.facebook.net/signals/config/1646928738961854?v=2.8.51&amp;r=stable"></script><script async="" src="//connect.facebook.net/en_US/fbevents.js"></script><script async="" src="//bat.bing.com/bat.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/gtm/js?id=GTM-5C7T34Z&amp;cid=961075820.1563002441&amp;aip=true" type="text/javascript"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-TCRPVQ"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-4265387-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga('require', 'GTM-5C7T34Z');ga("send", "pageview");</script>
+<meta content="History At a Glance: Women in World War II | The National WWII Museum | New Orleans" name="title"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="The National WWII Museum | New Orleans" property="og:site_name"/>
+<meta content="History At a Glance: Women in World War II | The National WWII Museum | New Orleans" name="twitter:title"/>
+<meta content="@nwwiim" name="twitter:site"/>
+<meta content="American women played important roles during World War II, both at home and in uniform." name="twitter:description"/>
+<meta content="American women played important roles during World War II, both at home and in uniform." name="description"/>
+<meta content="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/women-wwii" property="og:url"/>
+<meta content="History At a Glance: Women in World War II | The National WWII Museum | New Orleans" property="og:title"/>
+<meta content="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/women-wwii" name="twitter:url"/>
+<meta content="American women played important roles during World War II, both at home and in uniform." property="og:description"/>
+<meta content="https://www.nationalww2museum.org/sites/default/files/2017-07/rosie-960x700.jpg" name="twitter:image"/>
+<meta content="https://www.nationalww2museum.org/sites/default/files/2017-07/rosie-960x700.jpg" property="og:image"/>
+<meta content="https://www.nationalww2museum.org/sites/default/files/2017-07/rosie-960x700.jpg" property="og:image:url"/>
+<meta content="C1BA3C5E09C99A8C5CAE355F5DF8D081" name="msvalidate.01"/>
+<meta content="Drupal 8 (https://www.drupal.org)" name="Generator"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://www.nationalww2museum.org/themes/nwwiim/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<link href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/women-wwii" rel="canonical"/>
+<link href="https://www.nationalww2museum.org/node/1120" rel="shortlink"/>
+<link href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/women-wwii" rel="revision"/>
+<title>History At a Glance: Women in World War II | The National WWII Museum | New Orleans</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<link href="https://www.nationalww2museum.org/themes/nwwiim/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="https://www.nationalww2museum.org/themes/nwwiim/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://www.nationalww2museum.org/themes/nwwiim/favicons/favicon-194x194.png" rel="icon" sizes="194x194" type="image/png"/>
+<link href="https://www.nationalww2museum.org/themes/nwwiim/favicons/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="https://www.nationalww2museum.org/themes/nwwiim/favicons/android-chrome-384x384.png" rel="icon" sizes="384x384" type="image/png"/>
+<link href="https://www.nationalww2museum.org/themes/nwwiim/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="https://www.nationalww2museum.org/themes/nwwiim/favicons/manifest.json" rel="manifest"/>
+<link color="#00396a" href="https://www.nationalww2museum.org/themes/nwwiim/favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="https://www.nationalww2museum.org/themes/nwwiim/favicons/favicon.ico" rel="shortcut icon"/>
+<meta content="#00396a" name="msapplication-TileColor"/>
+<meta content="/themes/nwwiim/favicons/mstile-150x150.png" name="msapplication-TileImage"/>
+<meta content="/themes/nwwiim/favicons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script src="https://use.typekit.net/ajl2pve.js"></script>
+<style type="text/css">.tk-calluna{font-family:"calluna",serif;}.tk-alternate-gothic-no-2-d{font-family:"alternate-gothic-no-2-d",sans-serif;}.tk-ff-tisa-sans-web-pro{font-family:"ff-tisa-sans-web-pro",sans-serif;}</style><style type="text/css">@font-face{font-family:tk-calluna-n4;src:url(https://use.typekit.net/af/32f92a/000000000000000000014869/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/32f92a/000000000000000000014869/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/32f92a/000000000000000000014869/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:tk-calluna-i4;src:url(https://use.typekit.net/af/fb816c/00000000000000000001486a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/fb816c/00000000000000000001486a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/fb816c/00000000000000000001486a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:tk-calluna-i6;src:url(https://use.typekit.net/af/0d4c7b/00000000000000000001486c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/0d4c7b/00000000000000000001486c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/0d4c7b/00000000000000000001486c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("opentype");font-weight:600;font-style:italic;}@font-face{font-family:tk-calluna-n6;src:url(https://use.typekit.net/af/370322/00000000000000000001486b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/370322/00000000000000000001486b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/370322/00000000000000000001486b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;}@font-face{font-family:tk-alternate-gothic-no-2-d-n4;src:url(https://use.typekit.net/af/2d5126/000000000000000000010d5c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/2d5126/000000000000000000010d5c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/2d5126/000000000000000000010d5c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:tk-ff-tisa-sans-web-pro-n7;src:url(https://use.typekit.net/af/6dd34d/00000000000000003b9b0796/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/6dd34d/00000000000000003b9b0796/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/6dd34d/00000000000000003b9b0796/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:tk-ff-tisa-sans-web-pro-i4;src:url(https://use.typekit.net/af/30ad0e/00000000000000003b9b0793/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/30ad0e/00000000000000003b9b0793/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/30ad0e/00000000000000003b9b0793/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:tk-ff-tisa-sans-web-pro-n4;src:url(https://use.typekit.net/af/6f55e9/00000000000000003b9b0792/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/6f55e9/00000000000000003b9b0792/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/6f55e9/00000000000000003b9b0792/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}</style><script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script src="https://www.nationalww2museum.org/themes/nwwiim/js/vendor/videojs-ie8.min.js"></script>
+<link href="https://www.nationalww2museum.org/sites/default/files/css/css_S-oBDqoSAiUD5K9xYYJsYoRB_OJIixE0yvhNWcGnfEE.css?pujrq1" media="all" rel="stylesheet"/>
+<link href="https://www.nationalww2museum.org/sites/default/files/css/css_-7XCQkxJovsRGzMlcfG2Ftcr0v5NTv5GuaWpSUUSp3E.css?pujrq1" media="all" rel="stylesheet"/>
+<!--[if lte IE 9]>
+<link rel="stylesheet" href="/sites/default/files/css/css_hMryk0pHQ8uL6lLhpUOOX-vzeIZiWkzqzT5PeO8SA38.css?pujrq1" media="all" />
+<![endif]-->
+<noscript><link href="https://www.nationalww2museum.org/themes/nwwiim/css/no-js.css" media="all" rel="stylesheet"/></noscript><style type="text/css">@font-face{font-family:calluna;src:url(https://use.typekit.net/af/32f92a/000000000000000000014869/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/32f92a/000000000000000000014869/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/32f92a/000000000000000000014869/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:calluna;src:url(https://use.typekit.net/af/fb816c/00000000000000000001486a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/fb816c/00000000000000000001486a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/fb816c/00000000000000000001486a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:calluna;src:url(https://use.typekit.net/af/0d4c7b/00000000000000000001486c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/0d4c7b/00000000000000000001486c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/0d4c7b/00000000000000000001486c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("opentype");font-weight:600;font-style:italic;}@font-face{font-family:calluna;src:url(https://use.typekit.net/af/370322/00000000000000000001486b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/370322/00000000000000000001486b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/370322/00000000000000000001486b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;}@font-face{font-family:alternate-gothic-no-2-d;src:url(https://use.typekit.net/af/2d5126/000000000000000000010d5c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/2d5126/000000000000000000010d5c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/2d5126/000000000000000000010d5c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:ff-tisa-sans-web-pro;src:url(https://use.typekit.net/af/6dd34d/00000000000000003b9b0796/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/6dd34d/00000000000000003b9b0796/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/6dd34d/00000000000000003b9b0796/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:ff-tisa-sans-web-pro;src:url(https://use.typekit.net/af/30ad0e/00000000000000003b9b0793/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/30ad0e/00000000000000003b9b0793/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/30ad0e/00000000000000003b9b0793/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:ff-tisa-sans-web-pro;src:url(https://use.typekit.net/af/6f55e9/00000000000000003b9b0792/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/6f55e9/00000000000000003b9b0792/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/6f55e9/00000000000000003b9b0792/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}</style>
+</head>
+<body class="page-museum-closed no-sidebars path-node page-type-page desktop">
+<noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-TCRPVQ" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TCRPVQ');</script>
+<a class="element-invisible element-focusable bg-grey u-centered-text" href="https://www.nationalww2museum.org/#main" tab-index="-1">
+<h2>Skip to Main Content of WWII</h2>
+</a>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+<div id="page" role="document">
+<header class="cf" id="header">
+<div class="header-logo">
+<div class="block block-system block-system-branding-block" id="block-sitebranding">
+<h1 id="logo">
+<a href="https://www.nationalww2museum.org/" rel="home" title="Home"></a>
+</h1>
+</div>
+</div>
+<div class="mobile-nav-teaser">
+<nav aria-labelledby="block-headermobilenavigation-menu" id="block-headermobilenavigation" role="navigation">
+<div class="block-content">
+<ul class="menu">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/466" href="https://www.nationalww2museum.org/visit" target="">Visit</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/467" href="https://www.nationalww2museum.org/events-programs" target="">Events</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/464" href="https://www.nationalww2museum.org/the-war" target="">The War</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<div class="mobile-toggle-nav">
+<div class="more-btn">
+<span>More</span>
+</div>
+<div class="overlay"></div>
+</div>
+<div class="nav-wrapper">
+<div class="header-top">
+<nav aria-labelledby="block-headerutilitynavigation-menu" class="block-header-utility-menu" id="block-headerutilitynavigation" role="navigation">
+<div class="block-content">
+<ul class="menu">
+<li class="menu-item">
+<a class="icon-globe" data-drupal-link-system-path="node/535" href="https://www.nationalww2museum.org/events-programs/educational-travel" target="">Travel</a>
+</li>
+<li class="menu-item">
+<a class="icon-shop" href="http://store.nationalww2museum.org" target="">Store</a>
+</li>
+<li class="menu-item">
+<a class="icon-ticket" data-drupal-link-system-path="node/604" href="https://www.nationalww2museum.org/visit/museum-campus" target="">Campus</a>
+</li>
+<li class="menu-item">
+<a class="icon-calendar" data-drupal-link-system-path="node/475" href="https://www.nationalww2museum.org/events-programs/events-calendar" target="">Calendar</a>
+</li>
+<li class="menu-item">
+<a class="icon-ticket" data-drupal-link-system-path="node/671" href="https://www.nationalww2museum.org/events-programs/bbs-stage-door-canteen" target="" title="BB's Stage Door Canteen">BB's Stage Door Canteen</a>
+</li>
+</ul>
+</div>
+</nav>
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-nwwiim-search" role="search">
+<div class="block-content">
+<form accept-charset="UTF-8" action="/search" id="search-block-form" method="get">
+<div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+<label class="visually-hidden" for="edit-keys">Search</label>
+<input class="form-search" data-drupal-selector="edit-keys" id="edit-keys" maxlength="128" name="keys" placeholder="Search" size="15" title="Enter the terms you wish to search for." type="search" value=""/>
+</div>
+<div class="form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"><input alt="Search Button" class="button js-form-submit form-submit" data-drupal-selector="edit-submit" id="edit-submit" type="submit" value="Search"/>
+</div>
+</form>
+</div>
+</div><nav aria-labelledby="block-footersocialnetworksnavigation-2-menu" class="block block-socials-menu" id="block-footersocialnetworksnavigation-2" role="navigation">
+<div class="block-content">
+<ul class="menu">
+<li class="menu-item">
+<a class="icon-facebook" href="https://www.facebook.com/WWIIMuseum/" target="_blank">Facebook</a>
+</li>
+<li class="menu-item">
+<a class="icon-twitter" href="http://twitter.com/wwiimuseum" target="_blank">Twitter</a>
+</li>
+<li class="menu-item">
+<a class="icon-instagram" href="https://www.instagram.com/wwiimuseum/" target="_blank">Instagram</a>
+</li>
+<li class="menu-item">
+<a class="icon-youtube" href="https://www.youtube.com/channel/UCmTCST8yVyVMctEYY9WeMWw" target="_blank">Youtube</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<div class="header-bottom">
+<div class="block block-type-button" id="block-headerbuyticketsbutton">
+<a class="btn solid ticket" href="https://ticketing.nationalww2museum.org/Webstore/shop/ViewItems.aspx?CG=Tickets&amp;C=GA" target="_blank" title="Admission Tickets"><span>Admission Tickets</span></a>
+</div><nav aria-labelledby="block-nwwiim-main-menu-menu" class="block block-header-main-menu" id="block-nwwiim-main-menu" role="navigation">
+<div class="block-content">
+<ul class="menu">
+<li class="menu-item menu-item--expanded">
+<a data-drupal-link-system-path="node/466" href="https://www.nationalww2museum.org/visit" target="">Visit</a>
+<div class="sub-menu-toggle"></div>
+<div class="drop-menu">
+<div class="dropdown-block">
+<div class="block block-block-content block-block-content91f3a1e2-f531-4196-805c-4abfd08b29de" id="block-dropdownctavisit" onclick="location.href='/visit/museum-tours'">
+<div class="block-content">
+<figure class="cb-image">
+<div class="img-ratio--wide bg--dark">
+<div class="field field--name-field-callout-image field--type-entity-reference field--label-hidden field__item">
+<img alt="Thumbnail" class="b-lazy b-loaded" height="290" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_small/public/2018-11/BTL%20Facebook-Cockpit%201200x628.jpg" typeof="foaf:Image" width="400"/>
+<noscript><img alt="Thumbnail" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_small/public/2018-11/BTL%20Facebook-Cockpit%201200x628.jpg"/></noscript>
+</div>
+<span class="bg-overlay"></span>
+</div>
+<figcaption>
+<div class="u-faux-table">
+<div class="u-faux-table--align-middle">
+<div class="f--label c--white">Featured Tours</div>
+<h4 class="f--secondary f--uppercase">Museum Tours</h4>
+</div>
+</div>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="menu-container">
+<ul class="menu level1">
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/465" href="https://www.nationalww2museum.org/visit/plan-your-visit" title="Plan your visit to The National WWII Museum">Plan Your Visit</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/505" href="https://www.nationalww2museum.org/visit/exhibits">Exhibits</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/604" href="https://www.nationalww2museum.org/visit/museum-campus">Museum Campus</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/678" href="https://www.nationalww2museum.org/visit/groups">Groups</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/589" href="https://www.nationalww2museum.org/visit/plan-your-visit/dining" target="">Dining</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/50167" href="https://www.nationalww2museum.org/visit/museum-tours">Museum Tours</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/51518" href="https://www.nationalww2museum.org/visit/pt-305">PT-305</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a data-drupal-link-system-path="node/467" href="https://www.nationalww2museum.org/events-programs" target="">Events &amp; Programs</a>
+<div class="sub-menu-toggle"></div>
+<div class="drop-menu">
+<div class="dropdown-block">
+<div class="block block-block-content block-block-content9952df3e-5e42-4aaf-9f8d-3637db681ae3" id="block-dropdownctaeventsprograms" onclick="location.href='/events-programs/bbs-stage-door-canteen'">
+<div class="block-content">
+<figure class="cb-image">
+<div class="img-ratio--wide bg--dark">
+<div class="field field--name-field-callout-image field--type-entity-reference field--label-hidden field__item">
+<img alt="Thumbnail" class="b-lazy b-loaded" height="290" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_small/public/2017-05/sdc-960x700.jpg" typeof="foaf:Image" width="400"/>
+<noscript><img alt="Thumbnail" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_small/public/2017-05/sdc-960x700.jpg"/></noscript>
+</div>
+<span class="bg-overlay"></span>
+</div>
+<figcaption>
+<div class="u-faux-table">
+<div class="u-faux-table--align-middle">
+<div class="f--label c--white">See a Show</div>
+<h4 class="f--secondary f--uppercase">BB's Stage Door Canteen</h4>
+</div>
+</div>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="menu-container">
+<ul class="menu level1">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/475" href="https://www.nationalww2museum.org/events-programs/events-calendar">Events Calendar</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/535" href="https://www.nationalww2museum.org/events-programs/educational-travel" title="Travel programs provided by The National WWII Museum">Educational Travel</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/671" href="https://www.nationalww2museum.org/events-programs/bbs-stage-door-canteen">BB's Stage Door Canteen</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/769" href="https://www.nationalww2museum.org/events-programs/special-events">Special Events</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/577" href="https://www.nationalww2museum.org/events-programs/kids-and-family-programs">Kids and Family Programs</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/947" href="https://www.nationalww2museum.org/events-programs/public-programs">Public Programs</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/847" href="https://www.nationalww2museum.org/events-programs/students-and-teachers">Students and Teachers</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/542" href="https://www.nationalww2museum.org/private-event-rentals">Private Event Rentals</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a data-drupal-link-system-path="node/464" href="https://www.nationalww2museum.org/the-war" target="">The War</a>
+<div class="sub-menu-toggle"></div>
+<div class="drop-menu">
+<div class="dropdown-block">
+<div class="block block-block-content block-block-contentea9191cd-9d1e-4b0c-8b52-8fade6683702" id="block-dropdownctathewar" onclick="location.href='https://www.ddaybook.com/'">
+<div class="block-content">
+<figure class="cb-image">
+<div class="img-ratio--wide bg--dark">
+<div class="field field--name-field-callout-image field--type-entity-reference field--label-hidden field__item">
+<img alt="Thumbnail" class="b-lazy b-loaded" height="290" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_small/public/2019-01/everything_we_have_brick_wall_960x700.jpg" typeof="foaf:Image" width="400"/>
+<noscript><img alt="Thumbnail" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_small/public/2019-01/everything_we_have_brick_wall_960x700.jpg"/></noscript>
+</div>
+<span class="bg-overlay"></span>
+</div>
+<figcaption>
+<div class="u-faux-table">
+<div class="u-faux-table--align-middle">
+<div class="f--label c--white">Learn More</div>
+<h4 class="f--secondary f--uppercase">"EVERYTHING WE HAVE”</h4>
+</div>
+</div>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="menu-container">
+<ul class="menu level1">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/963" href="https://www.nationalww2museum.org/war/explore-war">All Articles</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/506" href="https://www.nationalww2museum.org/war/profiles" target="">Profiles</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/561" href="https://www.nationalww2museum.org/war/from-collection">From the Collection</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/844" href="https://www.nationalww2museum.org/war/research-veteran">Research A Veteran</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/845" href="https://www.nationalww2museum.org/war/wwii-veteran-statistics">WWII Veteran Statistics</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/1889" href="https://www.nationalww2museum.org/war/institute-study-war-and-democracy">Institute for the Study of War and Democracy</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/2041" href="https://www.nationalww2museum.org/war/service-celluloid-podcast" target="">Service on Celluloid Podcast</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/51613" href="https://www.nationalww2museum.org/war/seize-secure-battle-la-fiere">Seize &amp; Secure: The Battle for La Fière</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="menu-item menu-item--expanded menu-item--active-trail">
+<a data-drupal-link-system-path="node/468" href="https://www.nationalww2museum.org/students-teachers" target="">Students &amp; Teachers</a>
+<div class="sub-menu-toggle"></div>
+<div class="drop-menu">
+<div class="dropdown-block">
+<div class="block block-block-content block-block-content74da355e-1c0d-4bc8-a5ad-a5e61c5e8c15" id="block-dropdownctastudentsteachers" onclick="location.href='https://www.nationalww2museum.org/students-teachers/distance-learning/online-masters-world-war-ii-studies'">
+<div class="block-content">
+<figure class="cb-image">
+<div class="img-ratio--wide bg--dark">
+<div class="field field--name-field-callout-image field--type-entity-reference field--label-hidden field__item">
+<img alt="Thumbnail" class="b-lazy b-loaded" height="290" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_small/public/2018-08/dday-beach.jpg" typeof="foaf:Image" width="400"/>
+<noscript><img alt="Thumbnail" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_small/public/2018-08/dday-beach.jpg"/></noscript>
+</div>
+<span class="bg-overlay"></span>
+</div>
+<figcaption>
+<div class="u-faux-table">
+<div class="u-faux-table--align-middle">
+<div class="f--label c--white">Featured Resource</div>
+<h4 class="f--secondary f--uppercase">Online Master's in World War II Studies</h4>
+</div>
+</div>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="menu-container">
+<ul class="menu level1">
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/49981" href="https://www.nationalww2museum.org/students-teachers/distance-learning">Distance Learning</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/804" href="https://www.nationalww2museum.org/students-teachers/educator-resources">Educator Resources</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/841" href="https://www.nationalww2museum.org/students-teachers/school-programs">School Programs</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/556" href="https://www.nationalww2museum.org/events-programs/educational-travel/student-travel-national-wwii-museum" target="">Student Travel</a>
+</li>
+<li class="menu-item menu-item--collapsed menu-item--active-trail">
+<a data-drupal-link-system-path="node/823" href="https://www.nationalww2museum.org/students-teachers/student-resources">Student Resources</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/50160" href="https://www.nationalww2museum.org/students-teachers/asu-partnership" target="">ASU Partnership</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a data-drupal-link-system-path="node/469" href="https://www.nationalww2museum.org/about-us" target="">About Us</a>
+<div class="sub-menu-toggle"></div>
+<div class="drop-menu">
+<div class="dropdown-block">
+<div class="block block-block-content block-block-content0a267a09-0791-4fc9-b724-c88aba800e3f" id="block-dropdownctaaboutus" onclick="location.href='/about-us/mission-vision-values'">
+<div class="block-content">
+<figure class="cb-image">
+<div class="img-ratio--wide bg--dark">
+<div class="field field--name-field-callout-image field--type-entity-reference field--label-hidden field__item">
+<img alt="Thumbnail" class="b-lazy b-loaded" height="290" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_small/public/2017-05/10_us_freedom_pavilion-the_boeing_center_ext_0.jpg" typeof="foaf:Image" width="400"/>
+<noscript><img alt="Thumbnail" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_small/public/2017-05/10_us_freedom_pavilion-the_boeing_center_ext_0.jpg"/></noscript>
+</div>
+<span class="bg-overlay"></span>
+</div>
+<figcaption>
+<div class="u-faux-table">
+<div class="u-faux-table--align-middle">
+<div class="f--label c--white">Explore</div>
+<h4 class="f--secondary f--uppercase">Our Mission</h4>
+</div>
+</div>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="menu-container">
+<ul class="menu level1">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/477" href="https://www.nationalww2museum.org/about-us/mission-vision-values" target="">Mission / Vision / Values</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/838" href="https://www.nationalww2museum.org/about-us/our-team">Our Team</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/848" href="https://www.nationalww2museum.org/about-us/our-partners">Our Partners</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/918" href="https://www.nationalww2museum.org/about-us/annual-reports-and-financials">Annual Reports and Financials</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/543" href="https://www.nationalww2museum.org/about-us/notes-museum" target="">Notes from the Museum</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a data-drupal-link-system-path="node/470" href="https://www.nationalww2museum.org/give" target="">Give</a>
+<div class="sub-menu-toggle"></div>
+<div class="drop-menu">
+<div class="dropdown-block">
+<div class="block block-block-content block-block-content75b785fd-52d9-4e0d-b367-dfc45894e3a2" id="block-dropdownctagive" onclick="location.href='/give/become-member'">
+<div class="block-content">
+<figure class="cb-image">
+<div class="img-ratio--wide bg--dark">
+<div class="field field--name-field-callout-image field--type-entity-reference field--label-hidden field__item">
+<img alt="Thumbnail" class="b-lazy b-loaded" height="290" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_small/public/2017-06/Sv-N9ePbWXMxjol4tPxIoDLC-lbF-FCXBBQqFvBldf0.jpg" title="Girl with Vet" typeof="foaf:Image" width="400"/>
+<noscript><img alt="Thumbnail" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_small/public/2017-06/Sv-N9ePbWXMxjol4tPxIoDLC-lbF-FCXBBQqFvBldf0.jpg"/></noscript>
+</div>
+<span class="bg-overlay"></span>
+</div>
+<figcaption>
+<div class="u-faux-table">
+<div class="u-faux-table--align-middle">
+<div class="f--label c--white">Donate</div>
+<h4 class="f--secondary f--uppercase">Become a Member</h4>
+</div>
+</div>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="menu-container">
+<ul class="menu level1">
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/694" href="https://www.nationalww2museum.org/give/ways-give" target="">Ways To Give</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/693" href="https://www.nationalww2museum.org/give/10-them">$10 For Them</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/708" href="https://www.nationalww2museum.org/give/become-member">Become a Member</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/602" href="https://www.nationalww2museum.org/give/honor-roll-charter-members">Honor Roll of Charter Members</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/690" href="https://www.nationalww2museum.org/give/honor-your-hero/commemorative-bricks" target="" title="Commemorative Bricks">Commemorative Bricks</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/802" href="https://www.nationalww2museum.org/give/honor-your-hero">Honor Your Hero</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/699" href="https://www.nationalww2museum.org/give/capital-campaign">Capital Campaign</a>
+</li>
+<li class="menu-item">
+<a href="http://giftplanning.nationalww2museum.org/" target="">Gift Planning</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/725" href="https://www.nationalww2museum.org/give/other-ways-support-museum">Other Ways to Support the Museum</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/714" href="https://www.nationalww2museum.org/give/donor-privacy-policy">Donor Privacy Policy</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</header>
+<section id="notification">
+</section>
+<main id="main" role="main">
+<section class="" id="breadcrumb">
+<div class="l-container--lg">
+<div class="block block-system block-system-breadcrumb-block" id="block-nwwiim-breadcrumbs">
+<div class="block-content">
+<nav aria-labelledby="system-breadcrumb" class="breadcrumb-dropdown-menu" role="navigation">
+<h2 class="visually-hidden">Breadcrumb</h2>
+<ol>
+<span class="slash">/</span>
+<li hover="on">
+<span class="page-title">
+<a href="https://www.nationalww2museum.org/">Home</a>
+</span>
+</li>
+<span class="slash">/</span>
+<li class="drop-down" hover="on">
+<span class="page-title">
+<a href="https://www.nationalww2museum.org/students-teachers">Students &amp; Teachers</a>
+</span>
+<span class="arrow icon-arrow-down"></span>
+<ul>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/distance-learning">Distance Learning</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/educator-resources">Educator Resources</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/school-programs">School Programs</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/events-programs/educational-travel/student-travel-national-wwii-museum">Student Travel</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources">Student Resources</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/asu-partnership">ASU Partnership</a>
+</li>
+</ul>
+</li>
+<span class="slash">/</span>
+<li class="drop-down" hover="on">
+<span class="page-title">
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources">Student Resources</a>
+</span>
+<span class="arrow icon-arrow-down"></span>
+<ul>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/explore-wwii-history">Explore WWII History</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/digital-learning-projects">Digital Learning Projects</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters">Research Starters</a>
+</li>
+</ul>
+</li>
+<span class="slash">/</span>
+<li class="drop-down" hover="on">
+<span class="page-title">
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters">Research Starters</a>
+</span>
+<span class="arrow icon-arrow-down"></span>
+<ul>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/research-starters-worldwide-deaths-world-war">Research Starters: Worldwide Deaths in…</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/research-starters-us-military-numbers">Research Starters: US Military by the…</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/draft-and-wwii">Research Starters: The Draft and World…</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/research-starters-d-day">Research Starters: D-Day</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/research-starters-gi-bill">Research Starters: The GI Bill</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/research-starters-higgins-boats">Research Starters: Higgins Boats</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/research-starters-battle-midway">Research Starters: The Battle of Midway</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/research-starters-women-world-war-ii">Research Starters: Women in World War II</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/take-closer-look-ration-books">Take A Closer Look: Ration Books</a>
+</li>
+<li>
+<a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/america-goes-war-take-closer-look">Take A Closer Look: America Goes to War</a>
+</li>
+<li>
+<a class="is-active" href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/women-wwii">History At a Glance: Women in World War…</a>
+</li>
+</ul>
+</li>
+<span class="slash">/</span>
+<li class="is-active" hover="on">
+<span class="page-title">
+                      History At a Glance: Women in World War…
+                  </span>
+</li>
+</ol>
+</nav>
+</div>
+</div>
+</div>
+</section>
+<section class="page-title row-inside--md border--bottom" id="title">
+<div class="l-container--md">
+<div class="block block-core block-page-title-block" id="block-nwwiim-page-title">
+<div class="block-content">
+<h1 class="f--tertiary wrapper-width--lg">History At a Glance: Women in World War II</h1>
+</div>
+</div>
+</div>
+</section>
+<section class="cf" id="content">
+<div id="social-sharing">
+<div style="visibility: hidden; display: none;"></div><ul style="top: 0px;">
+<li>
+<a class="icon-facebook btn social-square" href="http://www.facebook.com/sharer.php?u=https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/women-wwii" target="_blank"></a>
+</li>
+<li>
+<a class="icon-twitter btn social-square" href="http://twitter.com/intent/tweet?url=https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/women-wwii&amp;text=History%20At%20a%20Glance%3A%20Women%20in%20World%20War%20II%20%7C%20The%20National%20WWII%20Museum%20%7C%20New%20Orleans%0AAmerican%20women%20played%20important%20roles%20during%20World%0A" target="_blank"></a>
+</li>
+<li>
+<a class="icon-envelope btn social-square" href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/women-wwii/mailto:?Subject=History At a Glance: Women in World War II | The National WWII Museum | New Orleans&amp;Body=American women played important roles during World War II, both at home and in uniform.
+ %0A https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/women-wwii " target="_blank"></a>
+</li>
+</ul>
+</div>
+<div class="block block-system block-system-main-block" id="block-nwwiim-content">
+<div class="block-content">
+<article about="/students-teachers/student-resources/research-starters/women-wwii" class="cf" id="node-1120" role="article" typeof="schema:WebPage">
+<span class="hidden" content="History At a Glance: Women in World War II" property="schema:name"></span>
+<div class="body-styles l-container--sm row-outside--md cf">
+<p><strong>American Women in World War II: On the Home Front and Beyond</strong></p>
+<p>American women played important roles during World War II, both at home and in uniform. Not only did they give their sons, husbands, fathers, and brothers to the war effort, they gave their time, energy, and some even gave their lives.<br/><br/>
+Reluctant to enter the war when it erupted in 1939, the United States quickly committed itself to total war after the Japanese attack on Pearl Harbor. That commitment included utilizing all of America’s assets—women included. The Axis powers, on the other hand, were slow to employ women in their war industries. Hitler derided Americans as degenerate for putting their women to work. The role of German women, he said, was to be good wives and mothers and to have more babies for the Third Reich.<br/><br/>
+When the war began, quickie marriages became the norm, as teenagers married their sweethearts before their men went overseas. As the men fought abroad, women on the Home Front worked in defense plants and volunteered for war-related organizations, in addition to managing their households. In New Orleans, as the demand for public transportation grew, women even became streetcar “conductorettes” for the first time. When men left, women “became proficient cooks and housekeepers, managed the finances, learned to fix the car, worked in a defense plant, and wrote letters to their soldier husbands that were consistently upbeat.” (Stephen Ambrose, D-Day, 488) Rosie the Riveter helped assure that the Allies would have the war materials they needed to defeat the Axis.</p>
+</div>
+<div class="paragraph p-bundle p--bundle-inline-carousel row-outside--md l-container--sm-alt cf">
+<ul class="carousel-basic cf flickity-enabled is-draggable" tabindex="0">
+<div class="flickity-viewport" style="height: 652.5px; touch-action: none;"><div class="flickity-slider" style="left: 0px; transform: translateX(-300%);"><li class="carousel-cell is-selected" style="position: absolute; left: 300%;">
+<article class="media media-image view-mode-basic">
+<div class="img-ratio--wide bg--light-grey">
+<img class="b-lazy" data-src="/sites/default/files/styles/wide_large/public/2017-07/rosie-960x700.jpg" height="1400" src="https://www.nationalww2museum.org/themes/nwwiim/images/loaders/placeholder.gif" typeof="foaf:Image" width="1920"/>
+<noscript><img alt="" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_large/public/2017-07/rosie-960x700.jpg"/></noscript>
+</div>
+</article>
+</li><li class="carousel-cell" style="position: absolute; left: 100%;">
+<article class="media media-image view-mode-basic">
+<div class="img-ratio--wide bg--light-grey">
+<img class="b-lazy" data-src="/sites/default/files/styles/wide_large/public/2017-07/wasps-3600x1700.jpg" height="1400" src="https://www.nationalww2museum.org/themes/nwwiim/images/loaders/placeholder.gif" typeof="foaf:Image" width="1920"/>
+<noscript><img alt="" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_large/public/2017-07/wasps-3600x1700.jpg"/></noscript>
+</div>
+</article>
+</li><li class="carousel-cell" style="position: absolute; left: 200%;">
+<article class="media media-image view-mode-basic">
+<div class="img-ratio--wide bg--light-grey">
+<img class="b-lazy" data-src="/sites/default/files/styles/wide_large/public/2017-07/women-poster-960x700.jpg" height="1400" src="https://www.nationalww2museum.org/themes/nwwiim/images/loaders/placeholder.gif" typeof="foaf:Image" width="1920"/>
+<noscript><img alt="" src="https://www.nationalww2museum.org/sites/default/files/styles/wide_large/public/2017-07/women-poster-960x700.jpg"/></noscript>
+</div>
+</article>
+</li></div></div><button aria-label="previous" class="flickity-prev-next-button previous" type="button"><svg viewbox="0 0 100 100"><path class="arrow" d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></button><button aria-label="next" class="flickity-prev-next-button next" type="button"><svg viewbox="0 0 100 100"><path class="arrow" d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></button></ul><ol class="flickity-page-dots"><li class="dot is-selected"></li><li class="dot"></li><li class="dot"></li></ol>
+</div>
+<div class="paragraph body-paragraph p-bundle p-bundle--textarea row-outside--md cf">
+<div class="body-styles l-container--sm cf">
+<p>Nearly 350,000 American women served in uniform, both at home and abroad, volunteering for the newly formed Women’s Army Auxiliary Corps (WAACs, later renamed the Women’s Army Corps), the Navy Women’s Reserve (WAVES), the Marine Corps Women’s Reserve, the Coast Guard Women’s Reserve (SPARS), the Women Airforce Service Pilots (WASPS), the Army Nurses Corps, and the Navy Nurse Corps. General Eisenhower felt that he could not win the war without the aid of the women in uniform. “The contribution of the women of America, whether on the farm or in the factory or in uniform, to D-Day was a sine qua non of the invasion effort.” (Ambrose, D-Day, 489)<br/><br/>
+Women in uniform took office and clerical jobs in the armed forces in order to free men to fight. They also drove trucks, repaired airplanes, worked as laboratory technicians, rigged parachutes, served as radio operators, analyzed photographs, flew military aircraft across the country, test-flew newly repaired planes, and even trained anti-aircraft artillery gunners by acting as flying targets. Some women served near the front lines in the Army Nurse Corps, where 16 were killed as a result of direct enemy fire. Sixty-eight American service women were captured as POWs in the Philippines. More than 1,600 nurses were decorated for bravery under fire and meritorious service, and 565 WACs in the Pacific Theater won combat decorations. Nurses were in Normandy on D-plus-four.<br/><br/>
+At the war’s end, even though a majority of women surveyed reported wanted to keep their jobs, many were forced out by men returning home and by the downturn in demand for war materials. Women veterans encountered roadblocks when they tried to take advantage of benefit programs for veterans, like the G.I. Bill. The nation that needed their help in a time of crisis, it seems, was not yet ready for the greater social equality that would slowly come in the decades to follow.<br/><br/>
+The National WWII Museum recognizes the contribution that women played in the success of the Allied victory in World War II and explores that contribution in depth in its newest permanent exhibit, <a href="https://www.nationalww2museum.org/visit/exhibits/arsenal-democracy"><em>The Arsenal of Democracy: The Herman and George Brown Salute to the Home Front</em>. </a></p>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<div id="drop-down" style="opacity: 0; visibility: hidden; max-height: none;"><div class="l-container--md"><div class="drop-down cf"></div></div></div></div>
+<footer id="footer" role="contentinfo">
+<div class="block p-bundle p-bundle--full-width-callout bg--light-grey" id="block-donatecalloutblock">
+<div class="bg-img parallax" style="background-image: url('/sites/default/files/styles/hero_large/public/2017-07/media-dday-anniversary-lg03.jpg');"></div>
+<span class="bg-overlay overlay--dark"></span>
+<div class="l-container--sm">
+<div class="content-inner">
+<h2 class="f--secondary f--uppercase">Every day, memories of World War II—its sights and sounds, its terrors and triumphs—disappear.</h2>
+<a class="btn solid" href="https://secure3.convio.net/nw2m/site/Donation2?df_id=8047&amp;mfc_pref=T&amp;8047_donation=form1&amp;_ga=2.197693999.1013023893.1499027539-1310154821.1499027539" title="Give Today"><span>Give Today</span></a>
+</div>
+</div>
+</div>
+<div class="footer-content row-inside--sm cf">
+<div class="l-faux-table l-container--md">
+<div class="footer-top col-third">
+<div class="block-footer-address block block-block-content block-block-content70a391e4-61ef-45fa-9843-4672b2772891" id="block-blockfooteraddress">
+<div class="block-content">
+<div class="museum-hours">
+<p>We are closed today.</p>
+</div>
+<div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>945 Magazine Street, New Orleans, LA 70130<br/><a href="https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/women-wwii/mailto:info@nationalww2museum.org">info@nationalww2museum.org</a><br/>
+504-528-1944</p>
+</div>
+</div>
+</div><nav aria-labelledby="block-nwwiim-footer-menu" class="block-footer-main-menu" id="block-nwwiim-footer" role="navigation">
+<div class="block-content">
+<ul class="menu">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/469" href="https://www.nationalww2museum.org/about-us" target="">About the Museum</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a href="https://www.nationalww2museum.org/media-resources" target="">Media</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/872" href="https://www.nationalww2museum.org/employment" target="">Employment</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/929" href="https://www.nationalww2museum.org/about-us/contact-us" target="">Contact Us</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/803" href="https://www.nationalww2museum.org/volunteer" target="">Volunteer</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/542" href="https://www.nationalww2museum.org/private-event-rentals" target="">Rentals</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/932" href="https://www.nationalww2museum.org/privacy-policy" target="">Privacy Policy</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/928" href="https://www.nationalww2museum.org/about-us/frequently-asked-questions" target="">FAQs</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<div class="footer-bottom col-two-thirds">
+<nav aria-labelledby="block-footerutilitynavigation-menu" class="block block-footer-utility-menu" id="block-footerutilitynavigation" role="navigation">
+<div class="block-content">
+<ul class="menu">
+<li class="menu-item">
+<a href="https://ticketing.nationalww2museum.org/Webstore/shop/ViewItems.aspx?CG=Tickets&amp;C=GA" target="">Buy Tickets</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/708" href="https://www.nationalww2museum.org/give/become-member" target="">Become a Member</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/694" href="https://www.nationalww2museum.org/give/ways-give" target="">Donate</a>
+</li>
+<li class="menu-item">
+<a href="http://store.nationalww2museum.org/" target="">Museum Store</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/535" href="https://www.nationalww2museum.org/events-programs/educational-travel" target="">Travel with Us</a>
+</li>
+</ul>
+</div>
+</nav>
+<nav aria-labelledby="block-footersocialnetworksnavigation-menu" class="block block-socials-menu" id="block-footersocialnetworksnavigation" role="navigation">
+<h2 class="block-title">Follow Us Today</h2>
+<div class="block-content">
+<ul class="menu">
+<li class="menu-item">
+<a class="icon-facebook" href="https://www.facebook.com/WWIIMuseum/" target="_blank">Facebook</a>
+</li>
+<li class="menu-item">
+<a class="icon-twitter" href="http://twitter.com/wwiimuseum" target="_blank">Twitter</a>
+</li>
+<li class="menu-item">
+<a class="icon-instagram" href="https://www.instagram.com/wwiimuseum/" target="_blank">Instagram</a>
+</li>
+<li class="menu-item">
+<a class="icon-youtube" href="https://www.youtube.com/channel/UCmTCST8yVyVMctEYY9WeMWw" target="_blank">Youtube</a>
+</li>
+</ul>
+</div>
+</nav>
+<div class="block block-type-button" id="block-footernewsletterbutton">
+<a class="btn solid navy" href="https://www.nationalww2museum.org/e-news-signup" target="_blank" title="Sign Up for our Newsletter"><span>Sign Up for our Newsletter</span></a>
+</div>
+<div class="block-footer-ranking block block-block-content block-block-contentc36ceb83-988b-4929-862d-8fb7a319beb5" id="block-blockfooterranking">
+<div class="block-content">
+<div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>#1 Attraction in New Orleans<br/>
+#3 Museum in the USA<br/>
+#8 Museum in the World</p>
+</div>
+</div>
+</div>
+<div class="block-footer-map block block-block-content block-block-contentb0f26388-9c1d-4ea3-8377-15ada9983184" id="block-blockfootermap">
+<div class="block-content">
+<div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a class="btn solid" href="https://www.nationalww2museum.org/visit/museum-campus"><span>View Campus Map</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div id="js-mediaQueryReference"></div>
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script data-drupal-selector="drupal-settings-json" type="application/json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1120","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"ajaxTrustedUrl":{"\/search":true},"user":{"uid":0,"permissionsHash":"15b5a867ac83fd995dc4cd987e7710f4c45cbb02785a504f37770a2c76966bf1"}}</script>
+<script src="https://www.nationalww2museum.org/sites/default/files/js/js_Io5nziUfUZaWrzOqVEugKYXgsbWA8AGrYOLcu6pvBGo.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ea7dbaddb7","applicationID":"63461984","transactionName":"YQBUbEJSXBdVVhZdV1hKd1tEWl0KG0UDU11pBldbWFY=","queueTime":0,"applicationTime":26,"atts":"TUdXGgpITxk=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script async="" charset="UTF-8" src="https://addtocalendar.com/atc/1.5/atc.min.js" type="text/javascript"></script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","1646928738961854");fbq("track","PageView");</script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=1447637402170164&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+<script id="" type="text/javascript">var versaTag={id:"9639",sync:0,dispType:"js",ptcl:"HTTPS",bsUrl:"bs.serving-sys.com/BurstingPipe",activityParams:{Session:""},retargetParams:{},dynamicRetargetParams:{},conditionalParams:{}};</script>
+<script id="ebOneTagUrlId" src="https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js" type="text/javascript"></script><div style="display: none; visibility: hidden;"><script type="text/javascript">_linkedin_partner_id="635914";window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript">(function(){var b=document.getElementsByTagName("script")[0],a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://snap.licdn.com/li.lms-analytics/insight.min.js";b.parentNode.insertBefore(a,b)})();</script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;">
+<script type="text/javascript">var _qevents=_qevents||[];(function(){var a=document.createElement("script");a.src=("https:"==document.location.protocol?"https://secure":"http://edge")+".quantserve.com/quant.js";a.async=!0;a.type="text/javascript";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();_qevents.push({qacct:"p-RNnRJWdC4X39r"});</script>
+</div><div id="batBeacon0.24659479600481005" style="width:0px; height:0px; display:none; visibility:hidden;"><img alt="" height="0" id="batBeacon0.06139397808283631" src="https://bat.bing.com/action/0?ti=5321255&amp;Ver=2&amp;mid=13cd1702-593b-d1af-53d1-e86b1fa93493&amp;pi=0&amp;lg=en-US&amp;sw=1920&amp;sh=1080&amp;sc=24&amp;tl=History%20At%20a%20Glance%3A%20Women%20in%20World%20War%20II%20%7C%20The%20National%20WWII%20Museum%20%7C%20New%20Orleans&amp;p=https%3A%2F%2Fwww.nationalww2museum.org%2Fstudents-teachers%2Fstudent-resources%2Fresearch-starters%2Fwomen-wwii&amp;r=&amp;lt=1637&amp;evt=pageLoad&amp;msclkid=N&amp;rn=787148" style="width:0px; height:0px; display:none; visibility:hidden;" width="0"/></div>
+<noscript>
+<iframe src="https://bs.serving-sys.com/BurstingPipe?
+cn=ot&amp;
+onetagid=9639&amp;
+ns=1&amp;
+activityValues=$$Session=[Session]$$&amp;
+retargetingValues=$$$$&amp;
+dynamicRetargetingValues=$$$$&amp;
+acp=$$$$&amp;" style="display:none;width:0px;height:0px"></iframe>
+</noscript><script async="" src="https://bs.serving-sys.com/Serving?cn=ot&amp;onetagid=9639&amp;dispType=js&amp;sync=0&amp;sessionid=8365425679639261876&amp;pageurl=$$https%3A%2F%2Fwww.nationalww2museum.org%2Fstudents-teachers%2Fstudent-resources%2Fresearch-starters%2Fwomen-wwii$$&amp;activityValues=$$Session%3D5035002503719460060$$&amp;ns=0&amp;rnd=6288154880563384" type="text/javascript"></script><script src="https://px.ads.linkedin.com/collect/?time=1563002452445&amp;pid=635914&amp;url=https%3A%2F%2Fwww.nationalww2museum.org%2Fstudents-teachers%2Fstudent-resources%2Fresearch-starters%2Fwomen-wwii&amp;fmt=js&amp;s=1" type="text/javascript"></script></body></html>

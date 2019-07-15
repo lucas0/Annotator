@@ -1,0 +1,248 @@
+<html lang="en-US" prefix="og: http://ogp.me/ns#"><head>
+<meta content="IE=Edge" http-equiv="x-ua-compatible"/>
+<title>  Biography | Hon. Elizabeth Holtzman</title>
+<meta charset="utf-8"/><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQMGUldTGwIBVllSBwYD"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(21)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(21)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(21)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(21)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(21)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(16);n.exports={generateTraceHeader:r}},{}],11:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(12),u=t(10).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(15),w=t(14),v=window.XMLHttpRequest;s.features.xhr=!0,t(9),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],12:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],13:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],14:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],15:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],16:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],18:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],19:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],20:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],21:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:x,userAgent:d};t(13),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(20)},{}]},{},["loader",2,11,4,3]);</script><link href="//cloud.typography.com" rel="dns-prefetch"/>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<!--[if IE 8]>
+<link rel='stylesheet' id='baseline-ie8-css'  href='http://www.herrick.com/content/themes/baseline-theme/css/ie8.css' type='text/css' media='all' />
+<![endif]-->
+<!--[if IE 9]>
+<link rel='stylesheet' id='baseline-ie9-css'  href='http://www.herrick.com/content/themes/baseline-theme/css/ie9.css' type='text/css' media='all' />
+<![endif]-->
+<link href="http://cloud.typography.com/6729574/774908/css/fonts.css" id="typography-fonts-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://www.herrick.com/content/themes/herrick-theme/css/style.css" id="client-theme-css" media="all" rel="stylesheet" type="text/css"/>
+<!--[if IE 8]>
+<link rel='stylesheet' id='client-ie8-css'  href='http://www.herrick.com/content/themes/herrick-theme/css/ie8.css' type='text/css' media='all' />
+<![endif]-->
+<script src="http://www.herrick.com/cms/wp-includes/js/jquery/jquery.js" type="text/javascript"></script>
+<script src="http://www.herrick.com/content/themes/herrick-theme/js/theme.min.js" type="text/javascript"></script>
+<script src="http://www.herrick.com/content/themes/baseline-theme/js/jquery.relevant-dropdown.min.js" type="text/javascript"></script>
+<script src="http://www.herrick.com/content/themes/baseline-theme/js/jquery.placeholder.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var baseline_l10n = {"globalPredictiveSearchOptions":{"postTypes":["person","practice-area","industry"],"resultLimit":10,"width":"auto"},"peoplePredictiveSearchOptions":{"postTypes":["person"],"showPostTypeTitles":false,"showSearchView":false,"resultLimit":10,"width":"300","positionLeft":"100%","positionTop":"centerline"},"homePeoplePredictiveSearchOptions":{"postTypes":["person"],"showPostTypeTitles":false,"showSearchView":false,"resultLimit":false,"width":"300","positionLeft":"100%","positionTop":"centerline"},"tablet_globalPredictiveSearchOptions":{"postTypes":["person","practice-area","industry"],"resultLimit":10,"width":"auto"},"tablet_peoplePredictiveSearchOptions":{"postTypes":["person"],"showPostTypeTitles":false,"showSearchView":false,"resultLimit":10,"width":"auto","positionLeft":"0","positionTop":"100%"},"tablet_homePeoplePredictiveSearchOptions":{"postTypes":["person"],"showPostTypeTitles":false,"showSearchView":false,"resultLimit":false,"width":"300","positionLeft":"100%","positionTop":"centerline"}};
+/* ]]> */
+</script>
+<script src="http://www.herrick.com/content/themes/baseline-theme/js/baseline.min.js" type="text/javascript"></script>
+<script src="http://www.herrick.com/content/themes/baseline-theme/js/fastclick.min.js" type="text/javascript"></script>
+<script src="http://www.herrick.com/content/themes/baseline-theme/js/jquery.mobile-menu.min.js" type="text/javascript"></script>
+<script src="http://www.herrick.com/content/themes/baseline-theme/js/baseline.mobile-search.min.js" type="text/javascript"></script>
+<script src="http://www.herrick.com/content/themes/baseline-theme/js/audioplayer.min.js" type="text/javascript"></script>
+<script src="http://www.herrick.com/content/themes/baseline-theme/js/matchMedia.min.js" type="text/javascript"></script>
+<script src="http://www.herrick.com/cms/wp-includes/js/underscore.min.js" type="text/javascript"></script>
+<script src="http://www.herrick.com/cms/wp-includes/js/backbone.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var predictiveSearch = {"ajaxAction":"rainmaker_predictiveSearch","ajaxURL":"http:\/\/www.herrick.com\/content\/mu-plugins\/rainmaker\/includes\/search-ajax-shortinit.php","defaultImgSrc":"http:\/\/www.herrick.com\/content\/mu-plugins\/rainmaker\/images\/default-headshot-closeup-placeholder.png","errorMessage":"Sorry, we were unable to complete your request.  Please try again.","loadingGraphicURL":"http:\/\/www.herrick.com\/content\/mu-plugins\/rainmaker\/images\/loading.gif","noResults":"No Instant Matches","placeholderImage":"http:\/\/www.herrick.com\/content\/mu-plugins\/rainmaker\/images\/default-headshot-closeup-placeholder.png","postTypes":["person","practice-area","industry"],"resultLimit":"8","searchText":"Search entire site for "};
+/* ]]> */
+</script>
+<script src="http://www.herrick.com/content/mu-plugins/rainmaker/js/predictive-search.js" type="text/javascript"></script>
+<link href="http://www.herrick.com/wp-json/" rel="https://api.w.org/"/>
+<link href="http://www.herrick.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.herrick.com%2Fhon-elizabeth-holtzman%2F" rel="alternate" type="application/json+oembed"/>
+<link href="http://www.herrick.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.herrick.com%2Fhon-elizabeth-holtzman%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+<meta content="summary_large_image" name="twitter:card"/><meta content="Herrick, Feinstein LLP" property="og:site_name"/><meta content="  Biography | Hon. Elizabeth Holtzman" property="og:title"/><meta content="http://www.herrick.com/hon-elizabeth-holtzman/" property="og:url"/><meta content="article" property="og:type"/><meta content="http://www.herrick.com/content/themes/herrick-theme/img/og-default.jpg" property="og:image"/><meta content="image/jpeg" property="og:image:type"/><meta content="1200" property="og:image:width"/><meta content="628" property="og:image:height"/><meta content="http://www.herrick.com/content/themes/herrick-theme/img/header-logo.png" property="og:image"/><meta content="image/png" property="og:image:type"/><meta content="400" property="og:image:width"/><meta content="84" property="og:image:height"/><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga( 'create', 'UA-53042873-1', 'auto' );
+ga( 'set', 'dimension2', 'person' );
+ga( 'set', 'dimension3', '4840' );
+ga( 'set', 'dimension4', 'person' );
+ga( 'set', 'dimension5', '4840' );
+ga( 'send', 'pageview' );
+</script> <script type="text/javascript">
+			if ( typeof jQuery != 'undefined' && typeof ga != 'undefined' ) {
+				gaHitCallbackHandler = function () {
+					if ( target != '_blank' ) {
+						window.location.href = redirectafter;
+					}
+				};
+				var disallowed = /\.(js|php)$/i;
+				var redirectafter = '';
+				var target = '';
+				var base = new RegExp( location.host );
+				jQuery( document ).on( 'click', 'a', function ( event ) {
+					var el = jQuery( this );
+					var href = el.attr( 'href' );
+					target = el.attr( 'target' );
+					if ( ! href.match( /(^javascript:|\#)/i ) && ! href.match( disallowed ) && base.test( href ) ) {
+						var pathname = el[ 0 ].pathname;
+						var currentevent = [];
+						var extension = pathname.substr( (
+							                                 ~ - pathname.lastIndexOf( "." ) >>> 0
+						                                 ) + 2 );
+						if ( extension != '' ) {
+							if ( target != '_blank' ) {
+								event.preventDefault();
+							}
+							currentevent.category = extension == 'vcf' ? 'vCard' : 'File';
+							currentevent.action = 'Download';
+							currentevent.loc = href;
+							redirectafter = href;
+							try {
+								ga( 'send', 'event', currentevent.category.toLowerCase(), currentevent.action.toLowerCase(), currentevent.loc, {
+									'nonInteraction': 1,
+									'hitCallback': gaHitCallbackHandler
+								} );
+							} catch ( e ) {
+								console.log( e.toString() );
+							}
+						}
+					}
+				} );
+			}
+		</script>
+<link href="http://www.herrick.com/hon-elizabeth-holtzman/" rel="canonical"/><meta content="http://www.herrick.com/content/themes/herrick-theme/img/og-default.jpg" property="twitter:image"/><meta content="width=900" id="viewport" name="viewport"/><script>
+var sw = screen.width;
+var sh = screen.height;
+if ( window.matchMedia("(orientation: landscape)").matches ) {
+  var fw = sh;
+} else {
+  var fw = sw;
+}
+if (fw < 768) {
+	var mvp = document.getElementById("viewport");
+	mvp.setAttribute("content","width=device-width,initial-scale=1");
+}
+</script><link href="http://www.herrick.com/content/themes/herrick-theme/img/favicon.ico" rel="shortcut icon"/><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Person","email":"eholtzman@herrick.com","image":"http:\/\/www.herrick.com\/content\/uploads\/2016\/01\/holtzman_e_main-default-headshot-photo-4840.jpg","jobTitle":"Counsel","name":"Hon. Elizabeth Holtzman","givenName":"Hon. Elizabeth","familyName":"Holtzman","telephone":"(212) 545-3339","url":"http:\/\/www.herrick.com\/hon-elizabeth-holtzman\/","worksFor":{"@type":"Organization","name":"Herrick, Feinstein LLP","sameAs":"http:\/\/www.herrick.com"},"workLocation":[{"@type":"ProfessionalService","name":"New York","sameAs":"http:\/\/www.herrick.com\/office-locations\/new-york\/"}]}</script></head>
+<body class="person-template-default single single-person postid-4840 person-post-type microsite person-microsite biography-microsite-template main-microsite-template no-touch no-upcoming-events supported-css3-transition" onunload="">
+<div id="page">
+<header id="header">
+<div id="header-inner">
+<a class="header-logo-link" href="http://www.herrick.com"><img alt="Herrick, Feinstein LLP" class="header-logo" height="84" onerror="this.onerror=null; this.src='http://www.herrick.com/content/themes/herrick-theme/img/header-logo.png'" src="http://www.herrick.com/content/themes/herrick-theme/img/header-logo.svg" width="400"/></a>
+<form action="http://www.herrick.com" class="global-search" id="global-search" method="get" role="search">
+<div class="field">
+<label for="s">Search</label>
+<span class="input-wrap icon-search">
+<input autocomplete="off" class="text" name="s" placeholder="Search" type="text" value=""/><div class="predictiveSearch" style="width: 195px; display: none; top: 28px; left: -10px;"><div class="predictiveSearch-loadingGraphic"><img alt="Loading" src="http://www.herrick.com/content/mu-plugins/rainmaker/images/loading.gif"/></div><div class="predictiveSearch-noResults" style="display: none;">No Instant Matches</div><div class="predictiveSearch-postTypes"></div><div class="predictiveSearch-search">Search entire site for ""</div></div>
+</span>
+</div>
+</form><form action="http://www.herrick.com" class="mobile mobile-search mobile-search-closed" id="mobile-search" method="get" role="search">
+<span class="icon-search mobile-search-toggle" id="mobile-search-toggle"></span>
+<div class="field mobile-search-field" id="mobile-search-field">
+<span class="input-wrap">
+<input class="text" name="s" placeholder="Search" type="text" value=""/>
+</span>
+<span class="input-wrap"><input class="mobile-search-submit" id="mobile-search-submit" type="submit" value=""/></span>
+<span class="mobile-search-submit-icon"></span>
+</div>
+</form>
+<nav class="header-menu"><ul class="menu inline-menu auto-space-menu" id="menu-header-menu"><li class="current-menu-item menu-item menu-item-type-post_type menu-item-object-page first-menu-item menu-item-6209" id="menu-item-6209"><a href="http://www.herrick.com/people/">People</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6208" id="menu-item-6208"><a href="http://www.herrick.com/services/">Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6207" id="menu-item-6207"><a href="http://www.herrick.com/industries/">Industries</a></li>
+<li class="dropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6210" id="menu-item-6210"><a href="http://www.herrick.com/#">About Us</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6259" id="menu-item-6259"><a href="http://www.herrick.com/about-herrick/">About Herrick</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6258" id="menu-item-6258"><a href="http://www.herrick.com/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-event menu-item-6213" id="menu-item-6213"><a href="http://www.herrick.com/events/">Events</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6251" id="menu-item-6251"><a href="http://www.herrick.com/careers/">Careers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6257" id="menu-item-6257"><a href="http://www.herrick.com/diversity/">Diversity</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6256" id="menu-item-6256"><a href="http://www.herrick.com/pro-bono/">Pro Bono</a></li>
+<li class="expandable menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6211" id="menu-item-6211"><a href="http://www.herrick.com/#">News &amp; Resources</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-news-item menu-item-6214" id="menu-item-6214"><a href="http://www.herrick.com/news/">News</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-publication menu-item-6215" id="menu-item-6215"><a href="http://www.herrick.com/publications/">Publications</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-case-study last-menu-item menu-item-6212" id="menu-item-6212"><a href="http://www.herrick.com/matters/">Matters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav>
+</div>
+</header>
+<nav class="mobile mobile-menu mobile-header-menu" id="menu-mobile-header-menu">
+<button class="mobile-menu-toggle icon-menu" type="button"></button>
+<ul class="menu hide" style=""><li class="current-menu-item menu-item menu-item-type-post_type menu-item-object-page first-menu-item menu-item-6271" id="menu-item-6271"><a href="http://www.herrick.com/people/">People</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6272" id="menu-item-6272"><a href="http://www.herrick.com/services/">Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6270" id="menu-item-6270"><a href="http://www.herrick.com/industries/">Industries</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6273" id="menu-item-6273"><a href="http://www.herrick.com/#">About Us</a>
+<ul class="sub-menu"><li class="menu-item menu-item-type-back"><a href="http://www.herrick.com/#">Back</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6274" id="menu-item-6274"><a href="http://www.herrick.com/about-herrick/">About Herrick</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6275" id="menu-item-6275"><a href="http://www.herrick.com/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-event menu-item-6276" id="menu-item-6276"><a href="http://www.herrick.com/events/">Events</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6277" id="menu-item-6277"><a href="http://www.herrick.com/#">Careers</a>
+<ul class="sub-menu"><li class="menu-item menu-item-type-back"><a href="http://www.herrick.com/#">Back</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6278" id="menu-item-6278"><a href="http://www.herrick.com/careers/">Careers Overview</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6282" id="menu-item-6282"><a href="http://www.herrick.com/#">Laterals</a>
+<ul class="sub-menu"><li class="menu-item menu-item-type-back"><a href="http://www.herrick.com/#">Back</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6286" id="menu-item-6286"><a href="http://www.herrick.com/careers/laterals/">Laterals</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6287" id="menu-item-6287"><a href="http://www.herrick.com/careers/laterals/testimonials/">Testimonials</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6283" id="menu-item-6283"><a href="http://www.herrick.com/#">Staff</a>
+<ul class="sub-menu"><li class="menu-item menu-item-type-back"><a href="http://www.herrick.com/#">Back</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6288" id="menu-item-6288"><a href="http://www.herrick.com/careers/staff/">Staff</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6289" id="menu-item-6289"><a href="http://www.herrick.com/careers/staff/testimonials/">Testimonials</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6280" id="menu-item-6280"><a href="http://www.herrick.com/careers/paralegals/">Paralegals</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6279" id="menu-item-6279"><a href="http://www.herrick.com/careers/current-openings/">Current Openings</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6290" id="menu-item-6290"><a href="http://www.herrick.com/diversity/">Diversity</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6291" id="menu-item-6291"><a href="http://www.herrick.com/pro-bono/">Pro Bono</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6292" id="menu-item-6292"><a href="http://www.herrick.com/#">News &amp; Resources</a>
+<ul class="sub-menu"><li class="menu-item menu-item-type-back"><a href="http://www.herrick.com/#">Back</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-news-item menu-item-6294" id="menu-item-6294"><a href="http://www.herrick.com/news/">News</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-publication menu-item-6295" id="menu-item-6295"><a href="http://www.herrick.com/publications/">Publications</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-case-study last-menu-item menu-item-6293" id="menu-item-6293"><a href="http://www.herrick.com/matters/">Matters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav><div class="person-photo" id="page-title-bar"><div id="page-title-bar-inner"><img class="photo" src="http://www.herrick.com/content/uploads/2016/01/holtzman_e_main-default-headshot-photo-4840.jpg" style="display: inline;"/><img class="mobile" src="http://www.herrick.com/content/uploads/2016/01/holtzman_e_square-default-headshot-closeup-headshot-photo-4840.jpg"/><h1><span class="page-title-heading microsite-title person-microsite-title"><a href="http://www.herrick.com/hon-elizabeth-holtzman/"><span class="page-title">Hon. Elizabeth Holtzman</span><span class="person-title-separator">, </span><span class="person-title person-alternate-title header-alt-title">Counsel</span></a></span></h1></div></div><div class="main-microsite-menu-wrap"><a class="mobile-menu-toggle" href="http://www.herrick.com/#"></a><nav class="microsite-menu inline-menu"><ul><li class="page-item page-item-4840 first-menu-item current-menu-item active"><a href="http://www.herrick.com/hon-elizabeth-holtzman/">Biography</a></li><li class="page-item page-item-4841"><a href="http://www.herrick.com/hon-elizabeth-holtzman/publications/">Publications</a></li><li class="page-item page-item-4842"><a href="http://www.herrick.com/hon-elizabeth-holtzman/matters/">Matters</a></li><li class="page-item page-item-4843"><a href="http://www.herrick.com/hon-elizabeth-holtzman/events/">Events</a></li><li class="page-item page-item-4844 last-menu-item"><a href="http://www.herrick.com/hon-elizabeth-holtzman/news/">News</a></li></ul></nav></div>
+<div id="main">
+<div id="main-inner">
+<div class="has-sidebar" id="content">
+<div id="content-inner">
+<div class="sidebar sidebar-person-microsite-primary" id="sidebar-primary"><aside class="widget person-info-widget" id="rainmaker-attorney-info-widget-1">
+<div>
+<div class="person-image"></div>
+<h4>Contact Info</h4><div class="person-info person-info-widget-person-info" id="person-name-title"><div class="person-full-name"><span class="first-name">Hon. Elizabeth</span> <span class="last-name">Holtzman</span></div><span class="person-title person-alternate-title">Counsel; <br/>Co-Chair, Government Relations Group</span><div class="person-email-link"><a href="http://www.herrick.com/mailto:eholtzman@herrick.com">eholtzman@herrick.com</a></div></div>
+<div class="person-info person-info-widget-person-info" id="person-contact-info"><div class="office-location">
+<span><a href="http://www.herrick.com/office-locations/new-york/">New York</a></span>
+<div class="office-contact"><div class="person-phone">Tel: (212) 592-1421</div>
+<div class="person-phone">Fax: (212) 545-3339</div></div>
+</div></div>
+<div class="person-info person-info-widget-person-info" id="person-info-links"><div class="person-link"><a class="vcard" href="http://www.herrick.com/hon-elizabeth-holtzman.vcf" target="_blank">Download My vCard</a></div><div class="person-link"><a class="resume" href="http://www.herrick.com/content/uploads/pdf/hon-elizabeth-holtzman.pdf" target="_blank">Download My Biography</a></div></div>
+</div>
+</aside></div><div class="has-sidebar has-primary-sidebar" id="microsite-content">
+<article class="post-4840 person type-person status-publish hentry post-count-1 first last odd" id="post-4840">
+<h2 class="mobile">Biography</h2>
+<div class="description"><p>Elizabeth Holtzman is co-chair of Herrick's Government Relations Group, where she handles government relations at the federal, state and local levels. Liz also focuses on litigation.</p>
+<p>Liz joined Herrick after 22 years in government, including 20 as an elected official. During her four terms as a U.S. Congresswoman, she captured national attention for her role on the House Judiciary Committee during the Watergate scandal; chaired the Immigration and Refugees Subcommittee (dealing directly with foreign governments); co-founded the Congressional Caucus for Women’s Issues (successfully legislating numerous women’s rights laws); and authored many laws, including those dealing with Nazi war crimes.</p>
+<p>Liz subsequently became the first woman elected District Attorney in New York City, serving eight years as DA of Kings County (Brooklyn), where she argued successfully before the U.S. Supreme Court, and pioneered new strategies for the prosecution of sexual assault and environmental crimes. She also led the effort to end the practice that allowed African-Americans to be removed from juries using peremptory challenges.</p>
+<p>Liz was also the first and only woman to be elected Comptroller of New York City. In that position she managed $50 billion in the city's five pension funds and issued more than $20 billion in city bonds. Former Mayor Bloomberg also signed into law a bill that Liz authored as Comptroller, which held gun manufacturers liable for injuries caused by illegal guns.</p>
+<p>In 2013, U.S. Secretary of Defense Chuck Hagel appointed Liz to the Response Systems to Adult Sexual Assault Crimes Panel, which reviewed and assessed the handling of sexual assaults in the military, and developed recommendations for reforms. In 2014, she was appointed chair of the successor Judicial Proceedings Panel. In 2014, Liz was also appointed by the Secretary of the U.S. Department of Homeland Security to its Advisory Committee.</p>
+<p>Previously, Liz was appointed by President Bill Clinton to the Nazi and Japanese Imperial War Criminal Records Interagency Working Group, which oversaw the declassification of more than eight million pages of secret Nazi war crimes files held by the U.S. government.</p>
+<p>Liz has written many op-ed articles, and has appeared on television and in movies, including the 2013 Robert Redford documentary <em>All the President's Men Revisited</em>, and the Academy Award-winning documentaries, <a href="http://www.imdb.com/title/tt0095341/" target="_blank"><em>Hôtel Terminus</em></a>, about Gestapo Chief Klaus Barbie and <a href="http://www.imdb.com/title/tt0092235/" target="_blank"><em>Women - for America, for the World</em></a>, about nuclear disarmament. She has also authored three books, and has won many honors and four honorary degrees for her significant contributions to American politics.</p>
+</div>
+</article>
+</div><div class="sidebar sidebar-person-microsite-secondary" id="sidebar-secondary"><aside class="widget person-secondary-sidebar-widget client-field-widget" id="client_field_widget-1"><h3 class="practice - areas - heading">Services</h3><ul class="practice - areas - list"><li><a href="http://www.herrick.com/government-relations/">Government Relations</a></li><li><a href="http://www.herrick.com/litigation/">Litigation</a></li><li><a href="http://www.herrick.com/white-collar-defense-investigations/">White Collar Defense &amp; Investigations</a></li></ul><h3 class="bio-info-heading">Education</h3><ul class="education-list"><li><span class="education-school">Harvard Law School</span> <span class="education-details">(<span class="education-degree">J.D.</span>, <span class="education-year">1965</span>)</span></li><li><span class="education-school">Radcliffe College</span> <span class="education-details">(<em class="education-honor">magna cum laude</em>, <span class="education-year">1962</span>)</span></li></ul><h3 class="admissions - heading">Admissions</h3><ul><li>New York</li>
+<li>U.S. Supreme Court</li>
+<li>U.S. Court of Appeals, 2nd Circuit</li>
+<li>U.S. District Court, Eastern District, New York</li>
+<li>U.S. District Court, Southern District, New York</li>
+</ul>
+<h3 class="bio-info-heading">Languages</h3><ul><li>French</li></ul></aside></div>
+</div>
+</div>
+<nav class="microsite-menu-secondary inline-menu mobile"><ul><li class="page-item page-item-4840 first-menu-item current-menu-item active"><a href="http://www.herrick.com/hon-elizabeth-holtzman/">Biography</a></li><li class="page-item page-item-4841"><a href="http://www.herrick.com/hon-elizabeth-holtzman/publications/">Publications</a></li><li class="page-item page-item-4842"><a href="http://www.herrick.com/hon-elizabeth-holtzman/matters/">Matters</a></li><li class="page-item page-item-4843"><a href="http://www.herrick.com/hon-elizabeth-holtzman/events/">Events</a></li><li class="page-item page-item-4844 last-menu-item"><a href="http://www.herrick.com/hon-elizabeth-holtzman/news/">News</a></li></ul></nav>
+</div>
+</div>
+<footer id="footer">
+<div id="footer-inner">
+<span class="copyright-notice">© 2019 Herrick, Feinstein LLP, All Rights Reserved. <span class="site-attribution">Website by <a href="https://greatjakes.com/" target="_blank">Great Jakes</a></span></span>
+<span class="social-follow"><span class="follow-label">Follow Us:</span><a class="follow-linkedin" href="https://www.linkedin.com/company/herrick-feinstein-llp" target="_blank"></a><a class="follow-twitter" href="https://twitter.com/herricknews" target="_blank"></a></span><nav class="footer-menu"><ul class="menu inline-menu" id="menu-footer"><li class="menu-item menu-item-type-post_type menu-item-object-page first-menu-item menu-item-6266" id="menu-item-6266"><a href="http://www.herrick.com/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6267" id="menu-item-6267"><a href="http://www.herrick.com/subscribe/">Subscribe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6268" id="menu-item-6268"><a href="http://www.herrick.com/attorney-advertising-disclaimer/">Attorney Advertising Disclaimer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page last-menu-item menu-item-6269" id="menu-item-6269"><a href="http://www.herrick.com/privacy-policy-and-legal-notice/">Privacy Policy and Legal Notice</a></li>
+</ul></nav>
+</div>
+</footer>
+</div>
+<script src="http://www.herrick.com/cms/wp-includes/js/wp-embed.min.js" type="text/javascript"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a750d6a222","applicationID":"11280074","transactionName":"Y1BVbREDW0cDUxJYXloadloXC1paTVkIVVRM","queueTime":0,"applicationTime":127,"atts":"TxdWG1kZSEk=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+</body></html>

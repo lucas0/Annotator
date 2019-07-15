@@ -1,0 +1,396 @@
+<html class="js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><head>
+<script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script>
+		document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+		document.createElement('picture');
+	</script>
+<meta charset="utf-8"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>President Donald J. Trump’s State of the Union Address | The White House</title>
+<link href="https://www.whitehouse.gov/briefings-statements/president-donald-j-trumps-state-union-address-2/" rel="canonical"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="President Donald J. Trump’s State of the Union Address | The White House" property="og:title"/>
+<meta content="Remarks as prepared for delivery TO THE CONGRESS OF THE UNITED STATES: Madam Speaker, Mr. Vice President, Members of Congress, the First Lady of the United States, and my fellow Americans: We meet tonight at a moment of unlimited potential.  As we begin a new Congress, I stand here ready to work with you to achieve …" property="og:description"/>
+<meta content="https://www.whitehouse.gov/briefings-statements/president-donald-j-trumps-state-union-address-2/" property="og:url"/>
+<meta content="The White House" property="og:site_name"/>
+<meta content="https://facebook.com/whitehouse" property="article:publisher"/>
+<meta content="1790466490985150" property="fb:app_id"/>
+<meta content="https://www.whitehouse.gov/wp-content/uploads/2017/12/wh.gov-share-img_03-1024x538.png" property="og:image"/>
+<meta content="https://www.whitehouse.gov/wp-content/uploads/2017/12/wh.gov-share-img_03-1024x538.png" property="og:image:secure_url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Remarks as prepared for delivery TO THE CONGRESS OF THE UNITED STATES: Madam Speaker, Mr. Vice President, Members of Congress, the First Lady of the United States, and my fellow Americans: We meet tonight at a moment of unlimited potential.  As we begin a new Congress, I stand here ready to work with you to achieve […]" name="twitter:description"/>
+<meta content="President Donald J. Trump’s State of the Union Address | The White House" name="twitter:title"/>
+<meta content="@whitehouse" name="twitter:site"/>
+<meta content="https://www.whitehouse.gov/wp-content/uploads/2017/12/wh.gov-share-img_03-1024x538.png" name="twitter:image"/>
+<meta content="@whitehouse" name="twitter:creator"/>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.whitehouse.gov\/","name":"The White House","alternateName":"White House","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.whitehouse.gov\/search\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/www.whitehouse.gov\/briefings-statements\/president-donald-j-trumps-state-union-address-2\/","sameAs":["https:\/\/facebook.com\/whitehouse","https:\/\/instagram.com\/whitehouse","https:\/\/www.youtube.com\/user\/whitehouse","https:\/\/twitter.com\/whitehouse"],"@id":"#organization","name":"The White House","logo":"https:\/\/www.whitehouse.gov\/wp-content\/uploads\/2017\/12\/wh.gov-share-img_03.png"}</script>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link crossorigin="" href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://www.whitehouse.gov/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=latin-ext" id="google-fonts-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/dist/site.min.css?ver=cd8a45b1" id="site-css" media="all" rel="stylesheet" type="text/css"/>
+<script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/dist/polyfills.min.js?ver=cd8a45b1" type="text/javascript"></script>
+<script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/vendor/picturefill/dist/picturefill.min.js?ver=cd8a45b1" type="text/javascript"></script>
+<link href="https://www.whitehouse.gov/favicon.ico?ver=cd8a45b1" rel="icon" type="image/x-icon"/>
+<link href="https://www.whitehouse.gov/favicon-32x32.png?ver=cd8a45b1" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://www.whitehouse.gov/favicon-16x16.png?ver=cd8a45b1" rel="icon" sizes="16x16" type="image/png"/>
+<link href="https://www.whitehouse.gov/apple-touch-icon-precomposed.png?ver=cd8a45b1" rel="apple-touch-icon-precomposed" sizes="180x180"/>
+<link href="https://www.whitehouse.gov/touch-icon-256x256.png?ver=cd8a45b1" rel="icon" sizes="256x256" type="image/png"/>
+<link href="https://www.whitehouse.gov/touch-icon-192x192.png?ver=cd8a45b1" rel="icon" sizes="192x192" type="image/png"/>
+<link href="https://www.whitehouse.gov/site.webmanifest?ver=cd8a45b1" rel="manifest"/>
+<link color="#336799" href="https://www.whitehouse.gov/safari-pinned-tab.svg?ver=cd8a45b1" rel="mask-icon"/>
+<meta content="The White House" name="apple-mobile-web-app-title"/>
+<meta content="The White House" name="application-name"/>
+<meta content="#0c2644" name="msapplication-TileColor"/>
+<meta content="#f5f5f5" name="theme-color"/>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-12099831-10"></script>
+<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-12099831-10');
+		window.gtag_id = 'UA-12099831-10';
+	</script>
+</head>
+<body class="briefing-statement-template-default single single-briefing-statement postid-134209">
+<a class="skip-link" href="https://www.whitehouse.gov/#main-content"><span>Skip to content</span></a>
+<div class="body-overflow">
+<header class="header header--has-share header--show">
+<div class="header__container">
+<div class="header__inner">
+<button class="header__hamburger" type="button">
+<b class="svg svg--hamburger" data-icon="hamburger" data-img-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/hamburger.png" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/hamburger.svg"><svg aria-label="Open Menu" height="20" role="img" viewbox="0 0 24 14" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M.64,12H16.36c.36,0,.64.43.64,1s-.28,1-.64,1H.64C.28,14,0,13.57,0,13s.28-1,.64-1M23.1,2H.9A.94.94,0,0,1,0,1,.94.94,0,0,1,.9,0H23.1A.94.94,0,0,1,24,1a.94.94,0,0,1-.9,1M.9,8A.94.94,0,0,1,0,7,.94.94,0,0,1,.9,6H23.1A.94.94,0,0,1,24,7a.94.94,0,0,1-.9,1Z" fill="#a98860"></path></svg><title>open-menu</title>
+</b> </button>
+<div class="header__wrap">
+<div class="header__logo">
+<a href="https://www.whitehouse.gov">
+<img alt="" class="logo--white" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-wh.png" srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-wh.png 1x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-md-wh.png 2x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-lg-wh.png 3x"/>
+<img alt="" class="logo--blue" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-bl.png" srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-bl.png 1x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-md-bl.png 2x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-lg-bl.png 3x"/>
+<span class="visually-hidden">White House Logo</span>
+</a>
+</div>
+<div class="header__share">
+<a class="header__share--copy" data-clipboard-text="https://www.whitehouse.gov/briefings-statements/president-donald-j-trumps-state-union-address-2/?utm_source=link&amp;utm_medium=header" href="https://www.whitehouse.gov/briefings-statements/president-donald-j-trumps-state-union-address-2/?utm_source=link&amp;utm_medium=header">
+<b class="svg svg--share-link" data-icon="share-link" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-link.svg"><svg aria-label="Copy URL to your clipboard" height="15" role="img" width="17"><g fill="#30669B"><path d="M3.96 9.65c.85.8 2 1.22 3.2 1.22 1.2 0 2.35-.43 3.2-1.22l.94-.88c.35-.33.35-.85 0-1.2-.36-.32-.92-.32-1.28 0l-.94.9c-.5.47-1.2.74-1.92.74-.74 0-1.4-.26-1.93-.74L2.66 6.08c-1.07-1-1.07-2.6 0-3.6 1.08-.98 2.8-.98 3.85 0l.84.77c.35.33.9.33 1.27 0s.37-.85 0-1.2L7.8 1.3c-1.76-1.65-4.63-1.65-6.4 0-1.74 1.64-1.74 4.3 0 5.93l2.58 2.42zM5.7 6.25c-.35.33-.35.85 0 1.2.36.32.92.32 1.28 0l.94-.9c.5-.47 1.2-.74 1.92-.74s1.4.28 1.93.76l2.57 2.4c1.07 1 1.07 2.6 0 3.6-1.08 1-2.8 1-3.87 0l-.83-.77c-.36-.34-.92-.34-1.27 0-.36.32-.36.85 0 1.18l.82.77c.87.8 2.03 1.23 3.2 1.23 1.16 0 2.3-.42 3.2-1.23 1.76-1.65 1.76-4.3 0-5.96l-2.56-2.45c-.85-.8-2-1.22-3.2-1.22-1.2 0-2.35.43-3.2 1.22l-.94.9z"></path></g></svg><title>copy-url-to-your-clipboard</title></b> Share
+						</a>
+</div>
+<nav class="nav nav--primary header__nav"><ul class="nav__menu nav__menu--depth0 menu"><li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-692"><a class="nav__link" href="https://www.whitehouse.gov/issues/economy-jobs/">Economy</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-693"><a class="nav__link" href="https://www.whitehouse.gov/issues/national-security-defense/">National Security</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-16229"><a class="nav__link" href="https://www.whitehouse.gov/issues/budget-spending/">Budget</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-16236"><a class="nav__link" href="https://www.whitehouse.gov/issues/immigration/">Immigration</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-148559"><a class="nav__link" href="https://www.whitehouse.gov/opioids/">The Opioid Crisis</a></li>
+</ul></nav> </div>
+<a class="header__search" href="https://www.whitehouse.gov/search/">
+<span class="visually-hidden">Search WhiteHouse.gov</span>
+<b class="svg svg--search" data-icon="search" data-img-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/search.png" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/search.svg"><svg aria-label="Open Search" height="20" role="img" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><title>open-search</title>
+<path d="M20,18.7l-5.1-5.1c2.6-3.3,2.4-8.1-0.6-11.2C12.7,0.9,10.6,0,8.4,0C6.1,0,4,0.9,2.5,2.5
+	C0.9,4,0,6.1,0,8.4s0.9,4.3,2.5,5.9c1.6,1.6,3.7,2.5,5.9,2.5c1.9,0,3.8-0.7,5.3-1.8l5.1,5.1L20,18.7z M8.5,15
+	c-1.7,0-3.4-0.7-4.6-1.9C2.7,11.9,2,10.2,2,8.5s0.7-3.4,1.9-4.6C5.1,2.7,6.8,2,8.5,2c1.7,0,3.4,0.7,4.6,1.9c2.5,2.5,2.5,6.7,0,9.2
+	C11.9,14.3,10.2,15,8.5,15z" fill="#A98860"></path>
+</svg>
+</b> </a>
+</div>
+</div>
+</header>
+<main id="main-content">
+<div class="page-header page-header--small-title">
+<div class="page-header__wrap">
+<p class="page-header__section">
+				Remarks			</p>
+<h1 class="page-header__title">President Donald J. Trump’s State of the Union Address</h1>
+<div class="meta meta--mobile-wrap">
+<p class="meta__date">
+<span class="meta__label">Issued on:</span>
+<time>February 5, 2019</time>
+</p>
+</div>
+<span class="divider"><hr/><hr/></span>
+</div>
+</div>
+<div class="page-content">
+<div class="page-content__wrap">
+<div class="page-content__content editor">
+<aside class="editor__module editor__module--left editor__module--named editor__module-share"><div class="share">
+<ul>
+<li class="share__item share__label">
+							Share:
+					</li>
+<li class="share__item share__item--facebook">
+<a class="share__link share__link--facebook" href="https://www.facebook.com/dialog/share?app_id=1790466490985150&amp;display=popup&amp;quote=President%20Donald%20J.%20Trump%E2%80%99s%20State%20of%20the%20Union%20Address&amp;href=https%3A%2F%2Fwww.whitehouse.gov%2Fbriefings-statements%2Fpresident-donald-j-trumps-state-union-address-2%2F%3Futm_source%3Dfacebook" target="_blank">
+<b class="svg svg--share-facebook" data-icon="share-facebook" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-facebook.svg"><svg aria-label="Share this page on Facebook" height="18" role="img" width="10"><g fill="#30669B"><path d="M2.86 6.56V4.94c0-.6.1-1.15.3-1.68.2-.52.5-.97.84-1.35.36-.37.77-.67 1.25-.9.47-.22.98-.33 1.52-.33H9.4v3.2H6.76c-.15 0-.3.1-.44.3-.13.2-.2.43-.2.7v1.7H9.4V9.8H6.12v7.92H2.86V9.82H.24V6.56h2.62z"></path></g></svg><title>share-this-page-on-facebook</title></b> </a>
+</li>
+<li class="share__item share__item--twitter">
+<a class="share__link share__link--twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.whitehouse.gov%2Fbriefings-statements%2Fpresident-donald-j-trumps-state-union-address-2%2F%3Futm_source%3Dtwitter&amp;text=President%20Donald%20J.%20Trump%E2%80%99s%20State%20of%20the%20Union%20Address&amp;via=whitehouse" target="_blank">
+<b class="svg svg--share-twitter" data-icon="share-twitter" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-twitter.svg"><svg aria-label="Share this page on Twitter" height="14" role="img" width="17"><path d="M16.75 2.13c-.44.65-1 1.24-1.67 1.76v.38c0 1.1-.2 2.24-.63 3.4-.42 1.13-1.03 2.16-1.84 3.08-.8.93-1.8 1.67-2.98 2.25-1.18.6-2.54.88-4.08.88-.95 0-1.86-.14-2.72-.4-.87-.28-1.68-.66-2.44-1.14.13.02.26.03.4.03h.4c1.6 0 3-.48 4.16-1.42-.74-.02-1.4-.25-1.96-.7-.57-.42-.96-.98-1.16-1.65.22.06.43.1.6.1.18 0 .33-.02.47-.04.13-.02.28-.05.42-.1-.78-.15-1.42-.54-1.94-1.14-.5-.6-.76-1.32-.76-2.14v-.03c.22.12.46.2.7.28.26.08.54.1.86.1-.48-.28-.86-.67-1.12-1.16-.26-.48-.4-1.02-.4-1.62 0-.6.16-1.16.46-1.7.84 1.04 1.85 1.88 3.04 2.5 1.2.62 2.48.96 3.88 1.02-.06-.23-.08-.47-.08-.73 0-.46.08-.9.26-1.32.18-.42.42-.78.73-1.1.3-.3.66-.54 1.06-.72.4-.17.84-.26 1.3-.26.5 0 .96.1 1.37.3.4.2.77.44 1.1.76.36-.06.73-.16 1.1-.3.38-.16.72-.3 1.04-.48-.3.78-.78 1.4-1.47 1.84.35-.04.7-.1 1-.2.32-.1.63-.2.92-.33z" fill="#30669B"></path></svg><title>share-this-page-on-twitter</title></b> </a>
+</li>
+<li class="share__item share__item--clipboard">
+<a class="share__link share__link--copy" data-clipboard-text="https://www.whitehouse.gov/briefings-statements/president-donald-j-trumps-state-union-address-2/?utm_source=link" href="https://www.whitehouse.gov/briefings-statements/president-donald-j-trumps-state-union-address-2/?utm_source=link">
+<b class="svg svg--share-link" data-icon="share-link" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-link.svg"><svg aria-label="Copy URL to your clipboard" height="15" role="img" width="17"><g fill="#30669B"><path d="M3.96 9.65c.85.8 2 1.22 3.2 1.22 1.2 0 2.35-.43 3.2-1.22l.94-.88c.35-.33.35-.85 0-1.2-.36-.32-.92-.32-1.28 0l-.94.9c-.5.47-1.2.74-1.92.74-.74 0-1.4-.26-1.93-.74L2.66 6.08c-1.07-1-1.07-2.6 0-3.6 1.08-.98 2.8-.98 3.85 0l.84.77c.35.33.9.33 1.27 0s.37-.85 0-1.2L7.8 1.3c-1.76-1.65-4.63-1.65-6.4 0-1.74 1.64-1.74 4.3 0 5.93l2.58 2.42zM5.7 6.25c-.35.33-.35.85 0 1.2.36.32.92.32 1.28 0l.94-.9c.5-.47 1.2-.74 1.92-.74s1.4.28 1.93.76l2.57 2.4c1.07 1 1.07 2.6 0 3.6-1.08 1-2.8 1-3.87 0l-.83-.77c-.36-.34-.92-.34-1.27 0-.36.32-.36.85 0 1.18l.82.77c.87.8 2.03 1.23 3.2 1.23 1.16 0 2.3-.42 3.2-1.23 1.76-1.65 1.76-4.3 0-5.96l-2.56-2.45c-.85-.8-2-1.22-3.2-1.22-1.2 0-2.35.43-3.2 1.22l-.94.9z"></path></g></svg><title>copy-url-to-your-clipboard</title></b> </a>
+</li>
+</ul>
+</div>
+</aside>
+<aside class="editor__module editor__module--left editor__module--named editor__module-all"><div class="sidebar-button">
+<a class="sidebar-button__text" href="https://www.whitehouse.gov/news/"><img alt="menu" class="sidebar-button__icon" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/menu-large.svg"/>All News</a>
+</div>
+</aside>
+<p><em>Remarks as prepared for delivery</em></p>
+<p>TO THE CONGRESS OF THE UNITED STATES:</p>
+<p>Madam Speaker, Mr. Vice President, Members of Congress, the First Lady of the United States, and my fellow Americans:</p>
+<p>We meet tonight at a moment of unlimited potential.  As we begin a new Congress, I stand here ready to work with you to achieve historic breakthroughs for all Americans.</p>
+<p>Millions of our fellow citizens are watching us now, gathered in this great chamber, hoping that we will govern not as two parties but as one Nation.</p>
+<p>The agenda I will lay out this evening is not a Republican agenda or a Democrat agenda.  It is the agenda of the American people.</p>
+<p>Many of us campaigned on the same core promises:  to defend American jobs and demand fair trade for American workers; to rebuild and revitalize our Nation’s infrastructure; to reduce the price of healthcare and prescription drugs; to create an immigration system that is safe, lawful, modern and secure; and to pursue a foreign policy that puts America’s interests first.</p>
+<p>There is a new opportunity in American politics, if only we have the courage to seize it.  Victory is not winning for our party.  Victory is winning for our country.</p>
+<p>This year, America will recognize two important anniversaries that show us the majesty of America’s mission, and the power of American pride.</p>
+<p>In June, we mark 75 years since the start of what General Dwight D. Eisenhower called the Great Crusade — the Allied liberation of Europe in World War II.  On D-Day, June 6, 1944, 15,000 young American men jumped from the sky, and 60,000 more stormed in from the sea, to save our civilization from tyranny.  Here with us tonight are three of those heroes:  Private First Class Joseph Reilly, Staff Sergeant Irving Locker, and Sergeant Herman Zeitchik.  Gentlemen, we salute you.</p>
+<p>In 2019, we also celebrate 50 years since brave young pilots flew a quarter of a million miles through space to plant the American flag on the face of the moon.  Half a century later, we are joined by one of the Apollo 11 astronauts who planted that flag:  Buzz Aldrin.  This year, American astronauts will go back to space on American rockets.</p>
+<p>In the 20th century, America saved freedom, transformed science, and redefined the middle class standard of living for the entire world to see.  Now, we must step boldly and bravely into the next chapter of this great American adventure, and we must create a new standard of living for the 21st century.  An amazing quality of life for all of our citizens is within our reach.</p>
+<p>We can make our communities safer, our families stronger, our culture richer, our faith deeper, and our middle class bigger and more prosperous than ever before.</p>
+<p>But we must reject the politics of revenge, resistance, and retribution — and embrace the boundless potential of cooperation, compromise, and the common good.</p>
+<p>Together, we can break decades of political stalemate.  We can bridge old divisions, heal old wounds, build new coalitions, forge new solutions, and unlock the extraordinary promise of America’s future.  The decision is ours to make.</p>
+<p>We must choose between greatness or gridlock, results or resistance, vision or vengeance, incredible progress or pointless destruction.</p>
+<p>Tonight, I ask you to choose greatness.</p>
+<p>Over the last 2 years, my Administration has moved with urgency and historic speed to confront problems neglected by leaders of both parties over many decades.</p>
+<p>In just over 2 years since the election, we have launched an unprecedented economic boom — a boom that has rarely been seen before.  We have created 5.3 million new jobs and importantly added 600,000 new manufacturing jobs — something which almost everyone said was impossible to do, but the fact is, we are just getting started.</p>
+<p>Wages are rising at the fastest pace in decades, and growing for blue collar workers, who I promised to fight for, faster than anyone else.  Nearly 5 million Americans have been lifted off food stamps.  The United States economy is growing almost twice as fast today as when I took office, and we are considered far and away the hottest economy anywhere in the world.  Unemployment has reached the lowest rate in half a century. African-American, Hispanic-American and Asian-American unemployment have all reached their lowest levels ever recorded. Unemployment for Americans with disabilities has also reached an all-time low.  More people are working now than at any time in our history –- 157 million.</p>
+<p>We passed a massive tax cut for working families and doubled the child tax credit.</p>
+<p>We virtually ended the estate, or death, tax on small businesses, ranches, and family farms.</p>
+<p>We eliminated the very unpopular Obamacare individual mandate penalty — and to give critically ill patients access to life-saving cures, we passed right to try.</p>
+<p>My Administration has cut more regulations in a short time than any other administration during its entire tenure.  Companies are coming back to our country in large numbers thanks to historic reductions in taxes and regulations.</p>
+<p>We have unleashed a revolution in American energy — the United States is now the number one producer of oil and natural gas in the world.  And now, for the first time in 65 years, we are a net exporter of energy.</p>
+<p>After 24 months of rapid progress, our economy is the envy of the world, our military is the most powerful on earth, and America is winning each and every day.   Members of Congress:  the State of our Union is strong.  Our country is vibrant and our economy is thriving like never before.</p>
+<p>On Friday, it was announced that we added another 304,000 jobs last month alone — almost double what was expected.  An economic miracle is taking place in the United States — and the only thing that can stop it are foolish wars, politics, or ridiculous partisan investigations.</p>
+<p>If there is going to be peace and legislation, there cannot be war and investigation.  It just doesn’t work that way!</p>
+<p>We must be united at home to defeat our adversaries abroad.</p>
+<p>This new era of cooperation can start with finally confirming the more than 300 highly qualified nominees who are still stuck in the Senate – some after years of waiting.  The Senate has failed to act on these nominations, which is unfair to the nominees and to our country.</p>
+<p>Now is the time for bipartisan action.  Believe it or not, we have already proven that it is possible.</p>
+<p>In the last Congress, both parties came together to pass unprecedented legislation to confront the opioid crisis, a sweeping new Farm Bill, historic VA reforms, and after four decades of rejection, we passed VA Accountability so we can finally terminate those who mistreat our wonderful veterans.</p>
+<p>And just weeks ago, both parties united for groundbreaking criminal justice reform.  Last year, I heard through friends the story of Alice Johnson.  I was deeply moved.  In 1997, Alice was sentenced to life in prison as a first-time non-violent drug offender.  Over the next two decades, she became a prison minister, inspiring others to choose a better path.  She had a big impact on that prison population — and far beyond.</p>
+<p>Alice’s story underscores the disparities and unfairness that can exist in criminal sentencing — and the need to remedy this injustice.  She served almost 22 years and had expected to be in prison for the rest of her life.</p>
+<p>In June, I commuted Alice’s sentence — and she is here with us tonight.  Alice, thank you for reminding us that we always have the power to shape our own destiny.</p>
+<p>When I saw Alice’s beautiful family greet her at the prison gates, hugging and kissing and crying and laughing, I knew I did the right thing.</p>
+<p>Inspired by stories like Alice’s, my Administration worked closely with members of both parties to sign the First Step Act into law.  This legislation reformed sentencing laws that have wrongly and disproportionately harmed the African-American community.  The First Step Act gives non-violent offenders the chance to re-enter society as productive, law-abiding citizens. Now, States across the country are following our lead.  America is a Nation that believes in redemption.</p>
+<p>We are also joined tonight by Matthew Charles from Tennessee.  In 1996, at age 30, Matthew was sentenced to 35 years for selling drugs and related offenses.  Over the next two decades, he completed more than 30 Bible studies, became a law clerk, and mentored fellow inmates.  Now, Matthew is the very first person to be released from prison under the First Step Act.  Matthew, on behalf of all Americans:  welcome home.</p>
+<p>As we have seen, when we are united, we can make astonishing strides for our country.  Now, Republicans and Democrats must join forces again to confront an urgent national crisis.</p>
+<p>The Congress has 10 days left to pass a bill that will fund our Government, protect our homeland, and secure our southern border.</p>
+<p>Now is the time for the Congress to show the world that America is committed to ending illegal immigration and putting the ruthless coyotes, cartels, drug dealers, and human traffickers out of business.</p>
+<p>As we speak, large, organized caravans are on the march to the United States.  We have just heard that Mexican cities, in order to remove the illegal immigrants from their communities, are getting trucks and buses to bring them up to our country in areas where there is little border protection.  I have ordered another 3,750 troops to our southern border to prepare for the tremendous onslaught.</p>
+<p>This is a moral issue.  The lawless state of our southern border is a threat to the safety, security, and financial well‑being of all Americans.  We have a moral duty to create an immigration system that protects the lives and jobs of our citizens.  This includes our obligation to the millions of immigrants living here today, who followed the rules and respected our laws.  Legal immigrants enrich our Nation and strengthen our society in countless ways.  I want people to come into our country, but they have to come in legally.</p>
+<p>Tonight, I am asking you to defend our very dangerous southern border out of love and devotion to our fellow citizens and to our country.</p>
+<p>No issue better illustrates the divide between America’s working class and America’s political class than illegal immigration.  Wealthy politicians and donors push for open borders while living their lives behind walls and gates and guards.</p>
+<p>Meanwhile, working class Americans are left to pay the price for mass illegal migration — reduced jobs, lower wages, overburdened schools and hospitals, increased crime, and a depleted social safety net.</p>
+<p>Tolerance for illegal immigration is not compassionate — it is cruel.  One in three women is sexually assaulted on the long journey north.  Smugglers use migrant children as human pawns to exploit our laws and gain access to our country.</p>
+<p>Human traffickers and sex traffickers take advantage of the wide open areas between our ports of entry to smuggle thousands of young girls and women into the United States and to sell them into prostitution and modern-day slavery.</p>
+<p>Tens of thousands of innocent Americans are killed by lethal drugs that cross our border and flood into our cities — including meth, heroin, cocaine, and fentanyl.</p>
+<p>The savage gang, MS-13, now operates in 20 different American States, and they almost all come through our southern border.  Just yesterday, an MS-13 gang member was taken into custody for a fatal shooting on a subway platform in New York City.  We are removing these gang members by the thousands, but until we secure our border they’re going to keep streaming back in.</p>
+<p>Year after year, countless Americans are murdered by criminal illegal aliens.</p>
+<p>I’ve gotten to know many wonderful Angel Moms, Dads, and families – no one should ever have to suffer the horrible heartache they have endured.</p>
+<p>Here tonight is Debra Bissell.  Just three weeks ago, Debra’s parents, Gerald and Sharon, were burglarized and shot to death in their Reno, Nevada, home by an illegal alien.  They were in their eighties and are survived by four children, 11 grandchildren, and 20 great-grandchildren.  Also here tonight are Gerald and Sharon’s granddaughter, Heather, and great‑granddaughter, Madison.</p>
+<p>To Debra, Heather, Madison, please stand:  few can understand your pain.  But I will never forget, and I will fight for the memory of Gerald and Sharon, that it should never happen again.</p>
+<p>Not one more American life should be lost because our Nation failed to control its very dangerous border.</p>
+<p>In the last 2 years, our brave ICE officers made 266,000 arrests of criminal aliens, including those charged or convicted of nearly 100,000 assaults, 30,000 sex crimes, and 4,000 killings.</p>
+<p>We are joined tonight by one of those law enforcement heroes:  ICE Special Agent Elvin Hernandez.  When Elvin was a boy, he and his family legally immigrated to the United States from the Dominican Republic.  At the age of eight, Elvin told his dad he wanted to become a Special Agent.  Today, he leads investigations into the scourge of international sex trafficking.  Elvin says:  “If I can make sure these young girls get their justice, I’ve done my job.”  Thanks to his work and that of his colleagues, more than 300 women and girls have been rescued from horror and more than 1,500 sadistic traffickers have been put behind bars in the last year.</p>
+<p>Special Agent Hernandez, please stand:  We will always support the brave men and women of Law Enforcement — and I pledge to you tonight that we will never abolish our heroes from ICE.</p>
+<p>My Administration has sent to the Congress a commonsense proposal to end the crisis on our southern border.</p>
+<p>It includes humanitarian assistance, more law enforcement, drug detection at our ports, closing loopholes that enable child smuggling, and plans for a new physical barrier, or wall, to secure the vast areas between our ports of entry.  In the past, most of the people in this room voted for a wall — but the proper wall never got built.  I’ll get it built.</p>
+<p>This is a smart, strategic, see-through steel barrier — not just a simple concrete wall.  It will be deployed in the areas identified by border agents as having the greatest need, and as these agents will tell you, where walls go up, illegal crossings go way down.</p>
+<p>San Diego used to have the most illegal border crossings in the country.  In response, and at the request of San Diego residents and political leaders, a strong security wall was put in place.  This powerful barrier almost completely ended illegal crossings.</p>
+<p>The border city of El Paso, Texas, used to have extremely high rates of violent crime — one of the highest in the country, and considered one of our Nation’s most dangerous cities.  Now, with a powerful barrier in place, El Paso is one of our safest cities.</p>
+<p>Simply put, walls work and walls save lives.  So let’s work together, compromise, and reach a deal that will truly make America safe.</p>
+<p>As we work to defend our people’s safety, we must also ensure our economic resurgence continues at a rapid pace.</p>
+<p>No one has benefitted more from our thriving economy than women, who have filled 58 percent of the new jobs created in the last year.  All Americans can be proud that we have more women in the workforce than ever before — and exactly one century after the Congress passed the Constitutional amendment giving women the right to vote, we also have more women serving in the Congress than ever before.</p>
+<p>As part of our commitment to improving opportunity for women everywhere, this Thursday we are launching the first ever Government-wide initiative focused on economic empowerment for women in developing countries.</p>
+<p>To build on our incredible economic success, one priority is paramount — reversing decades of calamitous trade policies.</p>
+<p>We are now making it clear to China that after years of targeting our industries, and stealing our intellectual property, the theft of American jobs and wealth has come to an end.</p>
+<p>Therefore, we recently imposed tariffs on $250 billion of Chinese goods — and now our Treasury is receiving billions of dollars a month from a country that never gave us a dime.  But I don’t blame China for taking advantage of us — I blame our leaders and representatives for allowing this travesty to happen.  I have great respect for President Xi, and we are now working on a new trade deal with China.  But it must include real, structural change to end unfair trade practices, reduce our chronic trade deficit, and protect American jobs.</p>
+<p>Another historic trade blunder was the catastrophe known as NAFTA.</p>
+<p>I have met the men and women of Michigan, Ohio, Pennsylvania, Indiana, New Hampshire, and many other States whose dreams were shattered by NAFTA.  For years, politicians promised them they would negotiate for a better deal.  But no one ever tried — until now.</p>
+<p>Our new U.S.-Mexico-Canada Agreement — or USMCA — will replace NAFTA and deliver for American workers:  bringing back our manufacturing jobs, expanding American agriculture, protecting intellectual property, and ensuring that more cars are proudly stamped with four beautiful words:  made in the USA.</p>
+<p>Tonight, I am also asking you to pass the United States Reciprocal Trade Act, so that if another country places an unfair tariff on an American product, we can charge them the exact same tariff on the same product that they sell to us.</p>
+<p>Both parties should be able to unite for a great rebuilding of America’s crumbling infrastructure.</p>
+<p>I know that the Congress is eager to pass an infrastructure bill — and I am eager to work with you on legislation to deliver new and important infrastructure investment, including investments in the cutting edge industries of the future.  This is not an option.  This is a necessity.</p>
+<p>The next major priority for me, and for all of us, should be to lower the cost of healthcare and prescription drugs — and to protect patients with pre-existing conditions.</p>
+<p>Already, as a result of my Administration’s efforts, in 2018 drug prices experienced their single largest decline in 46 years.</p>
+<p>But we must do more.  It is unacceptable that Americans pay vastly more than people in other countries for the exact same drugs, often made in the exact same place.  This is wrong, unfair, and together we can stop it.</p>
+<p>I am asking the Congress to pass legislation that finally takes on the problem of global freeloading and delivers fairness and price transparency for American patients.  We should also require drug companies, insurance companies, and hospitals to disclose real prices to foster competition and bring costs down.</p>
+<p>No force in history has done more to advance the human condition than American freedom.  In recent years we have made remarkable progress in the fight against HIV and AIDS.  Scientific breakthroughs have brought a once-distant dream within reach.  My budget will ask Democrats and Republicans to make the needed commitment to eliminate the HIV epidemic in the United States within 10 years.  Together, we will defeat AIDS in America.</p>
+<p>Tonight, I am also asking you to join me in another fight that all Americans can get behind:  the fight against childhood cancer.</p>
+<p>Joining Melania in the gallery this evening is a very brave 10-year-old girl, Grace Eline.  Every birthday since she was 4, Grace asked her friends to donate to St. Jude Children’s Research Hospital.  She did not know that one day she might be a patient herself.  Last year, Grace was diagnosed with brain cancer.  Immediately, she began radiation treatment.  At the same time, she rallied her community and raised more than $40,000 for the fight against cancer.  When Grace completed treatment last fall, her doctors and nurses cheered with tears in their eyes as she hung up a poster that read:  “Last Day of Chemo.”  Grace — you are an inspiration to us all.</p>
+<p>Many childhood cancers have not seen new therapies in decades.  My budget will ask the Congress for $500 million over the next 10 years to fund this critical life-saving research.</p>
+<p>To help support working parents, the time has come to pass school choice for America’s children.  I am also proud to be the first President to include in my budget a plan for nationwide paid family leave — so that every new parent has the chance to bond with their newborn child.</p>
+<p>There could be no greater contrast to the beautiful image of a mother holding her infant child than the chilling displays our Nation saw in recent days.  Lawmakers in New York cheered with delight upon the passage of legislation that would allow a baby to be ripped from the mother’s womb moments before birth.  These are living, feeling, beautiful babies who will never get the chance to share their love and dreams with the world.  And then, we had the case of the Governor of Virginia where he basically stated he would execute a baby after birth.</p>
+<p>To defend the dignity of every person, I am asking the Congress to pass legislation to prohibit the late-term abortion of children who can feel pain in the mother’s womb.</p>
+<p>Let us work together to build a culture that cherishes innocent life.  And let us reaffirm a fundamental truth:  all children — born and unborn — are made in the holy image of God.</p>
+<p>The final part of my agenda is to protect America’s National Security.</p>
+<p>Over the last 2 years, we have begun to fully rebuild the United States Military — with $700 billion last year and $716 billion this year.  We are also getting other nations to pay their fair share.  For years, the United States was being treated very unfairly by NATO — but now we have secured a $100 billion increase in defense spending from NATO allies.</p>
+<p>As part of our military build-up, the United States is developing a state-of-the-art Missile Defense System.</p>
+<p>Under my Administration, we will never apologize for advancing America’s interests.</p>
+<p>For example, decades ago the United States entered into a treaty with Russia in which we agreed to limit and reduce our missile capabilities.  While we followed the agreement to the letter, Russia repeatedly violated its terms.  That is why I announced that the United States is officially withdrawing from the Intermediate-Range Nuclear Forces Treaty, or INF Treaty.</p>
+<p>Perhaps we can negotiate a different agreement, adding China and others, or perhaps we can’t –- in which case, we will outspend and out-innovate all others by far.</p>
+<p>As part of a bold new diplomacy, we continue our historic push for peace on the Korean Peninsula.  Our hostages have come home, nuclear testing has stopped, and there has not been a missile launch in 15 months.  If I had not been elected President of the United States, we would right now, in my opinion, be in a major war with North Korea with potentially millions of people killed.  Much work remains to be done, but my relationship with Kim Jong Un is a good one.  And Chairman Kim and I will meet again on February 27 and 28 in Vietnam.</p>
+<p>Two weeks ago, the United States officially recognized the legitimate government of Venezuela, and its new interim President, Juan Guaido.</p>
+<p>We stand with the Venezuelan people in their noble quest for freedom — and we condemn the brutality of the Maduro regime, whose socialist policies have turned that nation from being the wealthiest in South America into a state of abject poverty and despair.</p>
+<p>Here, in the United States, we are alarmed by new calls to adopt socialism in our country.  America was founded on liberty and independence –- not government coercion, domination, and control.  We are born free, and we will stay free.  Tonight, we renew our resolve that America will never be a socialist country.</p>
+<p>One of the most complex set of challenges we face is in the Middle East.</p>
+<p>Our approach is based on principled realism — not discredited theories that have failed for decades to yield progress.  For this reason, my Administration recognized the true capital of Israel — and proudly opened the American Embassy in Jerusalem.</p>
+<p>Our brave troops have now been fighting in the Middle East for almost 19 years.  In Afghanistan and Iraq, nearly 7,000 American heroes have given their lives.  More than 52,000 Americans have been badly wounded.  We have spent more than $7 trillion in the Middle East.</p>
+<p>As a candidate for President, I pledged a new approach.  Great nations do not fight endless wars.</p>
+<p>When I took office, ISIS controlled more than 20,000 square miles in Iraq and Syria.  Today, we have liberated virtually all of that territory from the grip of these bloodthirsty killers.</p>
+<p>Now, as we work with our allies to destroy the remnants of ISIS, it is time to give our brave warriors in Syria a warm welcome home.</p>
+<p>I have also accelerated our negotiations to reach a political settlement in Afghanistan.  Our troops have fought with unmatched valor — and thanks to their bravery, we are now able to pursue a political solution to this long and bloody conflict.</p>
+<p>In Afghanistan, my Administration is holding constructive talks with a number of Afghan groups, including the Taliban.  As we make progress in these negotiations, we will be able to reduce our troop presence and focus on counter-terrorism.  We do not know whether we will achieve an agreement — but we do know that after two decades of war, the hour has come to at least try for peace.</p>
+<p>Above all, friend and foe alike must never doubt this Nation’s power and will to defend our people.  Eighteen years ago, terrorists attacked the USS Cole — and last month American forces killed one of the leaders of the attack.</p>
+<p>We are honored to be joined tonight by Tom Wibberley, whose son, Navy Seaman Craig Wibberley, was one of the 17 sailors we tragically lost.  Tom:  we vow to always remember the heroes of the USS Cole.</p>
+<p>My Administration has acted decisively to confront the world’s leading state sponsor of terror: the radical regime in Iran.</p>
+<p>To ensure this corrupt dictatorship never acquires nuclear weapons, I withdrew the United States from the disastrous Iran nuclear deal.  And last fall, we put in place the toughest sanctions ever imposed on a country.</p>
+<p>We will not avert our eyes from a regime that chants death to America and threatens genocide against the Jewish people.  We must never ignore the vile poison of anti-Semitism, or those who spread its venomous creed.  With one voice, we must confront this hatred anywhere and everywhere it occurs.</p>
+<p>Just months ago, 11 Jewish-Americans were viciously murdered in an anti-semitic attack on the Tree of Life Synagogue in Pittsburgh.  SWAT Officer Timothy Matson raced into the gunfire and was shot seven times chasing down the killer.  Timothy has just had his 12th surgery — but he made the trip to be here with us tonight.  Officer Matson:  we are forever grateful for your courage in the face of evil.</p>
+<p>Tonight, we are also joined by Pittsburgh survivor Judah Samet.  He arrived at the synagogue as the massacre began.  But not only did Judah narrowly escape death last fall — more than seven decades ago, he narrowly survived the Nazi concentration camps.  Today is Judah’s 81st birthday.  Judah says he can still remember the exact moment, nearly 75 years ago, after 10 months in a concentration camp, when he and his family were put on a train, and told they were going to another camp.  Suddenly the train screeched to a halt.  A soldier appeared.  Judah’s family braced for the worst.  Then, his father cried out with joy:  “It’s the Americans.”</p>
+<p>A second Holocaust survivor who is here tonight, Joshua Kaufman, was a prisoner at Dachau Concentration Camp. He remembers watching through a hole in the wall of a cattle car as American soldiers rolled in with tanks.  “To me,” Joshua recalls, “the American soldiers were proof that God exists, and they came down from the sky.”</p>
+<p>I began this evening by honoring three soldiers who fought on D-Day in the Second World War. One of them was Herman Zeitchik.  But there is more to Herman’s story.  A year after he stormed the beaches of Normandy, Herman was one of those American soldiers who helped liberate Dachau.  He was one of the Americans who helped rescue Joshua from that hell on earth.  Almost 75 years later, Herman and Joshua are both together in the gallery tonight — seated side-by-side, here in the home of American freedom.  Herman and Joshua:  your presence this evening honors and uplifts our entire Nation.</p>
+<p>When American soldiers set out beneath the dark skies over the English Channel in the early hours of D-Day, 1944, they were just young men of 18 and 19, hurtling on fragile landing craft toward the most momentous battle in the history of war.</p>
+<p>They did not know if they would survive the hour.  They did not know if they would grow old.  But they knew that America had to prevail.  Their cause was this Nation, and generations yet unborn.</p>
+<p>Why did they do it?  They did it for America — they did it for us.</p>
+<p>Everything that has come since — our triumph over communism, our giant leaps of science and discovery, our unrivaled progress toward equality and justice — all of it is possible thanks to the blood and tears and courage and vision of the Americans who came before.</p>
+<p>Think of this Capitol — think of this very chamber, where lawmakers before you voted to end slavery, to build the railroads and the highways, to defeat fascism, to secure civil rights, to face down an evil empire.</p>
+<p>Here tonight, we have legislators from across this magnificent republic.  You have come from the rocky shores of Maine and the volcanic peaks of Hawaii; from the snowy woods of Wisconsin and the red deserts of Arizona; from the green farms of Kentucky and the golden beaches of California.  Together, we represent the most extraordinary Nation in all of history.</p>
+<p>What will we do with this moment?  How will we be remembered?</p>
+<p>I ask the men and women of this Congress:  Look at the opportunities before us!  Our most thrilling achievements are still ahead.  Our most exciting journeys still await.  Our biggest victories are still to come.  We have not yet begun to dream.</p>
+<p>We must choose whether we are defined by our differences — or whether we dare to transcend them.</p>
+<p>We must choose whether we will squander our inheritance — or whether we will proudly declare that we are Americans.  We do the incredible.  We defy the impossible.  We conquer the unknown.</p>
+<p>This is the time to re-ignite the American imagination.  This is the time to search for the tallest summit, and set our sights on the brightest star.  This is the time to rekindle the bonds of love and loyalty and memory that link us together as citizens, as neighbors, as patriots.</p>
+<p>This is our future — our fate — and our choice to make. I am asking you to choose greatness.</p>
+<p>No matter the trials we face, no matter the challenges to come, we must go forward together.</p>
+<p>We must keep America first in our hearts.  We must keep freedom alive in our souls.  And we must always keep faith in America’s destiny — that one Nation, under God, must be the hope and the promise and the light and the glory among all the nations of the world!</p>
+<p>Thank you.  God Bless You, God Bless America, and good night!</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="footer__wrap">
+<div class="footer__logo">
+<a href="https://www.whitehouse.gov">
+<img alt="White House Logo" class="footer__img" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-sm.png" srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-sm.png 1x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-md.png 2x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-lg.png 3x"/>
+</a>
+</div>
+<div class="footer__site-title">The White House</div>
+<span class="footer__divider divider"><hr/><hr/></span>
+<div class="footer__nav">
+<nav class="nav nav--footer"><ul class="nav__menu nav__menu--depth0 menu"><li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-17230"><a class="nav__link" href="https://www.whitehouse.gov/live/">Live</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-custom menu-item-object-custom menu-item-8288"><a class="nav__link" href="https://apply.whitehouse.gov/">Jobs</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-8093"><a class="nav__link" href="https://www.whitehouse.gov/get-involved/">Get Involved</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-8092"><a class="nav__link" href="https://www.whitehouse.gov/copyright/">Copyright Policy</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-8095"><a class="nav__link" href="https://www.whitehouse.gov/privacy-policy/">Privacy Policy</a></li>
+</ul></nav> </div>
+</div>
+<div class="footer__social">
+<nav class="nav nav--social-links-menu"><ul class="nav__menu nav__menu--depth0 menu"><li class="nav__menu-item nav__menu-item--depth0 footer__social-link__twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-21"><a class="nav__link" href="https://twitter.com/whitehouse" rel="noopener noreferrer" target="_blank"><span>Twitter</span></a></li>
+<li class="nav__menu-item nav__menu-item--depth0 footer__social-link__facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a class="nav__link" href="https://www.facebook.com/WhiteHouse/" rel="noopener noreferrer" target="_blank"><span>Facebook</span></a></li>
+<li class="nav__menu-item nav__menu-item--depth0 footer__social-link__instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-22"><a class="nav__link" href="https://www.instagram.com/whitehouse/" rel="noopener noreferrer" target="_blank"><span>Instagram</span></a></li>
+<li class="nav__menu-item nav__menu-item--depth0 footer__social-link__email menu-item menu-item-type-custom menu-item-object-custom menu-item-23"><a class="nav__link" href="https://www.whitehouse.gov/contact/"><span>Contact</span></a></li>
+</ul></nav> </div>
+</footer>
+</div>
+<section id="wp-footer">
+<script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/vendor/jquery/dist/jquery.min.js?ver=cd8a45b1" type="text/javascript"></script>
+<script src="https://www.whitehouse.gov/wp-includes/js/clipboard.min.js?ver=5.2.2" type="text/javascript"></script>
+<script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/vendor/bows/dist/bows.min.js?ver=cd8a45b1" type="text/javascript"></script>
+<script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/dist/site.min.js?ver=cd8a45b1" type="text/javascript"></script>
+<script type="text/javascript">
+window.site = new Site();
+</script>
+</section><div class="popover" role="dialog">
+<div class="popover__bar">
+<button class="popover__hamburger-toggle" type="button">
+<img alt="Close Menu" class="popover__hamburger-toggle-close" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/close.svg" width="20"/>
+<img alt="Open Menu" class="popover__hamburger-toggle-open" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/hamburger.svg" width="28"/>
+</button>
+<button class="popover__search-toggle" type="button">
+<img alt="Close Search" class="popover__search-toggle-close" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/close.svg" width="20"/>
+<img alt="Open Search" class="popover__search-toggle-open" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/search.svg" width="20"/>
+</button>
+</div>
+<div class="popover__content">
+<div class="popover__hamburger">
+<div class="popover__nav">
+<nav class="nav nav--popover"><ul class="nav__menu nav__menu--depth0 menu"><li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu nav__menu-item--active-ancestor menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current-menu-parent current-menu-ancestor nav__menu-item--has-menu-5 menu-item-658" data-index="0"><a class="nav__link" href="https://www.whitehouse.gov/news/">News</a>
+<ul class="nav__menu nav__menu--depth1 sub-menu"><li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--back"><button class="nav__link" tabindex="-1">News</button></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-152066"><a class="nav__link" href="https://www.whitehouse.gov/remarks/" tabindex="-1">Remarks</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--active menu-item menu-item-type-post_type_archive menu-item-object-briefing-statement current-menu-item menu-item-105680"><a class="nav__link" href="https://www.whitehouse.gov/briefings-statements/" tabindex="-1">Briefings &amp; Statements</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type_archive menu-item-object-presidential-action menu-item-105687"><a class="nav__link" href="https://www.whitehouse.gov/presidential-actions/" tabindex="-1">Presidential Actions</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-105701"><a class="nav__link" href="https://www.whitehouse.gov/articles/" tabindex="-1">Articles</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105694"><a class="nav__link" href="https://www.whitehouse.gov/news/" tabindex="-1">All News</a></li>
+</ul>
+</li>
+<li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-6 menu-item-659" data-index="1"><a class="nav__link" href="https://www.whitehouse.gov/issues/">Issues</a>
+<ul class="nav__menu nav__menu--depth1 sub-menu"><li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--back"><button class="nav__link" tabindex="-1">Issues</button></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105708"><a class="nav__link" href="https://www.whitehouse.gov/issues/education/" tabindex="-1">Education</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105715"><a class="nav__link" href="https://www.whitehouse.gov/issues/national-security-defense/" tabindex="-1">National Security &amp; Defense</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105729"><a class="nav__link" href="https://www.whitehouse.gov/issues/budget-spending/" tabindex="-1">Budget &amp; Spending</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105722"><a class="nav__link" href="https://www.whitehouse.gov/issues/immigration/" tabindex="-1">Immigration</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105736"><a class="nav__link" href="https://www.whitehouse.gov/issues/healthcare/" tabindex="-1">Healthcare</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105743"><a class="nav__link" href="https://www.whitehouse.gov/issues/" tabindex="-1">All Issues</a></li>
+</ul>
+</li>
+<li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-6 menu-item-795" data-index="2"><a class="nav__link" href="https://www.whitehouse.gov/the-trump-administration/">The Administration</a>
+<ul class="nav__menu nav__menu--depth1 sub-menu"><li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--back"><button class="nav__link" tabindex="-1">The Administration</button></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105757"><a class="nav__link" href="https://www.whitehouse.gov/people/donald-j-trump/" tabindex="-1">President Donald J. Trump</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105764"><a class="nav__link" href="https://www.whitehouse.gov/people/mike-pence/" tabindex="-1">Vice President Michael R. Pence</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105750"><a class="nav__link" href="https://www.whitehouse.gov/people/melania-trump/" tabindex="-1">First Lady Melania Trump</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105771"><a class="nav__link" href="https://www.whitehouse.gov/people/karen-pence/" tabindex="-1">Mrs. Karen Pence</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105778"><a class="nav__link" href="https://www.whitehouse.gov/the-trump-administration/the-cabinet/" tabindex="-1">The Cabinet</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105785"><a class="nav__link" href="https://www.whitehouse.gov/disclosures/" tabindex="-1">Disclosures</a></li>
+</ul>
+</li>
+<li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav__menu-item--has-menu-6 menu-item-105792" data-index="3"><a class="nav__link" href="https://www.whitehouse.gov/#">Executive Offices</a>
+<ul class="nav__menu nav__menu--depth1 sub-menu"><li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--back"><button class="nav__link" tabindex="-1">Executive Offices</button></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105806"><a class="nav__link" href="https://www.whitehouse.gov/cea/" tabindex="-1">Council of Economic Advisers</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105799"><a class="nav__link" href="https://www.whitehouse.gov/ceq/" tabindex="-1">Council on Environmental Quality</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105813"><a class="nav__link" href="https://www.whitehouse.gov/nsc/" tabindex="-1">National Security Council</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-106142"><a class="nav__link" href="https://www.whitehouse.gov/omb/" tabindex="-1">Office of Management and Budget</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105827"><a class="nav__link" href="https://www.whitehouse.gov/ondcp/" tabindex="-1">Office of National Drug Control Policy</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105834"><a class="nav__link" href="https://www.whitehouse.gov/ostp/" tabindex="-1">Office of Science and Technology Policy</a></li>
+</ul>
+</li>
+<li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-5 menu-item-1548" data-index="4"><a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/">About The White House</a>
+<ul class="nav__menu nav__menu--depth1 sub-menu"><li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--back"><button class="nav__link" tabindex="-1">About The White House</button></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105848"><a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/tours-events/" tabindex="-1">Tours &amp; Events</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105855"><a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/presidents/" tabindex="-1">Past Presidents</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105862"><a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/first-ladies/" tabindex="-1">Past First Ladies</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-5 menu-item-105995"><a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/the-grounds/" tabindex="-1">The Grounds</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-7 menu-item-106079"><a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/our-government/" tabindex="-1">Our Government</a></li>
+</ul>
+</li>
+<li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-3 menu-item-5738" data-index="5"><a class="nav__link" href="https://www.whitehouse.gov/get-involved/">Get Involved</a>
+<ul class="nav__menu nav__menu--depth1 sub-menu"><li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--back"><button class="nav__link" tabindex="-1">Get Involved</button></li>
+<li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105869"><a class="nav__link" href="https://www.whitehouse.gov/get-involved/write-or-call/" tabindex="-1">Write or Call the White House</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-3 menu-item-105876"><a class="nav__link" href="https://www.whitehouse.gov/get-involved/internships/" tabindex="-1">White House Internship Program</a></li>
+<li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-4 menu-item-105904"><a class="nav__link" href="https://www.whitehouse.gov/get-involved/fellows/" tabindex="-1">White House Fellows</a></li>
+</ul>
+</li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-105988" data-index="6"><a class="nav__link" href="https://www.whitehouse.gov/contact/">Contact</a></li>
+<li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page nav__menu-item--live menu-item-105974" data-index="7"><a class="nav__link" href="https://www.whitehouse.gov/live/"><span class="nav__menu-item-label">Live</span></a></li>
+</ul></nav> </div>
+<div class="popover__seal">
+<img alt="Presidential Crest" height="435" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/presidential-crest-gray.svg" width="435"/>
+</div>
+</div>
+<div class="popover__search">
+<form action="https://www.whitehouse.gov/search/" class="popover__search-form">
+<label class="visually-hidden" for="popover__search-input">
+					Type Your Search
+				</label>
+<input autocomplete="off" class="popover__search-input" id="popover__search-input" name="s" placeholder="Type Your Search..." type="text"/>
+<button class="popover__search-submit" type="submit"><span>Press enter to search</span></button>
+</form>
+</div>
+</div>
+</div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9360826e15","applicationID":"89618830","transactionName":"MVNbZhQFXEAEVBBfWQgZeFESDV1dSkQNWFEKUxRQFA1XVQxZAxtFEldNVwsBXEc=","queueTime":0,"applicationTime":374,"atts":"HRRYEFwfT04=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+</body></html>

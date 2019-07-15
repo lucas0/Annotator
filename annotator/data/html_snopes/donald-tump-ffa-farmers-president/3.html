@@ -1,0 +1,347 @@
+<html class="js" dir="ltr" lang="en" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta charset="utf-8"/><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="Drupal 7 (http://drupal.org)" name="Generator"/>
+<link href="https://www.presidency.ucsb.edu/sites/default/files/favicon-app_0.png" rel="shortcut icon" type="image/png"/>
+<title>Welcome to The American Presidency Project | The American Presidency Project</title>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,700,600,300|Dosis:400,200,300,500,600,700,800" rel="stylesheet" type="text/css"/>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"/>
+<link href="https://www.presidency.ucsb.edu/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.presidency.ucsb.edu/sites/default/files/css/css_uuQd0L7qawhKpY0MHO8pVG2W6LSQqS5w9XHZMk3vO2U.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.presidency.ucsb.edu/sites/default/files/css/css_Cq1R3m_ERXC2ynYnp57HZ-O7ehprd9pvLTuV32DY_ow.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.presidency.ucsb.edu/sites/default/files/css/css_eqOQxIRcuNwVxaE5_kFXv5rqLB4z-0RNOVYITwsGDBg.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.presidency.ucsb.edu/sites/default/files/css/css_E2-g8OzHShQFYusQBCP4IRLwRUXjWdn4fYnm5kDtvtk.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.presidency.ucsb.edu/sites/default/files/css/css_DW59q6nX-P3-D4cA08_V2iLlMJIaFdPFYT8X6nSFpV8.css" media="print" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/jquery/1.11/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_dWhBODswdXXk1M5Z5nyqNfGljmqwxUwAK9i6D0YSDNs.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js"></script>
+<script>window.jQuery.ui || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_Tik8PIaz_eQ5I4FMzmjkWoPEs9jKBgTSauo1jgsNa6g.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_XklFG3kfg0lBQ-7DD_t92S8L-ZsoZ29gklqc_A_ZH6o.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-86410002-1", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]);ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_gvpxcPEErmaiJn8qGSGx2O87lReivTR09hs10gIG3Yg.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"app","theme_token":"99p-LxlL3HSnctrO5J1NRvPhSNp7OYhAVoL2g3FULic","js":{"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.js":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.filter.js":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.js":1,"sites\/default\/themes\/bootstrap\/js\/bootstrap.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jQuery\/jquery-1.11.2.min.js":1,"0":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jquery.ui\/1.11.4\/jquery-ui.min.js":1,"1":1,"sites\/default\/modules\/contrib\/extlink\/extlink.js":1,"sites\/default\/modules\/contrib\/better_exposed_filters\/better_exposed_filters.js":1,"sites\/default\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/default\/themes\/app\/bootstrap\/js\/affix.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/alert.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/button.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/carousel.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/collapse.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/dropdown.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/modal.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tooltip.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/popover.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/scrollspy.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tab.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/transition.js":1,"sites\/default\/themes\/app\/scripts\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"sites\/default\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/default\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/default\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/default\/modules\/contrib\/extlink\/extlink.css":1,"sites\/default\/modules\/contrib\/views\/css\/views.css":1,"sites\/default\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.filter.css":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.css":1,"sites\/default\/modules\/contrib\/vefl\/css\/vefl-layouts.css":1,"sites\/default\/themes\/app\/css\/style.css":1,"sites\/default\/themes\/app\/css\/oog.css":1,"sites\/default\/themes\/app\/css\/print.css":1}},"jquery_ui_multiselect_widget":{"module_path":"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget","multiple":1,"filter":1,"subselector":"#edit-category2","selectedlist":"4","autoOpen":0,"header":1,"height":"auto","classes":"app-uberselect","filter_auto_reset":1,"filter_width":"auto","jquery_ui_multiselect_widget_path_match_exclude":"admin\/*\r\nmedia\/*\r\nfile\/*\r\nsystem\/ajax"},"better_exposed_filters":{"views":{"documents_total_count":{"displays":{"block_1":{"filters":[]}}},"this_day_in_history":{"displays":{"block":{"filters":[]}}},"featured_video":{"displays":{"block_2":{"filters":[]},"block_4":{"filters":[]},"block_5":{"filters":[]},"block_1":{"filters":[]}}},"analyses":{"displays":{"block":{"filters":[]}}}},"datepicker":false,"slider":false,"settings":[],"autosubmit":false},"urlIsAjaxTrusted":{"\/advanced-search":true},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extIconPlacement":"append","extSubdomains":1,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":2,"trackCrossDomains":["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"formHasError":1,"popoverEnabled":0,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html front not-logged-in no-sidebars page-node">
+<div id="skip-link">
+<a class="element-invisible element-focusable" href="https://www.presidency.ucsb.edu/#main-content">Skip to main content</a>
+</div>
+<div class="wrapper">
+<div class="branding-region">
+<div class="container">
+<div class="region region-branding">
+<section class="block block-block site-title-block clearfix" id="block-block-1">
+<div class="site-title"><a href="https://www.presidency.ucsb.edu/">The American Presidency Project</a></div>
+</section>
+<section class="block block-block top-link-buttons clearfix" id="block-block-2">
+<p><a class="btn btn-default" href="https://www.presidency.ucsb.edu/about">About</a><a class="btn btn-default" href="https://www.presidency.ucsb.edu/advanced-search"><span class="glyphicon glyphicon-search"></span> Search</a></p>
+<p id="ucScript"><a href="https://www.ucsb.edu/" target="_blank"><img alt="ucsb wordmark black" src="https://www.presidency.ucsb.edu/sites/default/files/pictures/uc_santa_barbara_wordmark_black_rgb.svg" style="width: 175px; height: 13px;"/></a></p>
+</section>
+</div>
+</div>
+</div>
+<div class="navbar navbar-default" id="navbar" role="banner">
+<div class="container">
+<div class="navbar-header">
+<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse">
+<nav role="navigation">
+<ul class="menu nav navbar-nav"><li class="first expanded dropdown"><a class="dropdown-toggle" href="https://www.presidency.ucsb.edu/documents">Documents <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="https://www.presidency.ucsb.edu/documents/presidential-documents-archive-guidebook">Guidebook</a></li>
+<li class="last leaf"><a href="https://www.presidency.ucsb.edu/documents/category-attributes">Category Attributes</a></li>
+</ul></li>
+<li class="collapsed"><a href="https://www.presidency.ucsb.edu/statistics">Statistics</a></li>
+<li class="leaf"><a href="https://www.presidency.ucsb.edu/media" title="">Media Archive</a></li>
+<li class="leaf"><a href="https://www.presidency.ucsb.edu/presidents" title="">Presidents</a></li>
+<li class="leaf"><a href="https://www.presidency.ucsb.edu/analyses" title="">Analyses</a></li>
+<li class="last leaf"><a href="https://giving.ucsb.edu/Funds/Give?id=185" title="">Support</a></li>
+</ul> </nav>
+</div>
+</div>
+</div>
+<div class="site-header" id="page-header" role="banner">
+<div class="region region-header">
+<section class="block block-block more-link-wht clearfix" id="block-block-17">
+<div>
+<h2><a href="https://www.presidency.ucsb.edu/node/324107/">State of the Union Resources and Background</a></h2>
+</div>
+</section>
+<section class="block block-block clearfix" id="block-block-27">
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>                                                                </p>
+<p> </p>
+<h3>                                                                           <strong><em>   Scroll down<br/>                                                                              for more resources!</em></strong></h3>
+</section>
+</div>
+</div>
+<div class="main-container container">
+<div class="row">
+<section class="col-sm-12">
+<a id="main-content"></a>
+<div class="region region-content">
+<section class="block block-system clearfix" id="block-system-main">
+</section>
+</div>
+</section>
+</div>
+</div>
+<div class="frontpage-blocks container">
+<div class="row">
+<div class="region region-frontpage-blocks-left">
+<section class="block block-block site-intro clearfix" id="block-block-3">
+<h3><strong>The American Presidency Project</strong>, non-profit and non-partisan, is <em>the </em>source of presidential documents on the internet.  We are hosted at the University of California, Santa Barbara.</h3>
+<p>
+</p><div class="view view-documents-total-count view-id-documents_total_count view-display-id-block_1 view-dom-id-c3826e3cd046ced84d8b2dfda4bc2474">
+<div class="view-content">
+<div>
+<h3><strong>129,972</strong> Presidential and Non-Presidential Records</h3>
+</div>
+</div>
+</div>
+</section>
+<section class="block block-views other-frontpage-block clearfix" id="block-views-5c12edf56060306972111336e0789cf4">
+<h2 class="block-title">Simple Search of Our Archives</h2>
+<form accept-charset="UTF-8" action="/advanced-search" id="views-exposed-form-prez-documents-archive-search2-page-1" method="get"><div> <div class="views-exposed-form vefl-layout bootstrap-6-6-stacked">
+<div class="views-exposed-widgets clearfix">
+<div class="vefl-region vefl-region-top">
+<div class="views-exposed-widget views-widget-edit-field-keywords" id="edit-field-keywords-wrapper">
+<div class="views-widget"> <div class="form-item form-item-field-keywords form-type-textfield form-group"><input class="form-control form-text" id="edit-field-keywords" maxlength="128" name="field-keywords" size="30" type="text" value=""/></div> </div>
+</div>
+</div>
+<div class="vefl-region vefl-region-left">
+</div>
+<div class="vefl-region vefl-region-right">
+</div>
+<div class="vefl-region vefl-region-bottom">
+<div class="views-exposed-widget views-widget-items-per-page" id="items-per-page-wrapper">
+<div class="form-item form-item-items-per-page form-type-select form-group"> <label class="control-label" for="edit-items-per-page"># per page</label>
+<select class="form-control form-select" id="edit-items-per-page" name="items_per_page"><option value="5">5</option><option value="10">10</option><option selected="selected" value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+</div>
+<div class="views-exposed-widget views-widget-button views-submit-button" id="button-wrapper">
+<button class="btn btn-default form-submit" id="edit-submit-prez-documents-archive-search2" name="" type="submit" value="Apply">Apply</button>
+</div>
+</div>
+</div>
+</div>
+</div></form>
+</section>
+<section class="block block-block other-frontpage-block adv-srch clearfix" id="block-block-19">
+<div class="adv"><a href="https://www.presidency.ucsb.edu/advanced-search">advanced search ›</a></div>
+</section>
+<section class="block block-block frontpage-intro clearfix" id="block-block-7">
+<h3>The American Presidency Project is the only <strong><em>free </em></strong>online resource with a single searchable database including:</h3>
+<ul><li>
+<h4>The Messages and Papers of the Presidents: 1789-1929</h4>
+</li>
+<li>
+<h4>The Public Papers of the Presidents: since 1929</h4>
+</li>
+<li>
+<h4>The Weekly Compilation of Presidential Documents: 1977-2009</h4>
+</li>
+<li>
+<h4>The Daily Compilation of Presidential Documents: post-2009</h4>
+</li>
+</ul><h3>Among other documents, our archives contain data related to <a href="https://www.presidency.ucsb.edu/statistics/data/seats-congress-gainedlost-the-presidents-party-mid-term-elections">Midterm Elections</a>,  <a href="https://www.presidency.ucsb.edu/documents/presidential-documents-archive-guidebook/national-political-party-platforms">U.S. Party Platforms</a> (from 1840), <a href="https://www.presidency.ucsb.edu/documents/app-categories/written-statements/statements-administration-policy">Statements of Administration Policy</a>, <a href="https://www.presidency.ucsb.edu/documents/app-categories/press/press-briefings">White House Press Briefing Transcripts</a>, <a href="https://www.presidency.ucsb.edu/documents/app-categories/elections-and-transitions/debates">Presidential Debate transcripts</a>. Visit our <a href="https://www.presidency.ucsb.edu/documents">Documents</a> and <a href="https://www.presidency.ucsb.edu/statistics">Statistics</a> to learn more.</h3>
+</section>
+<section class="block block-views standard-frontpage-block clearfix" id="block-views-this-day-in-history-block">
+<h2 class="block-title">Today in History</h2>
+<div class="view view-this-day-in-history view-id-this_day_in_history view-display-id-block view-dom-id-5e4050076ec381c16f5beb8ffab1b231">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+<div class="field-docs-start-date-time">
+<span class="date-display-single" content="1850-07-15T00:00:00+00:00" datatype="xsd:dateTime" property="dc:date">July 15, 1850</span> </div>
+<div class="field-docs-person">
+    Millard Fillmore  </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/documents/special-message-3625">Special Message</a></span> </div>
+<div class="field-docs-content">
+<p><em>To the Senate of the United States:</em></p>
+<p>I transmit to the Senate, for its consideration with a view to ratification, a treaty between the United States and the Republic of Peru, signed in this city on the 13th instant by the plenipotentiaries of the parties.</p>
+<p>A report from the Secretary of State relative to the treaty, and documents therein referred to, are also herew...    
+              
+  </p><div class="views-field views-field-nothing"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/documents/special-message-3625"><div class="field-node-link">more</div></a></span> </div> </div>
+</div>
+</div>
+</div></section>
+<section class="block block-views rec-lead clearfix" id="block-views-featured-video-block-2">
+<h2 class="block-title">Worth Reading. . . </h2>
+<div class="view view-featured-video view-id-featured_video view-display-id-block_2 view-dom-id-4048d125bcace3ae0e3991e14cf8b9f0">
+<div class="view-content">
+<div>
+<div class="field-media-image">
+<img alt="Presidential Studies Quarterly cover" class="img-responsive" height="150" src="https://www.presidency.ucsb.edu/sites/default/files/styles/analyses_img/public/psqimage.jpg?itok=4T8ak_La" typeof="foaf:Image" width="130"/> </div>
+<div> <strong>Samuel Kernell et al., "New Data for Investigating the President’s Legislative Program: OMB Logs and SAPs*"</strong> </div>
+<div class="field-body">
+<p> </p>
+<p><em>How "Statements of Administration Policy" and OMB Logs help clarify the President's legislative program content and success.</em></p>
+<p><a href="https://onlinelibrary.wiley.com/doi/10.1111/psq.12514" rel="noopener noreferrer" target="_blank"><strong>Presidential Studies Quarterly, June 2019</strong></a></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="block block-views standard-frontpage-block clearfix" id="block-views-featured-video-block-4">
+<h2 class="block-title">Statistics</h2>
+<div class="view view-featured-video view-id-featured_video view-display-id-block_4 view-dom-id-7db03cdc01b9fdae877a1067a6f8ff30">
+<div class="view-content">
+<div>
+<div class="field-fp-stats-image">
+<a href="https://www.presidency.ucsb.edu/analyses/how-different-are-sarah-sanderss-press-briefings"><img alt="Graph comparing Sarah Sanders to 13 prior press secretaries." class="img-responsive" height="1200" src="https://www.presidency.ucsb.edu/sites/default/files/pictures/sanders_comparison_graph.png" typeof="foaf:Image" width="725"/></a> </div>
+<div class="field-fp-stats-blurb">
+<p>She's both more and less remarkable than you thought.</p>
+</div>
+<div class="views-field views-field-nothing"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/node/332405"><div class="field-node-link">more</div>
+</a></span> </div> </div>
+</div>
+</div>
+</section>
+</div>
+<div class="region region-frontpage-blocks-right">
+<section class="block block-block standard-frontpage-block grateful_donor_block blk-border clearfix" id="block-block-18">
+<p><span style="font-size:22px; font-weight: 300;">We deeply appreciate our growing number of generous supporters!  Special thanks go to: </span></p>
+<h4><strong>       Sandy Otellini</strong><br/><strong>       Marilyn Lee</strong>*<strong> &amp; Harvey Schneider<br/>       Lena &amp; David G. Adishian</strong>*<strong> </strong></h4>
+<p>        (* UCSB Alumnus and UCSB Foundation Board Member)</p>
+<p> <a href="https://www.presidency.ucsb.edu/about/donor-support" style="font: 600 1.8rem 'Dosis',sans-serif;" target="_self">See all donors </a></p>
+<p style="text-align: right;"><a class="btn btn-primary" href="https://giving.ucsb.edu/Funds/Give?id=185" id="make-gift">Support</a></p>
+</section>
+<section class="block block-views clearfix" id="block-views-analyses-block">
+<div class="view view-analyses view-id-analyses view-display-id-block view-dom-id-58673b5c9254840dfd00b558d8dcdba3">
+<div class="view-header">
+<div class="analyses standard-frontpage-block">
+<h2 class="title block-title">Analyses</h2>
+<p><a href="https://www.presidency.ucsb.edu/analyses">all analyses</a></p></div>
+</div>
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first">
+<div class="field-image">
+<a href="https://www.presidency.ucsb.edu/analyses/presidential-orders-upon-the-death-president"><img alt="GWBush salutes casket of GHW Bush, National Cathedral" class="img-responsive" height="150" src="https://www.presidency.ucsb.edu/sites/default/files/styles/analyses_img/public/field/image/2018-12-05_bush_funeral.jpg?itok=PgquA8U-" typeof="foaf:Image" width="130"/></a> </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/analyses/presidential-orders-upon-the-death-president">Presidential Orders upon the Death of a President</a></span> </div>
+<div class="field-article-date">
+<span class="date-display-single" content="2018-12-05T00:00:00+00:00" datatype="xsd:dateTime" property="dc:date">December 05, 2018</span> </div>
+<div class="field-fp-stats-blurb">
+<p>The "Day of Mourning" is post-FDR practice.</p>
+</div>
+</div>
+<div class="views-row views-row-2 views-row-even views-row-last">
+<div class="field-image">
+<a href="https://www.presidency.ucsb.edu/analyses/presidents-and-midterm-elections-what-historical-data-suggest-about-2018"><img alt="President Elect Trump and Speaker Pelosi" class="img-responsive" height="150" src="https://www.presidency.ucsb.edu/sites/default/files/styles/analyses_img/public/field/image/trump_and_pelosi.jpg?itok=74QDmFvu" typeof="foaf:Image" width="130"/></a> </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/analyses/presidents-and-midterm-elections-what-historical-data-suggest-about-2018">Presidents and Midterm Elections:  What Historical Data Suggest about 2018</a></span> </div>
+<div class="field-article-date">
+<span class="date-display-single" content="2018-10-29T00:00:00+00:00" datatype="xsd:dateTime" property="dc:date">October 29, 2018</span> </div>
+<div class="field-fp-stats-blurb">
+<p>Based on historical data, we estimate 2018 GOP seat losses of 33 in the House and 1 in the Senate.</p>
+<p> </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="block block-views other-frontpage-block clearfix" id="block-views-featured-video-block-5">
+<h2 class="block-title">Featured Video</h2>
+<div class="view view-featured-video view-id-featured_video view-display-id-block_5 view-dom-id-9ed47f7f17c7bf0f5990fec2e7f5d50e">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+<div class="field-docs-media-video-hosted">
+<div class="embedded-video">
+<div class="player">
+<iframe allowfullscreen="" class="" frameborder="0" height="360" src="//www.youtube.com/embed/qGSEDSQpK6A?width%3D640%26amp%3Bheight%3D360%26amp%3Btheme%3Ddark%26amp%3Bautoplay%3D0%26amp%3Bvq%3Dlarge%26amp%3Brel%3D0%26amp%3Bshowinfo%3D0%26amp%3Bmodestbranding%3D1%26amp%3Biv_load_policy%3D3%26amp%3Bcontrols%3D0%26amp%3Bautohide%3D2%26amp%3Bwmode%3Dopaque" width="640"></iframe> </div>
+</div>
+</div><a name="docmedia"></a>
+</div>
+</div>
+</div>
+</section>
+<section class="block block-views standard-frontpage-block clearfix" id="block-views-featured-video-block-1">
+<h2 class="block-title">Top 10</h2>
+<div class="view view-featured-video view-id-featured_video view-display-id-block_1 view-dom-id-267401ce257378040d99ca11aa8d5f8e">
+<div class="view-header">
+<h3>The Ten Most Viewed Presidential Documents</h3>
+</div>
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first">
+<div class="views-field views-field-counter"> <span class="field-content">1</span> </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/documents/inaugural-address-8">Inaugural Address</a></span> </div>
+<div class="views-field views-field-title-1"> <h3 class="field-content">Franklin D. Roosevelt</h3> </div> </div>
+<div class="views-row views-row-2 views-row-even">
+<div class="views-field views-field-counter"> <span class="field-content">2</span> </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/documents/inaugural-address-11">Inaugural Address</a></span> </div>
+<div class="views-field views-field-title-1"> <h3 class="field-content">Ronald Reagan</h3> </div> </div>
+<div class="views-row views-row-3 views-row-odd">
+<div class="views-field views-field-counter"> <span class="field-content">3</span> </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/documents/inaugural-address-2">Inaugural Address</a></span> </div>
+<div class="views-field views-field-title-1"> <h3 class="field-content">John F. Kennedy</h3> </div> </div>
+<div class="views-row views-row-4 views-row-even">
+<div class="views-field views-field-counter"> <span class="field-content">4</span> </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/documents/second-fireside-chat">Second Fireside Chat</a></span> </div>
+<div class="views-field views-field-title-1"> <h3 class="field-content">Franklin D. Roosevelt</h3> </div> </div>
+<div class="views-row views-row-5 views-row-odd">
+<div class="views-field views-field-counter"> <span class="field-content">5</span> </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/documents/farewell-address">Farewell Address</a></span> </div>
+<div class="views-field views-field-title-1"> <h3 class="field-content">George Washington</h3> </div> </div>
+<div class="views-row views-row-6 views-row-even">
+<div class="views-field views-field-counter"> <span class="field-content">6</span> </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/documents/fireside-chat-banking">Fireside Chat on Banking</a></span> </div>
+<div class="views-field views-field-title-1"> <h3 class="field-content">Franklin D. Roosevelt</h3> </div> </div>
+<div class="views-row views-row-7 views-row-odd">
+<div class="views-field views-field-counter"> <span class="field-content">7</span> </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/documents/remarks-the-convocation-the-church-god-christ-memphis-tennessee">Remarks to the Convocation of the Church of God in Christ at Memphis, Tennessee.</a></span> </div>
+<div class="views-field views-field-title-1"> <h3 class="field-content">William J. Clinton</h3> </div> </div>
+<div class="views-row views-row-8 views-row-even">
+<div class="views-field views-field-counter"> <span class="field-content">8</span> </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/documents/fireside-chat-13">Fireside Chat.</a></span> </div>
+<div class="views-field views-field-title-1"> <h3 class="field-content">Franklin D. Roosevelt</h3> </div> </div>
+<div class="views-row views-row-9 views-row-odd">
+<div class="views-field views-field-counter"> <span class="field-content">9</span> </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/documents/inaugural-address-34">Inaugural Address</a></span> </div>
+<div class="views-field views-field-title-1"> <h3 class="field-content">Abraham Lincoln</h3> </div> </div>
+<div class="views-row views-row-10 views-row-even views-row-last">
+<div class="views-field views-field-counter"> <span class="field-content">10</span> </div>
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.presidency.ucsb.edu/documents/inaugural-address">Inaugural Address</a></span> </div>
+<div class="views-field views-field-title-1"> <h3 class="field-content">George Bush</h3> </div> </div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+<footer class="site-footer no-print">
+<div class="container">
+<div class="region region-footer">
+<section class="block block-block attribution clearfix" id="block-block-4">
+<p><span>The American Presidency Project</span><br/>John Woolley and Gerhard Peters<br/><strong><a href="https://www.presidency.ucsb.edu/contact">Contact</a></strong></p>
+</section>
+<section class="block block-block foot ucsb clearfix" id="block-block-6">
+<p style="text-align: center;display:inline-block;"><a class="twitter" href="https://twitter.com/presidency_proj" rel="noopener noreferrer" target="_blank">Twitter</a> <a class="facebook" href="https://www.facebook.com/pg/american.presidency.project/" rel="noopener noreferrer" target="_blank">Facebook</a></p>
+</section>
+<section class="block block-block copyright clearfix" id="block-block-5">
+<p>Copyright © The American Presidency Project<br/><a href="http://www.ucsb.edu/terms-of-use" target="_blank">Terms of Service</a> | <a href="http://www.policy.ucsb.edu/privacy-notification/" target="_blank">Privacy</a> | <a href="https://www.presidency.ucsb.edu/accessibility">Accessibility</a></p><p><img alt="uc santa barbara logo" src="https://www.presidency.ucsb.edu/sites/default/files/pictures/uc-santa-barbara-wordmark-white1x.svg" style="width: 197px; min-width: 150px; height: 14px;object-fit:cover;"/></p>
+</section>
+</div>
+</div>
+</footer>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_Bti6BfkKgRcI-xAlyEdjJUtiVp8Gne9zUdB3USYnS4Y.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_MRdvkC2u4oGsp5wVxBG1pGV5NrCPW3mssHxIn6G9tGE.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"dee899de70","applicationID":"80106271","transactionName":"bl1XYxNYWkVYVxFdWVcXdFQVUFtYFloKUFNmSFRQBGZQU19VEFhC","queueTime":0,"applicationTime":1554,"atts":"QhpUFVtCSUs=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+</body></html>

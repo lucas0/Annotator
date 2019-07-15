@@ -1,0 +1,113 @@
+<html><head>
+<link href="http://pa.courts.state.mn.us/CSS/PublicAccess.css" rel="stylesheet" type="text/css"/>
+<script language="javascript">
+
+    function AddHiddenFormElement(form, name, value) {
+      var hiddenField = document.createElement("input");
+      hiddenField.setAttribute("type", "hidden");
+      hiddenField.setAttribute("name", name);
+      hiddenField.setAttribute("value", value);
+      form.appendChild(hiddenField);
+    }
+
+    function LaunchSearch(sPartialQueryString, bNodeSelectorHidden, bUseSSL, sbxNodeControl) {
+      baseURL = document.location.href.replace("default.aspx", "");
+      baseURL = baseURL.replace("#MainContent", "");
+      
+      
+      if(bUseSSL)
+        baseURL = baseURL.replace("http://","https://");
+      else
+        baseURL = baseURL.replace("https://","http://");
+        
+      if (bNodeSelectorHidden == false) {
+        if (sbxNodeControl.value != "") {
+
+          var selectedIndex = sbxNodeControl.selectedIndex;
+
+          var form = document.createElement("form");
+          form.setAttribute("method", "post");
+          form.setAttribute("action", baseURL + sPartialQueryString);
+
+          AddHiddenFormElement(form, "NodeID", sbxNodeControl.value);
+          AddHiddenFormElement(form, "NodeDesc", sbxNodeControl.options[selectedIndex].text);
+
+          document.body.appendChild(form);
+          form.submit();
+          
+          return false;
+        } else {
+          window.alert("Please select a location.");
+        }
+      } else {
+        document.location.href = baseURL + sPartialQueryString;
+      }
+    }    
+    
+    function LocationChange(sbxNodeControl) 
+    {
+      if (sbxNodeControl != null) 
+      {
+         var locationCount = sbxNodeControl.options.length;
+         var locationIndex = sbxNodeControl.selectedIndex;
+         var i;
+        
+        // If the first value is a null string, then the option was set to have an initial blank value.
+        // so there is one extra value in the dropdown than there are divOption sections.
+        if (sbxNodeControl.options[0].value == "")
+        {
+          locationCount--;
+        }
+
+        for(i=0; i<locationCount; i++) 
+        {
+          if( locationIndex == i )
+            document.getElementById("divOption" + (i+1)).style.display = "block";
+          else
+            document.getElementById("divOption" + (i+1)).style.display = "none";
+        }
+      }
+    }
+    
+    function UpdateSearchCombo(sNodeString)    
+    {
+      var controlElem = document.getElementById("sbxControlID2");
+    
+      if (controlElem != null)
+      {
+        controlElem.SelectedValue = sNodeString;
+
+        for (var i = 0; i < controlElem.options.length; i++)
+          if (controlElem.options[i].value == sNodeString)
+            break;
+              
+        if (i < controlElem.options.length)
+        {
+          controlElem.selectedIndex = i;
+          LocationChange(controlElem);
+        }
+      }
+    }
+    
+    function include(url)  
+    {
+      if ( document.all )
+      {
+        var xml = new ActiveXObject("Microsoft.XMLHTTP");
+        xml.Open("GET", url, false);
+        xml.Send(null)
+        document.writeln(xml.responseText);
+      }
+      else  
+      {
+        var pageRequest = new XMLHttpRequest()
+        pageRequest.open("GET", url, false);
+        pageRequest.send(null);
+        document.writeln(pageRequest.responseText);
+      }
+    }        
+  </script>
+</head>
+<body onload="LocationChange()" style="overflow: auto;">
+<table border="0" cellpadding="0" cellspacing="0" height="100%" style="table-layout: fixed;" width="100%" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:publicaccessuser="urn:PublicAccessUser"><tbody><tr><td style="height:83px"><table border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; margin:0px; padding:0px;" width="100%"><tbody><tr><td class="ssHeaderTitleBanner">Minnesota Trial Court Public Access (MPA) Remote View</td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; margin:0px; padding:0px;" width="100%"><tbody><tr><td bgcolor="#000000" height="20px"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="padding-left: 5px"><font size="1"><a class="ssBlackNavBarHyperlink" href="http://pa.courts.state.mn.us/#MainContent">Skip to Main Content</a> <a class="ssBlackNavBarHyperlink" href="http://pa.courts.state.mn.us/logout.aspx">Logout</a> <a class="ssBlackNavBarHyperlink" href="http://pa.courts.state.mn.us/MyAccount.aspx?ReturnURL=default.aspx">My Account</a> </font></td><td align="center" class="ssBlackNavBarLocation"></td><td align="right" style="padding-right: 10px"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><font size="1"><a class="ssBlackNavBarHyperlink" href="http://pa.courts.state.mn.us/MPAHelp/Help.htm" target="_blank">Help</a></font></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="*"><td><a id="MainContent" name="MainContent" tabindex="-1"></a><table border="0" cellpadding="0" cellspacing="0" height="300" style="table-layout: fixed" width="100%"><tbody><tr><td align="center"><img alt="Welcome to Odyssey Public Access" src="http://pa.courts.state.mn.us/Images/MJB_logo_v4_Clr.jpg"/></td><td><div class="ssLaunchProductTitle" style="width: 200px">Case Records</div><label class="ssLogin" for="sbxControlID2">Select a location</label><br/><select id="sbxControlID2" onchange="LocationChange(this)"><option value="174,151,160,131,132,146,111,175,161,191,176,147,133,119,134,120,121,113,162,1303,1301,1305,1302,1306,122,178,192,179,135,193,163,180,164,148,114,136,137,183,184,138,115,165,154,155,123,139,140,141,185,124,186,194,142,187,166,188,143,167,125,144,189,116,195,117,157,126,168,1491,1492,1493,169,158,170,127,159,128,145,171,129,197,172,190,181,182,153,156,177,173,150,152,11810,11811,11812,11813,11815,11822,11823,11817,11818,11819,11820,1304,13041,13042,13043,13044,1961,1962,1308,11201,11202,13045,11203">All MNCIS Sites - Case Search</option><option value="173">Aitkin</option><option value="190">Anoka</option><option value="150">Becker</option><option value="174">Beltrami</option><option value="151">Benton</option><option value="160">Big Stone</option><option value="131">Blue Earth</option><option value="132">Brown</option><option value="146">Carlton</option><option value="111">Carver</option><option value="175">Cass</option><option value="161">Chippewa</option><option value="191">Chisago</option><option value="152">Clay</option><option value="176">Clearwater</option><option value="147">Cook</option><option value="133">Cottonwood</option><option value="177">Crow Wing</option><option value="11201,11202,13045,11203">Dakota - Case Search</option><option value="11201">- Dakota-Apple Valley</option><option value="11202,13045">- Dakota-Hastings</option><option value="11203">- Dakota-West St. Paul</option><option value="119">Dodge</option><option value="153">Douglas</option><option value="134">Faribault</option><option value="120">Fillmore</option><option value="121">Freeborn</option><option value="113">Goodhue</option><option value="162">Grant</option><option value="1301,1302,1303,1304,13041,13042,13043,13044,1305,1306,1308">Hennepin - Case Search</option><option value="1303">- Hennepin Civil</option><option value="1304,13041,13042,13043,13044">- All Hennepin Criminal/Traffic/Petty</option><option value="1308">- Hennepin Examiner of Titles</option><option value="1305">- Hennepin Family</option><option value="1306">- Hennepin Housing</option><option value="1302">- Hennepin Juvenile</option><option value="1301">- Hennepin Probate Mental Health</option><option value="122">Houston</option><option value="178">Hubbard</option><option value="192">Isanti</option><option value="179">Itasca</option><option value="135">Jackson</option><option value="193">Kanabec</option><option value="163">Kandiyohi</option><option value="180">Kittson</option><option value="181">Koochiching</option><option value="164">Lac Qui Parle</option><option value="148">Lake</option><option value="182">Lake of the Woods</option><option value="114">LeSueur</option><option value="136">Lincoln</option><option value="137">Lyon</option><option value="183">Mahnomen</option><option value="184">Marshall</option><option value="138">Martin</option><option value="115">McLeod</option><option value="165">Meeker</option><option value="154">Mille Lacs</option><option value="155">Morrison</option><option value="123">Mower</option><option value="139">Murray</option><option value="140">Nicollet</option><option value="141">Nobles</option><option value="185">Norman</option><option value="124">Olmsted</option><option value="156">Otter Tail</option><option value="186">Pennington</option><option value="194">Pine</option><option value="142">Pipestone</option><option value="187">Polk</option><option value="166">Pope</option><option value="11810,11811,11812,11813,11815,11817,11818,11819,11820,11822,11823">Ramsey - Case Search</option><option value="11811,11815">- Ramsey Civil</option><option value="11817,11818,11819,11820">- Ramsey Criminal/Traffic/Petty</option><option value="11812,11823,11822">- Ramsey Family</option><option value="11813">- Ramsey Juvenile</option><option value="11810">- Ramsey Probate Mental Health</option><option value="188">Red Lake</option><option value="143">Redwood</option><option value="167">Renville</option><option value="125">Rice</option><option value="144">Rock</option><option value="189">Roseau</option><option value="116">Scott</option><option value="195">Sherburne</option><option value="117">Sibley</option><option value="157">Stearns</option><option value="126">Steele</option><option value="168">Stevens</option><option value="1491,1492,1493">St. Louis - Case Search</option><option value="1491">- St. Louis-Duluth</option><option value="1492">- St. Louis-Hibbing</option><option value="1493">- St. Louis-Virginia</option><option value="169">Swift</option><option value="158">Todd</option><option value="170">Traverse</option><option value="127">Wabasha</option><option value="159">Wadena</option><option value="128">Waseca</option><option value="1961,1962">Washington - Case Search</option><option value="1961">- Washington-Cottage Grove</option><option value="1962">- Washington-Stillwater</option><option value="145">Watonwan</option><option value="171">Wilkin</option><option value="129">Winona</option><option value="197">Wright</option><option value="172">Yellow Medicine</option></select><div> </div><a class="ssSearchHyperlink" href="http://pa.courts.state.mn.us/javascript:LaunchSearch('Search.aspx?ID=100', false, false, sbxControlID2)">Criminal/Traffic/Petty Case Records</a><br/><a class="ssSearchHyperlink" href="http://pa.courts.state.mn.us/javascript:LaunchSearch('Search.aspx?ID=200', false, false, sbxControlID2)">Civil, Family &amp; Probate Case Records</a><br/><a class="ssSearchHyperlink" href="http://pa.courts.state.mn.us/javascript:LaunchSearch('Search.aspx?ID=300', false, false, sbxControlID2)">Judgments Search</a><br/><a class="ssSearchHyperlink" href="http://pa.courts.state.mn.us/javascript:LaunchSearch('Search.aspx?ID=900', false, false, sbxControlID2)">Court Calendar</a><br/><div id="divOption1"></div><div id="divOption2"></div><div id="divOption3"></div><div id="divOption4"></div><div id="divOption5"></div><div id="divOption6"></div><div id="divOption7"></div><div id="divOption8"></div><div id="divOption9"></div><div id="divOption10"></div><div id="divOption11"></div><div id="divOption12"></div><div id="divOption13"></div><div id="divOption14"></div><div id="divOption15"></div><div id="divOption16"></div><div id="divOption17"></div><div id="divOption18"></div><div id="divOption19"></div><div id="divOption20"></div><div id="divOption21"></div><div id="divOption22"></div><div id="divOption23"></div><div id="divOption24"></div><div id="divOption25"></div><div id="divOption26"></div><div id="divOption27"></div><div id="divOption28"></div><div id="divOption29"></div><div id="divOption30"></div><div id="divOption31"></div><div id="divOption32"></div><div id="divOption33"></div><div id="divOption34"></div><div id="divOption35"></div><div id="divOption36"></div><div id="divOption37"></div><div id="divOption38"></div><div id="divOption39"></div><div id="divOption40"></div><div id="divOption41"></div><div id="divOption42"></div><div id="divOption43"></div><div id="divOption44"></div><div id="divOption45"></div><div id="divOption46"></div><div id="divOption47"></div><div id="divOption48"></div><div id="divOption49"></div><div id="divOption50"></div><div id="divOption51"></div><div id="divOption52"></div><div id="divOption53"></div><div id="divOption54"></div><div id="divOption55"></div><div id="divOption56"></div><div id="divOption57"></div><div id="divOption58"></div><div id="divOption59"></div><div id="divOption60"></div><div id="divOption61"></div><div id="divOption62"></div><div id="divOption63"></div><div id="divOption64"></div><div id="divOption65"></div><div id="divOption66"></div><div id="divOption67"></div><div id="divOption68"></div><div id="divOption69"></div><div id="divOption70"></div><div id="divOption71"></div><div id="divOption72"></div><div id="divOption73"></div><div id="divOption74"></div><div id="divOption75"></div><div id="divOption76"></div><div id="divOption77"></div><div id="divOption78"></div><div id="divOption79"></div><div id="divOption80"></div><div id="divOption81"></div><div id="divOption82"></div><div id="divOption83"></div><div id="divOption84"></div><div id="divOption85"></div><div id="divOption86"></div><div id="divOption87"></div><div id="divOption88"></div><div id="divOption89"></div><div id="divOption90"></div><div id="divOption91"></div><div id="divOption92"></div><div id="divOption93"></div><div id="divOption94"></div><div id="divOption95"></div><div id="divOption96"></div><div id="divOption97"></div><div id="divOption98"></div><div id="divOption99"></div><div id="divOption100"></div><div id="divOption101"></div><div id="divOption102"></div><div id="divOption103"></div><div id="divOption104"></div><div id="divOption105"></div><div id="divOption106"></div><div id="divOption107"></div><div id="divOption108"></div><div id="divOption109"></div><div id="divOption110"></div><div id="divOption111"></div><div id="divOption112"></div><div id="divOption113"></div><div id="divOption114"></div><div id="divOption115"></div><div id="divOption116"></div><div id="divOption117"></div><div id="divOption118"></div><div id="divOption119"></div><div id="divOption120"></div><div id="divOption121"></div><div id="divOption122"></div><div id="divOption123"></div><p></p></td></tr><tr><td class="ssMessageText" colspan="2">ATTENTION: We are experiencing intermittent errors and slow response time when searching in Minnesota Public Access (MPA). We appreciate your patience as we actively work to resolve these issues. <br/> <br/> READ THESE NOTICES: Name searches for criminal/traffic/petty case records WILL NOT return 'pending criminal records.' A 'pending criminal record' is a record for which there is no conviction as defined by Minn. Stat. § 609.02, subd. 5. NOTICE: Please read Notices and Instructions (in the link below) before conducting a case inquiry.</td></tr></tbody></table></td></tr><tr valign="bottom"><td><table bgcolor="#6699CC" cellpadding="0" cellspacing="0" height="125" style="table-layout: fixed" width="100%"><colgroup><col width="10"/><col width="*"/><col width="10"/></colgroup><tbody><tr class="ssSiteFooter"><td></td><td class="ssSiteFooterRule"> </td><td></td></tr><tr height="3"><td colspan="3"></td></tr><tr><td></td><td valign="top"><a class="ssLaunchHyperLink" href="http://www.mncourts.gov/" target="_blank">MN Judicial Branch</a><span class="ssHyperLinkSpacer">|</span><a class="ssLaunchHyperLink" href="http://www.mncourts.gov/?page=1684" target="_blank">MNCIS</a><span class="ssHyperLinkSpacer">|</span><a class="ssLaunchHyperLink" href="http://pa.courts.state.mn.us/MPAHelp/Help.htm" target="_blank">Notices &amp; Instructions</a><span class="ssHyperLinkSpacer">|</span><a class="ssLaunchHyperLink" href="http://www.mncourts.gov/Access-Case-Records/MPA-Remote-FAQs.aspx" target="_blank">FAQ</a><span class="ssHyperLinkSpacer">|</span><a class="ssLaunchHyperLink" href="http://www.mncourts.gov/Documents/0/Public/Justice_Agency/Level_of_Sentence_Fact_Sheet_(ITD_SP_0678).pdf" target="_blank">Level of Sentence Fact Sheet</a><p class="ssCopyright">© Copyright 2003 Tyler Technologies. All rights Reserved.</p></td><td></td></tr></tbody></table></td></tr></tbody></table>
+</body></html>

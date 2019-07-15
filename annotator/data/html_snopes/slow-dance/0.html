@@ -1,0 +1,209 @@
+<html><head>
+<title>slowdance</title>
+<meta content="Created Using Yahoo! PageBuilder 2.61.90" name="generator"/>
+<script async="" src="//np.lexity.com/embed/YW/3bc8972cfc8d46e45bdf4e7b1bdb131e?id=375124ef832d" type="text/javascript"></script><script>
+function updateApparition(c, i) {
+  var name = c.prefix + i;
+  moveLayer(name, randomX(c), randomY(c));
+  setVisible(name, true);
+  var delay = random(c.randomInterval);
+  setTimeout('setVisible("' + name + '", false)', delay);
+  setTimeout('updateApparition(c' + c.uid + ',' + i + ')', delay + c.minInvisibleTime + random(c.randomInterval));
+}
+</script>
+<script src="http://geocities.yahoo.com/js_source/layers.js"></script>
+</head><body background="http://www.davidlweatherford.com/water008.jpg" bgcolor="#FFFFFF" link="#0000FF" onload="window.onresize=new Function('if (navigator.appVersion==\'Netscape\') history.go(0); else center();'); center();" text="#000000" vlink="#FF0000"><embed autostart="TRUE" hidden="TRUE" loop="TRUE" src="http://www.davidlweatherford.com/Blackbird.mid">
+<noembed><bgsound loop="INFINITE" src="http://www.davidlweatherford.com/Blackbird.mid"/></noembed>
+<script language="javascript">
+c30          = new config();
+c30.prefix   = "y_tails30";
+c30.image0       = "http://www.davidlweatherford.com/butterfly_palegrn_tiny.gif";
+c30.image0width  ="32";
+c30.image0height ="32";
+c30.image1       = "http://www.davidlweatherford.com/butterfly_palegrn_tiny.gif";
+c30.image1width  ="32";
+c30.image1height ="32";
+c30.imageCount = 7;
+c30.positionX  = 3;
+c30.positionY  = 2;
+c30.posbump    = 5;
+c30.oldx       = new Array();
+c30.oldy       = new Array();
+c30.updateDelay = 3;
+c30.updateDelay = 15 * c30.updateDelay;
+c30.uid        = 30;
+for (i=c30.imageCount - 1;i>=0; i--) {
+ writeImage(c30.image0, c30.prefix + i, 0, -c30.image0height);
+ setVisible(c30.prefix + i, 0);
+}
+writeImage(c30.image1, c30.prefix + "top", 0, -c30.image1height);
+setVisible(c30.prefix + "top", 0);
+for (i=0;i<c30.imageCount;i++) {
+ c30.oldx[i] = -c30.image0height;
+ c30.oldy[i] = 0;
+}
+// get destination around cursor for both images
+c30.offset0x = -c30.image0width + c30.image0width * ((c30.positionX - 1)/2) + (c30.positionX - 2) * c30.posbump;
+c30.offset1x = -c30.image1width + c30.image1width * ((c30.positionX - 1)/2) + (c30.positionX - 2) * c30.posbump;
+c30.offset0y = -c30.image0height + c30.image0height * ((c30.positionY - 1)/2) + (c30.positionY - 2) * c30.posbump;
+c30.offset1y = -c30.image1height + c30.image1height * ((c30.positionY - 1)/2) + (c30.positionY - 2) * c30.posbump;
+function updateTail(c) {
+ if (cursorX + c.offset0x == getLayerX(c.prefix + (c.imageCount - 1)) && cursorY + c.offset0y == getLayerY(c.prefix + (c.imageCount - 1))) {
+  for (i=c.imageCount-1;i>=0;i--) {  setVisible(c.prefix + i, 0); }
+  if (c.image1 != "") {
+   moveLayer(c.prefix + "top", cursorX + c.offset1x, cursorY + c.offset1y);
+   setVisible(c.prefix + "top", 1);
+  }
+ } else {
+  setVisible(c.prefix + "top", 0);
+  for (i=c.imageCount-1;i>0;i--) {
+   c.oldx[i] = c.oldx[i-1];
+   c.oldy[i] = c.oldy[i-1];
+  }
+  c.oldx[0] = cursorX + c.offset0x;
+  c.oldy[0] = cursorY + c.offset0y;
+  for (i=0;i<c.imageCount;i++) {
+   setVisible(c.prefix + i, 1);
+   moveLayer(c.prefix + i, c.oldx[i], c.oldy[i]);
+  }
+ }
+ setTimeout("updateTail(c" + c.uid + ")", c.updateDelay);
+}
+captureXY();
+if (c30.image0) { updateTail(c30); }
+</script>
+<script>
+  function center() {
+    if (navigator.appVersion.indexOf('MSIE') != -1)
+      document.all['root'].style.left = Math.max((document.body.clientWidth - 765) / 2, 0);
+    else
+      document.PageElement.LAYERS['root'].left = Math.max((window.innerWidth - 765) / 2, 0);
+  }
+</script>
+<div id="root" style="position:absolute;top:0;left:0;width:785px;height:2520px">
+<script>center();</script>
+<div style="position:absolute;left:101;top:331;width:592;height:1493;">
+<table border="0" cellpadding="0" cellspacing="0" height="1493" width="592"><tbody><tr valign="top">
+<td bgcolor="#660066"><span style="font-size:14"> </span></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:115;top:341;width:565;height:1470;">
+<table border="0" cellpadding="0" cellspacing="0" height="1470" width="565"><tbody><tr valign="top">
+<td bgcolor="#CCFFFF"><span style="font-size:14"> </span></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:122;top:349;width:550;height:1454;">
+<table border="0" cellpadding="0" cellspacing="0" height="1454" width="550"><tbody><tr valign="top">
+<td bgcolor="#660066"><span style="font-size:14"> </span></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:133;top:358;width:528;height:1433;">
+<table border="0" cellpadding="0" cellspacing="0" height="1433" width="528"><tbody><tr valign="top">
+<td bgcolor="#CCCCCC"><span style="font-size:14"> </span></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:137;top:431;width:518;height:1355;">
+<table border="0" cellpadding="0" cellspacing="0" height="1355" width="518"><tbody><tr valign="top">
+<td align="center"><b><font color="#660066" face="Comic Sans MS" size="+1"><span style="font-size:18">Have you ever watched kids on a merry-go-round,<br/>or listened to rain slapping the ground?<br/><br/>Ever followed a butterfly's erratic flight,<br/>or gazed at the sun fading into the night?<br/><br/>You better slow down, don't dance so fast,<br/>time is short, the music won't last.<br/><br/><br/>Do you run through each day on the fly,<br/>when you ask "How are you?", do you hear the reply?<br/><br/>When the day is done, do you lie in your bed,<br/>with the next hundred chores running through your head?<br/><br/>You better slow down, don't dance so fast,<br/>time is short, the music won't last.<br/><br/><br/>Ever told your child, we'll do it tomorrow,<br/>and in your haste, not see his sorrow?<br/><br/>Ever lost touch, let a friendship die,<br/>'cause you never had time to call and say hi?<br/><br/>You better slow down, don't dance so fast,<br/>time is short, the music won't last.<br/><br/><br/>When you run so fast to get somewhere,<br/>you miss half the fun of getting there.<br/><br/>When you worry and hurry through your day,<br/>it's like an unopened gift thrown away.<br/><br/>Life isn't a race, so take it slower,<br/>hear the music before your song is over.</span></font></b><span style="font-size:14"><br/><br/><br/></span></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:14;top:2439;width:759;height:69;">
+<table border="0" cellpadding="0" cellspacing="0" height="69" width="759"><tbody><tr valign="top">
+<td valign="bottom"><b><font color="#CCFFFF" size="-2"><span style="font-size:10"> </span></font></b><font color="#CCFFFF" size="-2"><span style="font-size:10">All writings are from the </span></font><b><font color="#FFFFFF" size="-2"><span style="font-size:10">COPYRIGHTED</span></font></b><font color="#CCFFFF" size="-2"><span style="font-size:10"> collection of David L. Weatherford.  They are offered for private use ONLY.  They are not to be distributed for promotional purposes, without </span></font><a href="http://www.davidlweatherford.com/slowdance.html/mailto:weatherf@hotmail.com"><b><font color="#FFFFFF"><span style="font-size:14">permission</span></font></b></a><b><font color="#FFFFFF"><span style="font-size:14">,</span></font></b><font color="#CCFFFF" size="-2"><span style="font-size:10"> and are not for resale.  Please do not include these writings in any personal collections for distribution on the web without providing a link back to my pages.  Web page design is created by </span></font><a href="http://www.davidlweatherford.com/slowdance.html/mailto:jamy521@comcast.net"><font color="#CCFFFF" size="-2"><span style="font-size:10">jamy13</span></font></a><font color="#CCFFFF" size="-2"><span style="font-size:10"> with gifs and backgrounds found on the web or sent by friends and, to the best of my knowledge, are not known to be copyrighted.  Whenever  possible credit has been given to originators of such materials.  Should anyone know of reason not to use them, </span></font><a href="http://www.davidlweatherford.com/slowdance.html/mailto:jamy521@comcast.net"><font color="#CCFFFF" size="-2"><span style="font-size:10">please contact me for immediate removal</span></font></a><font color="#CCFFFF" size="-2"><span style="font-size:10">.  </span></font><font color="#FFFFFF" size="-2"><span style="font-size:10">Background by </span></font><a href="http://www.grsites.com"><font color="#FFFFFF"><span style="font-size:14">GR / Sites</span></font></a><font color="#CCFFFF" size="-2"><span style="font-size:10">..</span></font></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:21;top:2322;width:84;height:51;">
+<table border="0" cellpadding="0" cellspacing="0" height="51" width="84"><tbody><tr valign="top">
+<td><a href="http://www.flamingtext.com"><img border="0" height="51" src="http://www.davidlweatherford.com/logo_ft-dragon.gif" width="84"/></a></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:433;top:1756;width:217;height:22;">
+<table border="0" cellpadding="0" cellspacing="0" height="22" width="217"><tbody><tr valign="top">
+<td align="center" bgcolor="#660066" valign="middle"><b><i><font color="#CCFFFF" face="Comic Sans MS"><span style="font-size:14">David L. Weatherford</span></font></i></b></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:122;top:81;width:519;height:119;">
+<table border="0" cellpadding="0" cellspacing="0" height="119" width="519"><tbody><tr valign="top">
+<td><img border="0" height="119" src="http://www.davidlweatherford.com/fnt_slo-d_coollogo_com.gif" width="519"/></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:615;top:142;width:150;height:150;">
+<table border="0" cellpadding="0" cellspacing="0" height="150" width="150"><tbody><tr valign="top">
+<td><img border="0" height="150" src="http://www.davidlweatherford.com/Btflylt-pnk-lft.gif" width="150"/></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:8;top:8;width:150;height:150;">
+<table border="0" cellpadding="0" cellspacing="0" height="150" width="150"><tbody><tr valign="top">
+<td><img border="0" height="150" src="http://www.davidlweatherford.com/Btflylt-pnk-rght.gif" width="150"/></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:28;top:2259;width:158;height:47;">
+<table border="0" cellpadding="0" cellspacing="0" height="47" width="158"><tbody><tr valign="top">
+<td bgcolor="#660066"><span style="font-size:14"> </span></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:47;top:2274;width:119;height:22;">
+<table border="0" cellpadding="0" cellspacing="0" height="22" width="119"><tbody><tr valign="top">
+<td align="center" bgcolor="#CCFFFF" valign="middle"><b><font color="#990099"><span style="font-size:14">....L I N K S....</span></font></b></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:302;top:2365;width:213;height:18;">
+<table border="0" cellpadding="0" cellspacing="0" height="18" width="213"><tbody><tr valign="top">
+<td>
+<a href="http://us.geocities.yahoo.com/gb/sign?member=davidwford7"><img border="0" src="http://pic.geocities.com/us/i/geo/ao/gb/sign2.gif"/></a><img border="0" height="5" src="http://www.geocities.com/clipart/pbi/c.gif" width="5"/><a href="http://us.geocities.yahoo.com/gb/view?member=davidwford7"><img border="0" src="http://pic.geocities.com/us/i/geo/ao/gb/view2.gif"/></a></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:596;top:2254;width:166;height:96;">
+<table border="0" cellpadding="0" cellspacing="0" height="96" width="166"><tbody><tr valign="top">
+<td bgcolor="#660066"><span style="font-size:14"> </span></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:607;top:2267;width:144;height:73;">
+<table border="0" cellpadding="0" cellspacing="0" height="73" width="144"><tbody><tr valign="top">
+<td bgcolor="#CCFFFF"><span style="font-size:14"> </span></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:612;top:2272;width:134;height:63;">
+<table border="0" cellpadding="0" cellspacing="0" height="63" width="134"><tbody><tr valign="top">
+<td align="right" valign="middle"><b><font color="#990099" face="Comic Sans MS"><span style="font-size:14">For more  <br/>DLW writings<br/></span></font></b><a href="http://www.geocities.com/davidwford7/index1.html"><b><font color="#990099" face="Comic Sans MS"><span style="font-size:14">CLICK HERE</span></font></b></a></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:613;top:2287;width:30;height:30;">
+<table border="0" cellpadding="0" cellspacing="0" height="30" width="30"><tbody><tr valign="top">
+<td><a href="http://www.geocities.com/davidwford7/index1.html"><img border="0" height="30" src="http://www.davidlweatherford.com/button_gem_sapph.gif" width="30"/></a></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:112;top:1992;width:570;height:98;">
+<table border="0" cellpadding="0" cellspacing="0" height="98" width="570"><tbody><tr valign="top">
+<td bgcolor="#660066"><span style="font-size:14"> </span></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:123;top:2001;width:546;height:79;">
+<table border="0" cellpadding="0" cellspacing="0" height="79" width="546"><tbody><tr valign="top">
+<td bgcolor="#CCFFFF"><span style="font-size:14"> </span></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:138;top:2006;width:520;height:69;">
+<table border="0" cellpadding="0" cellspacing="0" height="69" width="520"><tbody><tr valign="top">
+<td align="center" valign="middle"><b><i><font color="#990099" face="Comic Sans MS" size="+1"><span style="font-size:18">Thank you for visiting!  I hope that you have enjoyed this page and will share it with your family and friends.</span></font></i></b></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:136;top:1918;width:501;height:12;">
+<table border="0" cellpadding="0" cellspacing="0" height="12" width="501"><tbody><tr valign="top">
+<td><img border="0" height="12" src="http://www.davidlweatherford.com/bar_pnk-gry.jpg" width="501"/></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:209;top:1462;width:370;height:274;">
+<table border="0" cellpadding="0" cellspacing="0" height="274" width="370"><tbody><tr valign="top">
+<td><img border="0" height="274" src="http://www.davidlweatherford.com/carouselhorse.jpg" width="370"/></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:139;top:2155;width:499;height:12;">
+<table border="0" cellpadding="0" cellspacing="0" height="12" width="499"><tbody><tr valign="top">
+<td><img border="0" height="12" src="http://www.davidlweatherford.com/bar_pnk-gry.jpg" width="499"/></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:342;top:2289;width:130;height:43;">
+<table border="0" cellpadding="0" cellspacing="0" height="43" width="130"><tbody><tr valign="top">
+<td><a gb="" href="http://www.davidlweatherford.com//&lt;a href=" http:="" sign="" us.1.p.webhosting.yahoo.com="">Sign Guestbook</a>"&gt;<img border="0" height="43" src="http://www.davidlweatherford.com/button_guestbook28.gif" width="130"/></td>
+</tr></tbody></table></div>
+<div style="position:absolute;left:111;top:2339;width:106;height:43;">
+<table border="0" cellpadding="0" cellspacing="0" height="43" width="106"><tbody><tr valign="top">
+<td><a href="http://www.grsites.com"><img border="0" height="43" src="http://www.davidlweatherford.com/LOGOslodance_grsites_logo.jpg" width="106"/></a></td>
+</tr></tbody></table></div>
+</div>
+<script>
+if (layerSupport()) {
+c31 = new config();
+c31.uid = 31
+c31.prefix           = "y_apparition31";
+c31.image            = "http://www.davidlweatherford.com/butterfly_palegrn_tiny.gif";
+c31.imageWidth       = 32;
+c31.imageHeight      = 32;
+c31.imageCount       = 3;
+c31.minInvisibleTime = 2000;
+c31.randomInterval   = 8000;
+c31.startOnScreen = false;
+writeImages(c31);
+  
+for (var i  = 0; i < c31.imageCount; i++)
+  setTimeout('updateApparition(c31, ' + i + ')', random(c31.randomInterval));
+}
+</script>
+<script type="text/javascript">(function (d, w) {var x = d.getElementsByTagName('SCRIPT')[0];var f = function () {var s = d.createElement('SCRIPT');s.type = 'text/javascript';s.async = true;s.src = "//np.lexity.com/embed/YW/3bc8972cfc8d46e45bdf4e7b1bdb131e?id=375124ef832d";x.parentNode.insertBefore(s, x);};w.attachEvent ? w.attachEvent('onload',f) :w.addEventListener('load',f,false);}(document, window));</script></embed></body></html>

@@ -1,0 +1,1944 @@
+<html slick-uniqueid="3"><head>
+<meta content="en" http-equiv="Content-Language"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="https://wikileaks.org/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://wikileaks.org/bootstrap/css/cerulean.min.css" rel="stylesheet"/>
+<link href="https://wikileaks.org/bootstrap/css/new-gen.css" rel="stylesheet"/>
+<link href="https://wikileaks.org/bootstrap/css/submit.css" rel="stylesheet"/>
+<script src="https://wikileaks.org/plusd/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://wikileaks.org/plusd/js/jquery.cookie.js" type="text/javascript"></script>
+<script type="text/javascript">
+jQuery.noConflict();
+</script>
+<script src="https://wikileaks.org/plusd/js/wikipedia.js" type="text/javascript"></script>
+<script src="https://wikileaks.org/plusd/js/qtip.min.js" type="text/javascript"></script>
+<script src="https://wikileaks.org/plusd/js/idle-timer.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+jQuery.noConflict();
+
+(function($) {
+	var show_button = function() {
+		$(".dnbutton,.dnflood,.dnmain").show();
+	}
+	var hide_button = function() {
+		$(".dnbutton,.dnflood,.dnmain").hide();
+	}
+	$(document).idleTimer(180000);
+	$(document).on("idle.idleTimer", show_button);
+	$(document).ready(function() {
+		if( typeof setupDoubleClick == 'function' )
+			setupDoubleClick('http://en.wikipedia.org/w/index.php', 'british', 'tagged-text', 4, "_blank", "/words/cg.json");
+		var current = Math.floor(( new Date( ) ).getTime( )/1000);
+
+		$("#ddonate").click(show_button);
+		$(".dnclose").click(hide_button);
+		$('a.i').each( function() {
+			i=$(this);
+			i.attr("alt", descr[i.attr("title")]);
+		} );
+		$('a.i').qtip( {
+			show: {
+				event: 'click',
+				solo: true
+			},
+			hide: 'click',
+			content: {
+				attr: 'alt',
+				title: {
+					button: true
+				}
+			},
+			style: {
+				classes: 'qtip-blue qtip-shadow'
+			}
+		} );
+
+	} );
+
+
+	var descr = {
+	'Subject': 'Subject line of the document','From': 'Who/where sent the document.<br /><br /><a class=\"j\" href=\"/plusd/about-fr/\">A list of origins, with citations for any acronyms used, is available here.</a>','To': 'Who/where received the document.<br /><br /><a href=\"/plusd/about-to/\" class=\"j\">A list of destinations, with citations for any acronyms used, is available here.</a>','Original Classification': 'Classification the document was originally given when produced.<br /><br /><a href=\"/plusd/about-oc/\" class=\"j\">Citations for acronyms used are available here.</a>','Current Classification': 'Classification the document currently holds.<br /><br /><a href=\"/plusd/about-cc/\" class=\"j\">Citations for acronyms used are available here.</a>','Handling Restrictions': 'All handling restrictions governing the document distribution that have been used to date.<br /><br /><i>In the metadata of the Kissinger Cables this field is called \'Previous Handling Restrictions\'.<br /><br />Cablegate does not originally have this field. We have given it the entry \'Not Assigned\'.</i><br /><br /><a href=\"/plusd/about-hr/\" class=\"j\">Citations for acronyms used are available here.</a>','Archive Status': 'Original documents not deleted or lost by State Department after review are available in one of four formats:<ul><li>Electronic Telegram - declassified and made available (content and metadata available)</li><li>Electronic Telegram Withdrawal Card - telegram not declassified, or was declassified but not released for other reasons (limited metadata available)</li><li>P-reel Index - Index card for other document type that is stored on microfilm (only metadata available)</li><li>P-reel Index Withdrawal Card - P-reel index card that was not declassified, or was declassified but not released for other reasons (limited metadata available)</li></ul><br /><i class=\"b\">The Kissinger Cables\' metadata does not have this field. It is taken from subsets the documents were released in after State Department review.<br /><br />Cablegate does not originally have this field. We have given it the entry \'Not Assigned\'.</i>','Type': 'Correspondence type or format of original document.<br /><br /><i>Cablegate does not originally have this field. We have given it the entry \'TE\' (Telegram).</i><br /><br /><a href=\"/plusd/about-ty/\" class=\"j\">Citations for acronyms used are available here.</a>','Locator': 'Where the original document is now held - online or on microfilm, or remains in \"ADS\" (State Department\'s 1973 Automated Data System of indexing by TAGS of electronic telegrams and P-reels) with the text either garbled, not converted or unretrievable.<br /><br /><i>Cablegate does not originally have this field. We have given it the entry \'TEXT ONLINE\'.</i>','Executive Order': 'Executive Order information - often a reference to the E.O. governing the declassification/downgrade of the document.<br /><br /><i>Cablegate does not originally have this field. We have given it the entry \'Not Assigned\'.</i>','Markings': 'Markings of declassification/release review of the document.<br /><br /><i class=\"b\">Cablegate does not originally have this field. We have given it the entry \'Not Assigned\'. </i>','Enclosure': 'Attachments or other items sent with the original document. These are not necessarily currently held in this library.<br /><br /><i class=\"b\">Cablegate does not originally have this field. We have given it the entry \'Not Assigned\'.','Concepts': 'Keywords of subjects dealt with in the document.<br /><br /><i>Cablegate does not originally have this field. We have given it the entry \'Not Assigned\' for this field.</i>','TAGS': 'Traffic Analysis by Geography and Subject (TAGS)<br /><br />There are geographic, organization and subject \"TAGS\" - the classification system implemented by the Department of State for its central files in 1973.<br /><br /><a href=\"/plusd/about-ta/\" class=\"j\">A list of TAGS, with citations for any acronyms used, is available here.</a>','Office': 'Which United States government office or bureau is dealing with the topics the document concerns.<br /><br /><a href=\"/plusd/about-of/\" class=\"j\">A list offices, with citations for acronym expansions, is available here.</a>','Office Origin': 'Which State Department office or bureau sent the document.<br /><br /><a class=\"j\" href=\"/plusd/about-of/\">A list of offices, with citations for any acronyms used, is available here.</a>','Office Action': 'Which State Department office or bureau received the document.<br /><br /><a class=\"j\" href=\"/plusd/about-of/\">A list of offices, with citations for any acronyms used, is available here.</a>','Character Count': 'The number of characters, including spaces, in the document.','Date': 'The date the document was created.','Canonical ID': 'Unique document identification number.<br /><br /><i>We have created a canonical ID by taking the original document ID and adding a \'_\' at the end and then WikiLeaks\' annotation for different datasets: Cablegate = a, the Kissinger Cables = b, etc. If document IDs are duplicated in the original datasets we number each duplicate, eg 1976WARSAW05657_b2 is the second document with that ID in the Kissinger Cables.</i>','Other cables with the same ID': 'Documents that are linked, for example a P-reel index and the document it is the index for. Or documents that were originally given the same document ID number.',	};
+
+
+
+})(jQuery);
+</script>
+<title>Cable: P860114-1573_MC_b</title>
+<link href="https://wikileaks.org/plusd/css/qtip.min.css" id="qtip" rel="stylesheet" type="text/css"/>
+<link href="https://wikileaks.org/plusd/css/main.css" id="maincss" rel="stylesheet" type="text/css"/>
+<link href="https://wikileaks.org/plusd/css/print.css" id="printcss" media="print" rel="stylesheet" type="text/css"/>
+</head>
+<body style="text-align: center;">
+<div class="submit_elem" id="submit_wlkey">
+<div class="container">
+<div class="text-center"><div class="submit_buttons btn-group" role="group">
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_contact">How to contact WikiLeaks?</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_tor">What is Tor?</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_tips">Tips for Sources</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_after">After Submitting</a>
+</div></div>
+<p>This key's fingerprint is A04C 5E09 ED02 B328 03EB  6116 93ED 732E 9231 8DBA</p>
+<pre>-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQQNBFUoCGgBIADFLp+QonWyK8L6SPsNrnhwgfCxCk6OUHRIHReAsgAUXegpfg0b
+rsoHbeI5W9s5to/MUGwULHj59M6AvT+DS5rmrThgrND8Dt0dO+XW88bmTXHsFg9K
+jgf1wUpTLq73iWnSBo1m1Z14BmvkROG6M7+vQneCXBFOyFZxWdUSQ15vdzjr4yPR
+oMZjxCIFxe+QL+pNpkXd/St2b6UxiKB9HT9CXaezXrjbRgIzCeV6a5TFfcnhncpO
+ve59rGK3/az7cmjd6cOFo1Iw0J63TGBxDmDTZ0H3ecQvwDnzQSbgepiqbx4VoNmH
+OxpInVNv3AAluIJqN7RbPeWrkohh3EQ1j+lnYGMhBktX0gAyyYSrkAEKmaP6Kk4j
+/ZNkniw5iqMBY+v/yKW4LCmtLfe32kYs5OdreUpSv5zWvgL9sZ+4962YNKtnaBK3
+1hztlJ+xwhqalOCeUYgc0Clbkw+sgqFVnmw5lP4/fQNGxqCO7Tdy6pswmBZlOkmH
+XXfti6hasVCjT1MhemI7KwOmz/KzZqRlzgg5ibCzftt2GBcV3a1+i357YB5/3wXE
+j0vkd+SzFioqdq5Ppr+//IK3WX0jzWS3N5Lxw31q8fqfWZyKJPFbAvHlJ5ez7wKA
+1iS9krDfnysv0BUHf8elizydmsrPWN944Flw1tOFjW46j4uAxSbRBp284wiFmV8N
+TeQjBI8Ku8NtRDleriV3djATCg2SSNsDhNxSlOnPTM5U1bmh+Ehk8eHE3hgn9lRp
+2kkpwafD9pXaqNWJMpD4Amk60L3N+yUrbFWERwncrk3DpGmdzge/tl/UBldPoOeK
+p3shjXMdpSIqlwlB47Xdml3Cd8HkUz8r05xqJ4DutzT00ouP49W4jqjWU9bTuM48
+LRhrOpjvp5uPu0aIyt4BZgpce5QGLwXONTRX+bsTyEFEN3EO6XLeLFJb2jhddj7O
+DmluDPN9aj639E4vjGZ90Vpz4HpN7JULSzsnk+ZkEf2XnliRody3SwqyREjrEBui
+9ktbd0hAeahKuwia0zHyo5+1BjXt3UHiM5fQN93GB0hkXaKUarZ99d7XciTzFtye
+/MWToGTYJq9bM/qWAGO1RmYgNr+gSF/fQBzHeSbRN5tbJKz6oG4NuGCRJGB2aeXW
+TIp/VdouS5I9jFLapzaQUvtdmpaeslIos7gY6TZxWO06Q7AaINgr+SBUvvrff/Nl
+l2PRPYYye35MDs0b+mI5IXpjUuBC+s59gI6YlPqOHXkKFNbI3VxuYB0VJJIrGqIu
+Fv2CXwy5HvR3eIOZ2jLAfsHmTEJhriPJ1sUG0qlfNOQGMIGw9jSiy/iQde1u3ZoF
+so7sXlmBLck9zRMEWRJoI/mgCDEpWqLX7hTTABEBAAG0x1dpa2lMZWFrcyBFZGl0
+b3JpYWwgT2ZmaWNlIEhpZ2ggU2VjdXJpdHkgQ29tbXVuaWNhdGlvbiBLZXkgKFlv
+dSBjYW4gY29udGFjdCBXaWtpTGVha3MgYXQgaHR0cDovL3dsY2hhdGMzcGp3cGxp
+NXIub25pb24gYW5kIGh0dHBzOi8vd2lraWxlYWtzLm9yZy90YWxrKSA8Y29udGFj
+dC11cy11c2luZy1vdXItY2hhdC1zeXN0ZW1Ad2lraWxlYWtzLm9yZz6JBD0EEwEK
+ACcCGwMFCwkIBwMFFQoJCAsFFgIDAQACHgECF4AFAlb6cdIFCQOznOoACgkQk+1z
+LpIxjbrlqh/7B2yBrryWhQMGFj+xr9TIj32vgUIMohq94XYqAjOnYdEGhb5u5B5p
+BNowcqdFB1SOEvX7MhxGAqYocMT7zz2AkG3kpf9f7gOAG7qA1sRiB+R7mZtUr9Kv
+fQSsRFPb6RNzqqB9I9wPNGhBh1YWusUPluLINwbjTMnHXeL96HgdLT+fIBa8ROmn
+0fjJVoWYHG8QtsKiZ+lo2m/J4HyuJanAYPgL6isSu/1bBSwhEIehlQIfXZuS3j35
+12SsO1Zj2BBdgUIrADdMAMLneTs7oc1/PwxWYQ4OTdkay2deg1g/N6YqM2N7rn1W
+7A6tmuH7dfMlhcqw8bf5veyag3RpKHGcm7utDB6k/bMBDMnKazUnM2VQoi1mutHj
+kTCWn/vF1RVz3XbcPH94gbKxcuBi8cjXmSWNZxEBsbirj/CNmsM32Ikm+WIhBvi3
+1mWvcArC3JSUon8RRXype4ESpwEQZd6zsrbhgH4UqF56pcFT2ubnqKu4wtgOECsw
+K0dHyNEiOM1lL919wWDXH9tuQXWTzGsUznktw0cJbBVY1dGxVtGZJDPqEGatvmiR
+o+UmLKWyxTScBm5o3zRm3iyU10d4gka0dxsSQMl1BRD3G6b+NvnBEsV/+KCjxqLU
+vhDNup1AsJ1OhyqPydj5uyiWZCxlXWQPk4p5WWrGZdBDduxiZ2FTj17hu8S4a5A4
+lpTSoZ/nVjUUl7EfvhQCd5G0hneryhwqclVfAhg0xqUUi2nHWg19npPkwZM7Me/3
++ey7svRUqxVTKbXffSOkJTMLUWqZWc087hL98X5rfi1E6CpBO0zmHeJgZva+PEQ/
+ZKKi8oTzHZ8NNlf1qOfGAPitaEn/HpKGBsDBtE2te8PF1v8LBCea/d5+Umh0GELh
+5eTq4j3eJPQrTN1znyzpBYkR19/D/Jr5j4Vuow5wEE28JJX1TPi6VBMevx1oHBuG
+qsvHNuaDdZ4F6IJTm1ZYBVWQhLbcTginCtv1sadct4Hmx6hklAwQN6VVa7GLOvnY
+RYfPR2QA3fGJSUOg8xq9HqVDvmQtmP02p2XklGOyvvfQxCKhLqKi0hV9xYUyu5dk
+2L/A8gzA0+GIN+IYPMsf3G7aDu0qgGpi5Cy9xYdJWWW0DA5JRJc4/FBSN7xBNsW4
+eOMxl8PITUs9GhOcc68Pvwyv4vvTZObpUjZANLquk7t8joky4Tyog29KYSdhQhne
+oVODrdhTqTPn7rjvnwGyjLInV2g3pKw/Vsrd6xKogmE8XOeR8Oqk6nun+Y588Nsj
+XddctWndZ32dvkjrouUAC9z2t6VE36LSyYJUZcC2nTg6Uir+KUTs/9RHfrvFsdI7
+iMucdGjHYlKc4+YwTdMivI1NPUKo/5lnCbkEDQRVKAhoASAAvnuOR+xLqgQ6KSOO
+RTkhMTYCiHbEsPmrTfNA9VIip+3OIzByNYtfFvOWY2zBh3H2pgf+2CCrWw3WqeaY
+wAp9zQb//rEmhwJwtkW/KXDQr1k95D5gzPeCK9R0yMPfjDI5nLeSvj00nFF+gjPo
+Y9Qb10jp/Llqy1z35Ub9ZXuA8ML9nidkE26KjG8FvWIzW8zTTYA5Ezc7U+8HqGZH
+VsK5KjIO2GOnJiMIly9MdhawS2IXhHTV54FhvZPKdyZUQTxkwH2/8QbBIBv0OnFY
+3w75Pamy52nAzI7uOPOU12QIwVj4raLC+DIOhy7bYf9pEJfRtKoor0RyLnYZTT3N
+0H4AT2YeTra17uxeTnI02lS2Jeg0mtY45jRCU7MrZsrpcbQ464I+F411+AxI3NG3
+cFNJOJO2HUMTa+2PLWa3cERYM6ByP60362co7cpZoCHyhSvGppZyH0qeX+BU1oyn
+5XhT+m7hA4zupWAdeKbOaLPdzMu2Jp1/QVao5GQ8kdSt0n5fqrRopO1WJ/S1eoz+
+Ydy3dCEYK+2zKsZ3XeSC7MMpGrzanh4pk1DLr/NMsM5L5eeVsAIBlaJGs75Mp+kr
+ClQL/oxiD4XhmJ7MlZ9+5d/o8maV2K2pelDcfcW58tHm3rHwhmNDxh+0t5++i30y
+BIa3gYHtZrVZ3yFstp2Ao8FtXe/1ALvwE4BRalkh+ZavIFcqRpiF+YvNZ0JJF52V
+rwL1gsSGPsUY6vsVzhpEnoA+cJGzxlor5uQQmEoZmfxgoXKfRC69si0ReoFtfWYK
+8Wu9sVQZW1dU6PgBB30X/b0Sw8hEzS0cpymyBXy8g+itdi0NicEeWHFKEsXa+HT7
+mjQrMS7c84Hzx7ZOH6TpX2hkdl8Nc4vrjF4iff1+sUXj8xDqedrg29TseHCtnCVF
+kfRBvdH2CKAkbgi9Xiv4RqAP9vjOtdYnj7CIG9uccek/iu/bCt1y/MyoMU3tqmSJ
+c8QeA1L+HENQ/HsiErFGug+Q4Q1SuakHSHqBLS4TKuC+KO7tSwXwHFlFp47GicHe
+rnM4v4rdgKic0Z6lR3QpwoT9KwzOoyzyNlnM9wwnalCLwPcGKpjVPFg1t6F+eQUw
+WVewkizhF1sZBbED5O/+tgwPaD26KCNuofdVM+oIzVPOqQXWbaCXisNYXoktH3Tb
+0X/DjsIeN4TVruxKGy5QXrvo969AQNx8Yb82BWvSYhJaXX4bhbK0pBIT9fq08d5R
+IiaN7/nFU3vavXa+ouesiD0cnXSFVIRiPETCKl45VM+f3rRHtNmfdWVodyXJ1O6T
+ZjQTB9ILcfcb6XkvH+liuUIppINu5P6i2CqzRLAvbHGunjvKLGLfvIlvMH1mDqxp
+VGvNPwARAQABiQQlBBgBCgAPAhsMBQJW+nHeBQkDs5z2AAoJEJPtcy6SMY26Qtgf
+/0tXRbwVOBzZ4fI5NKSW6k5A6cXzbB3JUxTHMDIZ93CbY8GvRqiYpzhaJVjNt2+9
+zFHBHSfdbZBRKX8N9h1+ihxByvHncrTwiQ9zFi0FsrJYk9z/F+iwmqedyLyxhIEm
+SHtWiPg6AdUM5pLu8GR7tRHagz8eGiwVar8pZo82xhowIjpiQr0Bc2mIAusRs+9L
+jc+gjwjbhYIg2r2r9BUBGuERU1A0IB5Fx+IomRtcfVcL/JXSmXqXnO8+/aPwpBuk
+bw8sAivSbBlEu87P9OovsuEKxh/PJ65duQNjC+2YxlVcF03QFlFLGzZFN7Fcv5JW
+lYNeCOOz9NP9TTsR2EAZnacNk75/FYwJSJnSblCBre9xVA9pI5hxb4zu7CxRXuWc
+QJs8Qrvdo9k4Jilx5U9X0dsiNH2swsTM6T1gyVKKQhf5XVCS4bPWYagXcfD9/xZE
+eAhkFcAuJ9xz6XacT9j1pw50MEwZbwDneV93TqvHmgmSIFZow1aU5ACp+N/ksT6E
+1wrWsaIJjsOHK5RZj/8/2HiBftjXscmL3K8k6MbDI8P9zvcMJSXbPpcYrffw9A6t
+ka9skmLKKFCcsNJ0coLLB+mw9DVQGc2dPWPhPgtYZLwG5tInS2bkdv67qJ4lYsRM
+jRCW5xzlUZYk6SWD4KKbBQoHbNO0Au8Pe/N1SpYYtpdhFht9fGmtEHNOGPXYgNLq
+VTLgRFk44Dr4hJj5I1+d0BLjVkf6U8b2bN5PcOnVH4Mb+xaGQjqqufAMD/IFO4Ro
+TjwKiw49pJYUiZbw9UGaV3wmg+fue9To1VKxGJuLIGhRXhw6ujGnk/CktIkidRd3
+5pAoY5L4ISnZD8Z0mnGlWOgLmQ3IgNjAyUzVJRhDB5rVQeC6qX4r4E1xjYMJSxdz
+Aqrk25Y//eAkdkeiTWqbXDMkdQtig2rY+v8GGeV0v09NKiT+6extebxTaWH4hAgU
+FR6yq6FHs8mSEKC6Cw6lqKxOn6pwqVuXmR4wzpqCoaajQVz1hOgD+8QuuKVCcTb1
+4IXXpeQBc3EHfXJx2BWbUpyCgBOMtvtjDhLtv5p+4XN55GqY+ocYgAhNMSK34AYD
+AhqQTpgHAX0nZ2SpxfLr/LDN24kXCmnFipqgtE6tstKNiKwAZdQBzJJlyYVpSk93
+6HrYTZiBDJk4jDBh6jAx+IZCiv0rLXBM6QxQWBzbc2AxDDBqNbea2toBSww8HvHf
+hQV/G86Zis/rDOSqLT7e794ezD9RYPv55525zeCk3IKauaW5+WqbKlwosAPIMW2S
+kFODIRd5oMI51eof+ElmB5V5T9lw0CHdltSM/hmYmp/5YotSyHUmk91GDFgkOFUc
+J3x7gtxUMkTadELqwY6hrU8=
+=BLTH
+-----END PGP PUBLIC KEY BLOCK-----
+		</pre>
+</div>
+</div>
+<div class="submit_elem" id="submit_help_contact">
+<div class="container">
+<div class="text-center"><div class="submit_buttons btn-group" role="group">
+<a class="btn-wl" href="https://wikileaks.org/#submit_help_contact">How to contact WikiLeaks?</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_tor">What is Tor?</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_tips">Tips for Sources</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_after">After Submitting</a>
+</div></div>
+<h3>Contact</h3>
+<p>If you need help using Tor you can contact WikiLeaks for assistance in setting it up using our simple webchat available at: <a href="https://wikileaks.org/talk">https://wikileaks.org/talk</a></p>
+<p>If you can use Tor, but need to contact WikiLeaks for other reasons use our secured webchat available at <b>http://wlchatc3pjwpli5r.onion</b></p>
+<p>We recommend contacting us over Tor if you can.</p>
+</div>
+</div>
+<div class="submit_elem" id="submit_help_tor">
+<div class="container">
+<div class="text-center"><div class="submit_buttons btn-group" role="group">
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_contact">How to contact WikiLeaks?</a>
+<a class="btn-wl" href="https://wikileaks.org/#submit_help_tor">What is Tor?</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_tips">Tips for Sources</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_after">After Submitting</a>
+</div></div>
+<h3>Tor</h3>
+<p><a href="https://www.torproject.org">Tor</a> is an encrypted anonymising network that makes it harder to intercept internet communications, or see where communications are coming from or going to.</p>
+<p>In order to use the WikiLeaks public submission system as detailed above you can download the Tor Browser Bundle, which is a Firefox-like browser available for Windows, Mac OS X and GNU/Linux and pre-configured to connect using the anonymising system Tor.</p>
+<h4>Tails</h4>
+<p>If you are at high risk and you have the capacity to do so, you can also access the submission system through a secure operating system called <a href="https://tails.boum.org">Tails</a>. Tails is an operating system launched from a USB stick or a DVD that aim to leaves no traces when the computer is shut down after use and automatically routes your internet traffic through Tor. Tails will require you to have either a USB stick or a DVD at least 4GB big and a laptop or desktop computer.</p>
+</div>
+</div>
+<div class="submit_elem" id="submit_help_tips">
+<div class="container">
+<div class="text-center">
+<div class="submit_buttons btn-group" role="group">
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_contact">How to contact WikiLeaks?</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_tor">What is Tor?</a>
+<a class="btn-wl" href="https://wikileaks.org/#submit_help_tips">Tips for Sources</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_after">After Submitting</a>
+</div>
+</div>
+<h3>Tips</h3>
+<p>Our submission system works hard to preserve your anonymity, but we recommend you also take some of your own precautions. Please review these basic guidelines. </p>
+<div>
+<h4>1. Contact us if you have specific problems</h4>
+<p>If you have a very large submission, or a submission with a complex format, or are a high-risk source, please <a href="https://wikileaks.org/#submit_help_contact">contact us</a>. In our experience it is always possible to find a custom solution for even the most seemingly difficult situations.</p>
+</div>
+<div>
+<h4>2. What computer to use</h4>
+<p>If the computer you are uploading from could subsequently be audited in an investigation, consider using a computer that is not easily tied to you. Technical users can also use <a href="https://tails.boum.org">Tails</a> to help ensure you do not leave any records of your submission on the computer.</p>
+</div>
+<div>
+<h4>3. Do not talk about your submission to others</h4>
+<p>If you have any issues talk to WikiLeaks. We are the global experts in source protection – it is a complex field. Even those who mean well often do not have the experience or expertise to advise properly. This includes other media organisations.</p>
+</div>
+</div>
+</div>
+<div class="submit_elem" id="submit_help_after">
+<div class="container">
+<div class="text-center">
+<div class="submit_buttons btn-group" role="group">
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_contact">How to contact WikiLeaks?</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_tor">What is Tor?</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_tips">Tips for Sources</a>
+<a class="btn-wl" href="https://wikileaks.org/#submit_help_after">After Submitting</a>
+</div>
+</div>
+<h3>After</h3>
+<div>
+<h4>1. Do not talk about your submission to others</h4>
+<p>If you have any issues talk to WikiLeaks. We are the global experts in source protection – it is a complex field. Even those who mean well often do not have the experience or expertise to advise properly. This includes other media organisations.</p>
+</div>
+<div>
+<h4>2. Act normal</h4>
+<p>If you are a high-risk source, avoid saying anything or doing anything after submitting which might promote suspicion. In particular, you should try to stick to your normal routine and behaviour.</p>
+</div>
+<div>
+<h4>3. Remove traces of your submission</h4>
+<p>If you are a high-risk source and the computer you prepared your submission on, or uploaded it from, could subsequently be audited in an investigation, we recommend that you format and dispose of the computer hard drive and any other storage media you used.</p>
+<p>In particular, hard drives retain data after formatting which may be visible to a digital forensics team and flash media (USB sticks, memory cards and SSD drives) retain data even after a secure erasure. If you used flash media to store sensitive data, it is important to destroy the media.</p>
+<p>If you do this and are a high-risk source you should make sure there are no traces of the clean-up, since such traces themselves may draw suspicion.</p>
+<div>
+<h4>4. If you face legal action</h4>
+<p>If a legal action is brought against you as a result of your submission, there are organisations that may help you. The Courage Foundation is an international organisation dedicated to the protection of journalistic sources. You can find more details at <a href="https://www.couragefound.org">https://www.couragefound.org</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="submit_banner" id="submit">
+<div class="container">
+<div class="page-header">
+<h1>Submit documents to WikiLeaks</h1>
+<a class="remove-button" href="https://wikileaks.org/#"><span class="glyphicon glyphicon-remove-circle"></span></a>
+</div>
+<p>WikiLeaks publishes documents of political or historical importance that are censored or otherwise suppressed. We specialise in strategic global publishing and large archives.</p>
+<p>The following is the address of our secure site where you can anonymously upload your documents to WikiLeaks editors. You can only access this submissions system through Tor. (See our <a href="https://wikileaks.org/#submit_help_tor">Tor tab</a> for more information.) We also advise you to read our <a href="https://wikileaks.org/#submit_help_tips">tips for sources</a> before submitting.</p>
+<div class="alert alert-info">
+<div class="onion-url">http://rpzgejae7cxxst5vysqsijblti4duzn3kjsmn43ddi2l3jblhk4a44id.onion (<a href="https://wikileaks.org/verify-upload-address.txt">Verify</a>)</div>
+<div>
+				Copy this address into your Tor browser. Advanced users, if they wish, can also add a further layer of encryption to their submission using <a href="https://wikileaks.org/#submit_wlkey">our public PGP key</a>.
+			</div>
+</div>
+<p>If you cannot use Tor, or your submission is very large, or you have specific requirements, WikiLeaks provides several alternative methods. <a href="https://wikileaks.org/#submit_help_contact">Contact us</a> to discuss how to proceed.</p>
+</div>
+</div>
+<div class="submit_elem" id="submit_help_buttons">
+<div class="container">
+<div class="text-center">
+<div class="submit_buttons btn-group" role="group">
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_contact">How to contact WikiLeaks?</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_tor">What is Tor?</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_tips">Tips for Sources</a>
+<a class="btn-wl btn-wl-empty" href="https://wikileaks.org/#submit_help_after">After Submitting</a>
+</div>
+</div>
+</div>
+</div>
+<div id="main">
+<link href="https://wikileaks.org/static/css/styles_topnav.css" rel="stylesheet"/>
+<link href="https://wikileaks.org/static/css/styles_sidenav.css" rel="stylesheet"/>
+<div class="top-navigation">
+<nav class="navbar">
+<a class="mobile-only hot-dog nav-element" href="https://wikileaks.org/#menu">
+</a>
+<div class="nav-logo">
+<a href="https://wikileaks.org">
+<h1>WikiLeaks</h1>
+</a>
+</div>
+<div class="action-buttons">
+<a class="button-face support-link" href="https://wikileaks.spreadshirt.com/" target="_blank">Shop</a>
+<a class="button-face donate-link" href="https://shop.wikileaks.org/donate">Donate</a>
+<a class="button-face submit-link" href="https://wikileaks.org/#submit">Submit</a>
+</div>
+<form action="https://search.wikileaks.org/" class="global-search" method="get">
+<input name="q" placeholder="Search" type="text"/>
+<button class="btn-search" type="submit"></button>
+</form>
+<div class="main-nav">
+<ul class="first-level">
+<li>
+<a class="leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+</li>
+<li>
+<a class="news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+</li>
+<li>
+<a class="about-menu-item" href="https://wikileaks.org/What-is-WikiLeaks.html">About</a>
+</li>
+<li>
+<a class="partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<nav class="side-nav rub" id="menu">
+<div class="menu-wrapper">
+<a class="close-btn nav-element" href="https://wikileaks.org/#"></a>
+<ul class="first-level">
+<li>
+<a class="leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+</li>
+<li>
+<a class="news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+</li>
+<li>
+<a class="about-menu-item" href="https://wikileaks.org/What-is-WikiLeaks.html">About</a>
+</li>
+<li>
+<a class="partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+</li>
+</ul>
+<aside class="friends mobile-only">
+<ul class="first-level">
+<li>
+<a href="https://our.wikileaks.org" target="_blank">our.wikileaks.org</a>
+</li>
+<li>
+<a href="https://www.torproject.org/" target="_blank">Tor Project</a>
+</li>
+<li>
+<a href="https://tails.boum.org/" target="_blank">Tails</a>
+</li>
+<li>
+<a href="https://www.couragefound.org/" target="_blank">Courage</a>
+</li>
+<li>
+<a href="https://www.bitcoin.org/" target="_blank">Bitcoin</a>
+</li>
+</ul>
+</aside>
+<aside class="social mobile-only">
+<ul>
+<li>
+<a alt="Facebook" class="nav-element" href="https://www.facebook.com/wikileaks" target="_blank">
+<img alt="Facebook" class="img-responsive" src="https://wikileaks.org/static/img/fb-logo.png" title="Facebook page"/>
+</a>
+</li>
+<li>
+<a alt="Twitter" class="nav-element" href="https://twitter.com/wikileaks" target="_blank">
+<img alt="Twitter" class="img-responsive" src="https://wikileaks.org/static/img/twitter-logo.png" title="Twitter page"/>
+</a>
+</li>
+</ul>
+</aside>
+</div>
+</nav>
+<div id="overall">
+<div id="leftmenu">
+<center><img alt="WikiLeaks" src="https://wikileaks.org/plusd/images/wl2.jpg"/></center>
+<a class="button" href="https://wikileaks.org/plusd/pressrelease/">Press release</a>
+<a class="button" href="https://wikileaks.org/plusd/about/">About PlusD</a>
+<div class="pick">
+<h3>Browse by creation date</h3>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1966-01-01&amp;qtto=1966-12-31#result">1966</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1972-01-01&amp;qtto=1972-12-31#result">1972</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1973-01-01&amp;qtto=1973-12-31#result">1973</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1974-01-01&amp;qtto=1974-12-31#result">1974</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1975-01-01&amp;qtto=1975-12-31#result">1975</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1976-01-01&amp;qtto=1976-12-31#result">1976</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1977-01-01&amp;qtto=1977-12-31#result">1977</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1978-01-01&amp;qtto=1978-12-31#result">1978</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1979-01-01&amp;qtto=1979-12-31#result">1979</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1985-01-01&amp;qtto=1985-12-31#result">1985</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1986-01-01&amp;qtto=1986-12-31#result">1986</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1987-01-01&amp;qtto=1987-12-31#result">1987</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1988-01-01&amp;qtto=1988-12-31#result">1988</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1989-01-01&amp;qtto=1989-12-31#result">1989</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1990-01-01&amp;qtto=1990-12-31#result">1990</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1991-01-01&amp;qtto=1991-12-31#result">1991</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1992-01-01&amp;qtto=1992-12-31#result">1992</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1993-01-01&amp;qtto=1993-12-31#result">1993</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1994-01-01&amp;qtto=1994-12-31#result">1994</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1995-01-01&amp;qtto=1995-12-31#result">1995</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1996-01-01&amp;qtto=1996-12-31#result">1996</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1997-01-01&amp;qtto=1997-12-31#result">1997</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1998-01-01&amp;qtto=1998-12-31#result">1998</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=1999-01-01&amp;qtto=1999-12-31#result">1999</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=2000-01-01&amp;qtto=2000-12-31#result">2000</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=2001-01-01&amp;qtto=2001-12-31#result">2001</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=2002-01-01&amp;qtto=2002-12-31#result">2002</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=2003-01-01&amp;qtto=2003-12-31#result">2003</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=2004-01-01&amp;qtto=2004-12-31#result">2004</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=2005-01-01&amp;qtto=2005-12-31#result">2005</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=2006-01-01&amp;qtto=2006-12-31#result">2006</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=2007-01-01&amp;qtto=2007-12-31#result">2007</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=2008-01-01&amp;qtto=2008-12-31#result">2008</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=2009-01-01&amp;qtto=2009-12-31#result">2009</a>
+<a href="https://wikileaks.org/plusd/?q=&amp;qtfrom=2010-01-01&amp;qtto=2010-12-31#result">2010</a>
+</div>
+<div class="sort">
+<h3>Browse by Classification</h3>
+<a href="https://wikileaks.org/plusd/?q=&amp;qfoclass=UNCLASSIFIED#result" title="UNCLASSIFIED (1339531 documents)">UNCLASSIFIED</a><a href="https://wikileaks.org/plusd/?q=&amp;qfoclass=CONFIDENTIAL#result" title="CONFIDENTIAL (503750 documents)">CONFIDENTIAL</a><a href="https://wikileaks.org/plusd/?q=&amp;qfoclass=LIMITED+OFFICIAL+USE#result" title="LIMITED OFFICIAL USE (435536 documents)">LIMITED OFFICIAL USE</a><a href="https://wikileaks.org/plusd/?q=&amp;qfoclass=SECRET#result" title="SECRET (120598 documents)">SECRET</a><a href="https://wikileaks.org/plusd/?q=&amp;qfoclass=UNCLASSIFIED%2F%2FFOR+OFFICIAL+USE+ONLY#result" title="UNCLASSIFIED//FOR OFFICIAL USE ONLY (58095 documents)">UNCLASSIFIED//FOR OFFICIAL USE ONLY</a><a href="https://wikileaks.org/plusd/?q=&amp;qfoclass=CONFIDENTIAL%2F%2FNOFORN#result" title="CONFIDENTIAL//NOFORN (4678 documents)">CONFIDENTIAL//NOFORN</a><a href="https://wikileaks.org/plusd/?q=&amp;qfoclass=SECRET%2F%2FNOFORN#result" title="SECRET//NOFORN (4330 documents)">SECRET//NOFORN</a>
+</div>
+<div class="sort">
+<h3>Browse by Handling Restriction</h3>
+<a href="https://wikileaks.org/plusd/?q=&amp;qforiginalhandlingrestriction=EXDIS#result" title="EXDIS - Exclusive Distribution Only (71108 documents)">EXDIS - Exclusive Distribution Only</a><a href="https://wikileaks.org/plusd/?q=&amp;qforiginalhandlingrestriction=ONLY#result" title="ONLY - Eyes Only (32583 documents)">ONLY - Eyes Only</a><a href="https://wikileaks.org/plusd/?q=&amp;qforiginalhandlingrestriction=LIMDIS#result" title="LIMDIS - Limited Distribution Only (25098 documents)">LIMDIS - Limited Distribution Only</a><a href="https://wikileaks.org/plusd/?q=&amp;qforiginalhandlingrestriction=NODIS#result" title="NODIS - No Distribution (other than to persons indicated) (24437 documents)">NODIS - No Distribution (other than to persons indicated)</a><a href="https://wikileaks.org/plusd/?q=&amp;qforiginalhandlingrestriction=STADIS#result" title="STADIS - State Distribution Only (20286 documents)">STADIS - State Distribution Only</a><a href="https://wikileaks.org/plusd/?q=&amp;qforiginalhandlingrestriction=CHEROKEE#result" title="CHEROKEE - Limited to senior officials (4343 documents)">CHEROKEE - Limited to senior officials</a><a href="https://wikileaks.org/plusd/?q=&amp;qforiginalhandlingrestriction=NOFORN#result" title="NOFORN - No Foreign Distribution (2197 documents)">NOFORN - No Foreign Distribution</a><a href="https://wikileaks.org/plusd/?q=&amp;qforiginalhandlingrestriction=LOU#result" title="LOU - Limited Official Use (598 documents)">LOU - Limited Official Use</a><a href="https://wikileaks.org/plusd/?q=&amp;qforiginalhandlingrestriction=SENSITIVE#result" title="SENSITIVE -  (43 documents)">SENSITIVE - </a><a href="https://wikileaks.org/plusd/?q=&amp;qforiginalhandlingrestriction=BU#result" title="BU - Background Use Only (3 documents)">BU - Background Use Only</a><a href="https://wikileaks.org/plusd/?q=&amp;qforiginalhandlingrestriction=CONDIS#result" title="CONDIS - Controlled Distribution (1 documents)">CONDIS - Controlled Distribution</a><a href="https://wikileaks.org/plusd/?q=&amp;qforiginalhandlingrestriction=US#result" title="US - US Government Only (1 documents)">US - US Government Only</a> </div>
+<div class="pick wide">
+<h3>Browse by TAGS</h3>
+<a href="https://wikileaks.org/plusd/?q=&amp;qftags=US#result" title="US - United States (553685 documents)">US</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PFOR#result" title="PFOR - Political Affairs--Foreign Policy and Relations (294672 documents)">PFOR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PGOV#result" title="PGOV - Political Affairs--Government; Internal Governmental Affairs (180409 documents)">PGOV</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PREL#result" title="PREL - Political Affairs--External Political Relations (149906 documents)">PREL</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=ETRD#result" title="ETRD - Economic Affairs--Foreign Trade (124244 documents)">ETRD</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=UR#result" title="UR - Soviet Union (USSR) (117139 documents)">UR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=OVIP#result" title="OVIP - Operations--VIP Travel Arrangements (114816 documents)">OVIP</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=ASEC#result" title="ASEC - Administration--Security (114594 documents)">ASEC</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=OGEN#result" title="OGEN - Operations--General (114085 documents)">OGEN</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=CASC#result" title="CASC - Consular Affairs--Assistance to Citizens (113486 documents)">CASC</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PINT#result" title="PINT - Political Affairs--Internal Political Affairs (104641 documents)">PINT</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=EFIN#result" title="EFIN - Economic Affairs--Financial and Monetary Affairs (102225 documents)">EFIN</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=BEXP#result" title="BEXP - Business Services--Trade Expansion and Promotion (102142 documents)">BEXP</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=OEXC#result" title="OEXC - Operations--Educational and Cultural Exchange Operations (89751 documents)">OEXC</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=EAID#result" title="EAID - Economic Affairs--Foreign Assistance (80469 documents)">EAID</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=CVIS#result" title="CVIS - Consular Affairs--Visas (79634 documents)">CVIS</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=OTRA#result" title="OTRA - Operations--Travel and Visits (79042 documents)">OTRA</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=ENRG#result" title="ENRG - Economic Affairs--Energy and Power (76814 documents)">ENRG</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=OCON#result" title="OCON - Operations--Conferences and Meetings (76271 documents)">OCON</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=ECON#result" title="ECON - Economic Affairs--Economic Conditions, Trends and Potential (75832 documents)">ECON</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=NATO#result" title="NATO - North Atlantic Treaty Organization (74653 documents)">NATO</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PINS#result" title="PINS - Political Affairs--Internal Security (72716 documents)">PINS</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=GE#result" title="GE - Germany (East) (69261 documents)">GE</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=JA#result" title="JA - Japan; Okinawa; (67491 documents)">JA</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=UK#result" title="UK - United Kingdom (65645 documents)">UK</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=IS#result" title="IS - Israel (61813 documents)">IS</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=MARR#result" title="MARR - Military and Defense Affairs--Military and Defense Arrangements (59054 documents)">MARR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PARM#result" title="PARM - Political Affairs--Arms Controls and Disarmament (58794 documents)">PARM</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=UN#result" title="UN - United Nations (58176 documents)">UN</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=EG#result" title="EG - Egypt (57176 documents)">EG</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=FR#result" title="FR - France (56597 documents)">FR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PHUM#result" title="PHUM - Political Affairs--Human Rights (55302 documents)">PHUM</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=SREF#result" title="SREF - Social Affairs--Refugees (53585 documents)">SREF</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=EAIR#result" title="EAIR - Economic Affairs--Aeronautics and Aviation; Civil Aviation (52511 documents)">EAIR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=MASS#result" title="MASS - Military and Defense Affairs--Military Assistance and Sales (51560 documents)">MASS</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=APER#result" title="APER - Administration--Personnel (51272 documents)">APER</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=SNAR#result" title="SNAR - Social Affairs--Narcotics (49299 documents)">SNAR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PINR#result" title="PINR - Political Affairs--Intelligence (48667 documents)">PINR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=EAGR#result" title="EAGR - Economic Affairs--Agriculture and Forestry (47350 documents)">EAGR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PDIP#result" title="PDIP - Political Affairs--Diplomatic and Consular Representation (47061 documents)">PDIP</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=AORG#result" title="AORG - Administration--International Organization Administration (42798 documents)">AORG</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PORG#result" title="PORG - Political Affairs--Policy Relations With International Organizations (42754 documents)">PORG</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=MX#result" title="MX - Mexico (42577 documents)">MX</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=TU#result" title="TU - Turkey (42476 documents)">TU</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=ELAB#result" title="ELAB - Economic Affairs--Labor and Manpower; Labor Sector Affairs (41921 documents)">ELAB</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=IN#result" title="IN - India (41702 documents)">IN</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=CA#result" title="CA - Canada (41623 documents)">CA</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=SCUL#result" title="SCUL - Social Affairs--Cultural Affairs (41509 documents)">SCUL</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=CH#result" title="CH - China (Mainland) (40426 documents)">CH</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=IR#result" title="IR - Iran (39924 documents)">IR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=IT#result" title="IT - Italy (39454 documents)">IT</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=XF#result" title="XF - Middle East (38273 documents)">XF</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=GW#result" title="GW - Germany (West) (37945 documents)">GW</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=EINV#result" title="EINV - Economic Affairs--Investments; Foreign Investments (37616 documents)">EINV</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=TH#result" title="TH - Thailand (37385 documents)">TH</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=TECH#result" title="TECH - Technology and Science--Technology (36578 documents)">TECH</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=SENV#result" title="SENV - Social Affairs--Environment (35665 documents)">SENV</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=OREP#result" title="OREP - Operations--Congressional Travel (35140 documents)">OREP</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=KS#result" title="KS - Korea (South) (34546 documents)">KS</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=EGEN#result" title="EGEN - Economic Affairs--General (34287 documents)">EGEN</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PEPR#result" title="PEPR - PEPR (33866 documents)">PEPR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=MILI#result" title="MILI - Military and Defense Affairs--General (33710 documents)">MILI</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=SHUM#result" title="SHUM - Social Affairs--Human Rights (33098 documents)">SHUM</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=KISSINGER%2C+HENRY+A#result" title="KISSINGER, HENRY A - Henry Kissinger (32848 documents)">KISSINGER, HENRY A</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PL#result" title="PL - Poland (31163 documents)">PL</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=BR#result" title="BR - Brazil (30797 documents)">BR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=RP#result" title="RP - Philippines (30198 documents)">RP</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=GR#result" title="GR - Greece; Crete (30183 documents)">GR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=SF#result" title="SF - South Africa (30161 documents)">SF</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=AFSP#result" title="AFSP - Administration--Post Administration (29315 documents)">AFSP</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=SP#result" title="SP - Spain (29108 documents)">SP</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PTER#result" title="PTER - Political Affairs--Terrorists and Terrorism (28839 documents)">PTER</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=MOPS#result" title="MOPS - Military and Defense Affairs--Military Operations (28821 documents)">MOPS</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=SA#result" title="SA - Saudi Arabia (28190 documents)">SA</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=UNGA#result" title="UNGA - UN General Assembly (27867 documents)">UNGA</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=CGEN#result" title="CGEN - Consular Affairs--General (27680 documents)">CGEN</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=ESTC#result" title="ESTC - Economic Affairs--Strategic Trade Controls (27627 documents)">ESTC</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=SOPN#result" title="SOPN - Social Affairs--Public Opinion and Information (27583 documents)">SOPN</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=RO#result" title="RO - Romania (27560 documents)">RO</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=LE#result" title="LE - Lebanon (27323 documents)">LE</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=TGEN#result" title="TGEN - Technology and Science--General (27058 documents)">TGEN</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PK#result" title="PK - Pakistan (26991 documents)">PK</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=AR#result" title="AR - Argentina (26444 documents)">AR</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=NI#result" title="NI - Nigeria (26170 documents)">NI</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=OSCI#result" title="OSCI - Operations--Science Grants (25846 documents)">OSCI</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=CI#result" title="CI - Chile (25827 documents)">CI</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=EEC#result" title="EEC - European Common Market (European Communities); European Economic Community (25827 documents)">EEC</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=VS#result" title="VS - South Vietnam (25800 documents)">VS</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=YO#result" title="YO -  (25447 documents)">YO</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=AFIN#result" title="AFIN - Administration--Financial Services (24705 documents)">AFIN</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=OECD#result" title="OECD - Organization for Economic Cooperation and Development (24622 documents)">OECD</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=SY#result" title="SY - Syria (24419 documents)">SY</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=IZ#result" title="IZ - Iraq (24415 documents)">IZ</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=ID#result" title="ID - Indonesia (23865 documents)">ID</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=VE#result" title="VE - Venezuela (23792 documents)">VE</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=TPHY#result" title="TPHY - Technology and Science--Physical Sciences (23741 documents)">TPHY</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=TW#result" title="TW - Taiwan (23233 documents)">TW</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=AS#result" title="AS - Australia (23143 documents)">AS</a> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PBOR#result" title="PBOR - Political Affairs--Boundary and Sovereignity Claims (23066 documents)">PBOR</a>
+</div>
+<div class="sort" style="clear:both;">
+<h3>Media Organizations</h3>
+<a href="http://www.theage.com.au/" target="_blank">Australia - The Age</a>
+<a href="http://www.pagina12.com.ar/" target="_blank">Argentina - Pagina 12</a>
+<a href="http://www.apublica.org/?p=4041" target="_blank">Brazil - Publica</a>
+<a href="https://bivol.bg/" target="_blank">Bulgaria - Bivol</a>
+<a href="http://www.almasryalyoum.com/ " target="_blank">Egypt - Al Masry Al Youm</a>
+<a href="http://www.tanea.gr/" target="_blank">Greece - Ta Nea</a>
+<a href="http://www.plazapublica.com.gt/content/los-cables-de-wikileaks" target="_blank">Guatemala - Plaza Publica</a>
+<a href="http://www.haiti-liberte.com/" target="_blank">Haiti - Haiti Liberte</a>
+<a href="http://www.thehindu.com/" target="_blank">India - The Hindu</a>
+<a href="http://espresso.repubblica.it/" target="_blank">Italy - L'Espresso</a>
+<a href="http://www.repubblica.it/" target="_blank">Italy - La Repubblica</a>
+<a href="http://www.al-akhbar.com/" target="_blank">Lebanon - Al Akhbar</a>
+<a href="http://www.jornada.unam.mx/ultimas/" target="_blank">Mexico - La Jornada</a>
+<a href="http://www.publico.es/452776" target="_blank">Spain - Publico</a>
+<a href="http://www.aftonbladet.se/nyheter/article16421007.ab" target="_blank">Sweden - Aftonbladet</a>
+<a href="http://www.ap.org/" target="_blank">UK - AP</a>
+<a href="http://thenation.com" target="_blank">US - The Nation</a>
+</div>
+<br style="clear: both;"/>
+</div>
+<div id="content"><div id="content-main">
+<!--<p style="text-align: justify; font-size: medium">Click the <b>Chat</b> button above to join a secure chat channel dedicated to media partner The Kissinger Cables discussion. Please go on this to talk to the others currently working on this project. <br />When the chat window opens type the following in the white text space at the bottom of the screen to assign yourself a recognisable name: <b>/nick Espresso</b> and press enter</p>
+<center><h2 style="font-size: x-large;">Public Library of US Diplomacy: PlusD</h2></center>-->
+<center><img src="https://wikileaks.org/plusd/images/plusdb.png"/></center>
+<div id="st" style="clear:both;"> </div>
+<div id="topnav">
+<a class="searchbutton active" href="//search.wikileaks.org/plusd/">Specified Search</a>
+<a class="searchbutton sbinv" href="https://wikileaks.org/plusd/plusd/map" target="_blank">View Map</a>
+<a class="searchbutton sbinv" href="https://wikileaks.org/plusd/plusd/graph" target="_blank">Make Timegraph</a>
+<a class="searchbutton sbinv" href="https://wikileaks.org/plusd/tags/" target="_blank">View Tags</a>
+<a class="searchbutton sbinv" href="https://wikileaks.org/plusd/imagelibrary/" target="_blank">Image Library</a>
+</div>
+<div class="sections">
+<div class="pane-content">
+<table id="synopsis">
+<tbody><tr style="background:#eee;">
+<td colspan="2" style="font-size: medium; padding: 5px;color: #000; font-weight: bold; text-align: center;">AID CUT-OFF:CYPRUS</td>
+</tr>
+<tr style="background:#eee;">
+<td><div class="s_key"><a alt="The date the document was created." class="i" data-hasqtip="true" oldtitle="Date" title="">Date:</a></div><div class="s_val" title=" 1975 March 10, 00:00 (Monday)">1975 March 10, 00:00 (Monday)</div></td>
+<td><div class="s_key"><a alt="Unique document identification number.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;We have created a canonical ID by taking the original document ID and adding a '_' at the end and then WikiLeaks' annotation for different datasets: Cablegate = a, the Kissinger Cables = b, etc. If document IDs are duplicated in the original datasets we number each duplicate, eg 1976WARSAW05657_b2 is the second document with that ID in the Kissinger Cables.&lt;/i&gt;" class="i" data-hasqtip="true" oldtitle="Canonical ID" title="">Canonical ID:</a></div><div class="s_val" title=" P860114-1573_MC_b">P860114-1573_MC_b</div></td>
+</tr>
+<tr>
+<td><div class="s_key"><a alt='Classification the document was originally given when produced.&lt;br /&gt;&lt;br /&gt;&lt;a href="/plusd/about-oc/" class="j"&gt;Citations for acronyms used are available here.&lt;/a&gt;' class="i" data-hasqtip="true" oldtitle="Original Classification" title="">Original Classification:</a></div><div class="s_val" title=" SECRET (120598 documents)">SECRET</div></td>
+<td><div class="s_key"><a alt='Classification the document currently holds.&lt;br /&gt;&lt;br /&gt;&lt;a href="/plusd/about-cc/" class="j"&gt;Citations for acronyms used are available here.&lt;/a&gt;' class="i" data-hasqtip="true" oldtitle="Current Classification" title="">Current Classification:</a></div><div class="s_val" title=" UNCLASSIFIED (2592391 documents)">UNCLASSIFIED</div></td>
+</tr>
+<tr>
+<td>
+<div class="s_key"><a alt="All handling restrictions governing the document distribution that have been used to date.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;In the metadata of the Kissinger Cables this field is called 'Previous Handling Restrictions'.&lt;br /&gt;&lt;br /&gt;Cablegate does not originally have this field. We have given it the entry 'Not Assigned'.&lt;/i&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;/plusd/about-hr/&quot; class=&quot;j&quot;&gt;Citations for acronyms used are available here.&lt;/a&gt;" class="i" data-hasqtip="true" oldtitle="Handling Restrictions" title="">Handling Restrictions</a></div> <div class="s_val" title="NODIS - No Distribution (other than to persons indicated) (24437 documents)">NODIS - No Distribution (other than to persons indicated)</div><br/></td>
+<td><div class="s_key"><a alt="The number of characters, including spaces, in the document." class="i" data-hasqtip="true" oldtitle="Character Count" title="">Character Count:</a></div><div class="s_val" title=" 22693">22693</div></td>
+</tr>
+<tr>
+<td><div class="s_key"><a alt="Executive Order information - often a reference to the E.O. governing the declassification/downgrade of the document.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;Cablegate does not originally have this field. We have given it the entry 'Not Assigned'.&lt;/i&gt;" class="i" data-hasqtip="true" oldtitle="Executive Order" title="">Executive Order:</a></div><div class="s_val" title=" GS (390804 documents)">GS</div></td>
+<td><div class="s_key"><a alt="Where the original document is now held - online or on microfilm, or remains in &quot;ADS&quot; (State Department's 1973 Automated Data System of indexing by TAGS of electronic telegrams and P-reels) with the text either garbled, not converted or unretrievable.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;Cablegate does not originally have this field. We have given it the entry 'TEXT ONLINE'.&lt;/i&gt;" class="i" data-hasqtip="true" oldtitle="Locator" title="">Locator:</a></div><div class="s_val" title=" TEXT ONLINE (1885254 documents)">TEXT ONLINE</div></td>
+</tr>
+<tr>
+<td><div class="s_key"><a alt='Traffic Analysis by Geography and Subject (TAGS)&lt;br /&gt;&lt;br /&gt;There are geographic, organization and subject "TAGS" - the classification system implemented by the Department of State for its central files in 1973.&lt;br /&gt;&lt;br /&gt;&lt;a href="/plusd/about-ta/" class="j"&gt;A list of TAGS, with citations for any acronyms used, is available here.&lt;/a&gt;' class="i" data-hasqtip="true" oldtitle="TAGS" title="">TAGS:</a></div><div class="s_val" title=" CY - Cyprus | EAID - Economic Affairs--Foreign Assistance | ELEKDAG, SUKRU | ESENBEL, MELIH | KISSINGER, HENRY A - Henry Kissinger | PDIP - Political Affairs--Diplomatic and Consular Representation | SISCO, JOSEPH J - Joseph J Sisco | TEZEL, NECDET | TU - Turkey"><a href="https://wikileaks.org/plusd/?q=&amp;qftags=CY#result" style="color: #216B7C;" target="_blank" title="CY Cyprus (18199 documents)">CY<span style="color: #216B7C;"> - Cyprus</span></a> <span color:="" style="">|</span> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=EAID#result" style="color: #216B7C;" target="_blank" title="EAID Economic Affairs: Foreign Assistance (80469 documents)">EAID<span style="color: #216B7C;"> - Economic Affairs--Foreign Assistance</span></a> <span color:="" style="">|</span> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=ELEKDAG%2C+SUKRU#result" style="color: #216B7C;" target="_blank" title="ELEKDAG, SUKRU  (24 documents)">ELEKDAG, SUKRU</a> <span color:="" style="">|</span> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=ESENBEL%2C+MELIH#result" style="color: #216B7C;" target="_blank" title="ESENBEL, MELIH  (117 documents)">ESENBEL, MELIH</a> <span color:="" style="">|</span> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=KISSINGER%2C+HENRY+A#result" style="color: #216B7C;" target="_blank" title="KISSINGER, HENRY A Henry Kissinger (32848 documents)">KISSINGER, HENRY A<span style="color: #216B7C;"> - Henry Kissinger</span></a> <span color:="" style="">|</span> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=PDIP#result" style="color: #216B7C;" target="_blank" title="PDIP Political Affairs: Diplomatic and Consular Representation (47061 documents)">PDIP<span style="color: #216B7C;"> - Political Affairs--Diplomatic and Consular Representation</span></a> <span color:="" style="">|</span> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=SISCO%2C+JOSEPH+J#result" style="color: #216B7C;" target="_blank" title="SISCO, JOSEPH J Joseph J Sisco (572 documents)">SISCO, JOSEPH J<span style="color: #216B7C;"> - Joseph J Sisco</span></a> <span color:="" style="">|</span> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=TEZEL%2C+NECDET#result" style="color: #216B7C;" target="_blank" title="TEZEL, NECDET  (9 documents)">TEZEL, NECDET</a> <span color:="" style="">|</span> <a href="https://wikileaks.org/plusd/?q=&amp;qftags=TU#result" style="color: #216B7C;" target="_blank" title="TU Turkey (42476 documents)">TU<span style="color: #216B7C;"> - Turkey</span></a></div></td>
+<td><div class="s_key"><a alt="Keywords of subjects dealt with in the document.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;Cablegate does not originally have this field. We have given it the entry 'Not Assigned' for this field.&lt;/i&gt;" class="i" data-hasqtip="true" oldtitle="Concepts" title="">Concepts:</a></div><div class="s_val" title=" CUT-OFF | ECONOMIC ASSISTANCE | MEETING | MINISTERS (DIPLOMATS)"><a href="https://wikileaks.org/plusd/?q=&amp;qfconcept=CUT-OFF#result" style="color: #216B7C; " target="_blank" title="CUT-OFF (2 documents)">CUT-OFF</a> <span color:="" style="">|</span> <a href="https://wikileaks.org/plusd/?q=&amp;qfconcept=ECONOMIC+ASSISTANCE#result" style="color: #216B7C; " target="_blank" title="ECONOMIC ASSISTANCE (12170 documents)">ECONOMIC ASSISTANCE</a> <span color:="" style="">|</span> <a href="https://wikileaks.org/plusd/?q=&amp;qfconcept=MEETING#result" style="color: #216B7C; " target="_blank" title="MEETING (1074 documents)">MEETING</a> <span color:="" style="">|</span> <a href="https://wikileaks.org/plusd/?q=&amp;qfconcept=MINISTERS+%28DIPLOMATS%29#result" style="color: #216B7C; " target="_blank" title="MINISTERS (DIPLOMATS) (956 documents)">MINISTERS (DIPLOMATS)</a></div></td>
+</tr>
+<tr>
+<td><div class="s_key"><a alt="Attachments or other items sent with the original document. These are not necessarily currently held in this library.&lt;br /&gt;&lt;br /&gt;&lt;i class=&quot;b&quot;&gt;Cablegate does not originally have this field. We have given it the entry 'Not Assigned'." class="i" data-hasqtip="true" oldtitle="Enclosure" title="">Enclosure:</a></div><div class="s_val" title=" -- N/A or Blank -- (2333922 documents)">-- N/A or Blank --</div></td>
+<td><div class="s_key"><a alt="Correspondence type or format of original document.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;Cablegate does not originally have this field. We have given it the entry 'TE' (Telegram).&lt;/i&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;/plusd/about-ty/&quot; class=&quot;j&quot;&gt;Citations for acronyms used are available here.&lt;/a&gt;" class="i" data-hasqtip="true" oldtitle="Type" title="">Type:</a></div><div class="s_val" title=" MC - Memorandum of Conversation (7122 documents)">MC - Memorandum of Conversation</div></td>
+</tr>
+<tr>
+<td class="sc">
+<div class="s_key"><a alt='Which State Department office or bureau sent the document.&lt;br /&gt;&lt;br /&gt;&lt;a class="j" href="/plusd/about-of/"&gt;A list of offices, with citations for any acronyms used, is available here.&lt;/a&gt;' class="i" data-hasqtip="true" oldtitle="Office Origin" title="">Office Origin:</a></div><div class="s_val" title=" -- N/A or Blank -- (2117535 documents)">-- N/A or Blank --</div> <br style="clear:both;"/>
+<div class="s_key"><a alt='Which State Department office or bureau received the document.&lt;br /&gt;&lt;br /&gt;&lt;a class="j" href="/plusd/about-of/"&gt;A list of offices, with citations for any acronyms used, is available here.&lt;/a&gt;' class="i" data-hasqtip="true" oldtitle="Office Action" title="">Office Action:</a></div><div class="s_val" title=" -- N/A or Blank -- (1411046 documents)">-- N/A or Blank --</div> </td>
+<td><div class="s_key"><a alt="Original documents not deleted or lost by State Department after review are available in one of four formats:&lt;ul&gt;&lt;li&gt;Electronic Telegram - declassified and made available (content and metadata available)&lt;/li&gt;&lt;li&gt;Electronic Telegram Withdrawal Card - telegram not declassified, or was declassified but not released for other reasons (limited metadata available)&lt;/li&gt;&lt;li&gt;P-reel Index - Index card for other document type that is stored on microfilm (only metadata available)&lt;/li&gt;&lt;li&gt;P-reel Index Withdrawal Card - P-reel index card that was not declassified, or was declassified but not released for other reasons (limited metadata available)&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;&lt;i class=&quot;b&quot;&gt;The Kissinger Cables' metadata does not have this field. It is taken from subsets the documents were released in after State Department review.&lt;br /&gt;&lt;br /&gt;Cablegate does not originally have this field. We have given it the entry 'Not Assigned'.&lt;/i&gt;" class="i" data-hasqtip="true" oldtitle="Archive Status" title="">Archive Status:</a></div><div class="s_val" title=" -- Not Assigned -- (251288 documents)">-- Not Assigned --</div></td>
+</tr>
+<tr>
+<td class="sc"><div class="s_key"><a alt='Who/where sent the document.&lt;br /&gt;&lt;br /&gt;&lt;a class="j" href="/plusd/about-fr/"&gt;A list of origins, with citations for any acronyms used, is available here.&lt;/a&gt;' class="i" data-hasqtip="true" oldtitle="From" title="">From:</a></div><div class="s_val" title=" White House"><a href="https://wikileaks.org/plusd/?q=&amp;qforigin=White+House#result" style="color: #216B7C; " title="White House (1105 documents)">White House</a></div></td>
+<td><div class="s_key"><a alt="Markings of declassification/release review of the document.&lt;br /&gt;&lt;br /&gt;&lt;i class=&quot;b&quot;&gt;Cablegate does not originally have this field. We have given it the entry 'Not Assigned'. &lt;/i&gt;" class="i" data-hasqtip="true" oldtitle="Markings" title="">Markings:</a></div><div class="s_val" title=" -- N/A or Blank -- (1 documents)">-- N/A or Blank --</div></td>
+</tr>
+<tr>
+<td class="sc"><div class="s_key"><a alt='Who/where received the document.&lt;br /&gt;&lt;br /&gt;&lt;a href="/plusd/about-to/" class="j"&gt;A list of destinations, with citations for any acronyms used, is available here.&lt;/a&gt;' class="i" data-hasqtip="true" oldtitle="To" title="">To:</a></div><div class="s_val" title=" -- N/A or Blank --">-- N/A or Blank --</div></td>
+<td><div class="s_key"><a class="i" title="Linked documents or other documents with the same ID">Linked documents or other documents with the same ID:</a></div><div class="s_val" title=" P860114-1573_b"><a color:="" href="https://wikileaks.org/plusd/cables/P860114-1573_b.html" style="">P860114-1573_b</a><br/></div></td>
+</tr>
+</tbody></table>
+<br/>
+<br style="clear: both;"/>
+</div>
+<div id="pane-root" style="">
+<div id="pane-tabs"><div class="pane-header ontop">Content</div><div class="pane-header nottop">Raw content</div><div class="pane-header nottop">Metadata</div><div class="pane-header tab-right nottop" style="width: 61px">Print</div><div class="pane-header tab-right nottop" style="width: 60px">Share</div></div>
+<div id="pane-contents"><div class="pane-content top"><div class="text-content">MEMORANDUM
+
+SECRET/NODIS/XGDS                                               - 1 -
+
+MEMORANDUM OF CONVERSATION
+
+PARTICIPANTS:   Melih Esenbel, Minister of Foreign Affairs of Turkey
+Sukru Elekdag, Secretary General, Ministry of Foreign Affairs
+Necdet Tezel, Director General of Political Affairs
+Ercument Yavuzalp, Director General for Mutual Security
+Ecmel Barutcu, Director for Cyprus and Greek Affairs
+
+Dr. Henry A. Kissinger, Secretary of State and Assistant to the President for National Security Affairs
+Amb. William Macomber, United States Ambassador to Turkey
+Joseph J. Sisco, Under Secretary of State for Political Affairs
+Arthur Hartman, Assistant Secretary of State for European Affairs
+Peter W. Rodman, National Security Council Staff
+
+TIME AND DATE:  Monday, March 10, 1975
+5:20 - 6:30 p.m.
+
+PLACE:          The Foreign Minister's Office
+Ankara, Turkey
+
+SUBJECTS:       Aid Cut-off; Cyprus
+
+Esenbel: This used to be a Cabinet room. Now there is a bigger one
+downstairs.
+
+[Photographers are let in.]
+
+In Ankara there are about six papers.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 2 -
+
+Esenbel: Yes.
+
+Well, I welcome you here to Ankara, Mr. Secretary. It is a long time
+that we have been planning for this visit. We have long hoped you could
+make it. It is useful that we exchange views so we know where we stand
+on these two matters -- the military aid matter in Washington and your
+exchange of views with Bitsios.
+
+Kissinger: Mr. Foreign Minister, I want to express appreciation that
+you receive me, first, on short notice, and second in a time that is
+not easy in our relationship, when the U.S. Congress has taken an
+action which is totally wrong and with which we totally disagree. I
+appreciate it.
+
+I wanted to come after all my exchange with Bitsios because there are
+certain developments which I believe come a little closer to the
+Turkish point of view. With respect to the aid matter: I am at your
+disposal if you wish to discuss the subject. I understand you had a
+talk with my colleagues [Hartman and Macomber] this morning.
+
+Aid Cut-off
+
+Esenbel: Yes. On aid we said that we face heavy pressure -- not
+demonstrations or the usual, but you must realize how difficult it is
+to face up to these pressures -- from the parties and the
+intelligentsia and the military. We tell them that the U.S. Congress
+seems to understand their mistake. But you must realize there is a
+limit to what the Government can do. The time limit is approaching.
+
+We have a  government crisis now, so maybe there are some additional
+days for this, but soon the question will come up again. The press
+started to criticize me this morning instead of you.
+
+Kissinger: If someone has to be criticized, that is a good solution.
+[Laughter]
+
+Esenbel: The people want some action. This is what was wrong with the
+Congressional action -- really they didn't care about Turkish
+sensitivities. They certainly destroyed something here and they didn't
+care. This is the crucial point -- that they could do it without caring
+about the people. It's not a money question.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 3 -
+
+Kissinger: No, I understand.
+
+Esenbel: That they say "Make progress and come back in sixty days."
+This is completely wrong.
+
+Kissinger: Mr. Foreign Minister, I needn't tell you what my sentiments
+are.. I have said publicly that we are giving aid to Turkey not as a
+favor to Turkey but because it serves our mutual interests. I said this
+at the airport. I remember, even if the Congressmen don't, that Turkey
+sent troops to Korea, an area where Turkey had no interest, and whose
+prisoners -- we had a study made -- were the only ones who never
+cooperated with the Koreans, and the North Koreans are very brutal.
+Just as aid to Turkey got us into international affairs, the cutoff can
+be a way to get us out of international affairs. It wasn't directed
+against Turkey -- it was an attempt to destroy our foreign policy. It
+reflects, in my view, deep-seated attitudes, and is not anti-Turkey.
+
+I believe we can change this. But because the people attacking it are
+attacking our whole foreign policy, it will be more difficult. If we
+had a secret vote, we could get it reversed. The problem now is how
+people can admit that they were wrong six weeks after the initial vote.
+It's a problem of political prestige for some.
+
+I hope you will look at it as the sickness of an old friend, not as
+something directed against Turkey. And show some patience.
+
+Strangely, in America I'm accused of what you are -- that my actions
+are encouraging you. That if it were not for me, you'd have done what
+they asked. As Bill Macomber told you, we have introduced legislation
+and hope to get it passed in a couple of weeks.
+
+Macomber: In the Senate.
+
+Kissinger: I believe if we can give some of the people who feel guilty
+an excuse to change their minds, we would have a fairly easy task. If
+we could. As soon as I finish the current negotiation in the Middle
+East, maybe in two weeks, I'll bring Bill back and we'll make a massive
+effort.
+
+We have had a legal analysis done, according to which it might be
+possible to restore spare parts more quickly if the President and the
+leadership cooperate.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                               - 4 -
+
+Esenbel: A waiver.
+
+Kissinger: No it's a special authority for MAP, for up to $50 million.
+The difficulty is that if we use that waiver, they might not repeal the
+law. And we can use it only for one year. And next year we may not have
+the law changed. Therefore the President is very reluctant to do that.
+The only way to use the waiver is if the President with the tacit
+approval of the leaders and of the Greek lobby ….. the Greek lobby may
+next year go after the waiver. But if you're under a tremendous time
+pressure, we may want to use the waiver.
+
+Therefore I wanted to explain the choice we have.
+
+Esenbel: You explained that before. You said that is the easiest road
+maybe, and the legislation would remain. And the Congressmen are
+reluctant to seem to admit the action was wrong, and then they'll say,
+"Why the problem? They have the $50 million." We agree with you; we're
+against it. And we don't want that.
+
+Kissinger: Thank you. I appreciate it.
+
+Esenbel: Aid is a long-term need. Aid is a substantial part of our
+relationship. We want this to be restored. We're not interested in aid
+programs of 40 days, 50 days -- not that kind of relationship.
+
+Kissinger: I agree with  you.
+
+Esenbel: We want to know where we're standing. So people know they can
+trust the United States as an ally, and erase all doubts. With these
+40-day waivers, we can't do that.
+
+Kissinger: The waiver wouldn't be 40 days but for a year. But you're
+morally right; aid should be restored. I know the President would
+prefer to restore aid for many reasons -- one, for the principle, and
+second, he doesn't want to be dependent on Mr. Brademas, letting
+Brademas say he's helped and then go back to his original line. He's
+prepared to just declare that progress has been made, if he's going to
+bend the law. He wants the principle to be restored, and he's prepared
+to make an all-out effort.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 5 -
+
+Esenbel: We approached the Europeans and Luns and he's supposed to come
+forward with an answer.
+
+Kissinger: We approached the Germans. Did they start?
+
+Yavuzalp: Not hardware; only subsidiary items. This has nothing to do
+with the spare parts we need.
+
+Kissinger: [to Hartman] Art, can you go to Bonn and see Genscher and
+Leber? And see Haig.
+
+Esenbel: You should brief Ecevit.
+
+Kissinger: Ecevit can be very helpful. Art will see the Germans on the
+way home and also see Haig to see about getting surplus parts out of
+stocks. And [Ambassador David] Bruce was helpful.
+
+Esenbel: The Europeans should find ways to meet quick needs; for
+example, the Air Force needs spare parts. For other items that they
+can't find in the stocks, maybe you could make a deal with the Dutch or
+others to send it here.
+
+Macomber: That is illegal.
+
+Kissinger: Before the Freedom of Information Act, I used to say at
+meetings, "The illegal we do immediately; the unconstitutional takes a
+little longer." [laughter] But since the Freedom of Information Act,
+I'm afraid to say things like that.
+
+We'll make a major effort.
+
+Esenbel: Your Ambassador told me the opposite. In Germany they said
+they delayed it one week so it looks like it happens after your visit.
+
+Kissinger: My understanding is that the aid is now in force. They
+informed us.
+
+Yavuzalp: The political decision is made, they say, but they're waiting
+for "appropriate timing" for implementation of the political decision.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 6 -
+
+Kissinger: [to Hartman] Talk to Genscher and say I attach enormous
+importance to that.
+
+Esenbel: The difficulty is they signed an agreement but they don't go
+ahead and implement it -- they do it piecemeal.
+
+Kissinger: I'm sending Art to Bonn. If there are difficulties, I'll
+consider stopping in Bonn.
+
+Yavuzalp: Our ambassador would be aware of the latest.
+
+Hartman: In Bonn.
+
+Yavuzalp: In Bonn.
+
+Kissinger: We have to do it somewhat quietly, so there shouldn't be
+news stories. [Secretary Kissinger confers with Ambassador Macomber]
+
+One more word about aid. In the nature of things, it will take us some
+time. It will take us two weeks in the Senate, and then some time to
+see where we stand in the House.
+
+Macomber: And there is a recess, so if we don't get it in two weeks, it
+will take two more before they reconvene.
+
+Kissinger: It is not possible before April. If we succeed in the Middle
+East, it will give me a lot of influence even though it has nothing to
+do with it. And if the Cyprus thing goes the way it might go, it would
+be more possible.The law might lapse automatically if there is a
+settlement. So we might just declare substantial progress and fight
+rather with the Congress over the finding of substantial progress. That
+we can consider in April.
+
+[Each
+side
+confers.]
+
+Esenbel: As the Secretary General reminds me, time is really pressing.
+We're enjoying a few days when the opposition doesn't want to shake us,
+but when the Government is formed, it will start. The people feel that
+the NATO Treaty Article III says that allies should help each other and
+not embargo each other, which is something done to an enemy. And the US
+is supplying arms to 100 countries and has put an embargo to Turkey.
+And if there is too much delay, they will lose their patience.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 7 -
+
+Elekdag: They see it as a punishment to Turkey for not following the
+policy line of the United States. This is how public opinion sees it.
+They are a little lenient now, but when the Government is formed, there
+will be a burst. How can the US do this with Turkey, a faithful ally?
+The intelligentsia see it as an unwritten law of NATO that there should
+not be an embargo on military sales.
+
+Kissinger: I agree with you. I'm not your problem. I fought against it
+before it was put on, and I'm fighting against it now.
+
+There are three options: One is to apply a waiver, but that would make
+it harder to change the law. Whenever your political pressures get too
+great, you can ask us. Second, we can find substantial progress under
+the existing law. This may be possible because, strangely, the Greeks
+have been making concessions, not the Turks. The third is to change the
+law.
+
+If your domestic situation gets too complex, you can tell Bill. To
+change the law, it requires talking to Congressmen; that will take
+Bill, Art, and myself. So there is the legislative calendar. And we
+don't want a negative vote. So these are the complexities. If your
+situation gets too complex, we can do a waiver.
+
+If we do it, we should do it for less than $50 million, so it's not
+seen as a substitute for changing the law. We should limit it to the
+essential parts.
+
+Esenbel: You say a smaller amount is preferable. Then it won't have any
+effect here. I'm supposing we won't do it by a waiver.
+
+Kissinger: I haven't thought it through. You can tell us what you need.
+We don't think it's a good way to proceed. The President doesn't.
+
+Esenbel: We don't like it either. Our military told us they don't like
+it. You should work on the Senate. Our people tell us to talk to
+Javits. One of our Senators met him and talked to him. He said, "I'm a
+friend of Turkey. Are you a politician or a diplomat?" Our Senator said
+he was a politician. Javits said, "So am I and I have to vote against
+it."
+
+Kissinger: But we're beginning to turn that around.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 8 -
+
+Esenbel: I talked to Rosenthal in his office and lost two hours with
+Rosenthal. He said he needed to "tilt" toward Caramanlis. He said, "I
+have to give something."
+
+Kissinger: But that was last fall.
+
+Esenbel: That's worrisome, that they can think so lightly of Turkey.
+
+Kissinger: It has nothing to do with Turkey. It was the result of the
+unusual conditions of last year -- the result of Watergate, of an
+unelected President and in an election period, when all were terrified.
+So I think it's a mistake to take it as against Turkey. What would have
+happened normally would be a sense of Congress resolution, and we'd
+ignore it. I think it ran away with him.
+
+Macomber: They didn't think it would pass.
+
+Kissinger: That's another thing. They thought it would pass and we'd
+veto it and it would stand. But it happened just after the President
+had pardoned President Nixon. Now we need a way to help them find a way
+to reverse themselves. The mood as late as January was very bad. The
+mood now is defensive.
+
+Macomber: You're absolutely right, sir. The mood in the Senate is
+shifting; you can feel it. In the House, it's not so noticeable. In the
+House, the leadership is for a change. But the problem is how these
+people can explain a turnaround.
+
+CYPRUS
+
+Kissinger: Let's talk a few minutes of Cyprus. Without your making
+concessions, perhaps we can show progress and they can say they're
+helping progress.
+
+Let me say this on Cyprus. We have spent our previous discussions of
+Cyprus perhaps not on the fundamental problems. We talked about
+Famagusta airport. This was partly because of Congress; we wanted to
+show progress. But as you've said, the heart of the problem is the
+administrative structure of Cyprus, and perhaps in that framework the
+solution to the other problems can be found.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 9 -
+
+My impression -- this is not a Greek message but my impression -- is
+that we could persuade the Greeks to accept a bizonal solution if your
+area is reduced in size. They are worried that if the Greek area is so
+small, it would lead to a massive exodus from the island. Which would
+lead to … a political impossibility for the Greek government.
+
+They have not yet said they would accept a bizonal solution, but my
+impression is they could be convinced to move in that direction if the
+area could be reduced.
+
+Bitsios talked especially of the Morphou area and of the areas south of
+the Famagusta-Nicosia road. South of the old road, between the lower
+and upper road. I didn't press it.
+
+He did point out, however, that while he wants the Morphou area, there
+is a Turkish population west of Kyrenia.
+
+Esenbel: Lefka.
+
+Kissinger: Lefka, which would clearly have to be part of the Turkish
+zone.
+
+So it's my impression from talking to Bitsios that he wants the
+negotiation to start again. And he wants the negotiations to start
+outside of Nicosia -- for reasons we all agree on. That's his interest
+in the UN -- whether it's New York, Vienna or Geneva. He prefers New
+York, but that's a secondary question.
+
+For the first time, I detected a willingness to discuss a bizonal …
+rather, that his mind was moving in that direction. But it was related
+to the reduction of the territory. Our Ambassador has that impression.
+
+With respect to Makarios as President of that new Government, it is not
+out of the question that a proposition could be made to the Greeks.
+
+If this is possible, then it is in everyone's interest to drop the
+secondary issues and see whether it can be settled. Then Turkey would
+get international recognition of your basic position -- a bizonal
+solution. If the area is reduced -- you're the best judge. And the
+basic structure of the island. And the other issues could then perhaps
+more easily be settled.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 10 -
+
+This is why I asked to come here. If you ask them flatly now -- "Do you
+accept a bizonal solution?" they'll say no. But I think it can be moved
+in that direction. And you should think whether it would be better to
+remove this from the international agenda. Makarios' strategy is
+obvious -- he wants the Russians in. We have received a letter from
+Brezhnev which we have not answered in three weeks, asking for
+internationalization. If it comes to that, the technique would be
+impossible. This isn't my proposal to you; it's my impression of the
+Greek position. The curious thing is that the aid cutoff has made the
+Greeks more flexible, not the Turks. [Laughter] It's a paradox but it's
+the result.
+
+If a negotiation in that framework could get started, rather than waive
+the law we could just say that substantial progress has been made. It
+would take a lot of nerve for the Congress to defy us. And the Greeks
+would have reason to be cautious, because if it's cut off and you walk
+out, they get nothing.
+
+I talked to Clerides. I can speak to his view more certainly. I believe
+he would go along with this.
+
+It would be a totally different Congressional situation if the obstacle
+were Makarios. We would see very early on in the negotiation whether
+the Greeks would accept a bizonal solution; if the obstacle is
+Makarios…. I'm having a memorandum prepared -- we're speaking as
+friends -- of the Greek Cypriot press. If it's Makarios against the US,
+that we can handle domestically.
+
+You needn't decide now. We're not pressing you.
+
+I have the impression that Caramanlis wants a rapid solution. I told
+Bitsios that any solution will be worse for Greece. I said, "The longer
+you wait, the more you make it a domestic issue. The only differences
+are a little more or a little less; whatever you get, your critics can
+still accuse you of a bad agreement." He said, "I agree with you." Our
+Ambassador saw Caramanlis yesterday afternoon, and Caramanlis agreed
+with this analysis. Therefore what I say to you is in my judgment
+achievable with the Greek Government. Caramanlis did make the point
+that beyond a certain point it would be unmanageable for him -- for
+example, if there was a mass exodus from the island, it would be a
+disaster for him. So it has to be enough for the Greek population to
+live in.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 11 -
+
+I said I didn't know whether the Turks would accept Makarios as
+President.
+
+Of course, at one point you asked for his return. [Laughter]
+
+[A map of Cyprus is brought out and placed on the
+table. Secretary Kissinger indicates on the map:]
+
+Here, below the road, between the old road and the new road, he said he
+needed something. Below the old road.
+
+He showed me something on the map but I didn't take it down because I
+didn't think this was for me to negotiate. He didn't say that was all,
+but he did mention those two areas. Plus if it causes an exodus.
+
+He didn't say the whole area between the roads.
+
+Esenbel: Did he mean negotiations between Clerides and Denktash or
+between us?
+
+Kissinger: He said he needed an excuse to resume the talks after you
+declared this [autonomous state]. So he can't go back to the same
+talks. This is his interest in the UN. So his idea is for you to meet
+over the Aegean, and of course while you and he meet on the Aegean no
+one can keep you from talking about something else. But he can't meet
+on the Aegean until the other talks start.
+
+He agrees it shouldn't be internationalized.
+
+He said the trend toward war, even though it would be disastrous, would
+be hard to avoid if there is no solution. He didn't want it -- and this
+was not said in a threatening way. He realizes it would be a disaster
+for Greece.
+
+Esenbel: That is one point we agree on -- the last point. [Laughter]
+
+Kissinger: I asked our Ambassador to check my analysis with him, and at
+the end he said…
+
+Esenbel: We hope the talks will be resumed and we checked with your
+Ambassador and Mr. Hartman.
+
+Kissinger: What is happening in New York?
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 12 -
+
+Esenbel: They're meeting now. We hope there will be a resolution to ask
+the Secretary General to convene the talks somewhere. We hope not in
+New York.
+
+Kissinger: What do you have against New York? I'm not pushing it.
+
+Esenbel: It shouldn't be under the United Nations nor should the UN be
+involved; it should be something solved by the people of Cyprus. I
+talked to the Secretary General and he agreed.
+
+Kissinger: What about Vienna?
+
+Esenbel: Yes, we proposed Vienna. His man can attend, as Weckmann did.
+
+Sisco: In light of what the Secretary said, it is all the more
+important to get something settled in New York.
+
+Kissinger: Given Waldheim's vanity, it will be hard to keep him out of
+the talks. [Laughter] Given his general level of competence, what
+damage can he do?  [Laughter]
+
+Esenbel: He was jotting down my words.
+
+Kissinger: We have sent a message to Bitsios this morning that we want
+something worked out on the basis of a consensus with Turkey. We
+couldn't get directly involved in the drafting because we would be
+always behind events. But Buffum is instructed to work constructively.
+
+Esenbel: We will meet tomorrow.
+
+Kissinger: The difficulty will be -- [bear this in mind] when you
+gentlemen consult among yourselves -- the Greeks can't accept a bizonal
+arrangement unless the area is reduced. If you ask them now if they
+accept a bizonal solution, they'll say no. But if we can combine them
+some way so that when they agree to a bizonal arrangement they'll have
+some assurance of a reduction of the area….
+
+[The meeting ended at 6:30 p.m. ]
+
+SECRET/NODIS/XGDS
+
+</div><div class="text-content"><div id="tagged-text"></div></div><br/></div><div class="pane-content"><div class="text-content">MEMORANDUM
+
+SECRET/NODIS/XGDS                                               - 1 -
+
+MEMORANDUM OF CONVERSATION
+
+PARTICIPANTS:   Melih Esenbel, Minister of Foreign Affairs of Turkey
+                Sukru Elekdag, Secretary General, Ministry of Foreign Affairs
+                Necdet Tezel, Director General of Political Affairs
+                Ercument Yavuzalp, Director General for Mutual Security
+                Ecmel Barutcu, Director for Cyprus and Greek Affairs
+
+                Dr. Henry A. Kissinger, Secretary of State and Assistant to the President for National Security Affairs
+                Amb. William Macomber, United States Ambassador to Turkey
+                Joseph J. Sisco, Under Secretary of State for Political Affairs
+                Arthur Hartman, Assistant Secretary of State for European Affairs
+                Peter W. Rodman, National Security Council Staff
+
+TIME AND DATE:  Monday, March 10, 1975
+                5:20 - 6:30 p.m.
+
+PLACE:          The Foreign Minister's Office
+                Ankara, Turkey
+
+SUBJECTS:       Aid Cut-off; Cyprus
+
+
+Esenbel: This used to be a Cabinet room. Now there is a bigger one
+downstairs.
+
+[Photographers are let in.]
+
+In Ankara there are about six papers.
+
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 2 -
+
+Esenbel: Yes.
+
+Well, I welcome you here to Ankara, Mr. Secretary. It is a long time
+that we have been planning for this visit. We have long hoped you could
+make it. It is useful that we exchange views so we know where we stand
+on these two matters -- the military aid matter in Washington and your
+exchange of views with Bitsios.
+
+Kissinger: Mr. Foreign Minister, I want to express appreciation that
+you receive me, first, on short notice, and second in a time that is
+not easy in our relationship, when the U.S. Congress has taken an
+action which is totally wrong and with which we totally disagree. I
+appreciate it.
+
+I wanted to come after all my exchange with Bitsios because there are
+certain developments which I believe come a little closer to the
+Turkish point of view. With respect to the aid matter: I am at your
+disposal if you wish to discuss the subject. I understand you had a
+talk with my colleagues [Hartman and Macomber] this morning.
+
+
+Aid Cut-off
+
+Esenbel: Yes. On aid we said that we face heavy pressure -- not
+demonstrations or the usual, but you must realize how difficult it is
+to face up to these pressures -- from the parties and the
+intelligentsia and the military. We tell them that the U.S. Congress
+seems to understand their mistake. But you must realize there is a
+limit to what the Government can do. The time limit is approaching.
+
+We have a  government crisis now, so maybe there are some additional
+days for this, but soon the question will come up again. The press
+started to criticize me this morning instead of you.
+
+Kissinger: If someone has to be criticized, that is a good solution.
+[Laughter]
+
+Esenbel: The people want some action. This is what was wrong with the
+Congressional action -- really they didn't care about Turkish
+sensitivities. They certainly destroyed something here and they didn't
+care. This is the crucial point -- that they could do it without caring
+about the people. It's not a money question.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 3 -
+
+Kissinger: No, I understand.
+
+Esenbel: That they say "Make progress and come back in sixty days."
+This is completely wrong.
+
+Kissinger: Mr. Foreign Minister, I needn't tell you what my sentiments
+are.. I have said publicly that we are giving aid to Turkey not as a
+favor to Turkey but because it serves our mutual interests. I said this
+at the airport. I remember, even if the Congressmen don't, that Turkey
+sent troops to Korea, an area where Turkey had no interest, and whose
+prisoners -- we had a study made -- were the only ones who never
+cooperated with the Koreans, and the North Koreans are very brutal.
+Just as aid to Turkey got us into international affairs, the cutoff can
+be a way to get us out of international affairs. It wasn't directed
+against Turkey -- it was an attempt to destroy our foreign policy. It
+reflects, in my view, deep-seated attitudes, and is not anti-Turkey.
+
+I believe we can change this. But because the people attacking it are
+attacking our whole foreign policy, it will be more difficult. If we
+had a secret vote, we could get it reversed. The problem now is how
+people can admit that they were wrong six weeks after the initial vote.
+It's a problem of political prestige for some.
+
+I hope you will look at it as the sickness of an old friend, not as
+something directed against Turkey. And show some patience.
+
+Strangely, in America I'm accused of what you are -- that my actions
+are encouraging you. That if it were not for me, you'd have done what
+they asked. As Bill Macomber told you, we have introduced legislation
+and hope to get it passed in a couple of weeks.
+
+Macomber: In the Senate.
+
+Kissinger: I believe if we can give some of the people who feel guilty
+an excuse to change their minds, we would have a fairly easy task. If
+we could. As soon as I finish the current negotiation in the Middle
+East, maybe in two weeks, I'll bring Bill back and we'll make a massive
+effort.
+
+We have had a legal analysis done, according to which it might be
+possible to restore spare parts more quickly if the President and the
+leadership cooperate.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                               - 4 -
+
+Esenbel: A waiver.
+
+Kissinger: No it's a special authority for MAP, for up to $50 million.
+The difficulty is that if we use that waiver, they might not repeal the
+law. And we can use it only for one year. And next year we may not have
+the law changed. Therefore the President is very reluctant to do that.
+The only way to use the waiver is if the President with the tacit
+approval of the leaders and of the Greek lobby ….. the Greek lobby may
+next year go after the waiver. But if you're under a tremendous time
+pressure, we may want to use the waiver.
+
+Therefore I wanted to explain the choice we have.
+
+Esenbel: You explained that before. You said that is the easiest road
+maybe, and the legislation would remain. And the Congressmen are
+reluctant to seem to admit the action was wrong, and then they'll say,
+"Why the problem? They have the $50 million." We agree with you; we're
+against it. And we don't want that.
+
+Kissinger: Thank you. I appreciate it.
+
+Esenbel: Aid is a long-term need. Aid is a substantial part of our
+relationship. We want this to be restored. We're not interested in aid
+programs of 40 days, 50 days -- not that kind of relationship.
+
+Kissinger: I agree with  you.
+
+Esenbel: We want to know where we're standing. So people know they can
+trust the United States as an ally, and erase all doubts. With these
+40-day waivers, we can't do that.
+
+Kissinger: The waiver wouldn't be 40 days but for a year. But you're
+morally right; aid should be restored. I know the President would
+prefer to restore aid for many reasons -- one, for the principle, and
+second, he doesn't want to be dependent on Mr. Brademas, letting
+Brademas say he's helped and then go back to his original line. He's
+prepared to just declare that progress has been made, if he's going to
+bend the law. He wants the principle to be restored, and he's prepared
+to make an all-out effort.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 5 -
+
+Esenbel: We approached the Europeans and Luns and he's supposed to come
+forward with an answer.
+
+Kissinger: We approached the Germans. Did they start?
+
+Yavuzalp: Not hardware; only subsidiary items. This has nothing to do
+with the spare parts we need.
+
+Kissinger: [to Hartman] Art, can you go to Bonn and see Genscher and
+Leber? And see Haig.
+
+Esenbel: You should brief Ecevit.
+
+Kissinger: Ecevit can be very helpful. Art will see the Germans on the
+way home and also see Haig to see about getting surplus parts out of
+stocks. And [Ambassador David] Bruce was helpful.
+
+Esenbel: The Europeans should find ways to meet quick needs; for
+example, the Air Force needs spare parts. For other items that they
+can't find in the stocks, maybe you could make a deal with the Dutch or
+others to send it here.
+
+Macomber: That is illegal.
+
+Kissinger: Before the Freedom of Information Act, I used to say at
+meetings, "The illegal we do immediately; the unconstitutional takes a
+little longer." [laughter] But since the Freedom of Information Act,
+I'm afraid to say things like that.
+
+We'll make a major effort.
+
+Esenbel: Your Ambassador told me the opposite. In Germany they said
+they delayed it one week so it looks like it happens after your visit.
+
+Kissinger: My understanding is that the aid is now in force. They
+informed us.
+
+Yavuzalp: The political decision is made, they say, but they're waiting
+for "appropriate timing" for implementation of the political decision.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 6 -
+
+Kissinger: [to Hartman] Talk to Genscher and say I attach enormous
+importance to that.
+
+Esenbel: The difficulty is they signed an agreement but they don't go
+ahead and implement it -- they do it piecemeal.
+
+Kissinger: I'm sending Art to Bonn. If there are difficulties, I'll
+consider stopping in Bonn.
+
+Yavuzalp: Our ambassador would be aware of the latest.
+
+Hartman: In Bonn.
+
+Yavuzalp: In Bonn.
+
+Kissinger: We have to do it somewhat quietly, so there shouldn't be
+news stories. [Secretary Kissinger confers with Ambassador Macomber]
+
+One more word about aid. In the nature of things, it will take us some
+time. It will take us two weeks in the Senate, and then some time to
+see where we stand in the House.
+
+Macomber: And there is a recess, so if we don't get it in two weeks, it
+will take two more before they reconvene.
+
+Kissinger: It is not possible before April. If we succeed in the Middle
+East, it will give me a lot of influence even though it has nothing to
+do with it. And if the Cyprus thing goes the way it might go, it would
+be more possible.The law might lapse automatically if there is a
+settlement. So we might just declare substantial progress and fight
+rather with the Congress over the finding of substantial progress. That
+we can consider in April.
+
+								   [Each
+								   side
+								   confers.]
+
+Esenbel: As the Secretary General reminds me, time is really pressing.
+We're enjoying a few days when the opposition doesn't want to shake us,
+but when the Government is formed, it will start. The people feel that
+the NATO Treaty Article III says that allies should help each other and
+not embargo each other, which is something done to an enemy. And the US
+is supplying arms to 100 countries and has put an embargo to Turkey.
+And if there is too much delay, they will lose their patience.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 7 -
+
+Elekdag: They see it as a punishment to Turkey for not following the
+policy line of the United States. This is how public opinion sees it.
+They are a little lenient now, but when the Government is formed, there
+will be a burst. How can the US do this with Turkey, a faithful ally?
+The intelligentsia see it as an unwritten law of NATO that there should
+not be an embargo on military sales.
+
+Kissinger: I agree with you. I'm not your problem. I fought against it
+before it was put on, and I'm fighting against it now.
+
+There are three options: One is to apply a waiver, but that would make
+it harder to change the law. Whenever your political pressures get too
+great, you can ask us. Second, we can find substantial progress under
+the existing law. This may be possible because, strangely, the Greeks
+have been making concessions, not the Turks. The third is to change the
+law.
+
+If your domestic situation gets too complex, you can tell Bill. To
+change the law, it requires talking to Congressmen; that will take
+Bill, Art, and myself. So there is the legislative calendar. And we
+don't want a negative vote. So these are the complexities. If your
+situation gets too complex, we can do a waiver.
+
+If we do it, we should do it for less than $50 million, so it's not
+seen as a substitute for changing the law. We should limit it to the
+essential parts.
+
+Esenbel: You say a smaller amount is preferable. Then it won't have any
+effect here. I'm supposing we won't do it by a waiver.
+
+Kissinger: I haven't thought it through. You can tell us what you need.
+We don't think it's a good way to proceed. The President doesn't.
+
+Esenbel: We don't like it either. Our military told us they don't like
+it. You should work on the Senate. Our people tell us to talk to
+Javits. One of our Senators met him and talked to him. He said, "I'm a
+friend of Turkey. Are you a politician or a diplomat?" Our Senator said
+he was a politician. Javits said, "So am I and I have to vote against
+it."
+
+Kissinger: But we're beginning to turn that around.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 8 -
+
+Esenbel: I talked to Rosenthal in his office and lost two hours with
+Rosenthal. He said he needed to "tilt" toward Caramanlis. He said, "I
+have to give something."
+
+Kissinger: But that was last fall.
+
+Esenbel: That's worrisome, that they can think so lightly of Turkey.
+
+Kissinger: It has nothing to do with Turkey. It was the result of the
+unusual conditions of last year -- the result of Watergate, of an
+unelected President and in an election period, when all were terrified.
+So I think it's a mistake to take it as against Turkey. What would have
+happened normally would be a sense of Congress resolution, and we'd
+ignore it. I think it ran away with him.
+
+Macomber: They didn't think it would pass.
+
+Kissinger: That's another thing. They thought it would pass and we'd
+veto it and it would stand. But it happened just after the President
+had pardoned President Nixon. Now we need a way to help them find a way
+to reverse themselves. The mood as late as January was very bad. The
+mood now is defensive.
+
+Macomber: You're absolutely right, sir. The mood in the Senate is
+shifting; you can feel it. In the House, it's not so noticeable. In the
+House, the leadership is for a change. But the problem is how these
+people can explain a turnaround.
+
+
+CYPRUS
+
+Kissinger: Let's talk a few minutes of Cyprus. Without your making
+concessions, perhaps we can show progress and they can say they're
+helping progress.
+
+Let me say this on Cyprus. We have spent our previous discussions of
+Cyprus perhaps not on the fundamental problems. We talked about
+Famagusta airport. This was partly because of Congress; we wanted to
+show progress. But as you've said, the heart of the problem is the
+administrative structure of Cyprus, and perhaps in that framework the
+solution to the other problems can be found.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 9 -
+
+My impression -- this is not a Greek message but my impression -- is
+that we could persuade the Greeks to accept a bizonal solution if your
+area is reduced in size. They are worried that if the Greek area is so
+small, it would lead to a massive exodus from the island. Which would
+lead to … a political impossibility for the Greek government.
+
+They have not yet said they would accept a bizonal solution, but my
+impression is they could be convinced to move in that direction if the
+area could be reduced.
+
+Bitsios talked especially of the Morphou area and of the areas south of
+the Famagusta-Nicosia road. South of the old road, between the lower
+and upper road. I didn't press it.
+
+He did point out, however, that while he wants the Morphou area, there
+is a Turkish population west of Kyrenia.
+
+Esenbel: Lefka.
+
+Kissinger: Lefka, which would clearly have to be part of the Turkish
+zone.
+
+So it's my impression from talking to Bitsios that he wants the
+negotiation to start again. And he wants the negotiations to start
+outside of Nicosia -- for reasons we all agree on. That's his interest
+in the UN -- whether it's New York, Vienna or Geneva. He prefers New
+York, but that's a secondary question.
+
+For the first time, I detected a willingness to discuss a bizonal …
+rather, that his mind was moving in that direction. But it was related
+to the reduction of the territory. Our Ambassador has that impression.
+
+With respect to Makarios as President of that new Government, it is not
+out of the question that a proposition could be made to the Greeks.
+
+If this is possible, then it is in everyone's interest to drop the
+secondary issues and see whether it can be settled. Then Turkey would
+get international recognition of your basic position -- a bizonal
+solution. If the area is reduced -- you're the best judge. And the
+basic structure of the island. And the other issues could then perhaps
+more easily be settled.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 10 -
+
+This is why I asked to come here. If you ask them flatly now -- "Do you
+accept a bizonal solution?" they'll say no. But I think it can be moved
+in that direction. And you should think whether it would be better to
+remove this from the international agenda. Makarios' strategy is
+obvious -- he wants the Russians in. We have received a letter from
+Brezhnev which we have not answered in three weeks, asking for
+internationalization. If it comes to that, the technique would be
+impossible. This isn't my proposal to you; it's my impression of the
+Greek position. The curious thing is that the aid cutoff has made the
+Greeks more flexible, not the Turks. [Laughter] It's a paradox but it's
+the result.
+
+If a negotiation in that framework could get started, rather than waive
+the law we could just say that substantial progress has been made. It
+would take a lot of nerve for the Congress to defy us. And the Greeks
+would have reason to be cautious, because if it's cut off and you walk
+out, they get nothing.
+
+I talked to Clerides. I can speak to his view more certainly. I believe
+he would go along with this.
+
+It would be a totally different Congressional situation if the obstacle
+were Makarios. We would see very early on in the negotiation whether
+the Greeks would accept a bizonal solution; if the obstacle is
+Makarios…. I'm having a memorandum prepared -- we're speaking as
+friends -- of the Greek Cypriot press. If it's Makarios against the US,
+that we can handle domestically.
+
+You needn't decide now. We're not pressing you.
+
+I have the impression that Caramanlis wants a rapid solution. I told
+Bitsios that any solution will be worse for Greece. I said, "The longer
+you wait, the more you make it a domestic issue. The only differences
+are a little more or a little less; whatever you get, your critics can
+still accuse you of a bad agreement." He said, "I agree with you." Our
+Ambassador saw Caramanlis yesterday afternoon, and Caramanlis agreed
+with this analysis. Therefore what I say to you is in my judgment
+achievable with the Greek Government. Caramanlis did make the point
+that beyond a certain point it would be unmanageable for him -- for
+example, if there was a mass exodus from the island, it would be a
+disaster for him. So it has to be enough for the Greek population to
+live in.
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 11 -
+
+I said I didn't know whether the Turks would accept Makarios as
+President.
+
+Of course, at one point you asked for his return. [Laughter]
+
+		[A map of Cyprus is brought out and placed on the
+		table. Secretary Kissinger indicates on the map:]
+
+Here, below the road, between the old road and the new road, he said he
+needed something. Below the old road.
+
+He showed me something on the map but I didn't take it down because I
+didn't think this was for me to negotiate. He didn't say that was all,
+but he did mention those two areas. Plus if it causes an exodus.
+
+He didn't say the whole area between the roads.
+
+Esenbel: Did he mean negotiations between Clerides and Denktash or
+between us?
+
+Kissinger: He said he needed an excuse to resume the talks after you
+declared this [autonomous state]. So he can't go back to the same
+talks. This is his interest in the UN. So his idea is for you to meet
+over the Aegean, and of course while you and he meet on the Aegean no
+one can keep you from talking about something else. But he can't meet
+on the Aegean until the other talks start.
+
+He agrees it shouldn't be internationalized.
+
+He said the trend toward war, even though it would be disastrous, would
+be hard to avoid if there is no solution. He didn't want it -- and this
+was not said in a threatening way. He realizes it would be a disaster
+for Greece.
+
+Esenbel: That is one point we agree on -- the last point. [Laughter]
+
+Kissinger: I asked our Ambassador to check my analysis with him, and at
+the end he said…
+
+Esenbel: We hope the talks will be resumed and we checked with your
+Ambassador and Mr. Hartman.
+
+Kissinger: What is happening in New York?
+
+SECRET/NODIS/XGDS
+
+SECRET/NODIS/XGDS                                              - 12 -
+
+Esenbel: They're meeting now. We hope there will be a resolution to ask
+the Secretary General to convene the talks somewhere. We hope not in
+New York.
+
+Kissinger: What do you have against New York? I'm not pushing it.
+
+Esenbel: It shouldn't be under the United Nations nor should the UN be
+involved; it should be something solved by the people of Cyprus. I
+talked to the Secretary General and he agreed.
+
+Kissinger: What about Vienna?
+
+Esenbel: Yes, we proposed Vienna. His man can attend, as Weckmann did.
+
+Sisco: In light of what the Secretary said, it is all the more
+important to get something settled in New York.
+
+Kissinger: Given Waldheim's vanity, it will be hard to keep him out of
+the talks. [Laughter] Given his general level of competence, what
+damage can he do?  [Laughter]
+
+Esenbel: He was jotting down my words.
+
+Kissinger: We have sent a message to Bitsios this morning that we want
+something worked out on the basis of a consensus with Turkey. We
+couldn't get directly involved in the drafting because we would be
+always behind events. But Buffum is instructed to work constructively.
+
+Esenbel: We will meet tomorrow.
+
+Kissinger: The difficulty will be -- [bear this in mind] when you
+gentlemen consult among yourselves -- the Greeks can't accept a bizonal
+arrangement unless the area is reduced. If you ask them now if they
+accept a bizonal solution, they'll say no. But if we can combine them
+some way so that when they agree to a bizonal arrangement they'll have
+some assurance of a reduction of the area….
+
+		[The meeting ended at 6:30 p.m. ]
+
+
+SECRET/NODIS/XGDS
+</div></div><div class="pane-content"><div class="text-content">Capture Date: 01 JAN 1994
+Channel Indicators: n/a
+Current Classification: UNCLASSIFIED
+Concepts: MEETING, ECONOMIC ASSISTANCE, MINISTERS (DIPLOMATS), CUT-OFF
+Control Number: S7506342
+Copy: SINGLE
+Draft Date: 10 MAR 1975
+Decaption Date: 01 JAN 1960
+Decaption Note: n/a
+Disposition Action: RELEASED
+Disposition Approved on Date: n/a
+Disposition Authority: morefirh
+Disposition Case Number: n/a
+Disposition Comment: 25 YEAR REVIEW
+Disposition Date: 28 MAY 2004
+Disposition Event: n/a
+Disposition History: n/a
+Disposition Reason: n/a
+Disposition Remarks: n/a
+Document Number: P860114-1573_MC
+Document Source: CORE
+Document Unique ID: '00'
+Drafter: n/a
+Enclosure: n/a
+Executive Order: GS
+Errors: N/A
+Film Number: P860114-1573
+From: WHITE HOUSE
+Handling Restrictions: NODIS
+Image Path: n/a
+ISecure: '1'
+Legacy Key: link1975/newtext/w19750315/aaaacfzo.wcs
+Line Count: '0'
+Locator: TEXT ONLINE
+Office: n/a
+Original Classification: SECRET
+Original Handling Restrictions: NODIS
+Original Previous Classification: n/a
+Original Previous Handling Restrictions: n/a
+Page Count: '0'
+Previous Channel Indicators: n/a
+Previous Classification: SECRET
+Previous Handling Restrictions: NODIS
+Reference: n/a
+Review Action: RELEASED, APPROVED
+Review Authority: morefirh
+Review Comment: n/a
+Review Content Flags: n/a
+Review Date: 07 MAY 2004
+Review Event: n/a
+Review Exemptions: n/a
+Review History: RELEASED &lt;07 May 2004 by morefirh&gt;; APPROVED &lt;07 May 2004 by morefirh&gt;
+Review Markings: n/a
+Review Media Identifier: n/a
+Review Referrals: n/a
+Review Release Date: N/A
+Review Release Event: n/a
+Review Transfer Date: n/a
+Review Withdrawn Fields: n/a
+Secure: OPEN
+Status: NATIVE
+Subject: AID CUT-OFF:CYPRUS
+TAGS: ! 'PDIP, EAID, CY, TU, (ESENBEL, MELIH), (SISCO, JOSEPH J), (KISSINGER,  HENRY
+  A), (ELEKDAG, SUKRU), (TEZEL, NECDET),
+  (MACOMBER, WILLIAM)'
+To: n/a
+Type: MC
+Markings: n/a
+</div></div><div class="pane-content pane-print">
+<p>You can use this tool to generate a print-friendly PDF of the document <strong>P860114-1573_MC_b</strong>.</p>
+<form action="/plusd/pdf/?df=17290" method="post">
+<input name="p" type="hidden" value="M"/>
+<input name="r" type="hidden" value="P860114-1573_MC_b"/>
+<input id="is" name="s" type="checkbox" value="cake"/><label for="is">Include summary</label><br/>
+<input id="ih" name="h" type="checkbox" value="is a"/><label for="ih">Include headers</label><br/>
+<input id="im" name="m" type="checkbox" value="lie"/><label for="im">Include raw metadata</label><br/><br/>
+<input type="submit" value="Generate pdf"/>
+</form>
+</div><div class="pane-content pane-share">
+<p>The formal reference of this document is <strong>P860114-1573_MC_b</strong>, please use it for anything written about this document. This will permit you and others to search for it.</p>
+<div class="share-panel">
+<label for="share-link">Direct link to document</label>
+<input class="share" id="share-link" readonly="readonly" type="text" value="https://www.wikileaks.org/plusd/cables/P860114-1573_MC_b.html"/><br/>
+<label for="share-reddit">Reddit code</label>
+<input class="share" id="share-reddit" readonly="readonly" type="text" value="[P860114-1573_MC_b](https://www.wikileaks.org/plusd/cables/P860114-1573_MC_b.html)"/><br/>
+<label for="share-html">HTML code</label>
+<input class="share" id="share-html" readonly="readonly" type="text" value='&lt;a href="https://www.wikileaks.org/plusd/cables/P860114-1573_MC_b.html" title="P860114-1573_MC_b"&gt;P860114-1573_MC_b&lt;/a&gt;'/><br/>
+<label for="share-bbcode">Forum code (bbcode)</label>
+<input class="share" id="share-bbcode" readonly="readonly" type="text" value="[url=https://www.wikileaks.org/plusd/cables/P860114-1573_MC_b.html]P860114-1573_MC_b[/url]"/>
+</div>
+<br style="clear: both;"/>
+<p>Submit this story</p>
+<div class="share">
+<a href="http://www.reddit.com/submit?url=https%3A%2F%2Fwww.wikileaks.org%2Fplusd%2Fcables%2FP860114-1573_MC_b.html"><img src="https://wikileaks.org/plusd/images/Reddit-ico.png"/></a>
+</div>
+<div class="share">
+<a href="http://twitter.com/home?status=https%3A%2F%2Fwww.wikileaks.org%2Fplusd%2Fcables%2FP860114-1573_MC_b.html"><img src="https://wikileaks.org/plusd/images/Twitter-ico.png"/></a>
+</div>
+<div class="share">
+<a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.wikileaks.org%2Fplusd%2Fcables%2FP860114-1573_MC_b"><img src="https://wikileaks.org/plusd/images/Gplus-ico.png"/></a>
+</div>
+<div class="share">
+<a href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=P860114-1573_MC_b&amp;p[summary]=Summary&amp;p[url]=https%3A%2F%2Fwww.wikileaks.org%2Fplusd%2Fcables%2FP860114-1573_MC_b.html"><img src="https://wikileaks.org/plusd/images/Facebook-ico.png"/></a>
+</div>
+<br style="clear: both;"/>
+</div></div>
+</div>
+<div class="pane-content pane-extra">
+<div class="dnpage visible">
+<h1>Help Expand The Public Library of US Diplomacy</h1>
+<p>Your role is important:<br/>
+WikiLeaks maintains its robust independence through your contributions.</p>
+<fieldset><legend>Use your credit card to send donations</legend>
+<p>The Freedom of the Press Foundation is tax deductible in the U.S.</p>
+<p style="font-weight: bold;font-size: large; text-align: center"><a class="st" href="https://pressfreedomfoundation.org/wikileaks" target="_blank">Donate to WikiLeaks via the <br/>Freedom of the Press Foundation</a></p>
+</fieldset>
+<p style="font-weight: bold;font-size: medium; text-align: center">For other ways to donate please see <a class="st" href="https://shop.wikileaks.org/donate">https://shop.wikileaks.org/donate</a></p>
+</div>
+</div>
+</div>
+<br/>
+<script src="https://wikileaks.org/plusd/js/mootools-core-and-more.js" type="text/javascript"></script>
+<script src="https://wikileaks.org/plusd/js/efatmarker.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+(function(){
+	window.addEvent('domready', function(){
+	        $$("#showhide").addEvent( "click", function() {
+			$$(".text-header").toggleClass("hidden");
+			t=$$("#showhide");
+			if(t.get("html")=="Show&nbsp;Headers")
+				t.set("html", "Hide&nbsp;Headers");
+			else
+				t.set("html", "Show&nbsp;Headers");
+		} );
+
+		var pane_root = $('pane-root'),
+			pane_tabs = $('pane-tabs'),
+			pane_contents = $('pane-contents'),
+			panes = $$('.pane-tab'),
+			num_panes = panes.length,
+			i, pane,
+			pane_header,
+			pane_content;
+		var activate_tab = function(target) {
+			$$('#pane-contents .pane-content').each(function(e,i){
+				if (i === target) {
+					e.addClass('top');
+					}
+				else {
+					e.removeClass('top');
+					}
+				});
+			$$('#pane-tabs .pane-header').each(function(e,i){
+				if (i === target) {
+					e.removeClass('nottop');
+					e.addClass('ontop');
+					}
+				else {
+					e.addClass('nottop');
+					e.removeClass('ontop');
+					}
+				});
+			};
+		for (i=0; i<num_panes; i++) {
+			pane = panes[i];
+			pane_header = pane.getElement('.pane-header');
+			pane_tabs.grab(pane_header);
+			pane_header.addEvent('click', function(){
+				var target = $('pane-tabs').getChildren().indexOf(this);
+				activate_tab(target);
+				});
+			pane_content = pane.getElement('.pane-content');
+			pane_contents.grab(pane_content);
+			pane.destroy();
+			}
+		activate_tab(0);
+		$('pane-root').style.display = '';
+		}); /* event handler function() */
+	})(); /* namespace function() */
+</script>
+<div id="efm-button">
+<div id="efm-menu">
+<h3 style="margin:0 0 2px 0">e-Highlighter</h3>
+<a class="efm-need-highlight" href="https://wikileaks.org/plusd/cables/P860114-1573_MC_b.html" id="efm-permalink" style="margin-bottom: 0px; padding-bottom: 0px; display: none;">Permalink: [no highlights]</a>
+<p class="efm-need-highlight" style="margin-top: 0px; padding-top: 0px; display: none;">Click to send permalink to address bar, or right-click to copy permalink.</p>
+<a class="efm-need-highlight" href="https://twitter.com/share?url=https%3A%2F%2Fwikileaks.org%2Fplusd%2Fcables%2FP860114-1573_MC_b.html&amp;text=Cable%3A%20P860114-1573%20%23wlfind&amp;related=wikileaks" id="efm-twitter-button" style="display: none;" target="_blank"><img alt="Tweet" src="https://wikileaks.org/plusd/images/tweetn.png" style="vertical-align:middle" title="Tweet these highlights"/> these highlights</a>
+<p style="margin:0.5em 0;padding:0;border-top:1px dotted #ccc;height:1px"></p>
+<a class="efm-need-highlight" id="efm-unhighlightall" style="display: none;">Un-highlight all</a>
+<a id="efm-unhighlight">Un-highlight selection<span>u</span></a>
+<a id="efm-highlight">Highlight selection<span>h</span></a>
+</div>
+</div>
+</div></div></div>
+<script type="text/javascript">
+
+(function(){
+	window.addEvent('domready', function(){
+
+		var markerButton = $('efm-button');
+		if ( markerButton ) {
+			eMarker = new EFatMarker($('content-main'));
+			eMarker.tokenToSpans(); // apply whatever token is there
+			// need to act on mousedown or else selection disappear
+			markerButton.addEvent('mousedown', function(){
+				eMarker.interpretSelection(true);
+				return false;
+				});
+			$('efm-unhighlightall').addEvent('mousedown', function(){
+				eMarker.unhighlightAll(true);
+				return false;
+				});
+			$('efm-unhighlight').addEvent('mousedown', function(){
+				eMarker.unhighlightSelection(true);
+				return false;
+				});
+			$('efm-highlight').addEvent('mousedown', function(){
+				eMarker.highlightSelection(true);
+				return false;
+				});
+			$('efm-permalink').addEvent('mousedown', function(){
+				window.location.href = this.href;
+				return false;
+				});
+			// if Mootools Keyboard is available, use it
+			if (Keyboard) {
+				var keyboard = new Keyboard({
+					defaultEventType: 'keyup',
+					events: {
+						'h': function(){
+							eMarker.highlightSelection(true);
+							},
+						'u': function(){
+							eMarker.unhighlightSelection(true);
+							}
+						}
+					});
+				keyboard.activate();
+				}
+			eMarker.syncDOM();
+			// auto scroll to first highlight, if any
+			if (eMarker.hasSpans()) {
+				var scroll = new Fx.Scroll(window,{offset:{'x':0,'y':-100}}),
+					highlights = $$('#content-main .efm-hi');
+				if (highlights.length > 0) {
+					scroll.toElement(highlights[0]);
+					}
+				}
+			}
+		});
+	})();
+
+</script>
+<div class="dnflood"></div>
+<div class="dnbutton">
+<div class="dnmain">
+<h1><span class="dnclose">X</span>Help Expand The Public<br/>Library of US Diplomacy</h1>
+<p>Your role is important:<br/>
+WikiLeaks maintains its robust independence through your contributions.</p>
+<fieldset><legend>Use your credit card to send donations</legend>
+<p>The Freedom of the Press Foundation is tax deductible in the U.S.</p>
+<p style="font-weight: bold;font-size: large; text-align: center"><a class="st" href="https://pressfreedomfoundation.org/wikileaks" target="_blank">Donate to Wikileaks via the <br/>Freedom of the Press Foundation</a></p>
+<p style="font-weight: bold;font-size: medium; text-align: center">For other ways to donate please see<br/><a class="st" href="https://shop.wikileaks.org/donate">https://shop.wikileaks.org/donate</a></p>
+</fieldset>
+</div>
+</div>
+</div>
+<script src="https://wikileaks.org/bootstrap/js/bootstrap.min.js"></script>
+<link href="https://wikileaks.org/static/css/styles_footer.css" rel="stylesheet"/>
+<footer class="footer-recommendations" id="page-footer">
+<div class="footer-wrapper">
+<div class="recommendation-container">
+<a class="top" href="https://wikileaks.org/#">Top</a>
+<ul class="recommendation-links">
+<li class="recommendation">
+<a href="https://our.wikileaks.org" target="_blank">
+<div class="teaser">
+<img alt="" class="spip_logos" height="240" src="https://wikileaks.org/IMG/arton666.png" width="360"/>
+</div>
+<p></p><p>WL Research Community - user contributed research based on documents published by WikiLeaks. 
+</p><p></p>
+</a>
+</li>
+<li class="recommendation">
+<a href="https://www.torproject.org/" target="_blank">
+<div class="teaser">
+<img alt="" class="spip_logos" height="240" src="https://wikileaks.org/IMG/arton401.png" width="360"/>
+</div>
+<p></p><p>Tor is an encrypted anonymising network that makes it harder to intercept internet communications, or see where communications are coming from or going to.
+</p><p></p>
+</a>
+</li>
+<li class="recommendation">
+<a href="https://tails.boum.org/" target="_blank">
+<div class="teaser">
+<img alt="" class="spip_logos" height="240" src="https://wikileaks.org/IMG/arton405.png" width="360"/>
+</div>
+<p></p><p> Tails is a live operating system, that you can start on almost any computer from a DVD, USB stick, or SD card. It aims at preserving your privacy and anonymity.
+</p><p></p>
+</a>
+</li>
+<li class="recommendation">
+<a href="https://www.couragefound.org/" target="_blank">
+<div class="teaser">
+<img alt="" class="spip_logos" height="240" src="https://wikileaks.org/IMG/arton404.png" width="360"/>
+</div>
+<p></p><p>The Courage Foundation is an international organisation that supports those who risk life or liberty to make significant contributions to the historical record.
+</p><p></p>
+</a>
+</li>
+<li class="recommendation">
+<a href="https://www.bitcoin.org/" target="_blank">
+<div class="teaser">
+<img alt="" class="spip_logos" height="240" src="https://wikileaks.org/IMG/arton403.png" width="360"/>
+</div>
+<p></p><p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.
+</p><p></p>
+</a>
+</li>
+</ul>
+<ul class="social-links">
+<li>
+<a alt="Facebook" href="https://www.facebook.com/wikileaks" target="_blank">
+<img alt="Facebook" src="https://wikileaks.org/static/img/fb-logo.png" title="Facebook page"/>
+</a>
+</li>
+<li>
+<a alt="Twitter" href="https://twitter.com/wikileaks" target="_blank">
+<img alt="Twitter" src="https://wikileaks.org/static/img/twitter-logo.png" title="Twitter page"/>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

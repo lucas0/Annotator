@@ -1,0 +1,853 @@
+<html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<title>USGS 361145089394101 Caruthersville</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content='policyref="https://waterdata.usgs.gov/w3c/p3p.xml"' http-equiv="P3P"/>
+<link href="https://waterdata.usgs.gov/w3c/p3p.xml" rel="P3Pv1" type="text/xml"/>
+<link href="https://help.waterdata.usgs.gov/news/RSS/" rel="alternate" title="USGS Water Data for the Nation and USGS Water Services News" type="application/rss+xml"/>
+<link href="https://waterdata.usgs.gov/nwisweb/stylesheets/USGS_common.css" rel="stylesheet" type="text/css"/>
+<link href="https://waterdata.usgs.gov/nwisweb/stylesheets/USGS_custom.css" rel="stylesheet" type="text/css"/>
+<link href="https://waterdata.usgs.gov/nwisweb/stylesheets/nwiswebfluidsmallest.css" media="screen and (min-width: 180px) and (max-width: 450px)" rel="stylesheet"/>
+<link href="https://waterdata.usgs.gov/nwisweb/stylesheets/nwiswebfluid.css" media="screen and (min-width: 450px) and (max-width: 900px)" rel="stylesheet"/>
+<link href="https://waterdata.usgs.gov/nwisweb/stylesheets/nwisweb.css" media="screen and (min-width: 900px)" rel="stylesheet"/>
+<!--
+<link rel="stylesheet" media="screen and (min-width: 450px) and (max-width: 770px)" href="/nwisweb/stylesheets/nwiswebfluid.css" />
+<link rel="stylesheet" media="screen and (min-width: 770px)" href="/nwisweb/stylesheets/nwisweb.css" />
+-->
+<script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://ssl.google-analytics.com/ga.js" type="text/javascript"></script><script src="https://waterdata.usgs.gov/nwisweb/javascripts/respond.min.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" media="all" href="/nwisweb/stylesheets/nwisweb.css"/>
+<![endif]-->
+<script type="text/javascript">
+    //<![CDATA[
+    <!--
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-25350863-1']);
+      _gaq.push(['_gat._anonymizeIp']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    // -->
+    //]]>
+</script>
+<script src="https://www2.usgs.gov/scripts/analytics/usgs-analytics.js" type="application/javascript"></script><script defer="" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOI&amp;subagency=USGS&amp;pua=UA-23479674-1&amp;dclink=true" type="text/javascript"></script>
+<script src="https://waterdata.usgs.gov/nwisweb/javascripts/jquery.min.js" type="text/javascript"></script>
+<script src="https://waterdata.usgs.gov/nwisweb/javascripts/jquery-ui.min.js" type="text/javascript"></script>
+<link href="https://waterdata.usgs.gov/nwisweb/stylesheets/jquery-ui-1.8.custom.css" media="screen" rel="stylesheet" type="text/css"/>
+<script src="https://waterdata.usgs.gov/nwisweb/javascripts/jquery.qtip.min.js" type="text/javascript"></script>
+<link href="https://waterdata.usgs.gov/nwisweb/stylesheets/jquery.qtip.css" rel="stylesheet" type="text/css"/>
+<script src="https://waterdata.usgs.gov/nwisweb/javascripts/modernizr.min.js" type="text/javascript"></script>
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/cupertino/jquery-ui.css" rel="stylesheet"/>
+<link href="https://waterdata.usgs.gov/nwisweb/stylesheets/theme.jui.css" rel="stylesheet"/>
+<script src="https://waterdata.usgs.gov/nwisweb/javascripts/jquery.tablesorter.min.js" type="text/javascript"></script>
+<script src="https://waterdata.usgs.gov/nwisweb/javascripts/jquery.tablesorter.widgets.min.js" type="text/javascript"></script>
+<script src="https://waterdata.usgs.gov/nwisweb/javascripts/jquery.nwisweb.min.js" type="text/javascript"></script>
+<script src="https://waterdata.usgs.gov/nwisweb/javascripts/xp_progress.js" type="text/javascript"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    <!--   
+
+    //jQuery(document).ready(function() {           
+    jQuery(function() {      
+
+      // State Specific Text
+      //-------------------------------------------------
+      //jQuery("#statewide_tx").hide();
+
+      // Toggle the statewide text with class
+      jQuery(".statewide_tx_header_div").click(function() {
+             jQuery(this).next("#statewide_tx").slideToggle(500);
+
+             var divText = jQuery(".statewide_tx_header_div").html();
+
+             if (divText.indexOf('Click for') != -1) {
+               //jQuery(".statewide_tx_header_div span").replaceWith( "<span id='statewide_header_tx'>Click to hide state-specific text</span>" );
+
+               jQuery("#statewide_header_tx").replaceWith( "<span id='statewide_header_tx'>Click to hide state-specific text</span>" );
+
+               jQuery("#collapsingIcon").removeClass('ui-icon-circle-plus');
+               jQuery("#collapsingIcon").addClass('ui-icon-circle-minus');
+
+             } else {
+               //jQuery(".statewide_tx_header_div span").replaceWith( "<span id='statewide_header_tx'>Click for state-specific text</span>" );
+
+               jQuery("#statewide_header_tx").replaceWith( "<span id='statewide_header_tx'>Click for state-specific text</span>" );
+
+               jQuery("#collapsingIcon").removeClass('ui-icon-circle-minus');
+               jQuery("#collapsingIcon").addClass('ui-icon-circle-plus');
+             }
+
+      });
+
+      // News Text
+      //-------------------------------------------------
+      //jQuery("#news_tx").hide();
+
+      // Toggle the news text with class
+      jQuery("#news_header").click(function() {
+             jQuery(this).next("#news_tx").slideToggle(500);
+
+             var divText = jQuery("#news_header").html();
+
+             if (divText.indexOf('Click for') != -1) {
+
+               jQuery("#news_header_tx").replaceWith( "<span id='news_header_tx'>Click to hide</span>" );
+
+               jQuery("#collapsingNewsIcon").removeClass('ui-icon-circle-plus');
+               jQuery("#collapsingNewsIcon").addClass('ui-icon-circle-minus');
+
+               jQuery("#news_header").removeClass('news_tx_header_div');
+               jQuery("#news_header").addClass('news_tx_header_div_expanded');
+
+             } else {
+
+               jQuery("#news_header_tx").replaceWith( "<span id='news_header_tx'>Click for</span>" );
+
+               jQuery("#collapsingNewsIcon").removeClass('ui-icon-circle-minus');
+               jQuery("#collapsingNewsIcon").addClass('ui-icon-circle-plus');
+
+               jQuery("#news_header").removeClass('news_tx_header_div_expanded');
+               jQuery("#news_header").addClass('news_tx_header_div');
+             }
+
+      });
+
+      // Station Text
+      //-------------------------------------------------
+      //jQuery("#station_tx").hide();
+
+      // Toggle the station text with class
+      jQuery("#station_header").click(function() {
+             jQuery(this).next("#station_tx").slideToggle(500);
+
+             var divText = jQuery("#station_header").html();
+
+             if (divText.indexOf('Click for') != -1) {
+
+               jQuery("#station_header_tx").replaceWith( "<span id='station_header_tx'>Click to hide</span>" );
+
+               jQuery("#collapsingStationIcon").removeClass('ui-icon-circle-plus');
+               jQuery("#collapsingStationIcon").addClass('ui-icon-circle-minus');
+
+             } else {
+
+               jQuery("#station_header_tx").replaceWith( "<span id='station_header_tx'>Click for</span>" );
+
+               jQuery("#collapsingStationIcon").removeClass('ui-icon-circle-minus');
+               jQuery("#collapsingStationIcon").addClass('ui-icon-circle-plus');
+
+             }
+
+      });  
+      
+      // Round corners on html5 button using only css (IE version 8 and lower need extra help)
+      //-------------------------------------------------
+      if (!Modernizr.borderradius) {
+            jQuery.getScript("/nwisweb/javascripts/jquery.corner.js", function() {
+              jQuery(".btn").corner();
+              jQuery(".mapperbtn").corner();
+            });
+      }
+
+      // If User selects the output sites to map option, force xml
+      //-------------------------------------------------
+      jQuery("input[type=radio][value=nwis_mapper]").change(function(){
+          //alert("Output sites on a map radio was selected");          
+          jQuery("#sitefile_output_format").val("xml");          
+      });      
+      
+      // If User selects a file as search criteria, disable the output sites to map option.
+      //-------------------------------------------------
+      if ( jQuery("#site_no_file_attachment").length || jQuery("#parameter_cd_file_attachment").length ) {
+         //jQuery("#nwis_mapper").attr('disabled', true);
+         jQuery("input[type=radio][value=nwis_mapper]").attr("disabled",true);
+
+         jQuery('#label_nwis_mapper').css({ opacity: 0.4 });
+         jQuery('div[id^="label_"]').css({ display: "inline" });
+
+         jQuery("#fileOfSitesMsg").append("* Selecting this search criteria disables the Show sites on a map option which is currently incompatible with file attachments.");
+         jQuery("#fileOfPmCodesMsg").append("* Selecting this search criteria disables the Show sites on a map option which is currently incompatible with file attachments.");
+      } else {
+         //jQuery("#nwis_mapper").attr('disabled', false);
+         jQuery("input[type=radio][value=nwis_mapper]").attr("disabled",false);
+         jQuery('div[id^="label_"]').css({ display: "inline" });
+      }
+
+      // Plone Help
+      //-------------------------------------------------
+            
+      var ploneHelpURL = "https://help.waterdata.usgs.gov";
+      //alert("ploneHelp from conf:" + ploneHelpURL);
+
+      // Testing qTip, a jQuery plug-in for ToolTips
+      // Match all <A/> links with a title tag and use it as the rollover content (default).
+      // -------------------------------------------------
+      jQuery('a[title]').qtip();
+                             
+      // Finds all <a href's with ids. If an id exists,
+      // run a get request into Plone, find the div with the same id,
+      // and update the title attribute so hover will populate with Plone info
+      // -------------------------------------------------
+
+      jQuery('a').each(function(){
+           var thisID       = jQuery(this).attr('id');
+           var thisHREF     = jQuery(this).attr('href');
+
+           var getTextFromPlone;
+           var partialPloneURL;
+           var pageInPloneUsingProxy;
+
+           // Search href so help data is retrieved from appropriate plone page
+           if (thisHREF && thisID) {
+               //alert("thisID:" + thisID + " thisHREF:" + thisHREF);
+
+               // Looking for Plone or help.waterdata.usgs.gov in URL - basically only help links
+               getTextFromPlone = thisHREF.indexOf("/Plone/");
+               if (getTextFromPlone > -1) {
+                  // Get URL string after /Plone/
+                  partialPloneURL = thisHREF.split('/Plone/')[1];
+                  pageInPloneUsingProxy = 'https://waterdata.usgs.gov/exthelp/' + partialPloneURL;
+               }
+
+               //getTextFromPlone = thisHREF.indexOf("/help.waterdata.usgs.gov/");
+               //if (getTextFromPlone > -1) {
+                   // Get URL string after /help.waterdata.usgs.gov/
+               //    partialPloneURL = thisHREF.split('/help.waterdata.usgs.gov/')[1];
+               //    pageInPloneUsingProxy = 'https://waterdata.usgs.gov/exthelp/' + partialPloneURL;
+               //}
+
+               // Pull Plone URL from Conf file
+               // ---------------------------------------------
+               getTextFromPlone = thisHREF.indexOf(ploneHelpURL);
+               if (getTextFromPlone > -1) {
+                   // Get URL string after /help.waterdata.usgs.gov/
+                   partialPloneURL = thisHREF.split(ploneHelpURL)[1];
+                   pageInPloneUsingProxy = 'https://waterdata.usgs.gov/exthelp/' + partialPloneURL;
+               }
+               
+           }
+
+           if (thisID) {
+               //alert("Testing finding <a href's with IDs = " + thisID + " URL = " + thisHREF + " pageInPloneUsingProxy = " + pageInPloneUsingProxy);
+
+              var origTitle = jQuery('#'+thisID).attr("title");
+
+              jQuery('#'+thisID).mouseover(function (e) {
+              
+                 //var getURL = "http://webvadevvs03.er.usgs.gov/exthelp/codes-and-parameters/codes";
+                 var getURL = pageInPloneUsingProxy;
+
+                 var origTitlePlusData = '';
+                 var hrefValuesList = [];
+                 var host = 'https://waterdata.usgs.gov';
+
+                 jQuery.ajax({
+
+                   url: getURL,
+                   dataType: "html",
+                   success: function (data) {
+                      var data          = jQuery(data).find('.'+thisID);
+                      var ref, ref_mod, internalRef, anchors, i, end, data_new;
+                      
+                      // Search text returned from Plone for hrefs
+                      anchors = data.find('a');
+   
+                      // Loop through all href values from each anchor element
+                      // Use this to search and replace text returned from Plone to replace internal links with ploneHelpURL
+                      end      = anchors.length;
+                      data_new = data.html();
+                      var seen = {};
+                      for (i = 0; i < end; i++) { 
+                         ref         = anchors[ i ].href ;
+                         ref_mod     = ref.replace('https://waterdata.usgs.gov',ploneHelpURL);                                                 			 
+                         internalRef = ref.replace('https://waterdata.usgs.gov', '');
+                         internalRef = internalRef.replace('&', '&amp;');
+			 
+                         var txt = internalRef;
+                         if (seen[txt]) {
+                            // Do not replace same internal link twice
+                         } else {
+                            seen[txt] = true;
+	                                         
+                            //var regex = new RegExp('{'+internalRef+'}', "ig");      // Global replace efforts not working
+                            //var regex = new RegExp(internalRef, "g");                                           
+                            //data_new = data_new.replace(regex,ref_mod);
+			    
+                            data_new = data_new.replace(internalRef,ref_mod);        // This works, but does not do global replace
+                                                                                     // This solution cannot have duplicate internal links per hover in Plone
+			    
+                            //data_new = data_new.split(internalRef).join(ref_mod);  // This works global, but doubles up
+			    			    			    
+                            //alert(" Changed: " + internalRef + " to " + ref_mod + " ---->  data_new: " + data_new );			                                
+                            hrefValuesList.push( ref );
+                         }
+                      }
+                                                                 
+                      //alert("data: " + data_new );
+                                                   
+                      // Combine text from Plone to original title
+                      //origTitlePlusData = origTitle + ' <BR><BR> ' + data.html();                      
+                      origTitlePlusData = origTitle + ' <BR><BR> ' + data_new;
+
+                      if (data.html() != null) {
+                         jQuery('#'+thisID).attr('title', origTitlePlusData);
+                      }
+                   }
+                 });
+              });
+
+ 	      // Makes the ToolTip delay so that you can click on a URL in the help text
+ 	      jQuery(this).qtip({
+ 		 hide: {
+ 		    delay:500, // Give a small delay to allow the user to mouse over it
+ 		    fixed:true
+ 		 },
+ 		 style: {
+ 		    name: 'dark',
+ 		    style: {
+ 		       border: 1,
+ 		       cursor: 'pointer',
+ 		       padding: '5px 8px',
+ 		       name: 'blue'
+ 		    },
+ 		 border: {},
+ 		 tip: true     // Apply a tip at the default tooltip corner
+ 		 }
+ 	      });
+
+
+           } // End of -> if(thisID)
+      });   // End of -> each function
+
+
+
+
+      // Processing Bar
+      //-------------------------------------------------
+      // If the loading bar exists, remove it
+
+      var barChk = jQuery(".loading").text();
+      //alert('loading=' + barChk);
+
+      if (barChk) {
+         jQuery(window).load(function() {
+             processingBar.hideBar();
+             jQuery("#loading").fadeOut("slow",function() { jQuery("#loading").remove(); });
+         });
+      }      
+
+      // DatePicker
+      //-------------------------------------------------
+      
+      // Calendar Date Picker
+      //-------------------------------------------------
+      var http_text  = window.location.href.substring(0,location.href.indexOf("?") + 1);
+      //alert(http_text);
+      var uv_search  = http_text.search(/uv/i);
+      var dv_search  = http_text.search(/dv/i);
+
+      //alert("Only executing datepicker jquery code where necessary...");
+      //alert("uv_search " + uv_search);
+      //alert("dv_search " + dv_search);
+      
+      // Pull earliest uv/dv and qw por earliest dates from system conf for datepicker
+      //
+      var earliest_uv_date     = "1950-10-01";
+      var earliest_dv_date     = "1838-01-01";
+      var earliest_qw_por_date = "1860-01-01";      
+      //alert("earliest_uv_date=" + earliest_uv_date + " earliest_dv_date=" + earliest_dv_date + " earliest_qw_por_date=" + earliest_qw_por_date);
+      
+      // Prep earliest year ranges for datepicker
+      //
+      var earliest_uv_yr          = earliest_uv_date.substring(0, 4);
+      var earliest_dv_yr          = earliest_dv_date.substring(0, 4);
+      var earliest_qw_por_yr      = earliest_qw_por_date.substring(0, 4);
+      var earliest_uv_yrRange     = earliest_uv_yr + ":+0";
+      var earliest_dv_yrRange     = earliest_dv_yr + ":+0";
+      var earliest_qw_por_yrRange = earliest_qw_por_yr + ":+0";
+
+      // Div ID begin_date is present
+      //
+      //if(jQuery( "#begin_date" ).length > 0) {
+
+         if(uv_search > -1)
+           {
+            jQuery( "#begin_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(earliest_uv_date), maxDate: '+1d', yearRange: earliest_uv_yrRange });
+            jQuery( "#end_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(earliest_uv_date), maxDate: '+1d', yearRange: earliest_dv_yrRange });
+
+            jQuery( "#rt_begin_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(earliest_uv_date), maxDate: '+1d', yearRange: earliest_uv_yrRange });
+            jQuery( "#rt_end_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(earliest_uv_date), maxDate: '+1d', yearRange: earliest_uv_yrRange });
+   
+           }
+         else if(dv_search > -1)
+           {
+            jQuery( "#begin_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(earliest_dv_date), maxDate: '+1d', yearRange: earliest_dv_yrRange });
+            jQuery( "#end_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(earliest_dv_date), maxDate: '+1d', yearRange: earliest_dv_yrRange });
+
+            jQuery( "#rt_begin_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(earliest_dv_date), maxDate: '+1d', yearRange: earliest_dv_yrRange });
+            jQuery( "#rt_end_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(earliest_dv_date), maxDate: '+1d', yearRange: earliest_dv_yrRange });
+           }
+         else
+           {
+            jQuery( "#begin_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(1800,1-1,01), maxDate: '+1d', yearRange: "1800:+0" });
+            jQuery( "#end_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(1800,1-1,01), maxDate: '+1d', yearRange: "1800:+0" });
+
+            jQuery( "#rt_begin_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(1800,1-1,01), maxDate: '+1d', yearRange: "1800:+0" });
+            jQuery( "#rt_end_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(1800,1-1,01), maxDate: '+1d', yearRange: "1800:+0" });
+           }
+
+         if(jQuery( "#por_begin_date" ).length > 0)
+           {
+            jQuery( "#por_begin_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(earliest_qw_por_date), maxDate: '+1d', yearRange: earliest_qw_por_yrRange });
+            jQuery( "#por_end_date" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(earliest_qw_por_date), maxDate: '+1d', yearRange: earliest_qw_por_yrRange });
+
+           }
+        //}
+
+      //jQuery( "#start_dt_id" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(1800,1-1,01), maxDate: '+1d', yearRange: "1800:+0" });
+      //jQuery( "#end_dt_id" ).datepicker({ dateFormat: jQuery.datepicker.W3C, changeMonth: true, changeYear: true, minDate: new Date(1800,1-1,01), maxDate: '+1d', yearRange: "1800:+0" });
+
+
+
+     // TableSorter - New Version with Fixed Headers
+     //-------------------------------------------------
+          //jQuery("table").tablesorter({
+     jQuery(".dataList").tablesorter({
+            //selectorHeaders: '> thead th, > thead td',
+            //widthFixed : true,
+	    headerTemplate : '{content} {icon}', // Add icon for jui theme; new in v2.7!
+	    widgets: ["columns", "filter", "stickyHeaders", "uitheme", "zebra"] ,
+	    //sortList: [ [0,0], [1,0], [2,0] ],   // Sorts on first 3 cols
+	    widgetOptions: {
+	      // css class name applied to the sticky header row (tr)
+	      stickyHeaders : 'tablesorter-stickyHeader',
+	      zebra   : ["ui-widget-content even", "ui-state-default odd"],
+	      uitheme : 'jui'
+	    }
+     });
+    
+     // Exception for data tables using superscripts 
+     // (peaks and uv use this now)
+     //-------------------------------------------------
+     jQuery(".dataListWithSuperscript").tablesorter({
+        headerTemplate : '{content} {icon}', // Add icon for jui theme; new in v2.7!
+        widgets: ["columns", "filter", "stickyHeaders", "uitheme", "zebra"] ,
+        widgetOptions: {
+           // css class name applied to the sticky header row (tr)
+           stickyHeaders : 'tablesorter-stickyHeader',
+           zebra   : ["ui-widget-content even", "ui-state-default odd"],
+           uitheme : 'jui'
+        },
+        textExtraction: function(node) {
+           // Any columns that have a span tag, sort only on span tag content, ignoring sup (superscript) tag
+           if (jQuery(node).find('span').text() != "") {
+              var selected = jQuery(node).find("span").text();
+              return selected;
+           } else {
+              return jQuery(node).text();
+           }
+        }		   	   
+     });
+
+     // Click a row and it will highlight for greater visibility
+     //-------------------------------------------------
+     jQuery('.dataList td').click(
+           	function (event) { jQuery(this).parent('tr').toggleClass('rowclick');
+     });
+
+     // Click a row and it will highlight for greater visibility
+     //-------------------------------------------------
+     jQuery('.dataListWithSuperscript td').click(
+           	function (event) { jQuery(this).parent('tr').toggleClass('rowclick');
+     });
+
+
+     // Water-Use
+     //-------------------------------------------------
+     // Not needed
+
+   });  //end of document.ready
+
+   // -->
+   //]]>
+</script>
+</head>
+<body>
+<div id="nwisweb_header">
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function server_level_navigation_manager()
+ {
+ var local_cgi_url_base = "/nwis";
+ var national_host_url  = "";
+ var nwis_mapper_url    = "https://maps.waterdata.usgs.gov/";
+ //alert(national_host_url);
+ var office_index  = document.select_office.office.selectedIndex;
+ var office  = document.select_office.office.options[ office_index ].value;
+ var my_office = "usa";
+ if(office == my_office) {
+   var url = local_cgi_url_base + '/'; }
+ else {
+   var url = national_host_url + '/' + office + "/nwis/"; }
+ var program_index = document.select_office.program.selectedIndex;
+ var program = document.select_office.program.options[ program_index ].value;
+
+ if (program == 'mapper') {
+   if (office != 'usa') {
+     //var url = nwis_mapper_url + '?state=' + office ;
+     var url = nwis_mapper_url + 'mapper/index.html?state=' + office; }
+   else {
+     var url = nwis_mapper_url ; }
+     //window.open(url);
+     window.location = (url); }
+     
+ else if(program == 'revision'){
+    var url = url + 'si';
+    //alert("url " + url);
+    window.location = (url); } 
+    
+ else {
+   var url = url + program;
+   window.location = (url);}
+ return (false);
+ }
+//-->
+//]]>
+</script>
+<form action="/nwis" id="select_office" name="select_office">
+<div id="usgscolorband">
+<div id="usgsbanner">
+<div id="usgsidentifier"><a href="https://www.usgs.gov/"><img alt="USGS - science for a changing world" height="72" src="https://waterdata.usgs.gov/nwisweb/icons/USGS_header_graphic_usgsIdentifier_white.jpg" title="U.S. Geological Survey Home Page" width="178"/></a>
+</div>
+<div id="usgsccsabox">
+<div id="usgsccsa">
+<br/><a href="https://www.usgs.gov/">USGS Home</a>
+<br/><a href="https://www.usgs.gov/ask/">Contact USGS</a>
+<br/><a href="https://www.usgs.gov/search/">Search USGS</a>
+</div>
+</div>
+</div>
+</div>
+<div id="usgstitle">
+<p><a href="https://waterdata.usgs.gov/nwis">National Water Information System: Web Interface</a></p>
+</div>
+<div id="navbar">
+<div id="subtitle">
+<b><a href="https://water.usgs.gov"><u>USGS Water Resources</u></a></b>    
+      
+   </div>
+<div id="navdropdowns">
+<span id="programlist">
+<label accesskey="c" for="program"><strong>Data Category:</strong></label><br/>
+<select id="program" name="program" tabindex="1">
+<option value="nwis">Home</option>
+<option value="rt">Current Conditions</option>
+<option selected="selected" value="si">Site Information</option>
+<option value="mapper">Mapper</option>
+<option value="sw">Surface Water</option>
+<option value="gw">Groundwater</option>
+<option value="qw">Water Quality</option>
+<option value="wu">Water Use</option>
+<option value="revision">Revisions</option>
+</select>
+</span>
+<span id="statelist">
+<label accesskey="A" for="office"><strong>Geographic Area:</strong></label><br/>
+<select id="office" name="office" onchange="return server_level_navigation_manager();" tabindex="1">
+<option value="usa">United States
+</option><option value="al">Alabama</option>
+<option value="ak">Alaska</option>
+<option value="aq">American Samoa</option>
+<option value="az">Arizona</option>
+<option value="ar">Arkansas</option>
+<option value="bc">British Columbia</option>
+<option value="ca">California</option>
+<option value="eq">Canton and Enderbury Islands</option>
+<option value="co">Colorado</option>
+<option value="ct">Connecticut</option>
+<option value="de">Delaware</option>
+<option value="dc">Dist. of Columbia</option>
+<option value="fl">Florida</option>
+<option value="ga">Georgia</option>
+<option value="gu">Guam</option>
+<option value="hi">Hawaii</option>
+<option value="id">Idaho</option>
+<option value="il">Illinois</option>
+<option value="in">Indiana</option>
+<option value="ia">Iowa</option>
+<option value="jq">Johnston Atoll</option>
+<option value="ks">Kansas</option>
+<option value="ky">Kentucky</option>
+<option value="la">Louisiana</option>
+<option value="me">Maine</option>
+<option value="md">Maryland</option>
+<option value="ma">Massachusetts</option>
+<option value="mi">Michigan</option>
+<option value="mq">Midway Islands</option>
+<option value="mn">Minnesota</option>
+<option value="ms">Mississippi</option>
+<option value="mo">Missouri</option>
+<option value="mt">Montana</option>
+<option value="ne">Nebraska</option>
+<option value="nv">Nevada</option>
+<option value="nh">New Hampshire</option>
+<option value="nj">New Jersey</option>
+<option value="nm">New Mexico</option>
+<option value="ny">New York</option>
+<option value="nc">North Carolina</option>
+<option value="nd">North Dakota</option>
+<option value="mp">Northern Mariana Islands</option>
+<option value="oh">Ohio</option>
+<option value="ok">Oklahoma</option>
+<option value="or">Oregon</option>
+<option value="pa">Pennsylvania</option>
+<option value="pr">Puerto Rico</option>
+<option value="ri">Rhode Island</option>
+<option value="yq">Ryukyu Islands, Southern</option>
+<option value="sc">South Carolina</option>
+<option value="sd">South Dakota</option>
+<option value="sq">Swan Islands</option>
+<option value="tn">Tennessee</option>
+<option value="tx">Texas</option>
+<option value="tq">Trust Territories, Pacific Is</option>
+<option value="bq">U.S.Misc Caribbean Islands</option>
+<option value="iq">U.S.Misc Pacific Islands</option>
+<option value="ut">Utah</option>
+<option value="vt">Vermont</option>
+<option value="vi">Virgin Islands</option>
+<option value="va">Virginia</option>
+<option value="wq">Wake Island</option>
+<option value="wa">Washington</option>
+<option value="wv">West Virginia</option>
+<option value="wi">Wisconsin</option>
+<option value="wy">Wyoming</option>
+</select>
+</span>
+<span id="maingobutton">
+<input accesskey="g" onclick="return server_level_navigation_manager();" type="submit" value="GO"/>
+</span>
+</div>
+</div>
+<div class="clear"></div>
+</form>
+<div id="noScript" style="display: none;">Warning: Javascript must be enabled to use all the features on this page!
+<script type="text/javascript">
+    //<![CDATA[
+    <!--
+document.getElementById('noScript').style.display = 'none';
+    // -->
+    //]]>
+</script>
+</div>
+<p class="loading" id="loading" style="opacity: 0.995374;"><br/>Page Loading - Please Wait...
+</p>
+<script type="text/javascript">
+    //<![CDATA[
+    <!--
+var processingBar = createBar (300,15,'white',1,'black','blue',85,7,10,"");
+    // -->
+    //]]>
+</script><div id="_xpbar0" style="visibility: hidden; position: relative; overflow: hidden; width: 300px; height: 15px; background-color: white; border-color: black; border-width: 1px; border-style: solid; font-size: 1px;"><span id="blocks0" style="left: 161px; position: absolute; font-size: 1px;"><span style="background-color:blue; left:-0px; font-size:1px; position:absolute; width:15px; height:15px; -Moz-opacity:1"></span><span style="background-color:blue; left:-16px; font-size:1px; position:absolute; width:15px; height:15px; -Moz-opacity:0.8571428571428571"></span><span style="background-color:blue; left:-32px; font-size:1px; position:absolute; width:15px; height:15px; -Moz-opacity:0.7142857142857143"></span><span style="background-color:blue; left:-48px; font-size:1px; position:absolute; width:15px; height:15px; -Moz-opacity:0.5714285714285714"></span><span style="background-color:blue; left:-64px; font-size:1px; position:absolute; width:15px; height:15px; -Moz-opacity:0.42857142857142855"></span><span style="background-color:blue; left:-80px; font-size:1px; position:absolute; width:15px; height:15px; -Moz-opacity:0.2857142857142857"></span><span style="background-color:blue; left:-96px; font-size:1px; position:absolute; width:15px; height:15px; -Moz-opacity:0.14285714285714277"></span></span></div>
+<div id="mobileDetection">
+  * We've detected you're using a mobile device.
+  Find our <a href="https://m.waterdata.usgs.gov">mobile dedicated web site here.</a>
+</div>
+<div class="collapse_div">
+<div class="news_tx_header_div_expanded" id="news_header">
+<span class="ui-icon ui-icon-circle-minus" id="collapsingNewsIcon"></span>
+<span id="news_header_tx">Click to hide</span>News Bulletins
+</div>
+<div id="news_tx">
+<ul>
+<li>
+<span style="text-decoration:underline;"><a href="https://help.waterdata.usgs.gov/news/Feb-12-2019">Introducing The Next Generation of USGS Water Data for the Nation</a></span>
+</li>
+<li>
+<span style="text-decoration:underline;"><a href="https://help.waterdata.usgs.gov/news">Full News</a></span>
+<a href="https://help.waterdata.usgs.gov/news/RSS/"><img alt="RSS icon" border="0" src="https://waterdata.usgs.gov/nwisweb/icons/rss_icon.gif"/></a>
+</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<br/><h2>USGS 361145089394101 Caruthersville</h2>
+<center>
+<script type="text/javascript">
+<!--
+function station_navigation_manager_2()
+ {
+ var national_host_url  = "https://nwis.waterdata.usgs.gov";
+ var local_cgi_url_base = "";
+ var program_index      = document.station_navigation_2.program.selectedIndex;
+ var program    = document.station_navigation_2.program.options[ program_index ].value;
+ var site_no    = document.station_navigation_2.site_no.value;
+ var agency_cd  = document.station_navigation_2.agency_cd.value;
+ var ref_module = '';
+ if(program.match(/dv|dvstat|monthly|annual/)){
+         ref_module = "";
+      if(ref_module == ""){
+          ref_module = "&amp;referred_module=sw"
+      }
+     }
+ // Hardcoding stay_local variable here due to javascript incompatiblities
+ var stay_local = 0;
+ if (program_index <= 4 || program.match(/dv|dvstat|monthly|annual|measurements|wys_rpt/)){
+   stay_local = 1;
+   }
+ //alert("stay_local " + stay_local);
+ var url = '';
+ if (program == "epa_huc_surf"){
+   url = "https://cfpub.epa.gov/surf/huc.cfm?huc_code=08020204";
+   }
+ else if (program == "adr"){
+   url = "https://wdr.water.usgs.gov/wy2018/pdfs/361145089394101.2018.pdf";
+   }
+ else if (program == "awl"){
+   url = "https://groundwaterwatch.usgs.gov/AWLSites.asp?S=361145089394101";
+   }
+ else {
+   if (stay_local == 1){
+     url = "/nwis/";
+     }
+   else {
+     if (national_host_url){
+       url = "https://nwis.waterdata.usgs.gov/mo/nwis/";
+       }
+     else {
+       url = "/nwis/";
+       }
+     }
+     var dv_pattern = /dvstat|monthly|annual/;
+     if(program.match(dv_pattern)){
+       url =  url + program + "/?search_site_no=" + site_no + "&amp;agency_cd=" + agency_cd  + ref_module + "&amp;format=sites_selection_links";
+       }
+     else {
+       url =  url + program + "/?site_no=" + site_no + "&agency_cd=" + agency_cd + ref_module;
+       }
+   }
+ window.location = (url);
+ return (false);
+ }
+//-->
+</script>
+<form action="/nwis" id="station_level_navigation_bar_form" name="station_navigation_2">
+<div id="availableData">
+<label accesskey="A" for="select_data_2"><font color="#FFFFFF" face="Verdana,Arial,Helvetica,sans-serif" size="-1">
+<strong>   Available data for this site   </strong>
+</font></label>
+<font color="#FFFFFF" face="Verdana,Arial,Helvetica,sans-serif" size="-1">
+<select id="select_data_2" name="program" onchange="return station_navigation_manager_2();">
+<option selected="selected" value="inventory">SUMMARY OF ALL AVAILABLE DATA</option>
+<option value="nwismap">Location map</option>
+<option value="uv">Time-series:   Current/Historical Observations</option>
+<option value="dv">Time-series:   Daily data</option>
+<option value="dvstat">Time-series:   Daily statistics</option>
+<option value="monthly">Time-series:   Monthly statistics</option>
+<option value="annual">Time-series:   Annual statistics</option>
+<option value="gwlevels">Groundwater:   Field measurements</option>
+<option value="wys_rpt">Water-Year Summary</option>
+<option value="revision">Revisions</option>
+</select>
+<input alt="Site Number" name="site_no" type="hidden" value="361145089394101"/>
+<input alt="Agency Code" id="agency_cd" name="agency_cd" type="hidden" value="USGS"/>
+<input alt="Submit" onclick="return station_navigation_manager_2()" type="submit" value="GO"/>
+</font>
+</div>
+<div class="clear"></div>
+</form>
+</center>
+<h3>  Well Site</h3>
+<div id="stationTable">
+<dl>
+<dt>DESCRIPTION:</dt>
+<dd>
+Latitude  36°11'45.2",   Longitude  89°39'40.7"   NAD83<br/>
+Pemiscot County, Missouri   , Hydrologic Unit 08020204
+</dd>
+<dd>  Well depth: 1388 feet <br/> Hole depth: 1388 feet<br/>
+ Land surface altitude:  270
+feet above NAVD88.
+<br/>
+ Well completed in "Mississippi embayment aquifer system" (S100MSEMBM) national aquifer. <br/> 
+ Well completed in "Wilcox Group" (124WLCXG) local aquifer <br/>
+</dd> </dl>
+<dl><dt>AVAILABLE DATA:</dt><dd><table border="1" cellpadding="1" cellspacing="0">
+<tbody><tr>
+<th id="data_type">Data Type</th>
+<th id="begin_date">Begin Date</th>
+<th id="end_date">End Date</th>
+<th id="count_nu">Count</th>
+</tr>
+<tr><td><strong> <a href="https://waterdata.usgs.gov/nwis/uv?site_no=361145089394101">Current / Historical Observations</a></strong>    
+ (<a href="https://waterdata.usgs.gov/nwis/?IV_data_availability.html" target="_blank">availability statement</a>)  
+</td>
+<td> 2007-10-01 </td><td> 2019-07-13 </td><td> </td>
+</tr><tr><td colspan="4"><strong><a href="https://waterdata.usgs.gov/nwis/dv?site_no=361145089394101">  Daily Data</a></strong></td></tr>
+<tr><td headers="data_type">     Depth to water level, feet below land surface </td><td headers="begin_date"> 2007-08-30 </td><td headers="end_date"> 2019-07-12 </td><td align="right" headers="count_nu"> 4213 </td></tr>
+<tr><td colspan="4"><strong> <a href="https://waterdata.usgs.gov/nwis/dvstat?search_site_no=361145089394101&amp;format=sites_selection_links">Daily Statistics</a> </strong></td></tr>
+<tr><td headers="data_type">     Depth to water level, feet below land surface </td><td headers="begin_date"> 2007-08-30 </td><td headers="end_date"> 2019-02-04 </td><td align="right" headers="count_nu">4055 </td></tr>
+<tr><td colspan="4"><strong> <a href="https://waterdata.usgs.gov/nwis/monthly?search_site_no=361145089394101&amp;format=sites_selection_links">Monthly Statistics</a> </strong></td></tr>
+<tr><td headers="data_type">     Depth to water level, feet below land surface </td><td headers="begin_date"> 2007-08 </td><td headers="end_date"> 2019-02 </td><td headers="count_nu"> </td></tr>
+<tr><td colspan="4"><strong> <a href="https://waterdata.usgs.gov/nwis/annual?search_site_no=361145089394101&amp;format=sites_selection_links">Annual Statistics</a> </strong></td></tr>
+<tr><td headers="data_type">     Depth to water level, feet below land surface </td><td headers="begin_date"> 2007 </td><td headers="end_date"> 2019 </td><td headers="count_nu"> </td></tr>
+<tr><td headers="data_type"><strong> <a href="https://waterdata.usgs.gov/nwis/gwlevels/?site_no=361145089394101">Field groundwater-level measurements</a></strong></td><td headers="begin_date"> 2007-08-29 </td><td headers="end_date"> 2019-04-16 </td><td align="right" headers="count_nu"> 34 </td></tr>
+<tr><td headers="data_type"><strong> <a href="https://waterdata.usgs.gov/nwis/wys_rpt/?site_no=361145089394101">Water-Year Summary</a></strong></td><td headers="begin_date"> 2014 </td><td headers="end_date"> 2018 </td><td align="right" headers="count_nu"> 5 </td></tr>
+<tr id="revisions_row"><td><strong> <a href="https://waterdata.usgs.gov/nwis/revision/?site_no=361145089394101&amp;agency_cd=USGS">Revisions</a></strong></td>
+<td colspan="3" id="revisions_available"> Available (site:1) (timeseries:0)</td>
+</tr></tbody></table>
+</dd></dl>
+<dl><dt>OPERATION:</dt> <dd>Record for this site is maintained by the USGS Missouri Water Science Center </dd> <dd>Email questions about this site to
+<a href="https://water.usgs.gov/contact/gsanswers?pemail=gs-w-mo_NWISWeb_Data_Inquiries&amp;viewnote=%3CH1%3EUSGS+NWIS+Feedback+Request%3C/H1%3E%3Cp%3E%3Cb%3EPlease%20enter%20a%20subject%20in%20the%20form%20below%20that%20briefly%20summarizes%20your%20request%3C/b%3E%3C/p%3E" target="_blank">Missouri Water Science Center Water-Data Inquiries</a></dd></dl>
+</div>
+<script src="https://waterdata.usgs.gov/nwisweb/javascripts/revisions.js" type="text/javascript"></script><script src="https://waterdata.usgs.gov/nwisweb/javascripts/webRequest.js" type="text/javascript"></script><script src="https://waterdata.usgs.gov/nwisweb/javascripts/jquery.url.js" type="text/javascript"></script>
+<div id="nwisweb_footer">
+<div class="clear"></div>
+<div id="usgssubfooter">
+<hr/>
+<div id="leftsubfooter">
+<a href="https://water.usgs.gov/contact/gsanswers?pemail=gs-w-mo_NWISWeb_Data_Inquiries&amp;subject=Site+Number:%20361145089394101&amp;viewnote=%3CH1%3EUSGS+NWIS+Feedback+Request%3C/H1%3E%3Cp%3E%3Cb%3EPlease%20enter%20a%20subject%20in%20the%20form%20below%20that%20briefly%20summarizes%20your%20request%3C/b%3E%3C/p%3E" id="gs_questions" target="_blank">Questions about sites/data?</a><br/>
+<a href="https://water.usgs.gov/contact/gsanswers?pemail=gs-w-mo_NWISWeb_Maintainer&amp;cemail=gs-w_NWISWeb_Feedback&amp;subject=Site+Number:%20361145089394101&amp;viewnote=%3CH1%3EUSGS+NWIS+Feedback+Request%3C/H1%3E%3Cp%3E%3Cb%3EPlease%20enter%20a%20subject%20in%20the%20form%20below%20that%20briefly%20summarizes%20your%20request%3C/b%3E%3C/p%3E" id="gs_feedback" target="_blank">Feedback on this web site</a><br/>
+<a href="https://help.waterdata.usgs.gov/faq/automated-retrievals">Automated retrievals</a>
+<br/>
+<a href="https://help.waterdata.usgs.gov">Help</a><br/>
+</div>
+<div id="rightsubfooter">
+<a href="https://water.usgs.gov/data/watertips.html">Data Tips</a><br/>
+<a href="https://water.usgs.gov/edu/dictionary.html">Explanation of terms</a><br/>
+<a href="https://waterdata.usgs.gov/nwis/subscribe?form=email">Subscribe for system changes</a>
+<br/>
+<a href="https://help.waterdata.usgs.gov/news">News</a><br/>
+</div>
+</div>
+<div class="clear"></div>
+<div id="usgsfooter">
+<p id="usgsfooterbar">
+<a href="https://www.usgs.gov/laws/accessibility.html" oldtitle="Accessibility Policy (Section 508)">Accessibility</a>
+<a href="https://www.usgs.gov/laws/accessibility.html" oldtitle="plug-in available here">Plug-Ins</a>
+<a href="https://www.usgs.gov/foia/" oldtitle="Freedom of Information Act">FOIA</a>
+<a href="https://www.usgs.gov/privacy.html" oldtitle="Privacy policies of the U.S. Geological Survey.">Privacy</a>
+<a href="https://www.usgs.gov/policies_notices.html" oldtitle="Policies and notices that govern information posted on USGS Web sites.">Policies and Notices</a>
+</p>
+<p id="usgsfootertext">
+<a href="https://usa.gov/"><img alt="USA.gov logo" height="26" src="https://waterdata.usgs.gov/nwisweb/icons/USGS_footer_graphic_usagov.jpg" title="USAGov: Government Made Easy" width="90"/></a>
+<a href="https://www.doi.gov/">U.S. Department of the Interior</a> |
+    <a href="https://www.usgs.gov/">U.S. Geological Survey</a><br/>
+<b>Title: NWIS Site Information for USA: Site Inventory <br/>
+    URL: <span id="footerURL">https://waterdata.usgs.gov/nwis/inventory/?site_no=361145089394101<br/><br/></span></b>
+    Page Contact Information: <a href="https://water.usgs.gov/contact/gsanswers?pemail=gs-w-mo_NWISWeb_Maintainer&amp;cemail=gs-w_NWISWeb_Feedback&amp;subject=Site+Number:%20361145089394101&amp;viewnote=%3CH1%3EUSGS+NWIS+Feedback+Request%3C/H1%3E%3Cp%3E%3Cb%3EPlease%20enter%20a%20subject%20in%20the%20form%20below%20that%20briefly%20summarizes%20your%20request%3C/b%3E%3C/p%3E" target="_blank">Missouri Water Data Support Team</a><br/>
+    Page Last Modified: 2019-07-13 17:39:21 EDT<br/>
+<font size="-2"> 0.39   0.37 caww01<br/></font>
+</p>
+</div>
+<br/>
+</div>
+<div class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" id="ui-datepicker-div"></div></body></html>

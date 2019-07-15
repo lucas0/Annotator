@@ -1,0 +1,1098 @@
+<html class="no-touchevents details js" dir="ltr" lang="en-us" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " style=""><head>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta charset="utf-8"/><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://www.google-analytics.com/plugins/ua/linkid.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="https://www.gstatic.com/recaptcha/api2/v1562567553145/recaptcha__en.js" type="text/javascript"></script><script async="" src="https://production-cdn.lift.acquia.com/WENDYS/lift-capture.min.js" type="text/javascript"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-M76G825"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content="Nutrition and Health" itemprop="acquia_lift:content_title"/>
+<meta content="page" itemprop="acquia_lift:content_type"/>
+<meta content="node page" itemprop="acquia_lift:page_type"/>
+<meta content="en-us" itemprop="acquia_lift:context_language"/>
+<meta content="" itemprop="acquia_lift:content_section"/>
+<meta content="" itemprop="acquia_lift:content_keywords"/>
+<meta content="806" itemprop="acquia_lift:post_id"/>
+<meta content="097d5404-510b-4cde-a99f-eeb96e0ef7de" itemprop="acquia_lift:content_uuid"/>
+<meta content="1551881198" itemprop="acquia_lift:published_date"/>
+<meta content="" itemprop="acquia_lift:persona"/>
+<meta content="1" itemprop="acquia_lift:engagement_score"/>
+<meta content="WENDYS" itemprop="acquia_lift:account_id"/>
+<meta content="wendys_prod" itemprop="acquia_lift:site_id"/>
+<meta content="" itemprop="acquia_lift:contentOrigin"/>
+<meta content="https://lift3assets.lift.acquia.com/stable" itemprop="acquia_lift:liftAssetsURL"/>
+<meta content="auto" itemprop="acquia_lift:bootstrapMode"/>
+<meta content="trusted" itemprop="acquia_lift:contentReplacementMode"/>
+<script async="" src="https://lift3assets.lift.acquia.com/stable/lift.js"></script>
+<meta content="Nutrition and Health | Wendy's" name="title"/>
+<link href="https://www.wendys.com/nutrition-and-health" rel="canonical"/>
+<meta content="Drupal 8 (https://www.drupal.org)" name="Generator"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="telephone=no" name="format-detection"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<link href="https://www.wendys.com/nutrition-and-health" hreflang="en-us" rel="alternate"/>
+<link href="https://www.wendys.com/es-US/node/806" hreflang="es-US" rel="alternate"/>
+<link href="https://www.wendys.com/nutrition-and-health" rel="revision"/>
+<script src="https://www.wendys.com/sites/default/files/google_tag/google_tag.script.js?ptz1cy"></script>
+<title>Nutrition and Health | Wendy's</title>
+<link href="https://www.wendys.com/sites/default/files/css/css_7JS6cMg_Kb1D2RQpH4mXlRI5_sDwlt7eQpJgvE2XG5s.css?ptz1cy" media="all" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" media="all" rel="stylesheet"/>
+<link href="https://www.wendys.com/sites/default/files/css/css_Y7wOt4NvX3iy60sSzB2WYBxZ-z47vMfLHIZAxIHyIRc.css?ptz1cy" media="all" rel="stylesheet"/>
+<link href="https://www.wendys.com/sites/default/files/css/css_gZ2ztYE_1bbVnMOIk7jWYUghfHq4bZKk7JBeB7_uVoY.css?ptz1cy" media="all" rel="stylesheet"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/../../../wendys_theme/custom/brand.css?gdsfdf=&amp;ptz1cy" media="all" rel="stylesheet"/>
+<link href="https://www.wendys.com/sites/default/files/css/css_vZI2U-NEKw88_TlEcBB9VxUDScJv4EfCoCbtA39CEB0.css?ptz1cy" media="all" rel="stylesheet"/>
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="https://www.wendys.com/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+<script src="https://www.wendys.com/sites/default/files/js/js_B7pS3ddmNLFYOJi3j28odiodelMu-EhaOeKlHZ8E6y0.js"></script>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/favicon-194x194.png" rel="icon" sizes="194x194" type="image/png"/>
+<link href="https://www.wendys.com/en-us/nutrition-info#nutrition_zone_1/themes/custom/wendys_main/favicons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link color="#dc163b" href="https://www.wendys.com/themes/custom/wendys_main/favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="https://www.wendys.com/themes/custom/wendys_main/favicons/manifest.json" rel="manifest"/>
+<meta content="#cd2028" name="msapplication-TileColor"/>
+<meta content="/themes/custom/wendys_main/favicons/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="#ffffff" name="theme-color"/>
+<meta content="app-id=540518599" name="apple-itunes-app"/>
+<script src="https://wendyscommunities.force.com/customercare/lightning/lightning.out.delegate.js?v=1562995039043" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/6/common.js" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/6/util.js" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttps%3A%2F%2Fwww.wendys.com%2Fnutrition-and-health%23nutrition_zone_1&amp;4sAIzaSyBZhNWia_uhm39BBTmfWHVJLAZP5qYjYCA&amp;callback=_xdc_._sqr2em&amp;key=AIzaSyBZhNWia_uhm39BBTmfWHVJLAZP5qYjYCA&amp;token=128338" type="text/javascript"></script></head>
+<body class="path-node page-node-type-page">
+<noscript aria-hidden="true"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-M76G825" title="Google Tag Manager" width="0"></iframe></noscript>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+<div class="layout-container">
+<header role="banner">
+<div class="region region-top">
+<div class="block block-block-content block-block-contentebba001a-5ca3-4aff-a302-ba09053c7abd" id="block-customlogo-3">
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="https://www.wendys.com/"><img alt="Home" data-entity-type="" data-entity-uuid="" src="https://www.wendys.com/themes/custom/wendys_main/logo.svg"/></a></p>
+</div>
+</div>
+</div>
+<div class="region region-top-utility">
+<nav aria-labelledby="block-utility-menu" class="block block-menu navigation menu--utility" id="block-utility" role="navigation">
+<h2 class="visually-hidden" id="block-utility-menu">Utility</h2>
+<ul class="menu">
+<li class="show-link menu-item">
+<span class="default">
+<a class="menu-icon icon--account replace-name" href="https://my.wendys.com/" target="_self" title="">Account Sign In</a>
+</span>
+<span class="mobile">
+<a class="menu-icon icon--account replace-name" href="https://my.wendys.com/" target="_self" title="">Sign In</a>
+</span>
+</li>
+<li class="show-link menu-item">
+<span class="default">
+<a class="menu-icon icon--find replace-location" href="https://find.wendys.com/" target="_self" title="">Find a Wendy's</a>
+</span>
+<span class="mobile">
+<a class="menu-icon icon--find replace-location" href="https://find.wendys.com/" target="_self" title="">Find</a>
+</span>
+</li>
+<li class="show-link menu-item">
+<span class="default">
+<a class="menu-icon icon--order blue-nav" href="https://order.wendys.com/" target="_self" title="">Order Online</a>
+</span>
+<span class="mobile">
+<a class="menu-icon icon--order blue-nav" href="https://order.wendys.com/" target="_self" title="">Order</a>
+</span>
+</li>
+</ul>
+</nav>
+</div>
+<div class="region region-top-navigation">
+<nav aria-labelledby="block-wendys-main-main-menu-menu" class="block block-menu navigation menu--main" id="block-wendys-main-main-menu" role="navigation">
+<h2 class="visually-hidden" id="block-wendys-main-main-menu-menu">Main navigation</h2>
+<ul class="menu">
+<li class="show-link menu-item">
+<span class="default">
+<a href="https://menu.wendys.com/en_US/categories/" target="_self">View Our Menu</a>
+</span>
+<span class="mobile">
+<a href="https://menu.wendys.com/en_US/categories/" target="_self">Menu</a>
+</span>
+</li>
+<li class="show-link menu-item">
+<span class="default">
+<a data-drupal-link-system-path="node/16" href="https://www.wendys.com/what-we-value" target="_self">What We Value</a>
+</span>
+<span class="mobile">
+<a data-drupal-link-system-path="node/16" href="https://www.wendys.com/what-we-value" target="_self">Values</a>
+</span>
+</li>
+<li class="show-link menu-item">
+<span class="default">
+<a data-drupal-link-system-path="node/21" href="https://www.wendys.com/who-we-are" target="_self">Who We Are</a>
+</span>
+<span class="mobile">
+<a data-drupal-link-system-path="node/21" href="https://www.wendys.com/who-we-are" target="_self">Company</a>
+</span>
+</li>
+<li class="show-link menu-item">
+<span class="default">
+<a href="https://careers.wendys.com/" target="_self">Find Jobs</a>
+</span>
+<span class="mobile">
+<a href="https://careers.wendys.com/" target="_self">Jobs</a>
+</span>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<div class="region region-highlighted">
+</div>
+<main role="main">
+<a id="main-content" tabindex="-1"></a>
+<div class="layout-content">
+<div class="region region-content">
+<div class="block block-system block-system-main-block" id="block-wendys-main-content">
+<article about="/nutrition-and-health" class="node node--page node--type-page node--view-mode-full" data-history-node-id="806" role="article" typeof="schema:WebPage">
+<div class="node__content">
+<div class="field field--name-field-bricks field--type-bricks field--label-hidden field__items">
+<div>
+<div _id="brick-2681" class="brick brick--centered-headline brand-color--background--white">
+<div class="field field--name-field-centeredheadline-backgroun field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background has-mobile media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--image b-loaded" style='background-image: url("/sites/default/files/styles/max_desktop/public/2018-10/desktop_Nutrition-Health_Header_0.jpg?itok=0i7iVaOu");'>
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Apple pecan salad next to pecans, apple bites, and blue cheese on a cutting board</div>
+</div>
+</div>
+<div class="blazy field field--name-field-mobile-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image b-loaded" style='background-image: url("/sites/default/files/styles/max_mobile/public/2018-10/mobile_Nutrition-Health_Header_0.jpg?itok=Te1xw8cm");'>
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Apple pecan salad next to pecans, apple bites, and blue cheese on a cutting board</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<h1 class="clearfix text-formatted field field--name-field-centeredheadline-header field--type-text field--label-hidden field__item">Nutrition &amp; Health</h1>
+</div>
+</div>
+<div _id="brick-3381" class="brick brick--text-multi-paragraph brand-color--background--dark-green">
+<div class="text-multi-para-container">
+<div class="textpara-header-container">
+<h2 class="brand-color--text--white clearfix text-formatted field field--name-field-textmulpar-header field--type-text field--label-hidden field__item">Food I Love, at Wendy's</h2>
+</div>
+<div class="textpara-copy-container">
+<div class="brand-color--text--white clearfix text-formatted field field--name-field-textmulpar-copy field--type-text-long field--label-hidden field__item"><p>Hearing the love our customers have for the items on our menu keeps us coming back to work every single day.</p>
+<p>We’ve made it a priority to be as transparent as possible when it comes to listing ingredients, allergens and nutritional information on Wendy’s menu. It’s part of our brand promise to let our customers know exactly what’s in our food and how we bring these menu items to our customers.</p>
+</div>
+</div>
+</div>
+</div>
+<div _id="brick-3386" class="brick brick--text-w-background media-left" style="background-color: #ffffff;">
+<div class="field field--name-field-textwithbackground-media field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background has-mobile media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--image b-loaded" style='background-image: url("/sites/default/files/styles/max_desktop/public/2019-02/desktop_allergens_1.jpg?itok=KS7TIaBD");'>
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">mobile phone</div>
+</div>
+</div>
+<div class="blazy field field--name-field-mobile-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image b-loaded" style='background-image: url("/sites/default/files/styles/max_mobile/public/2019-02/mobile_allergens_1.jpg?itok=EbXQ2nmt");'>
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">mobile phone</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<div class="copy-box">
+<h2 class="brand-color--text--black clearfix text-formatted field field--name-field-textwithbg-header field--type-text field--label-hidden field__item">Food Allergens</h2>
+<div class="brand-color--text--black clearfix text-formatted field field--name-field-textwithbg-copy field--type-text-long field--label-hidden field__item"><p>On our website, in our restaurants and on our app, we provide food allergen information to make it easy to see items containing common food allergens. When it’s time to start an order, you can make modifications in advance on our website, or in our app. When ordering at the restaurant, simply ask the crew member to hold a given ingredient.</p>
+<p><span><span><span>When using our website or app, navigate to our menu, select a menu category, then a product and then click the “Nutrition &amp; Allergens” hyperlink. A new window will appear containing the product’s allergens, nutrition facts panel and ingredient list.</span></span></span></p>
+</div>
+<div class="brand-color--text--black clearfix text-formatted field field--name-field-textwithbg-legal-line field--type-text field--label-hidden field__item"></div>
+</div>
+</div>
+</div>
+<div _id="brick-3391" class="brick brick--text-w-background media-right" style="background-color: #ffffff;">
+<div class="field field--name-field-textwithbackground-media field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background has-mobile media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--image b-loaded" style='background-image: url("/sites/default/files/styles/max_desktop/public/2019-02/desktop_allergens_2.jpg?itok=_bDtkFcU");'>
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Mobile phone 2</div>
+</div>
+</div>
+<div class="blazy field field--name-field-mobile-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image b-loaded" style='background-image: url("/sites/default/files/styles/max_mobile/public/2019-02/mobile_allergens_2.jpg?itok=cxQvSbCu");'>
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Mobile phone 2</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<div class="copy-box">
+<div class="brand-color--text--black clearfix text-formatted field field--name-field-textwithbg-copy field--type-text-long field--label-hidden field__item"><p><span><span><span>Wendy’s identifies the major eight (8) food allergens as defined by the US Food and Drug Administration (FDA) on our U.S. menu: <em>Milk, Eggs, Fish, Crustacean Shellfish, Tree Nuts, Peanuts, Wheat and Soybean.</em></span></span></span></p>
+<p>Wendy’s identifies the 12 priority food allergens as defined by Health Canada on our Canadian menu: <em>Mustard, Sesame Seeds, Sulphites, Milk, Eggs, Fish, Crustacean, Shellfish, Tree Nuts, Peanuts, Wheat and Soybean. </em></p>
+</div>
+<div class="field field--name-field-textwithbg-cta field--type-link field--label-hidden field__items">
+<div class="field__item"><a href="https://menu.wendys.com/en_US/categories" target="_self">view u.s. menu</a></div>
+<div class="field__item"><a href="https://menu.wendys.com/en_CA/categories" target="_self">view Canadian menu</a></div>
+</div>
+</div>
+</div>
+</div>
+<div _id="brick-2691" class="brick brick--copy brand-color--background--white">
+<div class="clearfix text-formatted field field--name-field-copy-styled field--type-text-long field--label-hidden field__item"><h3 class="default text-align-center"><strong>We provide known instances of allergens; however, cross contact is possible due to common handling and preparation areas in our restaurants. We are unable to guarantee that any menu item can be completely free of allergens. Customers with allergies and sensitivities should exercise judgment when ordering.  </strong></h3>
+<p> </p>
+</div>
+</div>
+<div _id="brick-3396" class="brick brick--2-up-promo">
+<div class="field field--name-field-2-up-promo-sub field--type-bricks field--label-hidden field__items">
+<div><div _id="sub_brick-3676" class="brick brick--up-promo-sub brand-color--background--white has-media eck-entity">
+<div class="field field--name-field-uppromo-background-image field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image" data-src="/sites/default/files/styles/max_desktop/public/2019-03/Gluten_Potato_0.jpg?itok=tODsu3Fd">
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Sour Cream and Chive Baked Potato</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div _id="sub_brick-3631" class="brick brick--up-promo-sub brand-color--background--white eck-entity">
+<div class="inner">
+<h2 class="clearfix text-formatted field field--name-field-uppromo-header field--type-text field--label-hidden field__item">Gluten Sensitivities</h2>
+<div class="brand-color--text--black clearfix text-formatted field field--name-field-uppromo-copy field--type-text-long field--label-hidden field__item"><p>If you’re looking to avoid gluten-containing ingredients, we encourage you to view our menu on our website. A wheat allergen icon will indicate products that contain gluten from wheat, or you can view the product’s ingredient statement for the presence other gluten containing grains.</p>
+<p>While we provide known instances of wheat allergens and ingredient statements, please understand that instances of cross contact with other gluten containing grains are possible due to common handling and preparation areas in our restaurants.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div _id="brick-3401" class="brick brick--2-up-promo">
+<div class="field field--name-field-2-up-promo-sub field--type-bricks field--label-hidden field__items">
+<div><div _id="sub_brick-3636" class="brick brick--up-promo-sub brand-color--background--white eck-entity">
+<div class="inner">
+<h2 class="brand-color--text--black clearfix text-formatted field field--name-field-uppromo-header field--type-text field--label-hidden field__item">Our Commitment to Quality Choices</h2>
+<div class="brand-color--text--black clearfix text-formatted field field--name-field-uppromo-copy field--type-text-long field--label-hidden field__item"><p>At Wendy’s, it’s not only about offering craveable menu items, but also using high-quality ingredients. Our fruits and veggies are from world-class suppliers; we say no to artificial ingredients, flavorings and preservatives whenever possible; and we use ingredients you’d find in your own fridge or pantry.</p>
+<p>We continually review our menu to make improvements. A few accomplishments include:</p>
+<ul><li>Serving all white meat chicken without preservatives and reducing sodium by 34% in our grilled chicken breast</li>
+<li>Introducing lower calorie Marzetti<sup>®</sup> Simply Dressed<sup>®</sup> salad dressings</li>
+<li>Using a vegetable cooking oil that contains 0g of trans fats for our fries</li>
+<li>Removing all <a href="https://www.wendys.com/animal-antibiotic-use-policy">antibiotics</a> important to human medicine during chicken production; sourcing 20% of our beef from a consortium of progressive beef producers who’ve committed to a 20% reduction of the only medically important antibiotic routinely fed to their cattle</li>
+</ul></div>
+</div>
+</div>
+<div _id="sub_brick-3641" class="brick brick--up-promo-sub has-media eck-entity">
+<div class="field field--name-field-uppromo-background-image field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image" data-src="/sites/default/files/styles/max_desktop/public/2019-02/Update-Customer-Crew_121.jpg?itok=csJgKYxC">
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">woman and man eating Wendy's food</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div _id="brick-2706" class="brick brick--highlight">
+<div class="inner">
+<h2 class="clearfix text-formatted field field--name-field-highlight-heading field--type-text field--label-hidden field__item">Featured Products</h2>
+<div class="clearfix text-formatted field field--name-field-highlight-copy field--type-text-long field--label-hidden field__item"><p>Click the below circles to learn more about the improvements we've made to these items on our menu.</p>
+</div>
+<div class="list">
+<div class="list-item" data-content-number="1"><div _id="sub_brick-3146" class="brick brick--highlight-card eck-entity">
+<div class="field field--name-field-highlight-background-image field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image" data-src="/sites/default/files/styles/max_desktop/public/2018-10/1000x1000_Salads.jpg?itok=eOuR_sVA">
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Apple Pecan Salad</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<div class="clearfix text-formatted field field--name-field-highlightcard-thumbheading field--type-text field--label-hidden field__item">Fresh-Made Salads</div>
+<h2 class="clearfix text-formatted field field--name-field-highlightcard-cardheading field--type-text field--label-hidden field__item">Fresh-Made Salads</h2>
+<div class="clearfix text-formatted field field--name-field-highlightcard-copy field--type-text-long field--label-hidden field__item"><p>Wendy’s<strong> </strong>has always been committed to providing you with delicious and nourishing choices at our restaurants. Our culinary innovation team is continually on the lookout for flavor trends and new, exciting ingredient combinations.</p>
+<p> </p>
+<p>You can taste this in our <a href="https://menu.wendys.com/en_US/category/freshmade-salads/">salad lineup</a> where there are various flavors that satisfy unique cravings and, when served with chicken, are packed with 32 to 42 grams of protein.</p>
+<p> </p>
+<p>And it goes without saying that you can count on your salads being prepared with care. Every day, crew members hand-chop fresh produce, like iceberg and romaine lettuce, then toss in spring mix to make our signature lettuce blend. We also freshly chop tomatoes, strawberries (when in season) and more to make each salad, fresh, every single day. </p>
+<p> </p>
+<p>We also feel options are important when it comes to the portion size of your salad. That’s why we offer full and half-size salads, so you can choose if you want to have a salad as a meal, snack or substitute for fries.</p>
+</div>
+<div class="field field--name-field-highlightcard-cta field--type-link field--label-hidden field__items">
+<div class="field__item"><a href="https://my.wendys.com/intro?source=order&amp;redirect=/" target="_self">Start an Order</a></div>
+</div>
+</div>
+</div>
+<span class="content-arrow"></span></div>
+<div class="list-item" data-content-number="2"><div _id="sub_brick-3151" class="brick brick--highlight-card eck-entity">
+<div class="field field--name-field-highlight-background-image field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image" data-src="/sites/default/files/styles/max_desktop/public/2018-10/SimplyDressedBrandmark.jpg?itok=300-jq0m">
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Marzetti Simply Dressed Dressing green logo</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<div class="clearfix text-formatted field field--name-field-highlightcard-thumbheading field--type-text field--label-hidden field__item">Marzetti<sup>®</sup> Simply Dressed<sup>®</sup> Salad Dressings</div>
+<h2 class="clearfix text-formatted field field--name-field-highlightcard-cardheading field--type-text field--label-hidden field__item">Marzetti<sup>®</sup> Simply Dressed<sup>®</sup> Salad Dressings</h2>
+<div class="clearfix text-formatted field field--name-field-highlightcard-copy field--type-text-long field--label-hidden field__item"><p>Salads as good as ours deserve a superior dressing, which is why Wendy’s has worked exclusively with Marzetti since the late 1980s. Our Culinary Innovation team partnered with Marzetti to bring our customers<strong> </strong>Marzetti Simply Dressed salad dressings which are made without preservatives, trans fat, high fructose corn syrup, or artificial flavors. Just the good stuff. </p>
+</div>
+</div>
+</div>
+<span class="content-arrow"></span></div>
+<div class="list-item" data-content-number="3"><div _id="sub_brick-3156" class="brick brick--highlight-card eck-entity">
+<div class="field field--name-field-highlight-background-image field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image" data-src="/sites/default/files/styles/max_desktop/public/2018-10/1000x1000_Grilled_Chicken_Sandwich.jpg?itok=f9TP9cje">
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Wendy's Grilled Chicken Sandwich on a marble surface.</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<div class="clearfix text-formatted field field--name-field-highlightcard-thumbheading field--type-text field--label-hidden field__item">Grilled Chicken Sandwich</div>
+<h2 class="clearfix text-formatted field field--name-field-highlightcard-cardheading field--type-text field--label-hidden field__item">Grilled Chicken Sandwich</h2>
+<div class="clearfix text-formatted field field--name-field-highlightcard-copy field--type-text-long field--label-hidden field__item"><p>Our Grilled Chicken Sandwich not only tastes great, but is a better-for-you option packed with 34 grams of protein at only 370 calories, 10g fat, 2g saturated fat, and 830mg of sodium. Our grilled chicken breast is also free of artificial flavors, MSG, preservatives and colors.</p>
+<p> </p>
+<p>What’s more is that the Grilled Chicken Sandwich is prepared with care and grilled for caramelized flavor, it's topped with fresh ingredients like spring mix, fresh-cut greenhouse-grown tomatoes and a smoky honey mustard sauce.</p>
+</div>
+<div class="field field--name-field-highlightcard-cta field--type-link field--label-hidden field__items">
+<div class="field__item"><a href="https://my.wendys.com/intro?source=order&amp;redirect=/" target="_self">Start an Order</a></div>
+</div>
+</div>
+</div>
+<span class="content-arrow"></span></div>
+<div class="list-item" data-content-number="4"><div _id="sub_brick-3161" class="brick brick--highlight-card eck-entity">
+<div class="field field--name-field-highlight-background-image field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image" data-src="/sites/default/files/styles/max_desktop/public/2018-10/1000x1000_Sides.jpg?itok=F6y5k_8G">
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Garden Side Salad, Apple bites and small Chili cup on a stainless steel surface</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<div class="clearfix text-formatted field field--name-field-highlightcard-thumbheading field--type-text field--label-hidden field__item">Side Choices</div>
+<h2 class="clearfix text-formatted field field--name-field-highlightcard-cardheading field--type-text field--label-hidden field__item">Side Choices</h2>
+<div class="clearfix text-formatted field field--name-field-highlightcard-copy field--type-text-long field--label-hidden field__item"><p>Wendy’s continues to revolutionize the way people think about combo meals by allowing you to choose from side items incorporating fruits, vegetables, and a good source of protein, like chili:</p>
+<ul>
+<li>Caesar Side Salad</li>
+<li>Garden Side Salad</li>
+<li>Baked Potato</li>
+<li>Small Chili</li>
+<li>Apple Bites</li>
+<li>Seasonal Fruit Cup</li>
+</ul>
+</div>
+<div class="field field--name-field-highlightcard-cta field--type-link field--label-hidden field__items">
+<div class="field__item"><a href="https://my.wendys.com/intro?source=order&amp;redirect=/" target="_self">Start an Order</a></div>
+</div>
+</div>
+</div>
+<span class="content-arrow"></span></div>
+<div class="list-item" data-content-number="5"><div _id="sub_brick-3166" class="brick brick--highlight-card eck-entity">
+<div class="field field--name-field-highlight-background-image field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image" data-src="/sites/default/files/styles/max_desktop/public/2019-03/1000x1000_KidsMeal_v2.jpg?itok=IcLL9mzz">
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Hamburger Kids Meal</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<div class="clearfix text-formatted field field--name-field-highlightcard-thumbheading field--type-text field--label-hidden field__item">Kids' Meal</div>
+<h2 class="clearfix text-formatted field field--name-field-highlightcard-cardheading field--type-text field--label-hidden field__item">Kids' Meal</h2>
+<div class="clearfix text-formatted field field--name-field-highlightcard-copy field--type-text-long field--label-hidden field__item"><p>At Wendy’s, we continue to improve our Kids’ Meal offerings by serving up great-tasting, balanced meals that kids will love, and parents will feel good about serving – small victories!</p>
+<p> </p>
+<p>Kiddos can choose from menu choices like a Kids’ Hamburger or Kids’ Chicken Wrap paired with apple bites or seasonal fruit in the summer months.</p>
+<p> </p>
+<p>In late 2014, we took the step of removing carbonated soft drinks from the Kids’ Meal listing on our menu boards to encourage kids to choose water or 1% white milk. </p>
+</div>
+<div class="field field--name-field-highlightcard-cta field--type-link field--label-hidden field__items">
+<div class="field__item"><a href="https://my.wendys.com/intro?source=order&amp;redirect=/" target="_self">Start an Order</a></div>
+</div>
+</div>
+</div>
+<span class="content-arrow"></span></div>
+</div>
+<div class="content">
+<div class="content-item" data-content="1"><span class="content-close"></span><div _id="sub_brick-3146" class="brick brick--highlight-card eck-entity">
+<div class="field field--name-field-highlight-background-image field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image b-loaded" style='background-image: url("/sites/default/files/styles/max_desktop/public/2018-10/1000x1000_Salads.jpg?itok=eOuR_sVA");'>
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Apple Pecan Salad</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<div class="clearfix text-formatted field field--name-field-highlightcard-thumbheading field--type-text field--label-hidden field__item">Fresh-Made Salads</div>
+<h2 class="clearfix text-formatted field field--name-field-highlightcard-cardheading field--type-text field--label-hidden field__item">Fresh-Made Salads</h2>
+<div class="clearfix text-formatted field field--name-field-highlightcard-copy field--type-text-long field--label-hidden field__item"><p>Wendy’s<strong> </strong>has always been committed to providing you with delicious and nourishing choices at our restaurants. Our culinary innovation team is continually on the lookout for flavor trends and new, exciting ingredient combinations.</p>
+<p> </p>
+<p>You can taste this in our <a href="https://menu.wendys.com/en_US/category/freshmade-salads/">salad lineup</a> where there are various flavors that satisfy unique cravings and, when served with chicken, are packed with 32 to 42 grams of protein.</p>
+<p> </p>
+<p>And it goes without saying that you can count on your salads being prepared with care. Every day, crew members hand-chop fresh produce, like iceberg and romaine lettuce, then toss in spring mix to make our signature lettuce blend. We also freshly chop tomatoes, strawberries (when in season) and more to make each salad, fresh, every single day. </p>
+<p> </p>
+<p>We also feel options are important when it comes to the portion size of your salad. That’s why we offer full and half-size salads, so you can choose if you want to have a salad as a meal, snack or substitute for fries.</p>
+</div>
+<div class="field field--name-field-highlightcard-cta field--type-link field--label-hidden field__items">
+<div class="field__item"><a href="https://my.wendys.com/intro?source=order&amp;redirect=/" target="_self">Start an Order</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-item" data-content="2"><span class="content-close"></span><div _id="sub_brick-3151" class="brick brick--highlight-card eck-entity">
+<div class="field field--name-field-highlight-background-image field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image b-loaded" style='background-image: url("/sites/default/files/styles/max_desktop/public/2018-10/SimplyDressedBrandmark.jpg?itok=300-jq0m");'>
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Marzetti Simply Dressed Dressing green logo</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<div class="clearfix text-formatted field field--name-field-highlightcard-thumbheading field--type-text field--label-hidden field__item">Marzetti<sup>®</sup> Simply Dressed<sup>®</sup> Salad Dressings</div>
+<h2 class="clearfix text-formatted field field--name-field-highlightcard-cardheading field--type-text field--label-hidden field__item">Marzetti<sup>®</sup> Simply Dressed<sup>®</sup> Salad Dressings</h2>
+<div class="clearfix text-formatted field field--name-field-highlightcard-copy field--type-text-long field--label-hidden field__item"><p>Salads as good as ours deserve a superior dressing, which is why Wendy’s has worked exclusively with Marzetti since the late 1980s. Our Culinary Innovation team partnered with Marzetti to bring our customers<strong> </strong>Marzetti Simply Dressed salad dressings which are made without preservatives, trans fat, high fructose corn syrup, or artificial flavors. Just the good stuff. </p>
+</div>
+</div>
+</div>
+</div>
+<div class="content-item" data-content="3"><span class="content-close"></span><div _id="sub_brick-3156" class="brick brick--highlight-card eck-entity">
+<div class="field field--name-field-highlight-background-image field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image b-loaded" style='background-image: url("/sites/default/files/styles/max_desktop/public/2018-10/1000x1000_Grilled_Chicken_Sandwich.jpg?itok=f9TP9cje");'>
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Wendy's Grilled Chicken Sandwich on a marble surface.</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<div class="clearfix text-formatted field field--name-field-highlightcard-thumbheading field--type-text field--label-hidden field__item">Grilled Chicken Sandwich</div>
+<h2 class="clearfix text-formatted field field--name-field-highlightcard-cardheading field--type-text field--label-hidden field__item">Grilled Chicken Sandwich</h2>
+<div class="clearfix text-formatted field field--name-field-highlightcard-copy field--type-text-long field--label-hidden field__item"><p>Our Grilled Chicken Sandwich not only tastes great, but is a better-for-you option packed with 34 grams of protein at only 370 calories, 10g fat, 2g saturated fat, and 830mg of sodium. Our grilled chicken breast is also free of artificial flavors, MSG, preservatives and colors.</p>
+<p> </p>
+<p>What’s more is that the Grilled Chicken Sandwich is prepared with care and grilled for caramelized flavor, it's topped with fresh ingredients like spring mix, fresh-cut greenhouse-grown tomatoes and a smoky honey mustard sauce.</p>
+</div>
+<div class="field field--name-field-highlightcard-cta field--type-link field--label-hidden field__items">
+<div class="field__item"><a href="https://my.wendys.com/intro?source=order&amp;redirect=/" target="_self">Start an Order</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-item" data-content="4"><span class="content-close"></span><div _id="sub_brick-3161" class="brick brick--highlight-card eck-entity">
+<div class="field field--name-field-highlight-background-image field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image b-loaded" style='background-image: url("/sites/default/files/styles/max_desktop/public/2018-10/1000x1000_Sides.jpg?itok=F6y5k_8G");'>
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Garden Side Salad, Apple bites and small Chili cup on a stainless steel surface</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<div class="clearfix text-formatted field field--name-field-highlightcard-thumbheading field--type-text field--label-hidden field__item">Side Choices</div>
+<h2 class="clearfix text-formatted field field--name-field-highlightcard-cardheading field--type-text field--label-hidden field__item">Side Choices</h2>
+<div class="clearfix text-formatted field field--name-field-highlightcard-copy field--type-text-long field--label-hidden field__item"><p>Wendy’s continues to revolutionize the way people think about combo meals by allowing you to choose from side items incorporating fruits, vegetables, and a good source of protein, like chili:</p>
+<ul>
+<li>Caesar Side Salad</li>
+<li>Garden Side Salad</li>
+<li>Baked Potato</li>
+<li>Small Chili</li>
+<li>Apple Bites</li>
+<li>Seasonal Fruit Cup</li>
+</ul>
+</div>
+<div class="field field--name-field-highlightcard-cta field--type-link field--label-hidden field__items">
+<div class="field__item"><a href="https://my.wendys.com/intro?source=order&amp;redirect=/" target="_self">Start an Order</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-item" data-content="5"><span class="content-close"></span><div _id="sub_brick-3166" class="brick brick--highlight-card eck-entity">
+<div class="field field--name-field-highlight-background-image field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-css-responsive-background media--type- media--unpublished">
+<div class="blazy field field--name-field-image field--type-image field--label-hidden field__item blazy--on" data-blazy="">
+<div class="b-lazy media--background media media--blazy media--loading media--image b-loaded" style='background-image: url("/sites/default/files/styles/max_desktop/public/2019-03/1000x1000_KidsMeal_v2.jpg?itok=IcLL9mzz");'>
+</div>
+<div class="blazy__caption">
+<div class="blazy__description">Hamburger Kids Meal</div>
+</div>
+</div>
+</article>
+</div>
+<div class="inner">
+<div class="clearfix text-formatted field field--name-field-highlightcard-thumbheading field--type-text field--label-hidden field__item">Kids' Meal</div>
+<h2 class="clearfix text-formatted field field--name-field-highlightcard-cardheading field--type-text field--label-hidden field__item">Kids' Meal</h2>
+<div class="clearfix text-formatted field field--name-field-highlightcard-copy field--type-text-long field--label-hidden field__item"><p>At Wendy’s, we continue to improve our Kids’ Meal offerings by serving up great-tasting, balanced meals that kids will love, and parents will feel good about serving – small victories!</p>
+<p> </p>
+<p>Kiddos can choose from menu choices like a Kids’ Hamburger or Kids’ Chicken Wrap paired with apple bites or seasonal fruit in the summer months.</p>
+<p> </p>
+<p>In late 2014, we took the step of removing carbonated soft drinks from the Kids’ Meal listing on our menu boards to encourage kids to choose water or 1% white milk. </p>
+</div>
+<div class="field field--name-field-highlightcard-cta field--type-link field--label-hidden field__items">
+<div class="field__item"><a href="https://my.wendys.com/intro?source=order&amp;redirect=/" target="_self">Start an Order</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div _id="brick-656" class="brick brick--3-up-article-with-image eck-entity">
+<div class="inner">
+<div class="field field--name-field-uparticle-media field--type-entity-reference field--label-hidden field__item"><article class="media media-image view-mode-default media--type- media--unpublished">
+<div class="field field--name-field-image field--type-image field--label-hidden field__item"> <img alt="The Square Deal" sizes="(min-width: 1290px) 1290px, 100vw" src="https://www.wendys.com/sites/default/files/styles/max_325x325/public/2018-03/the%20square%20deal.png?itok=j9VM7rdU" srcset="/sites/default/files/styles/max_325x325/public/2018-03/the%20square%20deal.png?itok=j9VM7rdU 325w, /sites/default/files/styles/max_650x650/public/2018-03/the%20square%20deal.png?itok=W9Z-8kOg 650w, /sites/default/files/styles/max_1300x1300/public/2018-03/the%20square%20deal.png?itok=zHHEzFSj 1000w" typeof="foaf:Image"/>
+</div>
+</article>
+</div>
+<div class="clearfix text-formatted field field--name-field-uparticle-copy field--type-text-long field--label-hidden field__item"><p>We'll use this space to give you The Square Deal™ — our views on food, quality, culture, foster care adoption, and doing our best to make Dave proud.</p>
+</div>
+<div class="field field--name-field-uparticle-ctas field--type-link field--label-hidden field__items">
+<div class="field__item"><a href="http://www.squaredealblog.com/" target="_blank">CHECK OUT THE SQUARE DEAL™</a></div>
+</div>
+<div class="three-up-articles">
+<div class="three-up-article-item" data-item-number="0" style='background-image: url("https://static1.squarespace.com/static/567094712399a343227fe58e/5670a9f90e4c110d488f24c5/5d1634a6b9f37d0001ef46b9/1561738086399/Wendy%27s-Specials.jpg");'>
+<div class="inner">
+<div class="desc-link">
+<div class="desc">
+
+
+  
+
+  
+
+
+
+  
+    
+      
+
+        
+          
+            
+              
+                
+              
+
+              
+                
+                  
+                    
+                      Wendy's $5 Biggie Bag
+                      Our Bacon Double Stack Biggie Bag gives you bang for your buck - with a Bacon Double Stack, four-piece chicken nugget, small fry and a small drink.
+                    
+                  
+                
+              
+              
+            
+          
+          
+        
+
+        
+
+        
+
+      
+
+        
+          
+            
+              
+                
+              
+
+              
+                
+                  
+                    
+                      Wendy's 4 for 4
+                      A value any way you spin it, the 4 for $4  lets you choose between eight meal options with a 4-piece chicken nugget, fries and a drink for just $4.
+                    
+                  
+                
+              
+              
+            
+          
+          
+        
+
+        
+
+        
+
+      
+    
+  
+
+  
+
+
+
+
+  
+
+    
+      
+
+        
+          
+        
+
+        
+
+      
+
+        
+          
+        
+
+        
+
+      
+    
+
+  
+
+
+
+
+
+Try These Wendy’s Specials – Including our New Bacon Double Stack Biggie Bag – to Make the Most of Your Budget Since 1969 we’ve had your back. The  summer of ‘69 may have been known as “The Summer of Love”, but 50 years later,  we’re unofficially proclaiming summer 2019 at Wendy’s as “The Summer of  Savings”. All summer long we’re here to help you save, whether you’re hitting  the road with family and need to stretch your vacation budget or are looking to get the most bang for your buck while in between jobs. Life can be complicated but thinking about how to eat well while  on a budget shouldn’t be. That’s why we’re proud to have launched a first of its kind value meal, the 4 for $4, that lets you choose between eight meal options with a 4-piece chicken nugget, fries and a drink for just $4. A meal for $4 can be hard to come by, and we can all probably agree the amount of choice you get for $4 is pretty sweet deal.While it all began with the Wendy’s 4 for $4, there are more savings to be found at Wendy’s. We’ve been continually stepping up the Wendy’s specials and value menu. This year, we upped the ante by launching the Biggie Bag, a delicious and crave-worthy addition for just $5. We know a thing or two about serving fresh, quality food that doesn’t cut corners or skimp on value. Our square patties, made with our signature fresh, never frozen beef *, haven’t cut any corners for the past 50 years and the same applies when it comes to delivering value for our customers.Sometimes  the truth is we’re not looking to spend extra – or really any – money, but our  newest Biggie Bag offering lets you see just how far you can stretch that $5  and get the most bang for your buck. Meet the $5 Bacon Double Stack Biggie Bag. If “Bacon Double Stack”  doesn’t ring a bell, here’s what you need to know: two fresh, never-frozen  beef patties*, Applewood smoked bacon, cheese, ketchup, mustard, pickle and  onion. If that weren’t enough, you also get a four-piece chicken nugget, small  fry and a small drink. Hard to believe you get all this for just $5, eh? And  if you need a little something sweet to top off your day, don’t forget to try  the Frosty Cookie Sundae (you can thank us later). The sound of your growling stomach should  motivate you to get your order on. The Biggie Bag, our Value Menu and the 4 for $4 meal menu have you covered no matter your appetite  or palette. On a low-carb or keto diet? Eating low-carb at Wendy’s while on a budget is not too good  to be true, people. In fact, eating well while on a budget is doable. As  we continue the “Summer of Savings”, keep your eye on our  mobile app for ongoing offers, you never know when the crave might strike:     
+
+	Download the App in the Apple Store
+
+
+	Download the App in Google Play
+* Fresh beef available in the contiguous U.S., Alaska,  and Canada. </div>
+<div class="link" style="height: 70px;"><a href="https://www.squaredealblog.com/homewendys/summer-savings-wendys-style" target="_blank">Summer Savings, Wendy’s Style<i class="arrow arrow--right"></i></a></div>
+</div>
+</div>
+</div>
+<div class="three-up-article-item" data-item-number="1" style='background-image: url("https://static1.squarespace.com/static/567094712399a343227fe58e/5670a9f90e4c110d488f24c5/5d07c0110a6b3a000193f788/1560794428646/50years-2-555x360.jpg");'>
+<div class="inner">
+<div class="desc-link">
+<div class="desc">
+
+  
+
+    
+      
+      
+        
+          
+            
+              
+            
+          
+
+          
+          
+            Read on to learn about the impact of Dave’s values and how Wendy’s family member, Scott Youtsey, was able to ‘Give Something Back’ to one special customer.
+          
+          
+
+        
+      
+      
+    
+
+  
+
+
+Living Dave's Values by Giving BackAs we get ready to celebrate our 50th anniversary, we’re recounting some of our favorite Wendy’s tales. From Frosty lore to stories that illustrate how Dave’s values have touched people throughout the organization and beyond, we’re excited to continue this monthly series. Our founder Dave Thomas lived by a set of values that incorporated quality, integrity, respect, opportunity and responsibility. As members of the Wendy’s® family, we share an accountability to practice these values every day and use them to Delight Every Customer. Whether you are a member of a restaurant team, a Wendy’s franchisee, work for The Wendy’s Company, or are one of our many supplier partners, we all work towards the same goal to make Dave proud. Scott Youtsey is a member of the Wendy’s supplier family as National Account Manager for Rubbermaid Commercial Products. Scott recently shared his story about the impact of Dave’s values and how he was able to ‘Give Something Back’ to one Wendy’s customer.A Simple Act of KindnessI had recently left a sales call in the north Atlanta, GA area and was heading back to my home office when I passed a Wendy’s restaurant. It was a hot summer afternoon and I decided to use my Frosty Key Tag to brighten my day. The restaurant was busy and even though I was in a hurry, I just got this feeling that I should go inside. I sat in my car for a minute and finally decided to go in and get a late lunch and enjoy that Frosty® at the end.  While I was enjoying my Dave’s Single® with cheese, I noticed a guy pacing back and forth on his cell phone. I couldn’t help but overhear as he told the caller that he was a bit lost but would find a way to meet her at 2 p.m. as promised. When he hung up, he had a look of despair and dejection on his face, along with a few tears. He looked around the room as if to say ‘someone please help me.’ I couldn’t help but reach out to the man and offered to look up his destination and directions on my phone since all he had was a flip phone.The man’s name was Reggie and he recently moved to Atlanta with the hope of a fresh start in life. Through a local church, he was able to get a job on the Macy’s loading dock, but he didn’t have his own car and needed to take Atlanta’s mass transit system (MARTA) to work. The person he was trying to meet was someone from that church who was going to help him purchase a two month MARTA pass. Unfortunately, she had a pretty tight schedule that day and when he told me he was going to have to walk to the church to meet her, I knew he’d never make it in time. With that, I told him to grab his bag and I’d drive him. Sometimes When One Door Closes, a Window OpensFor anyone that knows Atlanta, it doesn’t matter what time of day it is…traffic is always bad. I suggested he call her back to let her know that we would be a few min late, but the call went straight to voice mail. We arrived at the church at 2:07 p.m. and unfortunately the woman wasn’t there, but she left note on the front door of the church that read ‘Reggie, I’m sorry I could not wait any longer for you, but I want to wish you the best of luck and perhaps we could reschedule a meeting in a few days.’ Needless to say, he was devastated and emotional.If getting the money for a MARTA pass was the only reason for meeting her, then that was no problem...I would make it happen. Now, all we had to do was find an ATM in middle of a very congested area of Atlanta. In what some might call divine intervention, I saw an ATM just around the corner that happened to have one open parking spot right in front. Not only that, two doors down from that ATM was a MARTA station where he could purchase the pass and take the train back home.Before Reggie got out of my car, we sat and talked for a few minutes, then he gave me a bear hug and we went on our separate ways. I couldn’t wait to get home and tell my family about the unique opportunity that was given to me to serve. It was a very special afternoon in my life and I reflect on it often. I don’t know where Reggie is today, but very much appreciate him being part of my life, if only for a short period of time. When I was circling that Wendy’s restaurant, something was tapping me on the shoulder and telling me to go in and get that Frosty. Maybe it was my sweet tooth, maybe it was God, or perhaps it was the spirit of Dave Thomas reminding me to ‘Give Something Back.’ Sometimes we have to look hard for that opportunity to serve and sometimes we don’t…but I’m grateful for my afternoon with Reggie. </div>
+<div class="link" style="height: 70px;"><a href="https://www.squaredealblog.com/homewendys/how-a-frosty-key-tag-led-to-an-act-of-kindness" target="_blank">How a Frosty Key Tag Led to An Act of Kindness<i class="arrow arrow--right"></i></a></div>
+</div>
+</div>
+</div>
+<div class="three-up-article-item" data-item-number="2" style='background-image: url("https://static1.squarespace.com/static/567094712399a343227fe58e/5670a9f90e4c110d488f24c5/5cfeb41a16503f0001a0fdcc/1560366403930/Wendy%27s_Berry_Burst_Chicken_Salad.jpg");'>
+<div class="inner">
+<div class="desc-link">
+<div class="desc">
+
+
+
+
+  
+    
+      
+
+        
+
+        
+          
+            
+              
+            
+          
+          
+        
+
+        
+
+      
+
+        
+
+        
+          
+            
+              
+            
+          
+          
+        
+
+        
+
+      
+
+        
+
+        
+          
+            
+              
+            
+          
+          
+        
+
+        
+
+      
+
+        
+
+        
+          
+            
+              
+            
+          
+          
+        
+
+        
+
+      
+
+        
+
+        
+          
+            
+              
+            
+          
+          
+        
+
+        
+
+      
+
+        
+
+        
+          
+            
+              
+            
+          
+          
+        
+
+        
+
+      
+    
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+PSA from Blogger Jenica Parcell: Get Yourself to Your Local Wendy’sYou may recognize the author behind today’s post, Jenica Parcell aka A Slice of Style, from her blog and Instagram. A busy mom of two (twins nonetheless!), we’re excited to have Jenica share her thoughts on why drive-thrus rock, and more importantly her experience trying Wendy’s® Berry Burst Chicken Salad. We won’t say too much, but in her words it’s so good she recommended the salad to multiple family members. Read on to see why!Disclaimer: Thank you to Wendy's for partnering with me on this post! All opinions are my own.My life has changed a lot since having kids and I appreciate certain things that I didn’t appreciate before...like the convenience of drive-thrus – HA! For the next two years (minimum), you’ll be hard pressed to find me and my kids at a restaurant that doesn’t have a drive-thru. I can handle a LOT, but going into restaurants with my kids is one of those things that is not a strong point for me because they run in two directions and want to get into the salt, and the napkins, and climb under the tables and I’m just a human. Just one tiny human trying my best. ;)Anyway, now that we’ve established my deep love for the invention of the drive-thru, let’s move on to why I genuinely LOVE Wendy’s. THEIR SALADS! I hope you don’t feel like I’m yelling at you. I just feel like we all need to be on the same page about my excitement for Wendy’s salads.One of my favorite things to do is go through the Wendy’s drive-thru, order a salad for me (while my kids are safely contained in their beloved car seats), then head to the park and let them have fun while I can watch them play and eat my salad! They love when I order some Wendy’s chicken for them, too. Swinging by Wendy’s is a win/win situation. Our house stays clean, there are no dishes to do and no food is thrown on the floor. I bet you can guess which two are the main culprits. Grabbing Wendy’s for lunch gives us the chance to enjoy the outdoors without the stress of packing a lunch – because ensuring we all make it out of the house can be stressful enough.The Wendy’s Berry Burst Chicken Salad is DELICIOUS. Like, genuinely, truly, delicious. One of my highest values in life is honesty. If it wasn’t good, I wouldn’t tell you to run, not walk, to go get yourself one like I’m doing right now. I love that it’s a choice for busy people like me. I like to eat wholesome meals and not many restaurants have options that I can easily order in a drive-thru. At many other restaurants, I have to choose between a fresh-made option and convenience. I don’t have to choose between convenience and delicious, freshly made food at Wendy's because they give me both. Thank you for getting it, Wendy’s.I’ve even talked my mom, sisters and friends into getting these salads. Trust me, it wasn’t hard. In fact, I called my mom the other day and she said, “Guess where I am?! The Wendy’s drive- thru about to get my salad.” I mean, it’s the least I can do for the people who love me the most. I’m a giver.The Wendy’s Berry Burst Chicken Salad has delicious chicken, crunchy lettuce, berries, roasted almonds, and a raspberry vinaigrette dressing that actually fits within my daily calorie intake goals. For reference, a lot of other dressings that are the same serving size have at least three times the calories. THREE TIMES! I only need one dressing packet for my full-sized Berry Burst Chicken Salad, which means it’s only 50 calories. This is incredible.To summarize my message to you today, my friend, I just want you to know that there IS a magical place where you can get everything you want and need. It’s a freshly made salad option, and you won’t have to witness any in-store restaurant meltdowns from your children - which is really a priceless gift. Just head to Wendy’s, AKA “the busy person’s solution to getting a freshly made salad while also maintaining the sanity of all involved.” You’re welcome.</div>
+<div class="link" style="height: 70px;"><a href="https://www.squaredealblog.com/homewendys/wendys-berry-burst-chicken-salad-is-back" target="_blank">Wendy’s Berry Burst Chicken Salad is Back <i class="arrow arrow--right"></i></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</main>
+<footer role="contentinfo">
+<div class="top">
+<div class="inner">
+<div class="region region-footer-top">
+<nav aria-labelledby="block-socialmenu-menu" class="block block-menu navigation menu--social-menu" id="block-socialmenu" role="navigation">
+<h2 class="visually-hidden" id="block-socialmenu-menu">Social Menu</h2>
+<ul class="menu">
+<li>
+<a aria-label="Twitter" href="https://twitter.com/Wendys" target="_blank" title="Twitter"><i aria-hidden="true" class="social-icon social--twitter social-icon social-twitter"></i></a>
+</li>
+<li>
+<a aria-label="Facebook" href="https://www.facebook.com/Wendys" target="_blank" title=""><i aria-hidden="true" class="social-icon social--facebook social-icon social-facebook"></i></a>
+</li>
+<li>
+<a aria-label="Instagram" href="https://instagram.com/wendys/" target="_blank" title=""><i aria-hidden="true" class="social-icon social--instagram social-icon social-instagram"></i></a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="region region-footer">
+<nav aria-labelledby="block-wendys-main-footer-menu" class="block block-menu navigation menu--footer" id="block-wendys-main-footer" role="navigation">
+<h2 class="visually-hidden" id="block-wendys-main-footer-menu">Footer menu</h2>
+<ul class="menu">
+<li class="show-link menu-item">
+<span class="default">
+<a href="http://www.wendysgiftcards.com/#/home" target="_self">Gift Cards</a>
+</span>
+<span class="mobile">
+<a href="http://www.wendysgiftcards.com/#/home" target="_self">Gift Cards</a>
+</span>
+</li>
+<li class="show-link menu-item">
+<span class="default">
+<a data-drupal-link-system-path="node/316" href="https://www.wendys.com/contact-us" target="_self">Contact Us</a>
+</span>
+<span class="mobile">
+<a data-drupal-link-system-path="node/316" href="https://www.wendys.com/contact-us" target="_self">Contact Us</a>
+</span>
+</li>
+<li class="show-link menu-item">
+<span class="default">
+<a data-drupal-link-system-path="node/496" href="https://www.wendys.com/investor-relations" target="_self">Investors</a>
+</span>
+<span class="mobile">
+<a data-drupal-link-system-path="node/496" href="https://www.wendys.com/investor-relations" target="_self">Investors</a>
+</span>
+</li>
+<li class="show-link menu-item">
+<span class="default">
+<a data-drupal-link-system-path="node/321" href="https://www.wendys.com/franchising" target="_self">Franchising</a>
+</span>
+<span class="mobile">
+<a data-drupal-link-system-path="node/321" href="https://www.wendys.com/franchising" target="_self">Franchising</a>
+</span>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="block-legalmenu-menu" class="block block-menu navigation menu--legal-menu" id="block-legalmenu" role="navigation">
+<h2 class="visually-hidden" id="block-legalmenu-menu">Legal Menu</h2>
+<ul class="menu">
+<li class="show-link menu-item">
+<span class="default">
+<a data-drupal-link-system-path="node/286" href="https://www.wendys.com/privacy-policy" target="_self">Privacy Policy</a>
+</span>
+<span class="mobile">
+<a data-drupal-link-system-path="node/286" href="https://www.wendys.com/privacy-policy" target="_self">Privacy Policy</a>
+</span>
+</li>
+<li class="show-link menu-item">
+<span class="default">
+<a data-drupal-link-system-path="node/291" href="https://www.wendys.com/terms-and-conditions" target="_self">Terms and Conditions</a>
+</span>
+<span class="mobile">
+<a data-drupal-link-system-path="node/291" href="https://www.wendys.com/terms-and-conditions" target="_self">Terms and Conditions</a>
+</span>
+</li>
+<li class="show-link menu-item">
+<span class="default">
+<a data-drupal-link-system-path="node/296" href="https://www.wendys.com/cookies-and-tracking" target="_self">Cookies and Tracking</a>
+</span>
+<span class="mobile">
+<a data-drupal-link-system-path="node/296" href="https://www.wendys.com/cookies-and-tracking" target="_self">Cookies and Tracking</a>
+</span>
+</li>
+<li class="show-link menu-item">
+<span class="default">
+<a data-drupal-link-system-path="node/576" href="https://www.wendys.com/site-map" target="_self">Site Map</a>
+</span>
+<span class="mobile">
+<a data-drupal-link-system-path="node/576" href="https://www.wendys.com/site-map" target="_self">Site Map</a>
+</span>
+</li>
+</ul>
+</nav>
+<div class="block block-block-content block-block-content567df7e5-2146-4b92-9151-c2269aabbcaa" id="block-chatblock">
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><script src="https://wendyscommunities.force.com/customercare/lightning/lightning.out.js">
+<![CDATA[// ><!--
+ 
+//--><!]]>
+</script><script type="text/javascript">
+<![CDATA[// ><!--
+
+
+function readCookie(t){try{for(var n=t+"=",r=document.cookie.split(";"),e=0;e<r.length;e++){var i=r[e].trim();if(0==i.indexOf(n))return i.substring(n.length,i.length)}}catch(t){}return null}
+
+var locationCookie = { locationCookie: JSON.parse(decodeURIComponent(readCookie('wenGlobalWeb'))) };
+
+
+function loadChatJS() {
+  if (typeof jQuery == 'undefined') {
+    setTimeout(function(){ loadChatJS(); }, 100);
+    return;
+  }
+
+  (function($) {
+    if (new RegExp("^" + "*contact-us".split("*").join(".*") + "$").test(window.location.pathname)) {
+      
+      $('body').append("<div id='chatBotContainer'>");
+//      setTimeout(function(){ loadChatJS(); }, 100);
+      $Lightning.use("nfchat:Chat",
+                   function() {
+                     $Lightning.createComponent(
+                       "nfchat:ChatBot", {
+                         "bot": "Customer_Care",
+                         "nfchatContext": locationCookie
+                       },
+                       "chatBotContainer",
+                       function(cmp) { }
+                     );
+                   },
+                     'https://wendyscommunities.force.com/customercare'
+                    ); 
+    };
+    
+    
+  }(jQuery));
+}
+loadChatJS();
+
+
+//--><!]]>
+</script></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="region region-footer-bottom">
+<div class="block block-dropdown-language" id="block-dropdownlanguageselector">
+<fieldset class="js-form-item form-item js-form-wrapper form-wrapper">
+<legend>
+<span class="fieldset-legend">Switch Language</span>
+</legend>
+<div class="fieldset-wrapper">
+<div class="dropbutton-wrapper dropbutton-multiple"><div class="dropbutton-widget"><ul class="dropdown-language-item dropbutton"><li class="en-us dropbutton-action"><a class="language-link active-language" href="https://www.wendys.com/nutrition-and-health" hreflang="en-us" title="Switch locale to U.S. - English">U.S. - English</a></li><li class="dropbutton-toggle"><button type="button"><span class="dropbutton-arrow"><span class="visually-hidden">List additional actions</span></span></button></li><li class="dropbutton-action secondary-action"><ul class="sub-list"><li class="en-us dropbutton-action secondary-action"><a class="language-link active-language" href="https://www.wendys.com/nutrition-and-health" hreflang="en-us" title="Switch locale to U.S. - English">U.S. - English</a></li><li class="es-us dropbutton-action secondary-action"><a class="language-link" href="https://www.wendys.com/es-US/node/806" hreflang="es-US" title="Switch locale to E.E.U. - Español">E.E.U. - Español</a></li><li class="en-ca dropbutton-action secondary-action"><a class="language-link" href="https://www.wendys.com/en-ca/node/806" hreflang="en-ca" title="Switch locale to Canada - English">Canada - English</a></li><li class="fr-ca dropbutton-action secondary-action"><a class="language-link" href="https://www.wendys.com/fr-ca/node/806" hreflang="fr-ca" title="Switch locale to Canada - Français">Canada - Français</a></li><li class="en dropbutton-action secondary-action"><a class="language-link" href="https://www.wendys.com/en/node/806" hreflang="en" title="Switch locale to English">English</a></li></ul></li></ul></div></div>
+</div>
+</fieldset>
+</div>
+<div class="block block-block-content block-block-content6b68d138-bf92-4caf-8046-08c525345715" id="block-copyright">
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>© 2019 Quality Is Our Recipe, LLC</p>
+</div>
+</div>
+<div class="block block-block-content block-block-content7b859ae9-3471-42df-aa80-bab946da2920" id="block-tempcss">
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><style type="text/css">
+<![CDATA[/* ><!--*/
+
+.block-dropdown-language .dropbutton-wrapper .secondary-action ul li.en { display: none }
+
+/*--><!]]>*/
+</style></div>
+</div>
+<div class="block block-block-content block-block-contentd14410a8-3d18-4567-a22f-56d627e9eb26" id="block-segmenter">
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><script type="text/javascript">
+<![CDATA[// ><!--
+
+function loadIrJS() {
+  if (typeof jQuery == 'undefined') {
+    setTimeout(function(){ loadIrJS(); }, 100);
+    return;
+  }
+
+(function($) {
+  $('a[href="/hamburgers"]').click(function(e) {
+    _tcaq.push( ['updatePerson', {'person_udf3':'Hamburgers' } ] );
+  });
+  $('a[href="/chicken-wraps-more"]').click(function(e) {
+    _tcaq.push( ['updatePerson', {'person_udf3':'Chicken' } ] );
+  });
+  $('a[href="/fresh-made-salads"]').click(function(e) {
+    _tcaq.push( ['updatePerson', {'person_udf3':'Salad' } ] );
+  });
+
+  $('a[href="/wendys-kids-meal"]').click(function(e) {
+    _tcaq.push( ['updatePerson', {'person_udf3':'kidsmeal' } ] );
+  });
+
+$.getJSON('https://api.ipify.org?format=json', function(data){
+    _tcaq.push( ['updatePerson', {'person_udf5':data.ip } ] );
+    console.log(data.ip);
+});
+
+}(jQuery));
+}
+loadIrJS();
+
+//--><!]]>
+</script></div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script data-drupal-selector="drupal-settings-json" type="application/json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/806","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en-us"},"pluralDelimiter":"\u0003","jquery":{"ui":{"datepicker":{"isRTL":false,"firstDay":0}}},"acquia_lift_inspector":{"profile_manager_url":"https:\/\/us-east-1.lift.acquia.com"},"field_group":{"html_element":{"mode":"default","context":"view","settings":{"id":"","classes":"inner","element":"div","show_label":false,"label_element":"h3","attributes":"","effect":"none","speed":"fast"}}},"blazy":{"loadInvisible":false,"offset":600,"saveViewportOffsetDelay":50},"user":{"uid":0,"permissionsHash":"aaf3154baeb02b450790401a0251b75f3fbcc32f167e46e5f3da55d3b80bfa58"}}</script>
+<script src="https://www.wendys.com/sites/default/files/js/js_KcOwx1558MK7vl1A50VldUr5yvKW1GolwxyL6siSoJk.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
+<script src="https://www.wendys.com/sites/default/files/js/js_wc7oVgl6drAFc7C-WMHSSvfxEFnEq7CWrwEVlrMRByc.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="https://www.wendys.com/sites/default/files/js/js_SQ1B0mGuBoAci3errm_sAkia19zoswN7BVR-ZgJ6r9M.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZhNWia_uhm39BBTmfWHVJLAZP5qYjYCA"></script>
+<script src="https://www.wendys.com/sites/default/files/js/js_jIKoS4OytrNBcQpgTLQPpx0_fTbTAAr8EfQMEBbbeZw.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"36a93c7e08","applicationID":"88767238","transactionName":"blZQbUFQCEVXARINDVccc1pHWAlYGRIHAwdmUFNaW1Q=","queueTime":0,"applicationTime":27,"atts":"QhFTGwlKG0s=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script src="https://lift3assets.lift.acquia.com/stable/assets/lift-collection-1.36.0.js" type="text/javascript"></script></body></html>

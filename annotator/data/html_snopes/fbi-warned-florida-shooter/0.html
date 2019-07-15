@@ -1,0 +1,1828 @@
+<html class="js history svg hashchange video webgl inlinesvg svgclippaths fontface cssanimations backgroundsize flexbox flexboxlegacy objectfit object-fit pc chrome" dir="ltr" lang="en" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "><head>
+<meta charset="utf-8"/><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://connect.facebook.net/signals/plugins/inferredEvents.js?v=2.8.51"></script><script async="" src="https://connect.facebook.net/signals/config/982014898532354?v=2.8.51&amp;r=stable"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KD5PM9S"></script><script async="" src="//www.googleadservices.com/pagead/conversion_async.js" type="text/javascript"></script><script async="" src="//www.googleadservices.com/pagead/conversion_async.js" type="text/javascript"></script><script async="" src="//www.googleadservices.com/pagead/conversion_async.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NDSHG3B"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content="Florida White Supremacist Group Admits Ties to Alleged Parkland School Shooter Nikolas Cruz | Anti-Defamation League" name="title"/>
+<link href="https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz" rel="canonical"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Anti-Defamation League" property="og:site_name"/>
+<meta content="1334984003214332" property="fb:app_id"/>
+<meta content="A spokesperson for the white supremacist group Republic of Florida (ROF) told the Anti-Defamation League that Nikolas Cruz was associated with his group." name="description"/>
+<meta content="A spokesperson for the white supremacist group Republic of Florida (ROF) told the Anti-Defamation League that Nikolas Cruz was associated with his group." name="twitter:description"/>
+<meta content="Florida White Supremacist Group Admits Ties to Alleged Parkland School Shooter Nikolas Cruz" name="twitter:title"/>
+<meta content="https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz" property="og:url"/>
+<link href="https://www.adl.org/themes/custom/adl_theme/images/adl_twittercard.png" rel="image_src"/>
+<meta content="information, education, legislation, and advocacy" name="keywords"/>
+<meta content="Florida White Supremacist Group Admits Ties to Alleged Parkland School Shooter Nikolas Cruz" property="og:title"/>
+<meta content="no-referrer" name="referrer"/>
+<meta content="A spokesperson for the white supremacist group Republic of Florida (ROF) told the Anti-Defamation League that Nikolas Cruz was associated with his group." property="og:description"/>
+<meta content="https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz" name="twitter:url"/>
+<meta content="https://www.adl.org/sites/default/files/styles/open_graph_image_1200_x_628_/public/2018-02/1518673164058.jpg?itok=PR2gNA94" name="twitter:image"/>
+<meta content="https://www.adl.org/sites/default/files/styles/open_graph_image_1200_x_628_/public/2018-02/1518673164058.jpg?itok=PR2gNA94" property="og:image"/>
+<meta content="https://www.adl.org//themes/custom/adl_theme/images/adl_twittercard.png" property="og:image:url"/>
+<meta content="Drupal 8 (https://www.drupal.org)" name="Generator"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://www.adl.org/themes/custom/adl_theme/favicons/favicon-v2.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<link href="https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz" rel="revision"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NDSHG3B');</script>
+<title>Florida White Supremacist Group Admits Ties to Alleged Parkland School Shooter Nikolas Cruz | Anti-Defamation League</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<link href="https://www.adl.org/themes/custom/adl_theme/favicons/apple-touch-icon-v2.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="https://www.adl.org/themes/custom/adl_theme/favicons/favicon-32x32-v2.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://www.adl.org/themes/custom/adl_theme/favicons/favicon-16x16-v2.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="https://www.adl.org/themes/custom/adl_theme/favicons/site.webmanifest" rel="manifest"/>
+<link color="#01a0e1" href="https://www.adl.org/themes/custom/adl_theme/favicons/safari-pinned-tab-v2.svg" rel="mask-icon"/>
+<meta content="#01a0e1" name="msapplication-TileColor"/>
+<meta content="#01a0e1" name="theme-color"/>
+<link href="https://use.typekit.net/lta0yxn.css" rel="stylesheet"/>
+<style media="all">
+      [class^=icon-]:before{font-family:adl-icons!important;font-style:normal!important;font-weight:400!important;font-variant:normal!important;text-transform:none!important;vertical-align:middle;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+*{vertical-align:baseline}
+html{-moz-osx-font-smoothing:grayscale}
+a,a:visited,body{color:#2F3031}
+*,body{margin:0}
+*,ul{padding:0}
+#page,.element-invisible,svg:not(:root){overflow:hidden}
+.cf:after{clear:both}
+@font-face{font-family:adl-icons;src:url(/themes/custom/adl_theme/fonts/adl-icons/fonts/adl-icons.eot);src:url(/themes/custom/adl_theme/fonts/adl-icons/fonts/adl-icons.eot?#iefix) format("embedded-opentype"),url(/themes/custom/adl_theme/fonts/adl-icons/fonts/adl-icons.woff) format("woff"),url(/themes/custom/adl_theme/fonts/adl-icons/fonts/adl-icons.ttf) format("truetype"),url(/themes/custom/adl_theme/fonts/adl-icons/fonts/adl-icons.svg#adl-icons) format("svg");font-weight:400;font-style:normal}
+[class^=icon-]:before{font-size:16px;font-size:1rem}
+.icon-youtube:before{content:"62"}
+.icon-twitter:before{content:"63"}
+.icon-pinterest:before{content:"68"}
+.icon-facebook:before{content:"6e"}
+.icon-instagram:before{content:"71"}
+.icon-localadl:before{content:"73"}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+header,nav{display:block}
+input{color:inherit;font:inherit;margin:0}
+.f-heading,.f-title, body {font-family: titillium-web,"Arial Narrow",Arial,Lucida Grande,sans-serif;}
+input::-moz-focus-inner{border:0;padding:0}
+input{line-height:normal}
+*{border:0}
+*,:after,:before{-ms-box-sizing:border-box;box-sizing:border-box}
+body,html{height:100%;-webkit-overflow-scrolling:touch!important}
+html{font-size:100%;-webkit-font-smoothing:antialiased}
+body{line-height:28.8px;font-size:16px;font-size:1rem;background:#FFF}
+a{background-color:transparent;text-decoration:none;font-weight:600}
+ul{margin:0}
+@media only screen and (min-width:1250px){ #page{box-shadow:0 0 20px rgba(0,0,0,.12)}
+}
+.element-invisible{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);height:1px;width:1px}
+.cf:after,.cf:before{content:"";display:table}
+#page{max-width:2000px}
+.border-bottom{border-bottom:1px solid #CACBCF;border-bottom:1px solid rgba(202,203,207,.65)}
+#page{position:relative}
+#page{width:100%;min-height:100%;height:auto;margin:0 auto;padding:0;zoom:1;background-color:#FFF}
+.l-container-md{width:100%;height:auto;margin:0 auto}
+@media only screen and (min-width:340px){.l-container-md{width:90.5%}
+}
+@media only screen and (min-width:750px){.l-container-md{width:93%}
+}
+@media only screen and (min-width:1250px){.l-container-md{width:96%}
+}
+.l-container-md{max-width:90.5%}
+@media only screen and (min-width:750px){.l-container-md{max-width:1110px;}
+}
+@media only screen and (min-width:1500px){.l-container-md{max-width:1200px;}
+}
+.inside-row-m{padding: 20px 15px 15px;}
+@media only screen and (min-width:1024px){.inside-row-m{padding:20px 0;}
+}
+@media only screen and (min-width:768px){ #header-wrapper.stuck .header-bottom.inside-row-m{padding:10px 0;}
+}
+@media only screen and (min-width:768px){ #header-wrapper.stuck {position: fixed;width: 100%;top: 0;left: 0;z-index: 99;-webkit-transform: translateZ(0);transform: translateZ(0);}
+}
+.inside-row-l{padding:20px 0}
+.inside-row-l{padding:40px 0}
+.inside-row-xl{padding:40px 0}
+.inside-row-xxl{padding:60px 0}
+#header .col-left,#header .col-middle,#header .col-middle .block,#header .col-middle nav{display:inline-block;vertical-align: middle;}
+.flex-contain{display:-moz-flex;display:-ms-flexbox;display:flex;display:-webkit-flex}
+ul.menu{list-style:none}
+#header{background-color:#FFF;border-bottom:1px solid #CACBCF}
+#header .header-bottom{position:relative}
+#header .header-bottom-inner{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;max-width:90.5%;height:auto;margin:0 auto}
+@media only screen and (min-width:768px){ #header .header-bottom-inner{width:93%;max-width:1110px}
+}
+@media only screen and (min-width:1250px){ #header .header-bottom-inner{width:96%}
+}
+@media only screen and (min-width:1500px){ #header .header-bottom-inner{max-width:1200px}
+}
+#header .header-bottom-inner .col-left{max-width:120px}
+@media only screen and (min-width:768px) and (max-width:890px){ #header .header-bottom-inner .col-left{max-width:75px;min-width:75px;}
+}
+@media only screen and (min-width:891px) and (max-width:1023px){ #header .header-bottom-inner .col-left{max-width:100px;min-width:100px;}
+}
+@media only screen and (min-width:768px){ #header .header-bottom-inner .col-middle{-ms-flex:10;flex:10;position:static;text-align:left}
+}
+#header .col-middle,#header .col-middle .menu-main .menu-item,#header .col-middle .menu-toggle{position:relative}
+@media only screen and (max-width:767px){ #header .header-bottom-inner .col-left{margin:0 auto 0 0}
+    #header .header-bottom-inner .col-middle{display:none}
+}
+#header .header-bottom-inner .col-right{-ms-flex:1;flex:1}
+#header .col-left{width:120px;float:left;line-height:0}
+@media only screen and (min-width:1024px){ #header .col-left{padding-right:5px}
+}
+@media only screen and (max-width:1025px){ #header .col-middle{max-width:80%;white-space:nowrap;margin-left:10px;margin-right:5px}
+    #header .col-right .callout-donate-form .donate.form-submit-wrapper,#header .col-right .donate.btn,#header .col-right .gsc-control-cse form.gsc-search-box table.gsc-search-box .donate.gsc-search-button,#header .col-right .views-exposed-form input.donate[type=submit],#header .col-right main form .form-actions .donate.form-submit-wrapper,.callout-donate-form #header .col-right .donate.form-submit-wrapper,.gsc-control-cse form.gsc-search-box table.gsc-search-box #header .col-right .donate.gsc-search-button,.views-exposed-form #header .col-right input.donate[type=submit],main form .form-actions #header .col-right .donate.form-submit-wrapper{padding-left:12px;padding-left:calc(12px+13 * (100vw - 769px)/ 431);padding-right:12px;padding-right:calc(12px+13 * (100vw - 769px)/ 431)}
+}
+@media only screen and (max-width:859px){ #header .col-middle .block-google-cse-search{margin-left:-10px}
+}
+#header .col-middle .menu-toggle{width:22px;height:16px;display:inline-block;vertical-align:middle;background-color:transparent}
+@media only screen and (min-width:340px){ #header .col-middle .menu-toggle{width:32px;height:22px}
+}
+#header .col-middle .menu-main .menu-item a{position:relative;font-weight:500}
+@media only screen and (min-width:768px){ #header .col-middle .menu-toggle{display:none;visibility:hidden}
+    #header .col-middle .menu-main{margin-right:8px;margin-left:8px;margin-left:calc(8px + 32 * (100vw - 769px)/ 431);}
+    #header .col-middle .menu-main .menu-item a{font-size:10px;font-size:calc(10px + 4 * (100vw - 769px)/ 431);letter-spacing:.3px;}
+}
+@media only screen and (min-width:1250px){ #header .col-middle .menu-main{margin:0 10px 0 30px}
+    #header .col-middle .menu-main .menu-item a{font-size:14px;font-size:.875rem}
+}
+@media only screen and (min-width:768px){ #header .col-middle .menu-main .menu-item:not(:last-child){margin-right:10px;}
+}
+@media only screen and (min-width:1250px){ #header .col-middle .menu-main .menu-item:not(:last-child){margin-right:20px}
+}
+@media only screen and (min-width:1500px){ #header .col-middle .menu-main .menu-item:not(:last-child){margin-right:30px}
+}
+#header .col-middle .menu-main .menu-item.menu-item--active-trail a:after{content:"";width:100%;height:2px;background-color:#0034C6;position:absolute;left:50%;bottom:-6px;-ms-transform:translateX(-50%);transform:translateX(-50%)}
+#header .col-middle .menu-main .menu-level-1{position:absolute;top:0;left:0}
+#header .col-middle .menu-main .menu-level-1>.menu-item{display:block}
+#header ul.menu{display:none;visibility:hidden}
+@media only screen and (min-width:768px){ #header ul.menu{display:inline-block;visibility:visible}
+}
+#header ul.menu li.menu-item{display:inline-block}
+#header ul.menu li.menu-item .menu-item-arrow{position:absolute;right:-13px;top:0;opacity:0;transition:all .2s ease-in;-ms-transform:translateY(-4px);transform:translateY(-4px)}
+#header ul.menu li.menu-item .menu-item-arrow>svg{height:7px;width:7px;fill:gray}
+#header ul.menu li.menu-item.dropped-down .menu-item-arrow{opacity:1;-ms-transform:translateY(0);transform:translateY(0)}
+#header ul.menu.menu-main{text-transform:uppercase}
+#header ul.menu.menu-main .menu-item a{font-weight:500}
+#header .col-right .callout-donate-form .donate.form-submit-wrapper,#header .col-right .donate.btn,#header .col-right .gsc-control-cse form.gsc-search-box table.gsc-search-box .donate.gsc-search-button,#header .col-right .views-exposed-form input.donate[type=submit],#header .col-right main form .form-actions .donate.form-submit-wrapper,.callout-donate-form #header .col-right .donate.form-submit-wrapper,.gsc-control-cse form.gsc-search-box table.gsc-search-box #header .col-right .donate.gsc-search-button,.views-exposed-form #header .col-right input.donate[type=submit],main form .form-actions #header .col-right .donate.form-submit-wrapper{margin:0;text-shadow:0 0 2px #ac4500;float:right}
+@media only screen and (min-width:768px){ #header .col-right{display:inline-block;visibility:visible}
+    #header .col-right .callout-donate-form .donate.form-submit-wrapper,#header .col-right .donate.btn,#header .col-right .gsc-control-cse form.gsc-search-box table.gsc-search-box .donate.gsc-search-button,#header .col-right .views-exposed-form input.donate[type=submit],#header .col-right main form .form-actions .donate.form-submit-wrapper,.callout-donate-form #header .col-right .donate.form-submit-wrapper,.gsc-control-cse form.gsc-search-box table.gsc-search-box #header .col-right .donate.gsc-search-button,.views-exposed-form #header .col-right input.donate[type=submit],main form .form-actions #header .col-right .donate.form-submit-wrapper{font-size:12px;padding:15px 12px;letter-spacing:1px;}
+    #header-bottom ul.menu-level-1>li>a,#header-bottom ul.menu-level-2>li>a{display:block;transition:all .4s cubic-bezier(.55,.085,0,.99)}
+    #header-bottom ul.menu-level-1>li>a:hover,#header-bottom ul.menu-level-2>li>a:hover{-ms-transform:translateX(3px);transform:translateX(3px)}
+}
+@media only screen and (min-width:1024px){ #header .col-right .callout-donate-form .donate.form-submit-wrapper,#header .col-right .donate.btn,#header .col-right .gsc-control-cse form.gsc-search-box table.gsc-search-box .donate.gsc-search-button,#header .col-right .views-exposed-form input.donate[type=submit],#header .col-right main form .form-actions .donate.form-submit-wrapper,.callout-donate-form #header .col-right .donate.form-submit-wrapper,.gsc-control-cse form.gsc-search-box table.gsc-search-box #header .col-right .donate.gsc-search-button,.views-exposed-form #header .col-right input.donate[type=submit],main form .form-actions #header .col-right .donate.form-submit-wrapper{font-size:16px;font-size:1rem;padding-left:20px;padding-right:20px;}
+}
+#header-bottom{width:100%;background-color:rgba(255,255,255,.98);z-index:5}
+#header-bottom ul.menu-level-1>li>a.is-active,#header-bottom ul.menu-level-2>li>a.is-active{margin-left:7px;position:relative}
+#header-bottom ul.menu-level-1>li>a.is-active:before,#header-bottom ul.menu-level-2>li>a.is-active:before{content:"";position:absolute;top:5%;left:-7px;display:inline-block;width:2px;height:90%;background-color:#0034C6}
+#header-bottom ul.menu-level-2>li.menu-item--active-trail>a{margin-left:7px;position:relative}
+#header-bottom ul.menu-level-2>li.menu-item--active-trail>a:before{content:"";position:absolute;top:5%;left:-7px;display:inline-block;width:2px;height:90%;background-color:#0034C6}
+@media only screen and (min-width:768px){ #header-bottom{position:absolute;box-shadow:0 4px 8px 0 rgba(18,18,18,.06)}
+    #header-bottom ul.menu-level-0 li.menu-item-level-0>span>a{margin-top:20px;display:block;text-transform:uppercase;font-size:19px;font-size:1.1875rem;letter-spacing:.075em}
+    #header-bottom ul.menu-level-0 li.menu-item-level-0>span>a:hover{color:#121212}
+    #header-bottom ul.menu-level-0 li.menu-item-level-0>span>a:hover svg{-ms-transform:rotate(270deg) translateY(3px);transform:rotate(270deg) translateY(3px)}
+    #header-bottom ul.menu-level-0 li.menu-item-level-0>.mobile-link{display:none}
+    #header-bottom ul.menu-level-0 li.menu-item-level-0>.tablet-link svg{fill:#0034C6;height:7px;width:auto;top:-3px;-ms-transform:rotate(270deg);transform:rotate(270deg);position:relative;transition:all .25s cubic-bezier(.55,.085,0,.99)}
+    #header-bottom ul.menu-level-1{columns:3 150px;padding:15px 0 20px;column-gap:3em}
+    #header-bottom ul.menu-level-1 li.menu-item-level-1>a{color:#0034C6;margin-bottom:10px;font-size:17px;font-size:1.0625rem;line-height:24px;line-height:1.5rem;font-weight:600;transition:all .4s cubic-bezier(.55,.085,0,.99)}
+    #header-bottom ul.menu-level-1 li.menu-item-level-1>a:hover{-ms-transform:translateX(4px);transform:translateX(4px)}
+}
+@media only screen and (min-width:768px) and (min-width:1024px){ #header-bottom ul.menu-level-1{padding:40px 0;}
+    #header-bottom ul.menu-level-1 li.menu-item-level-1>a{margin-bottom:10px;font-size:22px;font-size:1.375rem;font-weight:500}
+}
+@media only screen and (min-width:768px){ #header-bottom ul.menu-level-2{padding-bottom:20px}
+    #header-bottom ul.menu-level-2 li.menu-item-level-2{padding-bottom:4px}
+    #header-bottom ul.menu-level-2 li.menu-item-level-2>a{font-weight:500}
+}
+@media only screen and (min-width:1024px){ #header-bottom ul.menu-level-0 li.menu-item-level-0>span>a{display:none}
+    #header-bottom ul.menu-level-1{padding:20px 0}
+}
+#header-bottom .header-bottom-search,#header-bottom .header-bottom-social{display:none}
+@media only screen and (max-width:767px){ #header-bottom ul.menu-level-0 li.menu-item-level-0>.tablet-link{display:none}
+    #header-bottom .header-bottom-menu{position:relative;z-index:0;overflow:scroll;height:100%}
+    #header-bottom .header-bottom-search,#header-bottom .header-bottom-social{display:block;position:relative;height:50px}
+    #header-bottom{max-height:50px;box-shadow:0 0 10px 0 rgba(18,18,18,.26);overflow:hidden;position:fixed;bottom:0;left:0;height:100%;background-color:#FFF;transition:max-height .25s ease-in}
+    #header-bottom .menu-icon-close,#header-bottom .search-icon-close,#header-bottom .social-icon-close{display:none}
+    #header-bottom.expand-menu{max-height:100%;-webkit-overflow-scrolling:touch}
+}
+@media only screen and (max-width:767px){ #header-bottom.expand-menu #block-mainnavigation-bottom{opacity:1;transition:opacity .25s cubic-bezier(.55,.085,0,.99)}
+}
+@media only screen and (max-width:767px){ #header-bottom.expand-search--mobile,#header-bottom.expand-social{max-height:100px}
+    #header-bottom.expand-menu .header-bottom-search,#header-bottom.expand-menu .header-bottom-social,#header-bottom.expand-search--mobile .header-bottom-menu,#header-bottom.expand-search--mobile .header-bottom-social,#header-bottom.expand-social .header-bottom-menu,#header-bottom.expand-social .header-bottom-search{height:0;opacity:0}
+    #header-bottom.expand-menu .search-icon-open svg,#header-bottom.expand-menu .social-icon-open svg,#header-bottom.expand-social .menu-icon-open svg,#header-bottom.expand-social .search-icon-open svg{fill:#989898!important}
+    #header-bottom.expand-menu .menu-icon-close{display:block}
+    #header-bottom.expand-menu .menu-icon-open{display:none}
+    #header-bottom.expand-search--mobile .menu-icon-open svg,#header-bottom.expand-search--mobile .social-icon-open svg{fill:#989898!important;transition:fill .25s ease-in-out}
+    #header-bottom.expand-search--mobile .search-icon-close{display:block}
+    #header-bottom.expand-search--mobile .search-icon-open{display:none}
+    #header-bottom.expand-social .social-icon-close{display:block}
+    #header-bottom.expand-social .social-icon-open{display:none}
+    #header-bottom ul.menu-level-0 li.menu-item-level-0{border-bottom:1px solid #d8d8d8;padding-bottom:15px;margin-bottom:20px}
+    #header-bottom ul.menu-level-0 li.menu-item-level-0>a{color:#121212;text-transform:uppercase;font-size:20px;font-size:1.25rem;margin-bottom:7px;display:block}
+    #header-bottom ul.menu-level-0 li.menu-item-level-0>a.is-active{margin-left:7px;position:relative}
+    #header-bottom ul.menu-level-0 li.menu-item-level-0>a.is-active:before{content:"";position:absolute;top:5%;left:-7px;display:inline-block;width:2px;height:90%;background-color:#0034C6}
+    #header-bottom ul.menu-level-0 li.menu-item-level-0:last-of-type{border-bottom:none;padding-bottom:0;margin-bottom:0}
+    #header-bottom ul.menu-level-1 li.menu-item-level-1{margin-bottom:3px}
+    #header-bottom ul.menu-level-1 li.menu-item-level-1>a{font-weight:lighter;font-size:17px;font-size:1.0625rem}
+    #header-bottom ul.menu-level-2{display:none}
+    #header-bottom nav#block-mainnavigation-bottom{padding:20px 0 80px;transition:opacity 1s cubic-bezier(.55,.085,0,.99);opacity:0}
+    #header-bottom .header-bottom-inner{position:relative;height:100%}
+    #header-bottom .header-bottom-bar{background-color:#ebebed;height:50px;position:absolute;width:100%;bottom:0;left:0;z-index:1}
+    #header-bottom .header-bottom-bar .header-bottom-bar-inner{display:-moz-flex;display:-ms-flexbox;display:flex}
+    #header-bottom .header-bottom-bar .header-bottom-bar-inner .header-bottom-button{-ms-flex:1 0 20%;flex:1 0 20%;position:relative;background:0 0}
+    #header-bottom .header-bottom-bar .header-bottom-bar-inner .header-bottom-button svg{height:16px;width:16px;position:absolute;top:50%;top:calc(50% - 2px);left:50%;-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);fill:#000;margin:0 auto;transition:fill .25s ease-in-out}
+    #header-bottom .block-site-branding{-ms-flex:1 0 20%;flex:1 0 20%}
+    #header-bottom .block-site-branding svg{max-width:70px;height:50px;width:100%;}
+}
+@media only screen and (min-width:768px){ #header-bottom .block-site-branding,#header-bottom .header-bottom-bar{display:none}
+}
+#header-bottom #block-mainnavigation-bottom .block-title,#header-bottom .header-bottom-menu-button{display:none}
+@media only screen and (max-width:767px){ #header-bottom .header-bottom-menu-button{display:inline-block}
+}
+#header-bottom .menu-item-arrow,ul.header-bottom-social-share{display:none}
+@media only screen and (min-width:768px){ #header-bottom .menu-level-0>li.menu-item{display:none}
+}
+.btn.orange,.callout-donate-form .orange.form-submit-wrapper,.gsc-control-cse form.gsc-search-box table.gsc-search-box button.gsc-search-button,.views-exposed-form input.orange[type=submit],main form .form-actions .orange.form-submit-wrapper{background-color:#FF6C0C;color:#FFF}
+.donate.btn{position:relative;display:inline-block;cursor:pointer;text-align:center;text-transform:uppercase;text-indent:0;overflow:hidden;color:#FFF;background-color:#f47f34;font-weight:400;letter-spacing:2px;font-family:effra,Arial,Lucida Grande,sans-serif;padding:15px 12px;z-index:0;transition:background-color .4s cubic-bezier(.55,.085,0,.99),color .4s cubic-bezier(.55,.085,0,.99),border-color .4s cubic-bezier(.55,.085,0,.99),text-indent .4s cubic-bezier(.55,.085,0,.99);font-size:14px;font-size:.875rem;line-height:0;}
+.btn.orange:after,.callout-donate-form .orange.form-submit-wrapper:after,.gsc-control-cse form.gsc-search-box table.gsc-search-box button.gsc-search-button:after,.views-exposed-form input.orange[type=submit]:after,main form .form-actions .orange.form-submit-wrapper:after{background-color:#d85500}
+#block-googlecsesearch{height:48px;position:static;}
+.block-google-cse-search #google-search-form-container--desktop{display:none;}
+.block-google-cse-search .search-button {padding: 10px;height: 48px;}
+.screen-reader-text{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+.visually-hidden{position:absolute!important;clip:rect(1px,1px,1px,1px);overflow:hidden;height:1px;width:1px;word-wrap:normal}
+.reuseable-callout.widescreen{position:relative;}
+.has-video.hero.initiative,.reuseable-callout.widescreen.has-video{min-height:400px}
+.bg-black{color:#121212}
+.ani-reveal.hero.initiative .callout-primary,.ani-reveal.hero.initiative .callout-secondary,.ani-reveal.reuseable-callout .callout-primary,.ani-reveal.reuseable-callout .callout-secondary{opacity:0}
+.ani-reveal.paragraph-grid-row .grid-row{opacity:0}
+.ani-reveal.paragraph-link-text-list .content-inner{opacity:0}
+.ani-reveal.paragraph-icon-row-callout .content-inner,.ani-reveal.paragraph-social-media-row .content-inner,.ani-reveal.reusable-subscribe-and-social .content-inner{opacity:0}
+.breadcrumb-dropdown-menu ol{visibility:hidden}
+.f-title{margin-top:-10px}
+.f-heading,.f-title{font-weight:500}
+.f-heading.normal,.f-title.normal{font-weight:400}
+.f-heading.medium,.f-title.medium,.gsc-control-cse .gsc-results .gsc-result .gsc-thumbnail-inside .gs-title,.gsc-control-cse .gsc-results .gsc-result .gsc-thumbnail-inside b{font-weight:600}
+.f-heading.heavy,.f-title.heavy{font-weight:700}
+.f-subtitle,.f-subtitle .gsc-control-cse .gsc-results .gsc-result .gsc-table-result,.f-subtitle p,.gsc-control-cse .gsc-results .gsc-result .f-subtitle .gsc-table-result{color:#687681;font-family:ff-tisa-web-pro,Georgia,serif;font-style:italic;font-size:18px;font-size:1.125rem;line-height:26px;line-height:1.625rem}
+@media only screen and (min-width:750px){.f-subtitle,.f-subtitle .gsc-control-cse .gsc-results .gsc-result .gsc-table-result,.f-subtitle p,.gsc-control-cse .gsc-results .gsc-result .f-subtitle .gsc-table-result{font-size:20px;font-size:1.25rem;line-height:22px;line-height:1.375rem}
+}
+@media only screen and (min-width:1024px){.f-subtitle,.f-subtitle .gsc-control-cse .gsc-results .gsc-result .gsc-table-result,.f-subtitle p,.gsc-control-cse .gsc-results .gsc-result .f-subtitle .gsc-table-result{font-size:22px;font-size:1.375rem;line-height:26px;line-height:1.625rem}
+}
+.landing-header .f-title,.paragraph-text-only .f-title{font-size:32px;font-size:2rem;line-height:36px;line-height:2.25rem;font-weight:600}
+@media only screen and (min-width:750px){.landing-header .f-title,.paragraph-text-only .f-title{font-size:36px;font-size:2.25rem;line-height:40px;line-height:2.5rem}
+    .landing-header .f-subtitle,.paragraph-text-only .f-subtitle{max-width:620px;margin:0 auto}
+}
+@media only screen and (min-width:1024px){.landing-header .f-title,.paragraph-text-only .f-title{font-size:40px;font-size:2.5rem;line-height:44px;line-height:2.75rem}
+    .gsc-control-cse .gsc-results .gsc-result .landing-header .f-subtitle .gsc-table-result,.gsc-control-cse .gsc-results .gsc-result .paragraph-text-only .f-subtitle .gsc-table-result,.landing-header .f-subtitle,.landing-header .f-subtitle .gsc-control-cse .gsc-results .gsc-result .gsc-table-result,.landing-header .f-subtitle p,.paragraph-text-only .f-subtitle,.paragraph-text-only .f-subtitle .gsc-control-cse .gsc-results .gsc-result .gsc-table-result,.paragraph-text-only .f-subtitle p{color:#2F3031;font-family:titillium-web,"Arial Narrow",Arial,Lucida Grande,sans-serif;font-style:normal;margin-top:10px;font-size:17px;font-size:1.0625rem;line-height:26px;line-height:1.625rem}
+}
+@media only screen and (min-width:1024px){.gsc-control-cse .gsc-results .gsc-result .landing-header .f-subtitle .gsc-table-result,.gsc-control-cse .gsc-results .gsc-result .paragraph-text-only .f-subtitle .gsc-table-result,.landing-header .f-subtitle,.landing-header .f-subtitle .gsc-control-cse .gsc-results .gsc-result .gsc-table-result,.landing-header .f-subtitle p,.paragraph-text-only .f-subtitle,.paragraph-text-only .f-subtitle .gsc-control-cse .gsc-results .gsc-result .gsc-table-result,.paragraph-text-only .f-subtitle p{font-size:18px;font-size:1.125rem;line-height:28px;line-height:1.75rem;margin-top:20px}
+}
+.gsc-control-cse .gsc-results .gsc-result .hero-full.initiative .f-subtitle .gsc-table-result,.hero-full.initiative .f-subtitle,.hero-full.initiative .f-subtitle .gsc-control-cse .gsc-results .gsc-result .gsc-table-result,.hero-full.initiative .f-subtitle p{color:#FFF}
+.f-sub-text,.f-sub-text .gsc-control-cse .gsc-results .gsc-result .gsc-table-result,.f-sub-text p,.gsc-control-cse .gsc-results .gsc-result .f-sub-text .gsc-table-result{color:#687681;font-weight:500;font-size:17px;font-size:1.0625rem;line-height:19px;line-height:1.1875rem}
+@media only screen and (min-width:1024px){.f-sub-text,.f-sub-text .gsc-control-cse .gsc-results .gsc-result .gsc-table-result,.f-sub-text p,.gsc-control-cse .gsc-results .gsc-result .f-sub-text .gsc-table-result{font-size:16px;font-size:1rem;line-height:18px;line-height:1.125rem}
+    .u-centered-text{text-align:center}
+    .text-white{color:#fff}
+    .inside-row-xl{padding:40px 0}
+}
+.header-top {display:none;visibility:hidden;}
+@media only screen and (min-width:768px){.header-top{display:-ms-flexbox;display:flex;height:50px;visibility:visible;width:100%;padding:10px 0}
+    .header-top .block{-ms-flex:1;flex:1;width:50%}
+    .header-top .block.block-social-media{text-align:right}
+    .header-top .block.block-social-media .menu-item{display:inline-block}
+    .header-top .block.block-social-media .menu-item a{font-size:12px;font-size:.75rem}
+}
+@media only screen and (min-width:768px) and (min-width:768px){.header-top .block.block-social-media .menu-item:not(:last-child){margin-right:10px}
+}
+@media only screen and (min-width:768px) and (min-width:1024px){.header-top .block.block-social-media .menu-item a{font-size:14px;font-size:.875rem}
+    .header-top .block.block-social-media .menu-item:not(:last-child){margin-right:20px}
+}
+@media only screen and (min-width:768px) and (min-width:1500px){.header-top .block.block-social-media .menu-item:not(:last-child){margin-right:40px}
+}
+@media only screen and (min-width:768px){.header-top .block a{position:relative;color:#505860}
+    .header-top .block .field--name-field-regional-offices-link{font-size:13px;font-size:.8125rem}
+    .header-top .block .field--name-field-regional-offices-link a{margin-left:20px;display:inline-block;line-height:1;border-bottom:1px solid transparent;transition:border-color .4s cubic-bezier(.55,.085,0,.99)}
+    .header-top .block .field--name-field-regional-offices-link a:before{position:absolute;top:50%;left:-20px;-ms-transform:translateY(-50%);transform:translateY(-50%);vertical-align:middle;font-size:17px;font-size:1.0625rem}
+    .header-top .block .field--name-field-regional-offices-link a:hover{border-color:#505860}
+}
+[class^=icon-]:before{visibility:hidden;}
+#logo-svg{width:75px}
+#header #logo-svg,#header .col-middle .menu-main{transition:all .5s cubic-bezier(.55,.085,0,.99)}
+@media only screen and (min-width:1024px){ #logo-svg{width:95px}
+}
+.breadcrumb-dropdown-menu ol li.drop-down ul{position:absolute;}
+.breadcrumb-dropdown-menu ol li{display:inline-block;}
+.l-container-lg,.l-container-md,.l-container-sm,.l-container-xlg,.landing .paragraph--type--button-cta{width:100%;height:auto;margin:0 auto}
+@media only screen and (min-width:340px){.l-container-lg,.l-container-md,.l-container-sm,.landing .paragraph--type--button-cta{width:90.5%}
+}
+@media only screen and (min-width:750px){.l-container-lg,.l-container-md,.l-container-sm,.landing .paragraph--type--button-cta{width:93%}
+}
+@media only screen and (min-width:1250px){.l-container-lg,.l-container-md,.l-container-sm,.landing .paragraph--type--button-cta{width:96%}
+    .l-container-sm,.landing .paragraph--type--button-cta{max-width:860px}
+}
+.l-container-md{max-width:90.5%}
+@media only screen and (min-width:750px){.l-container-md{max-width:1110px}
+}
+@media only screen and (min-width:1500px){.l-container-md{max-width:1200px}
+}
+.l-container-lg{max-width:1600px}
+.l-container-xlg{max-width:2000px}
+#footer .footer-top .col-left .block-system-branding-block a{background-position: center center;background-image:url(/themes/custom/adl_theme/images/logos/logo_footer.svg);background-repeat:no-repeat;background-size:100%;width:91px;height:45px;margin-top:5px;display:inline-block;}
+#footer .footer-top .col-left svg {display: none;}
+.bg-very-dark-grey {background-color: #2F3031;}
+#footer .footer-top {margin: auto;padding: 30px 0;}
+#block-adlnotificationblock{display:none;}
+#header-bottom{display:none;}
+#header ul.menu li.menu-item a {font-family: titillium-web,"Arial Narrow",Arial,Lucida Grande,sans-serif;}
+.bg-light-grey {background-color:#E0E0E1;}
+.block-adlnotificationblock{display:none;}
+#header-bottom{display:none;}
+    </style>
+<noscript><link href="https://www.adl.org/themes/custom/adl_theme/css/no-js.css" media="all" rel="stylesheet"/></noscript>
+<script src="https://www.googleadservices.com/pagead/conversion/996371357/?random=1562969201990&amp;cv=9&amp;fst=1562969201990&amp;num=1&amp;value=0&amp;label=QQTVCNmSj2EQndeN2wM&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=120&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;gtm=2wg6q1&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.adl.org%2Fblog%2Fflorida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz&amp;tiba=Florida%20White%20Supremacist%20Group%20Admits%20Ties%20to%20Alleged%20Parkland%20School%20Shooter%20Nikolas%20Cruz%20%7C%20Anti-Defamation%20League&amp;bttype=purchase&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://www.googleadservices.com/pagead/conversion/948825134/?random=1562969202001&amp;cv=9&amp;fst=1562969202001&amp;num=1&amp;value=0&amp;label=b5nWCKe6imEQrti3xAM&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=120&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;gtm=2wg6q1&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.adl.org%2Fblog%2Fflorida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz&amp;tiba=Florida%20White%20Supremacist%20Group%20Admits%20Ties%20to%20Alleged%20Parkland%20School%20Shooter%20Nikolas%20Cruz%20%7C%20Anti-Defamation%20League&amp;bttype=purchase&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/996371357/?random=1562969202017&amp;cv=9&amp;fst=1562969202017&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=120&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;gtm=2wg6q1&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.adl.org%2Fblog%2Fflorida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz&amp;tiba=Florida%20White%20Supremacist%20Group%20Admits%20Ties%20to%20Alleged%20Parkland%20School%20Shooter%20Nikolas%20Cruz%20%7C%20Anti-Defamation%20League&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948825134/?random=1562969202030&amp;cv=9&amp;fst=1562969202030&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=120&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;gtm=2wg6q1&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.adl.org%2Fblog%2Fflorida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz&amp;tiba=Florida%20White%20Supremacist%20Group%20Admits%20Ties%20to%20Alleged%20Parkland%20School%20Shooter%20Nikolas%20Cruz%20%7C%20Anti-Defamation%20League&amp;async=1&amp;rfmt=3&amp;fmt=4"></script></head>
+<body class="one-sidebar sidebar-second path-node page-type-blog context-blog-florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-NDSHG3B" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div class="element-invisible" id="skip">
+<a href="https://www.adl.org/#content" rel="nofollow" tab="-1">Skip Navigation</a>
+</div>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+<div id="page" role="document">
+<div class="cf bg-light-grey header-top">
+<div class="l-container-md flex-contain">
+<div class="block block-find-your-local-adl-link block-block-content block-block-contentf3b54f69-766a-47e0-adbe-86cfb264b0b7" id="block-find-your-local-adl-link-header">
+<div class="block-content">
+<div class="field field--name-field-regional-offices-link field--type-link field--label-hidden field__item"><a class="icon-localadl" href="https://www.adl.org/who-we-are/our-organization/regional-offices">Find Your Local ADL</a></div>
+</div>
+</div><nav class="block block-social-media menu-social-media menu-block" id="block-socialmedia" role="navigation">
+<div class="block-content">
+<ul block="block-socialmedia" class="menu menu-social">
+<li class="menu-item">
+<a class="icon-twitter sm-icon" href="https://twitter.com/ADL" target="_blank">
+<span class="element-invisible">Twitter</span>
+</a>
+</li>
+<li class="menu-item">
+<a class="icon-facebook sm-icon" href="https://www.facebook.com/anti.defamation.league/" target="_blank">
+<span class="element-invisible">Facebook</span>
+</a>
+</li>
+<li class="menu-item">
+<a class="icon-pinterest sm-icon" href="https://www.pinterest.com/adlnational/" target="_blank">
+<span class="element-invisible">Pinterest</span>
+</a>
+</li>
+<li class="menu-item">
+<a class="icon-instagram sm-icon" href="https://www.instagram.com/adl_national/" target="_blank">
+<span class="element-invisible">Instagram</span>
+</a>
+</li>
+<li class="menu-item">
+<a class="icon-youtube sm-icon" href="https://www.youtube.com/user/ADLNational" target="_blank">
+<span class="element-invisible">Youtube</span>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<div class="sticky-wrapper"><div id="header-wrapper">
+<header class="border-bottom" id="header">
+<div class="inside-row-m cf inside-row-m header-bottom" id="header-top-bar">
+<div class="header-bottom-inner">
+<div class="col-left">
+<div class="block block-site-branding block-system block-system-branding-block" id="block-adl-theme-branding">
+<a href="https://www.adl.org/" rel="home" title="ADL Logo - Website Home">
+<svg id="Blue_Tagline" style="enable-background:new 0 0 346.7 163.7;" version="1.1" viewbox="0 0 346.7 163.7" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<style type="text/css">
+	.st0{fill:#003B71;}
+	.st1{fill:#00A0DF;}
+</style>
+<title>ADL Logo - Website Home</title>
+<path class="st0" d="M77.3,74.1L63.6,29.3L49.9,74.1l-7.3,24l-8,26.3H7.5L48.2,0h33.8l40.7,124.3H92.8l-8-26.3L77.3,74.1z"></path>
+<path class="st0" d="M233.6,0h27.5v100.4h59.1v24h-86.7V0z"></path>
+<path class="st0" d="M225.3,79.2c0,29.8-19.5,45.1-49.7,45.1h-49.4V0h49.7c29.8,0,49.4,15.3,49.4,45.1L225.3,79.2z M197.8,45.1
+	c0-14-8.7-21.1-21.9-21.1h-22.2v76.4h21.8c13.5,0,22.2-7.1,22.2-21.1L197.8,45.1z"></path>
+<polygon class="st1" points="119.9,83.6 0,102.6 0,78 119.9,59 "></polygon>
+<path class="st1" d="M7.1,163.4v-19h12.1v3.4H11v5.6h6.7v3.4h-6.8v6.7L7.1,163.4z"></path>
+<path class="st1" d="M21.5,163.4v-19h3.9v19H21.5z"></path>
+<path class="st1" d="M36.9,156.6v-3.4h5.5v9.9c-2.1,0.4-4.3,0.6-6.5,0.6c-3,0-5-0.8-6.1-2.4s-1.7-4.1-1.7-7.5c0-3.4,0.6-5.9,1.7-7.4
+	s3.1-2.3,5.9-2.3c1.9,0,3.8,0.2,5.6,0.6l1,0.2l-0.1,3c-1.8-0.2-3.6-0.3-5.5-0.4c-1-0.1-2.1,0.1-3,0.5c-0.6,0.4-1.1,1.1-1.3,1.9
+	c-0.3,1.5-0.5,3.1-0.4,4.6c-0.1,1.6,0.2,3.1,0.8,4.6c0.5,0.9,1.6,1.3,3.3,1.3l2.3-0.1v-3.7L36.9,156.6z"></path>
+<path class="st1" d="M56.6,163.4v-7.9h-7.1v7.9h-3.8v-19h3.8v7.8h7.1v-7.7h3.9v19L56.6,163.4z"></path>
+<path class="st1" d="M62.4,147.8v-3.4h13.9v3.4h-5v15.6h-3.9v-15.6H62.4z"></path>
+<path class="st1" d="M78.4,163.4v-19h3.9v19H78.4z"></path>
+<path class="st1" d="M85.9,163.4v-19h6.5L97,160h0.3v-15.6h3.9v19h-6.3l-4.7-15.6h-0.3v15.6L85.9,163.4z"></path>
+<path class="st1" d="M112.7,156.6v-3.4h5.5v9.9c-2.1,0.4-4.3,0.6-6.5,0.6c-3,0-5-0.8-6.1-2.4s-1.7-4.1-1.7-7.5
+	c0-3.4,0.6-5.9,1.7-7.4s3.1-2.3,5.9-2.3c1.9,0,3.8,0.2,5.6,0.6l1,0.2l-0.1,3c-1.8-0.2-3.6-0.3-5.5-0.4c-1-0.1-2.1,0.1-3,0.5
+	c-0.6,0.4-1.1,1.1-1.3,1.9c-0.3,1.5-0.5,3.1-0.4,4.6c-0.1,1.6,0.2,3.1,0.8,4.6c0.5,0.9,1.6,1.3,3.3,1.3l2.3-0.1v-3.7L112.7,156.6z"></path>
+<path class="st1" d="M139.3,163.4v-7.9h-7v7.9h-3.9v-19h3.9v7.8h7v-7.7h3.9v19L139.3,163.4z"></path>
+<path class="st1" d="M145.3,163.4l4.3-19h7.3l4.3,19h-3.9l-0.8-3.4h-6.6l-0.8,3.4H145.3z M152.6,147.6l-1.9,9h5.2l-1.9-9H152.6z"></path>
+<path class="st1" d="M160.5,147.8v-3.4h14v3.4h-5v15.6h-3.9v-15.6H160.5z"></path>
+<path class="st1" d="M176.5,163.4v-19h12.3v3.4h-8.4v4.4h6.8v3.3h-6.8v4.6h8.4v3.4L176.5,163.4z"></path>
+<path class="st1" d="M198.5,163.4v-19h12.1v3.4h-8.3v5.6h6.8v3.4h-6.8v6.7L198.5,163.4z"></path>
+<path class="st1" d="M225.7,161.4c-1.2,1.6-3.2,2.4-6.1,2.4s-4.9-0.8-6.1-2.4s-1.8-4-1.8-7.4s0.6-5.8,1.8-7.5s3.2-2.4,6.1-2.4
+	s4.9,0.8,6.1,2.4s1.8,4.1,1.8,7.5S226.9,159.8,225.7,161.4z M216.5,158.9c1.4,1.7,3.9,1.9,5.6,0.5c0.2-0.2,0.4-0.3,0.5-0.5
+	c0.7-1.6,0.9-3.2,0.8-4.9c0.1-1.7-0.2-3.4-0.8-5c-1.2-1.7-3.6-2.1-5.3-0.9c-0.3,0.2-0.6,0.5-0.9,0.9c-0.7,1.6-0.9,3.3-0.8,5
+	C215.6,155.7,215.9,157.4,216.5,158.9z"></path>
+<path class="st1" d="M234.2,157v6.4h-3.9v-19h7.4c4.5,0,6.7,2.1,6.7,6.2c0.1,2.2-0.9,4.3-2.8,5.5l2.7,7.3h-4.2l-2.2-6.4L234.2,157z
+	 M239.8,152.9c0.5-0.6,0.7-1.4,0.7-2.2c0-0.8-0.2-1.6-0.7-2.2c-0.5-0.6-1.3-0.9-2.1-0.8h-3.5v6h3.6
+	C238.5,153.8,239.3,153.5,239.8,152.9z"></path>
+<path class="st1" d="M262.1,156.6v-3.4h5.5v9.9c-2.1,0.4-4.3,0.6-6.5,0.6c-3,0-5-0.8-6.1-2.4c-1.1-1.6-1.7-4.1-1.7-7.5
+	s0.6-5.9,1.7-7.4s3.1-2.3,5.9-2.3c1.9,0,3.8,0.2,5.6,0.6l1,0.2l-0.1,3c-1.8-0.2-3.6-0.3-5.5-0.4c-1-0.1-2.1,0.1-3,0.5
+	c-0.6,0.4-1.1,1.1-1.3,1.9c-0.3,1.5-0.5,3.1-0.4,4.6c-0.1,1.6,0.2,3.1,0.8,4.6c0.5,0.9,1.7,1.3,3.4,1.3l2.3-0.1v-3.7L262.1,156.6z"></path>
+<path class="st1" d="M283.9,161.4c-1.2,1.6-3.2,2.4-6.1,2.4s-4.9-0.8-6.1-2.4c-1.2-1.6-1.8-4-1.8-7.4c0-3.4,0.6-5.8,1.8-7.5
+	s3.2-2.4,6.1-2.4s4.9,0.8,6.1,2.4s1.8,4.1,1.8,7.5S285.1,159.8,283.9,161.4z M274.7,158.9c1.4,1.7,3.9,1.9,5.6,0.5
+	c0.2-0.2,0.4-0.3,0.5-0.5c0.7-1.5,0.9-3.2,0.8-4.9c0.1-1.7-0.2-3.4-0.8-5c-1.2-1.7-3.6-2.1-5.3-0.8c-0.3,0.2-0.6,0.5-0.8,0.8
+	c-0.7,1.6-0.9,3.3-0.8,5C273.8,155.7,274.1,157.4,274.7,158.9z"></path>
+<path class="st1" d="M301.7,161.4c-1.2,1.6-3.2,2.4-6.1,2.4s-4.9-0.8-6.1-2.4c-1.2-1.6-1.8-4-1.8-7.4c0-3.4,0.6-5.8,1.8-7.5
+	s3.2-2.4,6.1-2.4s4.9,0.8,6.1,2.4s1.8,4.1,1.8,7.5S302.9,159.8,301.7,161.4z M292.5,158.9c1.4,1.7,3.9,1.9,5.6,0.5
+	c0.2-0.2,0.4-0.3,0.5-0.5c0.7-1.5,0.9-3.2,0.8-4.9c0.1-1.7-0.2-3.4-0.8-5c-1.2-1.7-3.6-2.1-5.3-0.8c-0.3,0.2-0.6,0.5-0.8,0.8
+	c-0.7,1.6-0.9,3.3-0.8,5C291.6,155.7,291.8,157.4,292.5,158.9L292.5,158.9z"></path>
+<path class="st1" d="M312.7,163.4h-6.4v-19h6.4c1.4,0,2.7,0.1,4,0.5c1,0.3,1.8,0.9,2.5,1.7c0.6,0.8,1,1.8,1.2,2.8
+	c0.2,1.4,0.4,2.8,0.3,4.2c0,1.4-0.1,2.8-0.3,4.2c-0.2,1.1-0.6,2.1-1.1,3c-0.6,0.9-1.5,1.6-2.5,1.9
+	C315.5,163.2,314.1,163.4,312.7,163.4z M316.7,155.9c0-0.6,0-1.4,0-2.5c0-0.8,0-1.7-0.1-2.5c-0.1-0.6-0.2-1.2-0.5-1.7
+	c-0.3-0.5-0.7-0.9-1.2-1.1c-0.7-0.2-1.5-0.3-2.2-0.3h-2.5v12.3h2.5c1.1,0.1,2.2-0.3,3-1.1C316.4,158.1,316.7,157,316.7,155.9
+	L316.7,155.9z"></path>
+<path class="st0" d="M337.1,123.1c-2.6,0.1-5.2-1-7-2.9c-3.7-4-3.7-10.2,0-14.3c1.8-1.9,4.3-3,6.9-2.9c2.6-0.1,5.1,1,6.9,2.9
+	c3.6,4.1,3.6,10.2,0,14.3C342.2,122.1,339.7,123.2,337.1,123.1z M337,104.6c-2.2,0-4.3,0.8-5.8,2.5c-3.1,3.4-3.1,8.6,0,11.9
+	c3.1,3.2,8.1,3.3,11.3,0.2c0.1-0.1,0.1-0.1,0.2-0.2c1.5-1.6,2.4-3.8,2.3-6c0.1-2.2-0.8-4.4-2.3-6C341.3,105.5,339.2,104.6,337,104.6
+	z M335.1,114.7v3.9H333v-11.1h4c1.1-0.1,2.2,0.2,3.1,0.8c0.7,0.6,1.1,1.5,1,2.4c0.1,0.8-0.1,1.7-0.4,2.4c-0.3,0.6-0.8,1-1.5,1.3
+	l2,4.2H339l-1.7-3.9H335.1z M335.1,109.2v3.7h2.2c0.5,0,1-0.1,1.4-0.4c0.3-0.4,0.5-0.9,0.4-1.4c0-1.2-0.8-1.9-2.3-1.9H335.1z"></path>
+</svg>
+<span class="element-invisible">Anti-Defamation League</span> </a>
+</div>
+</div>
+<div class="col-middle">
+<nav class="block block-main-navigation menu-main-navigation menu-block" id="block-adl-theme-main-menu" role="navigation">
+<div class="block-content">
+<ul block="block-adl-theme-main-menu" class="menu menu-main menu-level-0">
+<li block="block-adl-theme-main-menu" class="menu-item menu-item--collapsed menu-item-level-0" data-menu-id="main-menu-item-who-we-are">
+<a data-drupal-link-system-path="node/11437" href="https://www.adl.org/who-we-are">Who We Are</a>
+</li>
+<li block="block-adl-theme-main-menu" class="menu-item menu-item--collapsed menu-item-level-0" data-menu-id="main-menu-item-what-we-do">
+<a data-drupal-link-system-path="node/2" href="https://www.adl.org/what-we-do">What We Do</a>
+</li>
+<li block="block-adl-theme-main-menu" class="menu-item menu-item--collapsed menu-item-level-0" data-menu-id="main-menu-item-education">
+<a data-drupal-link-system-path="node/12428" href="https://www.adl.org/education-and-resources/resources-for-educators-parents-families">Education</a>
+</li>
+<li block="block-adl-theme-main-menu" class="menu-item menu-item--collapsed menu-item-level-0" data-menu-id="main-menu-item-research--tools">
+<a data-drupal-link-system-path="node/12528" href="https://www.adl.org/education-and-resources/resource-knowledge-base">Research &amp; Tools</a>
+</li>
+<li block="block-adl-theme-main-menu" class="menu-item menu-item--collapsed menu-item--active-trail menu-item-level-0" data-menu-id="main-menu-item-news">
+<a data-drupal-link-system-path="node/6" href="https://www.adl.org/news">News</a>
+</li>
+<li block="block-adl-theme-main-menu" class="menu-item menu-item--collapsed menu-item-level-0" data-menu-id="main-menu-item-take-action">
+<a data-drupal-link-system-path="node/14135" href="https://www.adl.org/take-action">Take Action</a>
+</li>
+<li block="block-adl-theme-main-menu" class="menu-item menu-item--collapsed menu-item-level-0" data-menu-id="main-menu-item-ways-to-give">
+<a data-drupal-link-system-path="node/11491" href="https://www.adl.org/ways-to-give">Ways to Give</a>
+</li>
+</ul>
+</div>
+</nav>
+<div class="block block-google-cse-search block-adl-utility block-google-cse-search-block" id="block-googlecsesearch">
+<div class="block-content">
+<button class="icon-search search-button" id="search-expand-button--desktop"><span class="screen-reader-text">Expand search</span></button>
+<div id="google-search-form-container--desktop"><form accept-charset="UTF-8" action="/search" class="google-search" data-drupal-selector="google-search" id="google-search" method="get">
+<div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+<label class="visually-hidden" for="edit-keys">Search</label>
+<input class="form-search" data-drupal-selector="edit-keys" id="edit-keys" maxlength="128" name="keys" placeholder="Search" size="15" title="Enter the terms you wish to search for." type="search" value=""/>
+</div>
+<div class="form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions">
+<div class="form-submit-wrapper">
+<input class="button js-form-submit form-submit" data-drupal-selector="edit-submit" id="edit-submit" type="submit" value="Submit"/>
+</div>
+<div class="icon-textlink"></div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="col-right">
+<div class="block block-header-donate-button block-block-content block-block-content54466011-dbb5-449e-b933-81c0c9d7bb74" id="block-headerdonatebutton">
+<div class="block-content">
+<div class="field__item"><a class="btn orange donate" href="https://www.adl.org/donate"><span>Donate</span><i class="icon-right-arrow"></i></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="header-bottom" id="header-bottom">
+<div class="header-bottom-inner">
+<div class="header-bottom-menu cf">
+<div class="l-container-md">
+<nav class="block block-main-navigation-bottom-header menu-main-navigation-bottom-header menu-block" id="block-mainnavigation-bottom" role="navigation">
+<h2 class="block-title">Main navigation Bottom Header</h2>
+<div class="block-content">
+<ul block="block-mainnavigation-bottom" class="menu menu-main menu-level-0">
+<li block="block-mainnavigation-bottom" class="menu-item menu-item--expanded menu-item-level-0" data-menu-id="main-menu-item-who-we-are">
+<span class="mobile-link">
+<a data-drupal-link-system-path="node/11437" href="https://www.adl.org/who-we-are">Who We Are</a>
+</span>
+<span aria-hidden="true" class="tablet-link">
+<a href="https://www.adl.org/who-we-are">Explore Who We Are <svg class="menuarrow-icon" style="enable-background:new 0 0 15.9 9.7;" version="1.1" viewbox="0 0 15.9 9.7" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M14,0.2l1.7,1.7L8,9.5L0.3,1.9L2,0.2l6,5.9L14,0.2z"></path>
+</svg>
+</a>
+</span>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-1" data-menu-id="main-menu-item-who-we-are">
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11467" href="https://www.adl.org/who-we-are/our-mission">Our Mission</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11469" href="https://www.adl.org/who-we-are/our-values">Our Values</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11468" href="https://www.adl.org/who-we-are/history">Our History</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11443" href="https://www.adl.org/press/press-releases">Official Statements</a>
+</li>
+<li class="menu-item menu-item--expanded menu-item-level-1">
+<a data-drupal-link-system-path="node/3942" href="https://www.adl.org/who-we-are/annual-reports-financial-information">Annual Reports &amp; Financial Information</a>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-2" data-menu-id="main-menu-item-who-we-are">
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/13626" href="https://www.adl.org/who-we-are/annual-reports-financial-information/2017-impact-report">Latest Annual Report</a>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item--expanded menu-item-level-1">
+<a data-drupal-link-system-path="node/11470" href="https://www.adl.org/who-we-are/our-organization">Our Organization</a>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-2" data-menu-id="main-menu-item-who-we-are">
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11445" href="https://www.adl.org/who-we-are/our-organization/regional-offices">Your Local ADL Office</a>
+</li>
+<li class="menu-item menu-item--collapsed menu-item-level-2">
+<a data-drupal-link-system-path="node/11473" href="https://www.adl.org/who-we-are/our-organization/signature-programs">Signature Programs</a>
+</li>
+<li class="menu-item menu-item--collapsed menu-item-level-2">
+<a data-drupal-link-system-path="node/11474" href="https://www.adl.org/who-we-are/our-organization/advocacy-centers">Research &amp; Advocacy Centers</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11439" href="https://www.adl.org/who-we-are/our-organization/leadership">Our Leadership &amp; Staff</a>
+</li>
+<li class="menu-item menu-item--collapsed menu-item-level-2">
+<a data-drupal-link-system-path="node/14205" href="https://www.adl.org/who-we-are/our-organization/our-board-of-directors">Our Board of Directors</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11565" href="https://www.adl.org/who-we-are/our-organization/partner-organizations">Partner Organizations</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11" href="https://www.adl.org/contact">Contact Us</a>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11577" href="https://www.adl.org/careers">Careers at ADL</a>
+</li>
+</ul>
+</li>
+<li block="block-mainnavigation-bottom" class="menu-item menu-item--expanded menu-item-level-0" data-menu-id="main-menu-item-what-we-do">
+<span class="mobile-link">
+<a data-drupal-link-system-path="node/2" href="https://www.adl.org/what-we-do">What We Do</a>
+</span>
+<span aria-hidden="true" class="tablet-link">
+<a href="https://www.adl.org/what-we-do">Explore What We Do <svg class="menuarrow-icon" style="enable-background:new 0 0 15.9 9.7;" version="1.1" viewbox="0 0 15.9 9.7" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M14,0.2l1.7,1.7L8,9.5L0.3,1.9L2,0.2l6,5.9L14,0.2z"></path>
+</svg>
+</a>
+</span>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-1" data-menu-id="main-menu-item-what-we-do">
+<li class="menu-item menu-item--expanded menu-item-level-1">
+<a data-drupal-link-system-path="node/11455" href="https://www.adl.org/what-we-do/anti-semitism">Fight Anti-Semitism</a>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-2" data-menu-id="main-menu-item-what-we-do">
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11583" href="https://www.adl.org/what-we-do/anti-semitism/anti-semitism-in-the-us">Anti-Semitism in the US</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11594" href="https://www.adl.org/what-we-do/anti-semitism/anti-semitism-globally">Anti-Semitism Globally</a>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item--expanded menu-item-level-1">
+<a data-drupal-link-system-path="node/11466" href="https://www.adl.org/what-we-do/combat-hate">Combat Hate &amp; Protect Communities</a>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-2" data-menu-id="main-menu-item-what-we-do">
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11592" href="https://www.adl.org/what-we-do/combat-hate/extremism-terrorism-bigotry">Extremism, Terrorism &amp; Bigotry</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11588" href="https://www.adl.org/what-we-do/combat-hate/cyberhate">Cyberhate</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11595" href="https://www.adl.org/what-we-do/combat-hate/hate-crimes">Hate Crimes</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11585" href="https://www.adl.org/what-we-do/combat-hate/community-security">Community Security</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11600" href="https://www.adl.org/what-we-do/combat-hate/adl-and-law-enforcement-working-together-to-protect-individuals-and-their-rights">Law Enforcement Partnerships</a>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item--expanded menu-item-level-1">
+<a data-drupal-link-system-path="node/11464" href="https://www.adl.org/what-we-do/discrimination">Confront Discrimination &amp; Secure Justice</a>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-2" data-menu-id="main-menu-item-what-we-do">
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11604" href="https://www.adl.org/what-we-do/discrimination/religious-freedom">Religious Freedom</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11593" href="https://www.adl.org/what-we-do/discrimination/free-speech">Free Speech</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11603" href="https://www.adl.org/what-we-do/discrimination/racial-justice">Race &amp; Racial Justice</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11586" href="https://www.adl.org/what-we-do/discrimination/criminal-justice-reform">Criminal Justice Reform</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11591" href="https://www.adl.org/what-we-do/discrimination/education-equity">Education Equity</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11606" href="https://www.adl.org/what-we-do/discrimination/womens-equity">Women’s Equity</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11605" href="https://www.adl.org/what-we-do/discrimination/voting-rights">Voting Rights</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11601" href="https://www.adl.org/what-we-do/discrimination/lgbtq-rights">LGBTQ Rights</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11597" href="https://www.adl.org/what-we-do/discrimination/immigrant-refugee-rights">Immigrant &amp; Refugee Rights</a>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item--expanded menu-item-level-1">
+<a data-drupal-link-system-path="node/11465" href="https://www.adl.org/what-we-do/israel">Stand Up for Israel</a>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-2" data-menu-id="main-menu-item-what-we-do">
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11599" href="https://www.adl.org/what-we-do/israel/israel-advocacy-education">Israel Advocacy &amp; Education</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11582" href="https://www.adl.org/what-we-do/israel/anti-israel-activity-bds">Anti-Israel Activity &amp; BDS</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11607" href="https://www.adl.org/what-we-do/israel/domestic-israeli-issues">Domestic Israeli Issues</a>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item--expanded menu-item-level-1">
+<a data-drupal-link-system-path="node/11459" href="https://www.adl.org/what-we-do/promote-respect">Promote Respectful Schools &amp; Communities</a>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-2" data-menu-id="main-menu-item-what-we-do">
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11581" href="https://www.adl.org/what-we-do/promote-respect/anti-bias">Anti-Bias Education</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11584" href="https://www.adl.org/what-we-do/promote-respect/bullying-cyberbullying-prevention">Bullying &amp; Cyberbullying Prevention</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11598" href="https://www.adl.org/what-we-do/promote-respect/interfaith">Interfaith &amp; Intergroup Relations</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li block="block-mainnavigation-bottom" class="menu-item menu-item--expanded menu-item-level-0" data-menu-id="main-menu-item-education">
+<span class="mobile-link">
+<a data-drupal-link-system-path="node/12428" href="https://www.adl.org/education-and-resources/resources-for-educators-parents-families">Education</a>
+</span>
+<span aria-hidden="true" class="tablet-link">
+<a href="https://www.adl.org/education-and-resources/resources-for-educators-parents-families">Explore Education <svg class="menuarrow-icon" style="enable-background:new 0 0 15.9 9.7;" version="1.1" viewbox="0 0 15.9 9.7" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M14,0.2l1.7,1.7L8,9.5L0.3,1.9L2,0.2l6,5.9L14,0.2z"></path>
+</svg>
+</a>
+</span>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-1" data-menu-id="main-menu-item-education">
+<li class="menu-item menu-item--expanded menu-item-level-1">
+<a data-drupal-link-system-path="node/13153" href="https://www.adl.org/education-and-resources/resources-for-educators-parents-families/educational-programs-training">Programs &amp; Anti-Bias Training</a>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-2" data-menu-id="main-menu-item-education">
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/12234" href="https://www.adl.org/who-we-are/our-organization/signature-programs/a-world-of-difference-institute">A World of Difference® Institute</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/13097" href="https://www.adl.org/who-we-are/our-organization/signature-programs/no-place-for-hate">No Place for Hate®</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/12373" href="https://www.adl.org/education-and-resources/resources-for-educators-parents-families/words-to-action">Words to Action</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/12661" href="https://www.adl.org/education/resources/tools-and-strategies/bullying-and-cyberbullying-workshops">Bullying and Cyberbullying Programs</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/12880" href="https://www.adl.org/educational-programs-training/holocaust-education">Holocaust Education</a>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11444" href="https://www.adl.org/education-and-resources/resources-for-educators-parents-families/lesson-plans">Lesson Plans</a>
+</li>
+<li class="menu-item menu-item--expanded menu-item-level-1">
+<a data-drupal-link-system-path="node/11368" href="https://www.adl.org/education-and-resources/resources-for-educators-parents-families/childrens-literature">Books Matter: Children's Literature</a>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-2" data-menu-id="main-menu-item-education">
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/12645" href="https://www.adl.org/education-and-resources/resources-for-educators-parents-families/childrens-literature/book-of-the-month">Book of the Month</a>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/12282" href="https://www.adl.org/education/resources/tools-and-strategies/anti-bias-tools-strategies">Anti-Bias Tools &amp; Strategies</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/12330" href="https://www.adl.org/education/resources/tools-and-strategies/bullying-and-cyberbullying-prevention-strategies">Bullying/Cyberbullying Resources</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11789" href="https://www.adl.org/education/resources/tools-and-strategies/table-talk">Table Talk: Family Conversations</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/12395" href="https://www.adl.org/education/resources/tools-and-strategies/rosalinds-classroom-conversations">Rosalind's Classroom Conversations</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/12523" href="https://www.adl.org/education/resources/tools-and-strategies/question-corner">Early Childhood FAQs</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a href="https://www.adl.org/blog?issues%5B2%5D=2">Education Blog</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/13590" href="https://www.adl.org/education/resources/tools-and-strategies/education-webinars-and-podcasts">Webinars &amp; Podcasts</a>
+</li>
+</ul>
+</li>
+<li block="block-mainnavigation-bottom" class="menu-item menu-item--expanded menu-item-level-0" data-menu-id="main-menu-item-research--tools">
+<span class="mobile-link">
+<a data-drupal-link-system-path="node/12528" href="https://www.adl.org/education-and-resources/resource-knowledge-base">Research &amp; Tools</a>
+</span>
+<span aria-hidden="true" class="tablet-link">
+<a href="https://www.adl.org/education-and-resources/resource-knowledge-base">Explore Research &amp; Tools <svg class="menuarrow-icon" style="enable-background:new 0 0 15.9 9.7;" version="1.1" viewbox="0 0 15.9 9.7" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M14,0.2l1.7,1.7L8,9.5L0.3,1.9L2,0.2l6,5.9L14,0.2z"></path>
+</svg>
+</a>
+</span>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-1" data-menu-id="main-menu-item-research--tools">
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11489" href="https://www.adl.org/education-and-resources/resource-knowledge-base/amicus-brief-database">Amicus Brief Database</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11438" href="https://www.adl.org/hatesymbolsdatabase">Hate on Display™ Hate Symbols Database</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/12528" href="https://www.adl.org/education-and-resources/resource-knowledge-base">Resource Library</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/7" href="https://www.adl.org/latinx">ADL Latinx</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/13761" href="https://www.adl.org/education-and-resources/resource-knowledge-base/adl-heat-map">ADL H.E.A.T. Map</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/13221" href="https://www.adl.org/adl-hate-crime-map">ADL Hate Crime Map</a>
+</li>
+</ul>
+</li>
+<li block="block-mainnavigation-bottom" class="menu-item menu-item--expanded menu-item--active-trail menu-item-level-0" data-menu-id="main-menu-item-news">
+<span class="mobile-link">
+<a data-drupal-link-system-path="node/6" href="https://www.adl.org/news">News</a>
+</span>
+<span aria-hidden="true" class="tablet-link">
+<a href="https://www.adl.org/news">Explore News <svg class="menuarrow-icon" style="enable-background:new 0 0 15.9 9.7;" version="1.1" viewbox="0 0 15.9 9.7" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M14,0.2l1.7,1.7L8,9.5L0.3,1.9L2,0.2l6,5.9L14,0.2z"></path>
+</svg>
+</a>
+</span>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-1" data-menu-id="main-menu-item-news">
+<li class="menu-item menu-item--expanded menu-item-level-1">
+<a data-drupal-link-system-path="node/10" href="https://www.adl.org/press">Press Center</a>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-2" data-menu-id="main-menu-item-news">
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11443" href="https://www.adl.org/press/press-releases">Press Releases/Statements</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11776" href="https://www.adl.org/press/op-eds">Op-eds</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11808" href="https://www.adl.org/press/media-watch">Media Watch</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/12654" href="https://www.adl.org/news/in-the-news">ADL in the News</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11443" href="https://www.adl.org/press/press-releases">Press Contact</a>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item--active-trail menu-item-level-1">
+<a data-drupal-link-system-path="node/8" href="https://www.adl.org/blog">ADL Blog</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/12032" href="https://www.adl.org/news/letters">Letters</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11775" href="https://www.adl.org/news/articles">Articles</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11777" href="https://www.adl.org/news/stories">Stories</a>
+</li>
+</ul>
+</li>
+<li block="block-mainnavigation-bottom" class="menu-item menu-item--expanded menu-item-level-0" data-menu-id="main-menu-item-take-action">
+<span class="mobile-link">
+<a data-drupal-link-system-path="node/14135" href="https://www.adl.org/take-action">Take Action</a>
+</span>
+<span aria-hidden="true" class="tablet-link">
+<a href="https://www.adl.org/take-action">Explore Take Action <svg class="menuarrow-icon" style="enable-background:new 0 0 15.9 9.7;" version="1.1" viewbox="0 0 15.9 9.7" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M14,0.2l1.7,1.7L8,9.5L0.3,1.9L2,0.2l6,5.9L14,0.2z"></path>
+</svg>
+</a>
+</span>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-1" data-menu-id="main-menu-item-take-action">
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/14135" href="https://www.adl.org/take-action">5 Things You Can Do to Combat Hate</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11709" href="https://www.adl.org/take-action/connect-local-adl">Connect with Your Local ADL Office</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11610" href="https://www.adl.org/take-action/bring-adl-to-your-school-or-community">Bring ADL to Your School or Community</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/12890" href="https://www.adl.org/reportincident">Report an Incident</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11608" href="https://www.adl.org/take-action/be-heard-in-congress">Be Heard in Congress</a>
+</li>
+</ul>
+</li>
+<li block="block-mainnavigation-bottom" class="menu-item menu-item--expanded menu-item-level-0" data-menu-id="main-menu-item-ways-to-give">
+<span class="mobile-link">
+<a data-drupal-link-system-path="node/11491" href="https://www.adl.org/ways-to-give">Ways to Give</a>
+</span>
+<span aria-hidden="true" class="tablet-link">
+<a href="https://www.adl.org/ways-to-give">Explore Ways to Give <svg class="menuarrow-icon" style="enable-background:new 0 0 15.9 9.7;" version="1.1" viewbox="0 0 15.9 9.7" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M14,0.2l1.7,1.7L8,9.5L0.3,1.9L2,0.2l6,5.9L14,0.2z"></path>
+</svg>
+</a>
+</span>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-1" data-menu-id="main-menu-item-ways-to-give">
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11540" href="https://www.adl.org/ways-to-give/give-now">Give Now</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11572" href="https://www.adl.org/ways-to-give/support-adls-work-monthly">Support ADL's Work Monthly</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11574" href="https://www.adl.org/ways-to-give/pay-an-existing-pledge">Fulfill Your Pledge to ADL</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/11573" href="https://www.adl.org/ways-to-give/create-your-legacy-of-securing-justice-and-fair-treatment-to-all">Planned Giving, Legacy &amp; Endowments</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/14240" href="https://www.adl.org/ways-to-give/donor-recognition-society">Donor Recognition Society</a>
+</li>
+<li class="menu-item menu-item-level-1">
+<a data-drupal-link-system-path="node/14142" href="https://www.adl.org/ways-to-give/fight-hate-for-good-with-your-gift-of-cryptocurrency">Donate to ADL Using Cryptocurrency</a>
+</li>
+<li class="menu-item menu-item--expanded menu-item-level-1">
+<a data-drupal-link-system-path="node/11824" href="https://www.adl.org/ways-to-give/give-to-adl-in-honor-or-in-memory" title="Give in Honor or in Memory">Give in Honor or in Memory</a>
+<ul block="block-mainnavigation-bottom" class="menu menu-main child-menu menu-level-2" data-menu-id="main-menu-item-ways-to-give">
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11576" href="https://www.adl.org/ways-to-give/give-to-adl-in-honor-or-in-memory/send-a-tribute-card-by-email">Send a Tribute Card by Email</a>
+</li>
+<li class="menu-item menu-item-level-2">
+<a data-drupal-link-system-path="node/11825" href="https://www.adl.org/ways-to-give/give-to-adl-in-honor-or-in-memory/give-to-adl-send-a-tribute-card-by-us-mail">Send a Tribute Card by US Mail</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<nav class="block block-footer-menu-bottom-header menu-footer-menu-bottom-header menu-block" id="block-footermenu-bottom" role="navigation">
+<div class="block-content">
+<ul block="block-footermenu-bottom" class="menu menu-mobile-footer-menu">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/11" href="https://www.adl.org/contact">Contact</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/11577" href="https://www.adl.org/careers">Careers</a>
+</li>
+<li class="menu-item">
+<a href="https://www.adl.org/sign-up-to-receive-adl-email-newsletters">Newsletter Subscription</a>
+</li>
+<li class="menu-item">
+<a href="https://www.youtube.com/user/ADLNational">Video</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/9" href="https://www.adl.org/privacy-policy">Privacy Policy</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<div aria-hidden="true" class="header-bottom-search cf">
+<div class="l-container-md">
+<div class="block block-google-cse-search block-adl-utility block-google-cse-search-block" id="block-googlecsesearch-mobile">
+<div class="block-content">
+<button class="icon-search search-button" id="search-expand-button--desktop"><span class="screen-reader-text">Expand search</span></button>
+<div id="google-search-form-container--desktop"><form accept-charset="UTF-8" action="/search" class="google-search" data-drupal-selector="google-search" id="google-search" method="get">
+<div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+<label class="visually-hidden" for="edit-keys">Search</label>
+<input class="form-search" data-drupal-selector="edit-keys" id="edit-keys" maxlength="128" name="keys" placeholder="Search" size="15" title="Enter the terms you wish to search for." type="search" value=""/>
+</div>
+<div class="form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions">
+<div class="form-submit-wrapper">
+<input class="button js-form-submit form-submit" data-drupal-selector="edit-submit" id="edit-submit" type="submit" value="Submit"/>
+</div>
+<div class="icon-textlink"></div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="header-bottom-social cf">
+<div class="l-container-md">
+<ul class="header-bottom-social-share">
+<li><a href="https://twitter.com/share?url=https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz" title="Share this page via Twitter"><span class="screen-reader-text">Share Via Twitter</span>
+<svg enable-background="new 0 0 30 24.3" id="Layer_1" version="1.1" viewbox="0 0 30 24.3" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M30,2.9c-0.8,1.2-1.9,2.3-3.1,3.2c0,0.3,0,0.6,0,0.8c0,1.2-0.1,2.3-0.4,3.5c-0.3,1.2-0.6,2.3-1.1,3.5
+	c-0.5,1.1-1.1,2.2-1.8,3.3c-0.7,1-1.6,2-2.5,2.9c-1,0.9-2.1,1.6-3.2,2.3c-1.2,0.6-2.5,1.1-3.9,1.5s-3,0.5-4.5,0.5
+	c-3.4,0-6.6-0.9-9.4-2.8c0.5,0.1,1,0.1,1.5,0.1c0.9,0,1.9-0.1,2.8-0.3s1.8-0.5,2.6-0.9C7.6,20,8.4,19.6,9.1,19
+	c-1.3,0-2.5-0.4-3.6-1.2c-1.1-0.8-1.8-1.8-2.2-3c0.4,0.1,0.8,0.1,1.2,0.1c0.5,0,1.1-0.1,1.6-0.2c-1.4-0.3-2.6-1-3.5-2.1
+	c-0.9-1.1-1.4-2.4-1.4-3.9V8.5C2.1,9,3,9.3,4,9.3C3.1,8.8,2.5,8,2,7.1C1.5,6.2,1.3,5.3,1.3,4.2c0-1.1,0.3-2.1,0.8-3.1
+	C3.6,3,5.5,4.5,7.7,5.6c2.2,1.1,4.6,1.8,7.1,1.9c-0.1-0.5-0.2-0.9-0.2-1.4c0-0.8,0.2-1.6,0.5-2.4s0.8-1.4,1.3-2c0.6-0.6,1.2-1,2-1.3
+	C19.1,0.2,19.9,0,20.8,0c0.9,0,1.7,0.2,2.5,0.5c0.8,0.3,1.4,0.8,2,1.4c1.4-0.3,2.7-0.8,3.9-1.5c-0.2,0.7-0.6,1.4-1,1.9
+	c-0.5,0.6-1,1.1-1.7,1.4C27.7,3.7,28.9,3.4,30,2.9z"></path>
+</svg>
+</a></li>
+<li><a href="http://www.facebook.com/sharer.php?u=https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz" title="Share this page via Facebook"><span class="screen-reader-text">Share Via Facebook</span>
+<svg enable-background="new 0 0 14.6 29.9" id="Layer_1" version="1.1" viewbox="0 0 14.6 29.9" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M9.1,10.8h5.5l-0.3,5.1H9.1v14H3.7v-14H0v-5.1h3.7V6.5c0-0.6,0.1-1.1,0.2-1.7s0.3-1,0.6-1.5s0.6-0.9,1-1.3
+	c0.4-0.4,0.9-0.8,1.4-1.1C7.4,0.6,8,0.4,8.7,0.2C9.4,0.1,10.2,0,11,0c0.6,0,1.2,0,1.8,0.1c0.6,0,1,0.1,1.3,0.1l0.4,0.1l-0.1,4.7
+	c-1,0-2.1,0-3.2,0c-0.4,0-0.8,0-1.1,0.1C9.8,5.1,9.6,5.3,9.4,5.5C9.3,5.7,9.2,5.9,9.2,6.2C9.1,6.4,9.1,6.7,9.1,7.1v0.1v0v0.2V10.8z"></path>
+</svg>
+</a></li>
+<li><a href="https://pinterest.com/pin/create/bookmarklet/?url=https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz" title="Share this page via Pinterest"><span class="screen-reader-text">Share Via Pinterest</span>
+<svg enable-background="new 0 0 28.5 34.2" id="Layer_1" version="1.1" viewbox="0 0 28.5 34.2" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M15.1,0c1.3,0,2.6,0.2,3.8,0.5s2.3,0.7,3.3,1.3c1,0.5,1.9,1.2,2.6,2c0.8,0.8,1.5,1.6,2,2.5C27.3,7,27.8,8,28,9
+	c0.3,1,0.4,2,0.4,3.1c0,1.4-0.1,2.7-0.4,3.9c-0.3,1.3-0.6,2.4-1.1,3.5c-0.5,1.1-1,2-1.7,2.9c-0.7,0.9-1.4,1.6-2.3,2.2
+	c-0.8,0.6-1.8,1.1-2.8,1.4c-1,0.3-2.1,0.5-3.2,0.5c-1.1,0-2.1-0.3-3.1-0.8s-1.7-1.1-2-1.8c-0.8,3.2-1.3,5.2-1.5,5.8
+	c-0.4,1.4-1.1,2.9-2.1,4.5l-2.5-0.9c-0.1-1.9,0-3.5,0.4-4.8L8.9,17c0-0.1-0.1-0.2-0.2-0.4S8.5,16,8.4,15.4c-0.1-0.6-0.2-1.2-0.2-1.7
+	c0-1.6,0.4-2.9,1.2-3.9c0.8-1,1.7-1.6,2.9-1.6c0.9,0,1.6,0.3,2.1,0.9c0.5,0.6,0.7,1.3,0.7,2.3c0,0.6-0.1,1.3-0.3,2.1
+	s-0.5,1.8-0.8,2.8c-0.3,1.1-0.6,1.9-0.7,2.6c-0.3,1.1,0,2.1,0.6,2.9c0.7,0.8,1.6,1.2,2.7,1.2c1.3,0,2.5-0.5,3.5-1.5
+	c1-1,1.8-2.4,2.4-4.1c0.5-1.7,0.8-3.6,0.8-5.6c0-1.2-0.2-2.2-0.6-3.2c-0.4-1-0.9-1.8-1.7-2.6c-0.7-0.7-1.7-1.3-2.8-1.7
+	c-1.1-0.4-2.4-0.6-3.8-0.6c-1,0-2,0.1-3,0.4S9.7,4.6,9,5C8.2,5.5,7.5,6,6.9,6.6C6.3,7.3,5.8,8,5.4,8.7C5,9.4,4.7,10.2,4.4,11.1
+	s-0.3,1.7-0.3,2.6c0,1.7,0.5,3,1.4,4.1c0.2,0.2,0.3,0.4,0.4,0.6s0,0.3-0.1,0.6c0,0.1-0.1,0.4-0.2,0.9c-0.1,0.4-0.2,0.7-0.2,0.8
+	c-0.1,0.3-0.2,0.4-0.4,0.5s-0.4,0.1-0.7,0c-0.9-0.4-1.8-1-2.4-1.8c-0.7-0.8-1.1-1.8-1.4-2.8S0,14.4,0,13.2c0-0.9,0.1-1.7,0.3-2.6
+	c0.2-0.9,0.5-1.7,0.9-2.6c0.4-0.9,0.9-1.7,1.5-2.5C3.4,4.7,4.1,4,4.9,3.3S6.7,2,7.7,1.6s2.1-0.9,3.4-1.1C12.4,0.1,13.7,0,15.1,0z"></path>
+</svg>
+</a></li>
+<li><a href="https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz/mailto:?subject=&amp;body=Check out this site: https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz" title="Share this page via Email"><span class="screen-reader-text">Share Via Email</span>
+<svg enable-background="new 0 0 31.8 21.2" id="Layer_1" version="1.1" viewbox="0 0 31.8 21.2" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g id="Email">
+<path d="M29.9,21.2H2c-1.1,0-2-0.9-2-2V4.9l14.7,9.3c0.6,0.4,1.2,0.4,1.2,0.4c0.6,0,1.2-0.3,1.3-0.4c0,0,0,0-0.1,0.1l14.7-9.4v14.4
+		C31.8,20.3,31,21.2,29.9,21.2z M17.2,14.2C17.3,14.2,17.2,14.2,17.2,14.2z M0,2c0-1.1,0.9-2,2-2h27.9c1.1,0,2,0.9,2,2L15.9,12L0,2z
+		"></path>
+</g>
+</svg>
+</a></li>
+</ul>
+</div>
+</div>
+<div aria-hidden="true" class="header-bottom-bar cf">
+<div class="header-bottom-bar-inner l-container-md">
+<div class="block block-site-branding block-system block-system-branding-block" id="block-sitebranding-2">
+<a href="https://www.adl.org/" rel="home" title="ADL Logo - Website Home">
+<svg id="Blue_Tagline" style="enable-background:new 0 0 346.7 163.7;" version="1.1" viewbox="0 0 346.7 163.7" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<style type="text/css">
+	.st0{fill:#003B71;}
+	.st1{fill:#00A0DF;}
+</style>
+<title>ADL Logo - Website Home</title>
+<path class="st0" d="M77.3,74.1L63.6,29.3L49.9,74.1l-7.3,24l-8,26.3H7.5L48.2,0h33.8l40.7,124.3H92.8l-8-26.3L77.3,74.1z"></path>
+<path class="st0" d="M233.6,0h27.5v100.4h59.1v24h-86.7V0z"></path>
+<path class="st0" d="M225.3,79.2c0,29.8-19.5,45.1-49.7,45.1h-49.4V0h49.7c29.8,0,49.4,15.3,49.4,45.1L225.3,79.2z M197.8,45.1
+	c0-14-8.7-21.1-21.9-21.1h-22.2v76.4h21.8c13.5,0,22.2-7.1,22.2-21.1L197.8,45.1z"></path>
+<polygon class="st1" points="119.9,83.6 0,102.6 0,78 119.9,59 "></polygon>
+<path class="st1" d="M7.1,163.4v-19h12.1v3.4H11v5.6h6.7v3.4h-6.8v6.7L7.1,163.4z"></path>
+<path class="st1" d="M21.5,163.4v-19h3.9v19H21.5z"></path>
+<path class="st1" d="M36.9,156.6v-3.4h5.5v9.9c-2.1,0.4-4.3,0.6-6.5,0.6c-3,0-5-0.8-6.1-2.4s-1.7-4.1-1.7-7.5c0-3.4,0.6-5.9,1.7-7.4
+	s3.1-2.3,5.9-2.3c1.9,0,3.8,0.2,5.6,0.6l1,0.2l-0.1,3c-1.8-0.2-3.6-0.3-5.5-0.4c-1-0.1-2.1,0.1-3,0.5c-0.6,0.4-1.1,1.1-1.3,1.9
+	c-0.3,1.5-0.5,3.1-0.4,4.6c-0.1,1.6,0.2,3.1,0.8,4.6c0.5,0.9,1.6,1.3,3.3,1.3l2.3-0.1v-3.7L36.9,156.6z"></path>
+<path class="st1" d="M56.6,163.4v-7.9h-7.1v7.9h-3.8v-19h3.8v7.8h7.1v-7.7h3.9v19L56.6,163.4z"></path>
+<path class="st1" d="M62.4,147.8v-3.4h13.9v3.4h-5v15.6h-3.9v-15.6H62.4z"></path>
+<path class="st1" d="M78.4,163.4v-19h3.9v19H78.4z"></path>
+<path class="st1" d="M85.9,163.4v-19h6.5L97,160h0.3v-15.6h3.9v19h-6.3l-4.7-15.6h-0.3v15.6L85.9,163.4z"></path>
+<path class="st1" d="M112.7,156.6v-3.4h5.5v9.9c-2.1,0.4-4.3,0.6-6.5,0.6c-3,0-5-0.8-6.1-2.4s-1.7-4.1-1.7-7.5
+	c0-3.4,0.6-5.9,1.7-7.4s3.1-2.3,5.9-2.3c1.9,0,3.8,0.2,5.6,0.6l1,0.2l-0.1,3c-1.8-0.2-3.6-0.3-5.5-0.4c-1-0.1-2.1,0.1-3,0.5
+	c-0.6,0.4-1.1,1.1-1.3,1.9c-0.3,1.5-0.5,3.1-0.4,4.6c-0.1,1.6,0.2,3.1,0.8,4.6c0.5,0.9,1.6,1.3,3.3,1.3l2.3-0.1v-3.7L112.7,156.6z"></path>
+<path class="st1" d="M139.3,163.4v-7.9h-7v7.9h-3.9v-19h3.9v7.8h7v-7.7h3.9v19L139.3,163.4z"></path>
+<path class="st1" d="M145.3,163.4l4.3-19h7.3l4.3,19h-3.9l-0.8-3.4h-6.6l-0.8,3.4H145.3z M152.6,147.6l-1.9,9h5.2l-1.9-9H152.6z"></path>
+<path class="st1" d="M160.5,147.8v-3.4h14v3.4h-5v15.6h-3.9v-15.6H160.5z"></path>
+<path class="st1" d="M176.5,163.4v-19h12.3v3.4h-8.4v4.4h6.8v3.3h-6.8v4.6h8.4v3.4L176.5,163.4z"></path>
+<path class="st1" d="M198.5,163.4v-19h12.1v3.4h-8.3v5.6h6.8v3.4h-6.8v6.7L198.5,163.4z"></path>
+<path class="st1" d="M225.7,161.4c-1.2,1.6-3.2,2.4-6.1,2.4s-4.9-0.8-6.1-2.4s-1.8-4-1.8-7.4s0.6-5.8,1.8-7.5s3.2-2.4,6.1-2.4
+	s4.9,0.8,6.1,2.4s1.8,4.1,1.8,7.5S226.9,159.8,225.7,161.4z M216.5,158.9c1.4,1.7,3.9,1.9,5.6,0.5c0.2-0.2,0.4-0.3,0.5-0.5
+	c0.7-1.6,0.9-3.2,0.8-4.9c0.1-1.7-0.2-3.4-0.8-5c-1.2-1.7-3.6-2.1-5.3-0.9c-0.3,0.2-0.6,0.5-0.9,0.9c-0.7,1.6-0.9,3.3-0.8,5
+	C215.6,155.7,215.9,157.4,216.5,158.9z"></path>
+<path class="st1" d="M234.2,157v6.4h-3.9v-19h7.4c4.5,0,6.7,2.1,6.7,6.2c0.1,2.2-0.9,4.3-2.8,5.5l2.7,7.3h-4.2l-2.2-6.4L234.2,157z
+	 M239.8,152.9c0.5-0.6,0.7-1.4,0.7-2.2c0-0.8-0.2-1.6-0.7-2.2c-0.5-0.6-1.3-0.9-2.1-0.8h-3.5v6h3.6
+	C238.5,153.8,239.3,153.5,239.8,152.9z"></path>
+<path class="st1" d="M262.1,156.6v-3.4h5.5v9.9c-2.1,0.4-4.3,0.6-6.5,0.6c-3,0-5-0.8-6.1-2.4c-1.1-1.6-1.7-4.1-1.7-7.5
+	s0.6-5.9,1.7-7.4s3.1-2.3,5.9-2.3c1.9,0,3.8,0.2,5.6,0.6l1,0.2l-0.1,3c-1.8-0.2-3.6-0.3-5.5-0.4c-1-0.1-2.1,0.1-3,0.5
+	c-0.6,0.4-1.1,1.1-1.3,1.9c-0.3,1.5-0.5,3.1-0.4,4.6c-0.1,1.6,0.2,3.1,0.8,4.6c0.5,0.9,1.7,1.3,3.4,1.3l2.3-0.1v-3.7L262.1,156.6z"></path>
+<path class="st1" d="M283.9,161.4c-1.2,1.6-3.2,2.4-6.1,2.4s-4.9-0.8-6.1-2.4c-1.2-1.6-1.8-4-1.8-7.4c0-3.4,0.6-5.8,1.8-7.5
+	s3.2-2.4,6.1-2.4s4.9,0.8,6.1,2.4s1.8,4.1,1.8,7.5S285.1,159.8,283.9,161.4z M274.7,158.9c1.4,1.7,3.9,1.9,5.6,0.5
+	c0.2-0.2,0.4-0.3,0.5-0.5c0.7-1.5,0.9-3.2,0.8-4.9c0.1-1.7-0.2-3.4-0.8-5c-1.2-1.7-3.6-2.1-5.3-0.8c-0.3,0.2-0.6,0.5-0.8,0.8
+	c-0.7,1.6-0.9,3.3-0.8,5C273.8,155.7,274.1,157.4,274.7,158.9z"></path>
+<path class="st1" d="M301.7,161.4c-1.2,1.6-3.2,2.4-6.1,2.4s-4.9-0.8-6.1-2.4c-1.2-1.6-1.8-4-1.8-7.4c0-3.4,0.6-5.8,1.8-7.5
+	s3.2-2.4,6.1-2.4s4.9,0.8,6.1,2.4s1.8,4.1,1.8,7.5S302.9,159.8,301.7,161.4z M292.5,158.9c1.4,1.7,3.9,1.9,5.6,0.5
+	c0.2-0.2,0.4-0.3,0.5-0.5c0.7-1.5,0.9-3.2,0.8-4.9c0.1-1.7-0.2-3.4-0.8-5c-1.2-1.7-3.6-2.1-5.3-0.8c-0.3,0.2-0.6,0.5-0.8,0.8
+	c-0.7,1.6-0.9,3.3-0.8,5C291.6,155.7,291.8,157.4,292.5,158.9L292.5,158.9z"></path>
+<path class="st1" d="M312.7,163.4h-6.4v-19h6.4c1.4,0,2.7,0.1,4,0.5c1,0.3,1.8,0.9,2.5,1.7c0.6,0.8,1,1.8,1.2,2.8
+	c0.2,1.4,0.4,2.8,0.3,4.2c0,1.4-0.1,2.8-0.3,4.2c-0.2,1.1-0.6,2.1-1.1,3c-0.6,0.9-1.5,1.6-2.5,1.9
+	C315.5,163.2,314.1,163.4,312.7,163.4z M316.7,155.9c0-0.6,0-1.4,0-2.5c0-0.8,0-1.7-0.1-2.5c-0.1-0.6-0.2-1.2-0.5-1.7
+	c-0.3-0.5-0.7-0.9-1.2-1.1c-0.7-0.2-1.5-0.3-2.2-0.3h-2.5v12.3h2.5c1.1,0.1,2.2-0.3,3-1.1C316.4,158.1,316.7,157,316.7,155.9
+	L316.7,155.9z"></path>
+<path class="st0" d="M337.1,123.1c-2.6,0.1-5.2-1-7-2.9c-3.7-4-3.7-10.2,0-14.3c1.8-1.9,4.3-3,6.9-2.9c2.6-0.1,5.1,1,6.9,2.9
+	c3.6,4.1,3.6,10.2,0,14.3C342.2,122.1,339.7,123.2,337.1,123.1z M337,104.6c-2.2,0-4.3,0.8-5.8,2.5c-3.1,3.4-3.1,8.6,0,11.9
+	c3.1,3.2,8.1,3.3,11.3,0.2c0.1-0.1,0.1-0.1,0.2-0.2c1.5-1.6,2.4-3.8,2.3-6c0.1-2.2-0.8-4.4-2.3-6C341.3,105.5,339.2,104.6,337,104.6
+	z M335.1,114.7v3.9H333v-11.1h4c1.1-0.1,2.2,0.2,3.1,0.8c0.7,0.6,1.1,1.5,1,2.4c0.1,0.8-0.1,1.7-0.4,2.4c-0.3,0.6-0.8,1-1.5,1.3
+	l2,4.2H339l-1.7-3.9H335.1z M335.1,109.2v3.7h2.2c0.5,0,1-0.1,1.4-0.4c0.3-0.4,0.5-0.9,0.4-1.4c0-1.2-0.8-1.9-2.3-1.9H335.1z"></path>
+</svg>
+<span class="element-invisible">Anti-Defamation League</span> </a>
+</div>
+<button class="header-bottom-button header-bottom-totop-button" onclick="jumpToTop()"><span class="screen-reader-text">Jump to top</span>
+<svg enable-background="new 0 0 46.1 42" id="Layer_1" version="1.1" viewbox="0 0 46.1 42" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<g>
+<path d="M45.1,2H1C0.4,2,0,1.6,0,1s0.4-1,1-1h44.1c0.6,0,1,0.4,1,1S45.6,2,45.1,2z"></path>
+</g>
+<g id="Arrow">
+<g enable-background="new    " id="_x36_-interface_-_arrow_bottom">
+<g id="_x36_-interface_-_arrow_bottom_1_">
+<g>
+<g>
+<path d="M8.5,21.3c0.5,0.5,1.4,0.5,1.9,0L21.7,8.8v31.8c0,0.7,0.6,1.4,1.4,1.4c0.7,0,1.4-0.6,1.4-1.4V8.8l11.3,12.4
+							c0.5,0.5,1.4,0.5,1.9,0c0.5-0.5,0.5-1.4,0-1.9L24.1,4.6c0,0,0,0-0.1-0.1c0,0,0-0.1-0.1-0.2c-0.1-0.1-0.1,0-0.2-0.1
+							c-0.2-0.2-0.4-0.3-0.7-0.3c0,0-0.1,0-0.1,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0-0.1,0c-0.3,0-0.6,0.1-0.8,0.3c0,0,0,0-0.1,0
+							c0,0,0,0,0,0.1c0,0,0,0,0,0.1L8.5,19.4C8,19.9,8,20.8,8.5,21.3z"></path>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
+</button>
+<button class="header-bottom-button header-bottom-share-button" onclick="toggleMenuState('SOCIAL')">
+<span class="screen-reader-text">Expand mobile social menu</span>
+<div class="social-icon-open">
+<svg enable-background="new 0 0 38.3 38.3" id="Layer_1" version="1.1" viewbox="0 0 38.3 38.3" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g id="share">
+<path d="M32.3,26.3c-2,0-3.7,1-4.8,2.4l-15.8-8c0.1-0.5,0.2-1,0.2-1.6c0-0.7-0.1-1.3-0.4-1.9l15.9-7.7c1.1,1.5,2.8,2.5,4.8,2.5
+		c3.3,0,6-2.7,6-6c0-3.3-2.7-6-6-6s-6,2.7-6,6c0,0.5,0.1,0.9,0.2,1.3l-16.1,7.8c-1.1-1.2-2.7-2-4.4-2c-3.3,0-6,2.7-6,6s2.7,6,6,6
+		c1.9,0,3.6-0.9,4.7-2.3l15.9,8.1c-0.1,0.4-0.2,0.9-0.2,1.4c0,3.3,2.7,6,6,6s6-2.7,6-6C38.3,29,35.6,26.3,32.3,26.3z M32.3,2.4
+		c2,0,3.6,1.6,3.6,3.6s-1.6,3.6-3.6,3.6S28.7,8,28.7,6S30.3,2.4,32.3,2.4z M6,22.7c-2,0-3.6-1.6-3.6-3.6S4,15.6,6,15.6
+		s3.6,1.6,3.6,3.6S8,22.7,6,22.7z M32.3,35.9c-2,0-3.6-1.6-3.6-3.6s1.6-3.6,3.6-3.6s3.6,1.6,3.6,3.6S34.3,35.9,32.3,35.9z"></path>
+</g>
+</svg>
+</div>
+<div class="social-icon-close">
+<svg enable-background="new 0 0 35.4 35.4" id="Layer_1" version="1.1" viewbox="0 0 35.4 35.4" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g id="Close">
+<g enable-background="new    " id="_x35_3-interface_-_cross_cancel">
+<g id="_x35_3-interface_-_cross_cancel_1_">
+<g>
+<path d="M19.4,17.7L35,2.1c0.5-0.5,0.5-1.3,0-1.8c-0.5-0.5-1.3-0.5-1.8,0L17.7,15.9L2.1,0.4c-0.5-0.5-1.3-0.5-1.8,0
+					c-0.5,0.5-0.5,1.3,0,1.8l15.6,15.6L0.4,33.3c-0.5,0.5-0.5,1.3,0,1.8c0.5,0.5,1.3,0.5,1.8,0l15.6-15.6L33.3,35
+					c0.5,0.5,1.3,0.5,1.8,0c0.5-0.5,0.5-1.3,0-1.8L19.4,17.7z"></path>
+</g>
+</g>
+</g>
+</g>
+</svg>
+</div>
+</button>
+<button class="header-bottom-button header-bottom-search-button" onclick="toggleMenuState('SEARCH')">
+<span class="screen-reader-text">Expand mobile search</span>
+<div class="search-icon-open">
+<svg enable-background="new 0 0 37.3 37.3" id="Layer_1" version="1.1" viewbox="0 0 37.3 37.3" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g id="Search">
+<g enable-background="new    " id="_x33_5-interface_-_search">
+<g id="_x33_5-interface_-_search_1_">
+<g>
+<path d="M1.9,37l10.4-10.4c2.7,2.3,6.1,3.7,9.9,3.7c8.4,0,15.2-6.8,15.2-15.2C37.3,6.8,30.5,0,22.1,0C13.8,0,7,6.8,7,15.2
+					c0,3.8,1.4,7.2,3.7,9.9L0.3,35.4c-0.4,0.4-0.4,1.1,0,1.6C0.8,37.4,1.5,37.4,1.9,37z M9.3,15.2c0-7.1,5.7-12.8,12.8-12.8
+					C29.2,2.3,35,8.1,35,15.2C35,22.2,29.2,28,22.1,28C15.1,28,9.3,22.2,9.3,15.2z"></path>
+</g>
+</g>
+</g>
+</g>
+</svg>
+</div>
+<div class="search-icon-close">
+<svg enable-background="new 0 0 35.4 35.4" id="Layer_1" version="1.1" viewbox="0 0 35.4 35.4" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g id="Close">
+<g enable-background="new    " id="_x35_3-interface_-_cross_cancel">
+<g id="_x35_3-interface_-_cross_cancel_1_">
+<g>
+<path d="M19.4,17.7L35,2.1c0.5-0.5,0.5-1.3,0-1.8c-0.5-0.5-1.3-0.5-1.8,0L17.7,15.9L2.1,0.4c-0.5-0.5-1.3-0.5-1.8,0
+					c-0.5,0.5-0.5,1.3,0,1.8l15.6,15.6L0.4,33.3c-0.5,0.5-0.5,1.3,0,1.8c0.5,0.5,1.3,0.5,1.8,0l15.6-15.6L33.3,35
+					c0.5,0.5,1.3,0.5,1.8,0c0.5-0.5,0.5-1.3,0-1.8L19.4,17.7z"></path>
+</g>
+</g>
+</g>
+</g>
+</svg>
+</div>
+</button>
+<button class="header-bottom-button header-bottom-menu-button" onclick="toggleMenuState('MENU')">
+<span class="screen-reader-text">Expand mobile menu</span>
+<div class="menu-icon-open">
+<svg enable-background="new 0 0 38.3 34.7" id="Layer_1" version="1.1" viewbox="0 0 38.3 34.7" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<g>
+<path d="M15.7,3.1C1.5,3.1,1.3,3,1.1,3C0.3,2.7-0.2,1.9,0,1.1C0.2,0.4,1-0.1,1.7,0c1.6,0.1,17,0,35.2,0c0,0,0,0,0,0
+			c0.8,0,1.5,0.7,1.5,1.5c0,0.8-0.7,1.5-1.5,1.5C21.3,3,22.8,3.1,15.7,3.1z"></path>
+</g>
+<g>
+<path d="M15.7,18.9c-14.2,0-14.5-0.1-14.6-0.1c-0.8-0.2-1.3-1-1.1-1.8c0.2-0.7,0.9-1.2,1.6-1.1c1.6,0.1,17,0,35.2,0c0,0,0,0,0,0
+			c0.8,0,1.5,0.7,1.5,1.5c0,0.8-0.7,1.5-1.5,1.5C21.3,18.9,22.8,18.9,15.7,18.9z"></path>
+</g>
+<g>
+<path d="M15.7,34.7c-14.2,0-14.5-0.1-14.6-0.1c-0.8-0.2-1.3-1-1.1-1.8C0.2,32,1,31.5,1.7,31.6c1.6,0.1,17,0,35.2,0c0,0,0,0,0,0
+			c0.8,0,1.5,0.7,1.5,1.5c0,0.8-0.7,1.5-1.5,1.5C21.3,34.7,22.8,34.7,15.7,34.7z"></path>
+</g>
+</g>
+</svg>
+</div>
+<div class="menu-icon-close">
+<svg enable-background="new 0 0 35.4 35.4" id="Layer_1" version="1.1" viewbox="0 0 35.4 35.4" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g id="Close">
+<g enable-background="new    " id="_x35_3-interface_-_cross_cancel">
+<g id="_x35_3-interface_-_cross_cancel_1_">
+<g>
+<path d="M19.4,17.7L35,2.1c0.5-0.5,0.5-1.3,0-1.8c-0.5-0.5-1.3-0.5-1.8,0L17.7,15.9L2.1,0.4c-0.5-0.5-1.3-0.5-1.8,0
+					c-0.5,0.5-0.5,1.3,0,1.8l15.6,15.6L0.4,33.3c-0.5,0.5-0.5,1.3,0,1.8c0.5,0.5,1.3,0.5,1.8,0l15.6-15.6L33.3,35
+					c0.5,0.5,1.3,0.5,1.8,0c0.5-0.5,0.5-1.3,0-1.8L19.4,17.7z"></path>
+</g>
+</g>
+</g>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+
+	window.mobileNavOpen = false;
+	window.mobileSearchOpen = false;
+	window.mobileSocialOpen = false;
+	window.desktopSearchOpen = false;
+
+	var tabletBreakpoint = 768;
+	var desktopBreakpoint = 1024;
+	var activeDropdown = false;
+
+	function clearHeaderBottom(type){
+		if(type === "DESKTOP"){
+			jQuery("#header .dropped-down").removeClass('dropped-down');
+			jQuery("#header-bottom .menu-item").attr('style','');
+			jQuery("#header-bottom .menu-item.ani-in").attr('style','').removeClass("ani-in");
+		}else if(type === "MOBILE"){
+			jQuery("#header-bottom").removeClass("expand-menu");
+			jQuery("#header-bottom").removeClass("expand-search--mobile");
+			jQuery("#header-bottom").removeClass("expand-social");
+			jQuery('html').removeClass('no-overflow');
+			jQuery("#header-bottom").css("overflow","");
+			window.mobileNavOpen = false;
+			window.mobileSearchOpen = false;
+			window.mobileSocialOpen = false;
+		}
+	}
+
+	function toggleMenuState(type) {
+		if(type === "MENU"){
+			clearMenuStateFor("MENU");
+			if(window.mobileNavOpen){
+				document.getElementById('header-bottom').classList.remove('expand-menu');
+				document.documentElement.classList.remove('no-overflow');
+			}else{
+				document.getElementById('header-bottom').classList.add('expand-menu');
+				document.documentElement.classList.add('no-overflow');
+			}
+			window.mobileNavOpen = !window.mobileNavOpen;
+		}else if(type === "SEARCH") {
+			clearMenuStateFor("SEARCH");
+			if(window.mobileSearchOpen){
+				document.getElementById('header-bottom').classList.remove('expand-search--mobile');
+			}else{
+				document.getElementById('header-bottom').classList.add('expand-search--mobile');
+				jQuery('#google-search--3 input#edit-keys--3').focus();
+			}
+			window.mobileSearchOpen = !window.mobileSearchOpen;
+		}else if(type === "SOCIAL") {
+			clearMenuStateFor("SOCIAL");
+			if(window.mobileSocialOpen){
+				document.getElementById('header-bottom').classList.remove('expand-social');
+			}else{
+				document.getElementById('header-bottom').classList.add('expand-social');
+			}
+			window.mobileSocialOpen = !window.mobileSocialOpen;
+		}
+	}
+
+	function clearMenuStateFor(type) {
+		if(type === "MENU"){
+			window.mobileSearchOpen = false;
+			window.mobileSocialOpen = false;
+			document.getElementById('header-bottom').classList.remove('expand-search--mobile');
+			document.getElementById('header-bottom').classList.remove('expand-social');
+		}else if(type === "SEARCH") {
+			window.mobileNavOpen = false;
+			window.mobileSocialOpen = false;
+			document.getElementById('header-bottom').classList.remove('expand-menu');
+			document.getElementById('header-bottom').classList.remove('expand-social');
+			document.documentElement.classList.remove('no-overflow');
+		}else if(type === "SOCIAL") {
+			window.mobileNavOpen = false;
+			window.mobileSearchOpen = false;
+			document.getElementById('header-bottom').classList.remove('expand-menu');
+			document.getElementById('header-bottom').classList.remove('expand-search--mobile');
+			document.documentElement.classList.remove('no-overflow');
+		}
+	}
+
+	function toggleMenuItem(context,interactionType){
+		clearHeaderBottom("DESKTOP");
+		toggleDesktopSearch("CLOSE");
+		if(interactionType === "CLICK" && activeDropdown === jQuery(context).data('menu-id')){
+			activeDropdown = false;
+			return;
+		}
+		activeDropdown = jQuery(context).data('menu-id');
+		jQuery("#header-bottom .menu-item[data-menu-id='"+activeDropdown+"']").css('display','block').addClass('ani-in');
+		jQuery(context).addClass('dropped-down');
+	}
+
+	function toggleDesktopSearch(forceState){
+		if(desktopSearchOpen || forceState === "CLOSE"){
+			jQuery('#google-search-form-container--desktop').removeClass('expand-search');
+			desktopSearchOpen = false;
+			jQuery('#search-expand-button--desktop').removeClass('icon-close');
+			jQuery('#search-expand-button--desktop').addClass('icon-search');
+		}else{
+			clearHeaderBottom("DESKTOP");
+			jQuery('#google-search-form-container--desktop').addClass('expand-search');
+			jQuery('#google-search-form-container--desktop input#edit-keys--2').focus()
+			desktopSearchOpen = true;
+			jQuery('#search-expand-button--desktop').addClass('icon-close');
+			jQuery('#search-expand-button--desktop').removeClass('icon-search');
+		}
+	}
+
+
+	window.onload = function(){
+		jQuery('#header .menu-level-0 .menu-item').hover(function(){
+			if(window.innerWidth >= desktopBreakpoint){
+				clearHeaderBottom("DESKTOP");
+				toggleMenuItem(this);
+			}
+		})
+		jQuery('#header-bottom .menu-level-0').mouseleave(function(){
+			if(window.innerWidth >= desktopBreakpoint){
+				clearHeaderBottom("DESKTOP");
+			}
+		})
+
+		jQuery('#header .menu-level-0 .menu-item').click(function(e){
+			if(window.innerWidth < desktopBreakpoint && window.innerWidth >= tabletBreakpoint){
+				e.preventDefault();
+				toggleMenuItem(this,"CLICK");
+			}
+		});
+
+		jQuery('#search-expand-button--desktop').mousedown(function(e){
+			e.preventDefault();
+			toggleDesktopSearch();
+		});
+		jQuery('#search-expand-button--desktop').focus(function(e){
+			console.log("focus",e);
+			toggleDesktopSearch();
+		});
+	};
+
+	function jumpToTop(){
+		var jumpToEl = jQuery('.header-video-container');
+	    if(window.mobileNavOpen) {
+			jQuery('.header-bottom-menu').animate({
+		        scrollTop: 0 ,
+		    }, 400);
+	    }else{
+	    	jQuery('html, body').animate({
+		        scrollTop: 0 ,
+		    }, 400);
+	    }
+
+	}
+
+	var resizeTimer;
+	window.onresize = function(){
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(function() {
+			if(window.innerWidth <= 768) {
+				clearHeaderBottom("DESKTOP");
+				toggleDesktopSearch("CLOSE");
+			}else{
+				clearHeaderBottom("MOBILE");
+			}
+		}, 150);
+	}
+</script> </div></div>
+<section id="breadcrumb">
+<div class="l-container-md">
+<div class="block block-breadcrumbs block-system block-system-breadcrumb-block" id="block-adl-theme-breadcrumbs">
+<div class="block-content">
+<nav aria-labelledby="system-breadcrumb" class="breadcrumb-dropdown-menu" role="navigation">
+<h2 class="visually-hidden">Breadcrumb</h2>
+<ol>
+<span class="slash">/</span>
+<li hover="on">
+<span class="page-title">
+<a href="https://www.adl.org/">Home</a>
+</span>
+</li>
+<span class="slash">/</span>
+<li class="drop-down" hover="on">
+<span class="page-title">
+<a href="https://www.adl.org/news">News</a>
+</span>
+<span class="arrow icon-arrow-stem-down"></span>
+<ul>
+<li>
+<a href="https://www.adl.org/press">Press Center</a>
+</li>
+<li>
+<a href="https://www.adl.org/blog">ADL Blog</a>
+</li>
+<li>
+<a href="https://www.adl.org/news/letters">Letters</a>
+</li>
+<li>
+<a href="https://www.adl.org/news/articles">Articles</a>
+</li>
+<li>
+<a href="https://www.adl.org/news/stories">Stories</a>
+</li>
+</ul>
+</li>
+<span class="slash">/</span>
+<li hover="on">
+<span class="page-title">
+<a href="https://www.adl.org/blog">ADL Blog</a>
+</span>
+</li>
+<span class="slash">/</span>
+<li class="is-active" hover="on">
+<span class="page-title">
+                      Florida White Supremacist Group Admits Ties…
+                  </span>
+</li>
+</ol>
+</nav>
+</div>
+</div>
+</div>
+</section>
+<main class="cf" role="main">
+<ul class="social-share outside-row-xl" style="">
+<li><a class="btn orange round icon-twitter" href="http://twitter.com/share?url=https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz&amp;text=Florida White Supremacist Group Admits Ties to Alleged Parkland School Shooter Nikolas Cruz&amp;via=ADL" ng-href="http://twitter.com/share?url=https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz&amp;text=Florida White Supremacist Group Admits Ties to Alleged Parkland School Shooter Nikolas Cruz&amp;via=ADL" target="_blank"><span class="screen-reader-text">Share via Twitter</span></a></li>
+<li><a class="btn orange round icon-facebook" href="http://www.facebook.com/sharer.php?u=https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz" target="_BLANK"><span class="screen-reader-text">Share via Facebook</span></a></li>
+<li><a class="btn orange round icon-pinterest" href="https://pinterest.com/pin/create/bookmarklet/?url=https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz" target="_BLANK"><span class="screen-reader-text">Share via Pinterest</span></a></li>
+<li><a class="btn orange round icon-email" href="https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz/mailto:?subject=Florida White Supremacist Group Admits Ties to Alleged Parkland School Shooter Nikolas Cruz&amp;body=Check out this site: https://www.adl.org/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz" target="_BLANK" title="Share by Email"><span class="screen-reader-text">Share via email</span></a></li>
+<li><a class="btn orange round icon-print" href="https://www.adl.org/#" onclick="window.print();return false;"><span class="screen-reader-text">Print this page</span></a></li>
+</ul>
+<div class="inner-wrap l-container-md cf">
+<section class="cf" id="highlighted">
+</section>
+<section class="cf" id="admin-tabs">
+</section>
+<section class="col-two-thirds outside-row-xl cf" id="content">
+<div class="block block-adl-modal-block block-adl-utility" id="block-adlmodalblock">
+<div class="block-content">
+<div id="adl-modal-dialogue"></div>
+</div>
+</div>
+<article about="/blog/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz" class="node nodeblog node-container" data-history-node-id="13429" id="node-13429" role="article">
+<section class="main-content has-share">
+<div class="issues-contain cf">
+<span class="icon-issuetag"></span>
+<div class="field field--name-field-issues field--type-entity-reference field--label-hidden field__items">
+<div class="field__item"><a href="https://www.adl.org/what-we-do/combat-hate/extremism-terrorism-bigotry">Extremism, Terrorism &amp; Bigotry</a></div>
+</div>
+</div>
+<header class="basic-header blog border-bottom cf">
+<h1 class="f-title heavy"><span>Florida White Supremacist Group Admits Ties to Alleged Parkland School Shooter Nikolas Cruz</span>
+</h1>
+<ul class="info-contain info-list cf">
+<li class="info-item date"><span>February 15, 2018</span>
+</li>
+</ul>
+</header>
+<section class="main-content-body">
+<div class="outside-row-l"><figure class="media media-images view-mode-callout">
+<div class="image-media bg-light-grey">
+<img alt="Nikolas Cruz ROF" class="b-lazy b-loaded b-loaded" height="390" src="https://www.adl.org/sites/default/files/styles/cropped_img_md/public/2018-02/1518673164058.jpg?h=a2b998b2&amp;itok=-XzldBCY" typeof="foaf:Image" width="575"/>
+<noscript><img alt="Nikolas Cruz ROF" src="https://www.adl.org/sites/default/files/styles/cropped_img_md/public/2018-02/1518673164058.jpg?h=a2b998b2&amp;itok=-XzldBCY"/></noscript>
+</div>
+</figure>
+</div>
+<div class="paragraph paragraph--type--textarea paragraph--view-mode--default body-text text-no-drop-cap text-no-endmark">
+<div class="field field--name-field-para-textarea field--type-text-long field--label-hidden field__item"><p>A spokesperson for the white supremacist group Republic of Florida (ROF) claimed to the Anti-Defamation League on Thursday, February 15, that Nikolas Cruz, the man charged with the previous day’s deadly shooting spree at a Parkland, Florida, high school, was associated with his group.</p>
+<p>UPDATE: On Thursday afternoon, following news reports of the alleged association between Cruz and the Republic of Florida, a member of an alt right discussion forum wrote that all of the claims were false and were part of an elaborate attempt to troll a network news reporter and other media outlets. At a press conference Thursday afternoon, the Broward County sheriff said a connection was “not confirmed at this time,” but that law enforcement was still investigating.</p>
+<p>Cruz, 19, a former student at Marjory Stoneman Douglas High School, allegedly entered the school Wednesday, February 14 with an AR-15 and opened fire, killing at least 17 people and injuring 14 more. Cruz left the scene but was later captured by police and has been charged with premeditated murder.</p>
+<p>After self-described ROF members claimed on the discussion forum 4chan that Cruz had also been a member, the Anti-Defamation League spoke with an ROF member who identified himself as Jordan Jereb.</p>
+<p>Jereb, based in Tallahassee, is believed to be the leader of ROF.  In 2016, he was arrested on charges of threatening a staffer in the office of Florida Governor Rick Scott because he was allegedly angry at the staffer’s son.</p>
+<p>Jereb said that Cruz was associated with ROF, having been “brought up” by another member.  Jereb also claimed that Cruz had participated in one or more ROF training exercises in the Tallahassee area, carpooling with other ROF members from south Florida.</p>
+<p>ROF has members in north and south Florida. The alt right white supremacist group borrows paramilitary concepts from the anti-government extremist militia movement (not itself a white supremacist movement).  ROF describes itself as a “white civil rights organization fighting for white identitarian politics” and seeks to create a “white ethnostate” in Florida.  Most ROF members are young and the group itself is only a few years old.</p>
+<p>Jereb added that ROF had not ordered or wanted Cruz to do anything like the school shooting.</p>
+<p>If Cruz’s role is confirmed, the Parkland school shooting would be the second school shooting by <a href="https://www.adl.org/blog/new-mexico-school-shooter-also-fixated-on-violence-against-jews">a white supremacist in the past two months</a>. In December 2017, another young white supremacist, William Atchison, engaged in a shooting spree at a high school in northwest New Mexico, killing two students before shooting himself.</p>
+<p><strong>What we know about ROF (the Republic of Florida):</strong></p>
+<ul><li>The Republic of Florida (ROF), also known as the ROF Militia, is a white supremacist group that started in 2014, adopting many concepts from the anti-government extremist militia movement (which itself is not part of the white supremacist movement), including paramilitary structures, paramilitary trainings, and uniforms. Members even have a camouflage painted vehicle.</li>
+<li>The leader of the group is Jordan Jereb, based in Tallahassee; the group also has members in South Florida, where Chris Cedeno seems to be one of the leading figure.</li>
+<li>Group members have had contacts and associations with a variety of other white supremacist groups, including the Vinlanders Social Club, the League of the South, and Atomwaffen</li>
+<li>As the alt right grew more well known, the ROF adopted a number of alt right concepts and language and now can be considered an alt right-style white supremacist group. It openly identifies as “identitarian.”</li>
+<li>It seeks to create a “white ethnostate” out of Florida.</li>
+<li>The group does not have a significant track record of violence, though that may be due more to its newness than anything else. Members have used violent language (and Jereb) was arrested in 2016 for threatening a staffer in the governor’s office. In 2014, before he founded ROF, Jereb said on social media that “the traitors of my country (Florida) will be hung in our courts.”</li>
+<li>At least some members of the Republic of Florida appear to have attended the Unite the Right rally in Charlottesville in August 2017.</li>
+</ul></div>
+</div>
+<div class="issues-contain bottom-page cf">
+<span class="icon-issuetag"></span>
+<div class="field field--name-field-issues field--type-entity-reference field--label-hidden field__items">
+<div class="field__item"><a href="https://www.adl.org/what-we-do/combat-hate/extremism-terrorism-bigotry">Extremism, Terrorism &amp; Bigotry</a></div>
+</div>
+</div>
+</section>
+<div class="content-type-pagination border-top l-faux-table outside-row-l inside-row-l border-bottom">
+<div class="col-half prev">
+<div class="uppercase">Previous Blog</div>
+<div><a class="pager prev icon-textlink flex-1" href="https://www.adl.org/blog/six-months-later-white-supremacists-after-charlottesville">Six Months Later: White…</a></div>
+</div>
+<div class="col-half u-text-align-right next">
+<div class="uppercase">Next Blog</div>
+<div><a class="pager next icon-textlink flex-1" href="https://www.adl.org/blog/conspiracy-theories-proliferate-about-florida-shooting-survivors">Conspiracy Theories…</a></div>
+</div>
+</div>
+</section>
+</article>
+</section>
+<aside class="sidebar col-third col-gap left outside-row-xl" id="sidebar-second" role="complementary">
+<section class="cf inside-row-l">
+<div class="cf">
+<h3 class="uppercase section-label blue">related to this Blog</h3>
+</div>
+<div class="field field--name-field-related-content field--type-entity-reference field--label-hidden">
+<div class="border-bottom stack-m inside-stack-m views-row">
+<article about="/news/press-releases/adl-deeply-disturbed-by-school-shooting-in-parkland-florida-vows-to-continue" class="teaser display-mode press-release-teaser" data-history-node-id="13428" id="node-13428" role="article">
+<div class="teaser-inner flex-contain">
+<div class="teaser-content flex-3">
+<div class="h-effect label-icon">
+<a class="icon-press-release" href="https://www.adl.org/news/press-releases">Press Release</a>
+</div>
+<a href="https://www.adl.org/news/press-releases/adl-deeply-disturbed-by-school-shooting-in-parkland-florida-vows-to-continue"><h3 class="f-title small"><span>ADL Deeply Disturbed by School Shooting in Parkland, Florida; Vows to Continue Push for Responsible Gun Safety Violence Prevention Laws</span>
+</h3></a>
+</div>
+</div>
+</article>
+</div>
+<div class="views-row">
+<article about="/blog/new-mexico-school-shooter-also-fixated-on-violence-against-jews" class="teaser display-mode blog-teaser" data-history-node-id="13303" id="node-13303" role="article">
+<div class="teaser-inner flex-contain">
+<div class="teaser-content flex-3">
+<div class="h-effect label-icon">
+<a class="icon-blog" href="https://www.adl.org/blog">Blog</a>
+</div>
+<a href="https://www.adl.org/blog/new-mexico-school-shooter-also-fixated-on-violence-against-jews"><h3 class="f-title small"><span>New Mexico School Shooter Also Fixated on Violence Against Jews</span>
+</h3></a>
+<div class="issues-contain cf">
+<span class="icon-issuetag"></span>
+<div class="field field--name-field-issues field--type-entity-reference field--label-hidden field__items">
+<div class="field__item"><a href="https://www.adl.org/what-we-do/anti-semitism/anti-semitism-in-the-us">Anti-Semitism in the US</a></div>
+<div class="field__item"><a href="https://www.adl.org/what-we-do/combat-hate/extremism-terrorism-bigotry">Extremism, Terrorism &amp; Bigotry</a></div>
+</div>
+</div>
+</div>
+<div class="teaser-image flex-1"><a href="https://www.adl.org/blog/new-mexico-school-shooter-also-fixated-on-violence-against-jews">
+<figure class="media media-images view-mode-teaser">
+<div class="image-media bg-light-grey">
+<img alt="atchinson Jew" class="b-lazy b-loaded b-loaded" height="130" src="https://www.adl.org/sites/default/files/styles/max_325x325/public/2017-12/atchison4.jpg?itok=NjBSjhCA" typeof="foaf:Image" width="325"/>
+<noscript><img alt="atchinson Jew" src="https://www.adl.org/sites/default/files/styles/max_325x325/public/2017-12/atchison4.jpg?itok=NjBSjhCA"/></noscript>
+</div>
+</figure>
+</a></div>
+</div>
+</article>
+</div>
+</div>
+</section>
+</aside>
+<section id="content-bottom">
+<div class="views-element-container block block- block-views block-views-blockmore-from-this-section-block-5 ani-views-fadeout" id="block-views-block-more-from-this-section-block-5">
+<h2 class="block-title">More from this Section</h2>
+<div class="block-content">
+<div block="block-views-block-more-from-this-section-block-5"><div class="js-view-dom-id-52bb1dcd5a6f34b0c4af8cee0318bf00787b5f428a9ba99d6b8a920190148a43 more-from-this-sectionview view">
+<div class="stack-m">
+<div class="row-contain"><div class="flex-contain row-group grid-row">
+<div class="views-row flex-1 grid-item">
+<article about="/news/press-releases/adl-welcomes-introduction-of-bipartisan-legislation-to-improve-hate-crime-data" class="grid display-mode press-release-grid no-img" data-history-node-id="14494" id="node-14494" role="article">
+<div class="grid-inner">
+<div class="h-effect label-icon">
+<a class="icon-press-release" href="https://www.adl.org/news/press-releases">Press Release</a>
+</div>
+<div class="grid-content">
+<a href="https://www.adl.org/news/press-releases/adl-welcomes-introduction-of-bipartisan-legislation-to-improve-hate-crime-data"><h3 class="f-title medium"><span>ADL Welcomes Introduction of Bipartisan Legislation to Improve Hate Crime Data Collection</span>
+</h3></a>
+<div class="field field--name-field-basic-short-desc field--type-text-long field--label-hidden field__item">The measure would authorize grants to promote hate crime training, prevention, best practices, and data collection initiatives.</div>
+<div class="issues-contain cf">
+<span class="icon-issuetag"></span>
+<div class="field field--name-field-issues field--type-entity-reference field--label-hidden field__items">
+<div class="field__item"><a href="https://www.adl.org/what-we-do/anti-semitism/anti-semitism-in-the-us">Anti-Semitism in the US</a></div>
+<div class="field__item"><a href="https://www.adl.org/what-we-do/combat-hate/extremism-terrorism-bigotry">Extremism, Terrorism &amp; Bigotry</a></div>
+<div class="field__item"><a href="https://www.adl.org/what-we-do/combat-hate/hate-crimes">Hate Crimes</a></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="views-row flex-1 grid-item">
+<article about="/news/press-releases/adl-and-mexico-launch-social-media-campaign-to-encourage-reporting-of-anti" class="grid display-mode press-release-grid has-img" data-history-node-id="14416" id="node-14416" role="article">
+<div class="grid-inner">
+<div class="grid-image cf">
+<a class="h-effect" href="https://www.adl.org/news/press-releases/adl-and-mexico-launch-social-media-campaign-to-encourage-reporting-of-anti">
+<figure class="media media-images view-mode-grid grid-image-inner image-ratio-s bg-light-grey">
+<img alt="Crimen de Odio ADL" class="b-lazy" data-src="/sites/default/files/styles/cropped_img_lg/public/2019-06/Crimen%20de%20Odio%20ADL_0.jpg?h=56bf1666&amp;itok=ahk5esAF" height="543" src="https://www.adl.org/themes/custom/adl_theme/images/loaders/placeholder.gif" typeof="foaf:Image" width="800"/>
+<noscript><img alt="Crimen de Odio ADL" src="https://www.adl.org/sites/default/files/styles/cropped_img_lg/public/2019-06/Crimen%20de%20Odio%20ADL_0.jpg?h=56bf1666&amp;itok=ahk5esAF"/></noscript>
+</figure>
+</a>
+<div class="h-effect label-icon">
+<a class="icon-press-release" href="https://www.adl.org/news/press-releases">Press Release</a>
+</div>
+</div>
+<div class="grid-content">
+<a href="https://www.adl.org/news/press-releases/adl-and-mexico-launch-social-media-campaign-to-encourage-reporting-of-anti"><h3 class="f-title medium"><span>ADL and Mexico Launch Social Media Campaign to Encourage Reporting of Anti-Immigrant Harassment</span>
+</h3></a>
+<div class="issues-contain cf">
+<span class="icon-issuetag"></span>
+<div class="field field--name-field-issues field--type-entity-reference field--label-hidden field__items">
+<div class="field__item"><a href="https://www.adl.org/what-we-do/combat-hate/extremism-terrorism-bigotry">Extremism, Terrorism &amp; Bigotry</a></div>
+<div class="field__item"><a href="https://www.adl.org/what-we-do/discrimination/immigrant-refugee-rights">Immigrant &amp; Refugee Rights</a></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="views-row flex-1 grid-item">
+<article about="/blog/small-group-of-neo-nazis-protest-michigan-pride-festival-with-homophobic-anti-semitic-slurs" class="grid display-mode blog-grid has-img" data-history-node-id="14459" id="node-14459" role="article">
+<div class="grid-inner">
+<div class="grid-image cf">
+<a class="h-effect" href="https://www.adl.org/blog/small-group-of-neo-nazis-protest-michigan-pride-festival-with-homophobic-anti-semitic-slurs">
+<figure class="media media-images view-mode-grid grid-image-inner image-ratio-s bg-light-grey">
+<img alt="NSM Detroit" class="b-lazy" data-src="/sites/default/files/styles/cropped_img_lg/public/2019-06/NSM%20detroit.jpg?h=56bf1666&amp;itok=HybYyH-4" height="543" src="https://www.adl.org/themes/custom/adl_theme/images/loaders/placeholder.gif" typeof="foaf:Image" width="800"/>
+<noscript><img alt="NSM Detroit" src="https://www.adl.org/sites/default/files/styles/cropped_img_lg/public/2019-06/NSM%20detroit.jpg?h=56bf1666&amp;itok=HybYyH-4"/></noscript>
+</figure>
+</a>
+<div class="h-effect label-icon">
+<a class="icon-blog" href="https://www.adl.org/blog">Blog</a>
+</div>
+</div>
+<div class="grid-content">
+<a href="https://www.adl.org/blog/small-group-of-neo-nazis-protest-michigan-pride-festival-with-homophobic-anti-semitic-slurs"><h3 class="f-title medium"><span>Small Group of Neo-Nazis Protest Michigan Pride Festival with Homophobic, Anti-Semitic Slurs</span>
+</h3></a>
+<div class="issues-contain cf">
+<span class="icon-issuetag"></span>
+<div class="field field--name-field-issues field--type-entity-reference field--label-hidden field__items">
+<div class="field__item"><a href="https://www.adl.org/what-we-do/anti-semitism/anti-semitism-in-the-us">Anti-Semitism in the US</a></div>
+<div class="field__item"><a href="https://www.adl.org/what-we-do/combat-hate/extremism-terrorism-bigotry">Extremism, Terrorism &amp; Bigotry</a></div>
+<div class="field__item"><a href="https://www.adl.org/what-we-do/discrimination/lgbtq-rights">LGBTQ Rights</a></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<footer class="cf bg-very-dark-grey" id="footer" role="contentinfo">
+<div class="cf">
+<div class="l-container-md footer-top text-white">
+<div class="footer-logo col-left">
+<div class="block block-site-branding block-system block-system-branding-block" id="block-sitebranding">
+<a href="https://www.adl.org/" rel="home" title="ADL Logo - Website Home">
+<svg id="Blue_Tagline" style="enable-background:new 0 0 346.7 163.7;" version="1.1" viewbox="0 0 346.7 163.7" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<style type="text/css">
+	.st0{fill:#003B71;}
+	.st1{fill:#00A0DF;}
+</style>
+<title>ADL Logo - Website Home</title>
+<path class="st0" d="M77.3,74.1L63.6,29.3L49.9,74.1l-7.3,24l-8,26.3H7.5L48.2,0h33.8l40.7,124.3H92.8l-8-26.3L77.3,74.1z"></path>
+<path class="st0" d="M233.6,0h27.5v100.4h59.1v24h-86.7V0z"></path>
+<path class="st0" d="M225.3,79.2c0,29.8-19.5,45.1-49.7,45.1h-49.4V0h49.7c29.8,0,49.4,15.3,49.4,45.1L225.3,79.2z M197.8,45.1
+	c0-14-8.7-21.1-21.9-21.1h-22.2v76.4h21.8c13.5,0,22.2-7.1,22.2-21.1L197.8,45.1z"></path>
+<polygon class="st1" points="119.9,83.6 0,102.6 0,78 119.9,59 "></polygon>
+<path class="st1" d="M7.1,163.4v-19h12.1v3.4H11v5.6h6.7v3.4h-6.8v6.7L7.1,163.4z"></path>
+<path class="st1" d="M21.5,163.4v-19h3.9v19H21.5z"></path>
+<path class="st1" d="M36.9,156.6v-3.4h5.5v9.9c-2.1,0.4-4.3,0.6-6.5,0.6c-3,0-5-0.8-6.1-2.4s-1.7-4.1-1.7-7.5c0-3.4,0.6-5.9,1.7-7.4
+	s3.1-2.3,5.9-2.3c1.9,0,3.8,0.2,5.6,0.6l1,0.2l-0.1,3c-1.8-0.2-3.6-0.3-5.5-0.4c-1-0.1-2.1,0.1-3,0.5c-0.6,0.4-1.1,1.1-1.3,1.9
+	c-0.3,1.5-0.5,3.1-0.4,4.6c-0.1,1.6,0.2,3.1,0.8,4.6c0.5,0.9,1.6,1.3,3.3,1.3l2.3-0.1v-3.7L36.9,156.6z"></path>
+<path class="st1" d="M56.6,163.4v-7.9h-7.1v7.9h-3.8v-19h3.8v7.8h7.1v-7.7h3.9v19L56.6,163.4z"></path>
+<path class="st1" d="M62.4,147.8v-3.4h13.9v3.4h-5v15.6h-3.9v-15.6H62.4z"></path>
+<path class="st1" d="M78.4,163.4v-19h3.9v19H78.4z"></path>
+<path class="st1" d="M85.9,163.4v-19h6.5L97,160h0.3v-15.6h3.9v19h-6.3l-4.7-15.6h-0.3v15.6L85.9,163.4z"></path>
+<path class="st1" d="M112.7,156.6v-3.4h5.5v9.9c-2.1,0.4-4.3,0.6-6.5,0.6c-3,0-5-0.8-6.1-2.4s-1.7-4.1-1.7-7.5
+	c0-3.4,0.6-5.9,1.7-7.4s3.1-2.3,5.9-2.3c1.9,0,3.8,0.2,5.6,0.6l1,0.2l-0.1,3c-1.8-0.2-3.6-0.3-5.5-0.4c-1-0.1-2.1,0.1-3,0.5
+	c-0.6,0.4-1.1,1.1-1.3,1.9c-0.3,1.5-0.5,3.1-0.4,4.6c-0.1,1.6,0.2,3.1,0.8,4.6c0.5,0.9,1.6,1.3,3.3,1.3l2.3-0.1v-3.7L112.7,156.6z"></path>
+<path class="st1" d="M139.3,163.4v-7.9h-7v7.9h-3.9v-19h3.9v7.8h7v-7.7h3.9v19L139.3,163.4z"></path>
+<path class="st1" d="M145.3,163.4l4.3-19h7.3l4.3,19h-3.9l-0.8-3.4h-6.6l-0.8,3.4H145.3z M152.6,147.6l-1.9,9h5.2l-1.9-9H152.6z"></path>
+<path class="st1" d="M160.5,147.8v-3.4h14v3.4h-5v15.6h-3.9v-15.6H160.5z"></path>
+<path class="st1" d="M176.5,163.4v-19h12.3v3.4h-8.4v4.4h6.8v3.3h-6.8v4.6h8.4v3.4L176.5,163.4z"></path>
+<path class="st1" d="M198.5,163.4v-19h12.1v3.4h-8.3v5.6h6.8v3.4h-6.8v6.7L198.5,163.4z"></path>
+<path class="st1" d="M225.7,161.4c-1.2,1.6-3.2,2.4-6.1,2.4s-4.9-0.8-6.1-2.4s-1.8-4-1.8-7.4s0.6-5.8,1.8-7.5s3.2-2.4,6.1-2.4
+	s4.9,0.8,6.1,2.4s1.8,4.1,1.8,7.5S226.9,159.8,225.7,161.4z M216.5,158.9c1.4,1.7,3.9,1.9,5.6,0.5c0.2-0.2,0.4-0.3,0.5-0.5
+	c0.7-1.6,0.9-3.2,0.8-4.9c0.1-1.7-0.2-3.4-0.8-5c-1.2-1.7-3.6-2.1-5.3-0.9c-0.3,0.2-0.6,0.5-0.9,0.9c-0.7,1.6-0.9,3.3-0.8,5
+	C215.6,155.7,215.9,157.4,216.5,158.9z"></path>
+<path class="st1" d="M234.2,157v6.4h-3.9v-19h7.4c4.5,0,6.7,2.1,6.7,6.2c0.1,2.2-0.9,4.3-2.8,5.5l2.7,7.3h-4.2l-2.2-6.4L234.2,157z
+	 M239.8,152.9c0.5-0.6,0.7-1.4,0.7-2.2c0-0.8-0.2-1.6-0.7-2.2c-0.5-0.6-1.3-0.9-2.1-0.8h-3.5v6h3.6
+	C238.5,153.8,239.3,153.5,239.8,152.9z"></path>
+<path class="st1" d="M262.1,156.6v-3.4h5.5v9.9c-2.1,0.4-4.3,0.6-6.5,0.6c-3,0-5-0.8-6.1-2.4c-1.1-1.6-1.7-4.1-1.7-7.5
+	s0.6-5.9,1.7-7.4s3.1-2.3,5.9-2.3c1.9,0,3.8,0.2,5.6,0.6l1,0.2l-0.1,3c-1.8-0.2-3.6-0.3-5.5-0.4c-1-0.1-2.1,0.1-3,0.5
+	c-0.6,0.4-1.1,1.1-1.3,1.9c-0.3,1.5-0.5,3.1-0.4,4.6c-0.1,1.6,0.2,3.1,0.8,4.6c0.5,0.9,1.7,1.3,3.4,1.3l2.3-0.1v-3.7L262.1,156.6z"></path>
+<path class="st1" d="M283.9,161.4c-1.2,1.6-3.2,2.4-6.1,2.4s-4.9-0.8-6.1-2.4c-1.2-1.6-1.8-4-1.8-7.4c0-3.4,0.6-5.8,1.8-7.5
+	s3.2-2.4,6.1-2.4s4.9,0.8,6.1,2.4s1.8,4.1,1.8,7.5S285.1,159.8,283.9,161.4z M274.7,158.9c1.4,1.7,3.9,1.9,5.6,0.5
+	c0.2-0.2,0.4-0.3,0.5-0.5c0.7-1.5,0.9-3.2,0.8-4.9c0.1-1.7-0.2-3.4-0.8-5c-1.2-1.7-3.6-2.1-5.3-0.8c-0.3,0.2-0.6,0.5-0.8,0.8
+	c-0.7,1.6-0.9,3.3-0.8,5C273.8,155.7,274.1,157.4,274.7,158.9z"></path>
+<path class="st1" d="M301.7,161.4c-1.2,1.6-3.2,2.4-6.1,2.4s-4.9-0.8-6.1-2.4c-1.2-1.6-1.8-4-1.8-7.4c0-3.4,0.6-5.8,1.8-7.5
+	s3.2-2.4,6.1-2.4s4.9,0.8,6.1,2.4s1.8,4.1,1.8,7.5S302.9,159.8,301.7,161.4z M292.5,158.9c1.4,1.7,3.9,1.9,5.6,0.5
+	c0.2-0.2,0.4-0.3,0.5-0.5c0.7-1.5,0.9-3.2,0.8-4.9c0.1-1.7-0.2-3.4-0.8-5c-1.2-1.7-3.6-2.1-5.3-0.8c-0.3,0.2-0.6,0.5-0.8,0.8
+	c-0.7,1.6-0.9,3.3-0.8,5C291.6,155.7,291.8,157.4,292.5,158.9L292.5,158.9z"></path>
+<path class="st1" d="M312.7,163.4h-6.4v-19h6.4c1.4,0,2.7,0.1,4,0.5c1,0.3,1.8,0.9,2.5,1.7c0.6,0.8,1,1.8,1.2,2.8
+	c0.2,1.4,0.4,2.8,0.3,4.2c0,1.4-0.1,2.8-0.3,4.2c-0.2,1.1-0.6,2.1-1.1,3c-0.6,0.9-1.5,1.6-2.5,1.9
+	C315.5,163.2,314.1,163.4,312.7,163.4z M316.7,155.9c0-0.6,0-1.4,0-2.5c0-0.8,0-1.7-0.1-2.5c-0.1-0.6-0.2-1.2-0.5-1.7
+	c-0.3-0.5-0.7-0.9-1.2-1.1c-0.7-0.2-1.5-0.3-2.2-0.3h-2.5v12.3h2.5c1.1,0.1,2.2-0.3,3-1.1C316.4,158.1,316.7,157,316.7,155.9
+	L316.7,155.9z"></path>
+<path class="st0" d="M337.1,123.1c-2.6,0.1-5.2-1-7-2.9c-3.7-4-3.7-10.2,0-14.3c1.8-1.9,4.3-3,6.9-2.9c2.6-0.1,5.1,1,6.9,2.9
+	c3.6,4.1,3.6,10.2,0,14.3C342.2,122.1,339.7,123.2,337.1,123.1z M337,104.6c-2.2,0-4.3,0.8-5.8,2.5c-3.1,3.4-3.1,8.6,0,11.9
+	c3.1,3.2,8.1,3.3,11.3,0.2c0.1-0.1,0.1-0.1,0.2-0.2c1.5-1.6,2.4-3.8,2.3-6c0.1-2.2-0.8-4.4-2.3-6C341.3,105.5,339.2,104.6,337,104.6
+	z M335.1,114.7v3.9H333v-11.1h4c1.1-0.1,2.2,0.2,3.1,0.8c0.7,0.6,1.1,1.5,1,2.4c0.1,0.8-0.1,1.7-0.4,2.4c-0.3,0.6-0.8,1-1.5,1.3
+	l2,4.2H339l-1.7-3.9H335.1z M335.1,109.2v3.7h2.2c0.5,0,1-0.1,1.4-0.4c0.3-0.4,0.5-0.9,0.4-1.4c0-1.2-0.8-1.9-2.3-1.9H335.1z"></path>
+</svg>
+<span class="element-invisible">Anti-Defamation League</span> </a>
+</div>
+</div>
+<div class="footer-mobile">
+<nav class="block block-main-navigation menu-main-navigation menu-block" id="block-mainnavigation" role="navigation">
+<div class="block-content">
+<ul block="block-mainnavigation" class="menu menu-main menu-level-0">
+<li block="block-mainnavigation" class="menu-item menu-item--collapsed menu-item--active-trail menu-item-level-0" data-menu-id="main-menu-item-who-we-are">
+<a data-drupal-link-system-path="node/11437" href="https://www.adl.org/who-we-are">Who We Are</a>
+</li>
+<li block="block-mainnavigation" class="menu-item menu-item--collapsed menu-item-level-0" data-menu-id="main-menu-item-what-we-do">
+<a data-drupal-link-system-path="node/2" href="https://www.adl.org/what-we-do">What We Do</a>
+</li>
+<li block="block-mainnavigation" class="menu-item menu-item--collapsed menu-item-level-0" data-menu-id="main-menu-item-education">
+<a data-drupal-link-system-path="node/12428" href="https://www.adl.org/education-and-resources/resources-for-educators-parents-families">Education</a>
+</li>
+<li block="block-mainnavigation" class="menu-item menu-item--collapsed menu-item-level-0" data-menu-id="main-menu-item-research--tools">
+<a data-drupal-link-system-path="node/12528" href="https://www.adl.org/education-and-resources/resource-knowledge-base">Research &amp; Tools</a>
+</li>
+<li block="block-mainnavigation" class="menu-item menu-item--collapsed menu-item-level-0" data-menu-id="main-menu-item-news">
+<a data-drupal-link-system-path="node/6" href="https://www.adl.org/news">News</a>
+</li>
+<li block="block-mainnavigation" class="menu-item menu-item--collapsed menu-item-level-0" data-menu-id="main-menu-item-take-action">
+<a data-drupal-link-system-path="node/14135" href="https://www.adl.org/take-action">Take Action</a>
+</li>
+<li block="block-mainnavigation" class="menu-item menu-item--collapsed menu-item-level-0" data-menu-id="main-menu-item-ways-to-give">
+<a data-drupal-link-system-path="node/11491" href="https://www.adl.org/ways-to-give">Ways to Give</a>
+</li>
+</ul>
+</div>
+</nav>
+<div class="block block-mobile-donate-button block-block-content block-block-content8d89d435-0650-43b1-b492-4fac26513f7b" id="block-mobiledonatebutton">
+<div class="block-content">
+<div class="field__item"><a class="btn orange donate" href="https://www.adl.org/donate"><span>Donate</span><i class="icon-right-arrow"></i></a></div>
+</div>
+</div>
+<div class="block block-find-your-local-adl-link block-block-content block-block-contentf3b54f69-766a-47e0-adbe-86cfb264b0b7" id="block-findyourlocaladllink">
+<div class="block-content">
+<div class="field field--name-field-regional-offices-link field--type-link field--label-hidden field__item"><a class="icon-localadl" href="https://www.adl.org/who-we-are/our-organization/regional-offices">Find Your Local ADL</a></div>
+</div>
+</div>
+</div>
+<div class="col-right">
+<div class="footer-col-right-inner">
+<nav class="block block-footer-menu menu-footer-menu menu-block" id="block-adl-theme-footer" role="navigation">
+<div class="block-content">
+<ul block="block-adl-theme-footer" class="menu menu-footer">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/7" href="https://www.adl.org/latinx">ADL Latinx</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/8" href="https://www.adl.org/blog">Blog</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a data-drupal-link-system-path="node/10" href="https://www.adl.org/press">Press</a>
+</li>
+<li class="menu-item">
+<a href="https://www.youtube.com/user/ADLNational">Video</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/11577" href="https://www.adl.org/careers">Careers</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/11" href="https://www.adl.org/contact">Contact</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/9" href="https://www.adl.org/privacy-policy">Privacy Policy</a>
+</li>
+</ul>
+</div>
+</nav>
+<nav class="block block-social-media menu-social-media menu-block" id="block-socialmedia-2" role="navigation">
+<div class="block-content">
+<ul block="block-socialmedia-2" class="menu menu-social">
+<li class="menu-item">
+<a class="icon-twitter sm-icon" href="https://twitter.com/ADL" target="_blank">
+<span class="element-invisible">Twitter</span>
+</a>
+</li>
+<li class="menu-item">
+<a class="icon-facebook sm-icon" href="https://www.facebook.com/anti.defamation.league/" target="_blank">
+<span class="element-invisible">Facebook</span>
+</a>
+</li>
+<li class="menu-item">
+<a class="icon-pinterest sm-icon" href="https://www.pinterest.com/adlnational/" target="_blank">
+<span class="element-invisible">Pinterest</span>
+</a>
+</li>
+<li class="menu-item">
+<a class="icon-instagram sm-icon" href="https://www.instagram.com/adl_national/" target="_blank">
+<span class="element-invisible">Instagram</span>
+</a>
+</li>
+<li class="menu-item">
+<a class="icon-youtube sm-icon" href="https://www.youtube.com/user/ADLNational" target="_blank">
+<span class="element-invisible">Youtube</span>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom bg-black text-light-grey cf">
+<div class="l-container-md">
+<span class="footer-bottom__colophon">
+<p>© 2019 Anti-Defamation League. All rights reserved.</p>
+</span>
+</div>
+</div>
+</footer>
+</div>
+<div id="js-mediaQueryReference"></div>
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script data-drupal-selector="drupal-settings-json" type="application/json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/13429","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"adl_theme\/global-css,adl_theme\/global-js,adl_theme\/iframe-resize,adl_utility\/adl-modal,adl_utility\/adl-utility.commands,ajax_loader\/ajax_loader.throbber,breadcrumb_dropdown_menu\/breadcrumb_dropdown_menu.breadcrumb_dropdown_menu.module,core\/html5shiv,paragraphs\/drupal.paragraphs.unpublished,system\/base,views\/views.module","theme":"adl_theme","theme_token":null},"ajaxTrustedUrl":{"\/search":true},"ajaxLoader":{"markup":"\u003Cdiv class=\u0022loader loader--style2\u0022 title=\u00221\u0022\u003E\n              \u003Csvg version=\u00221.1\u0022 id=\u0022loader-1\u0022 xmlns=\u0022http:\/\/www.w3.org\/2000\/svg\u0022 xmlns:xlink=\u0022http:\/\/www.w3.org\/1999\/xlink\u0022 x=\u00220px\u0022 y=\u00220px\u0022\n                 width=\u002240px\u0022 height=\u002240px\u0022 viewBox=\u00220 0 50 50\u0022 style=\u0022enable-background:new 0 0 50 50;\u0022 xml:space=\u0022preserve\u0022\u003E\n              \u003Cpath fill=\u0022#000\u0022 d=\u0022M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z\u0022\u003E\n                \u003CanimateTransform attributeType=\u0022xml\u0022\n                  attributeName=\u0022transform\u0022\n                  type=\u0022rotate\u0022\n                  from=\u00220 25 25\u0022\n                  to=\u0022360 25 25\u0022\n                  dur=\u00220.6s\u0022\n                  repeatCount=\u0022indefinite\u0022\/\u003E\n                \u003C\/path\u003E\n              \u003C\/svg\u003E\n            \u003C\/div\u003E","hideAjaxMessage":false,"alwaysFullscreen":false,"throbberPosition":"body"},"user":{"uid":0,"permissionsHash":"2f6a8195553fdea0b4dc2b73ff1d38285a9a60b5de85c1a016f07e93cc3420a9"}}</script>
+<script src="https://www.adl.org/sites/default/files/js/js_VlI2_WPdHprgxEGk9Qg-uM-aRUfHVYdxA1fAylP9Q3A.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.15/iframeResizer.min.js"></script>
+<script src="https://www.adl.org/sites/default/files/js/js_a6kceBNPuS5LQ7cHFYSK1i6WIeJ4G8rIe2EktakvfSQ.js"></script>
+<script id="" type="text/javascript">(function(b,c,d,a,e){b[a]=b[a]||[];b[a].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});b=c.getElementsByTagName(d)[0];c=c.createElement(d);a="dataLayer"!=a?"\x26l\x3d"+a:"";c.async=!0;c.src="https://www.googletagmanager.com/gtm.js?id\x3d"+e+a;b.parentNode.insertBefore(c,b)})(window,document,"script","dataLayer","GTM-KD5PM9S");</script>
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-KD5PM9S" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<script id="" type="text/javascript">var eventType="orientationchange";document.addEventListener?document.addEventListener(eventType,google_tag_manager["GTM-NDSHG3B"].macro(2),!1):document.attachEvent&&document.attachEvent("on"+eventType,google_tag_manager["GTM-NDSHG3B"].macro(3));</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","982014898532354");fbq("track","PageView");</script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=982014898532354&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+<script id="" type="text/javascript">fbq("track","ViewContent",{content_name:["\/blog\/florida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz"]});</script>
+<noscript>
+<img height="1" src="https://www.facebook.com/tr?id=982014898532354&amp;ev=ViewContent&amp;cd[content_name]=%2Fblog%2Fflorida-white-supremacist-group-admits-ties-to-alleged-parkland-school-shooter-nikolas-cruz&amp;noscript=1" style="display:none" width="1"/></noscript>
+<link href="https://www.adl.org/sites/default/files/css/css_vC7izC9AhS-6gebfeKv8UviJOjWFNx4xFws69BjR-pc.css?pujmq2" media="all" rel="stylesheet"/>
+<link href="https://www.adl.org/sites/default/files/css/css_P7KvTWqOFmSsZIa8GTlLInnV0K43s-tP8aNx3rx51Gk.css?pujmq2" media="all" rel="stylesheet"/>
+<link href="https://www.adl.org/sites/default/files/css/css_Ql-yc_lMY9l5IcLlum12cpzZetGV6XPD3IXh0-IOMY4.css?pujmq2" media="print" rel="stylesheet"/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fd0f02a077","applicationID":"28803170","transactionName":"ZF1UbUpUDxICWkcIDV0XY0tRGk4IDV1WGUxDUEY=","queueTime":0,"applicationTime":242,"atts":"SBpXGwJOHBw=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<div class="ui-front" id="drupal-modal" style="display: none;"></div><script id="" type="text/javascript">try{var prevPage1=google_tag_manager["GTM-KD5PM9S"].macro(7),prevPage2=google_tag_manager["GTM-KD5PM9S"].macro(8),prevPageReload=google_tag_manager["GTM-KD5PM9S"].macro(9),pogostick=!1,pageReload=!1,pogoURL,checkURL=google_tag_manager["GTM-KD5PM9S"].macro(10).toLowerCase(),checkURL=checkURL+google_tag_manager["GTM-KD5PM9S"].macro(11).toLowerCase(),checkURL=checkURL.replace("www.","");"undefined"!=typeof prevPage2&&prevPage2==checkURL&&(pogostick=!0,pogoURL=prevPage1);"undefined"!=typeof prevPageReload&&prevPageReload==google_tag_manager["GTM-KD5PM9S"].macro(12)&&(pageReload=!0);0==pageReload&&(google_tag_manager["GTM-KD5PM9S"].macro(13)("prevPage2",
+prevPage1,18E5,"/","adl.org"),google_tag_manager["GTM-KD5PM9S"].macro(14)("prevPage1",google_tag_manager["GTM-KD5PM9S"].macro(17),18E5,"/","adl.org"));google_tag_manager["GTM-KD5PM9S"].macro(18)("prevPageReload",google_tag_manager["GTM-KD5PM9S"].macro(19),18E5,"/","adl.org");pogostick&&0==pageReload?dataLayer.push({event:"pogostick",pogoURL:pogoURL}):pageReload&&dataLayer.push({event:"pageReload",reloadPage:prevPageReload})}catch(a){};</script><script id="" type="text/javascript">function trackHoverIntent(d,e){for(var c,b=window.document.querySelectorAll(d),a=0;a<b.length;a++)b[a].addEventListener("mouseenter",function(a){var b=a.target||a.srcElement,d=b.className,f=b.id;c||(c=window.setTimeout(function(){dataLayer.push({event:"breadcrumbHover","gtm.element":b,"gtm.elementClasses":d,"gtm.elementId":f,"gtm.elementHoverTime":e});c=null},e))});for(a=0;a<b.length;a++)b[a].addEventListener("mouseleave",function(){c&&(window.clearTimeout(c),c=null)})}
+trackHoverIntent('li.drop-down[hover\x3d"on"]',1400);</script><script id="" type="text/javascript">function trackHoverIntent(d,e){for(var c,b=window.document.querySelectorAll(d),a=0;a<b.length;a++)b[a].addEventListener("mouseenter",function(a){var b=a.target||a.srcElement,d=b.className,f=b.id;c||(c=window.setTimeout(function(){dataLayer.push({event:"menuHover","gtm.element":b,"gtm.elementClasses":d,"gtm.elementId":f,"gtm.elementHoverTime":e});c=null},e))});for(a=0;a<b.length;a++)b[a].addEventListener("mouseleave",function(){c&&(window.clearTimeout(c),c=null)})}
+trackHoverIntent("nav.menu-main-navigation li.menu-item-level-0",1800);</script></body></html>

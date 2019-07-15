@@ -1,0 +1,212 @@
+<html class="wf-opensans-n4-inactive wf-opensans-n6-inactive wf-rokkitt-n7-inactive wf-opensans-n7-inactive wf-opensanscondensed-n7-inactive wf-rokkitt-n4-inactive wf-inactive"><head>
+<title>
+    It's time for a refresh.
+ - TinEye</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="telephone=no" name="format-detection"/>
+<link href="https://tineye.com/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://tineye.com/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="https://tineye.com/feed" rel="alternate" title="TinEye RSS 2.0" type="application/rss+xml"/>
+<link href="https://tineye.com/css/bootstrap.min.css?150" media="screen, projection" rel="stylesheet" type="text/css"/>
+<link href="https://tineye.com/css/min/base.min.css?150" media="screen, projection" rel="stylesheet" type="text/css"/>
+<link href="https://tineye.com/css/min/error.min.css?150" media="screen, projection" rel="stylesheet" type="text/css"/>
+<link href="https://tineye.com/css/min/search_error.min.css?150" media="screen, projection" rel="stylesheet" type="text/css"/>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2430070-8', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+  </script>
+<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+<script src="https://tineye.com/js/jquery-1.11.0.min.js?150" type="text/javascript"></script>
+<script src="https://tineye.com/js/min/base.min.js?150" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7COpen+Sans+Condensed:700%7CRokkitt:400,700&amp;subset=latin,latin,latin" media="all" rel="stylesheet"/><script type="text/javascript">
+  WebFont.load({
+    google:{families:['Open+Sans:400,600,700:latin', 'Open+Sans+Condensed:700:latin', 'Rokkitt:400,700:latin']},
+    timeout: 2000
+  });
+  </script>
+<script src="https://tineye.com/js/min/search.min.js?150" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+      display_extension_link();
+      drag_and_drop('https://tineye.com/search');
+    });
+    function hide_search_submit() {
+      $("#file_submit").hide();
+    }
+    $(document).bind("reached_search", null, hide_search_submit);
+  </script>
+</head>
+<body>
+<div id="upload_overlay">
+<div id="upload_overlay_message" style="display: none">
+<img alt="Uploading your image..." height="32" src="https://tineye.com/images/large_throbber.gif" width="32"/><br/>
+      Uploading your image...
+    </div>
+</div>
+<header>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h1><a href="https://tineye.com/"></a></h1>
+<div class="hidden-sm hidden-xs left-nav">
+<a href="https://tineye.com/" id="search">Search</a>
+<a href="https://tineye.com/technology" id="technology">Technology</a>
+<a href="https://tineye.com/products" id="products" onclick="javascript:ga('send', 'event', 'TinEye Services click through', 'TinEye Services Callout');">Products</a>
+<a href="https://tineye.com/about" id="about">About</a>
+</div>
+<div class="visible-sm-block visible-xs-block mobile-menu">
+<a class="hamburger" onclick="javascript:$('#mobile-menu').toggle()"></a>
+<div id="mobile-menu">
+<div class="menu-arrow"></div>
+<ul>
+<li><a href="https://tineye.com/">Search</a></li>
+<li><a href="https://tineye.com/technology">Technology</a></li>
+<li><a href="https://tineye.com/products" onclick="javascript:ga('send', 'event', 'TinEye Services click through', 'TinEye Services Callout');">Products</a></li>
+<li><a href="https://tineye.com/about">About</a></li>
+<li><a href="https://tineye.com/service_select">Log in</a></li>
+</ul>
+</div>
+</div>
+<div class="visible-md-block visible-lg-block right-nav">
+<a class="" href="https://tineye.com/service_select">Log in</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="search-container">
+<div class="container">
+<div class="row">
+<div class="col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+<div class="search">
+<div class="forms">
+<form action="https://tineye.com/search" enctype="multipart/form-data" id="upload_form" method="post">
+<label for="upload_box" id="upload-button"></label>
+<input id="upload_box" name="image" onchange="display_throbber(); this.form.submit()" title="Upload an image" type="file"/>
+<input class="submit" id="file_submit" style="display: none;" type="submit" value="Upload Image"/>
+</form>
+<form action="https://tineye.com/search" id="url_form" method="post" onsubmit="display_throbber();">
+<div class="input-container">
+<input class="image-url" id="url_box" maxlength="100000" name="url" onfocus="this.form.search_button.disabled=false" placeholder="Upload or enter Image URL" type="text"/>
+</div>
+<input class="submit-button" disabled="disabled" id="url_submit" name="search_button" type="submit" value=""/>
+<img alt="Loading..." height="22" id="throbber" src="https://tineye.com/images/throbber.gif" width="22"/>
+</form>
+</div>
+<div id="drag_and_drop" style="display: none">
+<form action="https://tineye.com/search" enctype="multipart/form-data" id="upload_form_drag" method="post">
+<input id="upload_box_drag" name="image" type="file"/>
+<input id="file_submit" type="submit"/>
+</form>
+<form action="https://tineye.com/search" id="url_form_drag" method="post">
+<input id="url_box_drag" maxlength="100000" name="url" type="text"/>
+<input id="url_submit" name="search_button" type="submit"/>
+</form>
+</div>
+<script type="text/javascript">
+              $(document).trigger('reached_search', null);
+              if (!window.operamini) {
+                $('#url_submit').attr('disabled','disabled');
+              }
+            </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="error-container" id="article-content">
+<div class="feature-content">
+<div class="container">
+<div class="row">
+<div class="col-sm-12 col-md-offset-1 col-md-7 col-lg-offset-2 col-lg-6">
+<h2>It's time for a refresh.</h2>
+<p>We're sorry but these search results have expired. Please try your search again to get updated results.</p>
+</div>
+<div class="col-sm-12 col-md-3 col-lg-3">
+<div class="error-robot"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="drag_and_drop" style="display: none;">
+<form action="https://tineye.com/search" enctype="multipart/form-data" id="upload_form_drag" method="post">
+<input id="upload_box_drag" name="image" type="file"/>
+<input id="file_submit" type="submit"/>
+</form>
+<form action="https://tineye.com/search" id="url_form_drag" method="post">
+<input id="url_box_drag" maxlength="100000" name="url" type="text"/>
+<input id="url_submit" name="search_button" type="submit"/>
+</form>
+</div>
+<footer>
+<div class="container">
+<div class="row info">
+<div class="col-sm-12 col-md-4 company-description">
+<h1><a href="https://tineye.com/">TinEye</a></h1>
+<p class="md">TinEye is an <a href="https://tineye.com/technology">image search and recognition company</a>.
+            We are experts in computer vision, pattern recognition, neural networks, and machine learning.</p>
+<p class="md">Our mission is to make your images searchable.
+            <a href="https://tineye.com/how">How to use TinEye</a></p>
+</div>
+<div class="col-xs-6 col-sm-3 col-md-2 search-menu">
+<div>
+<h5>TINEYE.COM</h5>
+<a href="https://tineye.com/">Image search</a>
+<a href="https://tineye.com/how">How to use TinEye</a>
+<a href="https://tineye.com/extensions">Browser extensions</a>
+<a href="https://tineye.com/faq">FAQs</a>
+<a href="https://tineye.com/register">Register</a>
+</div>
+</div>
+<div class="col-xs-6 col-sm-3 col-md-2 products-menu">
+<div>
+<h5>PRODUCTS</h5>
+<a href="https://tineye.com/products">Overview</a>
+<a href="https://services.tineye.com/MatchEngine">MatchEngine</a>
+<a href="https://services.tineye.com/MobileEngine">MobileEngine</a>
+<a href="https://services.tineye.com/MulticolorEngine">MulticolorEngine</a>
+<a href="https://services.tineye.com/TinEyeAlerts">TinEye Alerts</a>
+<a href="https://services.tineye.com/TinEyeAPI">TinEye API</a>
+<a href="https://services.tineye.com/WineEngine">WineEngine</a>
+</div>
+</div>
+<div class="col-xs-6 col-sm-3 col-md-2 technology-menu">
+<div>
+<h5>WHAT WE DO</h5>
+<a href="https://tineye.com/technology">Our technology</a>
+<a href="https://labs.tineye.com">TinEye Labs</a>
+<h5 class="developers">DEVELOPERS</h5>
+<a href="https://services.tineye.com/docs">Documentation</a>
+<a href="https://help.tineye.com">Knowledge base</a>
+<a href="https://services.tineye.com/support">Support</a>
+</div>
+</div>
+<div class="col-xs-6 col-sm-3 col-md-2 company-menu">
+<div>
+<h5>COMPANY</h5>
+<a href="https://tineye.com/about">About TinEye</a>
+<a href="https://tineye.com/clients">Our clients</a>
+<a href="https://tineye.com/about#careers">Careers</a>
+<a href="https://tineye.com/press">Press</a>
+<a href="http://blog.tineye.com">Blog</a>
+</div>
+</div>
+</div>
+<div class="row copyright">
+<div class="col-xs-12 col-sm-6">© 2019 TinEye<span>·</span>Made with <img alt="love" class="heart" height="14" src="https://tineye.com/images/heart.png" width="17"/> in Canada</div>
+<div class="col-xs-12 col-sm-6 contact-menu"><a href="https://tineye.com/terms">Legal</a><span>·</span><a href="https://services.tineye.com/contact">Contact us</a></div>
+</div>
+</div>
+</footer>
+</body></html>

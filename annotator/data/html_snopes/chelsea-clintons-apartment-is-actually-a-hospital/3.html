@@ -1,0 +1,138 @@
+<html><head>
+<meta content="no-cache" http-equiv="Pragma"/>
+<title>NYS Department of State Corporation and Business Entity Database</title>
+<link href="https://appext20.dos.ny.gov/corp_public/documents/CORP/default.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="https://appext20.dos.ny.gov/corp_public/documents/CORP/form_input.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="https://appext20.dos.ny.gov/corp_public/documents/COMMON/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://appext20.dos.ny.gov/corp_public/documents/COMMON/banner.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+             <!--
+            A:link { font-family: Arial;  font-size: 10pt; text-decoration: none; color: green}
+            A:visited { font-family: Arial;  font-size: 10pt; text-decoration: none; color: #9E2100}
+            A:active { font-family: Arial;  font-size: 10pt; text-decoration: none}
+            A:hover { font-family: Arial; font-size:10pt; text-decoration: none; font-weight:bold ;}
+             -->
+            div.alert
+            {
+            color: #D8000C;
+            background-color: #FCDAD5;
+            border: 2px solid #D8000C;
+            width: 65%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 3px;
+            margin-bottom: 10px;
+            }
+
+            div.notice
+            {
+            color: #00529B;
+            background-color: #BDE5F8;
+            border: 2px solid #00529B;
+            width: 65%;
+            margin-left:auto;
+            margin-right:auto;
+            padding: 3px;
+            }
+
+            p.center
+            {
+            text-align: center;
+            }
+            </style>
+<script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-T4FP6H" type="text/javascript"></script><script language="javascript" src="https://appext20.dos.ny.gov/corp_public/documents/COMMON/nysbanner.js" type="text/javascript"></script>
+<script language="JavaScript" src="https://appext20.dos.ny.gov/corp_public/documents/CORP/entity_srch_entry.js" type="text/javascript"></script>
+</head>
+<body onload="set_focus()">
+<iframe class="nygov-universal-container" frameborder="0" height="86px" id="nygov-universal-navigation-frame" scrolling="no" src="//static-assets.ny.gov/load_global_menu/ajax?iframe=true" style="border:none; overflow:hidden; width:100%; height:86px;" width="100%">
+Your browser does not support iFrames
+</iframe>
+<noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-T4FP6H" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!="dataLayer"?"&l="+l:"";j.src="//www.googletagmanager.com/gtm.js?id="+i+dl;j.type="text/javascript";j.async=true;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-T4FP6H");</script>
+<center>
+<div class="headings" style="margin: .8em 0em .8em 0em;">
+<h1 class="dos_heading1">Department of State</h1>
+<br/>
+<h2 class="dos_heading2">Division of Corporations</h2>
+<br/>
+<h3 class="page_heading">Search Our Corporation and Business Entity Database</h3>
+<p class="DtMsg">The information contained in this database is current through July 12, 2019.</p>
+</div>
+<hr noshade="" width="100%"/>
+<div class="">
+</div>
+<p class="info">The Corporation and Business Entity Database includes business and not for profit corporations, limited 
+partnerships, limited liability companies and limited liability partnerships, as well as other miscellaneous 
+businesses.  This information is best viewed with Netscape Navigator 7.0 and above or Internet Explorer 6.0 
+and above. Please note that the database does not include corporate or other business entity assumed names 
+filed pursuant to General Business Law, §130. Assumed name filings are filed and maintained by the Division 
+of Corporations for corporations, limited liability companies and limited partnerships. Although maintained by 
+the Division of Corporations, searches of records of assumed names used by corporations, limited liability 
+companies and limited partnerships must be made by a written, faxed or e-mail request to the Division. All other 
+entities such as general partnerships, sole proprietorships and limited liability partnerships file an assumed 
+name certificate directly with the county clerk in each county in which the entity conducts or transacts business.</p>
+<div class="infobox" style="width: 90%">
+<p>Every effort has been made to ensure that the information contained on this site is up to date and accurate. 
+As the Department relies upon information provided to it, the information's completeness or accuracy cannot be 
+guaranteed. If you have any questions about performing a search or the results you receive, please contact the 
+NYS Department of State, Division of Corporations at (518) 473-2492, Monday - Friday, 9:00 a.m. - 12:00 p.m. and 1:00 pm - 4:00 pm</p>
+</div>
+<form action="CORPSEARCH.SELECT_ENTITY" method="post" name="corpsearch" onsubmit="return validate()">
+<div class="inputfields">
+<fieldset>
+<legend>
+      Search Criteria
+      </legend>
+<label accesskey="1" for="p_entity_name">Entity Name <span class="redit">*</span> </label>
+<input id="p_entity_name" maxlength="150" name="p_entity_name" size="55" tabindex="1" type="text" value=""/>
+<br/>
+<label accesskey="2" for="p_name_type">Name Type <span class="redit">*</span>   </label>
+<select id="p_name_type" name="p_name_type" size="1" tabindex="2">
+<option value="A">Active Only</option>
+<option value="%">All</option>
+</select>
+<br/>
+<label accesskey="3" for="p_search_type">Search Type <span class="redit">*</span> </label>
+<select id="p_search_type" name="p_search_type" size="1" tabindex="3">
+<option value="BEGINS">Begins With</option>
+<option value="CONTAINS">Contains</option>
+<option value="PARTIAL">Partial</option>
+</select>
+<br/>
+<label accesskey="1" for="captcha">Captcha <span class="redit">*</span>        </label>
+<input id="p_captcha" maxlength="15" name="p_captcha" size="20" tabindex="4" type="text" value=""/>
+         <img align="center" height="50" src="https://appext20.dos.ny.gov/corp_public/corpsearch.captcha_image?p_captcha_value=D10C809564ADCB2B" style="float: center;" width="100"/>
+<input name="p_captcha_check" type="hidden" value="26C7C1050170C317547C5287FD52057E9557F8ADD149B00B9452D6F44BC9169157FF41AFE2DEFBD66EBE56FC2335F4B4"/>
+<br/>
+<center>
+<span class="messages">The items marked with <span class="redit">*</span> are required.</span>
+</center>
+</fieldset>
+</div>
+<br/>
+<input accesskey="4" tabindex="6" title="This button submits your search request." type="submit" value="Search the Database"/>
+</form>
+<div class="infobox" style="width: 46%">
+<span class="highlight">To search the database do the following:</span>
+<ol>
+<li> Enter the Corporation or Business Entity Name being searched for.</li>
+<li> Select a Name Type.</li>
+<li> Select a Search Type.</li>
+<li> Enter the numbers from the image into the CAPTCHA field.</li>
+<li> Tab to Search the Database and press the enter key or click Search the Database.</li>
+</ol>
+<center>
+<a href="https://appext20.dos.ny.gov/corp_public/CORPSEARCH.ENTITY_SEARCH_HELP" tabindex="10" title="Link to page containing additional search instructions.">Additional Search Instructions</a>
+</center>
+</div>
+<br/>
+<div class="dos_navbar"><a href="http://www.dos.ny.gov/about/services/home.html">Services/Programs</a>   |   <a href="http://www.dos.ny.gov/about/privacy.html">Privacy Policy</a>   |   <a href="http://www.dos.ny.gov/about/access.html">Accessibility Policy</a>   |   <a href="http://www.dos.ny.gov/about/disclaimer.html">Disclaimer</a>   |   <a href="http://www.dos.ny.gov">Return to DOS Homepage</a>   |   <a href="http://www.dos.ny.gov/about/contact.asp">Contact Us</a></div><div>
+<br/>
+<center>
+</center>
+</div>
+</center>
+<iframe class="nygov-universal-container" frameborder="0" height="86px" id="nygov-universal-footer-frame" scrolling="no" src="//static-assets.ny.gov/load_global_footer/ajax?iframe=true" style="border:none; overflow:hidden; width:100%; height:86px;" width="100%">
+            Your browser does not support iFrames
+</iframe>
+</body></html>

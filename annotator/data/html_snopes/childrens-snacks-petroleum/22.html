@@ -1,0 +1,759 @@
+<html class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<title>TOXNET</title>
+<meta content="Toxicology, environmental health, and chemical databases and other information resources from the Toxicology and Environmental Health Information Program, National Library of Medicine, National Institutes of Health" name="description"/>
+<meta content="width=device-width" name="viewport"/>
+<link href="https://toxnet.nlm.nih.gov/newtoxnet/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://toxnet.nlm.nih.gov/newtoxnet/js/tipsy/tipsy.css" rel="stylesheet"/>
+<link href="https://toxnet.nlm.nih.gov/newtoxnet/js/superbox/jquery.superbox.css" rel="stylesheet"/>
+<link href="https://toxnet.nlm.nih.gov/newtoxnet/css/style.css" rel="stylesheet"/>
+<script async="" src="//script.crazyegg.com/pages/scripts/0027/2050.js?434195" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/plugins/ua/linkid.js" type="text/javascript"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MT6MLL"></script><script src="https://toxnet.nlm.nih.gov/newtoxnet/js/libs/modernizr-2.5.3.min.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MT6MLL');</script>
+<script language="JavaScript">
+
+
+var gAutoPrint = false; // Flag for whether or not to automatically call the print function
+
+
+function printSpecial()
+{
+	if (document.getElementById != null)
+	{
+		var html = '<HTML>\n<HEAD>\n';
+
+
+                html += '\n</HEAD>\n<BODY>\n';
+		
+		var printReadyElem = document.getElementById("record-main");
+		
+		if (printReadyElem != null)
+		{
+				html += printReadyElem.innerHTML;
+		}
+		else
+		{
+			alert("Could not find the printReady section in the HTML");
+			return;
+		}
+			
+		html += '\n</BO' + 'DY>\n</HT' + 'ML>';
+		
+		var printWin = window.open("Print","printSpecial", 'width=1000,height=600,left=500,top=200,toolbar=yes,menubar=yes,scrollbars=yes');
+		printWin.document.open();
+		printWin.document.write(html);
+		printWin.document.close();
+		if (gAutoPrint)
+			printWin.print();
+	}
+	else
+	{
+		alert("Sorry, the print ready feature is only available in modern browsers.");
+	}
+}
+
+</script>
+</head>
+<body onload="$('#record-main').html('Loading...').load(
+'/cgi-bin/sis/search2/f?./temp/~MHb966:1:FULL')">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-MT6MLL" style="display:none;visibility:hidden" title="googletagmanager" width="0"></iframe></noscript>
+<div id="details" style="display:none">
+<b>Databases:</b><br/>
+HSDB<p>
+<b>Query:</b><br/>
+1948-33-0 [rn] </p><p>
+Records containing the term <strong>1948 33 0  </strong>
+</p></div>
+<div id="download" style="display:none">
+<form action="/cgi-bin/sis/download2.txt" method="post" name="downloadform">
+<label>Download  this record in <input name="DownloadCount" type="hidden" value="1"/><input name="DownloadStart" type="hidden" value="1"/><select name="DownloadFormat" size="2" style="vertical-align:top">
+<option selected="" value="f">Full
+</option></select></label>
+<br/>
+<p><b>Custom Formats</b></p><p>
+<label><input name="DownloadFormat" type="checkbox" value="orvw"/>  Overview
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="na,@rn"/>  Substance Identification
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="toxs,@care,@htox,@htxv,@seri,@warn,@meds,@popl,@rtex,@body,@avdi,@rfd"/>  Human Health Effects
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="emt,@antr"/>  Emergency Medical Treatment
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="toxs,@care,@ntox,@ntp,@ntxv,@etxv,@test,@tcat"/>  Animal Toxicity Studies
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="metb,@ade,@bhl,@actn,@intc"/>  Metabolism/Pharmacokenetics
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="ther,@warn,@intc,@idio,@tolr,@rfd,@mxdo,@bion"/>  Pharmacology
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="envs,@rtex,@body,@avdi,@nats,@arts,@fate,@biod,@abio,@bioc,@koc,@vws,@watc,@effl,@seds,@atmc,@food,@plnt,@fish,@anml,@milk,@oevc"/>  Environmental Fate &amp; Exposure
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="fifr,@adi,@tsca,@cerc,@rcra,@astd,@cwa,@fdws,@fdwg,@sdws,@sdwg,@sstd,@fda,@atol"/>  Environmental Standards and Regulations
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="mf,@mw,@cofo,@odor,@tast,@bp,@mp,@corr,@ctp,@den,@dsc,@htc,@htv,@owpc,@ph,@sol,@spec,@surf,@vapd,@vap,@evap,@visc,@ocpp"/>  Chemical/ Physical Properties
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="hazs,@dot,@odrt,@ghs,@seri,@fpot,@nfpa,@flmt,@flpt,@auto,@firp,@toxc,@ofhz,@expl,@reac,@dcmp,@poly,@ohaz,@idlh,@equp,@oprm,@ssl,@ship,@strg,@clup,@disp,@radl"/>  Chemical Safety &amp; Handling
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="osha,@tlv,@nrec,@idlh,@osrg"/>  Occupational Exposure Standards
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="use,@mfs,@mmfg,@omin,@form,@imp,@cpat,@prod,@impt,@expt"/>   Manufacturing Use/information
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="clab,@alab,@samp"/>  Laboratory Methods
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="rpts,@hist"/>  Special References
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="relt,@sy,@asch,@form,@shpn,@stcc,@hazn,@wln,@rtec"/>  Synonyms and Identifiers
+</label><br/><label><input name="DownloadFormat" type="checkbox" value="DOCNO,@rvdt"/>  Administrative Information   
+</label><br/><input name="TempFile" type="hidden" value="./temp/~MHb966"/><label><input class="btn btn-apply-search" type="submit" value="Download"/></label>
+</p></form>
+</div>
+<div id="permalink" name="permalink" style="display:none">
+<b>Permanent Link to this record is:</b>
+<p></p>
+<p>
+http://toxnet.nlm.nih.gov/cgi-bin/sis/search2/r?dbs+hsdb:@term+@DOCNO+838</p></div>
+<div class="container">
+<header id="branding">
+<h1 id="site-title"><a href="http://www.nlm.nih.gov" id="anch_0" rel="NLM home" title="U.S. National Library of Medicine">U.S. National Library of Medicine</a></h1>
+<h1 id="site-title2"><a href="https://toxnet.nlm.nih.gov/newtoxnet/index.html" id="anch_1" rel="home" title="TOXNET - TOXICOLOGY DATA NETWORK">TOXNET - TOXICOLOGY DATA NETWORK</a></h1>
+<nav id="access" role="article">
+<ul class="menu" id="menu-main-menu">
+<li><a href="https://toxnet.nlm.nih.gov/pda/" id="anch_2">Mobile</a></li>
+<li><a href="https://toxnet.nlm.nih.gov/newtoxnet/toxnetallsearch.html" id="anch_3">Help</a></li>
+<li><a href="https://toxnet.nlm.nih.gov/newtoxnet/faq.html" id="anch_4">FAQs</a></li>
+<li><a href="https://toxnet.nlm.nih.gov/help/newtoxnet/toxnetfs.html" id="anch_5">TOXNET Fact Sheet</a></li>
+<li><a href="http://sis.nlm.nih.gov/enviro/manuals.html" id="anch_6">Training Manual &amp; Schedule</a></li>
+</ul>
+</nav>
+</header>
+<div id="main" role="main">
+<ul class="breadcrumb">
+<li>
+<a href="https://toxnet.nlm.nih.gov/newtoxnet/" id="anch_7">TOXNET Home</a> <span class="divider">&gt;</span>
+</li>
+<li>
+<a href="https://toxnet.nlm.nih.gov/newtoxnet/hsdb.htm" id="anch_8">  HSDB Home &gt; </a> </li>
+<li>
+<a href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/d?./temp/~MHb966:0:@od@@@" id="anch_9">HSDB Search Results</a> <span class="divider">&gt;</span>
+</li>
+<li class="active">Full Record</li>
+</ul>
+<div class="container-fluid">
+<div class="clearfix" id="record-search-body">
+<form action="/cgi-bin/sis/search2" class="form-search form-horizontal" method="post">
+<input class="input-medium search-query" name="queryxxx" style="width:400px;" title="search box" type="text" value="
+"/>
+<input name="chemsyn" type="hidden" value="0"/>
+<input name="pubmed" type="hidden" value="0"/>
+<input name="and" type="hidden" value="0"/>
+<input name="Stemming" type="hidden" value="0"/>
+<!--            <input type="hidden" name="chemsyn" value="1">
+                <input type="hidden" name="and" value="1">
+                <input type="hidden" name="Stemming" value="1">
+                <input type="hidden" name="pubmed" value="1">-->
+<input name="database" type="hidden" value="hsdb"/> <button class="btn btn-search" type="submit">Search</button>
+</form>
+</div>
+<div class="clearfix" id="record-page-top-links">
+<ul class="left">
+<li><a href="https://toxnet.nlm.nih.gov/#details" id="anch_10" rel="superbox[content][500x700]">Search Details</a></li>
+<li><a href="https://toxnet.nlm.nih.gov/
+/cgi-bin/sis/search2/h?./temp/~MHb966:" id="anch_11" rel="superbox[iframe][500x600]">History</a></li>
+</ul>
+<ul class="right">
+<li><a href="https://toxnet.nlm.nih.gov/#" id="prevpage" name="prevpage" style="display: none">« Previous Record</a></li>
+<li><a href="https://toxnet.nlm.nih.gov/#" id="nextpage" name="nextpage" style="display: none">Next  Record »</a></li>
+</ul>
+</div>
+<div class="clearfix" id="record-page-header">
+<h2>
+HSDB: T-BUTYLHYDROQUINONE </h2>
+<h4>CASRN:
+1948-33-0 </h4>
+<span class="record-description">This record appears in multiple databases.</span>
+</div>
+<div class="record-page-controllers clearfix">
+<form>
+<ul>
+<li class="database-selection"><label for="other" style="display:inline-block">View record in another database:</label>
+<select id="other" name="other" onchange="location = this.options[this.selectedIndex].value;" style="width:120px;">
+<option value="#">HSDB
+</option><option value="/cgi-bin/sis/search2/r?dbs+ccris:@term+@rn+1948-33-0:@odhsdb@/cgi-bin/sis/search2/f?./temp/~MHb966:1@">CCRIS
+</option><option value="/cgi-bin/sis/search2/r?dbs+ctd:@term+@rn+1948-33-0:@odhsdb@/cgi-bin/sis/search2/f?./temp/~MHb966:1@">CTD
+                                                </option></select>
+</li>
+<li class="download">
+<a class="download" href="https://toxnet.nlm.nih.gov/#download" id="anch_14" rel="superbox[content][500x550]">
+Download this Record</a>
+</li>
+<li class="print">
+<a class="print" href="https://toxnet.nlm.nih.gov/javascript:void(printSpecial())" id="anch_15">Print</a>
+</li>
+<li class="save-record">
+<div id="search-result-table">
+<span><a class="save-record" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/d?./temp/~MHb966:1:@sa0+`/newtoxnet/saverecord.json" id="anch_16">
+Select Record</a></span>
+</div>
+</li>
+<li class="mylist"><a class="view-save-record" href="https://toxnet.nlm.nih.gov/
+/cgi-bin/sis/search2/s?./temp/~MHb966:" id="anch_17" rel="superbox[iframe][800x400]"> My List</a></li>
+<li class="mylist"><a class="permalink" href="https://toxnet.nlm.nih.gov/#permalink" id="anch_18" rel="superbox[content][700x100]"> Permalink</a></li>
+</ul>
+</form>
+</div>
+<div class="record-page-controllers clearfix">
+<span style="margin-left:20px;"><a href="http://www.ncbi.nlm.nih.gov/m/pubmed/?term=2-tert-Butylhydroquinone+OR+1948-33-0+[rn]+AND+tox[sb]&amp;filters=y_5" id="anch_19" target="_blank">Recent related PubMed toxicology articles</a></span>
+<span class="database-name" original-title="This link searches for this substance in the last 5 years of citations from the Toxicology Subset of PubMed.  After the first search, you may change the search limits to the last 10 years, or to other limits such as Review Articles.  These citations are provided to find recent literature that may not be included in the HSDB record,  and have not necessarily been throught the NLM peer review process."><img alt="Link to PubMed Citation" border="0" src="https://toxnet.nlm.nih.gov/img/PubMed.gif" width="21"/></span>
+</div>
+<div id="record-contents">
+<div id="record-left-controllers">
+<a class="link-bar" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_20">Click</a>
+<div class="controllers-contents">
+<h3>Table of Contents</h3>
+<div style="float:right">
+<a class="expand-all" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_21">Expand all</a><br/><a class="collapse-all" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_22">Collapse all</a>
+<br/>
+</div>
+<form action="/cgi-bin/sis/search2" method="post">
+<input class="btn btn-apply-search" type="submit" value="Show Selected Items"/>
+<input class="btn btn-apply-search clear-form" onclick="
+window.location.href = '/cgi-bin/sis/search2/c?./temp/~MHb966:1:';" type="button" value="Clear"/><br/>
+<input name="dselect" type="hidden" value="./temp/~MHb966"/>
+<input name="item" type="hidden" value="1"/><ul>
+<li>
+<label> <input class="new-line" name="dfield" type="checkbox" value="FULL"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:FULL" id="anch_23">Full Record</a>
+</label> <p>
+</p></li>
+<li>
+<span class="top-level"><input name="dfield" title="Overview" type="checkbox" value="orvw"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_24">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:orvw" id="anch_25">Overview</a></span>
+</li><li>
+<span class="top-level"><input name="dfield" title="Human Health Effects" type="checkbox" value="human"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_26">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:human" id="anch_27">Human Health Effects</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="toxs"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:toxs" id="anch_28">Toxicity Summary</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="htox"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:htox" id="anch_29">Human Toxicity Excerpts</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="rtex"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:rtex" id="anch_30">Probable Routes of Human Exposure</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="avdi"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:avdi" id="anch_31">Average Daily Intake</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Emergency Medical Treatment" type="checkbox" value="emerg"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_32">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:emerg" id="anch_33">Emergency Medical Treatment</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="emt"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:emt" id="anch_34">Emergency Medical Treatment</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="antr"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:antr" id="anch_35">Antidote and Emergency Treatment</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Animal Toxicity Studies" type="checkbox" value="animal"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_36">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:animal" id="anch_37">Animal Toxicity Studies</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="toxs"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:toxs" id="anch_38">Toxicity Summary</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="ntox"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:ntox" id="anch_39">Non-Human Toxicity Excerpts</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="etox"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:etox" id="anch_40">Ecotoxicity Excerpts</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="ntp"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:ntp" id="anch_41">National Toxicology Program Studies</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="ntxv"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:ntxv" id="anch_42">Non-Human Toxicity Values</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="etxv"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:etxv" id="anch_43">Ecotoxicity Values</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="test"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:test" id="anch_44">Ongoing Test Status</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="tcat"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:tcat" id="anch_45">TSCA Test Submissions</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Metabolism/ Pharmacokinetics" type="checkbox" value="metab"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_46">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:metab" id="anch_47">Metabolism/ Pharmacokinetics</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="metb"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:metb" id="anch_48">Metabolism/ Metabolites</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="actn"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:actn" id="anch_49">Mechanism of Action</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="intc"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:intc" id="anch_50">Interactions</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Pharmacology" type="checkbox" value="phcy"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_51">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:phcy" id="anch_52">Pharmacology</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="ther"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:ther" id="anch_53">Therapeutic Uses</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="intc"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:intc" id="anch_54">Interactions</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Environmental Fate &amp; Exposure" type="checkbox" value="enex"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_55">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:enex" id="anch_56">Environmental Fate &amp; Exposure</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="envs"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:envs" id="anch_57">Environmental Fate/Exposure Summary</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="rtex"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:rtex" id="anch_58">Probable Routes of Human Exposure</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="avdi"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:avdi" id="anch_59">Average Daily Intake</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="arts"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:arts" id="anch_60">Artificial Pollution Sources</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="fate"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:fate" id="anch_61">Environmental Fate</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="biod"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:biod" id="anch_62">Environmental Biodegradation</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="abio"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:abio" id="anch_63">Environmental Abiotic Degradation</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="bioc"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:bioc" id="anch_64">Environmental Bioconcentration</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="koc"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:koc" id="anch_65">Soil Adsorption/Mobility</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="vws"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:vws" id="anch_66">Volatilization from Water/Soil</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="food"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:food" id="anch_67">Food Survey Values</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="oevc"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:oevc" id="anch_68">Other Environmental Concentrations</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Environmental Standards &amp; Regulations" type="checkbox" value="estan"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_69">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:estan" id="anch_70">Environmental Standards &amp; Regulations</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="fifr"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:fifr" id="anch_71">FIFRA Requirements</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="fda"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:fda" id="anch_72">FDA Requirements</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="atol"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:atol" id="anch_73">Allowable Tolerances</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Chemical/Physical Properties" type="checkbox" value="cpp"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_74">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:cpp" id="anch_75">Chemical/Physical Properties</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="mf"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:mf" id="anch_76">Molecular Formula</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="mw"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:mw" id="anch_77">Molecular Weight</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="cofo"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:cofo" id="anch_78">Color/Form</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="odor"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:odor" id="anch_79">Odor</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="bp"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:bp" id="anch_80">Boiling Point</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="mp"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:mp" id="anch_81">Melting Point</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="den"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:den" id="anch_82">Density/Specific Gravity</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="dsc"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:dsc" id="anch_83">Dissociation Constants</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="owpc"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:owpc" id="anch_84">Octanol/Water Partition Coefficient</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="ph"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:ph" id="anch_85">pH</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="sol"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:sol" id="anch_86">Solubilities</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="spec"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:spec" id="anch_87">Spectral Properties</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="vapd"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:vapd" id="anch_88">Vapor Density</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="vap"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:vap" id="anch_89">Vapor Pressure</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="ocpp"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:ocpp" id="anch_90">Other Chemical/Physical Properties</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Chemical Safety &amp; Handling" type="checkbox" value="csha"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_91">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:csha" id="anch_92">Chemical Safety &amp; Handling</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="ghs"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:ghs" id="anch_93">Globally Harmonized System</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="flpt"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:flpt" id="anch_94">Flash Point</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="firp"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:firp" id="anch_95">Fire Fighting Procedures</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="toxc"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:toxc" id="anch_96">Toxic Combustion Products</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="reac"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:reac" id="anch_97">Hazardous Reactivities &amp; Incompatibilities</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="dcmp"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:dcmp" id="anch_98">Hazardous Decomposition</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="equp"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:equp" id="anch_99">Protective Equipment &amp; Clothing</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="oprm"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:oprm" id="anch_100">Preventive Measures</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="ssl"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:ssl" id="anch_101">Stability/Shelf Life</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="strg"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:strg" id="anch_102">Storage Conditions</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="clup"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:clup" id="anch_103">Cleanup Methods</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="disp"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:disp" id="anch_104">Disposal Methods</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Manufacturing/Use Information" type="checkbox" value="manf"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_105">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:manf" id="anch_106">Manufacturing/Use Information</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="use"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:use" id="anch_107">Uses</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="mfs"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:mfs" id="anch_108">Manufacturers</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="mmfg"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:mmfg" id="anch_109">Methods of Manufacturing</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="omin"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:omin" id="anch_110">General Manufacturing Information</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="form"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:form" id="anch_111">Formulations/Preparations</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="cpat"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:cpat" id="anch_112">Consumption Patterns</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="prod"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:prod" id="anch_113">U. S. Production</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Laboratory Methods" type="checkbox" value="labm"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_114">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:labm" id="anch_115">Laboratory Methods</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="clab"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:clab" id="anch_116">Clinical Laboratory Methods</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="alab"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:alab" id="anch_117">Analytic Laboratory Methods</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Special References" type="checkbox" value="sref"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_118">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:sref" id="anch_119">Special References</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="rpts"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:rpts" id="anch_120">Special Reports</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Synonyms and Identifiers" type="checkbox" value="syni"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_121">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:syni" id="anch_122">Synonyms and Identifiers</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="sy"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:sy" id="anch_123">Synonyms</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="asch"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:asch" id="anch_124">Associated Chemicals</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="form"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:form" id="anch_125">Formulations/Preparations</a>
+</label> </li>
+</ul>
+</li><li>
+<span class="top-level"><input name="dfield" title="Administrative Information" type="checkbox" value="adm"/>
+<a class="expand" href="https://toxnet.nlm.nih.gov/javascript:;" id="anch_126">Expand</a>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:adm" id="anch_127">Administrative Information</a></span>
+<ul class="sub-list">
+<li>
+<label> <input name="dfield" type="checkbox" value="DOCNO"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:DOCNO" id="anch_128">Hazardous Substances Databank Number</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="rvdt"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:rvdt" id="anch_129">Last Review Date</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="date"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:date" id="anch_130">Last Revision Date</a>
+</label> </li>
+<li>
+<label> <input name="dfield" type="checkbox" value="updt"/>
+<a class="controllers-link" href="https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/f?./temp/~MHb966:1:updt" id="anch_131">Update History</a>
+</label> </li>
+</ul>
+</li>
+</ul>
+<hr/>
+<input class="btn btn-apply-search" type="submit" value="Show Selected Items"/>
+<input class="btn btn-apply-search clear-form" onclick="
+window.location.href = '/cgi-bin/sis/search2/c?./temp/~MHb966:1:';" type="button" value="Clear"/>
+</form>
+</div>
+</div>
+<div id="record-main">Loading...</div>
+</div>
+</div>
+</div>
+<footer class="clearfix" id="footer">
+<nav id="footer-access" role="article">
+<ul class="menu" id="footer-menu">
+<li><a href="https://toxnet.nlm.nih.gov/help/newtoxnet/toxnetfs.html" id="anch_132">About</a></li>
+<li><a href="http://sis.nlm.nih.gov/siscontact.html" id="anch_133">Contact Us</a></li>
+<li><a href="http://sis.nlm.nih.gov/index.html" id="anch_134">SIS Home</a></li>
+<li><a href="http://www.nlm.nih.gov/copyright.html" id="anch_135">Copyright</a></li>
+<li><a href="http://www.nlm.nih.gov/privacy.html" id="anch_136">Privacy</a></li>
+<li><a href="http://www.nlm.nih.gov/accessibility.html" id="anch_137">Accessibility</a></li>
+<li><a href="http://www.nlm.nih.gov/plugins.html" id="anch_138">Viewers and Players</a></li>
+</ul>
+</nav>
+<div class="siteinfo">
+<a href="http://www.nlm.nih.gov/" id="anch_139">U.S. National Library of Medicine</a> 8600 Rockville Pike, Bethesda, MD 20894<br/>
+<a href="http://www.nih.gov/" id="anch_140">National Institutes of Health, Health &amp; Human Services</a></div>
+</footer>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/newtoxnet/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="https://toxnet.nlm.nih.gov/newtoxnet/js/bootstrap.min.js"></script>
+<script src="https://toxnet.nlm.nih.gov/newtoxnet/js/plugins.js"></script>
+<script src="https://toxnet.nlm.nih.gov/newtoxnet/js/tipsy/jquery.tipsy.js"></script>
+<script src="https://toxnet.nlm.nih.gov/newtoxnet/js/superbox/jquery.superbox-min.js"></script>
+<script src="https://toxnet.nlm.nih.gov/newtoxnet/js/autocomplete/jquery.autocomplete.js"></script>
+<script src="https://toxnet.nlm.nih.gov/newtoxnet/js/script.js"></script>
+<script src="https://toxnet.nlm.nih.gov/newtoxnet/js/script3.js"></script>
+<script type="text/javascript">
+
+                $('#nav-toggle').click(function(ev){
+
+
+
+                   $('#advanced-elements-individual-database').toggle();
+
+                   $(this).html(($('#nav-toggle').text()=='Show search options')?'Hide search options':'Show search options');
+
+                 });
+
+		$(function(){
+
+			$.superbox.settings = {
+
+				boxId: "superbox", // Id attribute of the "superbox" element
+
+				boxClasses: "", // Class of the "superbox" element
+
+				overlayOpacity: .6, // Background opaqueness
+
+				loadTxt: "Loading...", // Loading text
+
+				closeTxt: "Close" // "Close" button text
+
+			};
+
+			$.superbox();
+
+		});
+
+
+
+        $(function(){
+
+           $(".search-query").focus(function(){
+
+              if (this.value == $.trim(this.defaultValue) ) this.value = this.defaultValue;
+
+              else if (this.value == '') this.value = this.defaultValue;
+
+           })
+
+        });
+
+        $("#home-search-body-advanced .search-query").blur(function(){
+
+    if ($.trim(this.defaultValue) == this.value) {this.value = ''; }
+
+    else if (this.value == '') this.defaultValue = '';
+
+        })
+
+        $("#home-search-body-advanced .search-query").focus(function(){
+
+    if ($.trim(this.defaultValue) == this.value) {this.value = '';}
+
+    else if (this.value == '') this.value = this.defaultValue;
+
+        })
+
+        //input text treatment.
+
+        $("input.default-clear").blur(function(){
+
+    if ($.trim(this.defaultValue) == this.value) this.value = '';
+
+    else if (this.value == '') this.defaultValue = '';
+
+        })
+
+        $("input.default-clear").focus(function(){
+
+    if ($.trim(this.defaultValue) == this.value) this.value = '';
+
+    else if (this.value == '') this.defaultValue = '';
+
+        })
+
+
+
+	</script>
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ 
+
+  ga('create', 'UA-16235265-26', 'auto');
+
+  ga('send', 'pageview');
+
+ 
+
+</script>
+<script async="" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=HHS&amp;subagency=NIH&amp;sp=query&amp;enhlink=true" type="text/javascript"></script>
+<div id="dropmenu-mask" style="display:none;"></div>
+<div id="AutocompleteContainter_5cde0" style="position: absolute; z-index: 9999; top: 0px; left: 0px;"><div class="autocomplete-w1 browse-dropdown-list"><div class="autocomplete" id="Autocomplete_5cde0" style="display: none; width: 390px; max-height: 300px;"></div></div></div><div id="superbox-overlay" style="display: none;"></div><div id="superbox-wrapper" style="display: none;"><div id="superbox-container"><div id="superbox"><p class="close"><a id="anch_141"><strong><span>Close</span></strong></a></p><div id="superbox-innerbox"></div><p class="nextprev" style="display: none;"><a class="prev" id="anch_142"><strong><span>Previous</span></strong></a><a class="next" id="anch_143"><strong><span>Next</span></strong></a></p></div><p class="loading" style="display: none;">Loading...</p></div></div><script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=HHS&amp;subagency=NIH&amp;sp=query&amp;enhlink=true" type="text/javascript"></script><script id="" type="text/javascript">window.addEventListener("beforeunload",function(a){dataLayer.push({event:"beforeunload",timeOnPage:(new Date).getTime()-google_tag_manager["GTM-MT6MLL"].macro(16)})});</script><script id="" type="text/javascript">if("undefined"!==typeof google_tag_manager["GTM-MT6MLL"].macro(17)){var visibilityEvent=google_tag_manager["GTM-MT6MLL"].macro(18)+"visibilitychange",hiddenState=google_tag_manager["GTM-MT6MLL"].macro(20),visibilityChanged=function(){"undefined"!==typeof hiddenState&&dataLayer.push({event:"visibilityChange"})};document.addEventListener(visibilityEvent,visibilityChanged,!1)};</script><script id="" type="text/javascript">(function(d){function e(b,a,c){if(b.addEventListener)b.addEventListener(a,c);else if(b.attachEvent)b.attachEvent("on"+a,function(a){c.call(b,a)});else if("undefined"===typeof b["on"+a]||null===b["on"+a])b["on"+a]=function(a){c.call(b,a)}}e(d,"message",function(b){try{var a=JSON.parse(b.data),c=d.dataLayer||(d.dataLayer=[]);a.event&&c.push({event:a.event,postMessageData:a})}catch(f){}})})(window);</script><script id="" type="text/javascript">(function(){var a="onDownload",b=document.querySelector('[title\x3d"Download"]')||document,c=!0;b.addEventListener(a,google_tag_manager["GTM-MT6MLL"].macro(25),c)})();</script></body></html>

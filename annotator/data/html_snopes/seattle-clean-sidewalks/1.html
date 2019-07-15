@@ -1,0 +1,644 @@
+<html class="js js js no-touch opacity cssanimations cssgradients csstransforms3d csstransitions fontface svg" lang="en"><head><script src="https://js-agent.newrelic.com/nr-1118.min.js"></script><script async="" src="https://www.google-analytics.com/plugins/ua/ecommerce.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/plugins/ua/linkid.js" type="text/javascript"></script><script async="" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101"></script><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_rendering_2019071103.js"></script><script async="" src="//stream.publicbroadcasting.net/analytics/aal8.js" type="text/javascript"></script><script async="" src="https://connect.facebook.net/signals/plugins/inferredEvents.js?v=2.8.51"></script><script async="" src="https://connect.facebook.net/signals/config/2268282333437935?v=2.8.51&amp;r=stable"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgYHV1dVGwIBVFlVBQU="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script>
+<meta content="The Presiding Judge of King County Superior Court says open air drug dealing and harassment outside the county courthouse in downtown Seattle has reached a" property="og:description"/>
+<meta content="https://www.knkx.org/sites/kplu/files/styles/medium/public/201707/PhotoKingCoCrthouse.jpg" property="og:image"/>
+<meta content="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="King County Looks To Improve Safety For Jurors, Other Courthouse Visitors " property="og:title"/>
+<meta content="1488" property="og:image:height"/>
+<meta content="1984" property="og:image:width"/>
+<link href="//mediad.publicbroadcasting.net/p/kplu/files/201608/knkx.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<link href="//www.knkx.org/sites/kplu/files/201705/knkx.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<meta about="/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors" content="King County Looks To Improve Safety For Jurors, Other Courthouse Visitors " property="dc:title"/>
+<meta content="@KPLU" property="twitter:creator"/>
+<meta content="summary" property="twitter:card"/>
+<meta content="@KPLU" property="twitter:site"/>
+<link href="//www.knkx.org/sites/kplu/files/201707/PhotoKingCoCrthouse.jpg" rel="image_src"/>
+<meta content="The Presiding Judge of King County Superior Court says open air drug dealing and harassment outside the county courthouse in downtown Seattle has reached a" name="description"/>
+<meta content="1" name="has_audio"/>
+<meta content="none" name="programs"/>
+<link href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/node/52444" rel="shortlink"/>
+<link href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors" rel="canonical"/>
+<meta content="Drupal 7 (http://drupal.org)" name="Generator"/>
+<meta content="News" name="category"/>
+<meta content="52444" name="nid"/>
+<meta content="451" name="wordCount"/>
+<meta content="536752370" name="story_id"/>
+<meta content="jury duty, King County Courthouse, drug dealing, Homelessness, Downtown Seattle, King County Superior Court, moretopstories" name="keywords"/>
+<meta content="0" name="org_id"/>
+<meta content="Paula Wissel" name="author"/>
+<meta content="2017-07-11" name="datePublished"/>
+<meta class="foundation-mq-small"/><meta class="foundation-mq-medium"/><meta class="foundation-mq-large"/><meta class="foundation-mq-xlarge"/><meta class="foundation-mq-xxlarge"/><style></style><link as="script" href="https://adservice.google.com.ua/adsid/integrator.sync.js?domain=www.knkx.org" rel="preload"/><meta class="foundation-mq-topbar"/><link href="https://tpc.googlesyndication.com/safeframe/1-0-35/html/container.html" rel="prefetch"/><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="//www.googletagservices.com/tag/js/gpt.js" src="//www.googletagservices.com/tag/js/gpt.js" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="moment" src="https://composer.nprstations.org/widgets/js/moment.js" type="text/javascript"></script><link as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.90bbe7dd462e64a6c99045d2dadef75c.css" rel="preload"/><link as="script" href="https://c.disquscdn.com/next/embed/common.bundle.4f78a44956523083e2be1589c3559f2b.js" rel="preload"/><link as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.ea36f75b54a9a94de9a101cd1513ac52.js" rel="preload"/><link as="script" href="https://disqus.com/next/config.js" rel="preload"/></head><body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-52444 node-type-post fixed-header disqus-processed"><iframe frameborder="0" height="0" name="Trade Desk Tracking - Retargeting Pixel" scrolling="no" src="//insight.adsrvr.org/tags/p7nn2ty/a7tj1nx/iframe" width="0"></iframe>
+<script> 
+!function(f,b,e,v,n,t,s) 
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod? 
+n.callMethod.apply(n,arguments):n.queue.push(arguments)}; 
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; 
+n.queue=[];t=b.createElement(e);t.async=!0; 
+t.src=v;s=b.getElementsByTagName(e)[0]; 
+s.parentNode.insertBefore(t,s)}(window, document,'script', 
+'https://connect.facebook.net/en_US/fbevents.js'); 
+fbq('init', '2268282333437935'); 
+fbq('track', 'PageView'); 
+</script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=2268282333437935&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+<title>King County Looks To Improve Safety For Jurors, Other Courthouse Visitors  | KNKX</title>
+<link href="https://www.knkx.org/sites/knkx.org/files/css/css_4cAMY40ad8Mgtxx4EXnVqYbYI1CQebWM0-lcS5OQ6Zo.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.knkx.org/sites/knkx.org/files/css/css_ZFlaYqkiQzTmlBPX4mQeT33IFQX3nR-zpGlyqFhtTNM.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.knkx.org/sites/knkx.org/files/css/css_PV0HBDBtTWS7oiEnFpozcEeThn_X5umpjVSdbNSQIRI.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.knkx.org/sites/knkx.org/files/css/css_8l7Fwv5z1Fi8GX7QhBPaOetCFWnvGq0K6lHNS9bw6zk.css" media="all" rel="stylesheet" type="text/css"/>
+<style media="all" type="text/css">
+<![CDATA[/*><!--*/
+.header-region-outer{background-color:#FFFFFF;}.branding .tagline{color:#4c4c4c;}.branding .listen-live-toggle > a,.branding .header-utility > a,.branding .header-utility > a.trigger-nav{color:#FFFFFF;}@media screen and (min-width:641px){.branding .trigger-nav{background:#777777;}}@media screen and (max-width:640px){.branding .header-utility > a.trigger-nav,.active-menu .branding .header-utility > a.trigger-nav{color:#777777;}}#listen-live .listen-live-toggle{background-color:#1d6775;}#listen-live .listen-live-btn{background-color:transparent;color:#FFFFFF;}@media screen and (min-width:640px){#listen-live .listen-live-btn{background-color:#1d6775;}}.branding .give{background:#e6673e;}
+
+/*]]>*/-->
+</style>
+<link href="//fonts.googleapis.com/css?family=Lato:300,700,700italic,900,italic,regular&amp;subset=latin" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.knkx.org/sites/knkx.org/files/css/css_vjBbsL6mNv7U5s8SP8c-SY8WH8UGg70padCB9HYNM2k.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.knkx.org/sites/knkx.org/files/css/css_-BmOmId2XlDQB4xX01TWyBlhTJDM7h8yCeER8Kfju4Y.css" media="all" rel="stylesheet" type="text/css"/>
+<script src="//www.knkx.org/sites/kplu/files/js/js_xSpMA4ArVcBKOZ43sPqNRk0gxQZdDVifw27pIUCzWU0.js" type="text/javascript"></script>
+<script src="//www.knkx.org/sites/kplu/files/js/js_P9u0bgloveAIlc2kutVCUB_xMaRV3YHWhSVHD3IN5tM.js" type="text/javascript"></script>
+<script src="//www.knkx.org/sites/kplu/files/js/js_f_6-OzlFXjayKlsU5sJKLwjz7LFQvdIZDm-Mt6jKwyM.js" type="text/javascript"></script>
+<script src="//www.knkx.org/sites/kplu/files/js/js__4npt0PuTlrK-GkTl821OR8Eb7aiGB9GvsSeu1tr7U4.js" type="text/javascript"></script>
+<script src="//www.googletagservices.com/tag/js/gpt.js" type="text/javascript"></script><script id="gpt-impl-0.38024112980764935" src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2019071103.js"></script><script src="https://adservice.google.com.ua/adsid/integrator.sync.js?domain=www.knkx.org"></script><script>processGoogleTokenSync({"newToken":"FBS"},5);</script>
+<script src="//www.knkx.org/sites/kplu/files/js/js_ND2bF-SMtqtE91Va1GJ8pJmuMvcxrc5OkhdaUqdOOu0.js" type="text/javascript"></script>
+<script type="text/javascript">
+<![CDATA[//><!--
+(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src="//stream.publicbroadcasting.net/analytics/aal8.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script src="//www.knkx.org/sites/kplu/files/js/js_tbzCmxNtTcGVuLsIgDhPgyqfxrHSbcLDMpm_iI6RrDI.js" type="text/javascript"></script>
+<script type="text/javascript">
+<![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"responso","theme_token":"Udcz0_AglVn_UpGwNOUzRkwA34K3uMQw6f89EY2dcsc","js":{"0":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/magnific-popup\/jquery.magnific-popup.min.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/vendor\/foundation\/foundation.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/vendor\/foundation\/foundation.topbar.js":1,"sites\/all\/modules\/contrib\/google_cse\/google_cse.js":1,"sites\/all\/modules\/custom\/pi_media_types\/pi_audio\/js\/pi-audio.js":1,"sites\/all\/modules\/custom\/pi_hull\/js\/pi-hull.js":1,"sites\/all\/modules\/custom\/pi_hull\/js\/jquery.innerfade.js":1,"sites\/all\/modules\/custom\/pi_hull\/jplayer\/js\/jquery.jplayer.min.js":1,"sites\/all\/modules\/custom\/pi_hull\/jplayer\/js\/main.js":1,"\/\/www.googletagservices.com\/tag\/js\/gpt.js":1,"sites\/all\/modules\/custom\/responsive_ads\/js\/main.js":1,"sites\/all\/modules\/custom\/pi_guide\/js\/pi_listenlive.js":1,"sites\/all\/modules\/custom\/pi_ajax_links_api\/nprogress\/nprogress.js":1,"sites\/all\/modules\/custom\/pi_ajax_links_api\/pi_ajax_links_api.js":1,"sites\/all\/modules\/custom\/npr_entities\/npr_fields\/npr_image_gallery\/js\/npr-image-gallery.js":1,"sites\/all\/modules\/custom\/npr_river\/assets\/npr-river.js":1,"sites\/all\/modules\/custom\/pi_guide\/js\/pi_guide_schedule_selector.js":1,"sites\/all\/modules\/custom\/pi_assets\/plugins\/images\/js\/popup.js":1,"sites\/all\/modules\/custom\/pi_content_types\/pi_live_event\/js\/iframe.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/vendor\/modernizr.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/vendor\/media.match.min.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/vendor\/matchMedia.addListener.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/vendor\/enquire.min.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/vendor\/fastclick.js":1,"1":1,"sites\/all\/modules\/custom\/pi_content_types\/pi_program\/treatments\/program-promo\/program-promo.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/responsive-utilities.mediaqueries.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/responsive-utilities.scripts.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/responsive-utilities.responsiveimages.js":1,"sites\/all\/modules\/custom\/community_calendar\/lib\/datetimepicker\/jquery.timepicker.min.js":1,"sites\/all\/modules\/custom\/community_calendar\/lib\/datetimepicker\/bootstrap-datepicker.min.js":1,"sites\/all\/modules\/custom\/community_calendar\/lib\/datetimepicker\/jquery.datepair.min.js":1,"sites\/all\/modules\/custom\/community_calendar\/lib\/validation\/jquery.mask.min.js":1,"sites\/all\/modules\/custom\/community_calendar\/lib\/validation\/jquery.validate.min.js":1,"sites\/all\/modules\/custom\/community_calendar\/lib\/typeahead\/typeahead.js":1,"sites\/all\/modules\/custom\/community_calendar\/assets\/community-calendar.helpers.js":1,"sites\/all\/modules\/custom\/community_calendar\/assets\/community-calendar.js":1,"sites\/all\/modules\/custom\/community_calendar\/assets\/community-calendar.filters.js":1,"sites\/all\/modules\/custom\/community_calendar\/assets\/community-calendar.event.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/responsive-utilities.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/responsive-utilities.tag.js":1,"sites\/all\/modules\/custom\/community_calendar\/assets\/community-calendar.location.js":1,"sites\/all\/modules\/custom\/community_calendar\/assets\/community-calendar.organization.js":1,"sites\/all\/modules\/custom\/community_calendar\/assets\/community-calendar.recurrence.js":1,"sites\/all\/modules\/custom\/community_calendar\/assets\/community-calendar.category.js":1,"sites\/all\/modules\/custom\/community_calendar\/assets\/community-calendar.image.js":1,"sites\/all\/modules\/custom\/community_calendar\/assets\/community-calendar.sponsor.js":1,"sites\/all\/modules\/custom\/community_calendar\/assets\/community-calendar.validation.js":1,"sites\/all\/modules\/custom\/responsive_utilities\/js\/responsive-utilities.overrides.js":1,"sites\/all\/modules\/contrib\/disqus\/disqus.js":1,"sites\/all\/modules\/custom\/audity\/audity\/dsplayer.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"sites\/all\/libraries\/magnific-popup\/magnific-popup.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/google_cse\/google_cse.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/custom\/pi_hull\/pi_outrigger\/css\/pi_outrigger.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/custom\/pi_guide\/css\/pi_guide.css":1,"sites\/all\/modules\/custom\/pi_hull\/jplayer\/css\/jplayer.npr.css":1,"sites\/all\/modules\/custom\/pi_npr_story\/css\/pi_npr_story.css":1,"sites\/all\/modules\/custom\/pi_views\/pi_reports_views\/css\/pi_reports.css":1,"sites\/all\/modules\/custom\/pi_menus\/css\/flexiMenu.css":1,"sites\/all\/modules\/custom\/responsive_footer\/responsive-footer.admin.css":1,"0":1,"\/\/fonts.googleapis.com\/css?family=Lato:300,700,700italic,900,italic,regular\u0026subset=latin":1,"sites\/all\/modules\/custom\/pi_ajax_links_api\/pi_ajax_links_api.css":1,"sites\/all\/modules\/custom\/pi_ajax_links_api\/nprogress\/nprogress.css":1,"sites\/all\/modules\/custom\/pi_content_types\/pi_program\/treatments\/program-promo\/program-promo.css":1,"sites\/all\/modules\/custom\/community_calendar\/lib\/typeahead\/typeahead.css":1,"sites\/all\/modules\/custom\/community_calendar\/lib\/datetimepicker\/jquery.timepicker.css":1,"sites\/all\/modules\/custom\/community_calendar\/lib\/datetimepicker\/bootstrap-datepicker3.standalone.min.css":1,"sites\/all\/modules\/custom\/community_calendar\/assets\/community-calendar.css":1,"sites\/all\/modules\/custom\/npr_entities\/npr_fields\/npr_image_gallery\/css\/npr-image-gallery.css":1,"sites\/all\/themes\/responso\/css\/icon-fonts.css":1,"sites\/all\/themes\/responso\/css\/screen.css":1}},"googleCSE":{"cx":"010251366440257945544:y-awufi-sb8","language":"","resultsWidth":600,"domain":"www.google.com","showWaterMark":true},"responsive_ads":{"networkCode":"1045301","prefix":"kplu","adUnitTypes":{"leaderboard":{"note":"Only shows above 1024; shows 970x90 or 728x90.","sizes":[{"viewportSize":[0,0],"slotSize":[]},{"viewportSize":[1024,200],"slotSize":[[970,90],[970,50],[728,90]]}]},"medium":{"note":"Won't be served on screens smaller than 640x480.","sizes":[{"viewportSize":[0,0],"slotSize":[]},{"viewportSize":[640,200],"slotSize":[300,250]}]},"tablet":{"note":"Won't be served on screens smaller than 640x480 or larger than 1024x768","sizes":[{"viewportSize":[0,0],"slotSize":[]},{"viewportSize":[640,200],"slotSize":[728,90]},{"viewportSize":[1024,200],"slotSize":[]}]},"mobile":{"note":"Won't be served on screens larger than 640x480.","sizes":[{"viewportSize":[0,0],"slotSize":[320,50]},{"viewportSize":[640,200],"slotSize":[]}]}},"adUnits":[{"name":"leaderboard_1","type":"leaderboard","width":728,"height":90},{"name":"player_display","type":"leaderboard","width":728,"height":90},{"name":"medium_1","type":"medium","width":300,"height":250},{"name":"medium_2","type":"medium","width":300,"height":250},{"name":"medium_3","type":"medium","width":300,"height":250},{"name":"tablet_1","type":"tablet","width":728,"height":90},{"name":"mobile_1","type":"mobile","width":320,"height":50}],"placements":{"leaderboard_1":"main#content","medium_1":".node .post-body .field-name-body","medium_2":".node .post-body p:nth-of-type(3)","medium_3":".node .post-body p:nth-of-type(3)","tablet_1":"main#content","mobile_1":"#block-pi-responsive-ads-mobile-1 .content"},"persistentPlacements":[],"targeting":{"id":"52444","type":"post","tags":["jury duty","King County Courthouse","drug dealing","Homelessness","Downtown Seattle","King County Superior Court","moretopstories"],"category":"News","programs":[]}},"tms_meta":{"has_audio":"1","programs":"none","category":"News","nid":52444,"author":"Paula Wissel","org_id":0,"keywords":"jury duty, King County Courthouse, drug dealing, Homelessness, Downtown Seattle, King County Superior Court, moretopstories","wordCount":451,"story_id":"536752370","datePublished":"2017-07-11"},"streamCount":2,"streams":[{"stream_mp3":"https:\/\/v7player.wostreaming.net\/856","width":"","height":"","display":"1","weight":"-10","streamName":"KNKX","description":"KNKX News \u0026 Jazz","ucs":"5182a1e0e1c8fe41acbefe4a"},{"stream_mp3":"https:\/\/v7player.wostreaming.net\/854","width":"","height":"","display":"1","weight":"-9","streamName":"KNKX-hd2","description":"Jazz24","ucs":"5182a213e1c801ca005dbe32"},{"stream_mp3":"https:\/\/v7player.wostreaming.net\/856","width":"","height":"","display":"1","weight":"-10","streamName":"KNKX","description":"KNKX News \u0026 Jazz","ucs":"5182a1e0e1c8fe41acbefe4a"},{"stream_mp3":"https:\/\/v7player.wostreaming.net\/854","width":"","height":"","display":"1","weight":"-9","streamName":"KNKX-hd2","description":"Jazz24","ucs":"5182a213e1c801ca005dbe32"}],"disqus":{"domain":"npr-kplu","url":"https:\/\/www.knkx.org\/post\/king-county-looks-improve-safety-jurors-other-courthouse-visitors","title":"King County Looks To Improve Safety For Jurors, Other Courthouse Visitors ","identifier":"node\/52444"},"responsive_utilities":{"body_classes":"html not-front not-logged-in no-sidebars page-node page-node- page-node-52444 node-type-post fixed-header","custom_vars":{"nid":{"name":"nid","slot":8,"scope_id":3},"pop":{"name":"pop","slot":9,"scope_id":3},"author":{"name":"author","slot":11,"scope_id":3},"keywords":{"name":"tags","slot":12,"scope_id":3},"org_id":{"name":"org_id","slot":13,"scope_id":3},"brand":{"name":"CP_Station","slot":14,"scope_id":2},"has_audio":{"name":"Has_Inline_Audio","slot":15,"scope_id":3},"programs":{"name":"Program","slot":16,"scope_id":3},"category":{"name":"Category","slot":10,"scope_id":3},"datePublished":{"name":"PublishedDate","slot":17,"scope_id":3},"wordCount":{"name":"WordCount","slot":18,"scope_id":3},"story_id":{"name":"API_Story_Id","slot":19,"scope_id":3},"pmp_guid":{"name":"pmp_guid","slot":20,"scope_id":3}},"pagetype_vars":[{"page_type":"Content\/About","regex_pattern":"\/about(-us)?\/?$","pattern_name":"Core Publisher About Page"},{"page_type":"Events","regex_pattern":"\/events(\/|$)","pattern_name":"Core Publisher Events Page"},{"page_type":"People","regex_pattern":"\/people(\/|$)","pattern_name":"Core Publisher People Page"},{"page_type":"Playlist","regex_pattern":"\/search_playlists\/?$","pattern_name":"Core Publisher Playlist Page"},{"page_type":"Program","regex_pattern":"\/programs(\/|$)","pattern_name":"Core Publisher Program Page"},{"page_type":"Schedule","regex_pattern":"\/schedule(\/|$)","pattern_name":"Core Publisher Schedule Page"},{"page_type":"Search","regex_pattern":"\/search\/google\/?","pattern_name":"Core Publisher Search GSA Page"},{"page_type":"Story","regex_pattern":"\/post\/|\/webclip\/","pattern_name":"Core Publisher Story Page"},{"page_type":"Streaming","regex_pattern":"\/listen(-live)?\/?(#|$)","pattern_name":"Core Publisher Listen Live Page"}],"media_queries":{"mobile":"all and (max-width: 40em)","tablet":"screen and (min-width: 40.063em) and (max-width: 64em)","desktop":"screen and (min-width: 64.063em)"}},"pi_ajax_links_api":{"selector":"#page-document","trigger":"a.ajax-link,#page-wrapper a,a.logo,a.mobile-teaser-link,.dropdown a","negative_triggers":".dropdown .back a,.mobile .not-click \u003e a,#toolbar a,a.lightbox,.jp-interface a,.header .not-click \u003e a,.page-admin a,.page-block-factory a,a.give,.social-share a,#change-station,#rss-tablequeue a,a[href^=\"mailto:\"],.popup,a[href^=\"#\"],a:not([href]),ul.tabs\u003eli\u003ea,ul.contextual-links a,#table-queue-fleximenu a[target=\"_blank\"],.delete-button,a[href*='files'],a[href^='http:']","scripts_included":0,"html5":1,"vpager":1}});
+//--><!]]>
+</script>
+<meta content="width=device-width" name="viewport"/>
+<header class="header" role="banner">
+<div class="skiptocontent"><a href="https://www.knkx.org/#main-content">skip to main content</a></div>
+<div class="region region-header">
+<div class="block block-baby-bear" id="block-baby-bear-baby-bear-header">
+<div class="content">
+<div class="header-region-outer">
+<section class="header-region-inner row">
+<div class="branding large-12 columns">
+<div class="brand-inner-wrapper">
+<a class="logo" href="https://www.knkx.org/" rel="home" title="KNKX Home"><img alt="KNKX logo" src="//www.knkx.org/sites/kplu/files/201703/KNKX-Gradient-2_3.png" title="KNKX Home" typeof="foaf:Image"/></a> <div class="tagline">
+          Your Connection To Jazz, Blues and NPR News        </div>
+</div>
+<div class="header-utility">
+<a class="trigger-nav" href="https://www.knkx.org/#">
+<span class="icon-list"></span>
+<span class="menu-text">Site Menu</span>
+</a>
+<a class="give" href="https://donate.nprstations.org/knkx/knkx-sustainer-form" target="_blank">
+  ♥  Donate</a>
+<div class="listen-live" id="listen-live">
+<div class="listen-live-toggle"><a class="listen-live-btn" href="https://www.knkx.org/#"><span class="icon-arrow"></span>Listen Live </a></div>
+<ul class="no-bullet" id="on-air-items">
+<li class="listen-live-streams">
+<a href="https://v7player.wostreaming.net/856" id="now-on-0" target="_blank">
+<div class="stream_name">KNKX News &amp; Jazz</div>
+<div class="program-text">Wait Wait... Don't Tell Me!</div>
+</a>
+</li>
+<li class="listen-live-streams">
+<a href="https://v7player.wostreaming.net/854" id="now-on-1" target="_blank">
+<div class="stream_name">Jazz24</div>
+<div class="program-text">Jazz 24</div>
+</a>
+</li>
+</ul>
+</div></div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="nav-wrapper mobile">
+<nav>
+<div class="top-bar contain-to-grid" data-topbar="">
+<ul class="title-area">
+<li class="toggle-topbar menu-icon">
+<a href="https://www.knkx.org/#">Menu</a>
+</li>
+</ul>
+<section class="top-bar-section">
+<div class="table-queue" id="table-queue-fleximenu">
+<ul class="menu">
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org/schedule">On The Air</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org/schedule">On The Air</a></li>
+<li class="left">
+<a href="https://www.knkx.org/playlist">Playlist</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/schedule">Schedule</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/listening-options">Listening Options</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/podcast">Podcasts</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org">News</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org">News</a></li>
+<li class="left">
+<a href="https://www.knkx.org/term/arts">Arts</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/business">Business</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/education">Education</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/environment">Environment</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/food">Food</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/law">Law</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/politics">Politics</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/science">Science</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/other-news">Other News</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org/term/jazz-blues">Jazz &amp; Blues</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org/term/jazz-blues">Jazz &amp; Blues</a></li>
+<li class="left">
+<a href="https://www.knkx.org/term/jazz-blues">Jazz</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/blues">Blues</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/studio-sessions-0">Studio Sessions</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/programs/jazz-nw">Jazz Northwest</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/programs/jazz-caliente">Jazz Caliente</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/programs/new-cool">The New Cool</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/topic/school-jazz">School Of Jazz</a>
+</li>
+<li class="left">
+<a href="http://www.jazz24.org">Jazz24</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/topic/ticket-giveaways">Ticket Giveaways</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org">Features</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org">Features</a></li>
+<li class="left">
+<a href="https://www.knkx.org/connects">KNKX Connects</a>
+</li>
+<li class="left">
+<a href="http://www.forgottenprison.org">Forgotten Prison</a>
+</li>
+<li class="left">
+<a href="http://birdnote.org" target="_blank">BirdNote</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/food">Food For Thought</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/programs/sound-effect">Sound Effect</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/sports-art-thiel">Sports With Art Thiel</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/weather-cliff-mass">Weather With Cliff Mass</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org/community-calendar">Calendar</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org/community-calendar">Calendar</a></li>
+<li class="left">
+<a href="https://www.knkx.org/community-calendar">View Upcoming Events</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/community-calendar/events/create">Submit An Event</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org/support">Support KNKX</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org/support">Support KNKX</a></li>
+<li class="left">
+<a href="https://www.knkx.org/support">Ways To Give</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/sustaining-membership">Sustaining Membership</a>
+</li>
+<li class="left">
+<a href="http://knkxnext.org" target="_blank">KNKX Next Campaign</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/leadership-circle-0">Leadership Circle</a>
+</li>
+<li class="left">
+<a href="https://knkx.securecardonation.net " target="_blank">Vehicle Donation</a>
+</li>
+<li class="left">
+<a href="https://knkx.planmygift.org/" target="_blank">Planned Giving</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/volunteer">Volunteer</a>
+</li>
+<li class="left">
+<a href="https://sponsorknkx.org/" target="_blank">Become A Sponsor</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/sponsorship">Sponsor Spotlight</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.facebook.com/knkxfm" target="_blank">Connect</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.facebook.com/knkxfm">Connect</a></li>
+<li class="left">
+<a href="https://www.facebook.com/knkxfm" target="_blank">Facebook</a>
+</li>
+<li class="left">
+<a href="https://twitter.com/KNKXFM" target="_blank">Twitter</a>
+</li>
+<li class="left">
+<a href="https://instagram.com/knkx885" target="_blank">Instagram</a>
+</li>
+<li class="left">
+<a href="https://www.youtube.com/channel/UCezH4cD1a1lzgjEJNcrn35w" target="_blank">YouTube</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org/about">About</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org/about">About</a></li>
+<li class="left">
+<a href="https://www.knkx.org/about">About Us</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/staff">Staff</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/contact">Contact</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/knkx-news-tips-and-story-ideas">Submit a News Tip</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/open-positions">Careers</a>
+</li>
+<li class="left">
+<a href="http://apps.knkx.org/2018/  " target="_blank">2018 Annual Report</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/search/google">Search</a>
+</li>
+</ul>
+</div>
+</section></div>
+</nav>
+</div>
+<div id="page-wrapper">
+<div class="page" id="page-document" role="document">
+<div class="nav-wrapper">
+<nav>
+<div class="top-bar contain-to-grid" data-topbar="">
+<ul class="title-area">
+<li class="toggle-topbar menu-icon">
+<a href="https://www.knkx.org/#">Menu</a>
+</li>
+</ul>
+<section class="top-bar-section">
+<div class="table-queue" id="table-queue-fleximenu">
+<ul class="menu">
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org/schedule">On The Air</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org/schedule">On The Air</a></li>
+<li class="left">
+<a href="https://www.knkx.org/playlist">Playlist</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/schedule">Schedule</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/listening-options">Listening Options</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/podcast">Podcasts</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org">News</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org">News</a></li>
+<li class="left">
+<a href="https://www.knkx.org/term/arts">Arts</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/business">Business</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/education">Education</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/environment">Environment</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/food">Food</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/law">Law</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/politics">Politics</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/science">Science</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/other-news">Other News</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org/term/jazz-blues">Jazz &amp; Blues</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org/term/jazz-blues">Jazz &amp; Blues</a></li>
+<li class="left">
+<a href="https://www.knkx.org/term/jazz-blues">Jazz</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/blues">Blues</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/studio-sessions-0">Studio Sessions</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/programs/jazz-nw">Jazz Northwest</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/programs/jazz-caliente">Jazz Caliente</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/programs/new-cool">The New Cool</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/topic/school-jazz">School Of Jazz</a>
+</li>
+<li class="left">
+<a href="http://www.jazz24.org">Jazz24</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/topic/ticket-giveaways">Ticket Giveaways</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org">Features</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org">Features</a></li>
+<li class="left">
+<a href="https://www.knkx.org/connects">KNKX Connects</a>
+</li>
+<li class="left">
+<a href="http://www.forgottenprison.org">Forgotten Prison</a>
+</li>
+<li class="left">
+<a href="http://birdnote.org" target="_blank">BirdNote</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/food">Food For Thought</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/programs/sound-effect">Sound Effect</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/sports-art-thiel">Sports With Art Thiel</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/term/weather-cliff-mass">Weather With Cliff Mass</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org/community-calendar">Calendar</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org/community-calendar">Calendar</a></li>
+<li class="left">
+<a href="https://www.knkx.org/community-calendar">View Upcoming Events</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/community-calendar/events/create">Submit An Event</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org/support">Support KNKX</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org/support">Support KNKX</a></li>
+<li class="left">
+<a href="https://www.knkx.org/support">Ways To Give</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/sustaining-membership">Sustaining Membership</a>
+</li>
+<li class="left">
+<a href="http://knkxnext.org" target="_blank">KNKX Next Campaign</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/leadership-circle-0">Leadership Circle</a>
+</li>
+<li class="left">
+<a href="https://knkx.securecardonation.net " target="_blank">Vehicle Donation</a>
+</li>
+<li class="left">
+<a href="https://knkx.planmygift.org/" target="_blank">Planned Giving</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/volunteer">Volunteer</a>
+</li>
+<li class="left">
+<a href="https://sponsorknkx.org/" target="_blank">Become A Sponsor</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/sponsorship">Sponsor Spotlight</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.facebook.com/knkxfm" target="_blank">Connect</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.facebook.com/knkxfm">Connect</a></li>
+<li class="left">
+<a href="https://www.facebook.com/knkxfm" target="_blank">Facebook</a>
+</li>
+<li class="left">
+<a href="https://twitter.com/KNKXFM" target="_blank">Twitter</a>
+</li>
+<li class="left">
+<a href="https://instagram.com/knkx885" target="_blank">Instagram</a>
+</li>
+<li class="left">
+<a href="https://www.youtube.com/channel/UCezH4cD1a1lzgjEJNcrn35w" target="_blank">YouTube</a>
+</li>
+</ul>
+</li>
+<li class="dd has-dropdown not-click">
+<a href="https://www.knkx.org/about">About</a>
+<ul class="dropdown"><li class="title back js-generated"><h5><a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/javascript:void(0)">back</a></h5></li><li><a class="parent-link js-generated" href="https://www.knkx.org/about">About</a></li>
+<li class="left">
+<a href="https://www.knkx.org/about">About Us</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/staff">Staff</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/contact">Contact</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/knkx-news-tips-and-story-ideas">Submit a News Tip</a>
+</li>
+<li class="left">
+<a href="https://www.knkx.org/open-positions">Careers</a>
+</li>
+<li class="left">
+<a href="http://apps.knkx.org/2018/  " target="_blank">2018 Annual Report</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/search/google">Search</a>
+</li>
+</ul>
+</div>
+</section></div>
+</nav>
+</div>
+<div class="player" id="player">
+</div>
+<section class="pre-content">
+<div>
+<div class="region region-pre-content">
+<div class="block block-pi-responsive-ads" id="block-pi-responsive-ads-mobile-1">
+<div class="ad ad-mobile" id="div-gpt-ad-mobile_1" style="display: none;"></div><div class="content">
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="ad ad-leaderboard" data-google-query-id="CNCr6oDvsuMCFYNx4Aod_psIow" id="div-gpt-ad-leaderboard_1" style=""><div id="google_ads_iframe_/1045301/kplu_leaderboard_1_0__container__" style="border: 0pt none;"><iframe data-google-container-id="b" data-load-complete="true" frameborder="0" height="90" id="google_ads_iframe_/1045301/kplu_leaderboard_1_0" marginheight="0" marginwidth="0" name="google_ads_iframe_/1045301/kplu_leaderboard_1_0" scrolling="no" srcdoc="" style="border: 0px; vertical-align: bottom;" title="3rd party ad content" width="728"></iframe></div></div><div class="ad ad-tablet" id="div-gpt-ad-tablet_1" style="display: none;"></div><main class="main-content small-12 columns" id="content" role="main">
+<article class="story">
+<a id="main-content"></a>
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors" class="node node-post node-promoted full row" id="node-52444" typeof="sioc:Item foaf:Document">
+<div class="small-12 columns">
+<h1 class="post-title" itemprop="name">
+      King County Looks To Improve Safety For Jurors, Other Courthouse Visitors     </h1>
+<div class="by-date">
+<span class="submitted"><span class="submitted-label">By</span> <span class="name"><a href="https://www.knkx.org/people/paula-wissel" rel="author">Paula Wissel</a></span></span>
+<i class="bullet">•</i>
+<span class="pub-date">Jul 11,  2017 </span>
+</div>
+<div class="row">
+<div class="large-2 columns sharing-and-programs">
+<div class="social-share clearfix"><a class="social-share-item facebook" href="http://facebook.com/sharer.php?u=http%3A%2F%2Fwww.tinyurl.com%2Fy9r3y9km&amp;t=King%20County%20Looks%20To%20Improve%20Safety%20For%20Jurors%2C%20Other%20Courthouse%20Visitors%20" target="_blank" title="Share">Share</a><a class="social-share-item twitter" href="http://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.tinyurl.com%2Fy9r3y9km&amp;text=King%20County%20Looks%20To%20Improve%20Safety%20For%20Jurors%2C%20Other%20Courthouse%20Visitors%20" target="_blank" title="Tweet">Tweet</a><a class="social-share-item email" href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/mailto:?subject=King%20County%20Looks%20To%20Improve%20Safety%20For%20Jurors%2C%20Other%20Courthouse%20Visitors%20&amp;body=http%3A%2F%2Fwww.tinyurl.com%2Fy9r3y9km" target="_blank" title="Email">Email</a></div> </div>
+<div class="medium-10 medium-pull-1 large-8 large-pull-2 columns post-body-container">
+<div class="post-body">
+<div class="field field-name-field-image-gallery field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><ul class="gallery no-bullet"><li>
+<figure>
+<a class="noexit lightbox" href="//www.knkx.org/sites/kplu/files/styles/x_large/public/201707/PhotoKingCoCrthouse.jpg" title="Outside the King County Courthouse in downtown Seattle">
+<img alt="Outside the King County Courthouse in downtown Seattle" src="//www.knkx.org/sites/kplu/files/styles/medium/public/201707/PhotoKingCoCrthouse.jpg"/>
+</a>
+<div class="image-meta">
+<figcaption>
+<div class="caption">Outside the King County Courthouse in downtown Seattle</div>
+<div class="attribution">
+<span class="credit">buzzlab</span>
+  /  <span class="agency">flkr/Creative Commons</span>
+</div>
+</figcaption>
+</div>
+</figure>
+</li>
+</ul></div></div></div><div class="ad ad-medium" data-google-query-id="CNKr6oDvsuMCFYNx4Aod_psIow" id="div-gpt-ad-medium_1" style="display: none;"><div id="google_ads_iframe_/1045301/kplu_medium_1_0__container__" style="border: 0pt none; width: 300px; height: 250px;"></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="audio-container"> <div class="jp-interface" id="jp-interface--5d143ec1d3c1d"> <div class="jp-player" id="post-audio--5d143ec1d3c1d" jp-instance="-5d143ec1d3c1d" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"/><audio id="jp_audio_0" preload="none" src="https://cpa.ds.npr.org/kplu/audio/2017/07/SafetyAtCourthouseWRAP.mp3"></audio></div> <div class="playpause"> <a class="jp-play" href="https://cpa.ds.npr.org/kplu/audio/2017/07/SafetyAtCourthouseWRAP.mp3" title=""></a> <a class="jp-pause" style="display: none;"></a> </div> <div class="audio-meta"> <div class="listen-text-box"> <div class="listen-text">Listen </div> <div class="listening-text">Listening...</div> </div> <div class="jp-controls"> <div class="jp-progress"> <div class="jp-seek-bar" id="seekbar" style="width: 0%;"> <div class="jp-play-bar" id="playbar" style="width: 0%;"> <div class="scrubber"> </div> </div> </div> </div> </div> <div class="duration-wrapper"> <div class="jp-custom-current-time">0:00</div> <span class="divider">/</span> <div class="jp-custom-duration">1:57</div> </div> </div> </div> </div> <div class="ad ad-medium" data-google-query-id="CNOr6oDvsuMCFYNx4Aod_psIow" id="div-gpt-ad-medium_2" style="display: none;"><div id="google_ads_iframe_/1045301/kplu_medium_2_0__container__" style="border: 0pt none; width: 300px; height: 250px;"></div></div><div class="ad ad-medium" data-google-query-id="CNSr6oDvsuMCFYNx4Aod_psIow" id="div-gpt-ad-medium_3" style="display: none;"><div id="google_ads_iframe_/1045301/kplu_medium_3_0__container__" style="border: 0pt none; width: 300px; height: 250px;"></div></div><p>The Presiding Judge of King County Superior Court says open air drug dealing and harassment outside the county courthouse in downtown Seattle has reached a crisis point. The court is asking that measures be taken to make the environment safer for jurors and other courthouse visitors.</p> <p><strong>Jurors, Others Have Been Assaulted</strong></p> <p>Public urination, illegal drug use and harassment are a perennial problem around the county courthouse. But, speaking to the King County Council, Presiding Judge Laura Inveen said things have gotten worse lateley.</p> <p>She listed some recent incidents, including the serious assault in May of a juror just after he stepped off the bus. And she says two weeks after that attack, there was another assault.</p> <p>“A juror was intentionally knocked over while holding her coffee cup while she was entering the courthouse after lunch," Inveen said.</p> <p>Inveen said a day after that assault one of the family law employees described himself as being body slammed as he crossed Third Avenue.</p> <p><strong>It's Too Easy To Ignore The Problem</strong></p> <p>Assistant Presiding Judge Jim Rogers said one problem is that people like himself who are around the courthouse everyday have come to ignore the bad behavior.</p> <p>“Everyday I walk by drug deals and people urinating and I think that we’re all sort of used to that. We almost don’t see it," he said. </p> <p>Rogers and Inveen say whether its victims of domestic violence seeking protection orders, witnesses or jurors, the reluctance to come to court undermines due process and access to justice.</p> <p><strong>Powerwashing And More Patrols</strong></p> <p>Short term ideas being considered to address the problem include more police patrols and power washing the sidewalks and emptying the garbage cans more often as a way to discourage bad behavior. </p> <p><strong>Look At Underlying Issues Creating Safety Problem </strong></p> <p>There is, however, some push back to some of the clean up proposals. King County Councilman Larry Gossett says he’s worried that power washing and increased security will affect the vulnerable population on the street.</p> <p>“Most of the emphasis seems to be on safety for the jurors and courthouse staff and not enough attention being put to underlying problems that give rise to some of the disruptive activities of the lumpen proletariat out on the street,” Gossett said.</p> <p>There was general agreement among the judges, police and council members that to really resolve the issue long term, homelessness, mental illness and drug addiction in the county need to be seriously dealt with.</p> </div></div></div><div class="field field-name-field-tags field-type-taxonomy-term-reference field-label-inline clearfix"><div class="field-label">Tags: </div><div class="field-items"><div class="field-item even"><a href="https://www.knkx.org/term/jury-duty" property="rdfs:label skos:prefLabel" typeof="skos:Concept">jury duty</a></div><div class="field-item odd"><a href="https://www.knkx.org/term/king-county-courthouse" property="rdfs:label skos:prefLabel" typeof="skos:Concept">King County Courthouse</a></div><div class="field-item even"><a href="https://www.knkx.org/term/drug-dealing" property="rdfs:label skos:prefLabel" typeof="skos:Concept">drug dealing</a></div><div class="field-item odd"><a href="https://www.knkx.org/term/homelessness" property="rdfs:label skos:prefLabel" typeof="skos:Concept">Homelessness</a></div><div class="field-item even"><a href="https://www.knkx.org/term/downtown-seattle" property="rdfs:label skos:prefLabel" typeof="skos:Concept">Downtown Seattle</a></div><div class="field-item odd"><a href="https://www.knkx.org/term/king-county-superior-court" property="rdfs:label skos:prefLabel" typeof="skos:Concept">King County Superior Court</a></div><div class="field-item even"><a href="https://www.knkx.org/term/moretopstories" property="rdfs:label skos:prefLabel" typeof="skos:Concept">moretopstories</a></div></div></div><div class="social-share bottom"><a class="social-share-item facebook" href="http://facebook.com/sharer.php?u=http%3A%2F%2Fwww.tinyurl.com%2Fy9r3y9km&amp;t=King%20County%20Looks%20To%20Improve%20Safety%20For%20Jurors%2C%20Other%20Courthouse%20Visitors%20" target="_blank" title="Share">Share</a><a class="social-share-item twitter" href="http://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.tinyurl.com%2Fy9r3y9km&amp;text=King%20County%20Looks%20To%20Improve%20Safety%20For%20Jurors%2C%20Other%20Courthouse%20Visitors%20" target="_blank" title="Tweet">Tweet</a><a class="social-share-item email" href="https://www.knkx.org/post/king-county-looks-improve-safety-jurors-other-courthouse-visitors/mailto:?subject=King%20County%20Looks%20To%20Improve%20Safety%20For%20Jurors%2C%20Other%20Courthouse%20Visitors%20&amp;body=http%3A%2F%2Fwww.tinyurl.com%2Fy9r3y9km" target="_blank" title="Email">Email</a></div><div id="disqus_thread"><iframe allowtransparency="true" frameborder="0" horizontalscrolling="no" id="dsq-app3062" name="dsq-app3062" scrolling="no" src="https://disqus.com/embed/comments/?base=default&amp;f=npr-kplu&amp;t_i=node%2F52444&amp;t_u=https%3A%2F%2Fwww.knkx.org%2Fpost%2Fking-county-looks-improve-safety-jurors-other-courthouse-visitors&amp;t_e=King%20County%20Looks%20To%20Improve%20Safety%20For%20Jurors%2C%20Other%20Courthouse%20Visitors%20&amp;t_d=%0A%20%20%20%20%20%20King%20County%20Looks%20To%20Improve%20Safety%20For%20Jurors%2C%20Other%20Courthouse%20Visitors%20%20%20%20%20&amp;t_t=King%20County%20Looks%20To%20Improve%20Safety%20For%20Jurors%2C%20Other%20Courthouse%20Visitors%20&amp;s_o=default#version=0675b286a8e2b63f1d34621e45544923" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 391px !important;" tabindex="0" title="Disqus" verticalscrolling="no" width="100%"></iframe></div> </div>
+<div class="related">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</main>
+</div>
+<div class="bottom-ads">
+<div class="bottom-ads-inner"></div>
+</div>
+</div>
+<footer class="footer" role="contentinfo">
+<div class="row">
+<div class="footer-affiliate-container small-centered columns">
+<div class="region region-footer">
+<div class="block block-pi-table-queue" id="block-pi-table-queue-partnerfooter">
+<div class="content">
+<div class="table-queue" id="table-queue-partnerfooter">
+<div class="item-list"><ul class="partner-logos"><li class="first"><a href="https://www.facebook.com/knkxfm" target="_blank"><img alt="Facebook" src="//www.knkx.org/sites/kplu/files/styles/partner_footer_logo/public/201510/fb-flogo-white-printpackaging_copy_0_NEW.png" title="Facebook" typeof="foaf:Image"/></a></li>
+<li><a href="https://twitter.com/knkxfm" target="_blank"><img alt="Twitter" src="//www.knkx.org/sites/kplu/files/styles/partner_footer_logo/public/201508/TwitterLogo_white.png" title="Twitter" typeof="foaf:Image"/></a></li>
+<li><a href="https://instagram.com/knkx885/" target="_blank"><img alt="Instagram" src="//www.knkx.org/sites/kplu/files/styles/partner_footer_logo/public/201608/hello.png" title="Instagram" typeof="foaf:Image"/></a></li>
+<li><a href="https://www.youtube.com/c/knkxpublicradio" target="_blank"><img alt="YouTube" src="//www.knkx.org/sites/kplu/files/styles/partner_footer_logo/public/201708/YouTube-logo-light_1_0.png" title="YouTube" typeof="foaf:Image"/></a></li>
+<li class="last"><a href="http://www.jazz24.org" target="_blank"><img alt="Jazz24" src="//www.knkx.org/sites/kplu/files/styles/partner_footer_logo/public/201606/jazz24_red_dot_cutout.png" title="Jazz24" typeof="foaf:Image"/></a></li>
+</ul></div></div>
+</div>
+</div>
+<div class="block block-pi-table-queue" id="block-pi-table-queue-auxiliarylinksfooter">
+<div class="content">
+<div class="table-queue" id="table-queue-auxiliarylinksfooter">
+<div class="item-list"><ul class="auxiliary-links"><li class="first"><span>© 2019 KNKX</span></li>
+<li><a href="https://www.knkx.org/listening-options" target="_self">Listening Options </a></li>
+<li><a href="https://www.knkx.org/contact" target="_self">Contact</a></li>
+<li><a href="https://www.knkx.org/support" target="_self">Support KNKX</a></li>
+<li><a href="https://www.knkx.org/fcc-public-file-reports" target="_self">FCC Public File</a></li>
+<li class="last"><a href="http://www.sponsorseattlepublicradio.org" target="_blank">Sponsorship</a></li>
+</ul></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script type="text/javascript">
+<![CDATA[//><!--
+ (function ($) { $(document).foundation({ topbar: { custom_back_text: true, back_text: 'back', mobile_show_parent_link: true } }); }(jQuery));
+//--><!]]>
+</script>
+</div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"15ba4da3e8","applicationID":"1108724","transactionName":"NlMBMhAECEZRAU1eDg8ZIgUWDAlbHwxWUwQ+RgIBBzoQXFUV","queueTime":0,"applicationTime":418,"atts":"GhQCRFgeG0g=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<iframe style="display: none;"></iframe><iframe id="google_osd_static_frame_5468908297071" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe><script language="javascript" src="https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/js/chartbeat.js" type="text/javascript"></script></body></html>

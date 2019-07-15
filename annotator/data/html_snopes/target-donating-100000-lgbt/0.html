@@ -1,0 +1,1950 @@
+<html class="js canvas canvastext geolocation crosswindowmessaging websqldatabase indexeddb hashchange historymanagement draganddrop websocket rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache svg smil svgclippaths fontface" lang="en" prefix="lc: http://loc.gov/#"><head class="at-element-marker">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="$Revision: 81937 $" name="version"/>
+<meta content="5C89FB9D99590AB2F55BD95C3A59BD81" name="msvalidate.01"/>
+<link href="http://purl.org/dc/elements/1.1/" rel="schema.dc" title="schema(DC)"/>
+<meta content="eng" name="dc.language"/>
+<meta content="Library of Congress, Washington, D.C. 20540 USA" name="dc.source"/>
+<link href="https://www.loc.gov/lgbt-pride-month/about/?fo=json" rel="alternate" type="application/json"/>
+<meta content="libraryofcongress" property="fb:admins"/>
+<meta content="The Library of Congress" property="og:site_name"/>
+<meta content="article" property="og:type"/>
+<title>
+    
+        About  | 
+    
+        Lesbian, Gay, Bisexual, Transgender and Queer Pride Month   | 
+    
+        Library of Congress 
+    
+    </title>
+<meta content="About  | Lesbian, Gay, Bisexual, Transgender and Queer Pride Month   | Library of Congress " name="dc.title"/>
+<meta content="About  | Lesbian, Gay, Bisexual, Transgender and Queer Pride Month   | Library of Congress " property="og:title"/>
+<meta content="﻿
+	
+		Lesbian, Gay, Bisexual, Transgender and Queer (LGBTQ) Pride Month is currently celebrated each year in the month of June to honor the 1969 Stonewall Uprising in Manhattan. The Stonewall Uprising was a tipping point for the Gay Liberation Movement in the United States. In the United States the last Sunday in June was initially celebrated as &amp;ldquo;Gay Pride Day,&amp;rdquo; but the actual day was flexible. In major cities across the nation the &amp;ldquo;day&amp;rdquo; soon grew to encompass a month-long series of events. Today, celebrations include pride parades, picnics, parties, workshops, symposia and concerts, and LGBTQ Pride Month events attract millions of participants around the world. Memorials are held during this month for those members of the community who have been lost to hate crimes or HIV/AIDS. The purpose of the commemorative month is to recognize the impact that lesbian, gay, bisexual and transgender individuals have had on history locally, nationally, and internationally." name="description"/>
+<meta content="﻿
+	
+		Lesbian, Gay, Bisexual, Transgender and Queer (LGBTQ) Pride Month is currently celebrated each year in the month of June to honor the 1969 Stonewall Uprising in Manhattan. The Stonewall Uprising was a tipping point for the Gay Liberation Movement in the United States. In the United States the last Sunday in June was initially celebrated as &amp;ldquo;Gay Pride Day,&amp;rdquo; but the actual day was flexible. In major cities across the nation the &amp;ldquo;day&amp;rdquo; soon grew to encompass a month-long series of events. Today, celebrations include pride parades, picnics, parties, workshops, symposia and concerts, and LGBTQ Pride Month events attract millions of participants around the world. Memorials are held during this month for those members of the community who have been lost to hate crimes or HIV/AIDS. The purpose of the commemorative month is to recognize the impact that lesbian, gay, bisexual and transgender individuals have had on history locally, nationally, and internationally." property="og:description"/>
+<meta content="Text is U.S. Government Work" name="dc.rights"/>
+<link href="http://www.loc.gov/text-us-government-work" rel="dc.rights" title="Rights Restriction"/>
+<meta content="web page" name="dc.type"/>
+<meta content="Gay" name="dc.subject"/>
+<meta content="Gay" name="article:tag"/>
+<meta content="Bisexual" name="dc.subject"/>
+<meta content="Bisexual" name="article:tag"/>
+<meta content="Transgender" name="dc.subject"/>
+<meta content="Transgender" name="article:tag"/>
+<meta content="LGBTQ" name="dc.subject"/>
+<meta content="LGBTQ" name="article:tag"/>
+<meta content="Pride Month" name="dc.subject"/>
+<meta content="Pride Month" name="article:tag"/>
+<meta content="Lesbian" name="dc.subject"/>
+<meta content="Lesbian" name="article:tag"/>
+<meta content="United States" name="dc.coverage.spatial"/>
+<meta content="United States" name="article:tag"/>
+<meta content="1840/2017" name="dc.coverage.temporal"/>
+<meta content="http://www.loc.gov/static/images/favicons/open-graph-logo.png?81937.86251" property="og:image"/>
+<meta content="https://www.loc.gov/static/images/favicons/open-graph-logo.png?81937.86251" property="og:image:secure_url"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<link href="https://www.loc.gov/static/stylesheets/base.css?81937.86251" rel="stylesheet" type="text/css"/>
+<script src="https://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script><script src="https://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/mbox-contents-e2a45417e8445bb936e5d6673a0cdb8a4dfe9bfc.js"></script><style class="at-flicker-control" id="at-makers-style">
+.mboxDefault {visibility: hidden;}
+</style>
+<script src="https://www.loc.gov/static/js/lib/jquery-1.8.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+/**
+ * Timing.js 1.0.4
+ * Copyright 2015 Addy Osmani
+ */
+(function(window) {
+    'use strict';
+
+    /**
+     * Navigation Timing API helpers
+     * timing.getTimes();
+     **/
+    window.timing = window.timing || {
+        /**
+         * Outputs extended measurements using Navigation Timing API
+         * @param  Object opts Options (simple (bool) - opts out of full data view)
+         * @return Object      measurements
+         */
+        getTimes: function(opts) {
+            var performance = window.performance || window.webkitPerformance || window.msPerformance || window.mozPerformance;
+
+            if (performance === undefined) {
+                return false;
+            }
+
+            var timing = performance.timing;
+            var api = {};
+            opts = opts || {};
+
+            if (timing) {
+                if(opts && !opts.simple) {
+                    for (var k in timing) {
+                        // hasOwnProperty does not work because properties are
+                        // added by modifying the object prototype
+                        if(isNumeric(timing[k])) {
+                            api[k] = parseFloat(timing[k]);
+                        }
+                    }
+                }
+
+
+                // Time to first paint
+                if (api.firstPaint === undefined) {
+                    // All times are relative times to the start time within the
+                    // same objects
+                    var firstPaint = 0;
+
+                    // Chrome
+                    if (window.chrome && window.chrome.loadTimes) {
+                        // Convert to ms
+                        firstPaint = window.chrome.loadTimes().firstPaintTime * 1000;
+                        api.firstPaintTime = firstPaint - (window.chrome.loadTimes().startLoadTime*1000);
+                    }
+                    // IE
+                    else if (typeof window.performance.timing.msFirstPaint === 'number') {
+                        firstPaint = window.performance.timing.msFirstPaint;
+                        api.firstPaintTime = firstPaint - window.performance.timing.navigationStart;
+                    }
+                    // Firefox
+                    // This will use the first times after MozAfterPaint fires
+                    //else if (window.performance.timing.navigationStart && typeof InstallTrigger !== 'undefined') {
+                    //    api.firstPaint = window.performance.timing.navigationStart;
+                    //    api.firstPaintTime = mozFirstPaintTime - window.performance.timing.navigationStart;
+                    //}
+                    if (opts && !opts.simple) {
+                        api.firstPaint = firstPaint;
+                    }
+                }
+
+                // Total time from start to load
+                api.loadTime = timing.loadEventEnd - timing.fetchStart;
+                // Time spent constructing the DOM tree
+                api.domReadyTime = timing.domComplete - timing.domInteractive;
+                // Time consumed preparing the new page
+                api.readyStart = timing.fetchStart - timing.navigationStart;
+                // Time spent during redirection
+                api.redirectTime = timing.redirectEnd - timing.redirectStart;
+                // AppCache
+                api.appcacheTime = timing.domainLookupStart - timing.fetchStart;
+                // Time spent unloading documents
+                api.unloadEventTime = timing.unloadEventEnd - timing.unloadEventStart;
+                // DNS query time
+                api.lookupDomainTime = timing.domainLookupEnd - timing.domainLookupStart;
+                // TCP connection time
+                api.connectTime = timing.connectEnd - timing.connectStart;
+                // Time spent during the request
+                api.requestTime = timing.responseEnd - timing.requestStart;
+                // Request to completion of the DOM loading
+                api.initDomTreeTime = timing.domInteractive - timing.responseEnd;
+                // Load event time
+                api.loadEventTime = timing.loadEventEnd - timing.loadEventStart;
+            }
+
+            return api;
+        },
+        /**
+         * Uses console.table() to print a complete table of timing information
+         * @param  Object opts Options (simple (bool) - opts out of full data view)
+         */
+        printTable: function(opts) {
+            var table = {};
+            var data  = this.getTimes(opts) || {};
+            Object.keys(data).sort().forEach(function(k) {
+                table[k] = {
+                    ms: data[k],
+                    s: +((data[k] / 1000).toFixed(2))
+                };
+            });
+            console.table(table);
+        },
+        /**
+         * Uses console.table() to print a summary table of timing information
+         */
+        printSimpleTable: function() {
+            this.printTable({simple: true});
+        }
+    };
+
+    function isNumeric(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
+    // Expose as a commonjs module
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = window.timing;
+    }
+
+})(typeof window !== 'undefined' ? window : {});
+;;
+</script>
+<script type="text/javascript">
+// Stub window.loc_ux_tracking so we dont have to riddle the pages
+// with if(window.loc_ux_tracking) everywhere.  Also create an alias
+// `UX`
+jQuery(function($){
+    if(!window.loc_ux_tracking){
+        window.loc_ux_tracking = {
+            trackFileDownloadEvent: function(){},
+            trackUserInteractionEvent: function(){},
+            trackUserInterfaceAction: function(){},
+        }
+    }
+    window.UX = window.loc_ux_tracking;
+    UX.download = UX.trackFileDownloadEvent;
+    UX.interaction = UX.trackUserInteractionEvent;
+    UX.interface = UX.trackUserInterfaceAction;
+
+    function getMediaPosition(player) {
+        /*
+         * To support the two media players (JW Player and mediaElement) a facade function 
+         * wwas created in order to get the current position in a video.
+         *
+         * getMediaPosition() returns the current position in the video.
+         * @param {playerObject} player
+         * @return {currentPosition} number
+         */
+        switch(player.type) {
+            case 'jwPlayer': {
+                return player.getPosition();
+            }
+            case 'mediaElement': {
+                return player.getCurrentTime();
+            }
+        }
+        return null;
+    }
+
+
+    function getMediaDuration(player) {
+        /*
+         * To support the two media players (JW Player and mediaElement) a facade function 
+         * wwas created in order to get the length of a video.
+         *
+         * getMediaPosition() returns the length of the video.
+         * @param {playerObject} player
+         * @return {currentPosition} number
+         */
+        switch(player.type) {
+            case 'jwPlayer': {
+                return player.getDuration();
+            }
+            case 'mediaElement': {
+                return player.duration;
+            }
+        }
+        return null;
+    }
+
+    /*
+    function mediaPlayerInterface(player, playerType) {
+        // given the media player type, this function will modify the objects such that the methods
+        // called in track_player are the same for both jwPlayer and mediaElement
+        switch(playerType) {
+            case 'jwPlayer': {
+                // Want to mimic the jwPlayers functions so if jwPlayer do nothing
+                break;
+            }
+            case 'mediaElement': {
+                player.getPosition = function() {
+                    return player.getCurrentTime();
+                }
+
+                player.getDuration = function() {
+                    return player.duration;
+                }
+                break;
+            }
+        }
+        return player;
+    }
+    */
+
+    // Register calls to Adobe for metrics tracking
+    $.omniture = UX.track_player = function(player, playerType, shortName, isVideo) {
+        
+        player.type = playerType; 
+        var eventData = {
+            player: player,
+            shortName: shortName
+        };
+        eventData.mediaType = isVideo ? 'video' : 'audio';
+
+
+        switch(playerType) {
+            case 'jwPlayer': {
+                player.on('pause', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('buffer', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('idle', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('complete', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('play', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('seeked', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('seeking', function(event) {handleMediaEvent(event, eventData)}, this);
+                break;
+            }
+            case 'mediaElement': {
+                player.addEventListener('pause', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('buffer', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('idle', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('complete', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('play', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('seeked', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('seeking', function(event) {handleMediaEvent(event, eventData)}, this);
+                break;
+            }
+            default:
+                break;
+        }
+
+    };
+
+    //Handle various media events and send data to Adobe. This also sends data to the legacy locjukebox reporting suite
+    function handleMediaEvent(event, eventData) {
+        if (typeof s != "undefined") {
+            var player = eventData.player;
+            var mediaName = eventData.shortName;
+            var mediaType = eventData.mediaType;
+            var mediaPlayerName = "LOC JW Player";
+            var mediaOffset = 0;
+            var legacyTracking = s_gi('locjukebox');
+
+            legacyTracking.trackingServer = s.trackingServer;
+            legacyTracking.prop4 = mediaName;
+
+            if (getMediaPosition(player) > 0) {
+                mediaOffset = Math.floor(getMediaPosition(player));
+            }
+            switch (event.type) {
+                case 'play':
+                    if (mediaOffset == 0) {
+                        setTimeout(function() {
+                            s.Media.open(mediaName, getMediaDuration(player), mediaPlayerName);
+                            s.Media.play(mediaName, mediaOffset);
+                            legacyTracking.prop8 = "[Button Click] - Start " + mediaType;
+                            legacyTracking.tl();
+                            console.log('play event fired off');
+                        }, 500);
+                    }
+                    else {
+                        s.Media.play(mediaName, mediaOffset);
+                        legacyTracking.prop8 = "[Button Click] - Resume " + mediaType;
+                        legacyTracking.tl();
+                    }
+                    break;
+
+                case 'seeked':
+                    s.Media.stop(mediaName, mediaOffset);
+                    s.Media.play(mediaName, mediaOffset);
+                    legacyTracking.prop8 = "[Scrub] - Specific Point in " + mediaType + " Clip";
+                    legacyTracking.tl();
+                    console.log('seek event fired off');
+                    break;
+
+                case 'pause':
+                    s.Media.stop(mediaName, mediaOffset);
+                    legacyTracking.prop8 = "[Button Click] - Pause " + mediaType;
+                    legacyTracking.tl();
+                    console.log('pause event fired off');
+                    break;
+                case 'seeking':
+                    s.Media.stop(mediaName, mediaOffset);
+                    console.log('seeking event fired off');
+                    break;
+                case 'buffer':
+                case 'idle':
+                    break;
+
+                case 'complete':
+                    s.Media.stop(mediaName, mediaOffset);
+                    s.Media.close(mediaName);
+                    mediaOffset = 0;
+                    legacyTracking.prop8 = "[End Clip] - " + mediaType;
+                    legacyTracking.tl();
+                    break;
+            }
+        }
+    }
+});
+
+// General analytics properties.  Adobe will inspect the global scope
+// and execute this function if it finds it.
+var doPageMetricsPlugin = function(s){
+
+    // window.UX = window.loc_ux_tracking;  // This resets the UX object removing track_player causing a bug for the video player
+    UX.download = UX.trackFileDownloadEvent;
+    UX.interaction = UX.trackUserInteractionEvent;
+    UX.interface = UX.trackUserInterfaceAction;
+
+    /* application title: prop10 */
+    s.prop10 = "Project One";
+
+    /* error page report */
+    
+
+    s.prop15 = "";
+    s.prop16 = "";
+    s.prop18 = ""; // Start Date
+    s.prop19 = ""; // End Date
+    s.prop20 = false; // Front page only
+    /* page title: prop21 */
+    
+    //Managed content page/article title
+        s.prop21 = 'About';
+    
+    // Basic or Advanced
+    
+        s.prop15 = 'basic';
+    
+    //Start date
+    
+    //End Date
+    
+    //Front page only
+    
+        s.prop20 = false;
+    
+    /* system identifier: prop20 */
+    /*
+    
+    */
+    /* page identifier: prop11 */
+    // metrics item page identifier is unique id plus readable title.  This
+    // needs help getting cleaned up using site_type/site_id/resource/title?
+    // - from item/metrics.html
+    // - from managed_content/metrics.html
+    
+        s.prop11 = '/lgbt-pride-month/about/ - Lesbian, Gay, Bisexual and Transgender Pride Month';
+    
+
+    //Set title, same across supporting material like about-this-thing, search
+    //results within the set as the content, articles and essays etc.
+    
+    s.prop12 = 'Lesbian, Gay, Bisexual and Transgender Pride Month';
+    
+
+    s.prop22 = 0.00669097900391;//backend duration
+
+
+    // Assigning specific search options for selected search facets
+    s.prop23 = "";// suggested
+    s.prop24 = "";// digitized
+    s.prop25 = "";// original format
+    s.prop26 = "";// online format
+    s.prop27 = "";// date
+    s.prop28 = "";// part of
+    s.prop29 = "";// contributor
+    s.prop30 = "";// subject
+    s.prop31 = "";// site_id -> picked up by prop62
+    s.prop32 = "";// location
+    s.prop33 = "lgbt-pride-month";// site_type -> picked up by prop61
+    s.prop34 = "about/";// site_path (options.resource) can be longer than 2 segments
+    s.prop35 = "";// language
+    s.prop36 = "";// results view type
+    
+    s.prop37 = '';// searchIn
+    s.prop38 = "/lgbt-pride-month/about/";// path_info
+    s.prop39 = "";//truncated query string
+    s.prop40 = '';// count
+    s.prop41 = "";// sort
+    s.prop44 = "";// searchTerms
+    s.prop45 = "";
+    s.prop46 = "";// qs-adv-search-kw
+    s.prop47 = '';// startPage
+    s.prop67 = "";// access condition
+
+    /* original format: prop49 */
+    
+    s.prop49 = 'Web Pages';
+    
+    s.prop50 = "";
+    // The following two props aren't needed currently
+    //s.prop51 = "";// facetLimits
+    //s.prop52 = "";// field
+    s.prop53 = "";// facetPrefix
+    s.prop54 = "";// fullText
+    s.prop55 = "";// download
+    s.prop56 = ""; // partof_collection
+    s.prop57 = ""; // number_page
+    s.prop60 = 81937;//release_id
+    s.prop69 = ""; // location_state
+    s.prop70 = ""; //location_county
+    s.prop71 = ""; //language
+    // Combined Facets - yuck, should be deprecated soon
+    // TODO: This means we need a s.prop for "digitized"
+    //       aka "available online".
+    s.prop48 = "Facet[Digitized]-(false) ";
+    /*
+    /* Advanced Search display level */
+    
+        s.prop16 = "None";
+    
+
+    /* Advanced Search Parameter */
+    
+    /* Query String */
+    
+
+    /* Partof Title */
+    
+
+    /* Partof_Division */
+    
+    /* Partof_Collection */
+    
+    /* number_page */
+    
+
+    /* Location country */
+    
+
+    /* Location state */
+    
+
+    /* Language */
+    
+
+    
+
+
+    return s;
+};
+</script>
+<meta content="#ffffff" name="msapplication-TileColor"/>
+<meta content="ms-icon-144x144.png?81937.86251" name="msapplication-TileImage"/>
+<link href="https://www.loc.gov/lgbt-pride-month/about/" rel="alternate" type="text/html"/>
+<link href="https://www.loc.gov/lgbt-pride-month/about/?fo=json" rel="alternate" type="application/json"/>
+<link href="https://www.loc.gov/search/opensearch.xml" rel="search" title="Library of Congress Search" type="application/opensearchdescription+xml"/>
+<script src="https://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/s-code-contents-3574d41e6d652a4a2fd4cec83336d32662a2ffa8.js"></script><style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style><link href="//cdn.loc.gov/loader/css/style.css" media="all" rel="stylesheet" type="text/css"/></head>
+<body>
+<div id="body">
+<a class="skip-nav" href="https://www.loc.gov/#skip-to-content">Skip to main content</a>
+<style>.header-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 998;
+  background-color: #000000;
+  /* fallback */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.header {
+  background-color: #fff;
+  border-top: 4px solid #FC4C02;
+  border-bottom: 1px solid #bfbfbf;
+  position: relative;
+  z-index: 999;
+}
+.header-container {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .header-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.header-row {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+}
+@media (min-width: 993px) {
+  .header-row {
+    align-items: flex-end;
+  }
+}
+</style>
+<header class="header" role="banner">
+<div class="header-container">
+<div class="header-row">
+<style>.header-logo {
+  width: 161px;
+}
+@media (min-width: 993px) {
+  .header-logo {
+    width: 363px;
+    padding: 25px 0;
+  }
+}
+.header-logo > a {
+  display: block;
+  width: 363px;
+  height: 90px;
+}
+.header-logo > a > img {
+  width: 100%;
+  height: auto;
+}
+.header-logo > a > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 992px) {
+  .header-logo > a {
+    width: 161px;
+    height: 40px;
+  }
+}
+@media print {
+  .header-logo > a {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .header-logo {
+    padding: 0;
+  }
+}
+@media print {
+  .header-logo {
+    padding: 1rem 0;
+    height: 68px;
+    display: block;
+  }
+  .header-logo:after {
+    content: url("/static/images/logo-loc-new-branding.svg?74629");
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
+<script>jQuery(function($) {
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-logo a').live('click', function() {
+        UX.interaction($(this), 'LC Logo', 'Click', '');
+    });
+
+});
+</script>
+<div class="header-logo">
+<a href="https://www.loc.gov/">
+<img alt="" src="https://www.loc.gov/static/images/logo-loc-new-branding.svg"/>
+<span>Library of Congress</span>
+</a>
+</div>
+<style>.header-search {
+  flex: 1 1 0%;
+  padding-left: 30px;
+}
+@media (min-width: 993px) {
+  .header-search {
+    padding: 25px 0 25px 210px;
+  }
+}
+.header-search > form {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #000;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 768px) {
+  .header-search > form {
+    flex: 1 0 100%;
+  }
+}
+.header-search > form .header-search-formats {
+  position: relative;
+  color: #000;
+  border-bottom: 1px solid #000;
+  flex: 0 0 100%;
+}
+@media (min-width: 481px) {
+  .header-search > form .header-search-formats {
+    flex: none;
+    border: none;
+  }
+}
+.header-search > form .header-search-formats:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 6px;
+  font-size: 12px;
+}
+.header-search > form .header-search-formats .header-search-format-select {
+  border: none;
+  height: 30px;
+  width: 100%;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+@media (max-width: 480px) {
+  .header-search > form .header-search-formats .header-search-format-select {
+    font-size: 16px;
+  }
+}
+.header-search > form .header-search-formats .header-search-format-select::-ms-expand {
+  display: none;
+}
+.header-search > form .header-search-formats .header-search-format-select:hover,
+.header-search > form .header-search-formats .header-search-format-select:focus {
+  box-shadow: inset 0 0 3px #000 !important;
+}
+.header-search > form .header-search-input-wrapper {
+  flex: 1 1 1%;
+  position: relative;
+}
+.header-search > form .header-search-input-wrapper .header-search-input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  border-left: 1px solid #000;
+  height: 30px;
+  line-height: 30px;
+}
+@media (max-width: 480px) {
+  .header-search > form .header-search-input-wrapper .header-search-input {
+    font-size: 16px;
+    border: none;
+  }
+}
+.header-search > form .header-search-input-wrapper .header-search-input:focus {
+  box-shadow: inset 0 0 3px #999 !important;
+}
+.header-search > form .header-search-button {
+  height: 30px;
+  font-size: 18px;
+  padding: 0 10px;
+  background-color: #000;
+  border-color: #000;
+}
+.header-search > form .header-search-button > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.header-search > form .header-search-button .icon {
+  line-height: inherit;
+}
+@media (max-width: 768px) {
+  .header-search > form {
+    display: none;
+  }
+  .header-search > form.header-search-form-active {
+    display: flex;
+  }
+}
+.header-search .header-search-toggle {
+  display: none;
+  height: 32px;
+  font-size: 1.25rem;
+  padding: 0 10px;
+  background-color: #000;
+  border-color: #000;
+}
+.header-search .header-search-toggle span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 768px) {
+  .header-search .header-search-toggle {
+    display: inline-block;
+    float: right;
+  }
+  .header-search .header-search-toggle.header-search-toggle-close {
+    background-color: transparent;
+    border-color: transparent;
+    color: #00618e;
+    font-size: 36px;
+    color: #FC4C02;
+    height: auto;
+    flex: none;
+  }
+  .header-search .header-search-toggle.header-search-toggle-close:hover,
+  .header-search .header-search-toggle.header-search-toggle-close:focus {
+    background-color: transparent;
+    border-color: transparent;
+    color: #002347;
+  }
+}
+@media (max-width: 768px) {
+  .header-search {
+    min-height: 32px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 !important;
+  }
+  .header-search.header-search-close {
+    padding: 0 55px 0 1rem !important;
+    z-index: 2;
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+@media print {
+  .header-search {
+    display: none;
+  }
+}
+/* autocomplete */
+.autocomplete-w1 {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  margin: 0;
+  width: 100% !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.autocomplete {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-top-color: transparent;
+  background-color: #fff;
+  cursor: default;
+  text-align: left;
+  max-height: 350px;
+  overflow: auto;
+  margin: 0;
+}
+.autocomplete .selected {
+  background: #efefef;
+}
+.autocomplete div {
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+.autocomplete strong {
+  font-weight: normal;
+  color: #00618e;
+}
+.autocomplete-status {
+  font-weight: normal;
+  font-size: 10px;
+  float: right;
+  text-align: right;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+</style>
+<script>jQuery(function($) {
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-search-format-select').change(function() {
+        var label;
+        $('.header-search-format-select option:selected').each(function() {
+            label = $(this).text().trim();
+        });
+        UX.interaction($(this), 'Search', 'Select Format', label);
+    });
+    // search toggle
+    function searchActive() {
+        $('.header-search > form').addClass('header-search-form-active');
+        $('.header-search .header-search-input').focus();
+        $('.header-search-toggle i').switchClass('icon-search', 'icon-times', 50);
+        $('.header-search-toggle').addClass('header-search-toggle-close');
+        $('.header-search').addClass('header-search-close');
+    };
+    function searchInactive() {
+        $('.header-search > form').removeClass('header-search-form-active');
+        $('.header-search-toggle i').switchClass('icon-times', 'icon-search', 50);
+        $('.header-search-toggle').removeClass('header-search-toggle-close');
+        $('.header-search').removeClass('header-search-close');
+    };
+
+    $('.header-search-toggle').live('click', function() {
+        if ($('.header-search > form').hasClass('header-search-form-active')) {
+            searchInactive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Search', 'Hide', '');
+        } else {
+            searchActive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Search', 'Show', '');
+        }
+    });
+
+    $(window).on("load resize",function(e){
+        $('.autocomplete-w1').parent().css('width', '100%');
+    });
+
+});
+</script>
+<div class="header-search">
+<label class="test screen-readers-only" for="search">Search</label>
+<form action="/search/" method="get" role="search">
+<div class="header-search-formats">
+<select aria-label="search" class="header-search-format-select" id="searchFormat" name="in">
+<option value="">Everything</option>
+<option value="original-format:sound recording">Audio Recordings</option>
+<option value="original-format:book">Books/Printed Material</option>
+<option value="original-format:film, video">Films, Videos</option>
+<option value="original-format:legislation">Legislation</option>
+<option value="original-format:manuscript/mixed material">Manuscripts/Mixed Material</option>
+<option value="original-format:map">Maps</option>
+<option value="original-format:notated music">Notated Music</option>
+<option value="original-format:newspaper">Newspapers</option>
+<option value="original-format:periodical">Periodicals</option>
+<option value="original-format:personal narrative">Personal Narratives</option>
+<option value="original-format:photo, print, drawing">Photos, Prints, Drawings</option>
+<option value="original-format:software, e-resource">Software, E-Resources</option>
+<option value="original-format:archived web site">Archived Web Sites</option>
+<option value="original-format:web page">Web Pages</option>
+<option value="original-format:3d object">3D Objects</option>
+</select>
+</div>
+<div class="header-search-input-wrapper">
+<input accesskey="/" aria-autocomplete="list" aria-haspopup="true" aria-multiline="false" aria-owns="Autocomplete_e3b71" autocomplete="off" class="locsuggest header-search-input" id="search" maxlength="250" name="q" onfocus="this.select();" placeholder="Search Loc.gov" role="textbox" title="Search the Library of Congress" type="search" value=""/><div id="AutocompleteContainter_e3b71" style="position: absolute; z-index: 9999; width: 100%;"><div class="autocomplete-w1"><span aria-live="polite" class="autocomplete-status" id="Autocomplete_e3b71_status" role="status" style="width: 269px;">Suggestions enabled.</span><div aria-hidden="true" aria-owner="search" class="autocomplete" id="Autocomplete_e3b71" style="display: none; width: 289px; max-height: 300px;"></div></div></div>
+<div class="searchtarget">
+<input id="search_within_default" name="new" type="hidden" value="true"/>
+</div>
+</div>
+<button class="header-search-button" type="submit" value="submit"><span>Search</span><i class="icon icon-search"></i></button>
+<input name="st" type="hidden" value=""/>
+</form>
+<button class="header-search-toggle"><span>Search toggle</span><i class="icon icon-search"></i></button>
+</div>
+<style>.header-menu {
+  position: relative;
+}
+@media (min-width: 769px) {
+  .header-menu {
+    padding-left: 15px;
+  }
+}
+.header-menu .header-menu-button {
+  color: #000;
+  border: 0;
+  background: none;
+  font-size: 36px;
+  width: 31px;
+  height: 70px;
+  line-height: 1;
+  padding: 0 15px;
+  margin-right: -15px;
+  box-sizing: content-box;
+}
+.header-menu .header-menu-button .icon-times {
+  color: #FC4C02;
+}
+.header-menu .header-menu-button > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (min-width: 993px) {
+  .header-menu .header-menu-button {
+    height: auto;
+    line-height: normal;
+    padding: 9px 15px 18px;
+  }
+}
+.header-menu.header-menu-active .header-menu-button {
+  background: #efefef;
+}
+.header-menu .header-menu-container {
+  display: none;
+  background: #efefef;
+  position: absolute;
+  top: auto;
+  right: -15px;
+  z-index: 999;
+}
+@media (min-width: 993px) {
+  .header-menu .header-menu-container {
+    top: auto;
+  }
+}
+.header-menu .header-menu-container.header-menu-container-active {
+  display: block;
+  height: auto;
+  overflow: auto;
+  opacity: 1;
+}
+.header-menu .header-menu-container > ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0 53px 0 2rem;
+}
+ul .header-menu .header-menu-container > ul {
+  padding-left: 40px;
+}
+@media (min-width: 481px) {
+  .header-menu .header-menu-container > ul {
+    padding: 0 153px 0 2rem;
+  }
+}
+.header-menu .header-menu-container > ul a {
+  color: #333;
+}
+.header-menu .header-menu-container > ul > li {
+  padding: 0.5rem 50px 0.5rem 0;
+  white-space: nowrap;
+}
+.header-menu .header-menu-container > ul > li:first-child {
+  padding-top: 1rem;
+}
+.header-menu .header-menu-container > ul > li:last-child {
+  padding-bottom: 1rem;
+}
+.header-menu .header-menu-container > ul.header-menu-tertiary > li:first-child,
+.header-menu .header-menu-container > ul.header-menu-external > li:first-child {
+  border-top: 1px solid #999;
+}
+@media print {
+  .header-menu {
+    display: none;
+  }
+}
+</style>
+<script>jQuery(function($) {
+    $('.header-menu-link a.menu-link').live('click', function () {
+        $('.header-submenu, .header-menu, .header-menu-link').toggleClass('on-off');
+    });
+    var delay = 800,
+        global_nav_header_timeout;
+    $('.header-menu li').live('hover', function(event) {
+        $('.header-dropdown img').each(function(index, image){
+            var data_source = $(image).attr('data-src');
+            if(data_source){
+                $(image).attr({src: data_source, 'data-src': null});
+            }
+        });
+
+        if( $(event.target).parents('.hover').length ){
+            return;
+        }
+
+        $('.header-menu li.hover').removeClass('hover');
+        $(event.target).closest('li').addClass('hover');
+        global_nav_header_timeout = setTimeout(function(){
+            $('.header-dropdown').hide();
+            $('.header-dropdown', $(event.target).closest('li')).show();
+        }, delay);
+    }, function(event){
+        clearTimeout( global_nav_header_timeout );
+        $(event.target).closest('li').removeClass('hover');
+        $('.header-dropdown', $(event.target).closest('li')).hide();
+    });
+
+    $('.header-menu').live('hover',  function(event) {/*
+        do nothing on hover over, only on hover out
+    */}, function(event){
+        $('.header-menu li.hover').removeClass('hover');
+        $(event.target).parents('.header-dropdown').hide();
+    });
+
+    //Metrics tracking how users are using the new header
+    $('.header-menu a, .intersite-navigation a, .locfoot a').live('click', function(event){
+        s.linkTrackVars = s.linkTrackVar + ",prop57";
+        var label = $(this).attr('name');
+        if ( !label ){
+            label = $(this).text().trim();
+        }
+        s.prop57 = label;
+        s.tl(this,'o',label);
+    });
+
+    function headerMenuActive() {
+        $('.header-menu-container').removeClass('header-menu-container-active').attr('aria-hidden', 'true');
+        $('.header-menu').removeClass('header-menu-active');
+        $('.header-menu-button').attr('aria-expanded', 'false');
+        $('.header-menu-button i').switchClass('icon-times', 'icon-bars', 50);
+        //$('.header-overlay').hide();
+    };
+    function headerMenuInactive() {
+        $('.header-menu-container').addClass('header-menu-container-active').attr('aria-hidden', 'false');
+        $('.header-menu').addClass('header-menu-active');
+        $('.header-menu-button').attr('aria-expanded', 'true');
+        $('.header-menu-button i').switchClass('icon-bars', 'icon-times', 50);
+        //$('.header-overlay').show();
+    };
+    $('.header-menu-button').live('click', function() {
+        if ($('.header-menu-container').hasClass('header-menu-container-active')) {
+            headerMenuActive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Hamburger Menu', 'Close', '');
+        } else {
+            headerMenuInactive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Hamburger Menu', 'Open', '');
+        }
+    });
+    $("html").live("click touchstart keydown",function(event) {
+        headerMenuActive();
+    });
+    $(".header-menu").live("click touchstart keydown",function(event) {
+        event.stopPropagation();
+        // allow escape key to close for accessibility
+        if (event.which == 27) {
+            headerMenuActive();
+        }
+    });
+    // menu position and height
+    $(window).live("load resize scroll",function(e){
+        var headerHeight = $('.header-menu').outerHeight();
+        $('.header-menu-container').css({"top": headerHeight});
+    });
+
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-menu-container ul li').live('click', function() {
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Hamburger Menu', 'Click', label);
+    });
+});
+</script>
+<div class="header-menu">
+<button aria-controls="header-menu-container" class="header-menu-button" id="header-menu-button"><span>menu </span><i class="icon icon-bars"></i></button>
+<nav aria-labelledby="header-menu-button" class="header-menu-container" id="header-menu-container">
+<ul class="">
+<li class=""><a href="https://www.loc.gov/discover/">Discover</a></li>
+<li class=""><a href="https://www.loc.gov/services-and-programs/">Services</a></li>
+<li class=""><a href="https://www.loc.gov/visit/">Visit</a></li>
+<li class=""><a href="https://www.loc.gov/education/">Education</a></li>
+<li class=""><a href="https://www.loc.gov/connect/">Connect</a></li>
+<li class=""><a href="https://www.loc.gov/about/">About</a></li>
+</ul>
+<ul class="header-menu-tertiary">
+<li class=""><a href="http://www.loc.gov/rr/askalib/">Ask a Librarian</a></li>
+<li class=""><a href="https://www.loc.gov/help/">Help</a></li>
+<li class=""><a href="https://www.loc.gov/contact/">Contact</a></li>
+</ul>
+<ul class="header-menu-external">
+<li class=""><a href="https://catalog.loc.gov/">Search Online Catalog</a></li>
+<li class=""><a href="http://copyright.gov/">Copyright.gov</a></li>
+<li class=""><a href="https://www.congress.gov/">Congress.gov</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<style>.breadcrumbs-wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.breadcrumbs-container {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 12px;
+}
+@media (max-width: 768px) {
+  .breadcrumbs-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .breadcrumbs-container {
+    display: none;
+  }
+}
+.breadcrumbs-row {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: -moz-box;
+  display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin: 0 0;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.header-breadcrumbs {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -webkit-flex: 1;
+  /* Safari 6.1+. iOS 7.1+, BB10 */
+  -ms-flex: 1;
+  /* IE 10 */
+  -moz-box-flex: 1;
+  flex: 1;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  min-width: 0;
+  /* firefox fix */
+  margin: 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 2rem;
+}
+</style>
+<script>jQuery(function($) {
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-breadcrumbs a').live('click', function(event){
+        var label = $(this).attr('name');
+        if ( !label ){
+            label = $(this).text().trim();
+        }
+        UX.interaction($(this), 'Breadcrumbs', 'click', label);
+    });
+
+});
+</script>
+<div class="breadcrumbs-wrapper">
+<div class="breadcrumbs-container">
+<div class="breadcrumbs-row">
+<div class="header-breadcrumbs" id="header-breadcrumbs">
+<nav>
+<a href="https://www.loc.gov">Library of Congress</a> &gt;
+                    
+                
+                
+                
+                    
+                    <a href="https://www.loc.gov/lgbt-pride-month/">Lesbian, Gay, Bisexual, Transgender and Queer Pride Month</a> &gt;
+                    
+                
+                
+                
+                    
+                    About
+                    
+                
+                
+                </nav>
+</div>
+<div class="sharetool_wrapper h_adjust">
+<div class="locshare-toolbar right" id="share-this"> <span class="locshare-print-button"> <a accesskey="5" href="https://www.loc.gov/#locshare/print">                        Print                    </a> </span> <span class="locshare-subscribe-button"> <a accesskey="6" href="https://www.loc.gov/#locshare/subscribe">                        Subscribe                    </a> </span> <span class="locshare-share-button"> <a accesskey="7" href="https://www.loc.gov/#locshare/share">                        Share/Save                    </a> </span> <span class="locshare-survey-button"> <a accesskey="8" href="https://www.loc.gov/#locshare/survey">                        Give Feedback                    </a> </span> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="content lgbt-pride-month-content">
+<a id="skip-to-content" name="skip-to-content"></a>
+<div class="managed-content-container">
+<div class="managed-content-row">
+<div class="managed-content-content">
+<article id="article">
+<h1>About</h1>
+<figure class="banner">
+<a href="http://hdl.loc.gov/loc.mss/eadmss.ms009068">
+<img alt="" src="https://www.loc.gov/static/portals/lgbt-pride-month/images/banner-kameny.jpg?81937.86251"/>
+<figcaption>
+    Frank Kameny (in suit), June 1948, Box 137, Folder 10, Frank Kameny Papers, Manuscript Division, Library of Congress
+    </figcaption>
+</a>
+</figure>
+
+
+                
+            
+        
+
+        
+
+
+
+        ﻿<div class="managed-content-row">
+<div class="managed-content-cell">
+<p>Lesbian, Gay, Bisexual, Transgender and Queer (LGBTQ) Pride Month is currently celebrated each year in the month of June to honor the 1969 Stonewall Uprising in Manhattan. The Stonewall Uprising was a tipping point for the Gay Liberation Movement in the United States. In the United States the last Sunday in June was initially celebrated as “Gay Pride Day,” but the actual day was flexible. In major cities across the nation the “day” soon grew to encompass a month-long series of events. Today, celebrations include pride parades, picnics, parties, workshops, symposia and concerts, and LGBTQ Pride Month events attract millions of participants around the world. Memorials are held during this month for those members of the community who have been lost to hate crimes or HIV/AIDS. The purpose of the commemorative month is to recognize the impact that lesbian, gay, bisexual and transgender individuals have had on history locally, nationally, and internationally.</p>
+<p>In 1994, a coalition  of education-based organizations in the United States designated October as  LGBT History Month. In 1995, a resolution passed by the General Assembly of the  National Education Association included LGBT History Month within a list of  commemorative months. National Coming Out Day (October 11), as well as the  first “March on Washington” in 1979, are commemorated in the LGBTQ community  during LGBT History Month.</p>
+<h2>Executive and Legislative Documents</h2>
+<p>The Law Library of Congress has compiled guides to commemorative observations, including a comprehensive inventory of the <a href="http://www.loc.gov/law/help/commemorative-observations/pride.php">Public Laws, Presidential Proclamations and congressional resolutions</a> related to Lesbian, Gay, Bisexual Transgender and Queer Pride Month. </p>
+<h2>Images Used on this Site </h2>
+<article>
+<ul class="list-gallery">
+<li> <a href="https://www.loc.gov/item/98502934/"> <span class="figure"><img alt="" src="https://www.loc.gov/static/portals/lgbt-pride-month/images/francis-johnston-thumb.jpg"/></span>Frances Johnston<br/>
+					(in her Washington D.C. studio), 1864-1952</a> </li>
+<li> <a href="https://www.loc.gov/item/98506498/"> <span class="figure"><img alt="" src="https://www.loc.gov/static/portals/lgbt-pride-month/images/francis-johnston-2-thumb.jpg"/></span>Frances Johnston<br/>
+					(holding and looking down at camera), 1864-1952</a> </li>
+<li> <a href="https://www.loc.gov/item/2003671269/"> <span class="figure"><img alt="" src="https://www.loc.gov/static/portals/lgbt-pride-month/images/bayard-rustin-thumb.jpg"/></span>Bayard Rustin<br/>
+					1912 - 1987</a> </li>
+<li> <a href="//blogs.loc.gov/now-see-hear/2014/06/lilli-vincenz/"> <span class="figure"><img alt="" src="https://www.loc.gov/static/portals/lgbt-pride-month/images/lilli-vincenz-thumb.jpg"/></span>Lilli Vincenz<br/>
+					(The Ladder), January 1966, Lilli Vincenz Papers, Manuscript Division, Library of Congress</a> </li>
+<li> <a href="https://www.loc.gov/item/00651462/"> <span class="figure"><img alt="" src="https://www.loc.gov/static/portals/lgbt-pride-month/images/walt-whitman-thumb.jpg"/></span>Walt Whitman<br/>
+					1819—1892</a> </li>
+<li> <span class="figure"><img alt="" src="https://www.loc.gov/static/portals/lgbt-pride-month/images/frank-kameny-thumb.jpg"/></span>Frank Kameny (in suit), June 1948, <a href="http://hdl.loc.gov/loc.mss/eadmss.ms009068" target="_blank">Box 137, Folder 10</a>, Frank Kameny Papers, Manuscript Division, Library of Congress </li>
+<li> <a href="https://www.loc.gov/item/2005696365/"> <span class="figure"><img alt="" src="https://www.loc.gov/static/portals/lgbt-pride-month/images/gay-rights-march-thumb.jpg"/></span>[Gay rights demonstration at the Democratic National Convention, New York City]</a> </li>
+<li><span class="figure"><img alt="" src="https://www.loc.gov/static/portals/lgbt-pride-month/images/queer-eye-thumb.jpg"/></span>The cast of Queer Eye discuss LGBTQ+ youth issues during a conversation with moderator Jonathan Capehart, April 3, 2019. Photo by Shawn Miller.</li>
+</ul>
+</article>
+</div>
+</div>
+</article>
+<div class="clear"></div>
+</div>
+<div class="managed-content-navigation">
+<div class="articles-menu page-menu">
+<nav>
+<h2>Sections Menu</h2>
+<ul>
+<li class="">
+<a href="https://www.loc.gov/lgbt-pride-month/">
+					Lesbian, Gay, Bisexual, Transgender and Queer Pride Month
+				</a>
+</li><li class="selected">
+<a href="https://www.loc.gov/lgbt-pride-month/about/">
+					About
+				</a>
+</li><li class="">
+<a href="https://www.loc.gov/lgbt-pride-month/events/">
+					2019 Events
+				</a>
+</li><li class="">
+<a href="https://www.loc.gov/lgbt-pride-month/resources/">
+					Resources
+				</a>
+</li><li class="">
+<a href="https://www.loc.gov/lgbt-pride-month/audio-video/">
+					Audio &amp; Video
+				</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<style>.footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #999;
+  padding-top: 35px;
+}
+.footer a {
+  color: #666;
+}
+@media print {
+  .footer {
+    display: none;
+  }
+}
+.footer-container {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.footer-social-links-wrapper {
+  border-bottom: 1px solid #999;
+  padding-bottom: 21px;
+  margin-bottom: 21px;
+  text-align: center;
+}
+.footer-social-title {
+  font-size: 18px;
+  font-weight: normal;
+  color: #666;
+  display: inline-block;
+  margin: 0 28px 0 0;
+}
+@media (max-width: 992px) {
+  .footer-social-title {
+    display: block;
+    margin: 0 0 7px;
+  }
+}
+.footer-social-links {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 -7px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.footer-social-links > li {
+  display: inline-block;
+  margin: 0 7px;
+}
+.footer-social-links > li i {
+  font-size: 17.5px;
+}
+.footer-social-links > li span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.footer-social-links > li a .icon-external-link {
+  font-size: 12.6px;
+  color: #666;
+}
+.footer-social-links > li.footer-social-link-rss a {
+  color: #f47f65;
+}
+.footer-social-links > li.footer-social-link-email a {
+  color: #00618e;
+}
+.footer-social-links > li.footer-social-link-survey {
+  border-left: 1px solid #999;
+  padding-left: 28px;
+  margin-left: 14px;
+  font-size: 13px;
+}
+.footer-social-links > li.footer-social-link-survey a {
+  color: #00618e;
+}
+@media (max-width: 992px) {
+  .footer-social-links > li.footer-social-link-survey {
+    border: none;
+    padding: 0;
+    display: block;
+    margin-top: 10.5px;
+  }
+}
+.footer-social-links > li.footer-social-link-itunesu {
+  font-size: 13px;
+}
+.footer-social-links > li.footer-social-link-itunesu a {
+  color: #00618e;
+}
+@media (max-width: 992px) {
+  .footer-social-links {
+    display: block;
+  }
+}
+@media (min-width: 993px) {
+  .footer-row {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: -moz-box;
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-flex-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    margin: 0 -1rem;
+  }
+}
+.footer-links-wrapper .footer-links {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 -8.75px;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.footer-links-wrapper .footer-links > li {
+  display: inline-block;
+  margin: 0 8.75px;
+}
+.footer-links-wrapper .footer-links > li {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+@media (max-width: 992px) {
+  .footer-links-wrapper {
+    text-align: center;
+    margin-bottom: 21px;
+  }
+}
+@media (min-width: 993px) {
+  .footer-links-wrapper {
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 1;
+    /* IE 10 */
+    -moz-box-flex: 1;
+    flex: 1;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    min-width: 0;
+    /* firefox fix */
+    margin: 0 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+.intersites-links-wrapper {
+  margin: 0 14px;
+}
+@media (max-width: 992px) {
+  .intersites-links-wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0 28px;
+  }
+}
+.intersites-links {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 -1rem;
+}
+.intersites-links > li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+.intersites-links > li > a {
+  display: block;
+}
+.intersites-links > li > a span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 992px) {
+  .intersites-links > li > a {
+    margin: 5px 0;
+  }
+}
+.intersites-links > li.intersites-link-congress > a {
+  width: 125px;
+  height: 30px;
+  background-size: 125px 30px;
+  background: url("/static/images/congress-gov.svg?72026") no-repeat;
+}
+.intersites-links > li.intersites-link-copyright > a {
+  width: 175px;
+  height: 30px;
+  background-size: 175px 30px;
+  background: url("/static/images/copyright-gov.svg?72026") no-repeat;
+}
+@media (max-width: 992px) {
+  .intersites-links {
+    text-align: center;
+  }
+}
+</style>
+<script>//UX Interaction Tracking
+jQuery(function($){
+    $('.footer-social-links li a').click(function(e){
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Follow', 'Click', label);
+    });
+    $('.footer-links li a').click(function(e){
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Footer', 'Click', label);
+    });
+});
+</script>
+<footer class="footer" role="contentinfo">
+<div class="footer-container">
+<div class="footer-social-links-wrapper">
+<span class="footer-social-title"><a href="https://www.loc.gov/connect/">Follow Us</a></span>
+<ul class="footer-social-links">
+<li class="footer-social-link-email"><a href="//loc.gov/subscribe/" title="Email"><i class="icon icon-envelope-square"></i><span> Email</span></a></li>
+<li class="footer-social-link-facebook"><a href="https://www.facebook.com/libraryofcongress/" title="Facebook"><i class="image-icon facebook"></i><span> Facebook</span></a></li>
+<li class="footer-social-link-twitter"><a href="https://www.twitter.com/librarycongress" title="Twitter"><i class="image-icon twitter"></i><span> Twitter</span></a></li>
+<li class="footer-social-link-youtube"><a href="https://www.youtube.com/libraryofcongress/" title="Youtube"><i class="image-icon youtube"></i><span> Youtube</span></a></li>
+<li class="footer-social-link-pinterest"><a href="https://www.pinterest.com/LibraryCongress/" title="Pinterest"><i class="image-icon pinterest"></i><span> Pinterest</span></a></li>
+<li class="footer-social-link-flickr"><a href="https://www.flickr.com/photos/library_of_congress/" title="Flickr"><i class="image-icon flickr"></i><span> Flickr</span></a></li>
+<li class="footer-social-link-instagram"><a href="https://instagram.com/librarycongress/" title="Instagram"><i class="image-icon instagram"></i><span> Instagram</span></a></li>
+<li class="footer-social-link-itunes"><a href="https://itunes.apple.com/us/artist/library-of-congress/id1280713133?mt=2" title="iTunes"> <i class="image-icon itunes"></i><span> iTunes</span></a></li>
+<li class="footer-social-link-survey"><a href="https://www.research.net/r/libraryofcongress" title="Take our survey">Take our survey <i class="icon icon-external-link"><span>External</span></i></a></li>
+</ul>
+</div>
+<div class="footer-row">
+<div class="footer-links-wrapper">
+<ul class="footer-links">
+<li><a href="https://www.loc.gov/accessibility/">Accessibility</a></li>
+<li><a href="https://www.loc.gov/legal/">Legal</a></li>
+<li><a href="https://www.loc.gov/about/office-of-the-inspector-general/">Inspector General</a></li>
+<li><a href="https://www.loc.gov/legal/standard-disclaimer-for-external-links/">External Link Disclaimer</a></li>
+<li><a href="//www.usa.gov/">USA.gov</a></li>
+<li><a href="https://www.loc.gov/careers/">Careers</a></li>
+<li><a href="https://www.loc.gov/contact/">Contact</a></li>
+<li><a href="http://www.loc.gov/pressroom/">Media</a></li>
+<li><a href="http://www.loc.gov/philanthropy/index.php">Donate</a></li>
+<li><a href="http://library-of-congress-shop.myshopify.com/">Shop</a></li>
+</ul>
+</div>
+<div class="intersites-links-wrapper">
+<ul class="intersites-links">
+<li class="intersites-link-congress"><a href="//www.congress.gov/"><span>Congress.gov</span></a></li>
+<li class="intersites-link-copyright"><a href="http://copyright.gov"><span>United States Copyright Office</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<style></style>
+<script>jQuery(function ($) {
+    var scroll_timer,
+        displayed = false,
+        $message = $('.back-to-top a').hide(),
+        $window = $(window),
+        top = $(document.body).children(0).position().top;
+
+    $("#back-to-top").click(function(event){
+        $window.scrollTop(0);
+        event.preventDefault();
+        return false;
+    });
+
+    $window.scroll(function () {
+        window.clearTimeout(scroll_timer);
+        scroll_timer = window.setTimeout(function () {
+            if($window.scrollTop() <= top){
+                displayed = false;
+                $message.fadeOut(800);
+            }else if(!displayed){
+                displayed = true;
+                $message.stop(true, true).show().click(function(){
+                    $message.fadeOut(800);
+                });
+            }
+        }, 100);
+    });
+
+    $("#back-to-top").click(function(e){
+        UX.interaction($(this), 'Footer', 'click', 'Back to top');
+    });
+});
+
+</script>
+<div class="back-to-top">
+<a href="https://www.loc.gov/#" id="back-to-top" style="display: none;"><i class="icon icon-arrow-up"></i> <span>Back to top</span></a>
+</div>
+<script defer="defer">
+LOCSuggest = {
+	serviceUrl: 'https://www.loc.gov/search/suggest/'
+};
+MEDIA_URL = 'https://media.loc.gov';
+</script>
+<script defer="defer" src="https://www.loc.gov/static/javascript/base.js?81937.86251" type="text/javascript"></script>
+<script defer="defer" src="https://www.loc.gov/static/javascript/share.js?81937.86251" type="text/javascript"></script>
+<!--[if lt IE 9]>
+    <script src='https://www.loc.gov/static/js/lib/html5shiv.js?81937.86251'></script>
+    <script src='https://www.loc.gov/static/js/lib/selectivizr.js?81937.86251'></script>
+<![endif]-->
+<script defer="defer">
+PORTAL_FORM_KEY = '9b95a64b19858601f97880e0a463cab5';
+</script>
+<script defer="defer">
+
+jQuery(function($) {
+    /*
+        Grid and gallery layouts
+     */
+
+    var isotope_options = {
+        itemSelector: '.item'
+    };
+    // If in the grid or gallery style then make sure the
+    // pages are in order and there are no blank spaces
+    
+    
+
+    
+    $('.search-results.grid-view').isotope(isotope_options);
+    imagesLoaded( $('#results'), function() {
+        $('.search-results.grid-view').isotope(isotope_options);
+    });
+    
+
+    var $iconic = $(".iconic");
+    if ($iconic.length > 0) {
+        var loaded_count = 0;
+        $iconic.on("load", function() {
+            loaded_count++;
+            // trigger isotope every once in a while as the images are loading:
+            if (loaded_count % 5 === 0) {
+                $('.search-results.grid-view').isotope(isotope_options);
+            }
+        });
+    }
+});
+
+jQuery(function($) {
+    
+    
+    var slider;
+    function create_slideshow($selector) {
+        slider = $selector.royalSlider({
+            fullscreen: {
+                enabled: true,
+                nativeFS: true
+            },
+            controlNavigation: 'thumbnails',
+            imageAlignCenter: true,
+            autoScaleSlider: false,
+            //autoScaleSliderHeight: 800,
+            loop: false,
+            navigateByClick: false,
+            numImagesToPreload: 2,
+            arrowsNav: true,
+            arrowsNavAutoHide: true,
+            arrowsNavHideOnTouch: true,
+            keyboardNavEnabled: true,
+            fadeinLoadedSlide: true,
+            //globalCaption: false,
+            //globalCaptionInside: true,
+            thumbs: {
+                appendSpan: true,
+                firstMargin: true,
+                spacing: 10
+            },
+            deeplinking: {
+                // deep linking options go here
+                enabled: true,
+                change: true,
+                prefix: 'slide-'
+            }
+        }).data("royalSlider");
+
+        $('.royalSlider').royalSlider("updateSliderSize", true);
+
+        
+        slider.ev.on('rsAfterContentSet', function (e, slideObject) {
+            var img = slideObject.holder.find('img').eq(0);
+            if (img && img.length && slideObject.caption) {
+                img.attr('alt', slideObject.caption.text());
+            }
+        });
+        return slider;
+    }
+
+    function create_overlay(highlight_id, left, top, width, height) {
+        return $('<div id="' + highlight_id + '" class="hit-highlight image-highlight" />')
+        .css({
+            'left': left + '%',
+            'top': top + '%',
+            'width': width + '%',
+            'height': height + '%',
+            'position': 'absolute',
+            'z-index': 10
+        });
+    }
+
+    function position_overlays(page_id, page_width, page_height, coords_list, 
+            $image, $container, fudge) {
+        if (!($container.length)) {
+            // no actual search result for this page -- exit this function
+            return true;
+        }
+        $container.find('div.image-highlight').remove();
+        if (!coords_list) {
+            // coords data doesn't exist -- exit this function
+            return true;
+        }
+        var container_width = $container.width();
+        var container_height = $container.height();
+        
+        var image_marginLeft = $image[0].offsetLeft;
+        var image_marginTop = $image[0].offsetTop;
+        var image_width = $image.width();
+        var image_height = $image.height();
+
+        // The overlays are positioned relative to their parent, the
+        // $container, but they need to show up in the right place relative
+        // to the image.
+        // The $container can be larger than the image,
+        // so we take the ratio of the sizes and use it to scale the
+        // positions, widths, and heights of the highlight overlays.
+        // We also make the overlays a little larger so they're more visible
+        // and we shift them a little using the "fudge" numbers.
+        var marginLeft = image_marginLeft / container_width;
+        var marginTop = image_marginTop / container_height;
+        var scaleWidth = image_width / container_width;
+        var scaleHeight = image_height / container_height;
+
+        $.each(coords_list, function (index, coords) {
+            // word coordinates: [left, top, width, height]
+            var highlight_id = "highlight-" + page_id + '-' + index;
+
+            var overlay_left = 100 * (marginLeft + scaleWidth * coords[0] / page_width) + fudge.left;
+            var overlay_top = 100 * (marginTop + scaleHeight * coords[1] / page_height) + fudge.top;
+            var overlay_width = 100 * coords[2] / page_width * scaleWidth + fudge.width;
+            var overlay_height = 100 * coords[3] / page_height * scaleHeight + fudge.height;
+
+            var $highlight_overlay = create_overlay(highlight_id,
+                overlay_left, overlay_top, overlay_width, overlay_height);
+
+            $container.append($highlight_overlay);
+        });
+    }
+
+    var word_coordinates_pages;
+    
+    word_coordinates_pages = {};
+    
+
+    var get_$container;
+    var get_$image;
+    var fudge_numbers;
+
+    
+    
+    get_$container = function(page_id) {
+        return $("#highlights-container-" + page_id);
+    };
+    get_$image = function(page_id) {
+        return $("#iconic-segment-image-" + page_id);
+    };
+    fudge_numbers = {
+        left: -1.3,
+        top: -0.5,
+        width: 2.5,
+        height: 1.3
+    };
+    
+    
+        if (!$.isEmptyObject(word_coordinates_pages)) {
+            var $iconic = $(".iconic");
+            var loaded = 0;
+            var loaded_total = $iconic.length;
+            // make sure we wait til all the images are loaded before we try to position the highlights on them:
+            $iconic.one("load", function() {
+                loaded++;
+                if (loaded === loaded_total) {
+                    $.each(word_coordinates_pages, function(page_id, page) {
+                        var $image = get_$image(page_id);
+                        var $container = get_$container(page_id);
+                        position_overlays(page_id, page.width, page.height, page.coords_list,
+                            $image, $container, fudge_numbers);
+                    });
+                }
+            }).each(function() {
+                // to make sure the "on load" event occurs even if the
+                // images are already cached:
+                if (this.complete) {
+                    $(this).load();
+                }
+            });
+        }
+        
+     
+
+
+    
+    $(window).resize(function() {
+        setTimeout(function() {
+            $.each(word_coordinates_pages, function(page_id, page) {
+                var $container = get_$container(page_id);
+                var $image = get_$image(page_id, $container);
+                position_overlays(page_id, page.width, page.height, page.coords_list,
+                    $image, $container, fudge_numbers);
+            });
+        }, 300);
+    });
+});
+</script>
+</div>
+<script type="text/javascript">
+if(window['_satellite']){
+    _satellite.pageBottom();
+}
+</script>
+<span id="fonttest" style="font: 99px testfont, _, arial, helvetica; position: absolute; visibility: hidden;">........</span></body></html>

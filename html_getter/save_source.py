@@ -50,7 +50,7 @@ def get_correct_path(lst, d, src):
 
 #Change delimitter
 def logError(row, url, message):
-    message = row+"<|>"+url+"<|>"+str(message)+"\n" #using comma in .write() function gives error
+    message = str(row)+"<|>"+url+"<|>"+str(message)+"\n" #using comma in .write() function gives error
     with open(log_path, "r+") as log:
         lines = log.readlines()
     if message not in lines:
@@ -92,7 +92,7 @@ is_first = not (os.path.exists(error_path))
 
 #Used to check whether or not this will be the first write to samples_html.csv
 for idx, e in samples.iterrows():
-    if idx < 5390:
+    if idx < 6000:
         continue
     print("\n|> ROW: ",idx,"/",num_samples)
     a_dir_name = html_path+e.page.strip("/").split("/")[-1]+"/"

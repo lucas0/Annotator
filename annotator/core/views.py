@@ -83,15 +83,14 @@ def save_annotation(page, origin, value, name):
         n_entry = entry.values.tolist()[0]
         n_entry.extend([value, name])
         results_filename = results_path+name+".csv"
+        results = pd.DataFrame(columns=res_header)
+        results.loc[0] = n_entry
         print("READING RESULTS")
         if os.path.exists(results_filename):
-            results = pd.read_csv(results_filename, sep=',', encoding="latin1")
+            results.to_csv(results_filename, sep=',', header=False, index=False, mode='a')
         else:
-            results = pd.DataFrame(columns=res_header)
+            results.to_csv(results_filename, sep=',', index=False)
 
-        results.loc[len(results)] = n_entry
-        results = results.drop_duplicates(keep="first")
-        results.to_csv(results_filename, sep=',', index=False)
         # keeps track of how many times page was annotated
         increase_page_annotation_count(page, origin)
     else:

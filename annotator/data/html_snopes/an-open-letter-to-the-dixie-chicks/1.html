@@ -1,0 +1,668 @@
+<html><head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app100.us.archive.org';v.server_ms=286;archive_analytics.send_pageview({});});</script><script charset="utf-8" src="http://web.archive.org/_static/js/ait-client-rewrite.js" type="text/javascript"></script>
+<script type="text/javascript">
+WB_wombat_Init("http://web.archive.org/web", "20030815092632", "www.montereyherald.com:80");
+</script>
+<script charset="utf-8" src="http://web.archive.org/_static/js/wbhack.js" type="text/javascript"></script>
+<script type="text/javascript">
+__wbhack.init('http://web.archive.org/web');
+</script>
+<link href="http://web.archive.org/_static/css/banner-styles.css" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/_static/css/iconochive.css" rel="stylesheet" type="text/css"/>
+<meta content="HTML Tidy, see www.w3.org" name="generator"/><title>Monterey County Herald | 02/05/2003 | NPS honors Columbia astronauts</title>
+<link href="http://web.archive.org/web/20030815092632cs_/http://www.montereyherald.com/css/palette/blue_complement/en/global.css" rel="stylesheet" type="text/css"/><script language="javascript" type="text/javascript">
+
+_krdDartOrd = new Date().getTime();
+
+_krdDartInc = 0;
+var navReady = false;
+var toolsReady = false;var onLoadScript="";function Browser() {var b=navigator.appName;
+if (b=="Netscape") this.b="ns";
+else if ((b=="Opera") || (navigator.userAgent.indexOf("Opera")>0)) this.b = "opera";
+else if (b=="Microsoft Internet Explorer") this.b="ie";
+// I have disabled the following line, but something similar might be useful later,
+// but launching a popup window is more polite than this alert.
+//if (!b) alert(''Unidentified browser./nThis browser is not supported,'');
+this.version=navigator.appVersion;
+this.v=parseInt(this.version);
+this.ns=(this.b=="ns" && this.v>=4);
+this.ns4=(this.b=="ns" && this.v==4);
+this.ns6=(this.b=="ns" && this.v==5);
+this.ie=(this.b=="ie" && this.v>=4);
+this.ie4=(this.version.indexOf('MSIE 4')>0);
+this.ie4up = (this.ie && this.v>= 4);
+this.ns5up = (this.ns && this.v>= 5);
+this.ie5=(this.version.indexOf('MSIE 5')>0);
+this.ie5up = (this.ie5);
+this.ie55=(this.version.indexOf('MSIE 5.5')>0);
+this.opera=(this.b=="opera");
+this.def=(this.ie||this.dom);var ua=navigator.userAgent.toLowerCase();
+this.mac = (ua.indexOf("mac")!=-1);if (ua.indexOf("win")>-1) this.platform="win32";
+else if (ua.indexOf("mac")>-1) this.platform="mac";
+else this.platform="other";
+}
+var is = new Browser();
+// tiny extra css. these are ONLY used by old browsers.
+// VAST majority of users will NEVER request these files.
+// Even NS4 is around 7% of market and falling
+if (is.ns4 && is.mac==false) {
+var css = "<LINK rel='stylesheet' type='text/css' href='/css/palette/blue_complement/en/browser/ns4.css'>\n";
+document.write(css);
+}
+if (((is.ns4)||(is.ie4))&&( is.mac)) {
+var css = "<LINK rel='stylesheet' type='text/css' href='/css/palette/blue_complement/en/browser/ns4mac.css'>\n";
+document.write(css);
+}
+if (is.ie4 && is.mac==false) {
+var css = "<LINK rel='stylesheet' type='text/css' href='/css/palette/blue_complement/en/browser/ie4.css'>\n";
+document.write(css);
+}
+
+function LayerObject(divId) {
+this.name = divId;
+if (is.ns4) this.ob = eval("document." +divId);
+else if (is.ie4) this.ob = document.all(divId);
+else this.ob = document.getElementById(divId);
+this.x = 0;
+this.y = 0;
+this.width = this.getWidth();
+this.height = this.getHeight();
+}
+LayerObject.prototype.px = (is.version>=5)?"px":"";
+LayerObject.prototype.hideSyntax = (is.ns4)? "hide":"hidden";
+LayerObject.prototype.showSyntax = "visible";// NS4::  Unbelievable, but document.layername.document.imgname works for img-in-layer-in document
+// and it works for img in layer in table in document.
+// but it doesnt work for img in layer in table in table in document.
+// Maybe a workaround exists, but it seems unlikely at this point.
+// The images MUST therefore be nested only one deep....
+LayerObject.prototype.getInlineLeft = function() {
+if (is.ns4) return this.ob.pageX;
+else if ((is.ie) || (is.opera)) {
+var elem = this.ob;
+var xPos = 0;
+var yPos = 0;
+while (elem.offsetParent != null) {
+xPos += elem.offsetLeft;
+yPos += elem.offsetTop;
+elem = elem.offsetParent;
+}
+if (is.mac) xPos += 2;
+return xPos;
+}
+else return (this.ob.offsetLeft + document.body.offsetLeft);
+}
+
+LayerObject.prototype.getInlineTop = function() {
+if (is.ns4) return this.ob.pageY;
+else if ((is.ie) || (is.opera)) {
+var elem = this.ob;
+var yPos=0;
+while (elem.offsetParent != null) {
+yPos += elem.offsetTop;
+elem = elem.offsetParent;
+}
+if (is.mac) yPos += 2;
+return yPos;
+}
+else return (this.ob.offsetTop+ document.body.offsetTop);
+}
+
+//getWidth and getHeight works for both inline and positioned divs.
+LayerObject.prototype.getWidth = function () {
+if (is.ns4) return this.ob.clip.width;
+else if (is.opera) return this.ob.style.pixelWidth;
+else return this.ob.offsetWidth;
+}
+LayerObject.prototype.getHeight = function () {
+if (is.ns4) return this.ob.clip.height;
+else if (is.opera) return this.ob.style.pixelHeight;
+else return this.ob.offsetHeight;
+}
+LayerObject.prototype.hide = function() {
+if (is.ns4) this.ob.visibility = this.hideSyntax;
+else this.ob.style.visibility = this.hideSyntax;
+}
+LayerObject.prototype.show = function() {
+if (is.ns4) this.ob.visibility = this.showSyntax;
+else this.ob.style.visibility = this.showSyntax;
+}
+LayerObject.prototype.moveLayerTo = function(toX, toY) {
+this.x = toX;
+this.y = toY;
+}
+LayerObject.prototype.updateLayer = function() {
+if (is.ns4) {
+this.ob.left = Math.round(this.x) + this.px;
+this.ob.top = Math.round(this.y)+ this.px ;
+}
+else {
+this.ob.style.left = Math.round(this.x) + this.px;
+this.ob.style.top = Math.round(this.y) + this.px;
+}
+}
+//-----------------
+function roll(divName, imgName, which) {
+var suffix = (which==1)?"on":"off"
+if ((is.ns4)&&(divName!=0)) {
+var imgObject = eval("document." + divName +".document.images['"+imgName +"']");
+imgObject.src = eval(imgName + "_" + suffix + ".src");
+}
+else {
+document.images[imgName].src = eval(imgName + "_" + suffix + ".src");
+}
+}
+
+function init() {
+if (onLoadScript) eval(onLoadScript);
+}
+
+// Workaround for the netscape resize problem --
+// namely, on resize ns looses div positioning and
+// styles from css files.
+// This checks to see if the window''s dimensions have
+// actually changed (because Netscape often fires a
+// false onResize event when it forms scrollbars);
+// if the dimensions have changed, page is reloaded
+function resizefix(){
+if((document.resizeFix.initWidth != window.innerWidth) ||
+(document.resizeFix.initHeight != window.innerHeight))
+{
+document.location = document.location;
+}
+}
+
+// This code creates a new object with properties
+// to hold the current window width & height to be
+// used in the event of a netscape resize
+document.resizeFix = new Object();
+if(is.ns4){
+document.resizeFix.initWidth = window.innerWidth;
+document.resizeFix.initHeight = window.innerHeight;
+window.onresize=resizefix;
+}
+
+
+
+
+
+
+
+function initMenus(){
+}
+
+
+function showResults(siteSurveyKey) {
+var url="/mld/templates/contentModules/poll-results-popup.jsp"+ "?siteSurveyKey=" + siteSurveyKey;
+window.open(url, 'Title');
+}
+
+function openWin(URL) {
+aWindow = window.open(URL,
+'thewindow','width=500,height=400,resizable=yes,scrollbars=yes');
+}
+
+
+
+
+
+</script>
+</head>
+<body class="body" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
+<script charset="utf-8" src="http://web.archive.org/_static/js/timestamp.js" type="text/javascript"></script>
+<script charset="utf-8" src="http://web.archive.org/_static/js/graph-calc.js" type="text/javascript"></script>
+<script charset="utf-8" src="http://web.archive.org/_static/js/auto-complete.js" type="text/javascript"></script>
+<script charset="utf-8" src="http://web.archive.org/_static/js/toolbar.js" type="text/javascript"></script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+.wb-autocomplete-suggestions {
+    text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: -1px 1px 3px rgba(0,0,0,.1);
+    position: absolute; display: none; z-index: 2147483647; max-height: 254px; overflow: hidden; overflow-y: auto; box-sizing: border-box;
+}
+.wb-autocomplete-suggestion { position: relative; padding: 0 .6em; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.02em; color: #333; }
+.wb-autocomplete-suggestion b { font-weight: bold; }
+.wb-autocomplete-suggestion.selected { background: #f0f0f0; }
+</style>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><script type="text/javascript">
+__wm.bt(600,27,25,2,"web","http://www.montereyherald.com/mld/montereyherald/5110380.htm","2003-08-15",1996,"/_static/",['css/banner-styles.css','css/iconochive.css']);
+</script><div class="wb-autocomplete-suggestions"></div>
+<table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" width="768">
+<tbody><tr><td background="/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/bg1.gif"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/"><img alt="montereyherald.com - The montereyherald home page" border="0" height="75" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/logos/site/montereyherald/montereyherald/site_logo_280x75.gif" width="280"/></a></td><td align="left" background="/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/bg2.gif">
+<script language="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/adj/montereyherald.homepage/homepage;kw=top;dcopt=ist;tile='+_krdDartInc+';sz=468x60;ord='+_krdDartOrd+'?" ><\/SCRIPT>');
+</script><script language="JavaScript1.1" src="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/adj/montereyherald.homepage/homepage;kw=top;dcopt=ist;tile=1;sz=468x60;ord=1563350002183?"></script>
+<noscript>
+<a href="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/jump/montereyherald.homepage/homepage;kw=top;sz=468x60;ord=1060939592440" target="_blank">
+<img border="0" height="60" src="http://web.archive.org/web/20030815092632im_/http://ad.doubleclick.net/ad/montereyherald.homepage/homepage;kw=top;sz=468x60;ord=1060939592440" width="468"/></a>
+</noscript>
+</td></tr></tbody></table>
+<table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" width="768">
+<tbody><tr><td align="left" background="/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/bg3.gif" bgcolor="#000000"><img alt="Go to your local news source" border="0" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/navigation/en/mediabar_nav_label.gif"/><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/mcherald/"><img alt="Monterey County The Herald" border="0" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/logos/site/montereyherald/montereyherald/mediapartners/media_partner_home_1.gif"/></a></td></tr></tbody></table>
+<table background="/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/main_nav_bg.gif" bgcolor="#2b4e9d" border="0" cellpadding="0" cellspacing="0" width="768">
+<tbody><tr><td><img border="0" height="23" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/navigation/en/main_nav_our_local_channels.gif" width="155"/></td><td><div class="menutrigger" id="newstrigger"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/news/" name="3110"><img alt="news" border="0" name="main_nav_news" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/navigation/en/main_nav_news.gif"/></a></div></td><td><div class="menutrigger" id="businesstrigger"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/business/" name="10"><img alt="business" border="0" name="main_nav_business" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/navigation/en/main_nav_business.gif"/></a></div></td><td><div class="menutrigger" id="sportstrigger"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/sports/" name="4270"><img alt="sports" border="0" name="main_nav_sports" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/navigation/en/main_nav_sports.gif"/></a></div></td><td><div class="menutrigger" id="entertainmenttrigger"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/entertainment/" name="655"><img alt="entertainment" border="0" name="main_nav_entertainment" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/navigation/en/main_nav_entertainment.gif"/></a></div></td><td><div class="menutrigger" id="livingtrigger"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/living/" name="1025"><img alt="living" border="0" name="main_nav_living" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/navigation/en/main_nav_living.gif"/></a></div></td><td><div class="menutrigger" id="classifiedstrigger"><a href="http://web.archive.org/web/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/" name="640"><img alt="classifieds" border="0" name="main_nav_classifieds" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/navigation/en/main_nav_classifieds.gif"/></a></div></td><td width="100%"> </td></tr></tbody></table>
+<table background="/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/bg4.gif" bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" width="768">
+<tbody><tr><td align="left" class="utilitylinks" valign="middle">
+<img src="http://web.archive.org/web/web/20030815092632im_/http://www.montereyherald.com/images/palette/mcherald/spacer1.gif"/>
+<span class="navspace">  </span><a class="utilitylinks" href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us/help">Help</a><span class="navpipe"> | </span><a class="utilitylinks" href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us">Contact Us</a><span class="navpipe"> | </span><a class="utilitylinks" href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/archives">Archives</a><span class="navpipe"> | </span><a class="utilitylinks" href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us/advertise">Place an Ad</a><span class="navpipe"> | </span><a class="utilitylinks" href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us/subscriptions_np1">Newspaper Subscriptions</a><br/><img src="http://web.archive.org/web/web/20030815092632im_/http://www.montereyherald.com/images/palette/mcherald/spacer2.gif"/></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="768">
+<tbody><tr><td class="columndiv" width="155"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="155"/></td><td class="columndiv" width="1"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td><td class="columndiv" width="100%"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="450"/></td><td class="columndiv" width="1"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td><td class="columndiv" width="155"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="155"/></td></tr><tr>
+<td class="leftrail" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_top.gif" width="155"/></td></tr><tr><td><img height="10" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td align="center">
+<script language="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/adj/montereyherald.homepage/homepage;kw=left1;tile='+_krdDartInc+';sz=120x60;ord='+_krdDartOrd+'?" ><\/SCRIPT>');
+</script><script language="JavaScript1.1" src="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/adj/montereyherald.homepage/homepage;kw=left1;tile=2;sz=120x60;ord=1563350002183?"></script>
+<noscript>
+<a href="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/jump/montereyherald.homepage/homepage;kw=left1;sz=120x60;ord=1060939592447" target="_blank">
+<img border="0" height="60" src="http://web.archive.org/web/20030815092632im_/http://ad.doubleclick.net/ad/montereyherald.homepage/homepage;kw=left1;sz=120x60;ord=1060939592447" width="120"/></a>
+</noscript>
+</td></tr><tr><td><img height="10" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td><img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_bottom.gif" width="155"/></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td class="navborder">
+<table border="0" cellpadding="0" cellspacing="1" width="100%"><tbody><tr><td class="navbg1">
+ <b><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/news/" name="1">
+<span class="nav1">News</span></a></b>
+</td></tr><tr><td class="navbg1">
+ <b><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/business/" name="1">
+<span class="nav1">Business</span></a></b>
+</td></tr><tr><td class="navbg1">
+ <b><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/sports/" name="1">
+<span class="nav1">Sports</span></a></b>
+</td></tr><tr><td class="navbg1">
+ <b><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/entertainment/" name="1">
+<span class="nav1">Entertainment</span></a></b>
+</td></tr><tr><td class="navbg1">
+ <b><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/living/" name="1">
+<span class="nav1">Living</span></a></b>
+</td></tr><tr><td class="navbg1">
+ <b><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/" name="1">
+<span class="nav1">Classifieds</span></a></b>
+</td></tr><tr><td class="navbg1">
+ <b><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/archives/" name="1">
+<span class="nav1">Archives</span></a></b>
+</td></tr><tr><td class="navbg1">
+ <b><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us/" name="1">
+<span class="nav1">Contact Us</span></a></b>
+</td></tr><tr><td class="navbg1">
+ <b><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/shopping/" name="1">
+<span class="nav1">Shopping</span></a></b>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td class="raildiv"><img border="0" height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr></tbody></table>
+<table bgcolor="#d4cdaf" border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td rowspan="2"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="4"/></td><td><img height="9" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td><td rowspan="2"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="4"/></td></tr><tr><td bgcolor="#fef7d7" width="100%">
+<div align="center"><img height="5" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/><b>THE HERALD</b>
+</div><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/hr_grey_dots_147w.gif" vspace="1" width="147"/><table align="center" border="0" cellpadding="1" cellspacing="2" width="95%">
+<tbody><tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/mcherald/news/obituaries/">Obituaries</a><br/><img height="3" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/">Classifieds</a><br/><img height="3" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/mcherald/living/">Life</a><br/><img height="3" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/mcherald/living/community/">Valley Adviser</a><br/><img height="3" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://web.archive.org/web/20030815092632/http://newspaperads.montereyherald.com/">This week's ads</a><br/><img height="3" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us/subscriptions_np1">Subscribe to the Herald</a><br/><img height="3" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/mcherald/news/opinion/">Commentary</a><br/><img height="3" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+</tbody></table></td></tr> <tr><td><img height="3" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td bgcolor="#000000" colspan="3"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr></tbody></table>
+<table bgcolor="#2b4e9d" border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td bgcolor="#2b4e9d" rowspan="4"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="5"/></td><td bgcolor="#2b4e9d" class="mainarea"><img border="0" height="5" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/><b>Our Site Tools</b><br/><img border="0" height="5" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td><td bgcolor="#2b4e9d" rowspan="4"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="5"/></td></tr><tr><td bgcolor="#d4cdaf" valign="top" width="142">
+<img height="5" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="141"/><br/> <a class="relatedbold" href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/news/weather/">Weather</a>
+</td></tr><tr><td bgcolor="#fef7d7">
+<img height="5" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="100"/><br/><table align="center" border="0" cellpadding="1" cellspacing="0" width="135"><tbody><tr valign="top">
+<td class="mediumarea" width="90%"><b>Monterey Bay</b></td><td align="right" class="mediumarea" nowrap="nowrap"><img height="7" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/weather_temp_up.gif" width="6"/>71</td><td align="right" class="mediumarea" nowrap="nowrap"><img height="7" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/weather_temp_down.gif" width="6"/>55</td></tr><tr valign="top">
+<td class="mediumarea" width="90%"><b>Salinas</b></td><td align="right" class="mediumarea" nowrap="nowrap"><img height="7" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/weather_temp_up.gif" width="6"/>75</td><td align="right" class="mediumarea" nowrap="nowrap"><img height="7" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/weather_temp_down.gif" width="6"/>57</td></tr><tr valign="top">
+<td class="mediumarea" width="90%"><b>Carmel Valley</b></td><td align="right" class="mediumarea" nowrap="nowrap"><img height="7" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/weather_temp_up.gif" width="6"/>73</td><td align="right" class="mediumarea" nowrap="nowrap"><img height="7" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/weather_temp_down.gif" width="6"/>55</td></tr></tbody></table>
+<img height="5" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="100"/><br/></td></tr><tr><td bgcolor="#d4cdaf">
+<img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/hr_2px_medium.gif" vspace="2" width="141"/><br/>
+ <a class="relatedbold" href="http://web.archive.org/web/20030815092632/http://ae.montereyherald.com/entertainment/ui/montereyherald/movieResults.html">Local Events</a><br/><img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/hr_2px_medium.gif" vspace="2" width="141"/><br/>
+ <a class="relatedbold" href="http://web.archive.org/web/20030815092632/http://yp.montereyherald.com/bin/cgidir.dll?MEM=1219">Yellow Pages</a><br/><img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/hr_2px_medium.gif" vspace="2" width="141"/><br/>
+ <a class="relatedbold" href="http://web.archive.org/web/20030815092632/http://forums.realcities.com/dir-app/nav/forumdirectory.aspx?webtag=kr-montereyz&amp;byName=y">Discussion Boards</a><br/><img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/hr_2px_medium.gif" vspace="2" width="141"/><br/>
+ <a class="relatedbold" href="http://web.archive.org/web/20030815092632/http://maps.montereyherald.com/jump.cgi/refsrc=KR.1219">Maps &amp; Directions</a><br/><img height="5" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="141"/></td></tr><tr><td bgcolor="#2b4e9d" colspan="3"><img height="5" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td bgcolor="#ffffff"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_top.gif" width="155"/></td></tr><tr><td bgcolor="#ffffff">
+<table border="0" cellpadding="5" cellspacing="0" width="155">
+<tbody><tr valign="top">
+<td class="whitearea">
+<b>NEWSPAPER ADS ONLINE</b><br/>Browse through selected print ads now!<br/><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr valign="top">
+<td><img height="9" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/panel_arrow_0.gif" width="12"/></td><td class="whitearea"><a href="http://web.archive.org/web/20030815092632/http://newspaperads.montereyherald.com/"><b>Click here for Herald ads</b></a></td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><td bgcolor="#ffffff"><img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_bottom.gif" width="155"/></td></tr></tbody></table>
+</td><td class="columndiv" rowspan="2"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td>
+<td class="centerrail" rowspan="2" valign="top">
+<script id="search_box_center_jsp_script" language="javascript" type="text/javascript">
+function searchFormSubmit(form) {
+var searchSelectIndex = form.searchSelect.selectedIndex;
+var searchSelectValue = form.searchSelect.options[searchSelectIndex].value;
+if (searchSelectValue == "archives") {
+window.location = "http://web.archive.org/web/20030815092632/http://www.newslibrary.com/nlsearch.asp?forceTheme=RealCities&s_site=montereyherald&search_mode=all&action=search&date_mode=year&year=last+180+days&sort=d%3Ah&nitems=10&region=mc&dbquery=" + form.query.value;
+return false;
+}
+return true;
+}
+</script><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td class="searchbox"><img height="8" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/></td></tr><tr><td align="center" class="searchbox">
+<table border="0" cellpadding="1" cellspacing="0" width="100%">
+<tbody><tr><td class="searchbox"> <b class="v1search">Search</b> </td><form action="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/search/search_results.htm" method="get" name="SearchForm" onsubmit="return searchFormSubmit(this)"></form>
+<input name="pubName" type="hidden" value="montereyherald"/>
+<input name="orderBy" type="hidden" value="date"/>
+<input name="pageStart" type="hidden" value="1"/>
+<input name="sitesToSearch" type="hidden" value="montereyherald,mcherald,realcities"/>
+<input name="pageSize" type="hidden" value="10"/>
+<input name="fieldsToSearch" type="hidden" value="HEADLINE,FORSEARCH,LEAD,BYLINE"/>
+<input name="queryType" type="hidden" value="all"/>
+<td class="searchbox">
+<span id="globalsearchform"><select class="searchformelement2" name="searchSelect">
+<option value="article">Articles-last 7 days</option><option value="archives">Articles-older than 7 days</option>
+<option value="web">The Web</option>
+</select>
+</span>
+</td><td class="searchbox"><b class="v1search"> for</b> </td><td class="searchbox">
+<input class="searchformelement" maxlength="256" name="query" size="15" type="text"/>
+</td><td class="searchbox"> 
+<input class="smallformbutton" type="submit" value="Go"/> 
+</td>
+</tr></tbody></table>
+</td></tr><tr><td class="searchbox"><img height="4" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td bgcolor="#cccccc"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/></td></tr></tbody></table><a name="search_box_center_end">
+<div align="center">
+<table border="0" cellpadding="0" cellspacing="2" width="97%">
+<tbody><tr><td valign="middle"><a class="related" href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/">Back to Home</a> &gt; 
+</td><td align="right" class="byline">Friday, Aug 15, 2003</td></tr><tr><td align="center" bgcolor="#ffffff" colspan="2"> <img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="97%">
+<tbody><tr> <td align="center" class="pagetitle" width="100%"></td><td align="right" valign="top" width="1"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td><td align="right" valign="top">
+</td></tr></tbody></table><table align="center" border="0" cellpadding="0" cellspacing="0" width="97%">
+<tbody><tr><td align="center">
+<img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/></td></tr><tr><td align="center" bgcolor="#cccccc">
+<img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/></td></tr><tr><td align="center">
+<img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/></td></tr><tr><td align="center" bgcolor="#cccccc">
+<img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/></td></tr></tbody></table><img height="5" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="100%"/><br/></div>
+</a><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td colspan="4"><hr color="#cccccc" size="1" width="97%"/></td></tr><tr><td rowspan="7" width="15"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="15"/></td><td>Posted on Wed, Feb. 05, 2003</td><td align="right" valign="top">
+<img border="0" height="13" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/topstory_fromthe_txt.gif" width="46"/><img alt="story:PUB_DESC" border="0" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/logos/site/montereyherald/mcherald/archives_title.gif"/></td><td rowspan="7" width="15"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="15"/></td></tr><tr><td colspan="2"><img height="10" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td colspan="2">
+<div class="body-head">
+<span class="headline">NPS honors Columbia astronauts</span><br/>
+<b><font size="-1"><span class="byline">By KEVIN HOWE</span></font></b><br/>
+<b><font size="-1"><span class="creditline"><a href="http://web.archive.org/web/20030815092632/mailto:khowe@montereyherald.com">khowe@montereyherald.com</a></span></font></b><br/>
+</div>
+<table align="right" border="0" cellpadding="0" cellspacing="5" width="100">
+</table>
+<span class="body-content">
+<span class="body-content">
+<p>The seven astronauts who died in the space shuttle Columbia disaster can best be memorialized by carrying on their work, speakers at a memorial service said Tuesday.</p>
+<p>About 200 students, staff members and faculty members at the Naval Postgraduate School filled King Hall on Tuesday afternoon to commemorate Air Force Col. Rick Husband and Lt. Col. Michael Anderson, Navy Capt. David Brown and Cmdrs. William McCool and Laurel Clark, Israeli Air Force Col. Ilan Ramon, and civilian scientist Kalpana Chawla, who were aboard Columbia when it disintegrated over Texas on Saturday morning.</p>
+<p>"We gather to share a national grief as well as a personal grief," said Navy chaplain Lt. Cmdr. Mark Smith, who noted that the astronauts "paid with their lives, not that we would stop, but that we would continue on."</p>
+<p>Especially remembered was McCool. He was one of 35 astronauts to pass through the Navy school over the years, graduating from its cooperative test pilot program with a degree in aeronautical engineering in 1992 and being chosen for the astronaut program in 1996.</p>
+<p>That "was the fulfillment of a lifelong dream," said Rudy Panholzer, chairman of the NPS space systems academic group.</p>
+<p>Noting that the school's latest astronaut-graduate, Marcos Pontes, is from Brazil, Panholzer commented that "space exploration binds together nations as spacefarers and explorers... we share the excitement of discovery, we share the fruits of space exploration, we share the knowledge gained on new frontiers, we share the burden of cost, but we also share the risk that comes with reaching for the stars."</p>
+<p>Navy Capt. Frank Petho, chief of staff for the school, said the astronauts "took calculated risks to follow their dream" and that their example "admonishes us to dream the dream, fight the fight."</p>
+<p>There is an inherent risk in the space program, and the Columbia tragedy won't end it, said retired Navy Rear Adm. Thomas Betterton, NPS chair professor of space technology, after the ceremony.</p>
+<p>Betterton spent many years with NASA and helped investigate the loss of the Mars Observer spacecraft.</p>
+<p>Although Columbia was the oldest space shuttle, it hadn't flown the most missions, and age wasn't likely a factor in the events that led to its disintegration, he said.</p>
+<p>McCool was not the stereotypical "top gun" jet jockey, though he was a fighter pilot and "a very sharp one," said Rob Bourke, NPS alumni director.</p>
+<p>"He had a philosophical outlook you don't see in most astronauts. He felt humankind should advance, push forward, and he felt lucky to be one of the people pushing the boundaries."</p>
+<p>Navy Lt. Layne McDowell of Lubbock, Texas, a student in the test pilot program at NPS, programmed his career to follow those of fellow Texans Husband and McCool.</p>
+<p>"I never met them, but I followed their careers, and I was able to follow their career paths," he said.</p>
+<p>Married and the father of a 4-month-old son, McDowell said he is undeterred by the losses of Columbia and Challenger in pursuing a chance to go into space.</p>
+<p>A veteran of combat tours over Kosovo, Iraq and Afghanistan, where he flew F-14 fighter jets off aircraft carriers, McDowell remarked that "there are risks in everything you do; driving to work, carrier aviation.</p>
+<p>"I lost more friends in F-14 and F-18 carrier flying. The risks are there. The goal is worthwhile."</p>
+<p>His wife supports him, he said, adding that they both consider a NASA assignment less risky than an operational deployment with a carrier fighter squadron.</p>
+</span>
+<div class="body-end">
+<div class="tagline"><hr class="tagline" color="#cccccc" size="1"/>
+<i><span class="tagline">Kevin Howe can be reached at 646-4416.</span></i>
+</div>
+</div>
+</span>
+</td></tr></tbody></table>
+<table border="0" cellpadding="10" cellspacing="0" width="100%">
+<tbody><tr><td align="right">
+<table border="0" cellpadding="1" cellspacing="0">
+<tbody><tr align="center">
+<td></td><td><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/5110380.htm?template=contentModules/emailstory.jsp"><img border="0" height="15" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/button_email_this.gif" width="22"/></a></td><td><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/5110380.htm?template=contentModules/printstory.jsp"><img border="0" height="15" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/button_print_this.gif" width="22"/></a></td><script language="JavaScript">
+function RightslinkPopUp(publisherName, publication, articleTitle, articleDate, articleAuthor, articleID) {var url = "http://web.archive.org/web/20030815092632/https://s100.copyright.com/servlet/DispatchServlet";
+var location = url
++ "?PublisherName=" + escape(publisherName)
++ "&publication=" + escape(publication)
++ "&Title="      + escape(articleTitle)
++ "&PublicationDate="  + escape(articleDate)
++ "&Author="  + escape(articleAuthor)
++ "&ContentID="  + escape(articleID)
++ "&Install=S";
+window.open( location, 'Rightslink','location=no,toolbar=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=650,height=550');
+} </script>
+<td nowrap=""><a href="http://web.archive.org/web/javascript:RightslinkPopUp('Knight Ridder Inc.','mcherald','NPS honors Columbia astronauts','02/05/2003','By KEVIN HOWE','5110380')"><img border="0" height="18" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/button_license_this.gif" width="22"/></a></td><td nowrap=""><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/5110380.htm?template=contentModules/reprintstory.jsp"><img border="0" height="18" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/button_reprint_this.gif" width="22"/></a></td>
+</tr><tr>
+<td></td>
+<td nowrap=""><a class="related" href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/5110380.htm?template=contentModules/emailstory.jsp"> email this</a> |</td><td nowrap=""><a class="related" href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/5110380.htm?template=contentModules/printstory.jsp"> print this</a></td>
+<td nowrap=""> | <a href="http://web.archive.org/web/javascript:RightslinkPopUp('Knight Ridder Inc.','mcherald','NPS honors Columbia astronauts','02/05/2003','By KEVIN HOWE','5110380')">license this</a></td><td nowrap=""> | <a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/5110380.htm?template=contentModules/reprintstory.jsp">reprint this</a></td>
+</tr></tbody></table>
+</td></tr></tbody></table>
+<br/><div align="center">
+<img height="25" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="100"/><br/></div>
+</td><td class="columndiv" rowspan="2"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td><td class="rightrail" valign="top">
+<table bgcolor="E7DEC6" border="0" cellpadding="0" cellspacing="1" width="100%">
+<tbody><tr>
+<td bgcolor="#d4cdaf" class="arrow">
+<img height="3" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/>  »  <span class="relateboldrail" style="color:#444444;"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/employment/">Employment...</a></span></td>
+</tr>
+</tbody></table>
+<table bgcolor="#bbbbbb" border="0" cellpadding="5" cellspacing="1" width="100%">
+<tbody><tr valign="middle">
+<td bgcolor="#ffffff" class="v1">
+<a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/employment/"><img alt="Careerbuilder" border="0" height="21" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/logos/partners/careerbuilder_107x21.gif " width="107"/></a><br/>
+<img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/employment/"><b>Find a Job</b></a><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.careerbuilder.com/jobseeker/resumes/addresume.asp?lr=cbcb_mch&amp;siteid=ckrmo33"><b>Post a Résumé</b></a><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.careerbuilder.com/jobposter/products/easeepost/smallbiz.htm?lr=cbcb_mch&amp;siteid=ckrmo34"><b>Post a Job</b></a><br/>
+</td></tr></tbody></table>
+<table bgcolor="E7DEC6" border="0" cellpadding="0" cellspacing="1" width="100%">
+<tbody><tr>
+<td bgcolor="#d4cdaf" class="arrow">
+  »  <span class="relateboldrail" style="color:#444444;"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/automotive/">Automotive ...</a></span></td>
+</tr>
+</tbody></table>
+<table bgcolor="#bbbbbb" border="0" cellpadding="5" cellspacing="1" width="100%">
+<tbody><tr valign="top">
+<td bgcolor="#ffffff" class="v1">
+<a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/automotive/">
+<img align="right" alt="cars.com" border="0" height="22" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/logos/partners/cars.com_51x22.gif" width="51"/></a>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/automotive/"><b>Find a Car</b></a><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://siy.cars.com/adentry/index.jhtml?aff=montcnty&amp;referer=fsbo_hplr2"><b>Sell a Car</b></a><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://newspaperads.montereyherald.com/categories.asp?refid=&amp;sesid=564492061&amp;cid=39"><b>Weekly Specials</b></a><br/>
+</td></tr></tbody></table>
+<table bgcolor="E7DEC6" border="0" cellpadding="0" cellspacing="1" width="100%">
+<tbody><tr>
+<td bgcolor="#d4cdaf" class="arrow">
+  »  <span class="relateboldrail" style="color:#444444;"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/real_estate/">Real Estate...</a></span></td>
+</tr>
+</tbody></table>
+<table bgcolor="#bbbbbb" border="0" cellpadding="5" cellspacing="1" width="100%">
+<tbody><tr valign="middle">
+<td bgcolor="#ffffff" class="v1">
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/real_estate/"><b>Find a Home</b></a><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.apartments.com/montcnty"><b>Find an Apartment</b></a><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://krd.moving.com/Moving_and_Planning/Quotes/?krd=montereyherald"><b>Moving Resources</b></a><br/>
+</td></tr></tbody></table>
+<table bgcolor="E7DEC6" border="0" cellpadding="0" cellspacing="1" width="100%">
+<tbody><tr>
+<td bgcolor="#d4cdaf" class="arrow">
+  »  <span class="relateboldrail" style="color:#444444;"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/shopping/">Local Shoppers...</a></span></td>
+</tr>
+</tbody></table>
+<table bgcolor="#bbbbbb" border="0" cellpadding="5" cellspacing="1" width="100%">
+<tbody><tr valign="middle">
+<td bgcolor="#ffffff" class="v1">
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/"><b>Search Classifieds</b></a><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/shopping/"><b>See This Week's<br/><span style="font-size:9px;color:#ffffff;"> </span><span style="font-size:7pt;"> </span>Sales</b></a><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/shopping/"><b>Online Coupons</b></a><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us/advertise/"><b>Place an Ad</b></a><br/>
+</td></tr></tbody></table>
+<table bgcolor="E7DEC6" border="0" cellpadding="0" cellspacing="1" width="100%">
+<tbody><tr>
+<td bgcolor="#d4cdaf" class="v1">
+<b><span style="color:#444444;">  Featured Services:</span></b></td>
+</tr>
+</tbody></table>
+<table bgcolor="#bbbbbb" border="0" cellpadding="5" cellspacing="1" width="100%">
+<tbody><tr valign="middle">
+<td bgcolor="#ffffff" class="v1">
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/real_estate/loan_center/"><b>Find a Loan</b></a><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/personals/"><b>Meet Someone</b></a><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.hoteldiscounts.com/cgi-bin/pickinput?SID=RCT&amp;LKF=RCT&amp;TRK=H1-citylistMore&amp;Dest=MRY"><b>Find a Hotel</b></a><br/>
+<span style="font-size:9px;color:#cc0000;">•</span><span style="font-size:4px;"> </span><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/living/travel/"><b>Book Air Travel</b></a><br/>
+</td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_top.gif" width="155"/></td></tr><tr><td><img height="10" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td align="center">
+<script language="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/adj/montereyherald.homepage/homepage;kw=right1;tile='+_krdDartInc+';sz=120x60;ord='+_krdDartOrd+'?" ><\/SCRIPT>');
+</script><script language="JavaScript1.1" src="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/adj/montereyherald.homepage/homepage;kw=right1;tile=3;sz=120x60;ord=1563350002183?"></script>
+<noscript>
+<a href="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/jump/montereyherald.homepage/homepage;kw=right1;sz=120x60;ord=1060939592512" target="_blank">
+<img border="0" height="60" src="http://web.archive.org/web/20030815092632im_/http://ad.doubleclick.net/ad/montereyherald.homepage/homepage;kw=right1;sz=120x60;ord=1060939592512" width="120"/></a>
+</noscript>
+</td></tr><tr><td><img height="10" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td><img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_bottom.gif" width="155"/></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td width="10"><img border="0" height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="10"/></td><td></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td align="center" bgcolor="#99CC99"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/></td></tr></tbody></table>
+<table bgcolor="#007B01" border="0" cellpadding="0" cellspacing="2" width="100%">
+<tbody><tr><td align="center"><font color="#ffffff"><b>Financial Markets</b></font></td></tr>
+<tr><td align="center" bgcolor="#ffffff">
+<script language="javascript" src="http://web.archive.org/web/20030815092632js_/http://custom.marketwatch.com/custom/realcities-com/jsinc-frontpage.asp?webprop=montereyherald&amp;msymb=MBBC,GVA,CCBN">
+</script><table border="0" cellpadding="0" cellspacing="0" width="147"><tbody><tr><td><link href="http://custom.marketwatch.com/custom/realcities-com/mwStyle.css" rel="stylesheet" type="text/css"/><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img src="http://chart.bigcharts.com/custom/realcities-com/realcities-fp.gifquote"/></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td colspan="4"><img height="1" src="http://custom.marketwatch.com/1.gif" width="1"/></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img height="1" src="http://custom.marketwatch.com/1.gif" width="4"/><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intchart.asp?symb=DJIA&amp;webprop=montereyherald">DJIA</a></td><td align="right" class="mwSmall">10,427.18</td><td align="right" class="mwSmall"><img height="1" src="http://custom.marketwatch.com/1.gif" width="3"/><img src="http://custom.marketwatch.com/custom/realcities-com/images/arrow-fp-down.gif"/></td><td align="right" class="mwSmall"><span class="mwclrQuoteDown">-58.00<img height="1" src="http://custom.marketwatch.com/1.gif" width="5"/></span></td></tr><tr><td colspan="4"><img height="1" src="http://custom.marketwatch.com/1.gif" width="1"/></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img height="1" src="http://custom.marketwatch.com/1.gif" width="4"/><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intchart.asp?symb=NASDAQ&amp;webprop=montereyherald">NASDAQ</a></td><td align="right" class="mwSmall">2,096.44</td><td align="right" class="mwSmall"><img height="1" src="http://custom.marketwatch.com/1.gif" width="3"/><img src="http://custom.marketwatch.com/custom/realcities-com/images/arrow-fp-down.gif"/></td><td align="right" class="mwSmall"><span class="mwclrQuoteDown">-15.34<img height="1" src="http://custom.marketwatch.com/1.gif" width="5"/></span></td></tr><tr><td colspan="4"><img height="1" src="http://custom.marketwatch.com/1.gif" width="1"/></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img height="1" src="http://custom.marketwatch.com/1.gif" width="4"/><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intchart.asp?symb=SPX&amp;webprop=montereyherald">S&amp;P 500</a></td><td align="right" class="mwSmall">1,121.22</td><td align="right" class="mwSmall"><img height="1" src="http://custom.marketwatch.com/1.gif" width="3"/><img src="http://custom.marketwatch.com/custom/realcities-com/images/arrow-fp-down.gif"/></td><td align="right" class="mwSmall"><span class="mwclrQuoteDown">-6.01<img height="1" src="http://custom.marketwatch.com/1.gif" width="5"/></span></td></tr><tr><td colspan="4"><img height="1" src="http://custom.marketwatch.com/1.gif" width="1"/></td></tr><tr class="mwFPBackGround"><td class="mwSmall" colspan="4"><img height="1" src="http://custom.marketwatch.com/1.gif" width="4"/>"MBBC" not found.</td></tr><tr><td colspan="4"><img height="1" src="http://custom.marketwatch.com/1.gif" width="1"/></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img height="1" src="http://custom.marketwatch.com/1.gif" width="4"/><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intchart.asp?symb=GVA&amp;webprop=montereyherald">GVA</a></td><td align="right" class="mwSmall">23.39</td><td align="right" class="mwSmall"><img height="1" src="http://custom.marketwatch.com/1.gif" width="3"/><img src="http://custom.marketwatch.com/custom/realcities-com/images/arrow-fp-down.gif"/></td><td align="right" class="mwSmall"><span class="mwclrQuoteDown">-0.17<img height="1" src="http://custom.marketwatch.com/1.gif" width="5"/></span></td></tr><tr><td colspan="4"><img height="1" src="http://custom.marketwatch.com/1.gif" width="1"/></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img height="1" src="http://custom.marketwatch.com/1.gif" width="4"/><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intchart.asp?symb=CCBN&amp;webprop=montereyherald">CCBN</a></td><td align="right" class="mwSmall">18.75</td><td align="right" class="mwSmall"><img height="1" src="http://custom.marketwatch.com/1.gif" width="3"/><img src="http://custom.marketwatch.com/custom/realcities-com/images/arrow-fp-unch.gif"/></td><td align="right" class="mwSmall"><span class="mwclrQuoteUnch">0.00<img height="1" src="http://custom.marketwatch.com/1.gif" width="5"/></span></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td colspan="2"><img height="1" src="http://custom.marketwatch.com/1.gif" width="1"/></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img height="1" src="http://custom.marketwatch.com/1.gif" width="4"/><span class="mwclrDate">4:01 PM ET</span></td><td align="right" class="mwSmall" height="15"><a class="mwLink" href="http://web.archive.org/web/javascript:disclaimerWin(368,50);">disclaimer</a>  </td></tr><tr><td align="center" class="mwSmall" colspan="2" height="30"><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/localmktscreener/html-localmktscreener-full.asp?webprop=montereyherald">Market Update: Regional<br/>Companies</a></td></tr><tr><td align="center" class="mwSmall" colspan="2" height="20"><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/portfolio/view.asp?webprop=montereyherald">View  your portfolio</a></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="100%"><form action="http://custom.marketwatch.com/custom/realcities-com/html-intChart.asp" method="get"></form><input name="webprop" type="HIDDEN" value="montereyherald"/><tbody><tr><td class="mwNormal" height="25">Stock<br/>Quote:</td><td><input class="mwEntryBox" maxlength="30" name="symb" size="4" type="text"/></td><td><input border="0" src="http://custom.marketwatch.com/custom/realcities-com/images/go-lower.gif" type="image"/></td><td class="mwSmall"><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intChart.asp?webprop=montereyherald">Symbol<br/>Lookup</a></td></tr></tbody></table></td></tr></tbody></table><script language="JavaScript1.2">
+<!--
+function disclaimerWin(w,h){
+var winTop 	= ((screen.height-h)/2);
+var winLeft 	= ((screen.width-w)/2);
+disclaimerWindow=window.open('http://custom.marketwatch.com/custom/realcities-com/inc-copyright.asp','disclaimer','width='+w+',height='+h+',top='+winTop+',left='+winLeft+'');
+disclaimerWindow.focus();
+}
+//-->
+</script>
+<span class="byline">Sponsored by:<span><br/>
+<script language="JavaScript">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/adj/montereyherald.homepage/homepage;kw=stock;sz=120x30;tile = ' + _krdDartInc + ';ord=' + _krdDartOrd + '?" ><\/SCRIPT>');
+</script><script language="JavaScript1.1" src="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/adj/montereyherald.homepage/homepage;kw=stock;sz=120x30;tile = 4;ord=1563350002183?"></script>
+<noscript>
+<a href="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/jump/montereyherald.homepage/homepage;kw=stock;sz=120x30;ord=123456789" target="_blank">
+<img alt="" border="0" height="30" src="http://web.archive.org/web/20030815092632im_/http://ad.doubleclick.net/ad/montereyherald.homepage/homepage;kw=stock;sz=120x30;ord=123456789" width="120"/></a>
+</noscript>
+<br/><img height="5" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/>
+</span></span></td>
+</tr>
+<tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/><br/></td></tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td>
+</td><td width="10"><img border="0" height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="10"/></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td bgcolor="#f2efe1" colspan="7"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_top.gif" width="155"/></td></tr><tr><td bgcolor="#f2efe1"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td><td bgcolor="#d2cdb9" colspan="5"> </td><td bgcolor="#aba695" rowspan="6"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td bgcolor="#f2efe1" rowspan="5"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td><td bgcolor="#d2cdb9" rowspan="5"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="2"/></td><td bgcolor="#aba695" colspan="3"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td><td bgcolor="#d2cdb9" rowspan="5"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="2"/></td></tr><tr><td bgcolor="#aba695"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td><td bgcolor="#f2efe1" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="147">
+<tbody><tr><td><table bgcolor="#f2efe1" border="0" cellpadding="0" cellspacing="0" width="147"><tbody><tr><td><img alt="Breaking News" height="21" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/red_muted_standard_warm/navigation/en/digest_rail_hdr_breaking.gif" width="147"/></td></tr><tr><td><img height="4" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/hr_grey_dots_147w.gif" width="147"/></td></tr><tr><td><img height="6" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr></tbody></table>
+<table bgcolor="#f2efe1" border="0" cellpadding="0" cellspacing="0" width="147">
+<tbody><tr valign="top">
+<td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="7"/></td><td class="mediumarea" width="100%"><b>Updated Friday, Aug 15, 2003</b></td><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="7"/></td></tr></tbody></table>
+<table bgcolor="#f2efe1" border="0" cellpadding="0" cellspacing="0" width="147">
+<tbody><tr><td><img height="4" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/hr_grey_dots_147w.gif" width="147"/></td></tr><tr><td><img height="5" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr></tbody></table>
+<table bgcolor="#f2efe1" border="0" cellpadding="0" cellspacing="0" width="147">
+<tbody><tr valign="top">
+<td><img height="9" hspace="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/red_muted_standard_warm/panel_arrow.gif" width="15"/></td><td class="mediumarea" width="100%">
+<a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/6539669.htm">
+N.H. Children Mourned by Family, Friends</a> <span class="timestamp">- 05:21 AM EDT</span></td><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="4"/></td></tr><tr><td colspan="3"><img height="6" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+<tr valign="top">
+<td><img height="9" hspace="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/red_muted_standard_warm/panel_arrow.gif" width="15"/></td><td class="mediumarea" width="100%">
+<a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/6536093.htm">
+Where Were You When the Lights Went Out?</a> <span class="timestamp">- 05:21 AM EDT</span></td><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="4"/></td></tr><tr><td colspan="3"><img height="6" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+<tr valign="top">
+<td><img height="9" hspace="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/red_muted_standard_warm/panel_arrow.gif" width="15"/></td><td class="mediumarea" width="100%">
+<a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/6535187.htm">
+Power Slowly Coming Back in New York City</a> <span class="timestamp">- 05:18 AM EDT</span></td><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="4"/></td></tr><tr><td colspan="3"><img height="6" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+<tr valign="top">
+<td><img height="9" hspace="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/red_muted_standard_warm/panel_arrow.gif" width="15"/></td><td class="mediumarea" width="100%">
+<a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/6539392.htm">
+Tropical Storm Erika May Hit Texas</a> <span class="timestamp">- 05:11 AM EDT</span></td><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="4"/></td></tr><tr><td colspan="3"><img height="6" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+<tr valign="top">
+<td><img height="9" hspace="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/red_muted_standard_warm/panel_arrow.gif" width="15"/></td><td class="mediumarea" width="100%">
+<a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/6539563.htm">
+Peterson Hearing to Remain Open to Public</a> <span class="timestamp">- 05:09 AM EDT</span></td><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="4"/></td></tr><tr><td colspan="3"><img height="6" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+</tbody></table></td></tr></tbody></table>
+</td><td bgcolor="#aba695"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td bgcolor="#aba695" colspan="3"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td bgcolor="#d2cdb9" colspan="3"><img height="4" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td align="right" bgcolor="#d2cdb9" colspan="3">
+<a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/more_news.htm?pub_id=570&amp;category_id=1003290&amp;days_range=2&amp;start_row=1"><img border="0" height="18" hspace="4" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/red_muted_standard_warm/navigation/en/panel_arrow_more.gif" width="39"/></a>
+</td></tr><tr><td bgcolor="#aba695" colspan="7"><img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_bottom.gif" width="155"/></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_top.gif" width="155"/></td></tr><tr><td><img height="10" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td align="center">
+<script language="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/adj/montereyherald.homepage/homepage;kw=right2;tile='+_krdDartInc+';sz=120x600;ord='+_krdDartOrd+'?" ><\/SCRIPT>');
+</script><script language="JavaScript1.1" src="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/adj/montereyherald.homepage/homepage;kw=right2;tile=5;sz=120x600;ord=1563350002183?"></script>
+<noscript>
+<a href="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/jump/montereyherald.homepage/homepage;kw=right2;sz=120x600;ord=1060939592525" target="_blank">
+<img border="0" height="600" src="http://web.archive.org/web/20030815092632im_/http://ad.doubleclick.net/ad/montereyherald.homepage/homepage;kw=right2;sz=120x600;ord=1060939592525" width="120"/></a>
+</noscript>
+</td></tr><tr><td><img height="10" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td><img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_bottom.gif" width="155"/></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_top.gif" width="155"/></td></tr><tr><td><img height="10" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td align="center">
+<script language="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/adj/montereyherald.homepage/homepage;kw=right3;tile='+_krdDartInc+';sz=120x60;ord='+_krdDartOrd+'?" ><\/SCRIPT>');
+</script><script language="JavaScript1.1" src="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/adj/montereyherald.homepage/homepage;kw=right3;tile=6;sz=120x60;ord=1563350002183?"></script>
+<noscript>
+<a href="http://web.archive.org/web/20030815092632/http://ad.doubleclick.net/jump/montereyherald.homepage/homepage;kw=right3;sz=120x60;ord=1060939592526" target="_blank">
+<img border="0" height="60" src="http://web.archive.org/web/20030815092632im_/http://ad.doubleclick.net/ad/montereyherald.homepage/homepage;kw=right3;sz=120x60;ord=1060939592526" width="120"/></a>
+</noscript>
+</td></tr><tr><td><img height="10" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td><img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_bottom.gif" width="155"/></td></tr></tbody></table>
+<table bgcolor="#fef7d7" border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td colspan="3"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_top.gif" width="155"/></td></tr><tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="5"/></td><td bgcolor="#fef7d7">
+<table border="0" cellpadding="1" cellspacing="0" width="143">
+<tbody><tr><form action="http://web.archive.org/web/20030815092632/http://yp.montereyherald.com/bin/cgidir.dll" method="" name="swbgetcat"></form>
+<input name="MEM" type="hidden" value="1219"/>
+<input name="FUNC" type="hidden" value="FORMATSEARCH"/>
+<td><br/><b>Search Yellow Pages</b><br/><div align="center">
+<img border="0" height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/hr_2px_light.gif" vspace="2" width="140"/></div>
+<a class="callout" href="http://web.archive.org/web/20030815092632/http://yp.montereyherald.com/bin/cgidir.dll?func=catlist&amp;mem=1219">
+<b>SELECT A CATEGORY</b></a>
+</td></tr><tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td class="mediumarea"><i>OR type one in:</i><br/></td></tr><tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td class="mediumarea">Business name or category<br/><input name="L" size="12" type="text" value=""/></td></tr><tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td class="mediumarea">City<br/><input maxlength="31" name="T" size="12" type="text" value=""/></td></tr><tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td class="mediumarea">State<br/><select class="smallformelement" name="s">
+<option value="">Choose a state
+</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DC">D.C.</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select></td></tr><tr><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr><tr><td align="right"> <input border="0" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/navigation/en/button_go.gif" type="image" value="go"/></td>
+</tr><tr><td align="center">
+<img border="0" height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/hr_2px_light.gif" vspace="2" width="140"/></td></tr><tr><td class="mediumarea"><img height="9" hspace="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/panel_arrow.gif" width="15"/><a class="callout" href="http://web.archive.org/web/20030815092632/http://maps.montereyherald.com/jump.cgi/refsrc=KR.1219"><b>Get Maps &amp; Directions</b></a></td></tr><tr><td class="mediumarea"><img height="9" hspace="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/panel_arrow.gif" width="15"/><a class="callout" href="http://web.archive.org/web/20030815092632/http://yp.montereyherald.com/bin/cgiqa.dll?MEM=1219"><b>White Pages Search</b></a></td></tr><tr><td class="mediumarea"><img height="9" hspace="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/panel_arrow.gif" width="15"/><a class="callout" href="http://web.archive.org/web/20030815092632/http://yp.montereyherald.com/bin/cgiemail.dll?MEM=1219"><b>Email Search</b></a></td></tr><tr><td><img height="5" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr>
+</tbody></table>
+</td><td><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="5"/></td></tr><tr><td bgcolor="#d4cdaf" colspan="3"><img height="2" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/component/divider_rail_bottom.gif" width="155"/></td></tr></tbody></table>
+</td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="768">
+<tbody><tr><td bgcolor="#003366"><img height="21" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td><td align="center" bgcolor="#2b4e9d" class="mainarea"><strong><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/news/">News</a> | <a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/business/">Business</a> | <a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/sports/">Sports</a> | <a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/entertainment/">Entertainment</a> | <a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/living/">Living</a> | <a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/classifieds/">Classifieds</a> </strong> </td><td bgcolor="#003366"><img height="1" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/common/spacer.gif" width="1"/></td></tr></tbody></table><table border="0" cellpadding="3" cellspacing="0" width="768"><tbody><tr><td class="footer" rowspan="2" valign="top"><a href="http://web.archive.org/web/20030815092632/http://www.realcities.com/" target="_blank"><img alt="RealCities" border="0" height="57" src="http://web.archive.org/web/20030815092632im_/http://www.montereyherald.com/images/palette/blue_complement/realcities_logo.gif" width="155"/></a>
+</td><td align="left" class="footer">
+<span class="lightgreylinks"><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us/help">Help |</a> <a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us">Contact Us |</a> <a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/archives">Archives |</a> <a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us/advertise">Place an Ad |</a> <a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us/subscriptions_np1">Newspaper Subscriptions  </a><br/><a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us/about">About MontereyHerald.com |</a> <a href="http://web.archive.org/web/20030815092632/http://www.realcities.com/mld/realcities/">About Realcities Network |</a> <a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us/terms_of_use">Terms of Use &amp; Privacy Statement |</a> <a href="http://web.archive.org/web/20030815092632/http://www.knightridder.com/">About Knight Ridder |</a> <a href="http://web.archive.org/web/20030815092632/http://www.montereyherald.com/mld/montereyherald/contact_us/copyright">Copyright  </a><br/></span>
+</td></tr></tbody></table>
+<!--
+     FILE ARCHIVED ON 09:26:32 Aug 15, 2003 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 07:53:10 Jul 17, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  LoadShardBlock: 170.118 (3)
+  esindex: 0.016
+  captures_list: 191.457
+  CDXLines.iter: 15.48 (3)
+  PetaboxLoader3.datanode: 141.371 (4)
+  exclusion.robots: 0.604
+  exclusion.robots.policy: 0.566
+  RedisCDXSource: 1.023
+  PetaboxLoader3.resolve: 25.659
+  load_resource: 84.147
+--></body></html>

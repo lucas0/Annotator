@@ -1,0 +1,667 @@
+<html lang="en-us" xmlns="https://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml"><head id="ctl00_Head1"><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>
+	House Media - Oklahoma House of Representatives
+</title><link href="http://www.okhouse.gov/favicon.ico" rel="icon"/><link href="http://www.okhouse.gov/favicon.ico" rel="shortcut icon"/><link href="http://www.okhouse.gov/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><link href="http://www.okhouse.gov/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/><link href="http://www.okhouse.gov/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/><link href="http://www.okhouse.gov/manifest.json" rel="manifest"/><link href="http://www.okhouse.gov/safari-pinned-tab.svg" rel="mask-icon"/><meta content="#ffffff" name="theme-color"/><meta content="Oklahoma House of Representative Legislature's Website where you can follow the introduction of measures, voting on the measures, and final passage of measures." name="Description"/><meta content="House of Representatives,house,representatives,oklahoma,legislature,bills,committees,members,staff,leadership,speaker,press,calendar,information,schedule,meeting,
+            notices,majority,minority,membership,pictorial,directory,historic,subcommittees,legislation,amendments,district,maps,precedents,rules,internship,research,
+            publications,links,news,archives,audio,video,summary,pressroom,visitors,disabilities,information,appropriations" name="Keywords"/><meta content="Jerry J. Jansen - webmaster @ okhouse.gov" name="Author"/><meta content="Microsoft Visual Studio 2017" name="generator"/>
+<!--[if lt IE 9]>
+        <script src="https://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+<!--[if lte IE 8]>
+        <link rel="stylesheet" href="../css/ie8.css" type="text/css" media="screen" />
+        <![endif]-->
+<!--[if lte IE 7]>
+        <link rel="stylesheet" href="../css/ie7.css" type="text/css" media="screen" />
+        <script defer type="text/javascript" src="~/js/pngfix.js"></script>
+        <![endif]-->
+<!--[if lte IE 6]>
+        <link rel="stylesheet" href="../css/ie6.css" type="text/css" media="screen" />
+        <![endif]-->
+<link href="http://www.okhouse.gov/../assets/css/newstyle.css" rel="stylesheet"/>
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="http://www.okhouse.gov/assets/plugins/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="http://www.okhouse.gov/assets/plugins/jquery/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="http://www.okhouse.gov/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+        <script src="/assets/plugins/respond.js"></script>
+        <script src="/assets/plugins/html5shiv.js"></script>
+        <script src=">/assets/plugins/placeholder-IE-fixes.js"></script>
+    <![endif]-->
+<script type="text/javascript">
+        
+        (function () {
+            //var demo = window.demo = window.demo || {};
+            var timeOut;
+            var isMouseOverNode = false;
+            window.OnClientNodeMouseEnter = function (sender, args) {
+                var node = args.get_node(),
+                          expandedSubling = node.get_parent().get_expandedNode();
+                if (node.get_hidden()) {
+                    return;
+                }
+                clearTimeout(timeOut);
+                if (node.get_expandedNode()) {
+                    node.get_expandedNode().collapse();
+                    return;
+                }
+                if (expandedSubling && expandedSubling !== node) {
+                    expandedSubling.collapse(true);
+                }
+                if (!node.get_expanded()) {
+                    node.expand();
+                }
+                isMouseOverNode = true;
+            };
+            window.OnClientNodeMouseLeave = function (sender, args) {
+                var $ = $telerik.$,
+                node = args.get_node(),
+                event = args.get_domEvent();
+                if (node.get_hidden()) {
+                    return;
+                }
+                isMouseOverNode = false;
+                if ($(event.relatedTarget).closest(node.get_animationContainer()).length > 0) {
+                    return;
+                }
+                timeOut = setTimeout(function () {
+                    if (!isMouseOverNode) {
+                        if (sender.get_expandedNode()) {
+                            sender.get_expandedNode().collapse();
+                        }
+                    }
+                }, 300);
+            };
+            var data = [
+                { ID: 1, ParentID: null, Name: "Home" },
+                { ID: 2, ParentID: null, Name: "Representatives" },
+                { ID: 3, ParentID: null, Name: "Statutes" },
+                { ID: 4, ParentID: null, Name: "Legislation" },
+                { ID: 5, ParentID: null, Name: "Committees" },
+                { ID: 6, ParentID: null, Name: "Calendars" },
+                { ID: 7, ParentID: null, Name: "Media" },
+                { ID: 8, ParentID: null, Name: "Resources" },
+                { ID: 9, ParentID: null, Name: "Today's Events" },
+            ];
+            window.setData = function (dataSource) {
+                dataSource.set_data(data);
+            };
+        })();
+    </script>
+<link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=DUYe4dDeH9A4CfZ2MBvq1-gHnIr6R4KK94aD9uRx8qHy5MI3gaJVeTGF3zb-Se1IAkG28NsJ54KGQI84nPMNqwHvDqi1Te9_oPlh2WJb1IJRvN39lT0YgBT3xmdeYjGOqofRaMNBatB3k6ixIzP3RX_-FQY1&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=-q6PhEDVde1vhJ8v73vEVOz9iQvp-RVYe1s-vKrSClkp_fLmCzgCSHg9fE0m5w_RYyzpFR3pxc5Wkc9wLGWEUjB36KBwVlcXUOpSPFjh0Tm76lkWqn_cq1TfVo_W6zBKq8gebL-6r8SXcdoSA2jihQknymQ1&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=M5fV2SdACopTSzJdd1pZEQoIChr7cYOdEB8Cgodrnwefle9Um69NW8-ZjSYJL4Sj1GJbfSjx3Lw8_uwuM8TPE0HkzjPTJ0zjvh5uArp01mVeBmXh9E7zrdc0t7ogSeiap3kIKJF_Roo6OGtdg6r6wbQs4WY1&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=lmUp2AJ1_2Po8vSGRKEoZepqBeONoJwKXlL7qDCDL2CufPmKiIM--CtGoIefKm9cJ-5IR7JqGC-pV86HIF8tVmS7t6x-7ZhfUz8mx6WLolzuACXeR94NBLTtIorGnjMLCk8yDJEBu6dT4BEMGKklCIzGt7eWoCnrsq5CZs7b5lj6j1_V0&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=M7kUyh2bssMqi9wHnf7mFDvQEy1diZ2WZGDJ6s1APwZyKmTwSNCkTvy4QNJ7-THrulXHzaW8NsSIuIuFl7yadUgbICTKR-RPb4skQNcwLcesEn2YaznFPZTqqBkHSLGZqQbQqw2&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=86_QlYbizcqb4Gvfj9bpxlyGRryd6IhLQo_kDeURZgYqKtn0XDUjgI2XqHSQheMcqYnBo8odkzwTXOdMEDpcbvV2VfWWmgUbUxaGgr7ZiSq4gw9jaHx2GU5HHDaSP5aykh-QzzyFh7xXA7ccAGMQkrPwQOcA0Xj-0SB9Ib98WRhmbqI30&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=q3F6YQgcU8taIj9qqeaXD4iBDxTOStoU-OddEjeTneDT5Z53Q5AYJzB6NdZPrG0ZHze0IoYcTXpJTTOz0TpLS_wqNn3kHyS9yo0mOFRYKqfb5tQSwL80O8h2eb9yNnyg00JbLQ2&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=SrX4AeOD2GtLXdTRJCfZ4ObXMKNt2aSp_loSHsI1gfCd9Kzifhh2_vsq-MxUVguA4zOWHqRIq5UEGYo16sjRhEkEYhgolSyCj9Zz_WizNANUQV0KyhC93MG0mtMB_XUd0c6DdDyf_U8EisiKns3xCGvosaA1&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=oOUgX9wnauWIpG2P0L3zqxEIkoXfuQ_YGrLJUXkF3jE4VU5QFdmt3u52MOhxj-fSTXdSCchoOF8Z43f4Uaf0etlX1hf5-TNmoM80pLzYv6Y3CnlATN6qMEHSpxuPtr85VKd3ng2&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=eLpclNcOQ1RRYmDzas3F2-fIKtq6s6p_Aqm56LIKU-OM3P0sGauw0qJRa51T1bdeym4I7zrojHR2ezaL2wK6faRDgTJaUx_mnpMb0Da1F78IHpx7ULT0eUCo2Kgk6fPrxbEsg3qmS7gwmhqyGufw_ejSEwyaphG63OuxI1duRKXs7Wlw0&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=FZEIdz_7ttYYNdBzQL_l-d2roI0OVlt0TWtjnEbVt47FekDgtZqEdxYbthNS_G9PYsauMg52BhF5WIzc9_QI6tXxgXzIkOlOgR92ANM6ZeVVuepq7faeiYgdy3wJrkMHm8uirw2&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=92mG7gAg0hUy1Bh3IMQeMFCUS7-5Oce56QMC_k00awNMo12XmJgCqyOiHnq-Hgr2B4pXfsMgCUyCgJOupjTSDZZl67h_UJbaGi0i1hsrnwxPkm927uz9mUj7zl0b5EZZes8BcINRFcJb0Sf8XLMjeQlDU2C3V4uVSCooFBwWckKKRN900&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=GoMm-YqkTcChmfk7qtObRu5MvwSAJxm517op4uPt7pQONtV00yUs6yqonrT8HdC0poTvkeFKzEipThp4QvRFgpqIBNJksQLOwljnGYa6F8hNopQ7UyqtKHJMxGsmXcAFhfvTAg2&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=2OolCdLJLa4MYkdndqZ0hi0GQH0cRbb75fLCu2v5UPifKPJjQZfzxXsDbANIVelR77EPUPLmy2iXpvI_Q9Z5O4aqY0qBx6nwGmbdhvNvA6Wd4YQTpKBPEDbx9m9zDMKckROSSg2&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=pKL-1lZJ-LqKj0MiQA4-AJn2ioK7grhTGNoE_6sKlDhphya0ewhvhzcErphyPoWhx0Ik7zQARjVSmcn67h29xIL8o7sRgCQZubxV72BFqP5Iw4TEdmc-sthIre_3CKIEOHSS7hhw02RXRr4JDnbDWif_2c3ZilGZB1HmMEHQkEv9lqbk0&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=e4OD347s52B0Qbi6J1e1Jb6VUGtTq8YyHegQKVRNr5YZTuOpPnPRP8UBNuhk6B36okOTl36KEXfJPuJiIXhNes9UglJV-BElKE8t91khAIJpRK_NUt1usF6ADc7yYffORwygBA2&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=tlLw6-ZQuLotXOzMdTdvYRY0VGdx6OZO-ulv6u1Gn5PRE1k-Uc5uNsvf0omtSmcCeEiUHKsfQ7PQPPY78onCJtAsfbZQf-IzeoKaaP9DKRue6xAopGLXGoXd8tCTnHbnGOagpw2&amp;t=636721124940000000" rel="stylesheet" type="text/css"/><link class="Telerik_stylesheet" href="http://www.okhouse.gov/WebResource.axd?d=nBJYtGMECWktYPQQwjh-21wDAIJWzWziE43k0h25QDYnHmnO9KDEo51UIGJhN-zRJHsUk7pk-89W2Wq0YZuFuBP3SHPuZ9rCZYkQkIL0IIM7t2vdAVsow-WxFz4kSrJrvXToyrxmgXHV73OLXaiE4nk3zt_vpQ4R7g2xpRLqNxh7uwEv0&amp;t=636721124940000000" rel="stylesheet" type="text/css"/></head>
+<body>
+<form action="Default.aspx" id="aspnetForm" method="post" name="aspnetForm">
+<input id="ctl00_ScriptManager1_TSM" name="ctl00_ScriptManager1_TSM" type="hidden" value=""/>
+<input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="/wEPDwUJNzQzMzEzNTEzD2QWAmYPZBYEAgEPZBYCAhcPFQYBLwEvAS8BLwEvAS9kAgMPZBYKAgMPDxYIHhVFbmFibGVFbWJlZGRlZFNjcmlwdHNnHhxFbmFibGVFbWJlZGRlZEJhc2VTdHlsZXNoZWV0Zx4SUmVzb2x2ZWRSZW5kZXJNb2RlCylyVGVsZXJpay5XZWIuVUkuUmVuZGVyTW9kZSwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxOC4zLjkxMC4zNSwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0Ah4XRW5hYmxlQWpheFNraW5SZW5kZXJpbmdoFgIeBXN0eWxlBQ1kaXNwbGF5Om5vbmU7ZAIFDxQrAAIPFggfAGcfA2gfAWcfAgsrBAJkZGQCCQ8PFgYfAGcfAWcfA2hkZAILDw8WCB8AZx8BZx8DaB4LXyFEYXRhQm91bmRnZBYOAgEPZBYCAgIPDxYCHgdWaXNpYmxlaGRkAgIPZBYCAgYPDxYCHwZoZGQCAw9kFgICAw8PFgIfBmhkZAIED2QWAgIEDw8WAh8GaGRkAgUPZBYCAgQPDxYCHwZoZGQCBg9kFgICBA8PFgIfBmhkZAIHD2QWAgIEDw8WAh8GaGRkAg0PZBYEAgEPFCsAAjwrAAQBAA8WDB8AZx8DaB4FV2lkdGgbAAAAAABQhEABAAAAHwFnHwILKwQCHgZIZWlnaHQbAAAAAABQhEABAAAAZBAWAWYWATwrAAQBAA8WDB8AZx8HGwAAAAAAUIRAAQAAAB8DaB8BZx8CCysEAh8IGwAAAAAAUIRAAQAAAGQPFgFmFgEFcVRlbGVyaWsuV2ViLlVJLlJhZFdpbmRvdywgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxOC4zLjkxMC4zNSwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0FgJmDzwrAAQBAA8WDB8AZx8HGwAAAAAAUIRAAQAAAB8DaB8BZx8CCysEAh8IGwAAAAAAUIRAAQAAAGRkAgMPZBYEAgUPZBYCZg9kFgRmD2QWAgIBDxYCHgNzcmMFKWh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2VtYmVkL2kxTzktdm9Id2hVZAIBD2QWAgIBDxQrAAYPFgwfBWceC18hSXRlbUNvdW50AgQfAGcfAWcfAgsrBAIfA2hkFCsAA2RkFCsAAhYCHhFJdGVtUGxhY2VIb2xkZXJJRAU2Y3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9SYWRMaXN0VmlldzFfaXRlbVBsYWNlaG9sZGVyZBQrAAQPBQ9TZWxlY3RlZEluZGV4ZXMygAIAAQAAAP////8BAAAAAAAAAAwCAAAAV1RlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTguMy45MTAuMzUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNAUBAAAAK1RlbGVyaWsuV2ViLlVJLlJhZExpc3RWaWV3SW5kZXhlc0NvbGxlY3Rpb24DAAAADUxpc3RgMStfaXRlbXMMTGlzdGAxK19zaXplD0xpc3RgMStfdmVyc2lvbgcAAAgICAIAAAAJAwAAAAEAAAABAAAADwMAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAALDwUGXyFEU0lDAgQPBQtfIUl0ZW1Db3VudAIEDwUIXyFQQ291bnRkZBYCHgJfY2ZkFgJmD2QWCAIBDxYCHg5TYXZlZE9sZFZhbHVlcxcAFgQCAQ8PFgQeDUFsdGVybmF0ZVRleHQFD0dBIEJpbGwgU2lnbmluZx4ISW1hZ2VVcmwFHy4uL1RodW1ibmFpbHMvR0FCaWxsU2lnbmluZy5qcGdkZAIDDw8WAh4EVGV4dAUPR0EgQmlsbCBTaWduaW5nZGQCAg8WAh8NFwAWBmYPFQEic2VsZWN0VmlkZW8odGhpcywxKTsgcmV0dXJuIGZhbHNlO2QCAQ8PFgQfDgUTVmV0ZXJhbiBvZiB0aGUgV2Vlax8PBR8uLi9UaHVtYm5haWxzL1ZldE1heTIwXzIwMTkuanBnZGQCAw8PFgIfEAUTVmV0ZXJhbiBvZiB0aGUgV2Vla2RkAgMPFgIfDRcAFgZmDxUBInNlbGVjdFZpZGVvKHRoaXMsMik7IHJldHVybiBmYWxzZTtkAgEPDxYEHw4FF0hCMTI2OSBQcmVzcyBDb25mZXJlbmNlHw8FHS4uL1RodW1ibmFpbHMvSEIxMjY5VGh1bWIuanBnZGQCAw8PFgIfEAUXSEIxMjY5IFByZXNzIENvbmZlcmVuY2VkZAIEDxYCHw0XABYGZg8VASJzZWxlY3RWaWRlbyh0aGlzLDMpOyByZXR1cm4gZmFsc2U7ZAIBDw8WBB8OBRhCdWRnZXQgQWdyZWVtZW50IFByZXNzZXIfDwUjLi4vVGh1bWJuYWlscy9CdWRnZXRQcmVzc2VyMjAxOS5qcGdkZAIDDw8WAh8QBRhCdWRnZXQgQWdyZWVtZW50IFByZXNzZXJkZAIHD2QWAmYPZBYEZg9kFgICBw88KwAOAgAUKwACDxYMHwFnHwVnHwoCAR8DaB8CCysEAh8AZ2QXAgULRWRpdEluZGV4ZXMWAAUPU2VsZWN0ZWRJbmRleGVzFgABFgIWCw8CARQrAAEUKwAFFgIeBG9pbmQCAmRkZAUGY29sdW1uZGUUKwAACyl5VGVsZXJpay5XZWIuVUkuR3JpZENoaWxkTG9hZE1vZGUsIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTguMy45MTAuMzUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNAE8KwAHAAspdFRlbGVyaWsuV2ViLlVJLkdyaWRFZGl0TW9kZSwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxOC4zLjkxMC4zNSwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0ARYCHgRfZWZzFgIeE2NzX3BvcHVwc19DbG9zZVRleHQFBUNsb3NlZBYOHwVnHghEYXRhS2V5cxYAHgVfcWVsdBkpZ1N5c3RlbS5EYXRhLkRhdGFSb3dWaWV3LCBTeXN0ZW0uRGF0YSwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkeBF9hY3NnHgVfIUNJUxcAHwoCBR4USXNCb3VuZFRvRm9yd2FyZE9ubHloZGYWBmYPFCsAA2RkZGQCAQ8WBRQrAAIPFg4fBWcfFBYAHxUZKwcfFmcfFxcAHwoCBR8YaGQXAwUIXyFQQ291bnRkBQtfIUl0ZW1Db3VudAIFBQZfIURTSUMCBRYCHgNfc2UWAh8MZhQrAAUUKwACFCsAAQULTWVkaWFO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dGxlPSdTdGFmZiBOYW1lIHdpdGggRW1haWwgQWRkcmVzcyc+VG9yaSBHYXJyZXR0PC9hPjwvYj5kAgEPDxYCHx5lZBYCZg8VAQBkAgIPFQIAGUFzc29jaWF0ZSBQcmVzcyBTZWNyZXRhcnlkAgkPZBYCZg8PFgIfBmhkZAIKDw8WAh8aBQE0ZBYGZg8PFgIfBmhkFgJmDw8WAh8baGRkAgEPDxYEHxAFBiZuYnNwOx8GaGRkAgIPDxYCHxBlZBYGZg8VAgBrPGI+PGEgaHJlZj0nbWFpbHRvOmpvaG4uZmxhbm5pZ2FuQG9raG91c2UuZ292JyB0aXRsZT0nU3RhZmYgTmFtZSB3aXRoIEVtYWlsIEFkZHJlc3MnPkpvaG4gRmxhbm5pZ2FuPC9hPjwvYj5kAgEPDxYCHx5lZBYCZg8VAQBkAgIPFQIAEUdyYXBoaWNzIERlc2lnbmVyZAILD2QWAmYPDxYCHwZoZGQCAg8PZBYCHwQFDWRpc3BsYXk6bm9uZTsWAmYPPCsADQEADxYGBQtTcGVjaWFsRGF5cw8FkgFUZWxlcmlrLldlYi5VSS5DYWxlbmRhci5Db2xsZWN0aW9ucy5DYWxlbmRhckRheUNvbGxlY3Rpb24sIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTguMy45MTAuMzUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNBQrAAAFG1VzZUNvbHVtbkhlYWRlcnNBc1NlbGVjdG9yc2gFGFVzZVJvd0hlYWRlcnNBc1NlbGVjdG9yc2gPFgQfHGcfHWhkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WCAUUY3RsMDAkRm9ybURlY29yYXRvcjEFGGN0bDAwJFJhZFRvb2xUaXBNYW5hZ2VyMQUNY3RsMDAkbWFpbk5hdgUrY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRSYWRXaW5kb3dNYW5hZ2VyMQUlY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRyd1Nob3dTdG9yeQUmY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRSYWRMaXN0VmlldzEFImN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkUmFkR3JpZDEFI2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZGdyZFN0YWZmdN5cAzna97GOzURz/+RZRmNB8Bw="/>
+<script src="http://www.okhouse.gov/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl00_ScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d3.5.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a16997a38-7253-4f67-80d9-0cbcc01b3057%3aea597d4b%3bTelerik.Web.UI%2c+Version%3d2018.3.910.35%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3ac1498b76-05c4-43b6-9540-a2e12a17878a%3a16e4e7cd%3a33715776%3a4877f69a%3a86526ba7%3a874f8ea2%3af7645509%3a24ee1bba%3af46195d3%3ac128760b%3a19620875%3acda80b3%3a383e4ce8%3aed16cbdc%3a88144a7a%3a1e771326%3a8c2d243e%3ab2e06756%3a92fe8ea0%3afa31b949%3a490a9d4e%3abd8f85e4%3addbfcb67%3a58366029" type="text/javascript"></script>
+<input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="46A49483"/>
+<div class="RadFormDecorator" id="ctl00_FormDecorator1" style="display:none;">
+<script type="text/javascript">
+//<![CDATA[
+
+if (typeof(WebForm_AutoFocus) != 'undefined' && !isWebFormAutoFocusMethodCalled)
+{   
+	var old_WebForm_AutoFocus = WebForm_AutoFocus;
+	WebForm_AutoFocus = function(arg)
+	{
+		Sys.Application.add_load(function()
+		{            
+			old_WebForm_AutoFocus(arg);
+			WebForm_AutoFocus = old_WebForm_AutoFocus;
+		});
+	}
+    var isWebFormAutoFocusMethodCalled = true;
+}
+if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
+{
+	if (Telerik.Web.UI.RadFormDecorator)
+	{
+		Telerik.Web.UI.RadFormDecorator.initializePage("ctl00_FormDecorator1", "decorationZone", "Bootstrap", 65535);
+	}
+}
+//]]>
+</script><input id="ctl00_FormDecorator1_ClientState" name="ctl00_FormDecorator1_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_RadToolTipManager1" style="display:none;position:absolute;">
+<div id="ctl00_RadToolTipManager1RTMPanel">
+</div><input id="ctl00_RadToolTipManager1_ClientState" name="ctl00_RadToolTipManager1_ClientState" type="hidden"/>
+</div>
+<div id="ctl00_RadAjaxManager1SU">
+<span id="ctl00_RadAjaxManager1" style="display:none;"></span>
+</div>
+<div class="RadAjax RadAjax_Bootstrap" id="ctl00_RadAjaxLoadingPanel1" style="display:none;height:75px;width:75px;text-align:center;">
+<div class="raDiv">
+<img alt="Loading..." src="http://www.okhouse.gov/WebResource.axd?d=Rzpr-uBHti27ZVoK3sRJatQoo_jCLCeqA_ZekhuqtC9cUNVnBkHfNtpTJ4Ot7iJZVUWGXc9wBaIhTyJIBxo5SDqT6K7aEEv-kI0NCA_aHd1pOTXdeIXpZlATn5ppHwebEhtHSIeFp7hHAVauJd2c6l91NAs1&amp;t=636721124940000000" style="border: 0;"/>
+</div><div class="raColor raTransp">
+</div>
+</div>
+<div id="wrapper">
+<div id="container">
+<div id="content">
+<div class="headerrow">
+<div class="header" title="Oklahoma House of Representatives">
+</div>
+</div>
+<nav>
+<div class="RadNavigation RadNavigation_Bootstrap mainNav" id="ctl00_mainNav">
+<div class="rnvRootGroupWrapper">
+<ul class="rnvRootGroup rnvGroup">
+<li class="rnvItem rnvFirst"><span class="rnvRootLink rnvLink"><span class="rnvText">Home</span><span class="rnvToggle radIcon"></span></span><div class="rnvSlide">
+<div class="radPopup rnvPopup">
+<ul class="rnvUL">
+<li class="rnvItem rnvFirst"><a class="rnvLink" href="http://www.okhouse.gov/../index.aspx" title="View our home page."><span class="rnvText">House Home</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://oksenate.gov/index.aspx" target="_blank" title="View the Oklahoma Senate website (external website)."><span class="rnvText">Senate Home</span></a></li><li class="rnvItem rnvLast"><a class="rnvLink" href="http://www.oklegislature.gov/Index.aspx" target="_blank" title="View the Oklahoma Legislature website (external website)."><span class="rnvText">Legislature Home</span></a></li>
+</ul>
+</div>
+</div></li><li class="rnvItem"><a class="rnvRootLink rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Representatives" title="View the representatives menu page."><span class="rnvText">Representatives</span><span class="rnvToggle radIcon"></span></a><div class="rnvSlide">
+<div class="radPopup rnvPopup">
+<ul class="rnvUL">
+<li class="rnvItem rnvFirst"><a class="rnvLink" href="http://www.okhouse.gov/../Members/Default.aspx" title="View our representative pages."><span class="rnvText">Representatives</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.okhouse.gov/../Members/Leadership.aspx" title="View our leadership page."><span class="rnvText">Leadership</span></a></li><li class="rnvItem rnvLast"><a class="rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Representatives" title="View the representatives menu page."><span class="rnvText">Representatives Menu</span></a></li>
+</ul>
+</div>
+</div></li><li class="rnvItem"><a class="rnvRootLink rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Legislation"><span class="rnvText">Legislation</span><span class="rnvToggle radIcon"></span></a><div class="rnvSlide">
+<div class="radPopup rnvPopup">
+<ul class="rnvUL">
+<li class="rnvItem rnvFirst"><a class="rnvLink" href="http://www.oklegislature.gov/BasicSearchForm.aspx" target="_blank"><span class="rnvText">Basic Bill Search</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.oklegislature.gov/AdvancedSearchForm.aspx" target="_blank"><span class="rnvText">Advanced Bill Search</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.oklegislature.gov/EBillTrack/EBillTrack2.aspx" target="_blank"><span class="rnvText">Track Bills (LENS)</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.oklegislature.gov/tsrs_measures.aspx" target="_blank"><span class="rnvText">Search Text of Measures</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.oklegislature.gov/SubjectIndex.aspx?Default=A&amp;Session=Current" target="_blank"><span class="rnvText">Text of Measures by Subject</span></a></li><li class="rnvItem"><a class="rnvLink" href="https://www.sos.ok.gov/gov/legislation.aspx" target="_blank"><span class="rnvText">Signed Legislation</span></a></li><li class="rnvItem rnvLast"><a class="rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Legislation"><span class="rnvText">Legislation Menu</span></a></li>
+</ul>
+</div>
+</div></li><li class="rnvItem"><a class="rnvRootLink rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Statutes" title="View our constitution and statues menu page."><span class="rnvText">Statutes</span><span class="rnvToggle radIcon"></span></a><div class="rnvSlide">
+<div class="radPopup rnvPopup">
+<ul class="rnvUL">
+<li class="rnvItem rnvFirst"><a class="rnvLink" href="http://www.oklegislature.gov/ok_constitution.aspx" target="_blank" title="View the Oklahoma constitution page (external website)."><span class="rnvText">Oklahoma Constitution</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.oklegislature.gov/osStatuesTitle.aspx" target="_blank" title="View the Oklahoma statues page (external website)."><span class="rnvText">Oklahoma Statutes</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.oklegislature.gov/tsrs_os_oc.aspx" target="_blank" title="View the search constitution and statutes page (external website)."><span class="rnvText">Search Constitution/Statutes</span></a></li><li class="rnvItem rnvLast"><a class="rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Statutes" title="View our constitution and statues menu page."><span class="rnvText">Constitution/Statutes Menu</span></a></li>
+</ul>
+</div>
+</div></li><li class="rnvItem"><a class="rnvRootLink rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Committees" title="View our committees menu page."><span class="rnvText">Committees</span><span class="rnvToggle radIcon"></span></a><div class="rnvSlide">
+<div class="radPopup rnvPopup">
+<ul class="rnvUL">
+<li class="rnvItem rnvFirst"><a class="rnvLink" href="http://www.okhouse.gov/../Committees/Default.aspx" target="_blank" title="View our committees pages."><span class="rnvText">Committees</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://oklegislature.gov/petitions.aspx" target="_blank" title="View the discharge petitions page."><span class="rnvText">Discharge Petitions</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.okhouse.gov/../Committees/MeetingNotices.aspx" title="View our meeting notices page."><span class="rnvText">Meeting Notices</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.okhouse.gov/../Committees/ShowInterimStudies.aspx" title="View our interim studies page."><span class="rnvText">Interim Studies</span></a></li><li class="rnvItem rnvLast"><a class="rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Committees" title="View our committees menu page."><span class="rnvText">Committees Menu</span></a></li>
+</ul>
+</div>
+</div></li><li class="rnvItem"><a class="rnvRootLink rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Calendars" title="View our calendars menu."><span class="rnvText">Calendars</span><span class="rnvToggle radIcon"></span></a><div class="rnvSlide">
+<div class="radPopup rnvPopup">
+<ul class="rnvUL">
+<li class="rnvItem rnvFirst"><a class="rnvLink" href="http://www.okhouse.gov/../CommitteeCalendar/Default.aspx" title="View our committee calendar pages."><span class="rnvText">Committee Calendars</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.okhouse.gov/../FloorAgenda/Default.aspx" title="View our floor calendar pages."><span class="rnvText">Floor Calendars</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.okhouse.gov/../HouseCalendar/Default.aspx" title="View our House general calendar page."><span class="rnvText">House General Calendar</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.okhouse.gov/../Legislation/LegislativeDeadlines.aspx" title="View our legislative deadlines page."><span class="rnvText">Legislative Deadlines</span></a></li><li class="rnvItem rnvLast"><a class="rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Calendars" title="View our calendars menu."><span class="rnvText">Calendars Menu</span></a></li>
+</ul>
+</div>
+</div></li><li class="rnvItem"><a class="rnvRootLink rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Media" title="View our media menu."><span class="rnvText">Media</span><span class="rnvToggle radIcon"></span></a><div class="rnvSlide">
+<div class="radPopup rnvPopup">
+<ul class="rnvUL">
+<li class="rnvItem rnvFirst"><a class="rnvLink" href="http://www.okhouse.gov/../Video/Default.aspx" title="View our House audio and video page."><span class="rnvText">House Audio/Video</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.okhouse.gov/../Video/OKSearch/Default.aspx" title="View our House audio and video search page."><span class="rnvText">House Audio/Video Search</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.okhouse.gov/Default.aspx" title="View our House media page."><span class="rnvText">House Media</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.okhouse.gov/NewsArchive.aspx" title="View the House's press releases."><span class="rnvText">Press Releases</span></a></li><li class="rnvItem rnvLast"><a class="rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Media" title="View our media menu."><span class="rnvText">Media Menu</span></a></li>
+</ul>
+</div>
+</div></li><li class="rnvItem"><a class="rnvRootLink rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Resources" title="View the resources menu."><span class="rnvText">Resources</span><span class="rnvToggle radIcon"></span></a><div class="rnvSlide">
+<div class="radPopup rnvPopup">
+<ul class="rnvUL">
+<li class="rnvItem rnvFirst"><a class="rnvLink" href="http://www.okhouse.gov/../Information/Default.aspx" title="View our House information page."><span class="rnvText">House Information</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.okhouse.gov/../Publications/Default.aspx" title="View our House publications page."><span class="rnvText">House Publications</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.okhouse.gov/../HouseStaff/Default.aspx" title="View the House's staff page."><span class="rnvText">House Staff</span></a></li><li class="rnvItem"><a class="rnvLink" href="http://www.okhouse.gov/../Information/SiteMap.aspx" title="View our site map."><span class="rnvText">Site Map</span></a></li><li class="rnvItem rnvLast"><a class="rnvLink" href="http://www.okhouse.gov/../Menu.aspx?MenuFile=Resources" title="View the resources menu."><span class="rnvText">Resources Menu</span></a></li>
+</ul>
+</div>
+</div></li><li class="rnvItem rnvLast"><a class="rnvRootLink rnvLink" href="http://www.okhouse.gov/../Today.aspx" title="View today's events in the House."><span class="rnvText">Today in the House</span></a></li>
+</ul>
+</div><div class="rnvHiddenGroups">
+</div><input id="ctl00_mainNav_ClientState" name="ctl00_mainNav_ClientState" type="hidden"/>
+</div>
+</nav>
+<div id="open">
+<h1 class="house">House of Representatives
+                        </h1>
+<div class="contentholder">
+<div id="ctl00_ContentPlaceHolder1_RadWindowManager1" style="z-index:auto!important;display:none;">
+<div id="ctl00_ContentPlaceHolder1_rwShowStory" style="display:none;">
+<div id="ctl00_ContentPlaceHolder1_rwShowStory_C" style="display:none;">
+</div><input id="ctl00_ContentPlaceHolder1_rwShowStory_ClientState" name="ctl00_ContentPlaceHolder1_rwShowStory_ClientState" type="hidden"/>
+</div><div id="ctl00_ContentPlaceHolder1_RadWindowManager1_alerttemplate" style="display:none;">
+<div class="rwDialog rwAlertDialog">
+<div class="rwDialogContent">
+<div class="rwDialogMessage">{1}</div>
+</div>
+<div class="rwDialogButtons">
+<button class="rwOkBtn" onclick="$find('{0}').close(true); return false;" type="button">##LOC[OK]##</button>
+</div>
+</div>
+</div><div id="ctl00_ContentPlaceHolder1_RadWindowManager1_prompttemplate" style="display:none;">
+<div class="rwDialog rwPromptDialog">
+<div class="rwDialogContent">
+<div class="rwDialogMessage">{1}</div>
+<div class="rwPromptInputContainer">
+<script type="text/javascript">
+						function RadWindowprompt_detectenter(id, ev, input) {
+							if (!ev) ev = window.event;
+							if (ev.keyCode == 13) {
+								var but = input.parentNode.parentNode.parentNode.getElementsByTagName("button")[0];
+								if (but) {
+									if (but.click) {
+										but.click();
+									}
+									else if (but.onclick) {
+										but.focus();
+										var click = but.onclick;
+										but.onclick = null;
+										if (click) click.call(but);
+									}
+								}
+								return false;
+							}
+							else return true;
+						}
+					</script>
+<input class="rwPromptInput radPreventDecorate" onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" title="Enter Value" type="text" value="{2}"/>
+</div>
+</div>
+<div class="rwDialogButtons">
+<button class="rwOkBtn" onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value); return false;" type="button">##LOC[OK]##</button>
+<button class="rwCancelBtn" onclick="$find('{0}').close(null); return false;" type="button">##LOC[Cancel]##</button>
+</div>
+</div>
+</div><div id="ctl00_ContentPlaceHolder1_RadWindowManager1_confirmtemplate" style="display:none;">
+<div class="rwDialog rwConfirmDialog">
+<div class="rwDialogContent">
+<div class="rwDialogMessage">{1}</div>
+</div>
+<div class="rwDialogButtons">
+<button class="rwOkBtn" onclick="$find('{0}').close(true); return false;" type="button">##LOC[OK]##</button>
+<button class="rwCancelBtn" onclick="$find('{0}').close(false); return false;" type="button">##LOC[Cancel]##</button>
+</div>
+</div>
+</div><input id="ctl00_ContentPlaceHolder1_RadWindowManager1_ClientState" name="ctl00_ContentPlaceHolder1_RadWindowManager1_ClientState" type="hidden"/>
+</div>
+<div id="divContent1">
+<div class="breadcrumbs">
+<div class="container">
+<h1 class="pull-left">House Media</h1>
+<ul class="pull-right breadcrumb">
+<li>
+<a href="http://www.okhouse.gov/../Index.aspx">Home</a>
+</li>
+<li>
+<a href="http://www.okhouse.gov/Default.aspx">Media</a>
+</li>
+<li class="active">House Media</li>
+</ul>
+</div>
+</div>
+<div class="tab-v1">
+<ul class="nav nav-tabs">
+<li class="active dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="http://www.okhouse.gov/OkhouseMedia/news_story.aspx?NewsID=3121/javascript:void(0);">
+                        House Media Pages
+                    </a>
+<ul class="dropdown-menu">
+<li class="active">
+<a data-toggle="page" href="http://www.okhouse.gov/Default.aspx">
+                                Media Home<br/>  (Latest Videos &amp; News)
+                            </a>
+</li>
+<li>
+<a data-toggle="page" href="http://www.okhouse.gov/NewsArchive.aspx">
+                                Media News<br/>  (Latest News &amp; Archives)
+                            </a>
+</li>
+<li>
+<a data-toggle="page" href="http://www.okhouse.gov/AudioFiles.aspx">
+                                Media Audio News<br/>  (Audio News Archives)
+                            </a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="http://www.okhouse.gov/OkhouseMedia/news_story.aspx?NewsID=3121/javascript:void(0);">
+                        House Audio/Video Pages
+                    </a>
+<ul class="dropdown-menu">
+<li>
+<a data-toggle="page" href="http://www.okhouse.gov/../Video/Default.aspx">
+                                House Audio/Video<br/>  (Live &amp; Archives)
+                            </a>
+</li>
+<li>
+<a data-toggle="page" href="https://www.youtube.com/user/OklahomaHouseofReps?feature=mhee">
+                                House Video Archives<br/>  (External YouTube)
+                            </a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="http://www.okhouse.gov/OkhouseMedia/news_story.aspx?NewsID=3121/javascript:void(0);">
+                        House Audio Pages
+                    </a>
+<ul class="dropdown-menu">
+<li>
+<a data-toggle="page" href="http://www.okhouse.gov/../Committees/ArchivedCommitteeAudio.aspx">
+                                Committee Archived Audio<br/>  (Years 2011 to 2013)
+                            </a>
+</li>
+<li>
+<a data-toggle="page" href="http://www.okhouse.gov/../Media/AudioArchive.aspx">
+                                House Session Audio Archives<br/>  (Years 2004-2009)
+                            </a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<br/>
+<br/>
+<div class="RadAjaxPanel" id="ctl00_ContentPlaceHolder1_ctl00_ContentPlaceHolder1_RadAjaxPanel1Panel">
+<div id="ctl00_ContentPlaceHolder1_RadAjaxPanel1">
+<div style="padding-bottom: 6px">
+<span class="textnewsmedium" id="ctl00_ContentPlaceHolder1_lblVideoHeading">Latest Video Releases</span>    
+                <a href="https://www.youtube.com/user/OklahomaHouseofReps?feature=mhee" target="_blank">
+<span class="textnewsmedium" id="ctl00_ContentPlaceHolder1_Label4" title="View more video archives.">Video Archives</span>
+</a>
+</div>
+<div class="mediaPlayerWrapper" style="width:100%">
+<div class="t-container t-container-fluid">
+<div class="t-row">
+<div class="t-col t-col-6 t-col-xs-12 t-col-sm-12 t-col-md-6">
+<iframe allowfullscreen="true" frameborder="0" height="300" id="ctl00_ContentPlaceHolder1_youTube" name="youTube" src="https://www.youtube.com/embed/i1O9-voHwhU" style="margin-top:15px;" width="500"></iframe>
+</div><div class="t-col t-col-4 t-col-xs-12 t-col-sm-8 t-col-md-4">
+<div style="background-color:black;width:265px;padding-left:10px;padding-top:1px;padding-bottom:10px;margin-top:15px;">
+<span class="playlistItem selected">
+<img alt="GA Bill Signing" border="0" id="ctl00_ContentPlaceHolder1_RadListView1_ctrl0_Image2" src="http://www.okhouse.gov/../Thumbnails/GABillSigning.jpg" style="padding-top: 4px; padding-left: 4px;padding-right:4px;"/>
+<span id="ctl00_ContentPlaceHolder1_RadListView1_ctrl0_Label2">GA Bill Signing</span>
+<img alt="Selected" border="0" class="playIcon" id="ctl00_ContentPlaceHolder1_RadListView1_ctrl0_Image3" src="http://www.okhouse.gov/../Images/playIcon.png"/>
+</span>
+<a class="playlistItem" href="http://www.okhouse.gov/#" onclick="selectVideo(this,1); return false;">
+<img alt="Veteran of the Week" border="0" id="ctl00_ContentPlaceHolder1_RadListView1_ctrl1_Image1" src="http://www.okhouse.gov/../Thumbnails/VetMay20_2019.jpg" style="padding-top: 4px; padding-left: 4px;padding-right:4px;"/>
+<span id="ctl00_ContentPlaceHolder1_RadListView1_ctrl1_Label1">Veteran of the Week</span>
+</a>
+<a class="playlistItem" href="http://www.okhouse.gov/#" onclick="selectVideo(this,2); return false;">
+<img alt="HB1269 Press Conference" border="0" id="ctl00_ContentPlaceHolder1_RadListView1_ctrl2_Image1" src="http://www.okhouse.gov/../Thumbnails/HB1269Thumb.jpg" style="padding-top: 4px; padding-left: 4px;padding-right:4px;"/>
+<span id="ctl00_ContentPlaceHolder1_RadListView1_ctrl2_Label1">HB1269 Press Conference</span>
+</a>
+<a class="playlistItem" href="http://www.okhouse.gov/#" onclick="selectVideo(this,3); return false;">
+<img alt="Budget Agreement Presser" border="0" id="ctl00_ContentPlaceHolder1_RadListView1_ctrl3_Image1" src="http://www.okhouse.gov/../Thumbnails/BudgetPresser2019.jpg" style="padding-top: 4px; padding-left: 4px;padding-right:4px;"/>
+<span id="ctl00_ContentPlaceHolder1_RadListView1_ctrl3_Label1">Budget Agreement Presser</span>
+</a>
+<input id="ctl00_ContentPlaceHolder1_RadListView1_ClientState" name="ctl00_ContentPlaceHolder1_RadListView1_ClientState" type="hidden"/><span id="ctl00_ContentPlaceHolder1_RadListView1" style="display:none;"></span>
+</div>
+</div><div class="t-col t-col-2 t-col-xs-12 t-col-sm-4 t-col-md-2 t-hidden-xs">
+<br/>
+<a href="https://www.facebook.com/oklahoma.house.of.reps" id="ctl00_ContentPlaceHolder1_hlFaceBook" target="_blank" title="Oklahoma House of Representatives Facebook Link"><img border="0" src="http://www.okhouse.gov/../images/facebook-house.png" title="Oklahoma House of Representatives Facebook Link"/></a>
+<br/>
+<a href="https://www.youtube.com/user/OklahomaHouseofReps?feature=mhee" id="ctl00_ContentPlaceHolder1_hlYouTube" target="_blank" title="Oklahoma House of Representatives YouTube Link"><img border="0" src="http://www.okhouse.gov/../images/youtube-icon.png" title="Oklahoma House of Representatives YouTube Link"/></a>
+</div>
+</div>
+</div>
+</div>
+<br/>
+<div class="t-container t-container-fluid">
+<div class="t-row">
+<div class="t-col t-col-8 t-col-xs-12 t-col-sm-6 t-col-md-8" style="padding-left: 5px; padding-right: 5px;">
+<hr/>
+<div style="position: relative; padding-bottom: 6px;width:98%;">
+<span class="textnewsmedium" id="ctl00_ContentPlaceHolder1_lblPressReleases">Latest Press Releases</span>    
+                                    <a href="http://www.okhouse.gov/NewsArchive.aspx">
+<span class="textnewsmedium" id="ctl00_ContentPlaceHolder1_Label5" title="View more press releases.">Press Release Archives</span>
+</a>
+<div style="position: relative; float: right; padding-right: 5px;">
+<a href="http://www.okhouse.gov/feed/Default.aspx" id="ctl00_ContentPlaceHolder1_hlRSSFeed" target="_blank" title="RSS Feed"><img border="0" src="http://www.okhouse.gov/../images/rssfeed.png" title="RSS Feed"/></a>
+</div>
+</div>
+<div class="RadGrid RadGrid_Bootstrap" id="ctl00_ContentPlaceHolder1_RadGrid1" style="border-style:None;width:98%;">
+<table border="0" class="rgMasterTable" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00" style="table-layout:auto;empty-cells:show;" width="100%">
+<colgroup>
+<col/>
+</colgroup>
+<thead>
+<tr style="display:none;">
+<th scope="col">Latest News</th>
+</tr>
+</thead><tfoot>
+<tr class="rgFooter">
+<td>
+<center>
+                                                        Click on the story title to view in window or "Read more..." to view in new page!
+                                                    </center>
+</td>
+</tr>
+</tfoot><tbody>
+<tr class="rgRow" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00__0">
+<td class="text-justify">
+<span id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl04_Label1">6/27/2019 10:35:00 AM</span><br/>
+<span id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl04_Label3">
+<a href="http://www.okhouse.gov/#" onclick="openRadWindow('5467');
+                                                            
+                                                            return false;" title="Click to View Story!">
+                                                        Interim Study on Traumatic Brain Injury Requested By Ranson
+                                                        </a>
+</span>
+<br/>
+<span class="text-justify" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl04_Label2"></span> 
+                                                    <a href="http://www.okhouse.gov/ShowStory.aspx?MediaNewsID=5467" target="_blank" title="Click here to display in a new page.">Read more...</a>
+</td>
+</tr><tr class="rgAltRow" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00__1">
+<td class="text-justify">
+<span id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl06_Label1">6/26/2019 1:42:00 PM</span><br/>
+<span id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl06_Label3">
+<a href="http://www.okhouse.gov/#" onclick="openRadWindow('5466');
+                                                            
+                                                            return false;" title="Click to View Story!">
+                                                        Provenzano Requests Three Education-Related Interim Studies 
+                                                        </a>
+</span>
+<br/>
+<span class="text-justify" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl06_Label2"></span> 
+                                                    <a href="http://www.okhouse.gov/ShowStory.aspx?MediaNewsID=5466" target="_blank" title="Click here to display in a new page.">Read more...</a>
+</td>
+</tr><tr class="rgRow" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00__2">
+<td class="text-justify">
+<span id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl08_Label1">6/25/2019 2:36:00 PM</span><br/>
+<span id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl08_Label3">
+<a href="http://www.okhouse.gov/#" onclick="openRadWindow('5465');
+                                                            
+                                                            return false;" title="Click to View Story!">
+                                                        Missing and Murdered Indigenous Women Focus of Dollens Study Request?
+                                                        </a>
+</span>
+<br/>
+<span class="text-justify" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl08_Label2"></span> 
+                                                    <a href="http://www.okhouse.gov/ShowStory.aspx?MediaNewsID=5465" target="_blank" title="Click here to display in a new page.">Read more...</a>
+</td>
+</tr><tr class="rgAltRow" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00__3">
+<td class="text-justify">
+<span id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl10_Label1">6/25/2019 2:35:00 PM</span><br/>
+<span id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl10_Label3">
+<a href="http://www.okhouse.gov/#" onclick="openRadWindow('5464');
+                                                            
+                                                            return false;" title="Click to View Story!">
+                                                        Munson Chosen to Participate in Henry Toll Fellowship
+                                                        </a>
+</span>
+<br/>
+<span class="text-justify" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl10_Label2"></span> 
+                                                    <a href="http://www.okhouse.gov/ShowStory.aspx?MediaNewsID=5464" target="_blank" title="Click here to display in a new page.">Read more...</a>
+</td>
+</tr><tr class="rgRow" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00__4">
+<td class="text-justify">
+<span id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl12_Label1">6/7/2019 2:11:00 PM</span><br/>
+<span id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl12_Label3">
+<a href="http://www.okhouse.gov/#" onclick="openRadWindow('5463');
+                                                            
+                                                            return false;" title="Click to View Story!">
+                                                        Speaker McCall Names Members to LOFT Oversight Committee; House Budget Chair Kevin Wallace Co-Chair
+                                                        </a>
+</span>
+<br/>
+<span class="text-justify" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl12_Label2">House Speaker Charles McCall today appointed members to the oversight committee for the Legislative Office of Fiscal Transparency (LOFT), a recently created legislative office to evaluate agency budgets and programs for lawmakers.</span> 
+                                                    <a href="http://www.okhouse.gov/ShowStory.aspx?MediaNewsID=5463" target="_blank" title="Click here to display in a new page.">Read more...</a>
+</td>
+</tr>
+</tbody>
+</table><div id="ctl00_ContentPlaceHolder1_RadGrid1_SharedCalendarContainer" style="display:none;">
+</div><input id="ctl00_ContentPlaceHolder1_RadGrid1_ClientState" name="ctl00_ContentPlaceHolder1_RadGrid1_ClientState" type="hidden"/> </div>
+</div><div class="t-col t-col-4 t-col-xs-12 t-col-sm-6 t-col-md-4" style="padding-left: 5px; padding-right: 5px;">
+<hr/>
+<p class="text-center">
+<span class="textnewsmedium" id="ctl00_ContentPlaceHolder1_lblOfficeDescription" style="display:inline-block;">Communications &amp;<br/>Public Affairs Division</span>
+</p>
+<div class="RadGrid RadGrid_Bootstrap gridcenter" id="ctl00_ContentPlaceHolder1_dgrdStaff" style="border-style:Solid;width:100%;">
+<table border="0" class="rgMasterTable" id="ctl00_ContentPlaceHolder1_dgrdStaff_ctl00" style="table-layout:auto;empty-cells:show;" width="100%">
+<colgroup>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th class="rgHeader" scope="col" style="text-align:left;">Staff Name with Email Link/Job Title</th>
+</tr>
+</thead><tfoot>
+<tr class="rgFooter">
+<td> </td>
+</tr>
+</tfoot><tbody>
+<tr class="rgRow" id="ctl00_ContentPlaceHolder1_dgrdStaff_ctl00__0">
+<td align="left">
+<b><a href="http://www.okhouse.gov/OkhouseMedia/news_story.aspx?NewsID=3121/mailto:jason.warfe@okhouse.gov" title="Staff Name with Email Address">Jason Warfe</a></b>
+                                                      
+                                                    <a id="ctl00_ContentPlaceHolder1_dgrdStaff_ctl00_ctl04_hlWebPage" title="Click here to view the web page!"></a>
+<br/>
+<i>Director of Communications &amp; Public Affairs</i>
+</td>
+</tr><tr class="rgAltRow" id="ctl00_ContentPlaceHolder1_dgrdStaff_ctl00__1">
+<td align="left">
+<b><a href="http://www.okhouse.gov/OkhouseMedia/news_story.aspx?NewsID=3121/mailto:Tricia.Pemberton@okhouse.gov" title="Staff Name with Email Address">Tricia Pemberton</a></b>
+                                                      
+                                                    <a id="ctl00_ContentPlaceHolder1_dgrdStaff_ctl00_ctl06_hlWebPage" title="Click here to view the web page!"></a>
+<br/>
+<i>Deputy Press Secretary</i>
+</td>
+</tr><tr class="rgRow" id="ctl00_ContentPlaceHolder1_dgrdStaff_ctl00__2">
+<td align="left">
+<b><a href="http://www.okhouse.gov/OkhouseMedia/news_story.aspx?NewsID=3121/mailto:wes.carter@okhouse.gov" title="Staff Name with Email Address">Wesley Carter</a></b>
+                                                      
+                                                    <a id="ctl00_ContentPlaceHolder1_dgrdStaff_ctl00_ctl08_hlWebPage" title="Click here to view the web page!"></a>
+<br/>
+<i>Associate Press Secretary</i>
+</td>
+</tr><tr class="rgAltRow" id="ctl00_ContentPlaceHolder1_dgrdStaff_ctl00__3">
+<td align="left">
+<b><a href="http://www.okhouse.gov/OkhouseMedia/news_story.aspx?NewsID=3121/mailto:Tori.Garrett@okhouse.gov" title="Staff Name with Email Address">Tori Garrett</a></b>
+                                                      
+                                                    <a id="ctl00_ContentPlaceHolder1_dgrdStaff_ctl00_ctl10_hlWebPage" title="Click here to view the web page!"></a>
+<br/>
+<i>Associate Press Secretary</i>
+</td>
+</tr><tr class="rgRow" id="ctl00_ContentPlaceHolder1_dgrdStaff_ctl00__4">
+<td align="left">
+<b><a href="http://www.okhouse.gov/OkhouseMedia/news_story.aspx?NewsID=3121/mailto:john.flannigan@okhouse.gov" title="Staff Name with Email Address">John Flannigan</a></b>
+                                                      
+                                                    <a id="ctl00_ContentPlaceHolder1_dgrdStaff_ctl00_ctl12_hlWebPage" title="Click here to view the web page!"></a>
+<br/>
+<i>Graphics Designer</i>
+</td>
+</tr>
+</tbody>
+</table><div id="ctl00_ContentPlaceHolder1_dgrdStaff_SharedCalendarContainer" style="display:none;">
+</div><input id="ctl00_ContentPlaceHolder1_dgrdStaff_ClientState" name="ctl00_ContentPlaceHolder1_dgrdStaff_ClientState" type="hidden"/> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-v1">
+<div class="copyright">
+<div class="container" style="line-height: 1em;">
+<p class="text-center">
+                                    2019 © All Rights Reserved. Oklahoma House of Representatives |
+                                        <a href="http://www.okhouse.gov/../Policies/Default.aspx" id="ctl00_HyperLink1" title="View our Website Policies page!">Website Policies</a>
+                                    |
+                                        <a href="http://www.okhouse.gov/../Information/SiteMap.aspx" id="ctl00_HyperLink2" title="View our site map page.">Site Map</a>
+                                    |
+                                        <a href="http://www.okhouse.gov/../Information/FAQs.aspx" id="ctl00_HyperLink3" title="View our FAQs page.">FAQs</a>
+                                    |
+                                        <a href="http://www.okhouse.gov/../Information/Help.aspx" id="ctl00_HyperLink4" title="View our help page.">Help</a>
+                                    |
+                                        <a href="http://www.okhouse.gov/../Index.aspx" id="ctl00_HyperLink5" title="View our home page.">Home</a>
+<br/>
+                                    2300 N Lincoln Blvd., Oklahoma City, OK 73105 | (405) 521-2711 | (800) 522-8502
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="background"></div>
+<script type="text/javascript">
+//<![CDATA[
+window.__TsmHiddenField = $get('ctl00_ScriptManager1_TSM');Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadFormDecorator, {"_renderMode":2,"clientStateFieldID":"ctl00_FormDecorator1_ClientState","decoratedControls":65535,"decorationZoneID":"decorationZone","enabled":true,"skin":"Bootstrap"}, null, null, $get("ctl00_FormDecorator1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTipManager, {"_cssClass":"","_manualCloseButtonText":"Close","_renderMode":2,"_updatePanelUniqueId":"ctl00$RadToolTipManager1RTMPanel","animation":2,"clientStateFieldID":"ctl00_RadToolTipManager1_ClientState","formID":"aspnetForm","isToolTipFactory":true,"loadOnDemand":false,"offsetX":12,"position":33,"skin":"Bootstrap","targetControls":"[]"}, null, null, $get("ctl00_RadToolTipManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[{InitControlID : "",UpdatedControls : [{ControlID:"",PanelID:""}]}],"clientEvents":{OnRequestStart:"onRequestStart",OnResponseEnd:""},"defaultLoadingPanelID":"ctl00_RadAjaxLoadingPanel1","enableAJAX":true,"enableHistory":true,"links":[],"styles":[],"uniqueID":"ctl00$RadAjaxManager1","updatePanelsRenderMode":0}, null, null, $get("ctl00_RadAjaxManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxLoadingPanel, {"initialDelayTime":0,"isSticky":false,"minDisplayTime":0,"skin":"Bootstrap","uniqueID":"ctl00$RadAjaxLoadingPanel1","zIndex":90000}, null, null, $get("ctl00_RadAjaxLoadingPanel1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadNavigation, {"_renderMode":2,"_skin":"Bootstrap","clientStateFieldID":"ctl00_mainNav_ClientState","nodesData":[{"text":"Home","nodes":[{"text":"House Home","navigateUrl":"~/index.aspx"},{"text":"Senate Home","navigateUrl":"http://oksenate.gov/index.aspx","target":"_blank"},{"text":"Legislature Home","navigateUrl":"http://www.oklegislature.gov/Index.aspx","target":"_blank"}]},{"text":"Representatives","navigateUrl":"~/Menu.aspx?MenuFile=Representatives","nodes":[{"text":"Representatives","navigateUrl":"~/Members/Default.aspx"},{"text":"Leadership","navigateUrl":"~/Members/Leadership.aspx"},{"text":"Representatives Menu","visible":false,"navigateUrl":"~/Menu.aspx?MenuFile=Representatives"}]},{"text":"Legislation","navigateUrl":"~/Menu.aspx?MenuFile=Legislation","nodes":[{"text":"Basic Bill Search","navigateUrl":"http://www.oklegislature.gov/BasicSearchForm.aspx","target":"_blank"},{"text":"Advanced Bill Search","navigateUrl":"http://www.oklegislature.gov/AdvancedSearchForm.aspx","target":"_blank"},{"text":"Track Bills (LENS)","navigateUrl":"http://www.oklegislature.gov/EBillTrack/EBillTrack2.aspx","target":"_blank"},{"text":"Search Text of Measures","navigateUrl":"http://www.oklegislature.gov/tsrs_measures.aspx","target":"_blank"},{"text":"Text of Measures by Subject","navigateUrl":"http://www.oklegislature.gov/SubjectIndex.aspx?Default=A&Session=Current","target":"_blank"},{"text":"Signed Legislation","navigateUrl":"https://www.sos.ok.gov/gov/legislation.aspx","target":"_blank"},{"text":"Legislation Menu","visible":false,"navigateUrl":"~/Menu.aspx?MenuFile=Legislation"}]},{"text":"Statutes","navigateUrl":"~/Menu.aspx?MenuFile=Statutes","nodes":[{"text":"Oklahoma Constitution","navigateUrl":"http://www.oklegislature.gov/ok_constitution.aspx","target":"_blank"},{"text":"Oklahoma Statutes","navigateUrl":"http://www.oklegislature.gov/osStatuesTitle.aspx","target":"_blank"},{"text":"Search Constitution/Statutes","navigateUrl":"http://www.oklegislature.gov/tsrs_os_oc.aspx","target":"_blank"},{"text":"Constitution/Statutes Menu","visible":false,"navigateUrl":"~/Menu.aspx?MenuFile=Statutes"}]},{"text":"Committees","navigateUrl":"~/Menu.aspx?MenuFile=Committees","nodes":[{"text":"Committees","navigateUrl":"~/Committees/Default.aspx","target":"_blank"},{"text":"Discharge Petitions","navigateUrl":"http://oklegislature.gov/petitions.aspx","target":"_blank"},{"text":"Meeting Notices","navigateUrl":"~/Committees/MeetingNotices.aspx"},{"text":"Interim Studies","navigateUrl":"~/Committees/ShowInterimStudies.aspx"},{"text":"Committees Menu","visible":false,"navigateUrl":"~/Menu.aspx?MenuFile=Committees"}]},{"text":"Calendars","navigateUrl":"~/Menu.aspx?MenuFile=Calendars","nodes":[{"text":"Committee Calendars","navigateUrl":"~/CommitteeCalendar/Default.aspx"},{"text":"Floor Calendars","navigateUrl":"~/FloorAgenda/Default.aspx"},{"text":"House General Calendar","navigateUrl":"~/HouseCalendar/Default.aspx"},{"text":"Legislative Deadlines","navigateUrl":"~/Legislation/LegislativeDeadlines.aspx"},{"text":"Calendars Menu","visible":false,"navigateUrl":"~/Menu.aspx?MenuFile=Calendars"}]},{"text":"Media","navigateUrl":"~/Menu.aspx?MenuFile=Media","nodes":[{"text":"House Audio/Video","navigateUrl":"~/Video/Default.aspx"},{"text":"House Audio/Video Search","navigateUrl":"~/Video/OKSearch/Default.aspx"},{"text":"House Media","navigateUrl":"~/Media/Default.aspx"},{"text":"Press Releases","navigateUrl":"~/Media/NewsArchive.aspx"},{"text":"Media Menu","visible":false,"navigateUrl":"~/Menu.aspx?MenuFile=Media"}]},{"text":"Resources","navigateUrl":"~/Menu.aspx?MenuFile=Resources","nodes":[{"text":"House Information","navigateUrl":"~/Information/Default.aspx"},{"text":"House Publications","navigateUrl":"~/Publications/Default.aspx"},{"text":"House Staff","navigateUrl":"~/HouseStaff/Default.aspx"},{"text":"Site Map","navigateUrl":"~/Information/SiteMap.aspx"},{"text":"Resources Menu","visible":false,"navigateUrl":"~/Menu.aspx?MenuFile=Resources"}]},{"text":"Today in the House","navigateUrl":"~/Today.aspx"}]}, {"nodeMouseEnter":OnClientNodeMouseEnter,"nodeMouseLeave":OnClientNodeMouseLeave}, null, $get("ctl00_mainNav"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"_renderMode":2,"clientStateFieldID":"ctl00_ContentPlaceHolder1_rwShowStory_ClientState","destroyOnClose":true,"enableShadow":true,"formID":"aspnetForm","height":"650px","iconUrl":"","minimizeIconUrl":"","modal":true,"name":"rwShowStory","navigateUrl":"ShowStory.aspx","shortcuts":"[[\u0027closeAll\u0027,\u0027Esc\u0027]]","showContentDuringLoad":false,"skin":"Bootstrap","title":"News","visibleStatusbar":false,"width":"650px"}, null, null, $get("ctl00_ContentPlaceHolder1_rwShowStory"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"_renderMode":2,"clientStateFieldID":"ctl00_ContentPlaceHolder1_RadWindowManager1_ClientState","destroyOnClose":true,"formID":"aspnetForm","height":"650px","iconUrl":"","minimizeIconUrl":"","modal":true,"name":"RadWindowManager1","shortcuts":"[[\u0027closeAll\u0027,\u0027Esc\u0027]]","showContentDuringLoad":false,"skin":"Bootstrap","width":"650px","windowControls":"['ctl00_ContentPlaceHolder1_rwShowStory']"}, null, {"child":"ctl00_ContentPlaceHolder1_rwShowStory"}, $get("ctl00_ContentPlaceHolder1_RadWindowManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadListView, {"Skin":"Bootstrap","UniqueID":"ctl00$ContentPlaceHolder1$RadListView1","_clientSettings":{"DataBinding":{"ItemPlaceHolderID":"ctl00_ContentPlaceHolder1_RadListView1_itemPlaceholder","DataService":{}}},"_virtualItemCount":4,"clientStateFieldID":"ctl00_ContentPlaceHolder1_RadListView1_ClientState","renderMode":2,"selectedIndexes":[0]}, null, null, $get("ctl00_ContentPlaceHolder1_RadListView1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadGrid, {"ClientID":"ctl00_ContentPlaceHolder1_RadGrid1","ClientSettings":{"AllowAutoScrollOnDragDrop":true,"ShouldCreateRows":true,"DataBinding":{},"Selecting":{"CellSelectionMode":0},"Scrolling":{},"Resizing":{},"ClientMessages":{},"KeyboardNavigationSettings":{"AllowActiveRowCycle":false,"EnableKeyboardShortcuts":true,"FocusKey":89,"InitInsertKey":73,"RebindKey":82,"ExitEditInsertModeKey":27,"UpdateInsertItemKey":13,"DeleteActiveRow":127,"ExpandDetailTableKey":39,"CollapseDetailTableKey":37,"MoveDownKey":40,"MoveUpKey":38,"SaveChangesKey":85,"CancelChangesKey":81},"Animation":{},"Virtualization":{}},"Skin":"Bootstrap","UniqueID":"ctl00$ContentPlaceHolder1$RadGrid1","_activeRowIndex":"","_controlToFocus":"","_currentPageIndex":0,"_defaultDateTimeFormat":"M/d/yyyy h:mm:ss tt","_editIndexes":"[]","_embeddedSkin":true,"_freezeText":"Freeze","_gridTableViewsData":"[{\"ClientID\":\"ctl00_ContentPlaceHolder1_RadGrid1_ctl00\",\"UniqueID\":\"ctl00$ContentPlaceHolder1$RadGrid1$ctl00\",\"PageSize\":10,\"PageCount\":1,\"EditMode\":\"EditForms\",\"AllowPaging\":false,\"CurrentPageIndex\":0,\"VirtualItemCount\":0,\"AllowMultiColumnSorting\":false,\"AllowNaturalSort\":true,\"AllowFilteringByColumn\":false,\"PageButtonCount\":10,\"HasDetailTables\":false,\"HasMultiHeaders\":false,\"CheckListWebServicePath\":\"\",\"GroupLoadMode\":\"Server\",\"PagerAlwaysVisible\":false,\"IsItemInserted\":false,\"clientDataKeyNames\":[],\"hasDetailItemTemplate\":false,\"_dataBindTemplates\":false,\"_selectedItemStyle\":\"\",\"_selectedItemStyleClass\":\"rgSelectedRow\",\"_columnsData\":[{\"UniqueName\":\"column\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridTemplateColumn\",\"ColumnGroupName\":\"\",\"Editable\":false,\"DataTypeName\":\"System.String\",\"DataField\":\"\",\"Display\":true}]}]","_masterClientID":"ctl00_ContentPlaceHolder1_RadGrid1_ctl00","_shouldFocusOnPage":false,"_unfreezeText":"Unfreeze","allowMultiRowSelection":false,"clientStateFieldID":"ctl00_ContentPlaceHolder1_RadGrid1_ClientState","expandItems":{},"renderMode":2}, null, null, $get("ctl00_ContentPlaceHolder1_RadGrid1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadGrid, {"ClientID":"ctl00_ContentPlaceHolder1_dgrdStaff","ClientSettings":{"AllowAutoScrollOnDragDrop":true,"ShouldCreateRows":true,"DataBinding":{},"Selecting":{"CellSelectionMode":0},"Scrolling":{},"Resizing":{},"ClientMessages":{},"KeyboardNavigationSettings":{"AllowActiveRowCycle":false,"EnableKeyboardShortcuts":true,"FocusKey":89,"InitInsertKey":73,"RebindKey":82,"ExitEditInsertModeKey":27,"UpdateInsertItemKey":13,"DeleteActiveRow":127,"ExpandDetailTableKey":39,"CollapseDetailTableKey":37,"MoveDownKey":40,"MoveUpKey":38,"SaveChangesKey":85,"CancelChangesKey":81},"Animation":{},"Virtualization":{}},"Skin":"Bootstrap","UniqueID":"ctl00$ContentPlaceHolder1$dgrdStaff","_activeRowIndex":"","_controlToFocus":"","_currentPageIndex":0,"_defaultDateTimeFormat":"M/d/yyyy h:mm:ss tt","_editIndexes":"[]","_embeddedSkin":true,"_freezeText":"Freeze","_gridTableViewsData":"[{\"ClientID\":\"ctl00_ContentPlaceHolder1_dgrdStaff_ctl00\",\"UniqueID\":\"ctl00$ContentPlaceHolder1$dgrdStaff$ctl00\",\"PageSize\":10,\"PageCount\":1,\"EditMode\":\"EditForms\",\"AllowPaging\":false,\"CurrentPageIndex\":0,\"VirtualItemCount\":0,\"AllowMultiColumnSorting\":false,\"AllowNaturalSort\":true,\"AllowFilteringByColumn\":false,\"PageButtonCount\":10,\"HasDetailTables\":false,\"HasMultiHeaders\":false,\"CheckListWebServicePath\":\"\",\"GroupLoadMode\":\"Server\",\"PagerAlwaysVisible\":false,\"IsItemInserted\":false,\"clientDataKeyNames\":[],\"hasDetailItemTemplate\":false,\"_dataBindTemplates\":false,\"_selectedItemStyle\":\"\",\"_selectedItemStyleClass\":\"rgSelectedRow\",\"_columnsData\":[{\"UniqueName\":\"TemplateColumn\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridTemplateColumn\",\"ColumnGroupName\":\"\",\"Editable\":false,\"DataTypeName\":\"System.String\",\"DataField\":\"\",\"Display\":true}]}]","_masterClientID":"ctl00_ContentPlaceHolder1_dgrdStaff_ctl00","_shouldFocusOnPage":false,"_unfreezeText":"Unfreeze","allowMultiRowSelection":false,"clientStateFieldID":"ctl00_ContentPlaceHolder1_dgrdStaff_ClientState","expandItems":{},"renderMode":2}, null, null, $get("ctl00_ContentPlaceHolder1_dgrdStaff"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxPanel, {"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"enableAJAX":true,"enableHistory":false,"links":[],"loadingPanelID":"","styles":[],"uniqueID":"ctl00$ContentPlaceHolder1$RadAjaxPanel1"}, null, null, $get("ctl00_ContentPlaceHolder1_RadAjaxPanel1"));
+});
+//]]>
+</script>
+</form>
+<script type="text/javascript">
+            //jQuery(document).ready(function () {
+            //    App.init();
+            //});
+
+            function onRequestStart(sender, args) {
+                if (args.get_eventTarget().indexOf("ExportToExcelButton") >= 0 ||
+                    args.get_eventTarget().indexOf("ExportToWordButton") >= 0 ||
+                    args.get_eventTarget().indexOf("ExportToPdfButton") >= 0 ||
+                    args.get_eventTarget().indexOf("ExportToCsvButton") >= 0) {
+                    args.set_enableAjax(false);
+                }
+            }
+
+            function GetKeyPressSearch(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+                if (c === 13) {
+                    //alert("keycode=" + c);
+                    rtbSearch_OnButtonClick();
+                }
+            }
+
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-2210922-2', 'auto');
+            ga('send', 'pageview');
+        </script>
+<script type="text/javascript">
+        function openRadWindow(MediaNews_ID) {
+            var oWnd = radopen("ShowStory.aspx?MediaNewsID=" + MediaNews_ID, "rwShowStory");
+            //oWnd.setSize(750, 570);
+            oWnd.center();
+        }
+        
+        function selectVideo(divEl, index) {
+            var listView = $find("ctl00_ContentPlaceHolder1_RadListView1");
+            listView.fireCommand("Select", index);
+        }
+    </script>
+</body></html>

@@ -1,0 +1,204 @@
+<html><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<meta charset="utf-8"/>
+<title>Trump Twitter Archive</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="All 30,000+ of Trump's tweets, instantly searchable" name="description"/>
+<meta content="donald trump, twitter, tweets, archive, all tweets, realDonaldTrump, politics, hillary clinton, barack obama, president, presidential race, GOP, republican, democrat" name="Keywords"/>
+<meta content="//www.trumptwitterarchive.com" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="Trump Twitter Archive" property="og:title"/>
+<meta content="All 30,000+ of Trump's tweets, instantly searchable" property="og:description"/>
+<meta content="//trumptwitterarchive.com/archive_screenshot.png" property="og:image"/>
+<base href="/"/>
+<link href="https://fonts.googleapis.com/css?family=Mukta+Vaani:400,700" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet"/>
+<link href="http://www.trumptwitterarchive.com/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.trumptwitterarchive.com/favicon.png" rel="icon" sizes="96x96" type="image/png"/>
+<script>
+			if (window.location && window.location.hash) {
+				window.location = window.location.href.replace('#/', '');
+			}
+		</script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script async="" charset="utf-8" src="http://platform.twitter.com/widgets.js"></script>
+<script src="http://www.trumptwitterarchive.com/app2.js"></script>
+</head>
+<body class="ng-scope" ng-app="myApp">
+<nav class="navbar navbar-fixed-top navbar-inverse">
+<div class="container-fluid">
+<div class="navbar-header">
+<button aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar-collapse-1" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://www.trumptwitterarchive.com/"><span>Trump</span> Twitter Archive</a>
+<a class="navbar-text" href="http://www.trumptwitterarchive.com/archive">search through all of Trump's tweets</a><p></p>
+</div>
+<div class="collapse navbar-collapse" id="navbar-collapse-1">
+<ul class="nav navbar-nav navbar-right">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="http://www.trumptwitterarchive.com/#" role="button">Collections <span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="http://www.trumptwitterarchive.com/archive" ng-href="/archive">Full Archive</a></li>
+<li class="divider" role="separator"></li>
+<li><a href="http://www.trumptwitterarchive.com/highlights/authoritarianism" ng-href="/highlights/authoritarianism">Authoritarianism</a></li>
+<li><a href="http://www.trumptwitterarchive.com/highlights/birtherism" ng-href="/highlights/birtherism">Birtherism</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/global%20warming/ftff" ng-href="/archive/global%20warming/ftff">Global Warming</a></li>
+<li><a href="http://www.trumptwitterarchive.com/highlights/profanity" ng-href="/highlights/profanity">Profanity</a></li>
+<li><a href="http://www.trumptwitterarchive.com/highlights/retaliation" ng-href="/highlights/retaliation">Retaliation</a></li>
+<li><a href="http://www.trumptwitterarchive.com/highlights/vaccines" ng-href="/highlights/vaccines">Vaccines</a></li>
+<li><a href="http://www.trumptwitterarchive.com/highlights/women" ng-href="/highlights/women">Women</a></li>
+<li class="divider" role="separator"></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/@Lord_Sugar/ftff" ng-href="/archive/@Lord_Sugar/ftff">Feud: Lord Sugar</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/@rosie/ftff" ng-href="/archive/@rosie/ftff">Feud: Rosie O'Donnell</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/@macmiller/ftff" ng-href="/archive/@macmiller/ftff">Feud: Mac Miller</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/@toure/ftff" ng-href="/archive/@toure/ftff">Feud: Toure</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="http://www.trumptwitterarchive.com/#" role="button">Additional Accounts <span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="http://www.trumptwitterarchive.com/allaccounts" ng-href="/allaccounts">See full list (50+)</a></li>
+<li class="divider" role="separator"></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/account/potus" ng-href="/archive/account/potus">Donald Trump @potus</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/account/donaldjtrumpjr" ng-href="/archive/account/donaldjtrumpjr">Donald Trump Jr. @donaldjtrumpjr</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/account/erictrump" ng-href="/archive/account/erictrump">Eric Trump @erictrump</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/account/hillaryclinton" ng-href="/archive/account/hillaryclinton">Hillary Clinton @hillaryclinton</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/account/ivankatrump" ng-href="/archive/account/ivankatrump">Ivanka Trump @ivankatrump</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/account/genflynn" ng-href="/archive/account/genflynn">Mike Flynn @genflynn</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/account/govpencein" ng-href="/archive/account/govpencein">Mike Pence @govpencein</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/account/vp" ng-href="/archive/account/vp">Mike Pence @vp</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/account/senatemajldr" ng-href="/archive/account/senatemajldr">Mitch McConnell @senatemajldr</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/account/speakerryan" ng-href="/archive/account/speakerryan">Paul Ryan @speakerryan</a></li>
+<li><a href="http://www.trumptwitterarchive.com/archive/account/rogerjstonejr" ng-href="/archive/account/rogerjstonejr">Roger Stone @rogerjstonejr</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="http://www.trumptwitterarchive.com/#" role="button">FAQs <span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="http://www.trumptwitterarchive.com/about">About / FAQs</a></li>
+<li class="divider" role="separator"></li>
+<li><a href="http://www.trumptwitterarchive.com/mailto:trumptwitterarchive@gmail.com">trumptwitterarchive@gmail.com</a></li>
+<li><a href="https://twitter.com/realtrumptweet" target="_blank">@realtrumptweet</a></li>
+</ul>
+</li>
+</ul><form action="https://www.paypal.com/cgi-bin/webscr" class="navbar-form navbar-right ng-pristine ng-valid" method="post" target="_blank">
+<input name="cmd" type="hidden" value="_s-xclick"/>
+<input name="encrypted" type="hidden" value="-----BEGIN PKCS7-----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-----END PKCS7-----"/>
+<input class="btn btn-sm btn-primary form-control" type="submit" value="Support"/>
+<img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"/>
+</form>
+</div>
+</div>
+</nav>
+<div class="view-frame ng-scope" ng-view=""><div class="container-fluid ng-scope" id="archive" ng-controller="archiveCtrl">
+<div class="center ng-hide" id="export-box" ng-show="showExport">
+<div id="export-options">
+<div><input class="pointer ng-pristine ng-untouched ng-valid" ng-model="exportSettings.id_str" type="checkbox"/><label>Tweet Id</label></div>
+<div><input class="pointer ng-pristine ng-untouched ng-valid" ng-model="exportSettings.text" type="checkbox"/><label>Text</label></div>
+<div><input class="pointer ng-pristine ng-untouched ng-valid" ng-model="exportSettings.created_at" type="checkbox"/><label>Created At (GMT)</label></div>
+<div><input class="pointer ng-pristine ng-untouched ng-valid" ng-model="exportSettings.favorite_count" type="checkbox"/><label>Favorites</label></div>
+<div><input class="pointer ng-pristine ng-untouched ng-valid" ng-model="exportSettings.retweet_count" type="checkbox"/><label>Retweets</label></div>
+<div><input class="pointer ng-pristine ng-untouched ng-valid" ng-model="exportSettings.is_retweet" type="checkbox"/><label>Is Retweet</label></div>
+<div><input class="pointer ng-pristine ng-untouched ng-valid" ng-model="exportSettings.source" type="checkbox"/><label>Source</label></div>
+</div>
+<div>
+<input class="ng-pristine ng-untouched ng-valid ng-valid-maxlength" maxlength="1" ng-model="exportSeparator" type="text"/>
+<button class="btn" ng-click="export('CSV')">Update as CSV</button>
+<button class="btn" ng-click="export('JSON')">Update as JSON</button>
+<button class="btn" ng-click="showExport = false">Close</button>
+</div>
+<textarea class="ng-pristine ng-untouched ng-valid" ng-model="exported"></textarea>
+</div>
+<div class="col-md-12 input-group input-group-lg" id="search-bar">
+<span class="input-group-addon pointer ng-binding" id="sizing-addon1" ng-click="showUrlToPage()" title="click for link to this search">0</span>
+<input aria-describedby="sizing-addon1" class="form-control ng-pristine ng-untouched ng-valid" ng-model="query" placeholder="Search..." tabindex="1" type="text"/>
+<div class="input-group-btn">
+<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Tips <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right">
+<li><a href="http://www.trumptwitterarchive.com/#" ng-click="query = 'obama &amp;&amp; golf'"><span>obama &amp;&amp; golf</span> all tweets with both obama <b>and</b> golf</a></li>
+<li><a href="http://www.trumptwitterarchive.com/#" ng-click="query = 'bad || sad'"><span>bad || sad</span> all tweets with either bad <b>or</b> sad</a></li>
+<li><a href="http://www.trumptwitterarchive.com/#" ng-click="query = 'loser ~~ closer'"><span>loser ~~ closer</span> all tweets with loser but <b>not</b> closer</a></li>
+<li class="divider" role="separator"></li>
+<li><a href="http://www.trumptwitterarchive.com/#">try combining operators</a></li>
+<li class="divider" role="separator"></li>
+<li><a href="http://www.trumptwitterarchive.com/#">click the number on the left for a link to your search</a></li>
+</ul>
+</div>
+<span class="input-group-addon ng-binding" id="sizing-addon2">@realdonaldtrump</span>
+</div>
+<div class="col-md-12" id="control-bar">
+<div id="control-buttons">
+<div class="dropdown" id="exports-button">
+<button class="btn btn-danger form-control" data-toggle="dropdown" type="button">Export
+				<span class="caret"></span></button>
+<ul class="dropdown-menu">
+<li><b>Performance slow over 10,000 items</b></li>
+<li class="divider" role="separator"></li>
+<li class="pointer" ng-click="export('CSV')">CSV (for MS Excel)</li>
+<li class="pointer" ng-click="export('JSON')">JSON</li>
+</ul>
+</div>
+<div class="dropdown" id="options-button">
+<button class="btn btn-danger form-control" data-toggle="dropdown" type="button">Options
+			  <span class="caret"></span></button>
+<ul class="dropdown-menu">
+<li>
+<input class="pointer ng-pristine ng-untouched ng-valid" ng-model="settings.exactMatch" type="checkbox"/>exact word search
+					</li>
+<li>
+<input class="pointer ng-pristine ng-untouched ng-valid" ng-model="settings.retweets" type="checkbox"/>show retweets
+					</li>
+<li>
+<input class="pointer ng-pristine ng-untouched ng-valid" ng-model="settings.showManualRetweets" type="checkbox"/>show manual retweets
+					</li>
+<li class="ng-scope" ng-if="hasRetweetsAndFavorites">
+<input class="pointer ng-pristine ng-untouched ng-valid" ng-model="settings.showRetweetCount" type="checkbox"/>show retweet count
+					</li>
+<li class="ng-scope" ng-if="hasRetweetsAndFavorites">
+<input class="pointer ng-pristine ng-untouched ng-valid" ng-model="settings.showFavoriteCount" type="checkbox"/>show favorite count
+					</li>
+<li class="ng-scope" ng-if="hasRetweetsAndFavorites">
+<input class="pointer" ng-checked="orderBy === 'retweet_count'" ng-click="setOrder('retweet_count')" type="checkbox"/>order by retweet count
+					</li>
+<li class="ng-scope" ng-if="hasRetweetsAndFavorites">
+<input class="pointer" ng-checked="orderBy === 'favorite_count'" ng-click="setOrder('favorite_count')" type="checkbox"/>order by favorite count
+					</li>
+</ul>
+</div>
+<button class="btn btn-danger" ng-click="settings.descending = !settings.descending">
+<span class="ng-scope" ng-if="settings.descending">↓</span>
+</button>
+</div>
+<div id="control-dates">
+<input class="ng-pristine ng-untouched ng-valid" ng-model="dateRange.start" placeholder="yyyy-MM-dd" type="date"/>
+<input class="ng-pristine ng-untouched ng-valid" ng-model="dateRange.end" placeholder="yyyy-MM-dd" type="date"/>
+</div>
+<div id="control-selects">
+<select class="ng-pristine ng-untouched ng-valid" ng-model="times.time">
+<option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="Any time">Any time</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="12:00am">12:00am</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="1:00am">1:00am</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="2:00am">2:00am</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="3:00am">3:00am</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="4:00am">4:00am</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="5:00am">5:00am</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="6:00am">6:00am</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="7:00am">7:00am</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="8:00am">8:00am</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="9:00am">9:00am</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="10:00am">10:00am</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="11:00am">11:00am</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="12:00pm">12:00pm</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="1:00pm">1:00pm</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="2:00pm">2:00pm</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="3:00pm">3:00pm</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="4:00pm">4:00pm</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="5:00pm">5:00pm</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="6:00pm">6:00pm</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="7:00pm">7:00pm</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="8:00pm">8:00pm</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="9:00pm">9:00pm</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="10:00pm">10:00pm</option><option class="ng-binding ng-scope" ng-repeat="hour in times.options" value="11:00pm">11:00pm</option>
+</select>
+<select class="ng-pristine ng-untouched ng-valid" ng-model="sources.source"><option value="? string:All devices ?"></option>
+</select>
+</div>
+</div>
+<div class="col-md-12" id="results">
+<ol id="fixed" when-scrolled="loadMore()">
+</ol>
+</div>
+<div id="loading-icon" ng-hide="loaded.length">
+<svg class="uil-default" height="120px" preserveaspectratio="xMidYMid" viewbox="0 0 100 100" width="120px" xmlns="http://www.w3.org/2000/svg"><rect class="bk" fill="none" height="100" width="100" x="0" y="0"></rect><rect fill="#00b2ff" height="20" rx="5" ry="5" transform="rotate(0 50 50) translate(0 -30)" width="7" x="46.5" y="40"> <animate attributename="opacity" begin="0s" dur="1s" from="1" repeatcount="indefinite" to="0"></animate></rect><rect fill="#00b2ff" height="20" rx="5" ry="5" transform="rotate(30 50 50) translate(0 -30)" width="7" x="46.5" y="40"> <animate attributename="opacity" begin="0.08333333333333333s" dur="1s" from="1" repeatcount="indefinite" to="0"></animate></rect><rect fill="#00b2ff" height="20" rx="5" ry="5" transform="rotate(60 50 50) translate(0 -30)" width="7" x="46.5" y="40"> <animate attributename="opacity" begin="0.16666666666666666s" dur="1s" from="1" repeatcount="indefinite" to="0"></animate></rect><rect fill="#00b2ff" height="20" rx="5" ry="5" transform="rotate(90 50 50) translate(0 -30)" width="7" x="46.5" y="40"> <animate attributename="opacity" begin="0.25s" dur="1s" from="1" repeatcount="indefinite" to="0"></animate></rect><rect fill="#00b2ff" height="20" rx="5" ry="5" transform="rotate(120 50 50) translate(0 -30)" width="7" x="46.5" y="40"> <animate attributename="opacity" begin="0.3333333333333333s" dur="1s" from="1" repeatcount="indefinite" to="0"></animate></rect><rect fill="#00b2ff" height="20" rx="5" ry="5" transform="rotate(150 50 50) translate(0 -30)" width="7" x="46.5" y="40"> <animate attributename="opacity" begin="0.4166666666666667s" dur="1s" from="1" repeatcount="indefinite" to="0"></animate></rect><rect fill="#00b2ff" height="20" rx="5" ry="5" transform="rotate(180 50 50) translate(0 -30)" width="7" x="46.5" y="40"> <animate attributename="opacity" begin="0.5s" dur="1s" from="1" repeatcount="indefinite" to="0"></animate></rect><rect fill="#00b2ff" height="20" rx="5" ry="5" transform="rotate(210 50 50) translate(0 -30)" width="7" x="46.5" y="40"> <animate attributename="opacity" begin="0.5833333333333334s" dur="1s" from="1" repeatcount="indefinite" to="0"></animate></rect><rect fill="#00b2ff" height="20" rx="5" ry="5" transform="rotate(240 50 50) translate(0 -30)" width="7" x="46.5" y="40"> <animate attributename="opacity" begin="0.6666666666666666s" dur="1s" from="1" repeatcount="indefinite" to="0"></animate></rect><rect fill="#00b2ff" height="20" rx="5" ry="5" transform="rotate(270 50 50) translate(0 -30)" width="7" x="46.5" y="40"> <animate attributename="opacity" begin="0.75s" dur="1s" from="1" repeatcount="indefinite" to="0"></animate></rect><rect fill="#00b2ff" height="20" rx="5" ry="5" transform="rotate(300 50 50) translate(0 -30)" width="7" x="46.5" y="40"> <animate attributename="opacity" begin="0.8333333333333334s" dur="1s" from="1" repeatcount="indefinite" to="0"></animate></rect><rect fill="#00b2ff" height="20" rx="5" ry="5" transform="rotate(330 50 50) translate(0 -30)" width="7" x="46.5" y="40"> <animate attributename="opacity" begin="0.9166666666666666s" dur="1s" from="1" repeatcount="indefinite" to="0"></animate></rect></svg>
+</div>
+<div class="ng-hide" id="loaded-dates" ng-show="showModal">
+<button class="btn btn-xs btn-danger" ng-click="removeDatesModal()">close</button>
+</div>
+</div>
+</div>
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/widget_iframe.ed954039b4da87657c2de914fe37d022.html?origin=http%3A%2F%2Fwww.trumptwitterarchive.com" style="display: none;" title="Twitter settings iframe"></iframe></body></html>

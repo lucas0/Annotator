@@ -1,0 +1,319 @@
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Florida Department of Children and Families</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-type"/>
+<meta content="text/css" http-equiv="Content-style-type"/>
+<meta content="text/javascript" http-equiv="Content-script-type"/>
+<meta content="dcf,florida,accessflorida,food assistance,cash assistance,access,ess,public assistance,tanf,medicaid" name="keywords"/>
+<link href="http://www.myflorida.com/accessflorida/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.myflorida.com/accessflorida/css/menu2.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.myflorida.com/accessflorida/css/stylenew.css" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="/accessflorida/css/styleie7.css" type="text/css" />
+<![endif]-->
+<link href="http://www.myflorida.com/accessflorida/css/ticker-stylev3.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.myflorida.com/accessflorida/css/slick.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="http://www.myflorida.com/accessflorida/css/accessv3.css" rel="stylesheet" type="text/css"/>
+<style>
+.slide_caption {
+    background-color: rgba(255, 255, 255, 0.85);
+    min-height: 0px;
+    padding: 10px;
+}
+</style>
+<script async="" src="http://www.google-analytics.com/ga.js" type="text/javascript"></script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+<script src="http://www.myflorida.com/accessflorida/scripts/jquery.ticker.js" type="text/javascript"></script>
+<script src="http://www.myflorida.com/accessflorida/scripts/slick.js" type="text/javascript"></script>
+<script type="text/javascript">
+function decodeSearchString() {
+   var nameValue = new Array();
+   var searchStr = unescape(location.search.substring(1));
+   if (searchStr) {
+       var formElement = searchStr.split("&");
+       var tmpArray = new Array();
+       for (k = 0; k < formElement.length; k++) {
+            tmpArray = formElement[k].split("=");
+            nameValue[tmpArray[0]] = tmpArray[1];
+       }
+   }
+   return nameValue
+}
+var srchData = decodeSearchString();
+var action = ( srchData.performAction );
+var siteid = (srchData.partnerSite );
+if (action == undefined) action="";
+if (siteid == undefined) siteid="";
+</script>
+<script type="text/javascript">
+function loadFeed(){
+	if($(".ticker-wrapper").length){
+		$(".ticker-wrapper").remove();
+	}
+	$(".infobox").prepend("<ul id='js-news' class='js-hidden'></ul>");		
+	$('#js-news').ticker({
+		titleText: '',
+		htmlFeed: false,
+		ajaxFeed: true,
+		pauseOnItems: 15000,
+		feedUrl: 'RSSLatest.xml',
+		feedType: 'xml'
+	});
+}
+
+$(document).ready(function() {
+	loadFeed();
+	setInterval(loadFeed,600000);
+	
+	$('.slides').show();
+	$('.slide_caption').show();
+	
+	$('.single-item').slick({
+		autoplay:true,
+		autoplaySpeed:8000,
+		fade:true,
+		speed:1500,
+		dots:false
+	});
+
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6575999-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="pageWrapper">
+<div id="skip-link"> <a class="element-invisible" href="http://www.myflorida.com/#topWrapper">Skip to main content</a> </div>
+<div id="header">
+<div id="logo"> <a href="https://www.myflfamilies.com" title="DCF Home"> <img alt="Clicking the Department of Children and Families Logo will take you to the main Department website." src="http://www.myflorida.com/accessflorida/images/logo.png"/> </a> </div>
+<div id="searchHeader">
+<div>
+<form action="https://www.myflfamilies.com/Search.shtml" id="cse-search-box" title="This form allows you to search the DCF website">
+<p style="display:none;">
+<input name="cx" type="hidden" value="001246626777910876508:znyjo2rfb2i"/>
+<input name="cof" type="hidden" value="FORID:11"/>
+<input name="ie" type="hidden" value="UTF-8"/>
+</p>
+<p>
+<label class="element-invisible" for="q">Search</label>
+<input id="q" name="q" placeholder="Custom Search" size="22" style='background: url("https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png") left center no-repeat rgb(255, 255, 255); text-indent: 48px;' title="Search DCF" type="text"/>
+<input name="sa" title="click to start search" type="submit" value="Go"/>
+</p>
+<script src="//www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" type="text/javascript">
+</script><input name="siteurl" type="hidden" value="www.myflorida.com/accessflorida/"/><input name="ref" type="hidden" value=""/><input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div id="medicaid"> <a href="https://access-adi-barcode.dcf.state.fl.us">Pharmacies &amp; Medicaid Providers</a> |  </div>
+<div id="partners"> <a href="https://dcf-access.dcf.state.fl.us/access/partner.do">Partners Login</a> </div>
+</div>
+</div>
+<div id="navigation">
+<ul id="nav">
+<li><a href="https://www.myflfamilies.com/">Home</a></li>
+<li><a class="down" href="https://www.myflfamilies.com/service-programs">Services</a>
+<ul>
+<li><a href="https://www.myflfamilies.com/service-programs/abuse-hotline">Abuse Hotline</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/access">ACCESS Florida</a></li>
+<li><a href="http://www.adoptflorida.org/">Adoption</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/adult-protective-services">Adult Protective Services</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/background-screening/">Background Screening</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/child-care">Child Care</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/child-welfare">Child Welfare</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/childrens-legal-services">Children's Legal Services</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/community-based-care">Community Based Care</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/deaf-and-hard-hearing">Deaf and Hard-of-Hearing</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/domestic-violence">Domestic Violence</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/foster-care">Foster Care</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/homelessness">Homelessness</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/human-trafficking">Human Trafficking</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/independent-living">Independent Living Services</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/icpc">Interstate Compact for the Placement of Children</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/samh">Mental Health</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/public-benefits-integrity">Public Benefits Integrity</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/refugee-services/">Refugee Services</a></li>
+<li class="last"><a href="https://www.myflfamilies.com/service-programs/samh">Substance Abuse</a></li>
+</ul>
+</li>
+<li><a class="down" href="https://www.myflfamilies.com/general-information">General Information</a>
+<ul>
+<li><a href="https://eds.myflfamilies.com/DCFFormsInternet/Search/DCFFormSearch.aspx">DCF Forms</a></li>
+<li><a href="https://www.myflfamilies.com/general-information/publications-forms">Publications &amp; Forms</a></li>
+<li><a href="https://www.myflfamilies.com/publicrecords/">Public Records Requests</a></li>
+<li><a href="https://www.myflfamilies.com/admin/publications/policies.asp">Policies &amp; Procedures</a></li>
+<li><a href="https://www.myflfamilies.com/general-information/planning-performance-measures">Planning &amp; Performance Measures</a></li>
+<li><a href="https://www.myflfamilies.com/general-information/quick-facts/">DCF Quick Facts</a></li>
+<li><a href="https://www.myflfamilies.com/general-information/employment-opportunities">Employment Opportunities</a></li>
+<li><a href="https://www.myflfamilies.com/general-information/dcf-training">DCF Training</a></li>
+<li><a href="https://www.myflfamilies.com/general-information/contracted-client-services">Contracted Client Services</a></li>
+<li><a href="https://www.myflfamilies.com/general-information/office-civil-rights">Office of Civil Rights</a></li>
+<li class="last"><a href="https://www.myflfamilies.com/childfatality/">Child Fatality Prevention</a></li>
+</ul>
+</li>
+<li><a class="down" href="https://www.myflfamilies.com/about-us">About Us</a>
+<ul>
+<li><a href="https://www.myflfamilies.com/about-us/office-secretary">Office of the Secretary</a></li>
+<li><a href="https://www.myflfamilies.com/about-us/office-general-counsel">Office of the General Counsel</a></li>
+<li><a href="https://www.myflfamilies.com/about-us/office-inspector-general">Office of the Inspector General</a></li>
+<li><a href="https://www.myflfamilies.com/about-us/office-general-counsel/agency-clerk">Agency Clerk</a></li>
+<li class="last"><a href="https://www.myflfamilies.com/about-us/office-general-counsel/regulatory-plan">Regulatory Plan</a></li>
+</ul>
+</li>
+<li><a class="down" href="https://www.myflfamilies.com/newsroom">News &amp; Events</a>
+<ul>
+<li><a href="https://www.myflfamilies.com/newsroom">Latest News</a></li>
+<li><a href="https://www.myflfamilies.com/newsroom/pressreleases">Press Releases</a></li>
+<li><a href="https://www.myflfamilies.com/newsroom/media-guide">DCF Media Guide</a></li>
+<li class="last"><a href="https://www.myflfamilies.com/newsroom/public-events-meetings">Public Events and Meetings</a></li>
+</ul>
+</li>
+<li><a href="https://www.myflfamilies.com/contact-us">Contact Us</a></li>
+<li id="socialnav"> <a href="https://www.facebook.com/MyFLFamilies"><img alt="click to like us on Facebook" src="http://www.myflorida.com/accessflorida/images/facebook.gif"/></a> <a href="https://twitter.com/myflfamilies"><img alt="click to follow Us on Twitter" src="http://www.myflorida.com/accessflorida/images/twitter.gif"/></a> <a href="https://www.youtube.com/user/MyFLFamilies"><img alt="click to visit our YouTube Channel" src="http://www.myflorida.com/accessflorida/images/youtube.gif"/></a> <a href="https://www.instagram.com/myflfamilies" style="padding:0px;" target="_blank"><img alt="visit us on Instagram" src="http://www.myflorida.com/accessflorida/images/instagram.gif" style="padding:5px 1px 5px 1px;"/></a> </li>
+</ul>
+</div>
+<div id="mainWrapper">
+<div id="contentWrapper">
+<div id="subheader">
+<div id="subnav"> <a href="http://www.myflorida.com/index.html">Benefits Home</a> | <a href="http://www.myflorida.com/ebt.html">EBT Services</a> | <a href="https://www.myflfamilies.com/faq/index.shtml?faqs=ACCESS">FAQs</a> | <a href="https://www.myflfamilies.com/service-programs/access/common-access-florida-forms.shtml">Find Forms</a> | <a href="http://www.myflorida.com/links.html">Helpful Links</a> </div>
+</div>
+<div id="topWrapper">
+<div id="lang"> <a href="http://www.myflorida.com/accessflorida/index.html">English</a> | <a href="http://www.myflorida.com/accessflorida/sp/index.html">Español</a> | <a href="http://www.myflorida.com/accessflorida/cr/index.html">Kreyòl</a> </div>
+<div class="infobox"><div class="ticker-wrapper has-js left" id="ticker-wrapper-1563312509487"><div class="ticker" id="ticker-1563312509487"><div class="ticker-title" id="ticker-title-1563312509487"><span></span></div><p class="ticker-content" id="ticker-content-1563312509487" style="display: none;"></p><div class="ticker-swipe" id="ticker-swipe-1563312509487"><span></span></div></div><ul class="ticker-controls" id="ticker-controls-1563312509487"><li class="jnt-play-pause controls" id="play-pause-1563312509487"><a href="http://www.myflorida.com/" title="play or pause messages"></a></li><li class="jnt-prev controls" id="prev-1563312509487"><a href="http://www.myflorida.com/" title="previous message"></a></li><li class="jnt-next controls" id="next-1563312509487"><a href="http://www.myflorida.com/" title="next message"></a></li></ul></div>
+<h3 class="element-invisible">ACCESS Messages</h3>
+<div style="float:right;padding-right:7px;"> <a href="http://www.myflorida.com/RSSLatest.xml" onclick="window.open(this.href); return false;" style="padding:0px 0px 0px 15px;" title="opens in a new window">View all messages</a> </div>
+</div>
+</div>
+<div id="centerArea">
+<div class="centerBox">
+<div id="logon" style="width:300px;float:right;">
+<h1>Access<br/>
+<span id="midtitle">your</span><br/>
+                            Benefits</h1>
+<div id="systems">
+<h2> <img alt="question mark graphic" src="http://www.myflorida.com/accessflorida/images/img1.png"/>
+<script type="text/javascript">
+								<!--
+								document.write ("<a href='https://dcf-access.dcf.state.fl.us/access/scrflhomepage.do?performAction=changeLocale&language=english");
+								if (siteid > "")document.write("&partnerSite=" + siteid );
+								document.write("' onclick='window.open(this.href);return false;' title='Click to see if you are eligible for Food Assistance, Cash Assistance, and Medicaid.'>");
+								document.write("Am I Eligible?</a>");
+								-->
+							</script><a href="https://dcf-access.dcf.state.fl.us/access/scrflhomepage.do?performAction=changeLocale&amp;language=english" onclick="window.open(this.href);return false;" title="Click to see if you are eligible for Food Assistance, Cash Assistance, and Medicaid.">Am I Eligible?</a>
+<noscript>
+<a href="https://dcf-access.dcf.state.fl.us/access/scrflhomepage.do?performAction=changeLocale&amp;language=english" title="Click to see if you are eligible for Food Assistance, Cash Assistance, and Medicaid."> Am I Eligible?</a>
+</noscript>
+</h2>
+<h2> <img alt="magnifying glass graphic" src="http://www.myflorida.com/accessflorida/images/img2.png"/>
+<script type="text/javascript">
+								<!--
+								document.write ("<a href='https://dcf-access.dcf.state.fl.us/access/scrflhomepage.do?performAction=changeLocale&language=english");
+								if (siteid > "")document.write("&partnerSite=" + siteid );
+								document.write("' onclick='window.open(this.href);return false;' title='Click to Apply Online for Food Assistance, Cash Assistance, and Medicaid, Complete an Unfinished Application or Add Comments to an Application that has been E-Signed.'>");
+								document.write("Apply For Benefits</a>");
+								-->
+							</script><a href="https://dcf-access.dcf.state.fl.us/access/scrflhomepage.do?performAction=changeLocale&amp;language=english" onclick="window.open(this.href);return false;" title="Click to Apply Online for Food Assistance, Cash Assistance, and Medicaid, Complete an Unfinished Application or Add Comments to an Application that has been E-Signed.">Apply For Benefits</a>
+<noscript>
+<a href="https://dcf-access.dcf.state.fl.us/access/scrflhomepage.do?performAction=changeLocale&amp;language=english" title="Click to Apply Online for Food Assistance, Cash Assistance, and Medicaid, Complete an Unfinished Application or Add Comments to an Application that has been E-Signed."> Apply For Benefits</a>
+</noscript>
+</h2>
+<h2><img alt="person graphic" id="img3" src="http://www.myflorida.com/accessflorida/images/img3.png"/>
+<script type="text/javascript">
+								<!--
+								document.write ("<a href='https://dcf-access.dcf.state.fl.us/access/scrflhomepage.do?performAction=changeLocale&language=english");
+								if (siteid > "")document.write("&partnerSite=" + siteid );
+								document.write("' onclick='window.open(this.href);return false;' title='Click to Complete an Unfinished Application or Add Comments to an Application that has been E-Signed, Upload Documents, or Check Status of an application.'>");
+								document.write("Login or Create Your MyACCESS Account</a>");
+								-->
+							</script><a href="https://dcf-access.dcf.state.fl.us/access/scrflhomepage.do?performAction=changeLocale&amp;language=english" onclick="window.open(this.href);return false;" title="Click to Complete an Unfinished Application or Add Comments to an Application that has been E-Signed, Upload Documents, or Check Status of an application.">Login or Create Your MyACCESS Account</a>
+<noscript>
+<a href="https://dcf-access.dcf.state.fl.us/access/scrflhomepage.do?performAction=changeLocale&amp;language=english" title="Click to Complete an Unfinished Application or Add Comments to an Application that has been E-Signed, Upload Documents, or Check Status of an application."> Login or Create Your MyACCESS Account</a>
+</noscript>
+</h2>
+</div>
+</div>
+<div class="slider single-item slick-initialized slick-slider" id="slider">
+<div class="slick-list draggable" tabindex="0"><div class="slick-track" style="opacity: 1; width: 4400px;"><div class="slides slick-slide" index="0" style="display: block; width: 550px; position: relative; left: 0px; top: 0px; z-index: 900; opacity: 1;"> <a href="http://hopeforhealingfl.com/" target="_blank" title="click to visit HopeforHealingFl.com in a new browser window"><img alt="Hope for Healing Florida banner" src="http://www.myflorida.com/accessflorida/images/hopeforhealingfl.jpg" style="width:100%;"/></a> </div><div class="slides slick-slide slick-active" index="1" style="display: block; width: 550px; position: relative; left: -550px; top: 0px; z-index: 800; opacity: 0;"> <a href="https://www.feedingflorida.org/taking-action/find-food-now" title="click to visit Florida Association of Food banks to find a food bank near you"><img alt="Florida Assosiation of Food banks" src="http://www.myflorida.com/accessflorida/images/FAFB.jpg" style="width:100%;"/></a>
+<div class="slide_caption" style="display: block;">Resources available for families in need.</div>
+</div><div class="slides slick-slide" index="2" style="display: block; width: 550px; position: relative; left: -1100px; top: 0px; z-index: 800; opacity: 0;"> <a href="https://www.myflfamilies.com/service-programs/access/docs/EBT-Card-Expiration_FAQs.pdf" onclick="window.open(this.href);return false;" title="click to find out more information on expiration date of your EBT Card"><img alt="click to find out more information on expiration date of your EBT Card" src="http://www.myflorida.com/accessflorida/images/ebt-card2.jpg"/></a>
+<div class="slide_caption" style="display: block;">Did you know that your EBT card has an expiration date on it? Find out more.</div>
+</div><div class="slides slick-slide" index="3" style="display: block; width: 550px; position: relative; left: -1650px; top: 0px; z-index: 800; opacity: 0;"> <a href="https://www.myflfamilies.com/service-programs/access/docs/justice.pdf" onclick="window.open(this.href);return false;" title="click to find out more information on Non-Discrimination at DCF"><img alt="click to find out more information on Justice For All" src="http://www.myflorida.com/accessflorida/images/jfi-slider.jpg"/></a>
+<div class="slide_caption" style="display: block;">Federal law prohibits the Department of Children and Families from discriminating. Find out more.</div>
+</div><div class="slides slick-slide" index="4" style="display: block; width: 550px; position: relative; left: -2200px; top: 0px; z-index: 800; opacity: 0;"> <a href="https://www.myflfamilies.com/service-programs/child-welfare/safesleep/" onclick="window.open(this.href);return false;" title="click to find out more information on Safe Sleep for your baby"><img alt="click to find out more information on Safe Sleep for your baby" src="http://www.myflorida.com/accessflorida/images/safesleep.jpg"/></a>
+<div class="slide_caption" style="display: block;">Babies sleep safest ALONE, on their BACKS,<br/>
+                                in a CRIB. Find out more. </div>
+</div><div class="slides slick-slide" index="5" style="display: block; width: 550px; position: relative; left: -2750px; top: 0px; z-index: 800; opacity: 0;"> <a href="https://www.myflfamilies.com/service-programs/child-welfare/summer-safety-tips/water-safety.shtml" onclick="window.open(this.href);return false;" title="click to find out more information on water safety"><img alt="click to learn more information on water safety" src="http://www.myflorida.com/accessflorida/images/watersafety.jpg"/></a>
+<div class="slide_caption" style="display: block;">Please be safe around the water.<br/>
+                                Free resources and referrals here. </div>
+</div><div class="slides slick-slide" index="6" style="display: block; width: 550px; position: relative; left: -3300px; top: 0px; z-index: 800; opacity: 0;"> <a href="https://www.myflfamilies.com/service-programs/child-welfare/whoswatching/" onclick="window.open(this.href);return false;" title="click to find out more information on Who's Really Watching Your Child? campaign"><img alt="click to find out more information on Who's Really Watching Your Child? campaign" src="http://www.myflorida.com/accessflorida/images/whoswatching.jpg"/></a>
+<div class="slide_caption" style="display: block;">Who's Really Watching Your Child?<br/>
+                                Free resources and referrals here. </div>
+</div><div class="slides slick-slide" index="7" style="display: block; width: 550px; position: relative; left: -3850px; top: 0px; z-index: 800; opacity: 0;"> <a href="http://registertovoteflorida.gov" onclick="window.open(this.href);return false;" title="click to register to vote"> <img alt="click to register to vote" src="http://www.myflorida.com/accessflorida/images/rotatingnewsbanner.jpg"/></a> </div></div></div>
+<button class="slick-prev" style="display: block;" type="button">Previous</button><button class="slick-next" style="display: block;" type="button">Next</button></div>
+</div>
+</div>
+<div id="bottomWrapper">
+<div class="bottombox">
+<h3>About ACCESS</h3>
+<p>Welcome to Florida Department of Children and Families Automated Community Connection to Economic Self Sufficiency (ACCESS).  The ACCESS Florida system allows customers to connect with their public assistance information 24/7, through the online application and MyACCESS Account.</p>
+<p><a href="https://www.myflfamilies.com/service-programs/access/" title="Learn More about ACCESS">Learn More</a></p>
+</div>
+<div class="bottombox">
+<h3>Information About Assistance Programs</h3>
+<ul>
+<li><a href="https://www.myflfamilies.com/service-programs/access/food-assistance-and-suncap.shtml">Food Assistance Program (SNAP)</a>
+<ul>
+<li><a href="https://www.myflfamilies.com/service-programs/access/abawd-faq.shtml">Work Requirements FAQ</a></li>
+</ul>
+</li>
+<li><a href="https://www.myflfamilies.com/service-programs/access/medicaid.shtml">Medical Assistance Program</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/access/temporary-cash-assistance.shtml#moe">Temporary cash assistance for families with children (TANF)</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/access/general-program-information.shtml">General program information</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/access/docs/justice.pdf" onclick="window.open(this.href);return false;" title="click to find out more information on Non-Discrimination at DCF">Federal Non-Discrimination Poster</a></li>
+<li><a href="http://uffnp.org/" onclick="window.open(this.href);return false;" title="click to find out more information Family Nutrition Program (SNAP Ed)">Family Nutrition Program (SNAP Ed)</a></li>
+</ul>
+</div>
+<div class="bottombox">
+<h3>Find Us</h3>
+<p>Local community partner agencies help the Department of Children and Families provide access to public assistance services. To find locations in  your area where you may apply for Food Assistance, Cash or Medicaid:</p>
+<ul>
+<li><a href="https://access-web.dcf.state.fl.us/CPSLookup/search.aspx" onclick="window.open(this.href); return false;" title="This link opens in a new window">Search For A Partner Near You</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/access/map.shtml">Find Your Local Office and FAX Numbers</a></li>
+</ul>
+</div>
+</div>
+<noscript>
+<div id="warning">
+<p><strong><em>PUBLIC ASSISTANCE FRAUD WARNING</em></strong></p>
+<p>Information and answers to questions that you provide to DCF will be confirmed by DCF so they must be true, complete and correct. You may be accused of a crime if you provide false answers, or if you do not provide complete and accurate information for the purpose of getting benefits.</p>
+<p>This may result in fines of up to $250,000, a prison term or both, if you are convicted of public assistance fraud. In addition you will not be able to get benefits for 12 months the first time, 24 months the second time, and permanently the third time that you provide false or inaccurate information.</p>
+</div>
+</noscript>
+</div>
+<div id="footer">
+<div id="copyright"> </div>
+<div id="footernav">
+<ul id="footernav1">
+<li><a href="https://www.myflfamilies.com">Home</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/access/">ACCESS Food, Medical &amp; Cash</a></li>
+<li><a href="https://www.myflfamilies.com/service-programs/abuse-hotline">Florida Abuse Hotline</a></li>
+<li><a href="https://www.myflfamilies.com/newsroom/">News &amp; Events</a></li>
+<li><a href="https://www.myflfamilies.com/contact-us">Contact Us</a></li>
+</ul>
+<ul id="footernav3">
+<li><a href="https://www.myflfamilies.com/privacy.shtml">Privacy Statement</a></li>
+<li>Copyright ©2019 State of Florida</li>
+<li><a href="https://www.myflfamilies.com/accessibility.shtml">Accessibility</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body></html>

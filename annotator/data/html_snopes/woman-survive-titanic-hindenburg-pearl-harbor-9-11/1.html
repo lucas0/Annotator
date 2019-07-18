@@ -1,0 +1,676 @@
+<html class="js history svg localstorage sessionstorage getusermedia hashchange audio video cssgradients multiplebgs opacity csspositionsticky rgba supports generatedcontent textshadow cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside cssfilters flexbox flexwrap csstransforms csstransforms3d csstransitions cookies history svg localstorage sessionstorage getusermedia hashchange audio video cssgradients multiplebgs opacity csspositionsticky rgba supports generatedcontent textshadow cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside cssfilters flexbox flexwrap csstransforms csstransforms3d csstransitions cookies" lang="en"><head class="at-element-marker">
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://www.googletagservices.com/tag/js/gpt.js" type="text/javascript"></script><script async="" charset="utf-8" id="utag_25" src="//bat.bing.com/bat.js" type="text/javascript"></script><script async="" src="https://connect.facebook.net/signals/plugins/inferredEvents.js?v=2.8.51"></script><script async="" src="https://connect.facebook.net/signals/config/578471552340387?v=2.8.51&amp;r=stable"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" charset="utf-8" id="tealium-tag-7110" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="https://sb.scorecardresearch.com/beacon.js"></script><script async="" src="//tags.tiqcdn.com/utag/ancestry/newspapers/prod/utag.js" type="text/javascript"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQAOUVNUCBABXVZQAgUBUFQ="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(21)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(21)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(21)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(21)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(21)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(16);n.exports={generateTraceHeader:r}},{}],11:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(12),u=t(10).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(15),w=t(14),v=window.XMLHttpRequest;s.features.xhr=!0,t(9),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],12:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],13:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],14:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],15:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],16:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],18:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],19:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],20:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],21:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:x,userAgent:d};t(13),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(20)},{}]},{},["loader",2,11,4,3]);</script>
+<title>16 Apr 1912, 2 - Salt Lake Telegram at Newspapers.com</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<meta content="photo" name="twitter:card"/>
+<meta content="@_newspapers" name="twitter:site"/>
+<meta content="@_newspapers" name="twitter:creator"/>
+<meta content="16 Apr 1912, 2 - Salt Lake Telegram at Newspapers.com" name="twitter:title"/>
+<meta content="Newspapers.com" property="og:site_name"/>
+<meta content="16 Apr 1912, 2 - Salt Lake Telegram at Newspapers.com" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="http://www.newspapers.com/image/289726567/?terms=titanic+passenger+list" property="og:url"/>
+<meta content="https://img.newspapers.com/img/thumbnail/289726567/400/400.jpg" property="og:image"/><meta content="" name="description"/><meta content="" property="og:description"/><meta content="" name="twitter:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://img.newspapers.com/img/thumbnail/289726567/400/400.jpg" name="twitter:image"/>
+<meta content="https://img.newspapers.com/img/thumbnail/289726567/400/400.jpg" property="og:image"/>
+<link color="#414141" href="https://www.newspapers.com/i/newspapers-icon.svg" rel="mask-icon"/>
+<link href="https://www.newspapers.com/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="https://www.newspapers.com/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+<link href="https://www.newspapers.com/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="https://www.newspapers.com/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed"/>
+<link href="https://www.newspapers.com/apple-touch-icon-precomposed.png" rel="shortcut icon"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="https://www.newspapers.com/c/base.css?v=60c986d" rel="stylesheet" type="text/css"/>
+<link href="https://www.newspapers.com/c/browse.css?v=60c986d" rel="stylesheet" type="text/css"/>
+<link href="https://www.newspapers.com/c/news-viewer.css?v=60c986d" rel="stylesheet" type="text/css"/>
+<link href="https://www.newspapers.com/c/clippings.css?v=60c986d" rel="stylesheet" type="text/css"/>
+<script>
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+ga('create', 'UA-34211646-1', 'newspapers.com');
+
+ga('set','dimension1', 'not signed in');
+
+ga('set','dimension2', 'none');
+ga('set','dimension3', 'none');
+ga('set','dimension4', 'none');
+
+</script>
+<script type="text/javascript">
+var utag_data = {
+page_name : 'newspapers : 16 Apr 1912, 2 - Salt Lake Telegram at Newspapers.com',
+sub_type: 'not signed in',
+}
+</script>
+<script type="text/javascript">
+(function(a,b,c,d){
+a='//tags.tiqcdn.com/utag/ancestry/newspapers/prod/utag.js';
+b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+})();
+</script>
+<script>
+var thirdparty_paper_date = "16 Apr 1912";
+var thirdparty_publication = "Salt Lake Telegram";
+</script>
+<script>
+var _gaq=[]; // this is so as not to break any un-migrated code still calling _gaq.push
+</script>
+<script>
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "6035489", cs_ucfr: "1" });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+</script>
+<noscript>
+<img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=6035489&amp;cs_ucfr=1&amp;cv=2.0&amp;cj=1"/>
+</noscript>
+<script>
+(function(h,o,t,j,a,r){
+h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+h._hjSettings={hjid:1324541,hjsv:6};
+a=o.getElementsByTagName('head')[0];
+r=o.createElement('script');r.async=1;
+r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+a.appendChild(r);
+})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script><script async="" src="https://static.hotjar.com/c/hotjar-1324541.js?sv=6"></script>
+<style class="at-flicker-control" id="at-makers-style">
+.mboxDefault {visibility:hidden;}
+</style><script async="" charset="utf-8" id="utag_ancestry.newspapers_28" src="//tags.tiqcdn.com/utag/ancestry/newspapers/prod/utag.28.js?utv=ut4.43.201810041834" type="text/javascript"></script><script async="" charset="utf-8" id="utag_ancestry.newspapers_30" src="//tags.tiqcdn.com/utag/ancestry/newspapers/prod/utag.30.js?utv=ut4.43.201702071613" type="text/javascript"></script><script async="" charset="utf-8" id="utag_ancestry.newspapers_21" src="//tags.tiqcdn.com/utag/ancestry/newspapers/prod/utag.21.js?utv=ut4.43.201702071613" type="text/javascript"></script><script async="" charset="utf-8" id="utag_ancestry.newspapers_24" src="//tags.tiqcdn.com/utag/ancestry/newspapers/prod/utag.24.js?utv=ut4.43.201802012143" type="text/javascript"></script><script async="" charset="utf-8" id="utag_ancestry.newspapers_25" src="//tags.tiqcdn.com/utag/ancestry/newspapers/prod/utag.25.js?utv=ut4.43.201707271557" type="text/javascript"></script><script async="" charset="utf-8" id="utag_ancestry.newspapers_29" src="//tags.tiqcdn.com/utag/ancestry/newspapers/prod/utag.29.js?utv=ut4.43.201701181758" type="text/javascript"></script><script async="" src="https://script.hotjar.com/modules.2b2b9f3640b40a38d338.js"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="jquery" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="core" src="https://www.newspapers.com/js/requirejs/bin/core.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="app.viewer.main" src="https://www.newspapers.com/js/requirejs/bin/app.viewer.main.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" id="tiqapp" src="//tags.tiqcdn.com/utag/tiqapp/utag.v.js?a=ancestry/newspapers/201901292105&amp;cb=1563377109456" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="class" src="https://www.newspapers.com/js/requirejs/bin/class.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="jquery-ui/effect" src="https://www.newspapers.com/js/requirejs/bin/jquery-ui/effect.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="ajax" src="https://www.newspapers.com/js/requirejs/bin/ajax.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="cookie" src="https://www.newspapers.com/js/requirejs/bin/cookie.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="image" src="https://www.newspapers.com/js/requirejs/bin/image.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="jquery-ui/widget" src="https://www.newspapers.com/js/requirejs/bin/jquery-ui/widget.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="tinybox2" src="https://www.newspapers.com/js/requirejs/bin/tinybox2.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="debug" src="https://www.newspapers.com/js/requirejs/bin/debug.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="share" src="https://www.newspapers.com/js/requirejs/bin/share.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="inject" src="https://www.newspapers.com/js/requirejs/bin/inject.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="util.string" src="https://www.newspapers.com/js/requirejs/bin/util.string.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="yepnope" src="https://www.newspapers.com/js/requirejs/bin/yepnope.js?ncomv=60c986d" type="text/javascript"></script><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="modernizr" src="https://www.newspapers.com/js/requirejs/bin/modernizr.js?ncomv=60c986d" type="text/javascript"></script><link href="https://www.newspapers.com/c/common.crop.css?v=60c986d" media="all" rel="stylesheet" type="text/css"/><link href="https://www.newspapers.com/c/reclip.css?v=60c986d" media="all" rel="stylesheet" type="text/css"/><script async="" charset="utf-8" data-requirecontext="_" data-requiremodule="savetoancestry" src="https://www.ancestry.com/savetoancestry/javascript/saveToAncestryApi.js?ncomv=60c986d" type="text/javascript"></script><link as="script" href="https://adservice.google.com.ua/adsid/integrator.js?domain=www.newspapers.com" rel="preload"/><script src="https://adservice.google.com.ua/adsid/integrator.js?domain=www.newspapers.com" type="text/javascript"></script><link as="script" href="https://adservice.google.com/adsid/integrator.js?domain=www.newspapers.com" rel="preload"/><script src="https://adservice.google.com/adsid/integrator.js?domain=www.newspapers.com" type="text/javascript"></script><script async="" src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2019070801.js"></script></head>
+<body class="silo desktop noScroll modal-open" id="viewer-page" jserror="" style="overflow: hidden;">
+<script id="outdated-browser-tpl" type="text/template">
+<div id="ie6warning" class="error_strip" style='text-align: center; clear: both; position: relative;margin-bottom: 12px;margin-top: -1px;'>
+<div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a class="fn-close-outdated-browser" href='#'><img src='/i/clip-message-close.png' style='border: none;' alt='Close this notice'/></a></div>
+<div style="width: 300px;margin: 0px 50px 0px 10px; float:right;">
+<a href='https://www.google.com/chrome' target='_blank' class="badbrowse"><i class="badbrowse-ch">Chrome</i></a>
+<a href='https://www.mozilla.org/en-US/firefox/new/' target='_blank' class="badbrowse"><i class="badbrowse-ff" >Firefox</i></a>
+<a href='https://www.microsoft.com/en-us/windows/microsoft-edge' target='_blank' class="badbrowse"><i class="badbrowse-ie">Edge</i></a>
+</div>
+<div style='margin: 0 50px; text-align: left; overflow: hidden;'>
+<div style='font-size: 14px; font-weight: bold; margin-top: 8px;' class="error_24">You are using an unsupported browser.</div>
+<p style='font-size: 14px; margin-top: 6px; line-height: 16px;'>
+We've made updates that may impact your Newspapers.com experience. Certain features on Newspapers.com may have reduced functionality or may not be supported when using this browser. Update to one of the following recommended browsers on the right.</p>
+</div>
+</div>
+</script>
+<div id="outdated-browser"></div>
+<div class="header on">
+<header class="clear">
+<a href="https://www.newspapers.com/" id="logo" title="Return to Home">Newspapers.com</a>
+<nav class="nav" role="navigation">
+<input aria-hidden="true" id="navcheck" type="checkbox"/>
+<div class="nav-btn">
+<label aria-controls="#main-nav-list" aria-expanded="false" class="start" for="navcheck" id="start">
+<div class="spinner diagonal part-1"></div>
+<div class="spinner horizontal"></div>
+<div class="spinner diagonal part-2"></div>
+</label>
+</div>
+<ul aria-hidden="false" class="nl" id="main-nav-list">
+<li id="pg-home"><a href="https://www.newspapers.com/">Home</a></li><li id="pg-search"><a href="https://www.newspapers.com/search/">Search</a></li>
+<li id="pg-browse"><a href="https://www.newspapers.com/browse/">Browse</a></li>
+<li id="pg-docs"><a href="https://www.newspapers.com/papers/">Papers</a></li>
+<li id="pg-clippings"><a href="https://www.newspapers.com/clippings/">Clippings</a></li>
+</ul>
+<div id="member-navigation-app"><div><div class="mem-nav"><ul class="inline"><li id="pg-join"><a href="https://www.newspapers.com/choose-a-plan/?iid=4"><i>Subscribe</i></a></li><li><a class="signinlink" href="https://www.newspapers.com/signin/" id="signinlink">Sign-in</a></li></ul></div></div></div>
+</nav>
+</header>
+</div>
+<section id="fn-page" role="main">
+<div id="content">
+<div class="viewer-tools">
+<div id="navbar">
+<div class="clear" id="navbar_content">
+<span id="navbar_loading" style="display: none;">
+<p id="loading">Loading …</p>
+</span>
+<span class="error_strip" id="navbar_failed" style="display: none;">
+<b class="error">Oops, we couldn't load page information.</b>
+</span>
+<ul id="navbar_nodes"><li><a href="https://www.newspapers.com/image/289726567/?terms=titanic+passenger+list/US/Utah/Salt Lake City/Salt Lake Telegram_5481"><b>Salt Lake Telegram (Salt Lake City, Utah)</b></a></li><li><a href="https://www.newspapers.com/image/289726567/?terms=titanic+passenger+list/US/Utah/Salt Lake City/Salt Lake Telegram_5481/1912/04/16"><b>16 Apr 1912, Tue</b></a></li><li class="end"><em><b>Page 2</b></em></li></ul>
+<a class="page-info" href="https://www.newspapers.com/#" title="Information about this page">i</a>
+<img alt="loading" height="23" id="load_all" src="https://www.newspapers.com/i/process_gray.gif" style="display: none;" title="Loading…" width="18"/>
+<div id="archived_img" style="position: relative; top: 8px; background-color: transparent; border: 0px; z-index: 1; max-width: 85%; white-space: pre-wrap; display: inline-block;"></div>
+<ul id="toolbar">
+<li id="find">
+<a class="image-find icon-news icon-mag-left">Find</a>
+</li>
+<li id="clip">
+<a class="clip icon-news icon-clip">Clip</a>
+</li>
+<li id="preserve">
+<a class="pres-print-download icon-news icon-print">Print/Save</a>
+</li>
+<li id="share">
+<a class="pres-share icon-news icon-share">Share</a>
+</li>
+<li id="ashare">
+<div id="save-button-wrap">
+<div id="save-button-wrap2">
+<button class="saveToAncestry" id="saveToAncestryButton" type="button"><span>Save to Ancestry</span></button>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="siloview" style="display:none;">You can see this page because you are subscribed through the publisher's website.</div>
+<div class="freeview" style="display:none;"><strong>Freeview:</strong> Enjoy this premium page for free.</div>
+</div>
+<div id="errormsg" style="top: 100px;"></div>
+<div id="browse_overlay_container">
+<div id="browse_overlay" style="display:none"></div>
+<div id="browse" style="display:none">
+<div class="browse-wrapper">
+<div id="browse-content">
+</div>
+<p class="browsefooter"><a class="btn btn-t" href="https://www.newspapers.com/#" id="browse-close-btn" onclick="return false;">Cancel</a></p>
+</div>
+</div>
+<div id="free-message" style="display:none"><div id="free-message-content"></div><a class="close_sm" href="https://www.newspapers.com/#" title="Hide this message"></a></div>
+</div><div class="find_overlay_container transition-bounce image-submenu on">
+<div class="find_overlay" style="display:none;"></div>
+<div class="find_content">
+<div>
+<span class="notfound" style="display:none;">0 matches found</span>
+<span class="find_iterator" style="">
+<span class="find_position">1 of 58 matches</span>
+<button class="prev-it"></button>
+<button class="next-it"></button>
+</span>
+<span class="searching" style="display: none;">Searching... <img alt="Loading Search" height="22" src="https://www.newspapers.com/i/loading_blue.gif" width="100"/></span>
+<input emptyclass="text ex" id="find_values" placeholder="Find &amp; highlight text on this page" type="text"/>
+<input class="btn btn-p nosize" id="find_submit_button" type="button" value="Find"/>
+<span class="close-btn-cancel btn btn-link">Cancel</span>
+</div>
+</div>
+</div><div class="save_overlay_container transition-bounce image-submenu">
+<div class="save_overlay" style="display:none;"></div>
+<div class="save_content">
+<h2>Print or Save</h2>
+<ul class="main-options clear">
+<li><a class="linebtn entirepage" title="Entire page"><span style="background-image:url(https://img.newspapers.com/img/thumbnail/289726567/400/400.jpg)"></span>Entire page</a></li>
+<li><a class="linebtn portionpage" title="Select portion of page"><span style="background-image:url(https://img.newspapers.com/img/thumbnail/289726567/400/400.jpg)"></span>Select portion of page</a></li>
+</ul>
+<ul class="entire-options clear" style="display:none;">
+<li><a class="btn btn-p print" title="Print">Print</a></li>
+<li><a class="btn btn-p save" title="Save">Save</a></li>
+</ul>
+<div class="type-options clear" style="display:none;">
+<ul class="clear list-unstyled">
+<li><a class="btn btn-p jpg" title="JPG">Save as JPG</a></li>
+<li><a class="btn btn-p pdf" title="PDF">Save as PDF*</a></li>
+</ul>
+<p class="subdued">* PDF—Includes source information</p>
+</div>
+<p><a class="close-btn-cancel">Cancel</a></p>
+</div>
+</div>
+<div class="" id="viewer" style="top: 100px;" tabindex="0">
+<div class="transform-outer" style="left: 559px; top: 0px; height: 1016px; width: 808px;">
+<div class="layers transform-inner" style='background-size: 100%; background-image: url("https://img.newspapers.com/img/img?id=289726567&amp;width=256&amp;height=256&amp;brightness=0&amp;contrast=0&amp;invert=false&amp;ts=1&amp;cacheable=1&amp;h=3d90582534e46c249829071e17d69495"); height: 839.667px; width: 632px;'><div class="layer" style="transform: scale3d(0.845205, 0.845205, 1);"></div></div>
+</div>
+<div class="transform-outer" style="left: 559px; top: 0px; height: 1016px; width: 808px;">
+<div class="collections transform-inner" style="height: 839.667px; width: 632px;">
+<div class="highlights"><div class="hit-term grow selected-hit-term" data-id="0" style="top: 291.514px; left: 376.705px; width: 171.98px; height: 10.9151px;"></div><div class="hit-term" data-id="1" style="top: 349.018px; left: 209.917px; width: 30.3494px; height: 4.39268px;"></div><div class="hit-term" data-id="2" style="top: 280.998px; left: 241.198px; width: 18.7687px; height: 7.85358px;"></div><div class="hit-term" data-id="3" style="top: 280.599px; left: 282.729px; width: 55.6406px; height: 7.85358px;"></div><div class="hit-term" data-id="4" style="top: 336.639px; left: 376.705px; width: 19.5674px; height: 4.39268px;"></div><div class="hit-term" data-id="5" style="top: 337.038px; left: 400px; width: 5.85691px; height: 4.39268px;"></div><div class="hit-term" data-id="6" style="top: 397.604px; left: 502.097px; width: 24.2263px; height: 5.05824px;"></div><div class="hit-term" data-id="7" style="top: 404.393px; left: 483.062px; width: 5.99002px; height: 4.39268px;"></div><div class="hit-term" data-id="8" style="top: 47.1215px; left: 112.213px; width: 26.3561px; height: 7.05491px;"></div><div class="hit-term" data-id="9" style="top: 75.7404px; left: 87.3211px; width: 20.3661px; height: 6.38935px;"></div><div class="hit-term" data-id="10" style="top: 131.248px; left: 102.496px; width: 26.3561px; height: 5.45757px;"></div><div class="hit-term" data-id="11" style="top: 138.037px; left: 63.228px; width: 20.6323px; height: 5.45757px;"></div><div class="hit-term" data-id="12" style="top: 163.993px; left: 9.05158px; width: 26.3561px; height: 5.45757px;"></div><div class="hit-term" data-id="13" style="top: 170.25px; left: 95.9734px; width: 26.3561px; height: 5.45757px;"></div><div class="hit-term" data-id="14" style="top: 196.206px; left: 30.7488px; width: 17.3045px; height: 5.45757px;"></div><div class="hit-term" data-id="15" style="top: 261.165px; left: 79.3344px; width: 17.3045px; height: 5.45757px;"></div><div class="hit-term" data-id="16" style="top: 327.055px; left: 51.381px; width: 18.9018px; height: 4.79201px;"></div><div class="hit-term" data-id="17" style="top: 413.977px; left: 51.9135px; width: 15.574px; height: 5.05824px;"></div><div class="hit-term" data-id="18" style="top: 442.596px; left: 75.7404px; width: 18.9018px; height: 4.79201px;"></div><div class="hit-term" data-id="19" style="top: 470.416px; left: 58.0366px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="20" style="top: 491.98px; left: 80.7987px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="21" style="top: 548.686px; left: 71.7471px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="22" style="top: 562.662px; left: 28.8852px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="23" style="top: 738.769px; left: 72.2795px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="24" style="top: 797.205px; left: 52.9784px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="25" style="top: 824.226px; left: 23.9601px; width: 21.4309px; height: 4.39268px;"></div><div class="hit-term" data-id="26" style="top: 353.145px; left: 146.822px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="27" style="top: 444.725px; left: 128.852px; width: 10.5158px; height: 4.39268px;"></div><div class="hit-term" data-id="28" style="top: 449.517px; left: 102.762px; width: 7.72047px; height: 4.39268px;"></div><div class="hit-term" data-id="29" style="top: 453.644px; left: 165.99px; width: 5.85691px; height: 4.39268px;"></div><div class="hit-term" data-id="30" style="top: 625.225px; left: 146.822px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="31" style="top: 709.617px; left: 181.697px; width: 3.99334px; height: 2.92845px;"></div><div class="hit-term" data-id="32" style="top: 727.055px; left: 174.908px; width: 5.99002px; height: 4.39268px;"></div><div class="hit-term" data-id="33" style="top: 811.181px; left: 115.408px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="34" style="top: 239.867px; left: 209.517px; width: 21.6972px; height: 4.39268px;"></div><div class="hit-term" data-id="35" style="top: 124.326px; left: 329.85px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="36" style="top: 292.18px; left: 333.045px; width: 33.2779px; height: 7.45424px;"></div><div class="hit-term" data-id="37" style="top: 324.659px; left: 191.547px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="38" style="top: 327.454px; left: 274.343px; width: 5.99002px; height: 4.39268px;"></div><div class="hit-term" data-id="39" style="top: 331.581px; left: 206.323px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="40" style="top: 345.291px; left: 262.762px; width: 16.772px; height: 4.39268px;"></div><div class="hit-term" data-id="41" style="top: 352.08px; left: 236.805px; width: 21.4309px; height: 4.39268px;"></div><div class="hit-term" data-id="42" style="top: 360.333px; left: 205.923px; width: 5.99002px; height: 4.39268px;"></div><div class="hit-term" data-id="43" style="top: 370.582px; left: 204.859px; width: 21.6972px; height: 4.39268px;"></div><div class="hit-term" data-id="44" style="top: 370.582px; left: 245.591px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="45" style="top: 312.812px; left: 333.844px; width: 21.4309px; height: 4.39268px;"></div><div class="hit-term" data-id="46" style="top: 318.136px; left: 343.161px; width: 17.3045px; height: 4.39268px;"></div><div class="hit-term" data-id="47" style="top: 322.928px; left: 298.436px; width: 5.99002px; height: 4.39268px;"></div><div class="hit-term" data-id="48" style="top: 688.453px; left: 245.058px; width: 5.99002px; height: 4.39268px;"></div><div class="hit-term" data-id="49" style="top: 785.89px; left: 235.74px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="50" style="top: 820.499px; left: 292.712px; width: 21.4309px; height: 4.39268px;"></div><div class="hit-term" data-id="51" style="top: 820.499px; left: 334.11px; width: 15.574px; height: 5.05824px;"></div><div class="hit-term" data-id="52" style="top: 337.038px; left: 450.183px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="53" style="top: 403.993px; left: 526.589px; width: 21.6972px; height: 4.39268px;"></div><div class="hit-term" data-id="54" style="top: 767.388px; left: 587.554px; width: 14.1098px; height: 4.39268px;"></div><div class="hit-term" data-id="55" style="top: 807.055px; left: 579.301px; width: 17.4376px; height: 3.99334px;"></div><div class="hit-term" data-id="56" style="top: 811.181px; left: 575.308px; width: 5.45757px; height: 3.99334px;"></div><div class="hit-term" data-id="57" style="top: 810.25px; left: 600.067px; width: 14.1098px; height: 4.39268px;"></div></div>
+<div class="printselection"></div>
+<div class="crop-mask" style="display:none;"><div class="mask-element mask-top" data-id="1" style="top: 0px; left: 0px; width: 0px; height: 0px;"> </div><div class="mask-element" data-id="2" style="top: 0px; left: 0px; width: 0px; height: 0px;"> </div><div class="mask-element" data-id="3" style="top: 0px; left: 0px; width: 0px; height: 0px;"> </div><div class="mask-element" data-id="4" style="top: 0px; left: 0px; width: 0px; height: 0px;"> </div></div>
+<div class="clippings"></div>
+</div>
+<div class="norotate-inner"></div>
+</div>
+</div>
+<div id="loading-indicator" style="display: none;">
+<div class="loading-indicator"><div class="loader-dot loader-dot1"></div><div class="loader-dot loader-dot2"></div><div class="loader-dot loader-dot3"></div><div class="loader-text">Loading...</div></div>
+</div>
+<div class="on" id="viewer-controls" style="top: 100px; display: none;">
+<nav class="image-control">
+<nav class="image-zooms">
+<a class="zoom-in">+</a>
+<a class="zoom-out">-</a>
+<div class="more-controls" style="display: none;">
+<a class="brightness icon-news icon-contrast" title="Adjust brightness contrast"></a>
+<a class="rotate icon-rotate icon-news" title="Rotate image"></a>
+<a class="fullscreen icon-arrow icon-news end-icon-news" title="View full screen"></a>
+<a class="report icon-news icon-flag" title="Report a problem"></a>
+</div>
+<i class="showmore-controls icon-news icon-chevron on" title="Show more controls"></i>
+</nav>
+</nav>
+<div class="image-nav"></div>
+</div>
+<div id="adjustImage" style="display: none;">
+<div class="brightControl control">Brightness: <span id="brightval">0</span><div id="brightness"><input class="adjustRange" id="brightRange" max="100" min="-100" name="brightRange" type="range" value="0"/></div></div>
+<div class="contrastControl control">Contrast: <span id="contrastval">0</span><div id="contrast"><input class="adjustRange" id="contrastRange" max="100" min="-100" name="contrastRange" type="range" value="0"/></div></div>
+<div class="invert control">
+<label for="invert"><input id="invert" type="checkbox"/> Invert</label>
+</div>
+<button class="v-btn" id="resetAdjust">Reset</button>
+<div id="adjust-indicator">
+<div class="loading-indicator"><div class="loader-dot loader-dot1"></div><div class="loader-dot loader-dot2"></div><div class="loader-dot loader-dot3"></div></div>
+</div>
+</div><div id="infopane_container" style="top: 100px;">
+<div id="info-pane" style="display:none; right:auto;">
+<a href="https://www.newspapers.com/#" id="close-bar" onclick="return false" title="Toggle this section open or closed"></a>
+<div id="info-container">
+<a class="close-btn" href="https://www.newspapers.com/#">×</a><div id="about">
+<div id="about-loading" style="display:none">
+<span class="loadimg large">Loading...</span>
+</div>
+<div class="error_strip" id="about-failed" style="display:none;">
+<b class="error">Oops, we couldn't load page information.</b>
+</div>
+<div id="about-content">
+<div class="about-section" id="about-source"></div>
+<div id="attribution-wrapper"></div>
+<div class="about-title" id="about-spotlights-title">
+<h2>Clippings (<span class="spotlight-count">0</span>)</h2>
+</div>
+<div class="about-section" id="about-spotlights">
+<ul id="spotlight-list"></ul>
+</div>
+</div>
+</div>
+<div class="about-section" id="report" style="display:none">
+<div id="report-content">
+<h2>Report a problem</h2>
+<div class="preview footnote" style="display:none">
+<img alt="report" src="https://www.newspapers.com/#"/>
+<p class="spotlight-text">Lorem Ipsum...</p>
+</div>
+<div class="preview comment" style="display:none">
+<div class="comment-text">Lorem Ipsum...</div>
+</div>
+<div class="preview document" style="display:none">
+<img alt="report" src="https://www.newspapers.com/#"/>
+</div>
+<div class="preview relation" style="display:none">
+<img alt="report" src="https://www.newspapers.com/#"/>
+<p class="relation-title">
+<span class="relation-note"></span>
+<span class="relation-type"></span>
+</p>
+</div>
+</div>
+<form action="#" id="report-form" method="POST">
+<fieldset>
+<legend>Why are you reporting this <span class="report-type"></span>?</legend>
+<p class="subdued">e.g. Offensive content, copyrighted material, image problem.</p>
+<p><textarea class="edit_input" cols="22" emptyclass="edit_input ex" emptyvalue="Enter details..." id="report-comment" name="comment" rows="3"></textarea></p>
+</fieldset>
+<div class="alert_strip size2" id="report-failed" style="display:none">
+<p class="attn_24">Oops, we could not submit your report.
+<a class="retry-link" href="https://www.newspapers.com/#" onclick="return false;">Try Again</a>
+</p>
+</div>
+<div id="report-controls">
+<input class="btn-p btn" type="submit" value="Report This"/>
+ <a class="btn btn-link report-cancel" href="https://www.newspapers.com/#" onclick="">Cancel</a>
+</div>
+<div id="report-saving" style="display:none">
+<p class="loadimg">Saving</p>
+</div>
+</form>
+</div>
+<div class="about-section" id="correction" style="display:none">
+<h3>Suggest Correction</h3>
+<a class="go-back" href="https://www.newspapers.com/#" onclick="return false;">Go back</a>
+<p><b>To report an error</b> with this information, please:</p>
+<ol class="numlist simplelist">
+<li>Check problem fields.</li>
+<li>Detail the error.</li>
+<li>Click the Send button.</li>
+</ol>
+<form action="#" id="correction-form" onsubmit="return false;">
+<ul class="metadata-list">
+</ul>
+<div class="controls">
+<input class="btn-t btn disabled" disabled="disabled" type="submit" value="Send"/>
+ 
+<a href="https://www.newspapers.com/#" onclick="return false;">Cancel</a>
+</div>
+<div class="form-saving" style="display:none">
+<p class="loadimg">Saving...</p>
+</div>
+<div class="form-failed" style="display:none">
+<p class="error_strip"><b class="error_24">Oops, we couldn't send your request. <a class="retry-link" href="https://www.newspapers.com/#" onclick="return false;">Close</a></b></p>
+</div>
+<div class="form-failed-retry" style="display:none">
+<p class="alert_strip"><b class="attn_24">Oops, we couldn't send your request. <a class="retry-link" href="https://www.newspapers.com/#" onclick="return false;">Retry</a></b></p>
+</div>
+</form>
+</div>
+</div>
+<div id="bottom_fade">
+</div>
+</div>
+</div>
+<div class="filmstrip-open-bar"></div>
+<div class="filmstrip_overlay_container off no-load">
+<div class="filmstrip_content">
+<div class="filmstrip-controls">
+<div class="filmstrip-external-controls" id="filmstrip_external_controls">
+<span class="icon-news icon-film" title="Show filmstrip"></span>
+<div class="paging">
+<a class="prev-it prev-image" title="Previous page"></a>
+<div class="goto-page">
+<input id="filmstrip_pagenum_target_input" min="1" type="number"/>
+of
+<b id="filmstrip_total_edition_count"></b>
+<span class="btn pagenum-target-go-btn hidden">Go</span>
+</div>
+<a class="next-it next-image" title="Next page"></a>
+</div>
+</div>
+<div class="nextprev prevf">
+<span class="prev-it"></span>
+</div>
+<div class="nextprev nextf">
+<span class="next-it"></span>
+</div>
+</div>
+<div class="filmstrip-sets clear" id="filmstrip-sets"></div>
+</div>
+</div><p class="viewer-footer"><a class="help-tips" id="help-tips"><span>Ctrl+ /</span> -Keyboard Shortcuts</a> • Copyright © 2019 Newspapers.com</p>
+</div>
+</section>
+<div class="preview panel" id="preview-pane"></div>
+<script id="printsave-deny-tpl" type="text/template">
+<div>
+<div class="innerbox">
+<h1>Printing and saving is unavailable</h1>
+<p>Printing and saving of this page is unavailable due to copyright. Copies may be available upon request.</p>
+<div class="tbuttonbar">
+<a class="cancel btn btn-t">Cancel</a>
+<a class="request-access btn btn-p" target="_blank">Request access</a>
+</div>
+</div>
+</div>
+</script>
+<script id="printselection-info-tpl" type="text/template">
+<div class="clipping-info">
+<p>Select an area to print or save.</p>
+<a class="btn btn-p print" title="Print">Print</a>
+<a class="btn btn-p download" title="Save">Save</a>
+<a class="btn btn-p jpg" title="JPG" style="display:none;">Save as JPG</a>
+<a class="btn btn-p pdf" title="PDF" style="display:none;">Save as PDF*</a>
+<p class="subdued pdfnote" style="display: none;">* PDF&mdash;Includes source information</p>
+<a class="cancel close-btn">&times;</a>
+</div>
+</script>
+<script id="clipping-info-tpl" type="text/template">
+<div class="clipping-info">
+<div class="inner">
+<div class="full-view">
+<span class="fr close-btn">&times;</span>
+<div class="clip-description">
+<h3 class="clip-title"></h3>
+<p class="clip-body"></p>
+<hr class="hr">
+</div>
+<p class="clip-src">Clipped by <a class="author clip-person"></a>
+<span class="clip-duration"></span>
+<a class="clip-reclip-count icon-clip icon-news"></a>
+</p>
+<div class="tbuttonbar">
+<p class="owner-controls" style="display: none;">
+<a class="clip-edit btn-link btn icon-edit icon-news">Edit</a>
+</p>
+<a class="report-abuse btn-link btn icon-news icon-flag fl">Report</a>
+
+<button type="button" class="saveToAncestry icon-only"></button>
+<a class="btn btn-t share">Share</a>
+<a class="btn btn-p gotoclipping">View Clipping</a>
+
+</div>
+</div>
+<div class="edit-view" style="display:none;">
+</div>
+<div class="share-view" style="display:none;">
+</div>
+</div>
+</div>
+</script>
+<script id="cropping-tpl" type="text/template">
+<div id="crop-handles" class="crop-controls">
+<div class="ord-n crop-dragbar"></div>
+<div class="ord-s crop-dragbar"></div>
+<div class="ord-e crop-dragbar"></div>
+<div class="ord-w crop-dragbar"></div>
+
+<div class="ord-nw crop-handle">&nbsp;</div>
+<div class="ord-ne crop-handle">&nbsp;</div>
+<div class="ord-se crop-handle">&nbsp;</div>
+<div class="ord-sw crop-handle">&nbsp;</div>
+</div>
+<div class="crop-controls">
+<div class="crop-hline"></div>
+<div class="crop-hline bottom"></div>
+<div class="crop-vline right"></div>
+<div class="crop-vline"></div>
+<div class="crop-tracker">&nbsp;</div>
+</div>
+</script>
+<script id="conflict-dialog-tpl" type="text/template">
+<div class="collectionElementConflictDialog">
+<span class="fr close-btn">&times;</span>
+<div id="element-list"></div>
+</div>
+</script>
+<!--
+WFM Image Path /root/projects/aaaq/UofU_PDFs/EveningTelegram_2/SaltLakeTelegram_1912-04-16_0002
+-->
+<script type="text/javascript">
+var image = JSON.parse('{\"archived\":false,\"date\":\"1912-04-16\",\"extra\":false,\"height\":6308,\"imageId\":289726567,\"location\":\"Salt Lake City, Utah\",\"publicationId\":5481,\"publicationTitle\":\"Salt Lake Telegram\",\"title\":\"2\",\"wfmImagePath\":\"\\/root\\/projects\\/aaaq\\/UofU_PDFs\\/EveningTelegram_2\\/SaltLakeTelegram_1912-04-16_0002\",\"width\":4808,\"allowedSubscriptionTypes\":[],\"freeview\":false,\"reasonCanView\":null,\"canView\":false,\"showDetailFirst\":false}');
+var clippingId = '0';
+var fcfToken = '';
+var brightness = '0';
+var contrast = '0';
+var invert = false;
+var pqSearchId = '';
+var previousLocation = '';
+var isSiteSecure = true;
+</script>
+<script>
+var isNcom = true;//Used by mbox.js
+var appRoot = 'https://www.newspapers.com/';
+var fbappid = 397139687020404;
+var facebookAppRoot = '';
+
+var footnotePathNormal = 'https://www.newspapers.com/';
+var fullPathNormal = 'https://www.newspapers.com/';
+var fullPathFootnote = 'https://www.newspapers.com/';
+var fullPathSecure = 'https://www.newspapers.com/';
+var footnotePathAgnostic = 'https://www.newspapers.com/';
+var fullPathLanding = 'https://go.newspapers.com/';
+var imagePathNormal = 'https://img.newspapers.com/img/';
+var contributionLevel = 'full';
+var cookieDomain = '.newspapers.com';
+var browsePathSecure = '/api/browse/';
+var clippingPathSecure = '/api/clipping/';
+var userauthPathSecure = '/api/userauth/';
+var dataSciencePathSecure = 'https://data-science.news-prod.cloud/';
+var isLibrary = false;
+var siteversion = "standard";
+var sitesecure = "1";
+var siteiteration = "60c986d";
+var clipStatus = '';
+var fn_error = '';
+var emailHardBounce = false;
+var useMboxDeny = false;
+var recaptchaSiteKey = '6LcmLGsUAAAAAOeB4bwNIaoaBAny15iCyvKf77dG';
+var onloadaction = null;
+var userData = null;
+var wallpage = 'subscription/registerwall';
+var institutionData = null;
+var promotionData = null;
+var productData = {
+id: '1',
+open: '',
+name: 'Newspapers.com',
+paid: false,
+default: true,
+irish: false,
+proquest: false,
+discontinued: false,
+registrationRequired: false,
+hideNarrowByLocation:  false,
+hideAddedSince: false,
+disablePrintSaveStartDate: '',//ISO-8601 Format
+viewerPrintSaveDenyLink: '',
+startYear: 1690,
+endYear: 2019
+};
+
+var tpaData = {
+authorized: false,
+paper: 'Newspapers.com',
+period: '0'
+};
+
+var silo = 0;
+var productId = 1;
+var CLICK = "click",
+CLICK_START = 'touchstart mousedown',
+CLICK_MOVE  = 'touchmove mousemove',
+CLICK_END   = 'touchend mouseup',
+touchEnabled = ('ontouchstart' in window);
+var saveToAncestryOverrideUrl = "https://www.ancestry.com/savetoancestry/";
+
+// setting these here to be used by the new account page
+var ancestryBundleName = 'Ancestry All Access';
+var ancestryBundleAccountUrl = 'https://secure.ancestry.com/myaccount/default.aspx';
+var ancestryBundleContactEmail = 'support@ancestry.com';
+var ancestryBundlePhone = '1-800-718-7276';
+</script><script type="text/javascript">
+window.onerror = function (msg, url, line) {
+var f = function (str) {
+return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
+return '%' + c.charCodeAt(0).toString(16);
+});
+};
+try {
+var sl = 'https://www.newspapers.com/report';
+var body = document.body;
+if (body.attributes.jserror) {
+var prevjserrors = body.attributes.jserror.value;
+body.attributes.jserror.value = prevjserrors + '\n' + msg + " url:" + url;
+var x = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+var p = sl + "/?page="+f(document.location.href)+"&error=" + f(msg) + "&script=" + f(url);
+x.open('POST', p, true);
+x.send(null);
+}
+} catch (e) {}
+};
+</script>
+<script src="https://www.ancestrycdn.com/tao/at/1.7.7/at.js" type="text/javascript"></script>
+<div class="mboxDefault"></div>
+<script>tao.f.strongMboxUpdate(
+"ncom_Viewer","loggedIn=false","type=NonRegistrant");
+</script><div class="mbox-name-ncom_Viewer at-element-marker" data-at-mbox-name="ncom_Viewer" id="ncom_Viewer_Elem_Id"></div>
+<script>
+var require = {
+deps: ["jquery", "core"],//Requests these dependencies. However, it doesn't mean that they will be loaded before main.js runs.
+paths: {
+jquery: [
+'//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min',
+'//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min',
+'jquery-1.11.3.min'
+],
+rx: [
+"//cdnjs.cloudflare.com/ajax/libs/rxjs/2.3.18/rx.lite.min",
+"rx.lite"//Fallback if fails to load from cdn
+],
+mapbox: [
+"https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl"
+],
+bluebird: [
+"https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.2/bluebird.min"
+],
+savetoancestry: "https://www.ancestry.com/savetoancestry/javascript/saveToAncestryApi",
+},
+urlArgs: "ncomv="+siteiteration,
+shim: {
+//Define dependencies for non-amd code.
+"rx": {
+exports: "rx",
+deps: ['jquery']
+},
+"jquery.infieldlabel.min": {
+exports: "$",
+deps: ['jquery']
+},
+"modernizr": {
+exports: "Modernizr",
+deps: ['yepnope']
+},
+"mapbox": {
+exports: "mapboxgl"
+},
+"bluebird": {
+exports: "Promise"
+}
+}
+};
+</script>
+<script crossorigin="anonymous" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://www.newspapers.com/js/reactjs/dist/memberNavigation.bundle.js?ncomv=60c986d"></script>
+<script async="" data-main="/js/requirejs/bin/app.viewer.main.js" src="https://www.newspapers.com/js/requirejs/require.js?v=60c986d"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4bd2ba109c","applicationID":"197254660","transactionName":"ZVQAbEBTX0AFV0FaDVweI1tGW15dS2JcVhVXQ01RXFZUSw==","queueTime":0,"applicationTime":288,"atts":"SRMDGghJTE4=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<iframe id="_hjRemoteVarsFrame" name="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" title="_hjRemoteVarsFrame"></iframe><div id="ads"></div><div id="batBeacon0.30921088272385155" style="width:0px; height:0px; display:none; visibility:hidden;"><img alt="" height="0" id="batBeacon0.6083716706904081" src="https://bat.bing.com/action/0?ti=5440005&amp;Ver=2&amp;mid=0b5e41a7-af4c-48f5-6559-12b30f66a220&amp;pi=0&amp;lg=en-US&amp;sw=1920&amp;sh=1080&amp;sc=24&amp;tl=16%20Apr%201912,%202%20-%20Salt%20Lake%20Telegram%20at%20Newspapers.com&amp;p=https%3A%2F%2Fwww.newspapers.com%2Fimage%2F289726567%2F%3Fterms%3Dtitanic%2Bpassenger%2Blist&amp;r=&amp;lt=7878&amp;evt=pageLoad&amp;msclkid=N&amp;rn=69509" style="width:0px; height:0px; display:none; visibility:hidden;" width="0"/></div><iframe class="aamIframeLoaded" id="destination_publishing_iframe_ancestry-mcsp_0" name="destination_publishing_iframe_ancestry-mcsp_0_name" sandbox="allow-scripts allow-same-origin" src="https://ancestry-mcsp.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fwww.newspapers.com%2Fimage%2F289726567%2F%3Fterms%3Dtitanic%2Bpassenger%2Blist" style="display: none; width: 0px; height: 0px;" title="Adobe ID Syncing iFrame"></iframe><div class="tmask" id="" style="height: 1080px; width: 1920px; opacity: 0.7; display: block;"></div><div class="tbox" id="tbox" style="position: fixed; top: 237.5px; left: 562.5px; opacity: 1; display: block;"><div class="tinner" id="" style="height: 550px; width: 740px; background-image: none;"><div class="tcontent" style="display: block;"> <div id="subscribeside">
+<h1>You need  a <b class="clr1">subscription</b> to view this page
+ </h1>
+<div class="search-deny opt1" id="pricing">
+<div class="img-thumbnail-offer">
+<div class="" id="img-box">
+<h3 class="img-title">Salt Lake Telegram <span>16 Apr 1912</span></h3>
+<div class="t-img">
+<img alt="Preview of actual newspaper" src="https://img.newspapers.com/img/thumbnail/289726567/200/290/0_0_4808_6308.jpg"/>
+</div>
+</div>
+</div>
+<div class="extra-box" id="paybox">
+<div class="offer-tile p-extra bestoffer single-offer">
+<form action="https://www.newspapers.com/freetrial/">
+<input name="subscribe" type="hidden" value="yes"/>
+<input name="iid" type="hidden" value="INT-deny-search"/>
+<input name="duration" type="hidden" value="semiannual"/>
+<input name="subtype" type="hidden" value="extra"/>
+<input name="ft" type="hidden" value="true"/>
+<h2>
+Start a 7-Day Free Trial </h2>
+<div class="mktg-text">
+<ul class="checks">
+<li><span>Gain immediate access to this page</span></li>
+<li><span>Unlimited access to 515 million+ pages from over 12,100+ newspapers</span></li>
+<li><span>Millions of pages added every month</span></li>
+</ul>
+</div>
+<div class="mktg-offer">
+<input class="btn-p btn btn-lg" type="submit" value="Start Free Trial"/>
+</div>
+</form>
+</div>
+<p class="link-down">See other <a href="https://www.newspapers.com/choose-a-plan/?iid=INT-deny-search">options</a></p>
+</div>
+</div>
+<div class="signinoptions">
+<p class="signmein">Already a Newspapers.com subscriber? <a href="https://www.newspapers.com/signin/?next_url=https://www.newspapers.com/image/289726567/?terms=titanic+passenger+list" onclick="slideme();return false">Sign in</a>.</p>
+<p class="gobackslide hid"><a href="https://www.newspapers.com/image/289726567/?terms=titanic+passenger+list/javascript:void(0)" onclick="slidemereverse();return false">Go Back </a> to <strong>sign up for Newspapers.com</strong>.</p>
+</div>
+</div>
+<div id="signinarea"></div>
+<div class="lite-box step1 simplelite" id="memberside" style="display:none">
+</div>
+</div><div class="tclose"></div></div></div></body></html>

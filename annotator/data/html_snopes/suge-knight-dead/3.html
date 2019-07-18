@@ -1,0 +1,88 @@
+<html lang="en-US"><head>
+<title>LASD Inmate Information Center - Booking Details</title>
+<link href="https://app5.lasd.org/iic/Styles/Oak/Style.css" rel="stylesheet" type="text/css"/>
+<script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-N6MVFR"></script><script language="JavaScript1.1">
+<!-- Begin
+function right(e) {
+var message = "Materials published on this Site may be protected by trademark/copyright.";
+message = message + " Their use for commercial purposes is prohibited without the written permission ";
+message = message + " of the LASD and they can only be used as indicated in the Terms and Conditions. ";
+
+if (navigator.appName == 'Netscape' && 
+(e.which == 3 || e.which == 2))
+return false;
+else if (navigator.appName == 'Microsoft Internet Explorer' && 
+(event.button == 2 || event.button == 3)) {
+alert(message);
+return false;
+}
+return true;
+}
+
+document.onmousedown=right;
+document.onmouseup=right;
+if (document.layers) window.captureEvents(Event.MOUSEDOWN);
+if (document.layers) window.captureEvents(Event.MOUSEUP);
+window.onmousedown=right;
+window.onmouseup=right;
+//  End -->
+</script>
+<script language="JavaScript">
+<!-- Begin
+function NewWindow(mypage, myname, w, h, scroll) {
+var winl = (screen.width - w) / 2;
+var wint = (screen.height - h) / 2;
+winprops = 'height='+h+',width='+w+',top='+wint+',left='+winl+',scrollbars='+scroll+',resizable=no'
+win = window.open(mypage, myname, winprops)
+if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+}
+//  End -->
+
+var myWin
+function doNew() {
+  if (!myWin || myWin.closed) {
+    myWin = window.open("http://shq.lasdnews.net/pages/tgen1.aspx?id=AS1","subWindow","HEIGHT=600,WIDTH=850,scrollbars,resizable")
+  }
+  else
+  {
+    myWin.focus()
+  }
+}
+
+var myWin2
+function GoToVine() {
+  if (!myWin2 || myWin2.closed) {
+    myWin2 = window.open("http://www.vinelink.com/vinelink/servlet/SubjectSearch?siteID=5000&agency=1&offenderID="+document.bkg_detail.bkg_booking_no.value)
+  }
+  else
+  {
+    myWin2.focus()
+  }
+}
+
+var myWin3
+function doSchedule() {
+  if (!myWin3 || myWin3.closed) {
+    myWin3 = window.open("https://visit.lasd.org/app","subWindow","HEIGHT=600,WIDTH=850,scrollbars,resizable")
+  }
+  else
+  {
+    myWin3.focus()
+  }
+}
+</script>
+<script type="text/javascript">
+function load_msg()
+{  
+  document.bkg_detail.search_but.focus();
+}
+</script>
+</head>
+<body leftmargin="0" marginheight="0" marginwidth="0" onload="load_msg()" topmargin="0">
+<noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-N6MVFR" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N6MVFR');</script>
+</body></html>

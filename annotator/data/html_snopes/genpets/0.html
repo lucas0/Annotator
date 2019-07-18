@@ -1,0 +1,137 @@
+<html><head>
+<title>Adam Brandejs - PORTFOLIO</title>
+<meta charset="utf-8"/>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="index, follow" name="robots"/>
+<meta content=" " name="description"/>
+<meta content="" name="keywords"/>
+<link href="http://www.brandejs.ca/main.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.brandejs.ca/menu.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.brandejs.ca/brandejsv3.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.brandejs.ca/blog.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.brandejs.ca/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script language="javascript" src="http://www.brandejs.ca/js/swfobject.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body style="">
+<div id="header">
+<div id="topnav">
+<div id="title">
+<img alt="Adam Brandejs" src="http://www.brandejs.ca/images/logo.png"/>
+</div>
+<div id="nav_holder">
+<ul class="sf-menu">
+<li><a class="current" href="http://www.brandejs.ca/portfolio/" id="left">PORTFOLIO</a></li>
+<li><a href="http://www.brandejs.ca/blog/">BLOG</a></li>
+<li><a href="http://www.brandejs.ca/about">ABOUT</a></li>
+<li><a href="http://www.brandejs.ca/contact">CONTACT</a></li>
+</ul>
+</div> </div>
+</div> <div id="container_shell">
+<div id="container">
+<div id="portfolio_main_image">
+<div class="portfolio_image_main">
+<div class="main_portfolio_title">Prosthetics Zipper</div>
+<div id="main_portfolio_loading">Loading...</div>
+<img alt="Prosthetics Zipper" id="main-img" src="http://www.brandejs.ca/portfolio_images/Brandejs_image_44_l2.jpg"/>
+</div>
+</div>
+<div id="portfolio_thumbs">
+<div class="portfolio_image_thumb">
+<img alt="45" src="http://www.brandejs.ca/portfolio_images/Brandejs_image_44_tb_2.jpg"/>
+</div>
+<div class="portfolio_image_thumb">
+<img alt="45" src="http://www.brandejs.ca/portfolio_images/Brandejs_image_45_tb_2.jpg"/>
+</div>
+<div class="portfolio_image_thumb">
+<img alt="46" src="http://www.brandejs.ca/portfolio_images/Brandejs_image_46_tb_2.jpg"/>
+</div>
+<div class="portfolio_image_thumb" style="margin-right:0px;">
+<img alt="47" src="http://www.brandejs.ca/portfolio_images/Brandejs_image_47_tb_2.jpg"/>
+</div>
+<div class="portfolio_image_thumb">
+<img alt="48" src="http://www.brandejs.ca/portfolio_images/Brandejs_image_48_tb_2.jpg"/>
+</div>
+<div class="portfolio_image_thumb">
+<img alt="49" src="http://www.brandejs.ca/portfolio_images/Brandejs_image_49_tb_2.jpg"/>
+</div>
+<div class="portfolio_image_thumb">
+<img alt="50" src="http://www.brandejs.ca/portfolio_images/Brandejs_image_50_tb_2.jpg"/>
+</div>
+</div>
+<script>
+var portImages=new Array("44","45","46","47","48","49","50");
+
+$("#main-img").click(function(){
+portSlide();
+
+
+    
+});
+
+
+var count = 0;
+var max = portImages.length;
+function portSlide(){
+  $('#main_portfolio_loading').show();
+
+  if(count < (max-1)){
+    window.count++;
+  }else{
+     window.count=0;
+  }
+  //alert(window.count+"--"+count+"--"+max);
+    
+    var fImage="http://www.brandejs.ca/portfolio_images/Brandejs_image_"+portImages[window.count]+"_l2.jpg";
+     //alert(fImage);
+     $('#main-img').attr('src',fImage);
+     $('#main-img').load(function(){
+     //alert('loaded');
+     $('#main_portfolio_loading').hide();
+     });
+    
+    
+  
+}
+
+
+</script>
+<div id="portfolio_description">
+<h4>Prosthetics Zipper</h4>
+<strong>Media:</strong> Silicon, latex, custom blood mix, metal, fibreglass.<br/>
+<p>These are still images from a stop motion (pixeleation) short film  directed by Ania Smolenski that I did the special effects prosthetics on.</p>
+<p><strong>Summary:</strong> Guy getting ready for work unzips his chest, washes his intestines in the sink, and zips back up.</p>
+<p><strong>Summary of Prosthetics:</strong> 1 small zipper prostetic attached to actor. 1 fake chest with second zipper, 8 feet of latex intestine.</p>
+<p>Camera: Chris Belchevski.<br/> Makeup: Crystal Pallister</p>
+<p><strong>Process:</strong> (the rubber bits) I made the zipper from scratch as I didn't like any that we found at the stores. They were all too small (tooth wise) and I didn't think they'd attach very well. When in doubt, save hours of searching and just make the damn thing.</p>
+<p>The fake chest was cast in silicon rubber and used so the camera could cut between the real chest and fake when the intestines were being pulled out.  Shawn didn't want his stomach cut open for real for some reason... I did a lifecast directly from Shawn (actor) and then spent some time modifying it for the zipper before the final cast.<br/><br/>The intestines were cast in boring old latex as we needed 8 feet and the budget didn't allow for 8 feet of silicon intestines.</p>
+<p><em>Yes folks, he <strong>is</strong> unzipping his chest.... enjoy..</em></p><br/>
+<br/></div>
+<script>
+$("#portfolio_thumbs img").click(function(){
+	var img1=$(this).attr('src');
+	var img2= img1.replace('_tb_2', '_l2');
+	
+    $('#main-img').attr('src',img2);
+});
+
+</script>
+<div class="clearer"> </div>
+<br/><br/>
+</div></div>
+<div id="footer">
+<div id="footer_copy">
+<div class="copyright">Copyright 2007-2015 Adam Brandejs | <a href="http://instagram.com/campingeek" target="_blank">Follow me on Instagram</a></div>
+</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58973404-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body></html>

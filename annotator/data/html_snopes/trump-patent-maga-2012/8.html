@@ -1,0 +1,2004 @@
+<html lang="en" xmlns:tsdr="http://tsdr.uspto.gov"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=8" http-equiv="X-UA-Compatible"/>
+<title>Trademark Status &amp; Document Retrieval</title>
+<link href="http://tsdr.uspto.gov/css/uspto-header-styles.css" rel="stylesheet" type="text/css"/>
+<link href="http://tsdr.uspto.gov/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+<link href="http://tsdr.uspto.gov/css/print/print.css" media="print" rel="stylesheet" type="text/css"/>
+<link href="http://tsdr.uspto.gov/css/uspto-style.css" rel="stylesheet"/>
+<link href="http://tsdr.uspto.gov/css/style.css" rel="stylesheet"/>
+<link href="http://tsdr.uspto.gov/css/jquery.multiselect.css" rel="stylesheet"/>
+<link href="http://tsdr.uspto.gov/css/multi-search-table.css" rel="stylesheet"/>
+<link href="http://tsdr.uspto.gov/css/ftl-style.css" rel="stylesheet" type="text/css"/>
+<link href="http://tsdr.uspto.gov/css/toggle_container.css" rel="stylesheet"/>
+<link href="http://tsdr.uspto.gov/css/webwidget_tab.css" rel="stylesheet"/>
+<link href="http://tsdr.uspto.gov/css/docs_table.css" rel="stylesheet"/>
+<link href="http://tsdr.uspto.gov/css/themes-redmond-jquery-ui.css" rel="stylesheet"/>
+<link href="http://tsdr.uspto.gov/css/print/print.css" id="printPreviewStyleSheet" media="print" rel="stylesheet"/><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-5D5BBD"></script><script src="http://tsdr.uspto.gov/js/lib/jquery-1.7.2.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/lib/underscore-1.4.2.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/lib/jquery-ui-1.9.2.min.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/lib/jquery.tablesorter.js" type="text/javascript"></script><script language="javascript" src="http://tsdr.uspto.gov/js/lib/jquery.dataTables.js"></script><script src="http://tsdr.uspto.gov/js/lib/jquery.pngFix.pack.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/lib/jquery.hotkeys.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/lib/jquery.multiselect.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/lib/jquery.ba-bbq.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/Search.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/SearchForm.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/Asynchronous.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/HotKeys.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/webwidget_tab.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/HelpOverlay.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/AnnouncementOverlay.js" type="text/javascript"></script><script src="http://tsdr.uspto.gov/js/SearchPage.js" type="text/javascript"></script><script async="async" src="http://components.uspto.gov/js/ais/28-tsdr.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+                <script src="js/lib/html5shiv.js"></script><script src="js/lib/html5shiv-printshiv.js"></script><![endif]
+                --></head>
+<body>
+<div id="ApplicationProperties"><input id="errorValidationSn" type="hidden" value="Serial Number(s) {0} is/are not in the proper format. A U.S. Serial Number consists of 8 digits, with no alpha characters."/><input id="errorValidationRn" type="hidden" value="Registration Number(s) {0} is/are not in the proper format. A U.S. Registration Number consists of 5, 6, or 7 digits, with no alpha characters. Commas are allowed."/><input id="errorValidationRef" type="hidden" value="USPTO Reference Number(s) {0} is/are not in the proper format. A USPTO Reference Number consists of 8 characters, the first being an alpha character and the remaining 7 characters numeric."/><input id="errorValidationIr" type="hidden" value="International Registration Number(s) {0} is/are not in the proper format. It must be in the format nnnnnn, nnnnnnn, nnnnnnA, or nnnnnnnA."/><input id="errorValidationAutoRegnition" type="hidden" value=" {0} is not in the proper US Application format. -
+                 A U.S. Serial Number consists of 8 digits, with no alpha characters. -
+                 A U.S. Registration Number consists of 5, 6, or 7 digits, with no alpha characters. Commas are allowed. -
+                 A USPTO Reference Number consists of 8 characters, the first being an alpha character and the remaining 7 characters numeric.
+        "/><input id="errorRangeDelimiter" type="hidden" value="Range searches only processes a single range such as number1-number2. More than one hyphen is not allowed."/><input id="errorRangeNumberMissing" type="hidden" value="Range searches require two case identifiers separated by a hyphen. For example, 12345670-12345680."/><input id="errorNoEntry" type="hidden" value="No number entered. Please enter a valid number and resubmit your search."/><input id="errorNoMultiData" type="hidden" value="No data has been found for the entered numbers.  Please confirm that the entry is correct."/><input id="partialResultsPredictable" type="hidden" value="The following {0} number(s) is/are not found in our system: {1}"/><input id="partialResultsUnpredictable" type="hidden" value="Results were limited to the first 25 cases entered. The remainder of the range is {0}"/><input id="errorOverSized" type="hidden" value="You have entered more than the permitted 25 case identifiers. Please remove {0} and resubmit your search."/><input id="ajaxError" type="hidden" value="The server was unreachable, please try again."/><input id="noSelectionError" type="hidden" value="No case or document selected to download"/><input id="noDownloadContentError" type="hidden" value="No content was selected for download. Please select status, documents, or both."/><input id="certNaInOriginal" type="hidden" value="Certificates not available for download in Original format."/><input id="searchingDocs" type="hidden" value="retrieving documents ..."/><input id="searchingStatus" type="hidden" value="retrieving status ..."/><input id="docsFound" type="hidden" value="{0} document(s) found"/><input id="statusFound" type="hidden" value="Status results found"/><input id="docsSelected" type="hidden" value="{0} of {1} documents selected"/><input id="multiMediaFileTypes" type="hidden" value="MP3,WAV,X-MS-WMA,X-MS-WMV,AVI,MPEG,MP4,ZIP,QUICKTIME,AIFF,GIF,X-SHOCKWAVE-FLASH"/><input id="error.validation.searchType" type="hidden" value="Invalid Search Type."/><input id="error.document.unavailable" type="hidden" value="Selected document is unavailable. Please click on Submit button for other available documents."/><input id="msg.noResults" type="hidden" value='No result found for query: \[" {0} "\].'/><input id="msg.resultsReturned" type="hidden" value="queryString={0}, returned entities.size()={1}"/><input id="msg.allResultsReturned" type="hidden" value="entity={0}, returned count={1}"/><input id="caseDownloadPdfURL" type="hidden" value="https://tsdrsec.uspto.gov/ts/cd/casedocs/{prefix}{caseId}/mega-bundle-download?case={case}&amp;docs={udi}&amp;assignments={adi}&amp;prosecutionHistory={pdi}"/><input id="caseDownloadZipURL" type="hidden" value="https://tsdrsec.uspto.gov/ts/cd/casedocs/{prefix}{caseId}/zip-bundle-download?case={case}&amp;docs={udi}&amp;assignments={adi}&amp;prosecutionHistory={pdi}"/><input id="markImageSrcUrl" type="hidden" value="https://tsdrsec.uspto.gov/ts/cd/standardimages/{sn}/webcontent"/><input id="docsDownloadCertsURL" type="hidden" value="https://tsdrsec.uspto.gov/ts/cd/casedocs/bundle-download.pdf?rn={rnAll}&amp;category=RC&amp;doc={rnChecked}"/></div>
+<div class="overlays hide" id="helpOverlay">
+<div class="dialogBox"><img alt="Close" class="floatRight cursorPointer closeHelp" onclick="page.helpOverlay.close()" src="http://tsdr.uspto.gov/img/icn-close32x32.gif"/><h1 class="helpTitle">TSDR Help</h1>
+<div id="helpOverlayLoading"></div>
+<div id="helpHeader"></div>
+</div>
+</div>
+<div class="overlays hide" id="announcementOverlay">
+<div class="dialogBox"><img alt="Close" class="floatRight cursorPointer closeAnnouncement" onclick="page.announcementOverlay.close()" src="http://tsdr.uspto.gov/img/icn-close32x32.gif"/><h1 class="announcementTitle">Edit Announcement</h1><textarea cols="70" id="announcementTextArea" name="announcementTextArea" rows="5"></textarea><div class="buttonHolderHelp"><input alt="cancel announcement edit" class="page" id="cancelAnnouncement" onclick="page.announcementOverlay.close()" type="button" value="Cancel"/><input alt="save announcement edit" class="page" id="saveAnnouncement" onclick="page.announcementOverlay.save()" type="button" value="Save"/></div>
+</div>
+</div>
+<div class="container">
+<div id="usptoGlobalHeader">
+<div class="uspto-header-top printPreviewNoShow">
+<div class="container">
+<div class="row">
+<div class="col-sm-12"><a class="uspto-logo" href="http://www.uspto.gov" target="_blank" title="United States Patent and Trademark Office - An Agency of the Department of Commerce"></a><div class="pull-right" id="uspto-header-links"><span><a href="http://www.uspto.gov/about-us" target="_blank">About Us</a></span><span><a href="http://www.uspto.gov/careers" target="_blank">Careers</a></span><span><a href="http://www.uspto.gov/about-us/contact-us" target="_blank">Contact Us</a></span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="uspto-header-bottom">
+<div class="container printPreviewNoShow">
+<nav id="uspto_dropdown_nav">
+<ul>
+<li><a href="http://www.uspto.gov/patent">Patents</a><ul>
+<li>
+<div class="childmenu">
+<p class="childmenu_title">Getting Started</p><a href="http://www.uspto.gov/patents-getting-started/general-information-concerning-patents">Patent Basics</a><a href="http://www.uspto.gov/patents-getting-started/patent-process-overview">Process Overview</a><a href="http://www.uspto.gov/patents-getting-started/using-legal-services">Using Legal Services</a><a href="http://www.uspto.gov/learning-and-resources/inventors-entrepreneurs-resources">Inventor Resources</a><a href="http://www.uspto.gov/patents-getting-started/international-patent-cooperation">International Cooperation</a><a href="http://www.uspto.gov/help/patent-help#patents">Patent FAQs</a></div>
+</li>
+<li>
+<div class="childmenu">
+<p class="childmenu_title">Application Process</p><a href="http://www.uspto.gov/patents-application-process/search-patents">Patent Search (Search for Patents)</a><a href="http://www.uspto.gov/patents-application-process/patent-search/classification-standards-and-development">Learn about Patent Classification</a><a href="http://www.uspto.gov/patents-application-process/file-online">Filing Online</a><a href="http://www.uspto.gov/patents-application-process/checking-application-status/check-filing-status-your-patent-application">Checking application status</a><a href="http://www.uspto.gov/patents-maintaining-patent/responding-office-actions">Responding to Office actions</a><a href="http://www.uspto.gov/patents-application-process/patent-trial-and-appeal-board-0">Patent Trial and Appeal Board</a><a href="http://www.uspto.gov/patents-application-process/petitions">Petitions</a></div>
+</li>
+<li class="noborder">
+<div class="childmenu">
+<p class="childmenu_title">Maintaining a Patent</p><a href="http://www.uspto.gov/patents-maintaining-patent/maintain-your-patent">Maintenance fees</a><a href="http://www.uspto.gov/patents-maintaining-patent/data-management-services">Correcting your Patent</a><a href="http://www.uspto.gov/patents-maintaining-patent/patents-assignments-change-search-ownership">Transferring Ownership</a><a href="http://www.uspto.gov/patents-application-process/checking-application-status/order-certified-copies">Ordering certified documents</a><a href="http://www.uspto.gov/patents-maintaining-patent/patent-litigation/patent-litigation">Patent Litigation</a></div>
+</li>
+<li class="tool_and_links">
+<div class="childmenu">
+<div class="tool_and_links_container">
+<p class="childmenu_title tool_and_links_title">Tools &amp; Links</p>
+<div class="tool_and_links_section"><a href="http://www.uspto.gov/patents-application-process/applying-online/about-efs-web">About EFS-Web</a><a href="http://www.uspto.gov/patents-application-process/checking-application-status/check-filing-status-your-patent-application">Check Application Status (PAIR)</a></div>
+<div class="tool_and_links_section"><a href="http://www.uspto.gov/learning-and-resources/fees-and-payment">Fees and Payment</a><a href="http://www.uspto.gov/about-us/organizational-offices/patent-trial-and-appeal-board">Patent Trial &amp; Appeal Board</a></div>
+<div class="tool_and_links_section"></div>
+<div class="tool_and_links_section"><a href="http://www.uspto.gov/patent">More Tools &amp; Links</a></div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li><a href="http://www.uspto.gov/trademark">Trademarks</a><ul>
+<li>
+<div class="childmenu">
+<p class="childmenu_title">Getting Started</p><a href="http://www.uspto.gov/trademarks-getting-started/trademark-basics">Trademark Basics</a><a href="http://www.uspto.gov/trademarks-getting-started/trademark-process">Process Overview</a><a href="http://www.uspto.gov/learning-and-resources/trademark-faqs">Trademark FAQs</a><a href="http://www.uspto.gov/trademarks-getting-started/using-private-legal-services">Using Private Legal Services</a><a href="http://www.uspto.gov/trademarks-getting-started/non-uspto-solicitations">Non-USPTO Solicitations</a><a href="http://www.uspto.gov/trademark/laws-regulations/madrid-protocol">Madrid Protocol &amp; international protection</a></div>
+</li>
+<li>
+<div class="childmenu">
+<p class="childmenu_title">Application process</p><a href="http://www.uspto.gov/trademarks-application-process/search-trademark-database">Searching Trademarks</a><a href="http://www.uspto.gov/trademarks-application-process/filing-online">Filing online</a><a href="http://www.uspto.gov/trademarks-application-process/faqs-personal-information-trademark-records">Disclosure of Public Information</a><a href="http://www.uspto.gov/trademarks-application-process/check-status-view-documents">
+                                       Checking application status &amp; viewing documents</a><a href="http://www.uspto.gov/trademarks-maintaining-trademark-registration/responding-office-actions">Responding to Office Actions</a><a href="http://www.uspto.gov/trademarks-application-process/abandoned-applications">Abandoned applications</a><a href="http://www.uspto.gov/trademark/contact-trademarks#OrderDocs">Ordering certified documents</a><a href="http://www.uspto.gov/trademarks-application-process/trademark-trial-and-appeal-board-ttab">Trademark Trial and Appeal Board</a></div>
+</li>
+<li class="noborder">
+<div class="childmenu">
+<p class="childmenu_title">Maintaining a Trademark Registration</p><a href="http://www.uspto.gov/trademarks-maintaining-trademark-registration/keeping-your-registration-alive">Keeping your registration alive</a><a href="http://www.uspto.gov/trademarks-application-process/filing-online/registration-maintenancerenewalcorrection-forms">Forms to file</a><a href="http://www.uspto.gov/trademarks-getting-started/trademark-basics/checking-status-application-or-registration">Checking registration status &amp; viewing documents</a><a href="http://www.uspto.gov/trademark/been-sued-or-received-cease-and-desist-letter-answers-common-questions-about-trademark">Enforcing your trademark rights/trademark litigation</a><a href="http://www.uspto.gov/trademark/trademark-assignments-change-search-ownership">Transferring ownership</a></div>
+</li>
+<li class="tool_and_links">
+<div class="childmenu">
+<div class="tool_and_links_container">
+<p class="childmenu_title tool_and_links_title">Tools &amp; Links</p>
+<div class="tool_and_links_section"><a href="http://www.uspto.gov/trademarks-application-process/filing-online">Apply Online (TEAS)</a><a href="http://www.uspto.gov/trademarks-application-process/check-status-view-documents">Check Application Status (TSDR)</a></div>
+<div class="tool_and_links_section"><a href="http://www.uspto.gov/trademark/view-fee-schedule-trademark-fee-information">Trademark Fees</a><a href="http://www.uspto.gov/trademarks-application-process/trademark-trial-and-appeal-board-ttab">Trademark Trial and Appeal Board</a></div>
+<div class="tool_and_links_section"></div>
+<div class="tool_and_links_section"><a href="http://www.uspto.gov/trademark">More Tools &amp; Links</a></div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li class="learning_resource_menu"><a href="http://www.uspto.gov/learning-resources">Learning and Resources</a><ul>
+<li>
+<div class="childmenu">
+<p class="childmenu_title">Resources by Audience</p><a href="http://www.uspto.gov/learning-and-resources/attorneys-agents-and-paralegals">Attorneys, agents &amp; paralegals</a><a href="http://www.uspto.gov/learning-and-resources/inventors-entrepreneurs-resources">Inventors &amp; entrepreneurs</a><a href="http://www.uspto.gov/kids/index.html">Kids &amp; educators</a><a href="http://www.uspto.gov/about-us/news-updates">Media</a><a href="http://www.uspto.gov/learning-and-resources/support-centers/patent-and-trademark-resource-centers-ptrcs">Researchers &amp; librarians</a><a href="http://www.uspto.gov/about-us/events">Events</a></div>
+</li>
+<li>
+<div class="childmenu">
+<p class="childmenu_title">Help by Topic</p><a href="http://www.uspto.gov/learning-and-resources/fees-and-payments">Fees and Payment</a><a href="http://www.uspto.gov/learning-and-resources/general-faqs">General FAQs</a><a href="http://www.uspto.gov/help/patent-help">Patents FAQs</a><a href="http://www.uspto.gov/learning-and-resources/trademark-faqs">Trademark FAQs</a><a href="http://www.uspto.gov/learning-and-resources/transferring-ownership-assignments-faqs">Transferring ownership / Assignments Help</a></div>
+</li>
+<li class="noborder">
+<div class="childmenu">
+<p class="childmenu_title">Services &amp; Publications</p><a href="http://www.uspto.gov/learning-and-resources/electronic-bulk-data-products">Electronic Data Products</a><a href="http://www.uspto.gov/learning-and-resources/federal-register-notices/federal-register-notices-2015">Federal Register Notices</a><a href="http://www.uspto.gov/learning-and-resources/official-gazette">Official Gazette</a><a href="http://www.uspto.gov/learning-and-resources/support-centers">Support Centers</a><a href="http://www.uspto.gov/learning-and-resources/xml-resources">XML Resources</a><a href="http://www.uspto.gov/patents-application-process/patent-search/classification-standards-and-development">Classification</a><a href="http://www.uspto.gov/learning-and-resources/statistics">Statistics</a></div>
+</li>
+<li class="tool_and_links">
+<div class="childmenu">
+<div class="tool_and_links_container">
+<p class="childmenu_title tool_and_links_title">Tools &amp; Links</p>
+<div class="tool_and_links_section"><a href="http://www.uspto.gov/learning-and-resources/operating-status">Operational Status</a></div>
+<div class="tool_and_links_section"><a href="http://www.uspto.gov/learning-and-resources/inventors-eye-newsletter">Inventors Eye Newsletter</a><a href="http://www.uspto.gov/learning-and-resources/glossary">Glossary of Terms</a></div>
+<div class="tool_and_links_section"><a href="http://enews.uspto.gov/lists/?p=subscribe&amp;id=1">Subscriptions</a><a href="http://www.uspto.gov/learning-and-resources/how-videos-computer-based-training/how-videos">How-to Videos</a></div>
+<div class="tool_and_links_section"><a href="http://www.uspto.gov/learning-and-resources/ip-programs-and-awards">IP Programs and Awards</a><a href="http://www.uspto.gov/patent/initiatives/uspto-led-executive-actions-high-tech-patent-issues">Executive Actions</a></div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="printPreviewNoShow" id="breadCrumbs"><span id="trail"><a href="http://www.uspto.gov/">USPTO</a>
+               &gt;
+               <a href="http://www.uspto.gov/trademarks/index.jsp">Trademark</a>
+               &gt;
+               <a class="TSDRCrumb" href="http://tsdr.uspto.gov/">TSDR
+                  </a><span class="hide" id="searchCrumb" style="display: inline;">&gt;
+                  <a class="tsdrCrumb" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;">
+                     Trademark Search
+                     </a></span><a class="hide" href="http://tsdr.uspto.gov/faqview" id="FAQLink" style="display: inline;"><img alt="FAQ" src="http://tsdr.uspto.gov/img/tsdr_faq_btn.jpg"/></a></span></div>
+<div class="printPreviewNoShow" id="columnLeft" style="display: none;" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<div id="sideNavTop"></div>
+<ul id="sideNav">
+<li><span class="sideNavFirst bold">Trademark eBusiness</span><ul class="subNav1 first" style="display: block;">
+<li><a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/faqview" title="Document Retrieval FAQ">TSDR FAQ</a></li>
+<li><a href="http://www.uspto.gov/teas/index.html" target="_blank" title="File Online (TEAS)">File
+                           Online (TEAS)
+                           </a></li>
+<li><a href="http://tess2.uspto.gov/bin/gate.exe?f=login&amp;p_lang=english&amp;p_d=trmk" onmousedown="dataLayer.push({'event': 'eventTracker', 'eventCat': 'Assets', 'eventAct':'exe,f=login,p_lang=english,p_d=trmk', 'eventLbl': '/bin/gate.exe,f=login,p_lang=english,p_d=trmk', 'eventVal': 0, 'nonInteraction': 0});" target="_blank" title="Search Trademarks (TESS)">Search Trademarks (TESS)
+                           </a></li>
+<li><a href="http://www.uspto.gov/news/og/trademark_og/index.jsp" target="_blank" title="Trademark Official Gazette">Trademark Official Gazette
+                           </a></li>
+<li><a class="subNav2Link" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:void(0);"><img alt="Expand" class="expandImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpPlus.jpg"/><img alt="Collapse" class="collapseImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpMinus.jpg" style="display: none;"/>
+                           Trademark
+                           Ownership
+                           </a><ul class="subNav2" style="display: none;">
+<li><a href="http://etas.uspto.gov" target="_blank" title="File Assignments Online">
+                                 Change
+                                 Ownership
+                                 </a></li>
+<li><a href="http://assignments.uspto.gov/assignments/q?db=tm" target="_blank">
+                                 Search Trademark
+                                 Assignments
+                                 </a></li>
+<li><a href="http://www.uspto.gov/ebc/help_assignments.htm" target="_blank">
+                                 Assignment Help
+                                 </a></li>
+</ul>
+</li>
+<li><a class="subNav2Link" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:void(0);"><img alt="Expand" class="expandImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpPlus.jpg"/><img alt="Collapse" class="collapseImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpMinus.jpg" style="display: none;"/>
+                           Copies, Products
+                           &amp; Services
+                           </a><ul class="subNav2" style="display: none;">
+<li><a href="http://ebiz1.uspto.gov/oems25p/index.html" target="_blank">
+                                 Order Copies
+                                 &amp;
+                                 Publications Online
+                                 </a></li>
+<li><a href="http://www.uspto.gov/products/index.jsp" target="_blank">Other
+                                 Products
+                                 &amp;
+                                 Services
+                                 </a></li>
+</ul>
+</li>
+<li><a class="subNav2Link" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:void(0);"><img alt="Expand" class="expandImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpPlus.jpg"/><img alt="Collapse" class="collapseImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpMinus.jpg" style="display: none;"/>
+                           Supplemental
+                           Resources &amp; Support
+                           </a><ul class="subNav2" style="display: none;">
+<li><a href="http://www.uspto.gov/faq/plugins/index.jsp" target="_blank" title="PDF viewer required to view documents">
+                                 Download PDF
+                                 Viewer
+                                 </a></li>
+<li><a href="http://www.uspto.gov/faq/other.jsp" target="_blank">
+                                 International
+                                 Trademark
+                                 Offices
+                                 </a></li>
+<li><a href="http://www.uspto.gov/main/profiles/acadres.htm" target="_blank">Search
+                                 Resources
+                                 &amp; Tips
+                                 </a></li>
+<li><a href="http://www.uspto.gov/blog/ebiz/" target="_blank" title="Notices of system outages">System
+                                 Alerts
+                                 </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="sideNavLevel1">Trademark Information</span><ul class="subNav1" style="display: none;">
+<li><a href="http://www.uspto.gov/trademarks/index.jsp" target="_blank">Trademark
+                           Guidance
+                           </a></li>
+<li><a class="subNav2Link" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:void(0);"><img alt="Expand" class="expandImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpPlus.jpg"/><img alt="Collapse" class="collapseImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpMinus.jpg" style="display: none;"/>
+                           Codes, Rules &amp;
+                           Manuals
+                           </a><ul class="subNav2" style="display: none;">
+<li><a href="http://tess2.uspto.gov/netahtml/tidm.html" target="_blank">
+                                 Acceptable
+                                 ID Manual
+                                 </a></li>
+<li><a href="http://tess2.uspto.gov/tmdb/tmep/" target="_blank">Trademark
+                                 Manual of
+                                 Examining
+                                 Procedure
+                                 </a></li>
+<li><a href="http://www.uspto.gov/trademarks/law/CFR_12-28-09_tmlaw2.pdf" onmousedown="dataLayer.push({'event': 'eventTracker', 'eventCat': 'Assets', 'eventAct':'pdf', 'eventLbl': '/trademarks/law/cfr_12-28-09_tmlaw2.pdf', 'eventVal': 0, 'nonInteraction': 0});" target="_blank">US
+                                 Trademark Law: Rules of Practice &amp; Federal Statutes
+                                 </a></li>
+<li><a href="http://tess2.uspto.gov/tmdb/dscm/index.htm" target="_blank">
+                                 Design
+                                 Search Codes
+                                 </a></li>
+</ul>
+</li>
+<li><a class="subNav2Link" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:void(0);"><img alt="Expand" class="expandImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpPlus.jpg"/><img alt="Collapse" class="collapseImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpMinus.jpg" style="display: none;"/>
+                           Employee &amp;
+                           Office Directories
+                           </a><ul class="subNav2" style="display: none;">
+<li><a href="http://portal.uspto.gov/external/portal/emlocator" target="_blank">
+                                 Employee
+                                 Locator
+                                 </a></li>
+<li><a href="http://www.uspto.gov/about/contacts/phone_directory/index.jsp" target="_blank">Telephone
+                                 Directory
+                                 </a></li>
+<li><a href="http://www.uspto.gov/about/contacts/organizationalcodes.jsp" target="_blank">Valid
+                                 Location Codes
+                                 </a></li>
+</ul>
+</li>
+<li><a class="subNav2Link" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:void(0);"><img alt="Expand" class="expandImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpPlus.jpg"/><img alt="Collapse" class="collapseImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpMinus.jpg" style="display: none;"/>
+                           Fees
+                           </a><ul class="subNav2" style="display: none;">
+<li><a href="http://www.uspto.gov/main/howtofees.htm" target="_blank">How to
+                                 Pay
+                                 Fees
+                                 </a></li>
+<li><a href="https://ramps.uspto.gov/eram/" target="_blank">Pay Online (RAM)
+                                 </a></li>
+</ul>
+</li>
+<li><a class="subNav2Link" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:void(0);"><img alt="Expand" class="expandImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpPlus.jpg"/><img alt="Collapse" class="collapseImgs" src="http://tsdr.uspto.gov/img/icn-collapseExpMinus.jpg" style="display: none;"/>
+                           Resources &amp;
+                           Public Notices
+                           </a><ul class="subNav2" style="display: none;">
+<li><a href="http://www.uspto.gov/inventors/index.jsp" target="_blank" title="For all novices, visit the Inventor Resources pages">Applicant
+                                 Resources
+                                 </a></li>
+<li><a href="http://www.uspto.gov/news/index.jsp" target="_blank">News,
+                                 Federal
+                                 Register &amp;
+                                 <abbr title="Official Gazette">OG</abbr>
+                                 Notices
+                                 </a></li>
+<li><a href="http://www.uspto.gov/products/library/ptdl/index.jsp" target="_blank" title="Libraries near you"><abbr title="Patent and Trademark Depository Library">PTDL
+                                    </abbr>
+                                 Program
+                                 </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="sideNavLevel1">Trademark Trial &amp; Appeal Board</span><ul class="subNav1" style="display: none;">
+<li><a href="http://www.uspto.gov/web/offices/dcom/ttab/tbmp/" target="_blank">TTAB
+                           Manual
+                           of
+                           Procedure
+                           </a></li>
+<li><a href="http://estta.uspto.gov" target="_blank" title="File TTAB Documents">
+                           File TTAB
+                           Documents
+                           </a></li>
+<li><a href="http://ttabvue.uspto.gov/ttabvue/" target="_blank" title="Search and View TTAB Proceedings">Search &amp; View TTAB Proceedings
+                           </a></li>
+</ul>
+</li>
+<li><span class="sideNavLevel1">Other</span><ul class="subNav1" style="display: none;">
+<li><a href="http://www.uspto.gov/main/profiles/copyright.htm" target="_blank">
+                           Copyrights
+                           </a></li>
+<li><a href="http://www.uspto.gov/patents/index.jsp" target="_blank">Patents</a></li>
+<li><a href="http://www.uspto.gov/main/policy.htm" target="_blank">Policy &amp; Law
+                           </a></li>
+<li><a href="http://www.uspto.gov/main/checkstatus.htm" target="_blank">Reports</a></li>
+</ul>
+</li>
+</ul>
+<div id="sideNavBot"></div>
+</div>
+<div class="centerContentBoxMain" id="contentBoxMain">
+<div class="redBox">
+<div id="announcementWrapper"><pre><b>BULK DATA:</b> The TSDR Application Programming Interface (API) will be unavailable starting May 7 at 12 a.m. ET for at least two weeks. Bulk data customers who rely on the TSDR API can use <a href="https://www.uspto.gov/trademarks-application-process/checking-application-status-view-documents/trademark-bulk-data">alternative methods</a> to receive bulk data from TSDR. If you are a bulk data customer who has questions or needs additional information, please <a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/mailto:tsdr@uspto.gov" onmousedown="dataLayer.push({'event': 'eventTracker', 'eventCat': 'Email Clicks', 'eventAct':'Click', 'eventLbl': 'tsdr@uspto.gov', 'eventVal': 0, 'nonInteraction': 0});">email us</a>.
+
+<b>INTERMITTENT SYSTEM ISSUES:</b> Due to high-volume usage, you may experience intermittent issues on the Trademark Status and Document Retrieval (TSDR) system between 6 – 8 a.m. ET. Refreshing your web browser should resolve the issue. If you still need assistance accessing a document, email <a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/mailto:teas@uspto.gov" onmousedown="dataLayer.push({'event': 'eventTracker', 'eventCat': 'Email Clicks', 'eventAct':'Click', 'eventLbl': 'teas@uspto.gov', 'eventVal': 0, 'nonInteraction': 0});">teas@uspto.gov</a>  and include your serial number, the document you are looking for, and a screenshot of any error messages you have received.
+
+<b>ENHANCEMENT TO PROTECT YOUR PRIVACY:</b> When applicants and registrants are not represented by an attorney, the USPTO now masks the correspondence email address in the status tab and the Application Programming Interface (API). We made this change to reduce the likelihood that customers will be subjected to scams and unwanted solicitations.</pre></div>
+</div><textarea alt="faq text" class="printPreviewNoShow hide" id="announcementHtmlTextArea">&lt;b&gt;BULK DATA:&lt;/b&gt; The TSDR Application Programming Interface (API) will be unavailable starting May 7 at 12 a.m. ET for at least two weeks. Bulk data customers who rely on the TSDR API can use &lt;a href="https://www.uspto.gov/trademarks-application-process/checking-application-status-view-documents/trademark-bulk-data"&gt;alternative methods&lt;/a&gt; to receive bulk data from TSDR. If you are a bulk data customer who has questions or needs additional information, please &lt;a href="mailto:tsdr@uspto.gov"&gt;email us&lt;/a&gt;.
+
+&lt;b&gt;INTERMITTENT SYSTEM ISSUES:&lt;/b&gt; Due to high-volume usage, you may experience intermittent issues on the Trademark Status and Document Retrieval (TSDR) system between 6 – 8 a.m. ET. Refreshing your web browser should resolve the issue. If you still need assistance accessing a document, email &lt;a href="mailto:teas@uspto.gov"&gt;teas@uspto.gov&lt;/a&gt;  and include your serial number, the document you are looking for, and a screenshot of any error messages you have received.
+
+&lt;b&gt;ENHANCEMENT TO PROTECT YOUR PRIVACY:&lt;/b&gt; When applicants and registrants are not represented by an attorney, the USPTO now masks the correspondence email address in the status tab and the Application Programming Interface (API). We made this change to reduce the likelihood that customers will be subjected to scams and unwanted solicitations.</textarea><h2 class="printPreviewNoShow" id="searchTitle"><span class="tdr_search1">Trademark Status &amp; Document Retrieval (TSDR)</span><a class="tdr_search1 helpIconh2" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:page.helpOverlay.open( 'tdr_search' )" title="Click here for help on case searches (1) Document viewer help"><img alt="Help" class="tdr_search1" src="http://tsdr.uspto.gov/img/icn-Help16x16.gif"/></a></h2>
+<div aria-label="search input tabs" class="webwidget_tab searchForm printPreviewNoShow" id="inputTabs">
+<div class="tabContainer">
+<ul class="tabHead">
+<li class="currentBtn" data-error="" id="searchTabBtn"><a aria-label="Search Tab: in focus" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" style="color: rgb(29, 97, 126);">Search</a></li>
+<li data-error="" id="multiSearchTabBtn"><a aria-label="Multi-Search Tab: activate to focus" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" style="color: rgb(29, 97, 126);">Multi-Search</a></li>
+</ul><a class="" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:page.helpOverlay.open( 'cert_search' )" title="Click here for help on reg. certificate searches (2)"><img alt="Help" class="helpIcon certs" src="http://tsdr.uspto.gov/img/icn-Help16x16.gif"/></a></div>
+<div class="tabBody">
+<ul>
+<li aria-describedby="searchTabBtn" class="tabCot" style="display: list-item;">
+<form id="search_form" name="search_form">
+<div class="displayTable">
+<div class="displayRow">
+<div class="displayCell width214px"><select aria-label="application type" class="inputPulldown longerinputPulldown" id="caseSearchType" name="caseSearchType">
+<option value="US_APPLICATION">US Serial, Registration, or Reference No.</option>
+<option value="INTL_REGISTRATION">International Registration No.</option></select></div>
+<div class="displayCell"><select aria-label="case type" class="hide" id="searchSelect" name="searchType">
+<option value="DEFAULT"></option>
+<option value="SERIAL_NO">US Serial No</option>
+<option value="US_REGISTRATION_NO">US Registration No</option>
+<option value="US_REFERENCE_NO">US Reference No</option>
+<option value="INTL_REGISTRATION_NO">International Registration No</option></select></div>
+<div class="displayCell width121px"><input aria-label="case number" class="inputText shorterinputText" id="searchNumber" tabindex="1" type="text"/></div>
+<div class="displayCell"><input alt="Status" aria-label="status search submit" class="statusButton" id="statusSearch" tabindex="2" title="Search status for this application (s)" type="button" value="Status"/></div>
+<div class="displayCell"><input alt="Documents" aria-label="document search submit" class="documentsButton" id="documentSearch" tabindex="3" title="Search docs for this application (d)" type="button" value="Documents"/></div>
+</div>
+</div>
+</form>
+</li>
+<li aria-describedby="multiSearchTabBtn" class="tabCot" style="display: none;">
+<form id="searchFormAdvanced">
+<div class="displayTable">
+<div class="displayRow">
+<div class="displayCell paddingTop15px paddingRight5px alignTop"><select aria-label="multi search case type" class="inputPulldown" id="advancedSelect">
+<option value="SERIAL_NO">US Serial No</option>
+<option value="US_REGISTRATION_NO">US Registration No
+                                          
+                                       </option>
+<option value="US_REFERENCE_NO">US Reference No</option>
+<option value="INTL_REGISTRATION_NO">International
+                                          Registration No
+                                          
+                                       </option></select><input aria-label="multi search registration certificates" id="certsBox" type="checkbox"/><label for="certsBox">Registration Certificates</label></div>
+<div class="displayCell paddingTop17px"><textarea aria-label="multi search case numbers" id="advancedTextArea"></textarea></div>
+</div>
+</div>
+<div class="displayTable">
+<div class="displayRow">
+<div class="displayCell width597px"><input aria-label="multi search submit" id="advancedSubmit" type="button" value="Multi-Search"/></div>
+</div>
+</div>
+</form>
+</li>
+</ul>
+</div>
+</div>
+<div class="docSearchLoadingGif hide printPreviewNoShow" style="display: none;"></div>
+<div class="textBox hide printPreviewNoShow" id="errorBox" style="display: none;">
+<p aria-label="result error message" id="errorMsg"></p>
+</div>
+<div class="textBox hide printPreviewNoShow" id="infoBox" style="display: none;">
+<p aria-label="result warning message" id="infoMsg"></p>
+</div>
+<div class="webwidget_tab resultTabs" id="webwidget_tab" style="display: block;">
+<div class="printPreviewNoShow" id="actions"><span class="actionText searchingText hide" id="searchingDocsDisplay" style="display: none;">retrieving documents ...</span><span class="actionText dynamicActionText hide" id="docsFoundDisplay" style="display: none;"></span><span class="actionText dynamicActionText hide" id="docsSelectedDisplay" style="display: none;"></span><span class="actionText searchingText hide" id="searchingStatusDisplay" style="display: none;">retrieving status ...</span><span class="actionText hide" id="statusFoundDisplay" style="display: inline;">Status results found</span></div>
+<div class="tabContainer">
+<ul class="tabHead">
+<li class="currentBtn" id="statusTabBtn"><a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" style="color: rgb(29, 97, 126);">Status</a></li>
+<li id="documentsTabBtn"><a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" style="color: rgb(29, 97, 126);">Documents</a></li>
+<li class="" id="maintenanceTabBtn"><a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" style="color: rgb(29, 97, 126);">Maintenance</a></li>
+</ul>
+<div class="tabHelpIcon"><a class="printPreviewNoShow" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:page.helpOverlay.open( 'tab_results' )" title="Click here for search results help (3)"><img alt="Help" class="helpIcon tabs" src="http://tsdr.uspto.gov/img/icn-Help16x16.gif"/></a></div>
+<div class="tabMoreLink">
+<div class="link download expand_wrapper default_hide printPreviewNoShow" title="Download PDF or Original (p or o)"><a class="expand_heading" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;"><span>Download</span></a><div class="toggle_container dd printPreviewNoShow" style="display: none;">
+<div class="content floatBox">
+<div class="title">Content</div>
+<div class="option"><input checked="checked" class="content" id="status" name="status" type="checkbox"/><label for="status">Status</label></div>
+<div class="optionRight"><input class="content" id="documents" name="documents" type="checkbox"/><label for="documents">Documents</label></div>
+</div>
+<div class="format floatBox">
+<div class="title"></div>
+<div class="option"><input checked="checked" class="inputRadio" id="PDF" name="downloadFormat" type="radio" value="PDF"/><label for="PDF">PDF</label></div>
+<div class="optionRight"><input class="inputRadio" id="ORIGINAL" name="downloadFormat" type="radio" value="original"/><label for="ORIGINAL">Original</label></div>
+<div class="button"><input alt="Download" class="downloadButton" id="downloadSubmit" onclick="page.download()" type="button" value="Download"/></div>
+</div>
+</div>
+</div>
+<div class="link print printPreviewNoShow"><a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" id="printPreviewLink" onclick="page.printPreview(true);">Print Preview</a></div>
+<div class="link hide printPreviewShow"><a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" id="cancelPrintPreview" onclick="page.printPreview(false)">Back to Search</a></div>
+<div class="link print hide printPreviewShow"><a onclick="window.print();">Print</a></div>
+</div>
+</div>
+<div class="tabBody">
+<ul id="resultsTabs">
+<li class="tabCot" id="statusTab" style="display: list-item;" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:tsdr="http://tsdr.uspto.gov">
+<input id="statusServerError" type="hidden" value=""/>
+<div class="sectionContainer" id="sumary-section">
+<div id="summary" number="85783371">
+<div class="single table">
+<div class="row">
+<div class="key">Generated on:</div>
+<div class="value single">This page was generated by TSDR on 2019-07-15 09:28:21 EDT</div>
+</div>
+</div>
+<div class="table">
+<div class="row">
+<div class="key">Mark:</div>
+<div class="value markText">
+               		MAKE AMERICA GREAT AGAIN
+            </div>
+<div class="value">
+<div class="thumb" style="overflow: hidden; height: 104.945px;"><a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;">
+<img alt="Trademark image" class="mark" id="markImage" src="http://tsdr.uspto.gov/img/85783371/large?1563197301663" style="width: 211.2px;"/>
+</a></div>
+</div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">US Serial Number:</div>
+<div class="value">
+               			85783371
+               </div>
+<div class="key">Application Filing Date:</div>
+<div class="value">
+Nov. 19, 2012               </div>
+</div>
+<div class="row">
+<div class="key">US Registration Number:</div>
+<div class="value">4773272</div>
+<div class="key">Registration Date:</div>
+<div class="value">Jul. 14, 2015</div>
+</div>
+</div>
+<div class="single table">
+<div class="row">
+<div class="key">Register:</div>
+<div class="value single">
+Principal	  		   </div>
+</div>
+<div class="row">
+<div class="key">Mark Type:</div>
+<div class="value single">Service Mark</div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key" style="width:150px">TM5 Common Status Descriptor:</div>
+<div class="value" style="width:250px">
+<div style="float:left;">
+<img alt="TM5 Common Status image" class="mark" id="tm5StatusImg" src="http://tsdr.uspto.gov/img/tm5/8.png" style="width:70px; height:70px;"/>
+</div>
+</div>
+<div class="value" style="width:425px">
+<p style="height:30px">
+                          LIVE/REGISTRATION/Issued and Active
+                  </p>
+<p>
+                          The trademark application has been registered with the Office.
+                  </p>
+</div>
+</div>
+</div>
+<div class="single table">
+<div class="row">
+<div class="key">Status:</div>
+<div class="value single">
+	           				Registered.  The registration date is used to determine when post-registration maintenance documents are due.
+               </div>
+</div>
+<div class="row">
+<div class="key">Status Date:</div>
+<div class="value single">Jul. 14, 2015</div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">Publication Date:</div>
+<div class="value">Oct. 29, 2013</div>
+<div class="key">Notice of Allowance Date:</div>
+<div class="value">Dec. 24, 2013</div>
+</div>
+</div>
+</div>
+</div> <div class="data_container" id="data_container">
+<div class="expand_all expanded" title="expand/collapse all sections (x)"> </div>
+<div class="expand_wrapper default_hide">
+<h2 class="expand_heading">
+<span data-sectiontitle="markInformation"><a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" tabindex="5">Mark Information</a></span>
+</h2>
+<div class="toggle_container hide">
+<div class="sectionContainer" id="markInfo-section">
+<div class="single table">
+<div class="row">
+<div class="key">Mark Literal Elements:</div>
+<div class="value">
+		                     	MAKE AMERICA GREAT AGAIN
+	                </div>
+</div>
+<div class="row">
+<div class="key">Standard Character Claim:</div>
+<div class="value">
+Yes. The mark consists of standard characters without claim to any particular font style, size, or color.					</div>
+</div>
+<div class="row">
+<div class="key">Mark Drawing Type:</div>
+<div class="value">4 - STANDARD CHARACTER MARK</div>
+</div>
+</div>
+</div>
+</div>
+</div> <div class="expand_wrapper default_hide">
+<h2 class="expand_heading">
+<span data-sectiontitle="Goods and Services"><a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" tabindex="5">Goods and Services</a></span>
+</h2>
+<div class="toggle_container hide">
+<div class="sectionContainer">
+<div class="note">
+<strong>Note:</strong>
+<span>The following symbols indicate that the registrant/owner has amended the goods/services:</span>
+<ul>
+<li class="noteElem">Brackets [..] indicate deleted goods/services;</li>
+<li class="noteElem">Double parenthesis ((..)) identify any goods/services not claimed in a Section 15
+affidavit of incontestability; and</li>
+<li class="noteElem">Asterisks *..* identify additional (new) wording in the goods/services.</li>
+</ul>
+</div>
+<div class="single table">
+<div class="row">
+<div class="key">For:</div>
+<div class="value">
+Political action committee services, namely, promoting public awareness of political issues
+</div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">International Class(es):</div>
+<div class="value">
+035
+- Primary Class
+</div>
+<div class="key">U.S Class(es):</div>
+<div class="value">
+100,
+101,
+102
+</div>
+</div>
+</div>
+<div class="single table">
+<div class="row">
+<div class="key">Class Status:</div>
+<div class="value">
+ACTIVE
+</div>
+</div>
+</div>
+<div class="single table">
+<div class="row">
+<div class="key">Basis:</div>
+<div class="value">
+1(a)
+</div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">First Use:</div>
+<div class="value">Apr. 12, 2015</div>
+<div class="key">Use in Commerce:</div>
+<div class="value">Apr. 12, 2015</div>
+</div>
+</div>
+<div class="separator"></div>
+<div class="single table">
+<div class="row">
+<div class="key">For:</div>
+<div class="value">
+Fundraising in the field of politics
+</div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">International Class(es):</div>
+<div class="value">
+036
+- Primary Class
+</div>
+<div class="key">U.S Class(es):</div>
+<div class="value">
+100,
+101,
+102
+</div>
+</div>
+</div>
+<div class="single table">
+<div class="row">
+<div class="key">Class Status:</div>
+<div class="value">
+ACTIVE
+</div>
+</div>
+</div>
+<div class="single table">
+<div class="row">
+<div class="key">Basis:</div>
+<div class="value">
+1(a)
+</div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">First Use:</div>
+<div class="value">May 22, 2015</div>
+<div class="key">Use in Commerce:</div>
+<div class="value">May 22, 2015</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="expand_wrapper default_hide">
+<h2 class="expand_heading">
+<span data-sectiontitle="Basis Information (Case Level)"><a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" tabindex="6">Basis Information (Case Level)</a></span>
+</h2>
+<div class="toggle_container hide">
+<div class="sectionContainer">
+<div class="double table">
+<div class="row">
+<div class="key">Filed Use:</div>
+<div class="value">
+No </div>
+<div class="key">Currently Use:</div>
+<div class="value">
+Yes </div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">Filed ITU:</div>
+<div class="value">
+Yes </div>
+<div class="key">Currently ITU:</div>
+<div class="value">
+No </div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">Filed 44D:</div>
+<div class="value">
+No </div>
+<div class="key">Currently 44E:</div>
+<div class="value">
+No </div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">Filed 44E:</div>
+<div class="value">
+No </div>
+<div class="key">Currently 66A:</div>
+<div class="value">
+No </div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">Filed 66A:</div>
+<div class="value">
+No </div>
+<div class="key">Currently No Basis:</div>
+<div class="value">
+No </div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">Filed No Basis:</div>
+<div class="value">
+No </div>
+<div class="empty key"> </div>
+<div class="value"> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="expand_wrapper default_hide">
+<h2 class="expand_heading">
+<span data-sectiontitle="Current Owner(s) Information" length="637"><a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" tabindex="5">Current Owner(s) Information</a></span>
+</h2>
+<div class="toggle_container hide">
+<div class="sectionContainer" id="relatedProp-section">
+<div class="single table">
+<div class="row">
+<div class="key">Owner Name:</div>
+<div class="value">
+DONALD J. TRUMP FOR PRESIDENT, INC.
+</div>
+</div>
+</div>
+<div class="single table">
+<div class="row">
+<div class="key">Owner Address:</div>
+<div class="value">
+<div>725 FIFTH AVENUE</div>
+<div>
+NEW YORK,
+NEW YORK
+UNITED STATES
+10022
+</div>
+</div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">Legal Entity Type:</div>
+<div class="value">
+NON-PROFIT CORPORATION
+</div>
+<div class="key">State or Country Where Organized:</div>
+<div class="value">
+VIRGINIA
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="expand_wrapper default_hide">
+<h2 class="expand_heading">
+<span data-sectiontitle="Attorney/Correspondence Information"><a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" tabindex="7">Attorney/Correspondence Information</a></span>
+</h2>
+<div class="toggle_container hide">
+<div class="sectionContainer">
+<div class="table">
+<div class="caption">
+Attorney of Record
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">Attorney Name:</div>
+<div class="value">Meredith M. Wilkes</div>
+<div class="key">Docket Number:</div>
+<div class="value">186277630003</div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">Attorney Primary Email Address:</div>
+<div class="value">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/mailto:mwilkes@jonesday.com" onmousedown="dataLayer.push({'event': 'eventTracker', 'eventCat': 'Outbound Email Clicks', 'eventAct':'Click', 'eventLbl': 'mwilkes@jonesday.com', 'eventVal': 0, 'nonInteraction': 0});">mwilkes@jonesday.com</a>
+</div>
+<div class="key">Attorney Email Authorized:</div>
+<div class="value">
+Yes </div>
+</div>
+</div>
+<div class="table">
+<div class="caption">
+Correspondent
+</div>
+</div>
+<div class="single table">
+<div class="row">
+<div class="key">Correspondent Name/Address:</div>
+<div class="value">
+<div>Meredith M. Wilkes</div>
+<div>Jones Day</div>
+<div>901 Lakeside Avenue</div>
+<div>North Point</div>
+<div>
+Cleveland,
+OHIO
+UNITED STATES
+44114
+</div>
+</div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">Phone:</div>
+<div class="value">(216) 586-7231</div>
+<div class="key">Fax:</div>
+<div class="value">(216) 579-1700</div>
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">Correspondent e-mail:</div>
+<div class="value">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/mailto:mwilkes@jonesday.com" onmousedown="dataLayer.push({'event': 'eventTracker', 'eventCat': 'Outbound Email Clicks', 'eventAct':'Click', 'eventLbl': 'mwilkes@jonesday.com', 'eventVal': 0, 'nonInteraction': 0});">mwilkes@jonesday.com</a>
+</div>
+<div class="key">Correspondent e-mail Authorized:</div>
+<div class="value">
+Yes </div>
+</div>
+</div>
+<div class="table">
+<div class="caption">
+Domestic Representative - Not Found
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="expand_wrapper default_hide">
+<h2 class="expand_heading">
+<span data-sectiontitle="Prosecution History"><a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" tabindex="8">Prosecution History</a></span>
+</h2>
+<div class="toggle_container hide">
+<div class="sectionContainer">
+<table border="0" cellpadding="3" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td class="subTitle date"><strong>Date</strong></td>
+<td class="subTitle date"><strong>Description</strong></td>
+<td class="subTitle"><strong>Proceeding Number</strong></td>
+</tr>
+<tr class="">
+<td valign="top">
+Jan. 17, 2019 </td>
+<td valign="top">
+REVIEW OF CORRESPONDENCE COMPLETE - POWER OF ATTORNEY ENTERED
+</td>
+<td valign="top">
+67657
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Sep. 20, 2017 </td>
+<td valign="top">
+ATTORNEY/DOM.REP.REVOKED AND/OR APPOINTED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Sep. 20, 2017 </td>
+<td valign="top">
+TEAS REVOKE/APP/CHANGE ADDR OF ATTY/DOM REP RECEIVED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Jun. 10, 2017 </td>
+<td valign="top">
+ATTORNEY/DOM.REP.REVOKED AND/OR APPOINTED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Jun. 10, 2017 </td>
+<td valign="top">
+TEAS REVOKE/APP/CHANGE ADDR OF ATTY/DOM REP RECEIVED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Nov. 09, 2016 </td>
+<td valign="top">
+ASSIGNMENT OF OWNERSHIP NOT UPDATED AUTOMATICALLY
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Mar. 30, 2016 </td>
+<td valign="top">
+ASSIGNMENT OF OWNERSHIP NOT UPDATED AUTOMATICALLY
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Mar. 23, 2016 </td>
+<td valign="top">
+AUTOMATIC UPDATE OF ASSIGNMENT OF OWNERSHIP
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Mar. 10, 2016 </td>
+<td valign="top">
+ATTORNEY/DOM.REP.REVOKED AND/OR APPOINTED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Mar. 10, 2016 </td>
+<td valign="top">
+TEAS REVOKE/APP/CHANGE ADDR OF ATTY/DOM REP RECEIVED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Feb. 03, 2016 </td>
+<td valign="top">
+AUTOMATIC UPDATE OF ASSIGNMENT OF OWNERSHIP
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Jan. 14, 2016 </td>
+<td valign="top">
+REVIEW OF CORRESPONDENCE COMPLETE - POWER OF ATTORNEY NOT ENTERED
+</td>
+<td valign="top">
+89122
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Jan. 12, 2016 </td>
+<td valign="top">
+TEAS WITHDRAWAL OF ATTORNEY RECEIVED-FIRM RETAINS
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Jul. 14, 2015 </td>
+<td valign="top">
+REGISTERED-PRINCIPAL REGISTER
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Jun. 17, 2015 </td>
+<td valign="top">
+ATTORNEY/DOM.REP.REVOKED AND/OR APPOINTED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Jun. 17, 2015 </td>
+<td valign="top">
+TEAS REVOKE/APP/CHANGE ADDR OF ATTY/DOM REP RECEIVED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Jun. 06, 2015 </td>
+<td valign="top">
+NOTICE OF ACCEPTANCE OF STATEMENT OF USE E-MAILED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Jun. 05, 2015 </td>
+<td valign="top">
+ALLOWED PRINCIPAL REGISTER - SOU ACCEPTED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+May 29, 2015 </td>
+<td valign="top">
+STATEMENT OF USE PROCESSING COMPLETE
+</td>
+<td valign="top">
+70565
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+May 27, 2015 </td>
+<td valign="top">
+USE AMENDMENT FILED
+</td>
+<td valign="top">
+70565
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+May 27, 2015 </td>
+<td valign="top">
+TEAS STATEMENT OF USE RECEIVED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Feb. 06, 2015 </td>
+<td valign="top">
+NOTICE OF APPROVAL OF EXTENSION REQUEST E-MAILED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Feb. 05, 2015 </td>
+<td valign="top">
+EXTENSION 2 GRANTED
+</td>
+<td valign="top">
+70565
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Dec. 11, 2014 </td>
+<td valign="top">
+EXTENSION 2 FILED
+</td>
+<td valign="top">
+70565
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Jan. 30, 2015 </td>
+<td valign="top">
+CASE ASSIGNED TO INTENT TO USE PARALEGAL
+</td>
+<td valign="top">
+70565
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Dec. 11, 2014 </td>
+<td valign="top">
+TEAS EXTENSION RECEIVED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Jan. 31, 2014 </td>
+<td valign="top">
+NOTICE OF APPROVAL OF EXTENSION REQUEST E-MAILED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Jan. 29, 2014 </td>
+<td valign="top">
+EXTENSION 1 GRANTED
+</td>
+<td valign="top">
+98765
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Jan. 29, 2014 </td>
+<td valign="top">
+EXTENSION 1 FILED
+</td>
+<td valign="top">
+98765
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Jan. 29, 2014 </td>
+<td valign="top">
+TEAS EXTENSION RECEIVED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Dec. 24, 2013 </td>
+<td valign="top">
+NOA E-MAILED - SOU REQUIRED FROM APPLICANT
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Oct. 29, 2013 </td>
+<td valign="top">
+OFFICIAL GAZETTE PUBLICATION CONFIRMATION E-MAILED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Oct. 29, 2013 </td>
+<td valign="top">
+PUBLISHED FOR OPPOSITION
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Oct. 09, 2013 </td>
+<td valign="top">
+NOTIFICATION OF NOTICE OF PUBLICATION E-MAILED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Sep. 25, 2013 </td>
+<td valign="top">
+LAW OFFICE PUBLICATION REVIEW COMPLETED
+</td>
+<td valign="top">
+74221
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Sep. 24, 2013 </td>
+<td valign="top">
+ASSIGNED TO LIE
+</td>
+<td valign="top">
+74221
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Sep. 12, 2013 </td>
+<td valign="top">
+APPROVED FOR PUB - PRINCIPAL REGISTER
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Sep. 11, 2013 </td>
+<td valign="top">
+TEAS/EMAIL CORRESPONDENCE ENTERED
+</td>
+<td valign="top">
+88889
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Sep. 11, 2013 </td>
+<td valign="top">
+CORRESPONDENCE RECEIVED IN LAW OFFICE
+</td>
+<td valign="top">
+88889
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Sep. 11, 2013 </td>
+<td valign="top">
+TEAS RESPONSE TO OFFICE ACTION RECEIVED
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Mar. 13, 2013 </td>
+<td valign="top">
+NOTIFICATION OF NON-FINAL ACTION E-MAILED
+</td>
+<td valign="top">
+6325
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Mar. 13, 2013 </td>
+<td valign="top">
+NON-FINAL ACTION E-MAILED
+</td>
+<td valign="top">
+6325
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Mar. 13, 2013 </td>
+<td valign="top">
+NON-FINAL ACTION WRITTEN
+</td>
+<td valign="top">
+82423
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Mar. 13, 2013 </td>
+<td valign="top">
+ASSIGNED TO EXAMINER
+</td>
+<td valign="top">
+82423
+</td>
+</tr>
+<tr class="">
+<td valign="top">
+Nov. 28, 2012 </td>
+<td valign="top">
+NEW APPLICATION OFFICE SUPPLIED DATA ENTERED IN TRAM
+</td>
+<td valign="top">
+</td>
+</tr>
+<tr class="even">
+<td valign="top">
+Nov. 22, 2012 </td>
+<td valign="top">
+NEW APPLICATION ENTERED IN TRAM
+</td>
+<td valign="top">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="expand_wrapper default_hide">
+<h2 class="expand_heading">
+<span data-sectiontitle="TM Staff and Location Information"><a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" tabindex="9">TM Staff and Location Information</a></span>
+</h2>
+<div class="toggle_container hide">
+<div class="sectionContainer">
+<div class="table">
+<div class="caption">
+TM Staff Information - None
+</div>
+</div>
+<div class="table">
+<div class="caption">
+File Location
+</div>
+</div>
+<div class="double table">
+<div class="row">
+<div class="key">Current Location:</div>
+<div class="value">
+PUBLICATION AND ISSUE SECTION
+</div>
+<div class="key">Date in Location:</div>
+<div class="value">
+Jun. 05, 2015 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="expand_wrapper default_hide onDemand" data-section="notLoaded" id="assignmentsStatusSection">
+<h2 class="expand_heading">
+<span data-sectiontitle="assignmentsStatusSection" length="220"><a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" tabindex="10">Assignment Abstract Of Title Information - Click to Load</a></span>
+</h2>
+<div class="toggle_container hide">
+<div class="sectionContainer" id="assignmentsStatusSection-section">
+<div class="hidden" id="hiddenRegApp" style="display:none">
+<div class="key">Registrant:</div>
+<div class="value">Trump, Donald J.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="expand_wrapper default_hide onDemand" data-section="notLoaded" id="proceedingsStatusSection" style="position: relative;">
+<h2 class="expand_heading">
+<span data-sectiontitle="proceedingsStatusSection" length="0"><a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" tabindex="11">Proceedings - Click to Load</a></span>
+</h2>
+<div class="toggle_container hide">
+<div class="sectionContainer" id="proceedingsStatusSection-section">
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="tabCot" id="docsTab" style="display: none;" xmlns:tmk="urn:us:gov:doc:uspto:trademark">
+<input id="docsServerError" type="hidden" value=""/>
+<div id="docsSummary">
+<table border="0" cellpadding="3" cellspacing="0" width="100%">
+<colgroup>
+<col width="160"/>
+<col width="270"/>
+<col width="160"/>
+<col width="270"/>
+</colgroup>
+<tbody>
+<tr>
+<th class="label" valign="top">Generated on:</th>
+<td colspan="3" valign="top">This page was generated by TSDR on  2019-07-15 9:28:21 EST</td>
+</tr>
+<tr>
+<th class="label" valign="top">Trademark Docs:</th>
+<td valign="top">32</td>
+<th class="label" valign="top">Proceedings Docs:</th>
+<td valign="top">
+<a class="summaryDocCount" data-forsection="procDocsSection" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" id="procDocCount">click to load proceedings
+                     
+                  </a>
+</td>
+</tr>
+<tr>
+<th class="label" valign="top">Assignments Docs:</th>
+<td valign="top">
+<a class="summaryDocCount" data-forsection="assignDocsSection" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" id="assignDocCount">click to load assignments
+                     
+                  </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="" id="docs_data_container">
+<div class="expand_wrapper">
+<div class="expand_top">
+<div class="docs_expand_all expanded">
+<a class="expandCollapseLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" tabindex="4"></a>
+</div>
+</div>
+<h2 class="expand_heading active">
+<span>
+<a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;">Trademark Documents</a>
+</span>
+</h2>
+<div class="toggle_container">
+<table class="tablesorter" id="trademarkDocs">
+<colgroup><col style="width: 90px;"/>
+<col style="width: 121px;"/>
+<col style="width: 460px;"/>
+<col style="width: 196px;"/>
+<col style="width: 1px;"/>
+</colgroup><thead>
+<tr>
+<th class="first" id="ch1">
+<label for="docResultsTbody">
+<span class="">Select All</span>
+<input alt="select document" class="marginLeft4px checkAll" id="tmCheckAll" type="checkbox"/>
+</label>
+</th>
+<th class="header headerSortUp" id="ch2">Create/Mail Date</th>
+<th class="header headerSortDown" id="ch3">Document Description</th>
+<th class="last" id="ch4">Document Type</th>
+<th class="hide header headerSortUp" id="ch5">Document Type</th>
+</tr>
+</thead>
+<tbody class="tablesorterTbody" id="docResultsTbody">
+<tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc1" type="checkbox"/>
+</td>
+<td class="">Sep. 20, 2017</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=RAA20170921090917" target="RAA20170921090917">TEAS Rev, App and/or COA of Atty/Dom.Rep</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20170921090917</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc2" type="checkbox"/>
+</td>
+<td class="">Jun. 23, 2017</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=NTS20170623141242" target="NTS20170623141242">Notation to File</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20170623141242</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc3" type="checkbox"/>
+</td>
+<td class="">Jun. 10, 2017</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=RAA20170612091018" target="RAA20170612091018">TEAS Rev, App and/or COA of Atty/Dom.Rep</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20170612091018</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc4" type="checkbox"/>
+</td>
+<td class="">Mar. 10, 2016</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=RAA20160311090942" target="RAA20160311090942">TEAS Rev, App and/or COA of Atty/Dom.Rep</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20160311090942</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc5" type="checkbox"/>
+</td>
+<td class="">Jan. 12, 2016</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=WAF20160112171321" target="WAF20160112171321">Withdrawal of Attorney - firm retains</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20160112171321</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc6" type="checkbox"/>
+</td>
+<td class="">Jul. 14, 2015</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=ORC20150714001230" target="ORC20150714001230">Registration Certificate</a>
+</td>
+<td class="end">TIFF</td>
+<td class="hide">20150714001230</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc7" type="checkbox"/>
+</td>
+<td class="">Jun. 17, 2015</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=RAA20150619091047" target="RAA20150619091047">TEAS Rev, App and/or COA of Atty/Dom.Rep</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20150619091047</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc9" type="checkbox"/>
+</td>
+<td class="">Jun. 06, 2015</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=ASU20150606061430" target="ASU20150606061430">Notice of Acceptance of Statement of Use</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20150606061430</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc8" type="checkbox"/>
+</td>
+<td class="">Jun. 06, 2015</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=PST20150606055357" target="PST20150606055357">TRAM Snapshot of App at Pub for Oppostn</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20150606055357</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc10" type="checkbox"/>
+</td>
+<td class="">May 30, 2015</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=IUA20150530055711" target="IUA20150530055711">ITU Unit Action</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20150530055711</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc12" type="checkbox"/>
+</td>
+<td class="">May 27, 2015</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=SPE20150528154854" target="SPE20150528154854">Specimen</a>
+</td>
+<td class="end">JPEG</td>
+<td class="hide">20150528154854</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc11" type="checkbox"/>
+</td>
+<td class="">May 27, 2015</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=SOU20150528154854" target="SOU20150528154854">Statement of Use</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20150528154854</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc14" type="checkbox"/>
+</td>
+<td class="">Feb. 06, 2015</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=AER20150206060124" target="AER20150206060124">ITU Extension Approval</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20150206060124</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc13" type="checkbox"/>
+</td>
+<td class="">Feb. 06, 2015</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=IUA20150206055958" target="IUA20150206055958">ITU Unit Action</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20150206055958</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc16" type="checkbox"/>
+</td>
+<td class="">Dec. 11, 2014</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=ESU20141212164426" target="ESU20141212164426">Extension of Time to File SOU</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20141212164426</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc15" type="checkbox"/>
+</td>
+<td class="">Dec. 11, 2014</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=SPE20141212164426" target="SPE20141212164426">Specimen</a>
+</td>
+<td class="end">JPEG</td>
+<td class="hide">20141212164426</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc18" type="checkbox"/>
+</td>
+<td class="">Jan. 31, 2014</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=AER20140131055201" target="AER20140131055201">ITU Extension Approval</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20140131055201</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc17" type="checkbox"/>
+</td>
+<td class="">Jan. 31, 2014</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=IUA20140131011152" target="IUA20140131011152">ITU Unit Action</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20140131011152</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc20" type="checkbox"/>
+</td>
+<td class="">Jan. 29, 2014</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=ESU20140130195827" target="ESU20140130195827">Extension of Time to File SOU</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20140130195827</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc19" type="checkbox"/>
+</td>
+<td class="">Jan. 29, 2014</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=SPE20140130195827" target="SPE20140130195827">Specimen</a>
+</td>
+<td class="end">JPEG</td>
+<td class="hide">20140130195827</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc21" type="checkbox"/>
+</td>
+<td class="">Dec. 24, 2013</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=ALW20131224061230" target="ALW20131224061230">Notice of Allowance</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20131224061230</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc22" type="checkbox"/>
+</td>
+<td class="">Oct. 29, 2013</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=PB320131029055929" target="PB320131029055929">OG Publication Confirmation</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20131029055929</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc24" type="checkbox"/>
+</td>
+<td class="">Oct. 09, 2013</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=NOP20131009061506" target="NOP20131009061506">Notice of Publication</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20131009061506</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc23" type="checkbox"/>
+</td>
+<td class="">Oct. 09, 2013</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=NON20131009061505" target="NON20131009061505">Notification Of Notice of Publication</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20131009061505</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc25" type="checkbox"/>
+</td>
+<td class="">Sep. 26, 2013</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=PRC20130926012001" target="PRC20130926012001">Publication &amp; Issue Review Complete</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20130926012001</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc26" type="checkbox"/>
+</td>
+<td class="">Sep. 13, 2013</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=PST20130913011717" target="PST20130913011717">TRAM Snapshot of App at Pub for Oppostn</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20130913011717</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc27" type="checkbox"/>
+</td>
+<td class="">Sep. 12, 2013</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=AMC20130912083546" target="AMC20130912083546">Amendment and Mail Process Complete</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20130912083546</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc28" type="checkbox"/>
+</td>
+<td class="">Sep. 11, 2013</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=ROA20130911184436" target="ROA20130911184436">Response to Office Action</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20130911184436</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc30" type="checkbox"/>
+</td>
+<td class="">Mar. 13, 2013</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=OOA20130313151014" target="OOA20130313151014">Offc Action Outgoing</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20130313151014</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc29" type="checkbox"/>
+</td>
+<td class="">Mar. 13, 2013</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/documentviewer?caseId=sn85783371&amp;docId=XSS20130313131507" target="XSS20130313131507">XSearch Search Summary</a>
+</td>
+<td class="end">XML</td>
+<td class="hide">20130313131507</td>
+</tr><tr class="doc_row dataRowTR odd">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc32" type="checkbox"/>
+</td>
+<td class="">Nov. 19, 2012</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=APP20121122072845" target="APP20121122072845">Application</a>
+</td>
+<td class="end">MULTI</td>
+<td class="hide">20121122072845</td>
+</tr><tr class="doc_row dataRowTR">
+<td class="textCenter">
+<input class="resSelects" id="tmDoc31" type="checkbox"/>
+</td>
+<td class="">Nov. 19, 2012</td>
+<td class="">
+<a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/documentviewer?caseId=sn85783371&amp;docId=DRW20121122072845" target="DRW20121122072845">Drawing</a>
+</td>
+<td class="end">JPEG</td>
+<td class="hide">20121122072845</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div class="expand_wrapper onDemand" data-section="notLoaded" id="procDocsSection">
+<div class="expand_top"></div>
+<h2 class="expand_heading">
+<span>
+<a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;">Proceedings Documents - Click to Load</a>
+</span>
+</h2>
+<div class="toggle_container"></div>
+</div>
+<div class="expand_wrapper onDemand" data-section="notLoaded" id="assignDocsSection">
+<div class="expand_top"></div>
+<h2 class="expand_heading">
+<span>
+<a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;">Assignments Documents - Click to Load</a>
+</span>
+</h2>
+<div class="toggle_container"></div>
+</div>
+</div>
+</li>
+<li class="tabCot" id="maintenanceTab" style="display: none;" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:tsdr="http://tsdr.uspto.gov">
+<input id="maintenanceServerError" type="hidden" value=""/>
+<div class="sectionContainer" id="maintenance-section">
+<h2 class="maintenance_heading">
+<span>
+<a class="sectionLink" href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/javascript:;" tabindex="5">
+</a><a href="https://www.uspto.gov/trademarks-application-process/filing-online/registration-maintenancerenewalcorrection-forms">§8 (6 year) Declaration</a> Due Dates:
+                        
+                    </span>
+</h2>
+<div class="single table">
+<div class="row">
+<div class="key maintenanceKey">
+                                Earliest date §8 can be filed:
+                            </div>
+<div class="value maintenanceValue">Jul. 14, 2020</div>
+</div>
+</div>
+<div class="single table">
+<div class="row">
+<div class="key maintenanceKey">
+                                Latest date §8 can be filed without paying additional fee:
+                            </div>
+<div class="value maintenanceValue">Jul. 14, 2021</div>
+</div>
+</div>
+<div class="single table">
+<div class="row">
+<div class="key maintenanceKey">
+                                Latest date §8 can be filed by paying an additional fee:
+                            </div>
+<div class="value maintenanceValue">Jan. 14, 2022</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="floatLeft printPreviewNoShow" id="ftrMsg">
+<p id="adobeDL"><a href="http://get.adobe.com/reader/" onmousedown="dataLayer.push({'event': 'eventTracker', 'eventCat': 'Outbound Links', 'eventAct':'Click', 'eventLbl': 'get.adobe.com/reader/', 'eventVal': 0, 'nonInteraction': 0});" target="_blank">Download Adobe Reader
+                        </a></p><br/><p>If you are the applicant or the applicant's attorney and have questions about this
+                     file, please contact
+                     the
+                     <a href="http://tsdr.uspto.gov/#caseNumber=85783371&amp;caseSearchType=US_APPLICATION&amp;caseType=DEFAULT&amp;searchType=statusSearch/mailto:TrademarkAssistanceCenter@uspto.gov" onmousedown="dataLayer.push({'event': 'eventTracker', 'eventCat': 'Email Clicks', 'eventAct':'Click', 'eventLbl': 'trademarkassistancecenter@uspto.gov', 'eventVal': 0, 'nonInteraction': 0});">Trademark Assistance Center</a></p><br/></div>
+</div>
+<div class="hide" id="multiSearchContainer" style="padding: 20px 8px; display: none;">
+<table border="0" cellpadding="0" cellspacing="0" class="display" id="multiSerReg">
+<colgroup>
+<col width="10%"/>
+<col width="10%"/>
+<col width="7%"/>
+<col width="7%"/>
+<col width="7%"/>
+<col width="9%"/>
+<col width="17%"/>
+<col width="10%"/>
+<col width="20%"/>
+</colgroup>
+<thead>
+<tr>
+<th>Image</th>
+<th>Mark</th>
+<th style="text-align: left">Ser No</th>
+<th style="text-align: left">Reg No</th>
+<th style="text-align: left">Status</th>
+<th>Filing</th>
+<th>Owner</th>
+<th>Class(es)</th>
+<th>Goods and Services</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<th>Image</th>
+<th>Mark</th>
+<th style="text-align: left">Ser No</th>
+<th style="text-align: left">Reg No</th>
+<th style="text-align: left">Status</th>
+<th>Filing</th>
+<th>Owner</th>
+<th>Class(es)</th>
+<th>Goods and Services</th>
+</tr>
+</tfoot>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="display" id="multiIntlReg">
+<colgroup>
+<col width="10%"/>
+<col width="10%"/>
+<col width="7%"/>
+<col width="7%"/>
+<col width="7%"/>
+<col width="9%"/>
+<col width="17%"/>
+<col width="10%"/>
+<col width="20%"/>
+</colgroup>
+<thead>
+<tr>
+<th>Image</th>
+<th>Mark</th>
+<th>IR No</th>
+<th style="padding-right: 12px">IR Date</th>
+<th style="padding-right: 12px">Ser No</th>
+<th>Ref No</th>
+<th>Owner</th>
+<th>Class(es)</th>
+<th>Goods and Services</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<th>Image</th>
+<th>Mark</th>
+<th>IR No</th>
+<th>IR Date</th>
+<th>Ser No</th>
+<th>Ref No</th>
+<th>Owner</th>
+<th>Class(es)</th>
+<th>Goods and Services</th>
+</tr>
+</tfoot>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="display" id="multiRef">
+<colgroup>
+<col width="15%"/>
+<col width="15%"/>
+<col width="15%"/>
+<col width="15%"/>
+<col width="40%"/>
+</colgroup>
+<thead>
+<tr>
+<th>Reference No.</th>
+<th>Filing Date</th>
+<th>Intl Reg No.</th>
+<th>Intl Reg Date</th>
+<th>Status</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<th>Reference No.</th>
+<th>Filing Date</th>
+<th>Intl Reg No.</th>
+<th>Intl Reg Date</th>
+<th>Status</th>
+</tr>
+</tfoot>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="display" id="multiCerts">
+<colgroup>
+<col width="15%"/>
+<col width="19%"/>
+<col width="19%"/>
+<col width="34%"/>
+<col width="23%"/>
+</colgroup>
+<thead>
+<tr>
+<th class="ch1cert first"><label for="certResultsTbody">Select All
+                              <input alt="select all certificates" class="marginLeft4px" id="checkAllCerts" type="checkbox"/></label></th>
+<th>Number</th>
+<th style="text-align: left">Mail/Create Date</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Type</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<th>Select All</th>
+<th>Number</th>
+<th style="text-align: left">Mail/Create Date</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Type</th>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+</div>
+<footer class="printPreviewNoShow" id="ftr">
+<div class="clear-fix" id="ft">
+<div class="colLogos"><a class="logo" href="http://www.uspto.gov/" title="United States Patent and Trademark Office - An Agency of the Department of Commerce"><img alt="US Department of Commerce" src="http://tsdr.uspto.gov/img/logo.png"/></a></div>
+<div class="col">
+<h2>Browse By Topic</h2>
+<ul>
+<li><a href="http://www.uspto.gov/patent">Patents</a></li>
+<li><a href="http://www.uspto.gov/trademark">Trademarks</a></li>
+<li><a href="http://www.uspto.gov/learning-resources">Learning &amp; Resources</a></li>
+<li><a href="http://www.uspto.gov/about-us">About the USPTO</a></li>
+<li><a href="http://www.uspto.gov/learning-and-resources/glossary">Glossary</a></li>
+<li><a href="http://www.uspto.gov/careers">Careers</a></li>
+<li><a href="http://www.uspto.gov/about-us/contact-us">Contact Us</a></li>
+</ul>
+</div>
+<div class="col">
+<h2>About This Site</h2>
+<ul>
+<li><a href="http://www.uspto.gov/using-usptogov/accessibility-uspto-website">Accessibility</a></li>
+<li><a href="http://www.uspto.gov/privacy-policy">Privacy Policy</a></li>
+<li><a href="http://www.uspto.gov/terms-use-uspto-website">Terms of Use</a></li>
+<li><a href="http://www.uspto.gov/about-us/security">Security</a></li>
+<li><a href="http://www.uspto.gov/blog/ebiz/ ">Systems Status</a></li>
+<li><a href="http://www.uspto.gov/sitemap">Site Map</a></li>
+</ul>
+</div>
+<div class="col">
+<h2>USPTO Background</h2>
+<ul>
+<li><a href="http://www.uspto.gov/about-us/performance-and-planning/federal-activities-inventory-reform-fair-act">Federal Activity Inventory Reform Act (FAIR)</a></li>
+<li><a href="http://www.uspto.gov/about-us/performance-and-planning">USPTO Budget and Performance</a></li>
+<li><a href="http://www.uspto.gov/learning-and-resources/ip-policy/electronic-freedom-information-act-e-foia">Freedom of Information Act</a></li>
+<li><a href="http://www.uspto.gov/learning-and-resources/information-quality-guidelines">Information Quality Guidelines</a></li>
+</ul>
+</div>
+<div class="col">
+<h2>Federal Government</h2>
+<ul>
+<li><a href="http://www.regulations.gov" onmousedown="dataLayer.push({'event': 'eventTracker', 'eventCat': 'Outbound Links', 'eventAct':'Click', 'eventLbl': 'regulations.gov/', 'eventVal': 0, 'nonInteraction': 0});" target="_blank">Regulations.gov</a></li>
+<li><a href="http://www.stopfakes.gov" onmousedown="dataLayer.push({'event': 'eventTracker', 'eventCat': 'Outbound Links', 'eventAct':'Click', 'eventLbl': 'stopfakes.gov/', 'eventVal': 0, 'nonInteraction': 0});" target="_blank">StopFakes.gov</a></li>
+<li><a href="http://www.usa.gov" onmousedown="dataLayer.push({'event': 'eventTracker', 'eventCat': 'Outbound Links', 'eventAct':'Click', 'eventLbl': 'usa.gov/', 'eventVal': 0, 'nonInteraction': 0});" target="_blank">USA.gov</a></li>
+<li><a href="http://www.commerce.gov" onmousedown="dataLayer.push({'event': 'eventTracker', 'eventCat': 'Outbound Links', 'eventAct':'Click', 'eventLbl': 'commerce.gov/', 'eventVal': 0, 'nonInteraction': 0});" target="_blank">Department of Commerce</a></li>
+<li><a href="http://www.uspto.gov/learning-and-resources/ip-policy/enforcement/strategy-targeting-organized-piracy-stop">Strategy Targeting Organized Piracy</a></li>
+</ul>
+</div>
+<div class="col"><img alt="US Department of Commerce" src="http://tsdr.uspto.gov/img/logo-watermark-med.png"/></div>
+</div>
+</footer>
+<script id="" type="text/javascript">var domains_to_track=["uspto.gov","sharepoint.com","usptogov.sharepoint.com"],folders_to_track="",extDoc=".doc .docx .xls .xlsx .xlsm .ppt .pptx .exe .zip .pdf .js .txt .csv".split(" "),socSites="",isSubDomainTracker=!1,isSeparateDomainTracker=!1,isGTM=!0,eValues={downloads:{category:"Assets",action:"Download",label:"",value:0,nonInteraction:0},outbound_downloads:{category:"Outbound Assets",action:"Download",label:"",value:0,nonInteraction:0},outbounds:{category:"Outbound Links",action:"Click",label:"",
+value:0,nonInteraction:0},email:{category:"Email Clicks",action:"Click",label:"",value:0,nonInteraction:0},outbound_email:{category:"Outbound Email Clicks",action:"Click",label:"",value:0,nonInteraction:0},telephone:{category:"Telephone Clicks",action:"Click",label:"",value:0,nonInteraction:0},social:{category:"Social Profiles",action:"Click",label:"",value:0,nonInteraction:0}},mainDomain=document.location.hostname.match(/(([^.\/]+\.[^.\/]{2,3}\.[^.\/]{2})|(([^.\/]+\.)[^.\/]{2,4}))(\/.*)?$/)[1];
+mainDomain=mainDomain.toLowerCase();1==isSubDomainTracker&&(mainDomain=document.location.hostname.replace("www.","").toLowerCase());var arr=document.getElementsByTagName("a");
+for(i=0;i<arr.length;i++){var flag=0,mDownAtt=arr[i].getAttribute("onmousedown"),doname="",linkType="",mailPattern=/^mailto:[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/i,urlPattern=/^(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/i,telPattern=/^tel:(.*)([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/i;if(mailPattern.test(arr[i].href)||urlPattern.test(arr[i].href)||telPattern.test(arr[i].href)){try{!urlPattern.test(arr[i].href)||mailPattern.test(arr[i].href)||telPattern.test(arr[i].href)?
+!mailPattern.test(arr[i].href)||telPattern.test(arr[i].href)||urlPattern.test(arr[i].href)?!telPattern.test(arr[i].href)||urlPattern.test(arr[i].href)||mailPattern.test(arr[i].href)||(doname=arr[i].href.toLowerCase(),linkType="tel"):(doname=arr[i].href.toLowerCase().split("@")[1],linkType="mail"):(doname=arr[i].hostname.toLowerCase().replace("www.",""),linkType="url")}catch(a){continue}if(null!=mDownAtt&&(mDownAtt=String(mDownAtt),-1<mDownAtt.indexOf("dataLayer.push")||-1<mDownAtt.indexOf("('send'")))continue;
+var condition=!1;if(condition=isSeparateDomainTracker?doname==mainDomain:-1!=doname.indexOf(mainDomain))if("mail"===linkType)eValues.email.label=arr[i].href.toLowerCase().match(/[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/i),_tagLinks(arr[i],eValues.email.category,eValues.email.action,eValues.email.label,eValues.email.value,eValues.email.nonInteraction,mDownAtt);else{if("url"===linkType){var gateOutboundLink=/^https?:\/\/(www\.)?tmsearch\.uspto\.gov\/bin\/gate\.exe.*$/ig;gateOutboundLink.test(arr[i].href)?
+(eValues.outbounds.label=arr[i].href.toLowerCase().replace("www.","").split("//")[1],_tagLinks(arr[i],eValues.outbounds.category,eValues.outbounds.action,eValues.outbounds.label,eValues.outbounds.value,eValues.outbounds.nonInteraction,mDownAtt)):""==folders_to_track||_isInternalFolder(arr[i].href)?_isDownload(arr[i].href)&&(_setDownloadData(arr[i].href,doname),_tagLinks(arr[i],eValues.downloads.category,eValues.downloads.action,eValues.downloads.label,eValues.downloads.value,eValues.downloads.nonInteraction,
+mDownAtt)):_isDownload(arr[i].href)?(_setDownloadData(arr[i].href,doname),_tagLinks(arr[i],eValues.outbound_downloads.category,eValues.outbound_downloads.action,eValues.outbound_downloads.label,eValues.outbound_downloads.value,eValues.outbound_downloads.nonInteraction,mDownAtt)):(eValues.outbounds.label=arr[i].href.toLowerCase().replace("www.","").split("//")[1],_tagLinks(arr[i],eValues.outbounds.category,eValues.outbounds.action,eValues.outbounds.label,eValues.outbounds.value,eValues.outbounds.nonInteraction,
+mDownAtt))}}else for(var k=0;k<domains_to_track.length;k++){var condition1=!1;condition1=isSeparateDomainTracker?doname==domains_to_track[k]:-1!=doname.indexOf(domains_to_track[k]);condition1?"mail"===linkType?(eValues.email.label=arr[i].href.toLowerCase().match(/[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/i),_tagLinks(arr[i],eValues.email.category,eValues.email.action,eValues.email.label,eValues.email.value,eValues.email.nonInteraction,mDownAtt)):"url"===linkType&&(""==folders_to_track||_isInternalFolder(arr[i].href)?
+_isDownload(arr[i].href)&&(_setDownloadData(arr[i].href,doname),_tagLinks(arr[i],eValues.downloads.category,eValues.downloads.action,eValues.downloads.label,eValues.downloads.value,eValues.downloads.nonInteraction,mDownAtt)):_isDownload(arr[i].href)?(_setDownloadData(arr[i].href,doname),_tagLinks(arr[i],eValues.outbound_downloads.category,eValues.outbound_downloads.action,eValues.outbound_downloads.label,eValues.outbound_downloads.value,eValues.outbound_downloads.nonInteraction,mDownAtt)):(eValues.outbounds.label=
+arr[i].href.replace("www.","").split("//")[1],_tagLinks(arr[i],eValues.outbounds.category,eValues.outbounds.action,eValues.outbounds.label,eValues.outbounds.value,eValues.outbounds.nonInteraction,mDownAtt))):(flag++,flag==domains_to_track.length&&("mail"===linkType&&(eValues.outbound_email.label=arr[i].href.toLowerCase().match(/[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/),_tagLinks(arr[i],eValues.outbound_email.category,eValues.outbound_email.action,eValues.outbound_email.label,eValues.outbound_email.value,
+eValues.outbound_email.nonInteraction,mDownAtt)),"tel"===linkType&&(eValues.telephone.label=arr[i].href.toLowerCase().split("tel:")[1],_tagLinks(arr[i],eValues.telephone.category,eValues.telephone.action,eValues.telephone.label,eValues.telephone.value,eValues.telephone.nonInteraction,mDownAtt)),"url"===linkType&&(_isDownload(arr[i].href)?(_setDownloadData(arr[i].href,doname),_tagLinks(arr[i],eValues.outbound_downloads.category,eValues.outbound_downloads.action,eValues.outbound_downloads.label,eValues.outbound_downloads.value,
+eValues.outbound_downloads.nonInteraction,mDownAtt)):_isSocial(arr[i].href)?(eValues.social.label=arr[i].href.toLowerCase().replace("www.","").split("//")[1],eValues.social.action=eValues.social.label.split(".")[0],_tagLinks(arr[i],eValues.social.category,eValues.social.action,eValues.social.label,eValues.social.value,eValues.social.nonInteraction,mDownAtt)):(eValues.outbounds.label=arr[i].href.toLowerCase().replace("www.","").split("//")[1],_tagLinks(arr[i],eValues.outbounds.category,eValues.outbounds.action,
+eValues.outbounds.label,eValues.outbounds.value,eValues.outbounds.nonInteraction,mDownAtt)))))}}}function _isSocial(a){return""!=socSites?null!=a.toLowerCase().replace(/[+#]/,"").match(new RegExp("^(.*)("+socSites.toLowerCase()+")(.*)$"))?!0:!1:!1}function _isInternalFolder(a){return""!=folders_to_track?null!=a.toLowerCase().match(new RegExp("^(.*)("+folders_to_track+")(.*)$"))?!0:!1:!1}
+function _isDownload(a){for(var d=0,b=0;b<extDoc.length;b++){var c=a.split(".");c=c[c.length-1].split(/[#?&?]/);if("."+c[0].toLowerCase()==extDoc[b])return!0;d++;if(d==extDoc.length)return!1}}function _setDownloadData(a,d){var b=a.toLowerCase().split(".");b=b[b.length-1].split(/[#?&?]/);var c=a.toLowerCase().split(d);c=c[1].split(/[#?&?]/);eValues.downloads.action=eValues.outbound_downloads.action=b;eValues.downloads.label=eValues.outbound_downloads.label=c}
+function _tagLinks(a,d,b,c,f,g,e){isGTM?a.setAttribute("onmousedown",""+(null!=e?e+"; ":"")+"dataLayer.push({'event': 'eventTracker', 'eventCat': '"+d+"', 'eventAct':'"+b+"', 'eventLbl': '"+c+"', 'eventVal': "+f+", 'nonInteraction': "+g+"});"):a.setAttribute("onmousedown",""+(null!=e?e+"; ":"")+"ga('send', 'event', '"+d+"', '"+b+"', '"+c+"', "+f+", {nonInteraction:("+g+" \x3d\x3d 0) ? false : true});")};</script>
+<script id="_fed_an_ua_tag" src="https://components.uspto.gov/js/Uni-Fed-Min.js" type="text/javascript"></script>
+</body></html>

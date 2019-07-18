@@ -1,0 +1,152 @@
+<html lang="en"><head><style>.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style><style>.dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,0.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,0.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd;box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}
+</style><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans" rel="stylesheet" type="text/css"/>
+<meta charset="utf-8"/>
+<meta content="initial-scale=1.0, user-scalable=no" name="viewport"/>
+<meta content="Randy Olson uses machine learning to find the optimal road trip across the U.S." name="description"/>
+<meta content="Randal S. Olson" name="author"/>
+<title>The optimal road trip across the U.S. according to machine learning</title>
+<style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #999;
+      }
+    </style>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true"></script>
+<script>
+		var routes_list = []
+		var markerOptions = {icon: "http://maps.gstatic.com/mapfiles/markers2/marker.png"};
+		var directionsDisplayOptions = {preserveViewport: true,
+										markerOptions: markerOptions};
+		var directionsService = new google.maps.DirectionsService();
+		var map;
+
+		function initialize() {
+		  var center = new google.maps.LatLng(39, -96);
+		  var mapOptions = {
+			zoom: 5,
+			center: center
+		  };
+		  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		  for (i=0; i<routes_list.length; i++) {
+		  	routes_list[i].setMap(map);	
+		  }
+		}
+
+		function calcRoute(start, end, routes) {
+		  
+		  var directionsDisplay = new google.maps.DirectionsRenderer(directionsDisplayOptions);
+
+		  var waypts = [];
+		  for (var i = 0; i < routes.length; i++) {
+		  	waypts.push({
+		  	  location:routes[i],
+		  	  stopover:true});
+		  	}
+		  
+		  var request = {
+			  origin: start,
+			  destination: end,
+			  waypoints: waypts,
+			  optimizeWaypoints: false,
+			  travelMode: google.maps.TravelMode.DRIVING
+		  };
+
+		  directionsService.route(request, function(response, status) {
+			if (status == google.maps.DirectionsStatus.OK) {
+				directionsDisplay.setDirections(response);		
+			}
+		  });
+
+		  routes_list.push(directionsDisplay);
+		}
+
+		function createRoutes(route) {
+			// Google's free map API is limited to 10 waypoints so need to break into batches
+			route.push(route[0]);
+			var subset = 0;
+			while (subset < route.length) {
+				var waypointSubset = route.slice(subset, subset + 10);
+
+				var startPoint = waypointSubset[0];
+				var midPoints = waypointSubset.slice(1, waypointSubset.length - 1);
+				var endPoint = waypointSubset[waypointSubset.length - 1];
+
+				calcRoute(startPoint, endPoint, midPoints);
+
+				subset += 9;
+			}
+		}
+
+		optimal_route = ["Grand Canyon National Park Lodges, 88 Village Loop Drive, Grand Canyon Village, AZ 86023", 						"Bryce Canyon National Park, Hwy 63, Bryce, UT",
+					"Craters of the Moon National Monument & Preserve, Arco, ID",
+					"West Yellowstone Visitor Information Center, 30 Yellowstone Ave, West Yellowstone, MT 59758",
+					"Pikes Peak, Colorado",
+					"Carlsbad Caverns National Park, Carlsbad, NM",
+					"The Alamo, Alamo Plaza, San Antonio, TX",
+					"Chickasaw National Recreation Area, 1008 W 2nd St, Sulphur, OK 73086",
+					"Toltec Mounds, Scott, AR",
+					"Graceland, Elvis Presley Boulevard, Memphis, TN",
+					"Vicksburg National Military Park, Clay Street, Vicksburg, MS",
+					"French Quarter, New Orleans, LA",
+					"USS Alabama, Battleship Parkway, Mobile, AL",
+					"Cape Canaveral, FL",
+					"Okefenokee Swamp Park, Okefenokee Swamp Park Road, Waycross, GA",
+					"Fort Sumter National Monument, Sullivan's Island, SC",
+					"Lost World Caverns, Lewisburg, WV",
+					"Wright Brothers National Memorial Visitor Center, Manteo, NC",
+					"Mount Vernon, Fairfax County, Virginia",
+					"White House, Pennsylvania Avenue Northwest, Washington, DC",
+					"Maryland State House, 100 State Cir, Annapolis, MD 21401",
+					"New Castle Historic District, Delaware",
+					"Congress Hall, Congress Place, Cape May, NJ 08204",
+					"Liberty Bell, 6th Street, Philadelphia, PA",
+					"Statue of Liberty, Liberty Island, NYC, NY",
+					"The Mark Twain House & Museum, Farmington Avenue, Hartford, CT",
+					"The Breakers, Ochre Point Avenue, Newport, RI",
+					"USS Constitution, Boston, MA",
+					"Acadia National Park, Maine",
+					"Omni Mount Washington Resort, Mount Washington Hotel Road, Bretton Woods, NH",
+					"Shelburne Farms, Harbor Road, Shelburne, VT",
+					"USS Cod Submarine Memorial, East 9th Street, Cleveland, OH",
+					"Olympia Entertainment, Woodward Avenue, Detroit, MI",
+					"Spring Grove Cemetery, Spring Grove Avenue, Cincinnati, OH",
+					"Mammoth Cave National Park, Mammoth Cave Pkwy, Mammoth Cave, KY",
+					"West Baden Springs Hotel, West Baden Avenue, West Baden Springs, IN",
+					"Lincoln Home National Historic Site Visitor Center, 426 South 7th Street, Springfield, IL",
+					"Gateway Arch, Washington Avenue, St Louis, MO",
+					"C. W. Parker Carousel Museum, South Esplanade Street, Leavenworth, KS",
+					"Terrace Hill, Grand Avenue, Des Moines, IA",
+					"Taliesin, County Road C, Spring Green, Wisconsin",
+					"Fort Snelling, Tower Avenue, Saint Paul, MN",
+					"Ashfall Fossil Bed, Royal, NE",
+					"Mount Rushmore National Memorial, South Dakota 244, Keystone, SD",
+					"Fort Union Trading Post National Historic Site, Williston, North Dakota 1804, ND",
+					"Glacier National Park, 64 Grinnell Drive, West Glacier, MT 59936",
+					"Hanford Site, Benton County, WA",
+					"Columbia River Gorge National Scenic Area, Oregon",
+					"Cable Car Museum, 94108, 1201 Mason St, San Francisco, CA 94108",
+					"San Andreas Fault, San Benito County, CA",
+					"Hoover Dam, Boulder City, CO",
+					"Grand Canyon National Park Lodges, 88 Village Loop Drive, Grand Canyon Village, AZ 86023"]
+		
+		createRoutes(optimal_route);
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script><script charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/6/common.js" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/6/util.js" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/6/geometry.js" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/6/directions.js" type="text/javascript"></script>
+<script charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttp%3A%2F%2Frhiever.github.io%2Foptimal-roadtrip-usa%2Fmajor-landmarks.html&amp;5shttp%3A%2F%2Frhiever.github.io%2Foptimal-roadtrip-usa%2Fmajor-landmarks.html&amp;callback=_xdc_._fi12no&amp;token=98314" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/DirectionsService.Route?5m2&amp;1m1&amp;2sGrand%20Canyon%20National%20Park%20Lodges%2C%2088%20Village%20Loop%20Drive%2C%20Grand%20Canyon%20Village%2C%20AZ%2086023&amp;5m3&amp;1m1&amp;2sBryce%20Canyon%20National%20Park%2C%20Hwy%2063%2C%20Bryce%2C%20UT&amp;2b1&amp;5m3&amp;1m1&amp;2sCraters%20of%20the%20Moon%20National%20Monument%20%26%20Preserve%2C%20Arco%2C%20ID&amp;2b1&amp;5m3&amp;1m1&amp;2sWest%20Yellowstone%20Visitor%20Information%20Center%2C%2030%20Yellowstone%20Ave%2C%20West%20Yellowstone%2C%20MT%2059758&amp;2b1&amp;5m3&amp;1m1&amp;2sPikes%20Peak%2C%20Colorado&amp;2b1&amp;5m3&amp;1m1&amp;2sCarlsbad%20Caverns%20National%20Park%2C%20Carlsbad%2C%20NM&amp;2b1&amp;5m3&amp;1m1&amp;2sThe%20Alamo%2C%20Alamo%20Plaza%2C%20San%20Antonio%2C%20TX&amp;2b1&amp;5m3&amp;1m1&amp;2sChickasaw%20National%20Recreation%20Area%2C%201008%20W%202nd%20St%2C%20Sulphur%2C%20OK%2073086&amp;2b1&amp;5m3&amp;1m1&amp;2sToltec%20Mounds%2C%20Scott%2C%20AR&amp;2b1&amp;5m2&amp;1m1&amp;2sGraceland%2C%20Elvis%20Presley%20Boulevard%2C%20Memphis%2C%20TN&amp;6e0&amp;8b0&amp;12sen-US&amp;23e1&amp;callback=_xdc_._f6r4pg&amp;token=113284" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/DirectionsService.Route?5m2&amp;1m1&amp;2sGraceland%2C%20Elvis%20Presley%20Boulevard%2C%20Memphis%2C%20TN&amp;5m3&amp;1m1&amp;2sVicksburg%20National%20Military%20Park%2C%20Clay%20Street%2C%20Vicksburg%2C%20MS&amp;2b1&amp;5m3&amp;1m1&amp;2sFrench%20Quarter%2C%20New%20Orleans%2C%20LA&amp;2b1&amp;5m3&amp;1m1&amp;2sUSS%20Alabama%2C%20Battleship%20Parkway%2C%20Mobile%2C%20AL&amp;2b1&amp;5m3&amp;1m1&amp;2sCape%20Canaveral%2C%20FL&amp;2b1&amp;5m3&amp;1m1&amp;2sOkefenokee%20Swamp%20Park%2C%20Okefenokee%20Swamp%20Park%20Road%2C%20Waycross%2C%20GA&amp;2b1&amp;5m3&amp;1m1&amp;2sFort%20Sumter%20National%20Monument%2C%20Sullivan%27s%20Island%2C%20SC&amp;2b1&amp;5m3&amp;1m1&amp;2sLost%20World%20Caverns%2C%20Lewisburg%2C%20WV&amp;2b1&amp;5m3&amp;1m1&amp;2sWright%20Brothers%20National%20Memorial%20Visitor%20Center%2C%20Manteo%2C%20NC&amp;2b1&amp;5m2&amp;1m1&amp;2sMount%20Vernon%2C%20Fairfax%20County%2C%20Virginia&amp;6e0&amp;8b0&amp;12sen-US&amp;23e1&amp;callback=_xdc_._ucl4rk&amp;token=116389" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/DirectionsService.Route?5m2&amp;1m1&amp;2sMount%20Vernon%2C%20Fairfax%20County%2C%20Virginia&amp;5m3&amp;1m1&amp;2sWhite%20House%2C%20Pennsylvania%20Avenue%20Northwest%2C%20Washington%2C%20DC&amp;2b1&amp;5m3&amp;1m1&amp;2sMaryland%20State%20House%2C%20100%20State%20Cir%2C%20Annapolis%2C%20MD%2021401&amp;2b1&amp;5m3&amp;1m1&amp;2sNew%20Castle%20Historic%20District%2C%20Delaware&amp;2b1&amp;5m3&amp;1m1&amp;2sCongress%20Hall%2C%20Congress%20Place%2C%20Cape%20May%2C%20NJ%2008204&amp;2b1&amp;5m3&amp;1m1&amp;2sLiberty%20Bell%2C%206th%20Street%2C%20Philadelphia%2C%20PA&amp;2b1&amp;5m3&amp;1m1&amp;2sStatue%20of%20Liberty%2C%20Liberty%20Island%2C%20NYC%2C%20NY&amp;2b1&amp;5m3&amp;1m1&amp;2sThe%20Mark%20Twain%20House%20%26%20Museum%2C%20Farmington%20Avenue%2C%20Hartford%2C%20CT&amp;2b1&amp;5m3&amp;1m1&amp;2sThe%20Breakers%2C%20Ochre%20Point%20Avenue%2C%20Newport%2C%20RI&amp;2b1&amp;5m2&amp;1m1&amp;2sUSS%20Constitution%2C%20Boston%2C%20MA&amp;6e0&amp;8b0&amp;12sen-US&amp;23e1&amp;callback=_xdc_._ut5hvz&amp;token=116104" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/DirectionsService.Route?5m2&amp;1m1&amp;2sUSS%20Constitution%2C%20Boston%2C%20MA&amp;5m3&amp;1m1&amp;2sAcadia%20National%20Park%2C%20Maine&amp;2b1&amp;5m3&amp;1m1&amp;2sOmni%20Mount%20Washington%20Resort%2C%20Mount%20Washington%20Hotel%20Road%2C%20Bretton%20Woods%2C%20NH&amp;2b1&amp;5m3&amp;1m1&amp;2sShelburne%20Farms%2C%20Harbor%20Road%2C%20Shelburne%2C%20VT&amp;2b1&amp;5m3&amp;1m1&amp;2sUSS%20Cod%20Submarine%20Memorial%2C%20East%209th%20Street%2C%20Cleveland%2C%20OH&amp;2b1&amp;5m3&amp;1m1&amp;2sOlympia%20Entertainment%2C%20Woodward%20Avenue%2C%20Detroit%2C%20MI&amp;2b1&amp;5m3&amp;1m1&amp;2sSpring%20Grove%20Cemetery%2C%20Spring%20Grove%20Avenue%2C%20Cincinnati%2C%20OH&amp;2b1&amp;5m3&amp;1m1&amp;2sMammoth%20Cave%20National%20Park%2C%20Mammoth%20Cave%20Pkwy%2C%20Mammoth%20Cave%2C%20KY&amp;2b1&amp;5m3&amp;1m1&amp;2sWest%20Baden%20Springs%20Hotel%2C%20West%20Baden%20Avenue%2C%20West%20Baden%20Springs%2C%20IN&amp;2b1&amp;5m2&amp;1m1&amp;2sLincoln%20Home%20National%20Historic%20Site%20Visitor%20Center%2C%20426%20South%207th%20Street%2C%20Springfield%2C%20IL&amp;6e0&amp;8b0&amp;12sen-US&amp;23e1&amp;callback=_xdc_._m3a8gj&amp;token=22436" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/DirectionsService.Route?5m2&amp;1m1&amp;2sLincoln%20Home%20National%20Historic%20Site%20Visitor%20Center%2C%20426%20South%207th%20Street%2C%20Springfield%2C%20IL&amp;5m3&amp;1m1&amp;2sGateway%20Arch%2C%20Washington%20Avenue%2C%20St%20Louis%2C%20MO&amp;2b1&amp;5m3&amp;1m1&amp;2sC.%20W.%20Parker%20Carousel%20Museum%2C%20South%20Esplanade%20Street%2C%20Leavenworth%2C%20KS&amp;2b1&amp;5m3&amp;1m1&amp;2sTerrace%20Hill%2C%20Grand%20Avenue%2C%20Des%20Moines%2C%20IA&amp;2b1&amp;5m3&amp;1m1&amp;2sTaliesin%2C%20County%20Road%20C%2C%20Spring%20Green%2C%20Wisconsin&amp;2b1&amp;5m3&amp;1m1&amp;2sFort%20Snelling%2C%20Tower%20Avenue%2C%20Saint%20Paul%2C%20MN&amp;2b1&amp;5m3&amp;1m1&amp;2sAshfall%20Fossil%20Bed%2C%20Royal%2C%20NE&amp;2b1&amp;5m3&amp;1m1&amp;2sMount%20Rushmore%20National%20Memorial%2C%20South%20Dakota%20244%2C%20Keystone%2C%20SD&amp;2b1&amp;5m3&amp;1m1&amp;2sFort%20Union%20Trading%20Post%20National%20Historic%20Site%2C%20Williston%2C%20North%20Dakota%201804%2C%20ND&amp;2b1&amp;5m2&amp;1m1&amp;2sGlacier%20National%20Park%2C%2064%20Grinnell%20Drive%2C%20West%20Glacier%2C%20MT%2059936&amp;6e0&amp;8b0&amp;12sen-US&amp;23e1&amp;callback=_xdc_._n4ek31&amp;token=21050" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/DirectionsService.Route?5m2&amp;1m1&amp;2sGlacier%20National%20Park%2C%2064%20Grinnell%20Drive%2C%20West%20Glacier%2C%20MT%2059936&amp;5m3&amp;1m1&amp;2sHanford%20Site%2C%20Benton%20County%2C%20WA&amp;2b1&amp;5m3&amp;1m1&amp;2sColumbia%20River%20Gorge%20National%20Scenic%20Area%2C%20Oregon&amp;2b1&amp;5m3&amp;1m1&amp;2sCable%20Car%20Museum%2C%2094108%2C%201201%20Mason%20St%2C%20San%20Francisco%2C%20CA%2094108&amp;2b1&amp;5m3&amp;1m1&amp;2sSan%20Andreas%20Fault%2C%20San%20Benito%20County%2C%20CA&amp;2b1&amp;5m3&amp;1m1&amp;2sHoover%20Dam%2C%20Boulder%20City%2C%20CO&amp;2b1&amp;5m3&amp;1m1&amp;2sGrand%20Canyon%20National%20Park%20Lodges%2C%2088%20Village%20Loop%20Drive%2C%20Grand%20Canyon%20Village%2C%20AZ%2086023&amp;2b1&amp;5m2&amp;1m1&amp;2sGrand%20Canyon%20National%20Park%20Lodges%2C%2088%20Village%20Loop%20Drive%2C%20Grand%20Canyon%20Village%2C%20AZ%2086023&amp;6e0&amp;8b0&amp;12sen-US&amp;23e1&amp;callback=_xdc_._yymbrq&amp;token=111381" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/6/map.js" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/6/controls.js" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/6/infowindow.js" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/6/marker.js" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/6/onion.js" type="text/javascript"></script><script charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&amp;1m2&amp;1d-18.322596866105737&amp;2d136.46431823350997&amp;2m2&amp;1d90&amp;2d32.98067435899031&amp;2u5&amp;4sen-US&amp;5e0&amp;6sm%40474000000&amp;7b0&amp;8e0&amp;callback=_xdc_._mif2f9&amp;token=87163" type="text/javascript"></script></head>
+<body>
+<div id="map-canvas" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div style='position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url("https://maps.gstatic.com/mapfiles/openhand_8_8.cur"), default; touch-action: none;' tabindex="0"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;"><div style="z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div></div><iframe aria-hidden="true" frameborder="0" src="about:blank" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;"></iframe></div></div><div style="background-color: white; font-weight: 500; font-family: Roboto, sans-serif; padding: 15px 25px; box-sizing: border-box; top: 5px; border: 1px solid rgba(0, 0, 0, 0.12); border-radius: 5px; left: 50%; max-width: 375px; position: absolute; transform: translateX(-50%); width: calc(100% - 10px); z-index: 1;"><div><img alt="" draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/google_gray.svg" style="padding: 0px; margin: 0px; border: 0px; height: 17px; vertical-align: middle; width: 52px; user-select: none;"/></div><div style="line-height: 20px; margin: 15px 0px;"><span style="color: rgba(0, 0, 0, 0.87); font-size: 14px;">This page can't load Google Maps correctly.</span></div><table style="width: 100%;"><tr><td style="line-height: 16px; vertical-align: middle;"><a href="https://developers.google.com/maps/documentation/javascript/error-messages?utm_source=maps_js&amp;utm_medium=degraded&amp;utm_campaign=keyless#api-key-and-billing-errors" rel="noopener" style="color: rgba(0, 0, 0, 0.54); font-size: 12px;" target="_blank">Do you own this website?</a></td><td style="text-align: right;"><button class="dismissButton">OK</button></td></tr></table></div></div>
+<div style="position: absolute; left: 0px; top: -2px; height: 1px; overflow: hidden; visibility: hidden; width: 1px;"><span style="position: absolute; font-size: 300px; width: auto; height: auto; margin: 0px; padding: 0px; font-family: Roboto, Arial, sans-serif;">BESbswy</span></div></body></html>

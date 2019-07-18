@@ -1,0 +1,328 @@
+<html><head>
+<title>Grounds - White House Museum</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="http://www.whitehousemuseum.org/styles.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+<!--
+
+
+
+td     {
+	font-family: Arial, Verdana, Helvetica;
+	font-size: 9pt;
+	color: #000000;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	text-align: justify;
+}
+
+-->
+</style>
+<link href="http://www.whitehousemuseum.org/styles.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+
+#dropmenudiv{
+position:absolute;
+border:1px solid darkgray;
+border-bottom-width: 0;
+font:normal 12px Verdana;
+line-height:18px;
+z-index:100;
+}
+
+#dropmenudiv a{
+width: 100%;
+display: block;
+text-indent: 3px;
+border-bottom: 1px solid darkgray;
+padding: 1px 0;
+text-decoration: none;
+font-weight: bold;
+}
+
+#dropmenudiv a:hover{ /*hover background color*/
+background-color: white;
+}
+
+</style>
+<script type="text/javascript">
+
+/***********************************************
+* AnyLink Drop Down Menu- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+//Contents for menu 0
+var menu0=new Array()
+menu0[0]='<a href="/overview.htm">White House Overview</a>'
+menu0[1]='<a href="/grounds.htm">White House Grounds</a>'
+menu0[2]='<a href="/furnishings/">White House Furnishings</a>'
+menu0[3]='<a href="/special/about.htm">About the Museum</a>'
+menu0[4]='<a href="/special/questions.htm">Questions & Answers</a>'
+menu0[5]='<a href="/special/sitemap.htm">WHM Site Map</a>'
+
+//Contents for menu 1
+var menu1=new Array()
+menu1[0]='<a href="/residence.htm">Residence Overview</a>'
+menu1[1]='<a href="/FloorB.htm">Sub-Basements</a>'
+menu1[2]='<a href="/Floor0.htm">Ground Floor</a>'
+menu1[3]='<a href="/Floor1.htm">First Floor</a>'
+menu1[4]='<a href="/Floor2.htm">Second Floor</a>'
+menu1[5]='<a href="/Floor3.htm">Third Floor</a>'
+
+//Contents for menu 2
+var menu2=new Array()
+menu2[0]='<a href="/east-wing.htm">East Wing Overview</a>'
+menu2[1]='<a href="/ew1.htm">First Floor</a>'
+menu2[2]='<a href="/ew2.htm">Second Floor</a>'
+
+//Contents for menu 3
+var menu3=new Array()
+menu3[0]='<a href="/west-wing.htm">West Wing Overview</a>'
+menu3[1]='<a href="/ww0.htm">Ground Floor</a>'
+menu3[2]='<a href="/ww1.htm">First Floor</a>'
+menu3[3]='<a href="/ww2.htm">Second Floor</a>'
+
+//Contents for menu 4
+var menu4=new Array()
+menu4[0]='<a href="/index.htm">Home</a>'
+menu4[1]='<a href="/special/AF1/index.htm">Air Force One</a>'
+menu4[2]='<a href="/special/1oc/index.htm">VP&#8217;s Residence</a>'
+menu4[3]='<a href="/model/index.htm">3-D Models</a>'
+menu4[4]='<a href="/special/lesson.htm">Lesson Plans</a>'
+menu4[5]='<a href="/special/movies.htm">White House Movies & TV</a>'
+menu4[6]='<a href="/special/resources.htm">Research Resources</a>'
+menu4[7]='<a href="http://whitehousemuseum.wordpress.com/">WHM weblog</a>'
+menu4[8]='<a href="/special/new.htm">What&#8217;s New</a>'
+
+var menuwidth='165px' //default menu width
+var menubgcolor='lightgrey'  //menu bgcolor
+var disappeardelay=250  //menu disappear speed onMouseout (in miliseconds)
+var hidemenu_onclick="yes" //hide menu when user clicks within menu?
+
+/////No further editing needed
+
+var ie4=document.all
+var ns6=document.getElementById&&!document.all
+
+if (ie4||ns6)
+document.write('<div id="dropmenudiv" style="visibility:hidden;width:'+menuwidth+';background-color:'+menubgcolor+'" onMouseover="clearhidemenu()" onMouseout="dynamichide(event)"></div>')
+
+function getposOffset(what, offsettype){
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+var parentEl=what.offsetParent;
+while (parentEl!=null){
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+parentEl=parentEl.offsetParent;
+}
+return totaloffset;
+}
+
+
+function showhide(obj, e, visible, hidden, menuwidth){
+if (ie4||ns6)
+dropmenuobj.style.left=dropmenuobj.style.top="-500px"
+if (menuwidth!=""){
+dropmenuobj.widthobj=dropmenuobj.style
+dropmenuobj.widthobj.width=menuwidth
+}
+if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover")
+obj.visibility=visible
+else if (e.type=="click")
+obj.visibility=hidden
+}
+
+function iecompattest(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function clearbrowseredge(obj, whichedge){
+var edgeoffset=0
+if (whichedge=="rightedge"){
+var windowedge=ie4 && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-15 : window.pageXOffset+window.innerWidth-15
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetWidth
+}
+else{
+var topedge=ie4 && !window.opera? iecompattest().scrollTop : window.pageYOffset
+var windowedge=ie4 && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure){ //move up?
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetHeight
+if ((dropmenuobj.y-topedge)<dropmenuobj.contentmeasure) //up no good either?
+edgeoffset=dropmenuobj.y+obj.offsetHeight-topedge
+}
+}
+return edgeoffset
+}
+
+function populatemenu(what){
+if (ie4||ns6)
+dropmenuobj.innerHTML=what.join("")
+}
+
+
+function dropdownmenu(obj, e, menucontents, menuwidth){
+if (window.event) event.cancelBubble=true
+else if (e.stopPropagation) e.stopPropagation()
+clearhidemenu()
+dropmenuobj=document.getElementById? document.getElementById("dropmenudiv") : dropmenudiv
+populatemenu(menucontents)
+
+if (ie4||ns6){
+showhide(dropmenuobj.style, e, "visible", "hidden", menuwidth)
+
+dropmenuobj.x=getposOffset(obj, "left")
+dropmenuobj.y=getposOffset(obj, "top")
+dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+"px"
+dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+"px"
+}
+
+return clickreturnvalue()
+}
+
+function clickreturnvalue(){
+if (ie4||ns6) return false
+else return true
+}
+
+function contains_ns6(a, b) {
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function dynamichide(e){
+if (ie4&&!dropmenuobj.contains(e.toElement))
+delayhidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+delayhidemenu()
+}
+
+function hidemenu(e){
+if (typeof dropmenuobj!="undefined"){
+if (ie4||ns6)
+dropmenuobj.style.visibility="hidden"
+}
+}
+
+function delayhidemenu(){
+if (ie4||ns6)
+delayhide=setTimeout("hidemenu()",disappeardelay)
+}
+
+function clearhidemenu(){
+if (typeof delayhide!="undefined")
+clearTimeout(delayhide)
+}
+
+if (hidemenu_onclick=="yes")
+document.onclick=hidemenu
+
+</script></head><body background="images/page_bkgd.jpg" bgcolor="#FFFFCC" bottommargin="0" leftmargin="0" marginheight="0" marginwidth="0" rightmargin="0" topmargin="0"><div id="dropmenudiv" onmouseout="dynamichide(event)" onmouseover="clearhidemenu()" style="visibility:hidden;width:165px;background-color:lightgrey"></div>
+<div align="center">
+<a href="http://www.whitehousemuseum.org/index.htm"><img border="0" height="50" src="http://www.whitehousemuseum.org/images/whitehousemuseum-logo.jpg" title="White House Museum" width="800"/></a><br/>
+<table bgcolor="#FFFFFF" border="1" cellpadding="5" cellspacing="5" width="800">
+<tbody><tr>
+<td><div align="center"> <img height="25" src="http://www.whitehousemuseum.org/images/buttons/rosette.gif" width="50"/> <a href="http://www.whitehousemuseum.org/grounds.htm/Overview.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu0, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org/images/buttons/button-overview-white.gif" width="100"/></a><a href="http://www.whitehousemuseum.org/residence.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu1, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org/images/buttons/button-residence.gif" width="100"/></a><a href="http://www.whitehousemuseum.org/east-wing.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu2, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org/images/buttons/button-east.gif" width="100"/></a><a href="http://www.whitehousemuseum.org/west-wing.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu3, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org/images/buttons/button-west.gif" width="100"/></a><a href="http://www.whitehousemuseum.org/index.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu4, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org/images/buttons/button-home.gif" width="100"/></a><img height="25" src="http://www.whitehousemuseum.org/images/buttons/rosette.gif" width="50"/> </div></td>
+</tr>
+</tbody></table>
+<h1>White House Grounds</h1>
+<p><img border="0" height="1119" src="http://www.whitehousemuseum.org/images/grounds-new.jpg" title="White House Grounds" usemap="#Map" width="775"/>
+<map name="Map">
+<area coords="278,539,48" href="/grounds/putting-green.htm" shape="circle" title="Putting Green"/>
+<area coords="307,352,355,350,351,368,369,380,390,380,412,368,407,348,450,349,448,275,403,275,400,244,359,244,359,277,310,277" href="residence.htm" shape="poly" title="Residence"/>
+<area coords="461,309,565,311,565,294,623,293,624,304,638,306,637,397,616,394,622,410,571,408,565,357,548,358,549,341,457,345" href="east-wing.htm" shape="poly" title="East Wing"/>
+<area coords="465,356,543,415" href="grounds/kennedy-garden.htm" shape="rect" title="Kennedy Garden"/>
+<area coords="208,355,292,408" href="grounds/rose-garden.htm" shape="rect" title="Rose Garden"/>
+<area coords="70,421,194,422,196,345,298,343,300,313,287,309,284,294,257,304,244,315,162,315,162,336,126,339,126,322,104,320,104,337,74,337" href="west-wing.htm" shape="poly" title="West Wing"/>
+<area coords="383,139,62" href="grounds/north-lawn.htm" shape="circle" title="North Fountain"/>
+<area coords="214,757,221,859,272,850,310,792,301,744" href="grounds/tennis.htm" shape="poly" title="Tennis Court"/>
+<area coords="78,472,126,582" href="grounds/pool.htm" shape="rect" title="Swimming Pool"/>
+<area coords="381,493,63" href="grounds/south-lawn.htm" shape="circle" title="South Fountain"/>
+<area coords="177,755,37" href="/grounds/childrens-garden.htm" shape="circle"/>
+<area coords="493,469,507,488" href="/grounds/south-lawn/south-lawn-milk-trough-barney-20041120.jpg" shape="rect"/>
+<area coords="115,807,41" href="/grounds/basketball-court.htm" shape="circle"/>
+<area coords="80,466,132,468,138,491,189,491,186,427,78,426" href="/grounds/oval-office-patio.htm" shape="poly" title="Oval Office Patio"/>
+<area coords="128,509,138,550" href="/grounds/horseshoe-pitch.htm" shape="rect"/>
+</map>
+</p>
+<p align="center">created by <a class="external" href="http://www.whitehousemuseum.org/grounds.htm/mailto:godspocket@gmail.com">Peter Sharkey</a>
+<map name="MapMap">
+<area coords="255,281,310,308" href="floor1/elevator-hall/back-staircase-1992.jpg" shape="rect" title="Back Staircase"/>
+<area coords="255,312,310,349" href="/floor1/elevator-hall.htm" shape="rect" title="Elevator"/>
+<area coords="102,427,147,532" href="/floor0/housekeepers-office.htm" shape="rect" title="Corner Office"/>
+<area coords="149,427,241,532" href="floor0/doctors-office.htm" shape="rect" title="Doctor's Office"/>
+<area coords="412,131,412,65,783,63,785,143,548,149,547,211,244,213,244,147,6,141,7,65,385,64,385,129" href="floor0/basement.htm" shape="poly" title="Basement"/>
+<area coords="388,16,412,128" href="/floor0/bowling-alley.htm" shape="rect"/>
+<area coords="420,265,515,345" href="floor0/curators-office.htm" shape="rect" title="Curator's Office"/>
+<area coords="372,240,416,346" href="/floor0/north-hall.htm" shape="rect" title="North Hall"/>
+<area coords="107,234,142,350" href="floor0/kitchen-pantry.htm" shape="rect" title="Kitchen Pantry"/>
+<area coords="250,239,304,276" href="/floor0/refrigerator-room.htm" shape="rect" title="Refrigerator Room"/>
+<area coords="521,261,552,354" href="/floor0/center-hall.htm" shape="rect" title="Center Hall Stairs"/>
+<area coords="100,352,700,415" href="floor0/center-hall.htm" shape="rect" title="Center Hall"/>
+<area coords="144,238,245,345" href="floor0/kitchen.htm" shape="rect" title="Kitchen"/>
+<area coords="559,214,558,155,783,158,783,347,717,347,717,214" href="floor0/courts.htm" shape="poly" title="Court"/>
+<area coords="13,335,85,351,86,214,241,216,240,156,12,154" href="floor0/courts.htm" shape="poly" title="Court"/>
+<area coords="3,353,60,491" href="west-wing/palm-room.htm" shape="rect" title="Palm Room"/>
+<area coords="718,352,784,494" href="east-wing/visitors-foyer.htm" shape="rect" title="Visitors Foyer"/>
+<area coords="323,557,16" href="floor0/map-room.htm" shape="circle" title="Ladies' Lavatory"/>
+<area coords="249,430,333,534" href="floor0/map-room.htm" shape="rect" title="Map Room"/>
+<area coords="385,578,415,624" href="floor0/diplomatic-room.htm" shape="rect" title="Diplomatic Room Vestibule"/>
+<area coords="350,432,451,566" href="floor0/diplomatic-room.htm" shape="rect" title="Diplomatic Reception Room"/>
+<area coords="479,556,17" href="floor0/china-room.htm" shape="circle" title="Men's Lavatory"/>
+<area coords="467,427,545,530" href="floor0/china-room.htm" shape="rect" title="China Room"/>
+<area coords="649,234,696,301" href="floor0/library.htm" shape="rect" title="Men's Lavatory"/>
+<area coords="559,237,640,341" href="floor0/library.htm" shape="rect" title="Library"/>
+<area coords="650,465,696,530" href="floor0/vermeil-room.htm" shape="rect" title="Ladies' Lavatory"/>
+<area coords="556,425,644,534" href="floor0/vermeil-room.htm" shape="rect" title="Vermeil Room"/>
+<area coords="651,305,692,345" href="/FloorB.htm" shape="rect"/>
+<area coords="651,424,690,459" href="/FloorB.htm" shape="rect"/>
+<area alt="Men's Room" coords="445,577,457,566,480,587,465,599" href="/floor0/south-portico-mens-room-2000.jpg" shape="poly"/>
+<area coords="351,44" href="#" shape="poly"/>
+</map>
+</p>
+<map name="MapMap">
+<area coords="101,189,138,291" href="floor1/butlers-pantry.htm" shape="rect" title="Butler's Pantry"/>
+<area coords="274,476,318,473,378,513,433,475,479,478,445,529,375,557,311,532" href="/floor1/south-portico.htm" shape="poly" title="South Portico"/>
+<area coords="144,186,228,285" href="floor1/family-dining-room.htm" shape="rect" title="Family Dining Room"/>
+<area coords="294,190,513,293" href="floor1/entrance-hall.htm" shape="rect" title="Entrance Hall"/>
+<area coords="237,295,518,359" href="floor1/cross-hall.htm" shape="rect" title="Cross Hall"/>
+<area coords="97,292,231,469" href="floor1/state-dining-room.htm" shape="rect" title="State Dining Room"/>
+<area coords="434,363,515,467" href="floor1/green-room.htm" shape="rect" title="Green Room"/>
+<area coords="233,362,315,464" href="floor1/red-room.htm" shape="rect" title="Red Room"/>
+<area coords="520,187,652,468" href="floor1/east-room.htm" shape="rect" title="East Room"/>
+<area coords="375,434,60" href="floor1/blue-room.htm" shape="circle" title="Blue Room"/>
+<area coords="291,34,462,181" href="floor1/north-portico.htm" shape="rect" title="North Portico"/>
+<area coords="239,260,289,291" href="/floor1/elevator-hall.htm" shape="rect" title="Elevator"/>
+<area coords="242,232,289,258" href="floor1/elevator-hall/back-staircase-1992.jpg" shape="rect" title="Back Staircase"/>
+<area coords="239,189,291,227" href="/floor1/chief-usher-office.htm" shape="rect" title="Head Usher's Office"/>
+</map>
+<table border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="800">
+<tbody><tr>
+<td background="/images/edge-creambg.gif" valign="top" width="32"> </td>
+<td bgcolor="#FFFFFF" valign="top" width="5"><img height="10" src="http://www.whitehousemuseum.org/images/spacer10.gif" width="10"/></td>
+<td bgcolor="#FFFFFF" valign="top"><h2>President's Park</h2>
+<p>The White House sits on an 18-acre plot of land that, together with the Ellipse to the south (52 acres total), is called "President's Park." The White House faces north (top) and sits opposite Lafayette Square Park, which honors the Marquis de Lafayette, hero of the American Revolution. </p>
+<h2>Park Reservation Number One</h2>
+<p>The grounds and exterior walls of the White House are designated Park Reservation Number One and maintained by the National Park Service. The interior of the Residence is the responsibility of the Executive Residence under the chief usher. The East Wing and West Wing are managed by the General Services Administration.</p>
+<p>The grounds and garden crew consists of 13 regular staff. The chief horticulturist is on the Executive Residence staff. The other 12 are National Park Service staff: 3 foremen, 8 gardeners, and 1 maintenance operator. Additional Park Service personnel can be called in for more infrequent work on trees, roads and trails, maintenance, and outdoor plumbing and electrical service.</p>
+<h2 align="center">Click a color hotspot on the image for an in-depth view<br/>
+  or continue your tour with the <a href="http://www.whitehousemuseum.org/east-wing.htm">East Wing</a> </h2></td>
+<td bgcolor="#FFFFFF" valign="top" width="5"><img height="10" src="http://www.whitehousemuseum.org/images/spacer10.gif" width="10"/></td>
+<td background="/images/edge-creambg.gif" valign="top" width="32"> </td>
+</tr>
+</tbody></table>
+<p> </p>
+<table bgcolor="#FFFFFF" border="1" cellpadding="5" cellspacing="5" width="800">
+<tbody><tr>
+<td><div align="center"> <img height="25" src="http://www.whitehousemuseum.org/images/buttons/rosette.gif" width="50"/> <a href="http://www.whitehousemuseum.org/grounds.htm/Overview.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu0, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org/images/buttons/button-overview-white.gif" width="100"/></a><a href="http://www.whitehousemuseum.org/residence.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu1, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org/images/buttons/button-residence.gif" width="100"/></a><a href="http://www.whitehousemuseum.org/east-wing.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu2, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org/images/buttons/button-east.gif" width="100"/></a><a href="http://www.whitehousemuseum.org/west-wing.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu3, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org/images/buttons/button-west.gif" width="100"/></a><a href="http://www.whitehousemuseum.org/index.htm" onclick="return clickreturnvalue()" onmouseout="delayhidemenu()" onmouseover="dropdownmenu(this, event, menu4, '150px')"><img border="0" height="25" src="http://www.whitehousemuseum.org/images/buttons/button-home.gif" width="100"/></a><img height="25" src="http://www.whitehousemuseum.org/images/buttons/rosette.gif" width="50"/> </div></td>
+</tr>
+</tbody></table>
+<p> </p>
+</div>
+</body></html>

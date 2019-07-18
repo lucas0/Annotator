@@ -1,0 +1,918 @@
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="RHQeasQqjasbRt5asY6atZYbs5tr10gFBevDt2HRhW0" name="google-site-verification"/>
+<link href="https://nakedsecurity.sophos.com/xmlrpc.php" rel="pingback"/>
+<script async="" src="//img03.en25.com/i/elqCfg.min.js" type="text/javascript"></script><script async="" src="https://ssl.google-analytics.com/ga.js" type="text/javascript"></script><script type="text/javascript">
+var _vwo_code=(function(){
+var account_id=25349,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+/* DO NOT EDIT BELOW THIS LINE */
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script><script src="//dev.visualwebsiteoptimizer.com/j.php?a=25349&amp;u=https%3A%2F%2Fnakedsecurity.sophos.com%2F&amp;r=0.29158875577020593" type="text/javascript"></script>
+<meta content="Naked Security - Computer security news, opinion, advice and research from anti-virus experts Sophos." name="description"/>
+<meta content="whatsapp, intel, opera, nec, google+, akamai, independent product testing, brave, synthetic biology, samsung, scareware, bsideslv, mobile world congress, women in security, black hat, black hat 2017, wikileaks, snapchat, opinion, microsoft edge" name="keywords"/>
+<title>Naked Security – Computer Security News, Advice and Research</title>
+<meta content="I9dHFo-YhnK2MfAHn-20V4GnWrOttVUYyISGamyU41M" name="google-site-verification"/>
+<meta content="7D8D1FA2892142B1543D2CBCD07FB88F" name="msvalidate.01"/>
+<script src="https://r-login.wordpress.com/remote-login.php?action=js&amp;host=nakedsecurity.sophos.com&amp;id=15254721&amp;t=1563241578&amp;back=https%3A%2F%2Fnakedsecurity.sophos.com%2F" type="text/javascript"></script>
+<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+<link href="//s2.wp.com" rel="dns-prefetch"/>
+<link href="//s1.wp.com" rel="dns-prefetch"/>
+<link href="//s0.wp.com" rel="dns-prefetch"/>
+<link href="//sophosnews.wordpress.com" rel="dns-prefetch"/>
+<link href="https://nakedsecurity.sophos.com/feed/" rel="alternate" title="Naked Security » Feed" type="application/rss+xml"/>
+<link href="https://nakedsecurity.sophos.com/comments/feed/" rel="alternate" title="Naked Security » Comments Feed" type="application/rss+xml"/>
+<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+<link href="https://s0.wp.com/_static/??-eJyNUVtywyAMvFAJddsk7UcnZwEsYyWAGITr+PbFduu+mf4wu5pdiZXkGIWhkCFk6QcR3WAxsByjIS/Yo4PpG9sZ5hv5u83hBVieIUdlLmJhNTmGDgPmaQObGINxQ1t6lYJskbPUjpaWOqk0Sc6Tg53HUGtvKEGp+6jyrPDQogIHvshqthFbC3kdvWKR4Vq1+Hh4HzTDvqSvBl8XqnVMwCzK63HwIvflbz99a1m+YJRMsScOMLK4u232b2v4R5ZOGdBE6000XT87UQbKWMy8gVpLCyTKLVRGCl+I6JzCVLMmKFe0BdpluR/0r8z9g7SOtHKz4OSfm/2heToem/vH8ysRrQWN?cssminify=yes" id="all-css-0-1" media="all" rel="stylesheet" type="text/css"/>
+<script src="https://s2.wp.com/_static/??-eJyF0FEKwjAMBuAL2RUZHb6IZ6k1jtQ1rU26oae3wkSEqhDIQz7In+glKSQ3lROw9rWuBfJtbZ3njf4FVMAxW4EuIL2wiyRA8rQpsgRgtiM0piEecQJVGHIFJHXNOTbcZySkGWH5yzxIsu6iMjDeoXUIp3fm7x9Y1SHst8bsejMMpvcPs7tzAg==" type="text/javascript"></script><style type="text/css"></style>
+<link href="https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1530132353h&amp;cssminify=yes" id="all-css-0-2" media="all" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link href="https://sophosnews.wordpress.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<link href="https://s1.wp.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+<meta content="WordPress.com" name="generator"/>
+<link href="https://wp.me/120rT" rel="shortlink"/>
+<meta content="website" property="og:type"/>
+<meta content="Naked Security" property="og:title"/>
+<meta content="Computer Security News, Advice and Research" property="og:description"/>
+<meta content="https://nakedsecurity.sophos.com/" property="og:url"/>
+<meta content="Naked Security" property="og:site_name"/>
+<meta content="https://sophosnews.files.wordpress.com/2019/07/turing-50.jpg?w=775" property="og:image"/>
+<meta content="https://sophosnews.files.wordpress.com/2019/07/turing-50.jpg?w=775" property="og:image:secure_url"/>
+<meta content="200" property="og:image:width"/>
+<meta content="200" property="og:image:height"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="@NakedSecurity" name="twitter:creator"/>
+<meta content="@NakedSecurity" name="twitter:site"/>
+<meta content="28552295016" property="fb:admins"/>
+<link href="https://sophosnews.wordpress.com/?openidserver=1" rel="openid.server"/>
+<link href="https://sophosnews.wordpress.com/" rel="openid.delegate"/>
+<link href="https://nakedsecurity.sophos.com/osd.xml" rel="search" title="Naked Security" type="application/opensearchdescription+xml"/>
+<link href="https://s1.wp.com/opensearch.xml" rel="search" title="WordPress.com" type="application/opensearchdescription+xml"/>
+<link href="https://sophosnews.wordpress.com/" rel="canonical"/> <style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+<meta content="Naked Security" name="application-name"/><meta content="width=device-width;height=device-height" name="msapplication-window"/><meta content="Computer Security News, Advice and Research" name="msapplication-tooltip"/><meta content="name=Subscribe;action-uri=https://nakedsecurity.sophos.com/feed/;icon-uri=https://secure.gravatar.com/blavatar/36cdcb4bed050e19e465471a6bbe63b0?s=16" name="msapplication-task"/><style id="syntaxhighlighteranchor" type="text/css"></style>
+<style type="text/css"></style></head>
+<body class="home blog mp6 customizer-styles-applied highlander-enabled highlander-light infinite-scroll">
+<div style="display: none">
+<svg>
+<symbol id="sophos" viewbox="0 0 132 24">
+<path d="m111.82 22.176h11.64c3.267 0 4.65-0.2 5.74-0.896 1.715-1.063 2.804-3.26 2.804-5.62 0-1.928-0.658-3.89-1.647-4.888-1.288-1.33-3.035-1.828-6.271-1.828h-3.527c-1.586 0-2.754-0.067-3.412-0.365-0.794-0.367-1.256-1.165-1.256-2.161 0-1.165 0.56-2.03 1.486-2.264 0.692-0.163 1.498-0.163 3.574-0.198h10.419v-3.956h-11.473c-2.574 0-3.727 0.099-4.718 0.466-2.279 0.796-3.828 3.257-3.828 6.083 0 1.93 0.76 3.727 2.079 4.89 1.155 0.996 2.872 1.462 5.51 1.462h4.697c1.057 0 1.915 0.132 2.376 0.398 0.893 0.433 1.418 1.328 1.418 2.36 0 0.864-0.395 1.597-1.087 2.027-0.561 0.369-1.517 0.534-3.268 0.534h-11.256zm-111.35 0h11.64c3.267 0 4.652-0.2 5.741-0.896 1.714-1.063 2.803-3.26 2.803-5.62 0-1.928-0.66-3.89-1.65-4.888-1.285-1.33-3.034-1.828-6.27-1.828h-3.527c-1.584 0-2.751-0.067-3.41-0.365-0.792-0.367-1.253-1.165-1.253-2.161 0-1.165 0.56-2.03 1.484-2.264 0.693-0.163 1.496-0.163 3.574-0.198h10.42v-3.956h-11.477c-2.573 0-3.727 0.099-4.715 0.466-2.278 0.796-3.83 3.257-3.83 6.083 0 1.93 0.762 3.727 2.08 4.89 1.155 0.996 2.871 1.462 5.51 1.462h4.696c1.057 0 1.913 0.132 2.377 0.398 0.888 0.433 1.416 1.328 1.416 2.36 0 0.864-0.394 1.597-1.089 2.027-0.558 0.369-1.517 0.534-3.264 0.534h-11.256v3.956zm94.05-16.18c-0.68 1.076-1.003 2.803-1.003 5.122 0 5.088 1.747 7.405 5.63 7.405 3.822 0 5.568-2.317 5.568-7.34 0-5.092-1.715-7.373-5.568-7.373-2.102 0-3.754 0.784-4.627 2.186zm13.174-2.511c1.329 1.761 2.072 4.63 2.072 7.992 0 3.816-1.197 6.948-3.334 8.677-1.619 1.304-4.078 2.022-6.995 2.022-4.142 0-7.41-1.372-9.092-3.817-1.263-1.793-1.88-4.176-1.88-7.08 0-4.172 1.133-7.339 3.27-9.035 1.682-1.37 4.339-2.122 7.383-2.122 3.85 0 6.925 1.209 8.576 3.363zm-22.018-3.068h-4.596v8.908h-8.319v-8.908h-4.597v21.759h4.597v-8.97h8.318v8.97h4.596v-21.759zm-28.61 10.277c1.23 0 1.941-0.163 2.427-0.62 0.581-0.49 0.938-1.533 0.938-2.74 0-1.436-0.58-2.478-1.584-2.838-0.356-0.13-0.94-0.197-1.684-0.197h-6.344v6.395zm-6.247 11.481h-4.598v-21.758h10.78c3.786 0 5.114 0.39 6.538 1.991 1.264 1.37 1.942 3.163 1.942 5.088 0 2.284-0.904 4.404-2.394 5.676-1.262 1.077-2.43 1.402-4.888 1.402h-7.38zm-22.589-16.179c-0.682 1.076-1.004 2.803-1.004 5.122 0 5.088 1.748 7.405 5.634 7.405 3.818 0 5.568-2.317 5.568-7.34 0-5.092-1.716-7.373-5.568-7.373-2.106 0-3.757 0.784-4.63 2.186zm13.174-2.511c1.328 1.761 2.073 4.63 2.073 7.992 0 3.816-1.2 6.948-3.335 8.677-1.618 1.304-4.079 2.022-6.993 2.022-4.144 0-7.413-1.372-9.096-3.817-1.264-1.793-1.878-4.176-1.878-7.08 0-4.172 1.133-7.339 3.272-9.035 1.681-1.37 4.337-2.122 7.38-2.122 3.851 0 6.93 1.209 8.578 3.363z"></path>
+</symbol>
+<symbol id="twitter" viewbox="0 0 24 24">
+<path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+</symbol>
+<symbol id="facebook" viewbox="0 0 24 24">
+<path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+</symbol>
+<symbol id="instagram" viewbox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+</symbol>
+<symbol id="linkedin" viewbox="0 0 24 24">
+<path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path>
+</symbol>
+<symbol id="rss" viewbox="0 0 24 24">
+<path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.71-7.118-15.758-15.839-15.82zm0-3.368c10.58.046 19.152 8.594 19.183 19.188h4.817c-.03-13.231-10.755-23.954-24-24v4.812z"></path>
+</symbol>
+<symbol id="reddit" viewbox="0 0 24 24">
+<path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.058c0 1.193.975 2.163 2.174 2.163 1.198 0 2.172-.97 2.172-2.163s-.975-2.164-2.172-2.164c-.92 0-1.704.574-2.021 1.379l-4.329-1.015c-.189-.046-.381.063-.44.249l-1.654 5.207c-2.838.034-5.409.798-7.3 2.025-.474-.438-1.103-.712-1.799-.712-1.465 0-2.656 1.187-2.656 2.646 0 .97.533 1.811 1.317 2.271-.052.282-.086.567-.086.857 0 3.911 4.808 7.093 10.719 7.093s10.72-3.182 10.72-7.093c0-.274-.029-.544-.075-.81.832-.447 1.405-1.312 1.405-2.318zm-17.224 1.816c0-.868.71-1.575 1.582-1.575.872 0 1.581.707 1.581 1.575s-.709 1.574-1.581 1.574-1.582-.706-1.582-1.574zm9.061 4.669c-.797.793-2.048 1.179-3.824 1.179l-.013-.003-.013.003c-1.777 0-3.028-.386-3.824-1.179-.145-.144-.145-.379 0-.523.145-.145.381-.145.526 0 .65.647 1.729.961 3.298.961l.013.003.013-.003c1.569 0 2.648-.315 3.298-.962.145-.145.381-.144.526 0 .145.145.145.379 0 .524zm-.189-3.095c-.872 0-1.581-.706-1.581-1.574 0-.868.709-1.575 1.581-1.575s1.581.707 1.581 1.575-.709 1.574-1.581 1.574z"></path>
+</symbol>
+</svg>
+</div>
+<div class="hfeed site" id="page">
+<a class="skip-link screen-reader-text" href="https://nakedsecurity.sophos.com/#content">Skip to content</a>
+<header class="site-header variation variation-3" id="masthead" role="banner">
+<div class="header-container">
+<div class="site-branding">
+<div class="site-title">
+<a href="https://nakedsecurity.sophos.com/" rel="home" title="Naked Security"><img src="https://s2.wp.com/wp-content/themes/vip/sophosnews-2015/img/naked-security-logo-white@2x.png"/></a>
+					by
+					<a href="https://www.sophos.com" title="sophos.com"><svg class="icon sophos" viewbox="0 0 132 24"><use xlink:href="#sophos"></use></svg></a>
+</div>
+</div>
+<nav class="main-navigation" id="site-navigation" role="navigation">
+<div class="container">
+<ul class="exit-links menu" id="menu-variation-two"><li class="products menu-item menu-item-type-custom menu-item-object-custom menu-item-436509" id="menu-item-436509"><a href="https://nakedsecurity.sophos.com/#">Products</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-436515" id="menu-item-436515"><a href="https://www.sophos.com/en-us/products/free-tools.aspx">Free Tools</a></li>
+<li class="search-toggle menu-item menu-item-type-custom menu-item-object-custom menu-item-436531" id="menu-item-436531"><a href="https://nakedsecurity.sophos.com/#">Search</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-436532" id="menu-item-436532"><a href="https://home.sophos.com/en-us.aspx">Free Sophos Home</a></li>
+</ul> </div>
+</nav>
+<div class="site-search-block">
+<form action="https://nakedsecurity.sophos.com/" class="search-form" method="get" role="search">
+<fieldset>
+<div class="field">
+<input class="search-field" name="s" placeholder="Search naked security..." type="search" value=""/>
+</div>
+<div class="submit">
+<button class="search-submit button" type="submit">Go</button>
+</div>
+</fieldset>
+</form>
+</div> </div>
+</header>
+<div class="responsive-flyout-panel small-12 column active" style="opacity: 1; display: none;">
+<div class="modal-filler"></div>
+<div class="productNavBox">
+<div class="productNavContainer">
+<div class="row prodRow">
+<div class="prodListBox column large-9">
+<div class="row margin-0 highlightProduct">
+<div class="column medium-6">
+<a href="https://www.sophos.com/products/next-gen-firewall.aspx"><img src="https://www.sophos.com/medialibrary/2F4785DE8C3F43ECBD699A18F332FEEB.ashx"/>
+<div class="menu-section-header">
+<div class="menu-section-title">XG Firewall</div>
+<div class="menu-section-subtitle">Next-Gen Firewall</div>
+</div>
+</a>
+</div>
+<div class="column medium-6">
+<a href="https://www.sophos.com/products/intercept-x.aspx"><img src="https://www.sophos.com/medialibrary/27111765D65A45D49A232925D2CE428B.ashx"/>
+<div class="menu-section-header">
+<div class="menu-section-title">Intercept X</div>
+<div class="menu-section-subtitle">Next-Gen Endpoint</div>
+</div>
+</a>
+</div>
+</div>
+<div class="productList">
+<ul>
+<li>
+<a href="https://www.sophos.com/en-us/products/cloud-optix.aspx"><img src="https://www.sophos.com/medialibrary/SophosNext/Images/Products/Icons/sophos-cloud-optix-icon.svg"/>Sophos Cloud Optix</a>
+</li>
+<li>
+<a href="https://www.sophos.com/products/sophos-central.aspx"><img src="https://www.sophos.com/medialibrary/08EA66123F1B4DDE8FE5C9B578A7FAA7.ashx"/>Sophos Central</a>
+</li>
+<li>
+<a href="https://www.sophos.com/products/mobile-control.aspx"><img src="https://www.sophos.com/medialibrary/678FE994855047739F50D6C411184FA6.ashx"/>Sophos Mobile</a>
+</li>
+<li>
+<a href="https://www.sophos.com/products/server-security.aspx"><img src="https://www.sophos.com/medialibrary/01B80E7D7CD54EF8AC2E51C9C6EC0236.ashx"/>Intercept X for Server</a>
+</li>
+<li>
+<a href="https://www.sophos.com/products/secure-wifi.aspx"><img src="https://www.sophos.com/medialibrary/BEBD9C41BB4E480498514B29B92A145A.ashx"/>Secure Wi-Fi</a>
+</li>
+<li>
+<a href="https://www.sophos.com/products/phish-threat.aspx"><img src="https://www.sophos.com/medialibrary/DC9D1A7BA3964B0C9DAF1F1E68806B5A.ashx"/>Phish Threat</a>
+</li>
+<li>
+<a href="https://www.sophos.com/products/safeguard-encryption.aspx"><img src="https://www.sophos.com/medialibrary/8F51F06B62814B108D3B2763FF018E37.ashx"/>SafeGuard Encryption</a>
+</li>
+<li>
+<a href="https://www.sophos.com/products/sophos-email.aspx"><img src="https://www.sophos.com/medialibrary/597ADA0AF01A4A12B2B27239D0F9992C.ashx"/>Secure Email</a>
+</li>
+<li>
+<a href="https://www.sophos.com/products/unified-threat-management.aspx"><img src="https://www.sophos.com/medialibrary/8CB72BF5E1AD41F7894CE5E42101B0F3.ashx"/>SG UTM</a>
+</li>
+<li>
+<a href="https://www.sophos.com/products/secure-web-gateway.aspx"><img src="https://www.sophos.com/medialibrary/C586E372694547A1B207A61D87246BA7.ashx"/>Secure Web Gateway</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="homeUserBox column large-3">
+<img src="https://www.sophos.com/medialibrary/3376DF5742A64AEE93FDB9DCA7291239.ashx"/>
+<div class="menu-section-title">For Home Users</div>
+<p>Sophos Home protects every Mac and PC in your home </p><a class="greenSmallMenuBtn" href="https://home.sophos.com/" target="_blank">Learn More</a>
+</div>
+</div>
+<div class="row blueRow">
+<div class="column large-3 medium-6">
+<a href="https://www.sophos.com/products/free-tools.aspx"><img src="https://www.sophos.com/medialibrary/A1FF440D2BB84511B8C94D771D44E207.ashx" width="19"/>Free Security Tools</a>
+</div>
+<div class="column large-3 medium-6">
+<a href="https://www.sophos.com/products/free-trials.aspx"><img src="https://www.sophos.com/medialibrary/FCD3410ED2C347808D9DB8AC12C62DBD.ashx" width="20"/>Free Trials</a>
+</div>
+<div class="column large-3 medium-6">
+<a href="https://www.sophos.com/products/demos.aspx"><img src="https://www.sophos.com/medialibrary/50985180E5F54C94917A2A6508E24287.ashx" width="18"/>Product Demos</a>
+</div>
+<!-- <div class="column large-3 medium-6">
+	                    <a href="javascript:fairfax.openLiveChatFromFlyoutLink();" class="flyout-live-chat-link"><img width="20" src="https://www.sophos.com/medialibrary/E24C5050837145F6A5C592E299BA2A0D.ashx">Live Sales Chat</a>
+	                </div> -->
+</div>
+</div>
+</div>
+</div>
+<script>
+
+	jQuery(document).ready( function () {
+		var productButton   = jQuery('nav .menu-item.products');
+		var modalBackground = jQuery('.modal-filler');
+		var flyoutMenu		= jQuery('.responsive-flyout-panel');
+		var Sophos			= Sophos || {};
+
+		Sophos.MenuTest = {};
+
+		Sophos.MenuTest.open = function () {
+				productButton.addClass('open');
+				flyoutMenu.show();
+				modalBackground.show();
+		};
+
+		Sophos.MenuTest.close = function () {
+			productButton.removeClass('open');
+			flyoutMenu.hide();
+			modalBackground.hide();
+		};
+
+		Sophos.MenuTest.toggle = function () {
+			if ( productButton.hasClass('open') ) {
+				Sophos.MenuTest.close();
+			} else {
+				Sophos.MenuTest.open();
+			}
+		};
+
+		productButton.click( Sophos.MenuTest.toggle );
+		modalBackground.click( Sophos.MenuTest.close );
+	});
+
+	</script>
+<section class="about-panel">
+<div class="container">
+<div class="panel-content">
+<div class="description">Award-winning computer security news</div>
+<ul class="block social about">
+<li class="twitter"><a href="https://twitter.com/nakedsecurity" rel="nofollow" title="Follow our team of security experts on Twitter"><svg class="icon twitter" style="height: 10px" viewbox="0 0 100 100"><use xlink:href="#twitter"></use></svg></a></li>
+<li class="facebook"><a href="https://www.facebook.com/SophosSecurity" rel="nofollow" title="Join over 250,000 people in our Facebook community"><svg class="icon facebook" style="height: 10px" viewbox="0 0 100 100"><use xlink:href="#facebook"></use></svg></a></li>
+<li class="instagram"><a href="https://www.instagram.com/nakedsecurity/" rel="nofollow" title="Follow Naked Security on Instagram"><svg class="icon instagram" style="height: 10px" viewbox="0 0 100 100"><use xlink:href="#instagram"></use></svg></a></li>
+<li class="linkedin"><a href="https://www.linkedin.com/company/5053/" rel="nofollow" title="Join the naked security discussion group on LinkedIn"><svg class="icon linkedin" style="height: 10px" viewbox="0 0 100 100"><use xlink:href="#linkedin"></use></svg></a></li>
+<li class="rss"><a href="https://nakedsecurity.sophos.com/feed" rel="nofollow" title="Subscribe to our RSS feed"><svg class="icon rss" style="height: 10px" viewbox="0 0 100 100"><use xlink:href="#rss"></use></svg></a></li>
+</ul>
+</div>
+</div>
+</section>
+<div class="site-content" id="content">
+<div class="content-container">
+</div>
+</div>
+<section class="hero-panel">
+<div class="container">
+<div class="panel-content">
+<article class="slide-article">
+<div class="slide-image">
+<div class="image-pointer"></div>
+<a href="https://nakedsecurity.sophos.com/2019/07/16/alan-turing-chosen-for-the-uks-new-50-note-a-cracking-result/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style='background-image: url("https://sophosnews.files.wordpress.com/2019/07/turing-50.jpg?w=780&amp;h=408&amp;crop=1"); min-height: 427px;'></div>
+</div></a>
+</div>
+<div class="slide-content">
+<div class="content-frame">
+<div class="meta-box">
+<div class="date-box"><span class="month">Jul</span><span class="day">16</span></div>
+<div class="author-box">
+<span class="by">by</span>
+		Paul Ducklin	
+	</div>
+<div class="comment-box">
+<span class="count">0</span>
+</div>
+</div>
+<h2 class="slide-title"><a href="https://nakedsecurity.sophos.com/2019/07/16/alan-turing-chosen-for-the-uks-new-50-note-a-cracking-result/" rel="bookmark">Alan Turing chosen for the UK’s new £50 note – a cracking result!</a></h2> <div class="slide-excerpt"><p>In case you were wondering, scientists really can change the world, and change it for the better, too.</p>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="cards-panel attach-top">
+<div class="container">
+<div class="panel-content">
+<div class="card-collection">
+<article class="card-article" id="post-449794">
+<div class="card-image">
+<div class="image-pointer"></div>
+<a href="https://nakedsecurity.sophos.com/2019/07/15/instagram-bug-could-have-allowed-anyone-to-take-over-your-account/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/ig-acct.jpg?w=412&amp;h=200&amp;crop=1);"></div>
+</div></a>
+</div>
+<div class="card-content">
+<div class="meta-box">
+<div class="date-box">
+<span class="month">Jul</span><span class="day">15</span>
+</div>
+<div class="author-box">
+<span class="by">by</span>
+		Paul Ducklin	
+	</div>
+<div class="comment-box">
+<span class="count">0</span>
+</div>
+</div>
+<h3 class="card-title"><a href="https://nakedsecurity.sophos.com/2019/07/15/instagram-bug-could-have-allowed-anyone-to-take-over-your-account/" rel="bookmark">Instagram bug could have allowed anyone to take over your account</a></h3> </div>
+</article>
+<article class="card-article" id="post-449690">
+<div class="card-image">
+<div class="image-pointer"></div>
+<a href="https://nakedsecurity.sophos.com/2019/07/15/researchers-read-data-from-air-gapped-machine-using-leds/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_1254816286-compressor.jpg?w=412&amp;h=200&amp;crop=1);"></div>
+</div></a>
+</div>
+<div class="card-content">
+<div class="meta-box">
+<div class="date-box">
+<span class="month">Jul</span><span class="day">15</span>
+</div>
+<div class="author-box">
+<span class="by">by</span>
+		Danny Bradbury	
+	</div>
+<div class="comment-box">
+<span class="count">7</span>
+</div>
+</div>
+<h3 class="card-title"><a href="https://nakedsecurity.sophos.com/2019/07/15/researchers-read-data-from-air-gapped-machine-using-leds/" rel="bookmark">Bust the password for an air-gapped machine – with its keyboard LEDs</a></h3> </div>
+</article>
+<article class="card-article" id="post-449660">
+<div class="card-image">
+<div class="image-pointer"></div>
+<a href="https://nakedsecurity.sophos.com/2019/07/15/apple-quietly-removes-zooms-hidden-web-server-from-macs/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/zoom.png?w=412&amp;h=200&amp;crop=1);"></div>
+</div></a>
+</div>
+<div class="card-content">
+<div class="meta-box">
+<div class="date-box">
+<span class="month">Jul</span><span class="day">15</span>
+</div>
+<div class="author-box">
+<span class="by">by</span>
+		John E Dunn	
+	</div>
+<div class="comment-box">
+<span class="count">2</span>
+</div>
+</div>
+<h3 class="card-title"><a href="https://nakedsecurity.sophos.com/2019/07/15/apple-quietly-removes-zooms-hidden-web-server-from-macs/" rel="bookmark">Apple quietly removes Zoom’s hidden web server from Macs</a></h3> </div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<div class="container" id="newsletter-signup"><section class="newsletter-panel contained"><div class="container"><div class="panel-content"><form action="" autocomplete="off" class="ready" id="newsletter" method="post" onsubmit="return false"><div class="newsletter-messaging"><h3 class="newsletter-title success-hide">Get the latest security news in your inbox.</h3><div class="state failure"><div class="icon"></div><p>Sorry, something happened and we could not sign you up. Please try again later.</p></div><div class="state success"><div class="icon"></div><h3>Congratulations, you have successfully signed up for our daily news!</h3><p>Check your inbox for our confirmation email.</p></div><div class="state bademail"><p>Sorry, we will not accept that email address. Please try a different address.</p></div><div class="state busy"><p>We're adding your address to our list...</p></div></div><div class="state ready controls"><div class="capture"><input class="email virgin" name="email" type="text" value="you@example.com"/><input class="button" name="submit" type="submit" value="Subscribe"/></div></div><button class="close-link">Don't show me this again</button></form></div></div></section></div>
+<section class="cards-panel zero-bottom">
+<div class="container">
+<div class="panel-content">
+<div class="card-collection">
+<article class="card-article" id="post-449652">
+<div class="card-image">
+<div class="image-pointer"></div>
+<a href="https://nakedsecurity.sophos.com/2019/07/15/fcc-underwhelmed-by-carriers-sluggish-robocall-efforts/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_1366193384-compressor.jpg?w=412&amp;h=200&amp;crop=1);"></div>
+</div></a>
+</div>
+<div class="card-content">
+<div class="meta-box">
+<div class="date-box">
+<span class="month">Jul</span><span class="day">15</span>
+</div>
+<div class="author-box">
+<span class="by">by</span>
+		Lisa Vaas	
+	</div>
+<div class="comment-box">
+<span class="count">0</span>
+</div>
+</div>
+<h3 class="card-title"><a href="https://nakedsecurity.sophos.com/2019/07/15/fcc-underwhelmed-by-carriers-sluggish-robocall-efforts/" rel="bookmark">FCC underwhelmed by carriers’ sluggish robocall efforts</a></h3> </div>
+</article>
+<article class="card-article" id="post-449659">
+<div class="card-image">
+<div class="image-pointer"></div>
+<a href="https://nakedsecurity.sophos.com/2019/07/15/ransomware-attackers-us-mayors-say-you-should-go-jump-in-a-lake/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_641443576.jpg?w=412&amp;h=200&amp;crop=1);"></div>
+</div></a>
+</div>
+<div class="card-content">
+<div class="meta-box">
+<div class="date-box">
+<span class="month">Jul</span><span class="day">15</span>
+</div>
+<div class="author-box">
+<span class="by">by</span>
+		Lisa Vaas	
+	</div>
+<div class="comment-box">
+<span class="count">5</span>
+</div>
+</div>
+<h3 class="card-title"><a href="https://nakedsecurity.sophos.com/2019/07/15/ransomware-attackers-us-mayors-say-you-should-go-jump-in-a-lake/" rel="bookmark">Ransomware attackers, US mayors say you should go jump in a lake</a></h3> </div>
+</article>
+<article class="card-article" id="post-449695">
+<div class="card-image">
+<div class="image-pointer"></div>
+<a href="https://nakedsecurity.sophos.com/2019/07/15/monday-review-the-hot-22-stories-of-the-week-34/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2016/10/monday-review_fb.jpg?w=412&amp;h=200&amp;crop=1);"></div>
+</div></a>
+</div>
+<div class="card-content">
+<div class="meta-box">
+<div class="date-box">
+<span class="month">Jul</span><span class="day">15</span>
+</div>
+<div class="author-box">
+<span class="by">by</span>
+		Naked Security writer	
+	</div>
+<div class="comment-box">
+<span class="count">0</span>
+</div>
+</div>
+<h3 class="card-title"><a href="https://nakedsecurity.sophos.com/2019/07/15/monday-review-the-hot-22-stories-of-the-week-34/" rel="bookmark">Monday review – the hot 22 stories of the week</a></h3> </div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="advice-video-panel">
+<div class="container">
+<div class="panel-content">
+</div>
+</div>
+</section>
+<section class="tools-panel">
+<div class="container">
+<div class="panel-content">
+<h2 class="block-title">Free tools</h2>
+<div class="tools-collection">
+<div class="tool-item">
+<a class="tool-link" href="https://home.sophos.com/en-us.aspx?cmp=701j0000001eLpnAAE">
+<img alt="Sophos Home" class="tool-image" height="70" src="https://s2.wp.com/wp-content/themes/vip/sophosnews-2015/img/free-tools/sophos-home@2x.png" width="100"/>
+<h4 class="tool-title">Sophos Home<br/>for Windows and Mac</h4>
+</a>
+</div>
+<div class="tool-item">
+<a class="tool-link" href="https://www.hitmanpro.com/en-us/hmp.aspx">
+<img alt="Hitman Pro" class="tool-image" height="70" src="https://s2.wp.com/wp-content/themes/vip/sophosnews-2015/img/free-tools/hitman-pro@2x.png" width="100"/>
+<h4 class="tool-title">Hitman Pro<br/> </h4>
+</a>
+</div>
+<div class="tool-item">
+<a class="tool-link" href="https://www.sophos.com/en-us/products/free-tools/sophos-mobile-security-free-edition.aspx">
+<img alt="Sophos Mobile Security for Android" class="tool-image" height="70" src="https://s2.wp.com/wp-content/themes/vip/sophosnews-2015/img/free-tools/mobile-security-android@2x.png" width="100"/>
+<h4 class="tool-title">Sophos Mobile Security<br/>for Android</h4>
+</a>
+</div>
+<div class="tool-item">
+<a class="tool-link" href="https://www.sophos.com/en-us/products/free-tools/virus-removal-tool.aspx">
+<img alt="Virus Removal Tool" class="tool-image" height="70" src="https://s2.wp.com/wp-content/themes/vip/sophosnews-2015/img/free-tools/virus-removal@2x.png" width="100"/>
+<h4 class="tool-title">Virus Removal Tool</h4>
+</a>
+</div>
+<div class="tool-item">
+<a class="tool-link" href="https://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-linux.aspx">
+<img alt="Antivirus for Linux" class="tool-image" height="70" src="https://s2.wp.com/wp-content/themes/vip/sophosnews-2015/img/free-tools/antivirus-linux@2x.png" width="100"/>
+<h4 class="tool-title">Antivirus<br/>for Linux</h4>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="stories-panel">
+<div class="container">
+<div class="panel-content">
+<div class="popular-stories-block">
+<h2 class="block-title">Popular stories</h2>
+<div class="stories-collection">
+<article class="story-snippet">
+<div class="story-image">
+<a href="https://nakedsecurity.sophos.com/2019/07/15/researchers-read-data-from-air-gapped-machine-using-leds/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_1254816286-compressor.jpg?w=150);"></div>
+</div></a>
+</div>
+<div class="story-content">
+<div class="story-meta">
+<div class="story-date">July 15, 2019</div>
+</div>
+<h3 class="story-title"><a href="https://nakedsecurity.sophos.com/2019/07/15/researchers-read-data-from-air-gapped-machine-using-leds/" rel="bookmark">Bust the password for an air-gapped machine – with its keyboard LEDs</a></h3> </div>
+</article> <article class="story-snippet">
+<div class="story-image">
+<a href="https://nakedsecurity.sophos.com/2019/07/15/apple-quietly-removes-zooms-hidden-web-server-from-macs/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/zoom.png?w=150);"></div>
+</div></a>
+</div>
+<div class="story-content">
+<div class="story-meta">
+<div class="story-date">July 15, 2019</div>
+</div>
+<h3 class="story-title"><a href="https://nakedsecurity.sophos.com/2019/07/15/apple-quietly-removes-zooms-hidden-web-server-from-macs/" rel="bookmark">Apple quietly removes Zoom’s hidden web server from Macs</a></h3> </div>
+</article> <article class="story-snippet">
+<div class="story-image">
+<a href="https://nakedsecurity.sophos.com/2019/07/13/in-memoriam-corby-corbato-mit-computer-science-pioneer-dies-at-93/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/corby.jpg?w=150);"></div>
+</div></a>
+</div>
+<div class="story-content">
+<div class="story-meta">
+<div class="story-date">July 13, 2019</div>
+</div>
+<h3 class="story-title"><a href="https://nakedsecurity.sophos.com/2019/07/13/in-memoriam-corby-corbato-mit-computer-science-pioneer-dies-at-93/" rel="bookmark">In memoriam – Corby Corbató, MIT computer science pioneer, dies at 93</a></h3> </div>
+</article> <article class="story-snippet">
+<div class="story-image">
+<a href="https://nakedsecurity.sophos.com/2019/07/12/it-pros-were-understaffed-under-resourced-and-under-pressure/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_1202221816-compressor.jpg?w=150);"></div>
+</div></a>
+</div>
+<div class="story-content">
+<div class="story-meta">
+<div class="story-date">July 12, 2019</div>
+</div>
+<h3 class="story-title"><a href="https://nakedsecurity.sophos.com/2019/07/12/it-pros-were-understaffed-under-resourced-and-under-pressure/" rel="bookmark">IT pros: we’re understaffed, under-resourced and under pressure</a></h3> </div>
+</article> <article class="story-snippet">
+<div class="story-image">
+<a href="https://nakedsecurity.sophos.com/2019/07/12/hey-google-why-are-your-contractors-listening-to-me/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_1211476570-compressor.jpg?w=150);"></div>
+</div></a>
+</div>
+<div class="story-content">
+<div class="story-meta">
+<div class="story-date">July 12, 2019</div>
+</div>
+<h3 class="story-title"><a href="https://nakedsecurity.sophos.com/2019/07/12/hey-google-why-are-your-contractors-listening-to-me/" rel="bookmark">Hey, Google, why are your contractors listening to me?</a></h3> </div>
+</article> <article class="story-snippet">
+<div class="story-image">
+<a href="https://nakedsecurity.sophos.com/2019/07/12/windows-7-users-upset-by-unwanted-patch-tuesday-telemetry/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_1370984336-compressor.jpg?w=150);"></div>
+</div></a>
+</div>
+<div class="story-content">
+<div class="story-meta">
+<div class="story-date">July 12, 2019</div>
+</div>
+<h3 class="story-title"><a href="https://nakedsecurity.sophos.com/2019/07/12/windows-7-users-upset-by-unwanted-patch-tuesday-telemetry/" rel="bookmark">Windows 7 users upset by unwanted Patch Tuesday telemetry</a></h3> </div>
+</article> <article class="story-snippet">
+<div class="story-image">
+<a href="https://nakedsecurity.sophos.com/2019/07/12/apple-watchs-walkie-talkie-app-goes-radio-silent-due-to-vulnerability/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_594406448-compressor.jpg?w=150);"></div>
+</div></a>
+</div>
+<div class="story-content">
+<div class="story-meta">
+<div class="story-date">July 12, 2019</div>
+</div>
+<h3 class="story-title"><a href="https://nakedsecurity.sophos.com/2019/07/12/apple-watchs-walkie-talkie-app-goes-radio-silent-due-to-vulnerability/" rel="bookmark">Apple Watch’s Walkie-Talkie app goes radio silent due to vulnerability</a></h3> </div>
+</article> <article class="story-snippet">
+<div class="story-image">
+<a href="https://nakedsecurity.sophos.com/2019/07/11/facial-recognition-surveillance-must-be-banned-says-fight-for-the-future/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_1108927796-compressor.jpg?w=150);"></div>
+</div></a>
+</div>
+<div class="story-content">
+<div class="story-meta">
+<div class="story-date">July 11, 2019</div>
+</div>
+<h3 class="story-title"><a href="https://nakedsecurity.sophos.com/2019/07/11/facial-recognition-surveillance-must-be-banned-says-fight-for-the-future/" rel="bookmark">Facial recognition surveillance must be banned, says Fight for the Future</a></h3> </div>
+</article> <article class="story-snippet">
+<div class="story-image">
+<a href="https://nakedsecurity.sophos.com/2019/07/11/cybersecurity-attack-lands-ship-in-hot-water/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_287422769.jpg?w=150);"></div>
+</div></a>
+</div>
+<div class="story-content">
+<div class="story-meta">
+<div class="story-date">July 11, 2019</div>
+</div>
+<h3 class="story-title"><a href="https://nakedsecurity.sophos.com/2019/07/11/cybersecurity-attack-lands-ship-in-hot-water/" rel="bookmark">Cyberattack lands ship in hot water</a></h3> </div>
+</article> <article class="story-snippet">
+<div class="story-image">
+<a href="https://nakedsecurity.sophos.com/2019/07/11/gdpr-superpowers-lead-to-whopper-ico-fines-for-ba-marriott/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_794662648-compressor.jpg?w=150);"></div>
+</div></a>
+</div>
+<div class="story-content">
+<div class="story-meta">
+<div class="story-date">July 11, 2019</div>
+</div>
+<h3 class="story-title"><a href="https://nakedsecurity.sophos.com/2019/07/11/gdpr-superpowers-lead-to-whopper-ico-fines-for-ba-marriott/" rel="bookmark">GDPR superpowers lead to whopper ICO fines for BA, Marriott</a></h3> </div>
+</article> </div>
+</div>
+<div class="sophos-news-block">
+<h2 class="block-title">News from Sophos</h2>
+<div class="feed-collection">
+<article class="feed-article"><div class="feed-content"><h4 class="feed-title"><a href="https://news.sophos.com/en-us/2019/07/12/5-ways-to-avoid-a-gdpr-fine/" rel="bookmark">5 ways to avoid a GDPR fine</a></h4></div></article> <article class="feed-article"><div class="feed-content"><h4 class="feed-title"><a href="https://news.sophos.com/en-us/2019/07/11/oto-gonderici-excel-formula-injections-target-turkish-victims/" rel="bookmark">‘Oto Gonderici’ Excel formula injections target Turkish victims</a></h4></div></article> <article class="feed-article"><div class="feed-content"><h4 class="feed-title"><a href="https://news.sophos.com/en-us/2019/07/09/16-critical-vulnerabilities-some-being-exploited-fixed-in-july-2019-windows-updates/" rel="bookmark">16 critical vulnerabilities, some being exploited, fixed in July, 2019 Windows updates</a></h4></div></article> <article class="feed-article"><div class="feed-content"><h4 class="feed-title"><a href="https://news.sophos.com/en-us/2019/07/09/cve-2019-0888-use-after-free-in-windows-activex-data-objects-ado/" rel="bookmark">CVE-2019-0888: Use-After-Free in Windows ActiveX Data Objects (ADO)</a></h4></div></article> <article class="feed-article"><div class="feed-content"><h4 class="feed-title"><a href="https://news.sophos.com/en-us/2019/07/04/7-best-practices-for-securing-the-public-cloud/" rel="bookmark">7 best practices for securing the public cloud</a></h4></div></article> <article class="feed-article"><div class="feed-content"><h4 class="feed-title"><a href="https://news.sophos.com/en-us/2019/07/03/how-intercept-x-advanced-can-help-you-avoid-becoming-the-next-ransomware-victim/" rel="bookmark">How Intercept X Advanced can help you avoid becoming a ransomware victim</a></h4></div></article> <article class="feed-article"><div class="feed-content"><h4 class="feed-title"><a href="https://news.sophos.com/en-us/2019/07/01/more-fantastic-test-results-for-sophos-intercept-x/" rel="bookmark">More fantastic test results for Sophos Intercept X!</a></h4></div></article> </div>
+<a class="visit-sophos" href="https://news.sophos.com">SOPHOS</a>
+</div>
+</div>
+</div>
+</section>
+<section class="cards-panel">
+<div class="container">
+<div class="panel-content">
+<div class="content-wrapper">
+<div class="clear" data-href="https://nakedsecurity.sophos.com/" id="content-page-1"><div class="card-collection">
+<article class="card-article" id="post-449666">
+<div class="card-image">
+<div class="image-pointer"></div>
+<a href="https://nakedsecurity.sophos.com/2019/07/13/in-memoriam-corby-corbato-mit-computer-science-pioneer-dies-at-93/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/corby.jpg?w=412&amp;h=200&amp;crop=1);"></div>
+</div></a>
+</div>
+<div class="card-content">
+<div class="meta-box">
+<div class="date-box">
+<span class="month">Jul</span><span class="day">13</span>
+</div>
+<div class="author-box">
+<span class="by">by</span>
+		Paul Ducklin	
+	</div>
+<div class="comment-box">
+<span class="count">5</span>
+</div>
+</div>
+<h3 class="card-title"><a href="https://nakedsecurity.sophos.com/2019/07/13/in-memoriam-corby-corbato-mit-computer-science-pioneer-dies-at-93/" rel="bookmark">In memoriam – Corby Corbató, MIT computer science pioneer, dies at 93</a></h3> </div>
+</article>
+<article class="card-article" id="post-449557">
+<div class="card-image">
+<div class="image-pointer"></div>
+<a href="https://nakedsecurity.sophos.com/2019/07/12/it-pros-were-understaffed-under-resourced-and-under-pressure/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_1202221816-compressor.jpg?w=412&amp;h=200&amp;crop=1);"></div>
+</div></a>
+</div>
+<div class="card-content">
+<div class="meta-box">
+<div class="date-box">
+<span class="month">Jul</span><span class="day">12</span>
+</div>
+<div class="author-box">
+<span class="by">by</span>
+		Danny Bradbury	
+	</div>
+<div class="comment-box">
+<span class="count">25</span>
+</div>
+</div>
+<h3 class="card-title"><a href="https://nakedsecurity.sophos.com/2019/07/12/it-pros-were-understaffed-under-resourced-and-under-pressure/" rel="bookmark">IT pros: we’re understaffed, under-resourced and under pressure</a></h3> </div>
+</article>
+<article class="card-article" id="post-449540">
+<div class="card-image">
+<div class="image-pointer"></div>
+<a href="https://nakedsecurity.sophos.com/2019/07/12/hey-google-why-are-your-contractors-listening-to-me/"><div class="dynamic-image-frame">
+<div class="dynamic-image" style="background-image: url(https://sophosnews.files.wordpress.com/2019/07/shutterstock_1211476570-compressor.jpg?w=412&amp;h=200&amp;crop=1);"></div>
+</div></a>
+</div>
+<div class="card-content">
+<div class="meta-box">
+<div class="date-box">
+<span class="month">Jul</span><span class="day">12</span>
+</div>
+<div class="author-box">
+<span class="by">by</span>
+		Lisa Vaas	
+	</div>
+<div class="comment-box">
+<span class="count">9</span>
+</div>
+</div>
+<h3 class="card-title"><a href="https://nakedsecurity.sophos.com/2019/07/12/hey-google-why-are-your-contractors-listening-to-me/" rel="bookmark">Hey, Google, why are your contractors listening to me?</a></h3> </div>
+</article>
+</div></div>
+<div class="clear" data-href="https://nakedsecurity.sophos.com/page/2/" id="content-page-2"></div></div><div id="spinner" style="position: relative; display: none;"><div class="spinner" role="progressbar" style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 105px;"><div style="position: absolute; top: 0px; transform: translate3d(0px, 0px, 0px); opacity: 0.25; animation: 0.333333s linear 0s infinite normal none running opacity-25-25-0-10;"><div style="position: absolute; width: 1.5px; height: 0.5px; background: rgb(113, 168, 101); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(0deg) translate(1.5px, 0px); border-radius: 0px;"></div></div><div style="position: absolute; top: 0px; transform: translate3d(0px, 0px, 0px); opacity: 0.25; animation: 0.333333s linear 0s infinite normal none running opacity-25-25-1-10;"><div style="position: absolute; width: 1.5px; height: 0.5px; background: rgb(113, 168, 101); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(36deg) translate(1.5px, 0px); border-radius: 0px;"></div></div><div style="position: absolute; top: 0px; transform: translate3d(0px, 0px, 0px); opacity: 0.25; animation: 0.333333s linear 0s infinite normal none running opacity-25-25-2-10;"><div style="position: absolute; width: 1.5px; height: 0.5px; background: rgb(113, 168, 101); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(72deg) translate(1.5px, 0px); border-radius: 0px;"></div></div><div style="position: absolute; top: 0px; transform: translate3d(0px, 0px, 0px); opacity: 0.25; animation: 0.333333s linear 0s infinite normal none running opacity-25-25-3-10;"><div style="position: absolute; width: 1.5px; height: 0.5px; background: rgb(113, 168, 101); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(108deg) translate(1.5px, 0px); border-radius: 0px;"></div></div><div style="position: absolute; top: 0px; transform: translate3d(0px, 0px, 0px); opacity: 0.25; animation: 0.333333s linear 0s infinite normal none running opacity-25-25-4-10;"><div style="position: absolute; width: 1.5px; height: 0.5px; background: rgb(113, 168, 101); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(144deg) translate(1.5px, 0px); border-radius: 0px;"></div></div><div style="position: absolute; top: 0px; transform: translate3d(0px, 0px, 0px); opacity: 0.25; animation: 0.333333s linear 0s infinite normal none running opacity-25-25-5-10;"><div style="position: absolute; width: 1.5px; height: 0.5px; background: rgb(113, 168, 101); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(180deg) translate(1.5px, 0px); border-radius: 0px;"></div></div><div style="position: absolute; top: 0px; transform: translate3d(0px, 0px, 0px); opacity: 0.25; animation: 0.333333s linear 0s infinite normal none running opacity-25-25-6-10;"><div style="position: absolute; width: 1.5px; height: 0.5px; background: rgb(113, 168, 101); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(216deg) translate(1.5px, 0px); border-radius: 0px;"></div></div><div style="position: absolute; top: 0px; transform: translate3d(0px, 0px, 0px); opacity: 0.25; animation: 0.333333s linear 0s infinite normal none running opacity-25-25-7-10;"><div style="position: absolute; width: 1.5px; height: 0.5px; background: rgb(113, 168, 101); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(252deg) translate(1.5px, 0px); border-radius: 0px;"></div></div><div style="position: absolute; top: 0px; transform: translate3d(0px, 0px, 0px); opacity: 0.25; animation: 0.333333s linear 0s infinite normal none running opacity-25-25-8-10;"><div style="position: absolute; width: 1.5px; height: 0.5px; background: rgb(113, 168, 101); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(288deg) translate(1.5px, 0px); border-radius: 0px;"></div></div><div style="position: absolute; top: 0px; transform: translate3d(0px, 0px, 0px); opacity: 0.25; animation: 0.333333s linear 0s infinite normal none running opacity-25-25-9-10;"><div style="position: absolute; width: 1.5px; height: 0.5px; background: rgb(113, 168, 101); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(324deg) translate(1.5px, 0px); border-radius: 0px;"></div></div></div></div>
+</div>
+</div>
+</section>
+<div class="load-more">
+<div class="container">
+<a class="button" href="https://nakedsecurity.sophos.com/page/2/">Load more articles</a> </div>
+</div>
+<section class="banner-panel">
+<div class="container">
+<div class="panel-content">
+</div>
+</div>
+</section>
+<footer class="site-footer" id="colophon" role="contentinfo">
+<div class="footer-container">
+<a class="js-collapse-footer" href="https://nakedsecurity.sophos.com/#"><svg class="block icon sophos" style="height: 20px" viewbox="0 0 132 24"><use xlink:href="#sophos"></use></svg></a>
+<div class="blocks" id="collapseFooter">
+<div class="sophos block">
+<ul class="primary menu" id="menu-footer-primary"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306737" id="menu-item-306737"><a href="https://nakedsecurity.sophos.com/about/">About Naked Security</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-306754" id="menu-item-306754"><a href="https://www.sophos.com/en-us/company.aspx">About Sophos</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306747" id="menu-item-306747"><a href="https://nakedsecurity.sophos.com/send-us-a-tip/">Send us a tip</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-323171" id="menu-item-323171"><a href="https://nakedsecurity.sophos.com/cookies-and-scripts/">Cookies</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-323170" id="menu-item-323170"><a href="https://www.sophos.com/en-us/legal/sophos-group-privacy-policy.aspx">Privacy</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-323169" id="menu-item-323169"><a href="https://www.sophos.com/en-us/legal.aspx">Legal</a></li>
+</ul> </div>
+<div class="news block">
+<ul class="small menu" id="menu-products-column-one"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-306998" id="menu-item-306998"><a href="https://www.sophos.com/en-us/products/intercept-x.aspx">Intercept X</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-440801" id="menu-item-440801"><a href="https://www.sophos.com/en-us/products/server-security.aspx">Intercept X for Server</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-440802" id="menu-item-440802"><a href="https://www.sophos.com/en-us/products/safeguard-encryption.aspx">SafeGuard Encryption</a></li>
+</ul> </div>
+<div class="products block">
+<ul class="small menu" id="menu-products-column-two"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-440803" id="menu-item-440803"><a href="https://www.sophos.com/en-us/products/next-gen-firewall.aspx">XG Firewall</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-440804" id="menu-item-440804"><a href="https://www.sophos.com/en-us/products/secure-wifi.aspx">Sophos Wireless</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-440805" id="menu-item-440805"><a href="https://www.sophos.com/en-us/products/sophos-email.aspx">Sophos Email</a></li>
+</ul> </div>
+<div class="threats block">
+<ul class="small menu" id="menu-server-protection"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-448404" id="menu-item-448404"><a href="https://www.sophos.com/en-us/products/cloud-optix.aspx">Cloud Optix</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-440806" id="menu-item-440806"><a href="https://www.sophos.com/en-us/products/mobile-control.aspx">Sophos Mobile</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-440807" id="menu-item-440807"><a href="https://www.sophos.com/en-us/products/phish-threat.aspx">Phish Threat</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-440808" id="menu-item-440808"><a href="https://www.sophos.com/en-us/products/choose-firewall.aspx">UTM</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-440809" id="menu-item-440809"><a href="https://www.sophos.com/en-us/products/secure-web-gateway.aspx">Secure Web Gateway</a></li>
+</ul> </div>
+</div>
+<ul class="block social footer">
+<li class="twitter"><a href="https://twitter.com/NakedSecurity" rel="nofollow" title="Follow our team of security experts on Twitter"><svg class="icon twitter" style="height: 14px" viewbox="0 0 100 100"><use xlink:href="#twitter"></use></svg></a></li>
+<li class="facebook"><a href="https://www.facebook.com/SophosSecurity" rel="nofollow" title="Join over 250,000 people in our Facebook community"><svg class="icon facebook" style="height: 14px" viewbox="0 0 100 100"><use xlink:href="#facebook"></use></svg></a></li>
+<li class="instagram"><a href="https://www.instagram.com/nakedsecurity/" rel="nofollow" title="Follow Naked Security on Instagram"><svg class="icon instagram" style="height: 14px" viewbox="0 0 100 100"><use xlink:href="#instagram"></use></svg></a></li>
+<li class="linkedin"><a href="https://www.linkedin.com/company/5053/" rel="nofollow" title="Join the naked security discussion group on LinkedIn"><svg class="icon linkedin" style="height: 14px" viewbox="0 0 100 100"><use xlink:href="#linkedin"></use></svg></a></li>
+<li class="rss"><a href="https://nakedsecurity.sophos.com/feed" rel="nofollow" title="Subscribe to our RSS feed"><svg class="icon rss" style="height: 14px" viewbox="0 0 100 100"><use xlink:href="#rss"></use></svg></a></li>
+</ul>
+<div class="vip-powered-wpcom">
+<span class="copyright">© 1997 - 2019 Sophos Ltd.</span>
+					All rights reserved.
+					Powered by <a class="powered-by-wpcom" href="https://wpvip.com/?utm_source=vip_powered_wpcom&amp;utm_medium=web&amp;utm_campaign=VIP%20Footer%20Credit&amp;utm_term=nakedsecurity.sophos.com" rel="generator nofollow">WordPress.com VIP</a> </div>
+</div>
+<script type="text/javascript">
+			window.cookieconsent_options = {
+				"message":"This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies.",
+				"dismiss":"Got it!",
+				"learnMore":"Learn More",
+				"link":"/cookies-and-scripts",
+				"theme":"https://s2.wp.com/wp-content/themes/vip/sophosnews-2015/css/sophos.css"};
+		</script>
+</footer>
+</div>
+<div class="mfp-hide" id="survey-wrapper"><div class="pd-embed" data-settings="" id="pd_1499706777"></div></div>
+<script type="text/javascript">
+		//<![CDATA[
+		var infiniteScroll = JSON.parse( decodeURIComponent( '%7B%22settings%22%3A%7B%22id%22%3A%22main%22%2C%22ajaxurl%22%3A%22https%3A%5C%2F%5C%2Fnakedsecurity.sophos.com%5C%2F%3Finfinity%3Dscrolling%22%2C%22type%22%3A%22click%22%2C%22wrapper%22%3Atrue%2C%22wrapper_class%22%3A%22infinite-wrap%22%2C%22footer%22%3A%22page%22%2C%22click_handle%22%3A%221%22%2C%22text%22%3A%22Older%20posts%22%2C%22totop%22%3A%22Scroll%20back%20to%20top%22%2C%22currentday%22%3A%2212.07.19%22%2C%22order%22%3A%22DESC%22%2C%22scripts%22%3A%5B%5D%2C%22styles%22%3A%5B%5D%2C%22google_analytics%22%3Afalse%2C%22offset%22%3A0%2C%22history%22%3A%7B%22host%22%3A%22nakedsecurity.sophos.com%22%2C%22path%22%3A%22%5C%2Fpage%5C%2F%25d%5C%2F%22%2C%22use_trailing_slashes%22%3Atrue%2C%22parameters%22%3A%22%22%7D%2C%22query_args%22%3A%7B%22error%22%3A%22%22%2C%22m%22%3A%22%22%2C%22p%22%3A0%2C%22post_parent%22%3A%22%22%2C%22subpost%22%3A%22%22%2C%22subpost_id%22%3A%22%22%2C%22attachment%22%3A%22%22%2C%22attachment_id%22%3A0%2C%22name%22%3A%22%22%2C%22pagename%22%3A%22%22%2C%22page_id%22%3A0%2C%22second%22%3A%22%22%2C%22minute%22%3A%22%22%2C%22hour%22%3A%22%22%2C%22day%22%3A0%2C%22monthnum%22%3A0%2C%22year%22%3A0%2C%22w%22%3A0%2C%22category_name%22%3A%22%22%2C%22tag%22%3A%22%22%2C%22cat%22%3A%22%22%2C%22tag_id%22%3A%22%22%2C%22author%22%3A%22%22%2C%22author_name%22%3A%22%22%2C%22feed%22%3A%22%22%2C%22tb%22%3A%22%22%2C%22paged%22%3A0%2C%22meta_key%22%3A%22%22%2C%22meta_value%22%3A%22%22%2C%22preview%22%3A%22%22%2C%22s%22%3A%22%22%2C%22sentence%22%3A%22%22%2C%22title%22%3A%22%22%2C%22fields%22%3A%22%22%2C%22menu_order%22%3A%22%22%2C%22embed%22%3A%22%22%2C%22category__in%22%3A%5B%5D%2C%22category__not_in%22%3A%5B%5D%2C%22category__and%22%3A%5B%5D%2C%22post__in%22%3A%5B%5D%2C%22post__not_in%22%3A%5B%5D%2C%22post_name__in%22%3A%5B%5D%2C%22tag__in%22%3A%5B%5D%2C%22tag__not_in%22%3A%5B%5D%2C%22tag__and%22%3A%5B%5D%2C%22tag_slug__in%22%3A%5B%5D%2C%22tag_slug__and%22%3A%5B%5D%2C%22post_parent__in%22%3A%5B%5D%2C%22post_parent__not_in%22%3A%5B%5D%2C%22author__in%22%3A%5B%5D%2C%22author__not_in%22%3A%5B%5D%2C%22posts_per_page%22%3A10%2C%22ignore_sticky_posts%22%3Afalse%2C%22suppress_filters%22%3Afalse%2C%22cache_results%22%3Afalse%2C%22update_post_term_cache%22%3Atrue%2C%22lazy_load_term_meta%22%3Atrue%2C%22update_post_meta_cache%22%3Atrue%2C%22post_type%22%3A%22%22%2C%22nopaging%22%3Afalse%2C%22comments_per_page%22%3A%2250%22%2C%22no_found_rows%22%3Afalse%2C%22order%22%3A%22DESC%22%7D%2C%22last_post_date%22%3A%222019-07-12%2011%3A49%3A03%22%2C%22stats%22%3A%22blog%3D15254721%26v%3Dwpcom%26tz%3D1%26user_id%3D0%26subd%3Dsophosnews%26x_pagetype%3Dinfinite-click%22%7D%7D' ) );
+		//]]>
+		</script>
+<div style="display:none">
+</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/sophosnews.wordpress.com\/public.api\/connect\/?action=request&domain=nakedsecurity.sophos.com","logoutURL":"https:\/\/sophosnews.wordpress.com\/wp-login.php?action=logout&_wpnonce=10ca630944","homeURL":"https:\/\/nakedsecurity.sophos.com\/","postID":"449835","gravDefault":"mystery","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script src="https://s2.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1551752381j" type="text/javascript"></script>
+<div id="carousel-reblog-box">
+<form action="#" name="carousel-reblog">
+<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+<select id="carousel-reblog-to-blog-id" name="carousel-reblog-to-blog-id">
+</select>
+<div class="submit">
+<span class="canceltext"><a class="cancel" href="https://nakedsecurity.sophos.com/#">Cancel</a></span>
+<input class="button" id="carousel-reblog-submit" name="carousel-reblog-submit" type="submit" value="Reblog Post"/>
+<input id="carousel-reblog-blog-id" type="hidden" value="15254721"/>
+<input id="carousel-reblog-blog-url" type="hidden" value="https://nakedsecurity.sophos.com"/>
+<input id="carousel-reblog-blog-title" type="hidden" value="Naked Security"/>
+<input id="carousel-reblog-post-url" type="hidden" value=""/>
+<input id="carousel-reblog-post-title" type="hidden" value=""/>
+</div>
+<input id="_wpnonce" name="_wpnonce" type="hidden" value="419c23ac5c"/><input name="_wp_http_referer" type="hidden" value="/"/> </form>
+<div class="arrow"></div>
+</div>
+<link href="https://s1.wp.com/_static/??/wp-content/mu-plugins/carousel/jetpack-carousel.css,/wp-content/mu-plugins/tiled-gallery/tiled-gallery.css?m=1561358421j&amp;cssminify=yes" id="all-css-0-3" media="all" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var PG8Data = {"startPage":"1","maxPages":"1315","nextLink":"https:\/\/nakedsecurity.sophos.com\/page\/2\/"};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var Sophos = {"ajaxurl":"https:\/\/nakedsecurity.sophos.com\/wp-admin\/admin-ajax.php","nonce":"b7138c2d56"};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcomVipAnalytics = {"is_404":"0","is_home":"1","is_single":"0","is_front_page":"1","is_archive":"0","percentToTrack":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/nakedsecurity.sophos.com\/wp-admin\/admin-ajax.php","nonce":"357d01ed8a","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"0","login_url":"https:\/\/sophosnews.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fnakedsecurity.sophos.com%2F2019%2F07%2F12%2Fhey-google-why-are-your-contractors-listening-to-me%2F","blog_id":"15254721","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=15254721&v=wpcom&tz=1&user_id=0&subd=sophosnews","is_public":"1","reblog_enabled":""};
+/* ]]> */
+</script>
+<script src="https://s1.wp.com/_static/??-eJyVjttuwjAMhl9omWm1Cm4Qz5Kl3uqQ02ynjLdfGAchkCpx59P3+YdDMS4nxaTgBUacyWH5fffyBnerWE0J9ZuSQKA9CvxUrDjZNAbkhWNKX5RIj7fi8VYnjE03UwHJZcqS8CCmX3XDKc5F8xrkMuNCpN6cOP+PG5tsOCq5pxd3gB0jJfNpGaIVRW6VyTMy09hC3GYvGpSt2z+9vRJzc2ewIqhyztr6wihLQZ3lXAUDeNTS7OY6aMwubrthWH90m82q93/FKbr4" type="text/javascript"></script>
+<script src="https://platform.twitter.com/widgets.js?ver=20111117" type="text/javascript"></script>
+<script src="https://s0.wp.com/_static/??-eJyVy0sOQEAMANALqcZnluIsmGbSUTUZRdyerZVYvsXDM8G0qpEaLjsk2QPrhnayGWUYZZjmkbOHxIRKB2VSzxrKuBX456bvx0IewiBC+XrrWf3SVc61deOquo03DQdDyw==" type="text/javascript"></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script type="text/javascript">
+			jQuery.extend( infiniteScroll.settings.scripts, ["jquery-core","jquery-migrate","jquery","postmessage","mobile-useragent-info","jquery_inview","jetpack_resize","spin","jquery.spin","jquery.autoresize","highlander-comments","devicepx","jetpack_likes_queuehandler","the-neverending-homepage","child-js-plugins","child-js-core","wpcom-vip-analytics","wpcom-masterbar-js","wpcom-masterbar-tracks-js","videopress","jetpack-carousel","twitter-widgets","twitter-widgets-infinity","twitter-widgets-pending","tiled-gallery"] );
+			jQuery.extend( infiniteScroll.settings.styles, ["wpcom-smileys","jetpack_likes","the-neverending-homepage","wp-block-library","wpcom-core-compat-playlist-styles","wpcom-text-widget-styles","mp6hacks","wpcom-bbpress2-staff-css","sophos-stylesheet","jetpack_facebook_likebox","noticons","geo-location-flair","reblogging","h4-global","highlander-comments","highlander-comments-ie7","jetpack-carousel","tiled-gallery"] );
+		</script><script async="" defer="" src="//stats.wp.com/w.js?60" type="text/javascript"></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'15254721','blog_tz':'1','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'15254721','v':'wpcom','tz':'1','user_id':'0','subd':'sophosnews'}]);
+function st_vt() {var x=document.createElement("img");x.src="https://pixel.wp.com/g.gif?blog=15254721&v=wpcomvt&tz=1&user_id=0&subd=sophosnews&rand="+Math.random();}
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1BNmNJfGhxNCVxUDExYmtib2E/SzdEJm0lUEtbdFU0fFk4cHZvcUFrZT90Tn4yQm1+R3NyNTcwcit4OCtUVUJKW1NvLDRkalEreGI0NnZuTVltZDV2ZHZHbVs/RU5ueSZlK28wYVozQ1poN0smQ3QlVWwwVHNoLE4uTlFNfGUvaTEtSlQxOT9WJi8/R35OdVoyLEdVZyU2VS81WX5hOUg1fDZbSVRIaS5zTFFifG13X3c3WnFtYXNGWlhJP2R1YnQ4eE9XOWpqYStqUGZiOV1Vbng='}]);
+_stq.push([ 'clickTrackerInit', '15254721', '0' ]);
+	</script>
+<noscript><img alt="" src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden"/></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+<!--
+	generated 72 seconds ago
+	generated in 0.211 seconds
+	served from batcache in 0.001 seconds
+	expires in 228 seconds
+-->
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/widget_iframe.ed954039b4da87657c2de914fe37d022.html?origin=https%3A%2F%2Fnakedsecurity.sophos.com" style="display: none;" title="Twitter settings iframe"></iframe><img alt=":)" id="wpstats" src="https://pixel.wp.com/g.gif?blog=15254721&amp;v=wpcom&amp;tz=1&amp;user_id=0&amp;subd=sophosnews&amp;host=nakedsecurity.sophos.com&amp;ref=&amp;fcp=6572&amp;rand=0.3397776119717837"/></body></html>

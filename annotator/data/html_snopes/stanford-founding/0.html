@@ -1,0 +1,782 @@
+<html class="2no-js no-jss" dir="ltr" lang="en" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#"><head itemscope="" itemtype="http://schema.org/WebSite">
+<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="//api.survicate.com/assets/survicate.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TK7H6Z"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TK7H6Z');</script>
+<meta charset="utf-8"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content="True" name="HandheldFriendly"/>
+<meta content="320" name="MobileOptimized"/>
+<meta content="width=device-width, minimum-scale=1, initial-scale=1" name="viewport"/>
+<link href="https://www.harvard.edu/sites/all/themes/hedu2015/assets/css/fonts.min.css" rel="stylesheet"/><link href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/charles-william-eliot" itemprop="url" rel="canonical"/>
+<link href="https://www.harvard.edu/sites/all/themes/hedu2015/assets/img/favicon.ico?v=2018" rel="shortcut icon" type="image/ico"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<link href="https://www.harvard.edu/sites/all/themes/hedu2015/assets/img/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed"/>
+<meta content="/sites/all/themes/hedu2015/assets/img/apple-touch-icon-144x144.png" name="msapplication-TileImage"/>
+<meta content="#222222" name="msapplication-TileColor"/>
+<title itemprop="name">Charles William Eliot | Harvard University</title>
+<meta content="index,follow,NOODP" name="robots"/>
+<meta content="Harvard University is devoted to excellence in teaching, learning, and research, and to developing leaders in many disciplines who make a difference globally. Harvard University is made up of 11 principal academic units." name="description"/>
+<meta content="Harvard University, College, Education, Innovation, Teaching, Learning" name="keywords"/>
+<meta content="60491" name="node_id"/>
+<meta content="593072576,599799799,662979311,613602264" property="fb:admins"/>
+<meta content="105930651606" property="fb:page_id"/>
+<meta content="135898969862440" property="fb:app_id"/>
+<meta content="1491443782" property="twitter:account_id"/>
+<meta content="@harvard" name="twitter:site"/>
+<meta content="@harvard" name="twitter:creator"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Harvard University" property="og:site_name"/>
+<meta content="university" property="og:type"/>
+<meta content="Charles William Eliot | Harvard University" property="og:title"/>
+<meta content="http://www.harvard.edu/about-harvard/harvard-glance/history-presidency/charles-william-eliot" property="og:url"/>
+<meta content="Harvard University is devoted to excellence in teaching, learning, and research, and to developing leaders in many disciplines who make a difference globally. Harvard University is made up of 11 principal academic units." property="og:description"/>
+<meta content="https://www.harvard.edu/sites/default/files/default_images/harvard-social1200.jpg" property="og:image"/>
+<link href="https://www.harvard.edu/sites/all/themes/hedu2015/assets/css/harvard.min.css?v=20180820" rel="stylesheet"/>
+<link href="https://www.harvard.edu/sites/all/themes/hedu2015/addtl.css?v=20180820" rel="stylesheet"/>
+<link href="https://www.harvard.edu/sites/all/themes/hedu2015/assets/css/print.css" media="print" rel="stylesheet" type="text/css"/>
+<script async="true">
+      var fontCSS = '/sites/all/themes/hedu2015/assets/css/fonts.min.css';
+
+      (function() {
+        var wf = document.createElement('link');
+        wf.href = fontCSS;
+        wf.rel = 'stylesheet';
+
+        var s = document.getElementsByTagName('link')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+<noscript>
+<link href="https://www.harvard.edu/sites/all/themes/hedu2015/assets/css/fonts.min.css" rel="stylesheet"/>
+</noscript>
+<!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+      <link href="/sites/all/themes/hedu2015/assets/css/ie.min.css" rel="stylesheet">
+    <![endif]-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "CollegeOrUniversity",
+  "name": "Harvard",
+  "alternateName": "Harvard University",
+  "url": "http://www.harvard.edu",
+  "logo": "http://www.harvard.edu/sites/default/files/content/harvard-university-logo-151.png",
+  "sameAs": [
+		"https://www.facebook.com/Harvard",
+		"https://twitter.com/harvard",
+		"https://www.instagram.com/harvard/",
+		"https://www.youtube.com/harvard",
+		"https://soundcloud.com/harvard",
+		"https://www.linkedin.com/edu/school?id=18483"
+  ]
+}
+</script>
+</head>
+<body class="" id="body">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TK7H6Z" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div class="page" id="page">
+<ul class="jump-links">
+<li>
+<a href="https://www.harvard.edu/#mainArea" id="jumpToMain">
+      Jump to main content
+    </a>
+</li>
+<li>
+<a href="https://www.harvard.edu/#searchArea" id="jumpToSearch">
+      Jump to search
+    </a>
+</li>
+<li>
+<a href="https://www.harvard.edu/#footerArea">
+      Jump to the footer
+    </a>
+</li>
+</ul>
+<!--
+
+    Header Area
+
+  -->
+<header class="header-base" id="headerArea" role="banner">
+<h1 class="harvard-heading">
+<a class="harvard-heading__link" href="https://www.harvard.edu/">
+<span class="is-visually-hidden">
+        Harvard University
+      </span>
+</a>
+</h1>
+<a aria-controls="siteNavigation" aria-expanded="false" aria-label="Reveal Navigation" class="btn--menu" data-id="nav" data-state="off" href="https://www.harvard.edu/#siteNavigation" id="btn_menu" role="button">
+<span class="btn--menu__icon"></span>
+    Menu
+  </a>
+<nav class="main-nav" id="siteNavigation" role="navigation">
+<div class="nav-drawer">
+<div class="nav-group nav-group--consistent">
+<ul class="clearfix">
+<li class="nav-left-half">
+<ul class="clearfix" role="presentation">
+<li class="has-drop-nav">
+<a class="" href="https://www.harvard.edu/about-harvard">
+                About
+                <span class="lg-nav-txt">
+                  Harvard
+                </span>
+</a>
+<ul class="list--drop-nav">
+<li class="first active-trail"><a class="first active-trail" href="https://www.harvard.edu/about-harvard/harvard-glance">Harvard at a Glance</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/president">Harvard's President</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvards-president-leadership">Harvard's Leadership</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/academic-experience">Academic Experience</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/administrative-offices">Administrative Offices</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/directories">Directories</a></li>
+<li class=""><a class="" href="http://community.harvard.edu/">Harvard in the Community</a></li>
+<li class=""><a class="" href="http://news.harvard.edu/gazette/">News</a></li>
+</ul>
+</li>
+<li class="has-drop-nav">
+<a href="https://www.harvard.edu/admissions-aid">
+                Admissions
+                <span class="lg-nav-txt">
+                  &amp; Aid
+                </span>
+</a>
+<ul class="list--drop-nav">
+<li class="first"><a class="first" href="https://www.harvard.edu/admissions-aid#titletop">Undergraduate</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/admissions-aid#grad">Graduate &amp; Professional Schools</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/admissions-aid#continue">Continuing Education</a></li>
+<li class="last"><a class="last" href="https://www.harvard.edu/admissions-aid#summer">Summer Programs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-right-half">
+<ul class="clearfix" role="presentation">
+<li class="has-drop-nav">
+<a href="https://www.harvard.edu/schools">
+                Schools
+              </a>
+<ul class="list--drop-nav">
+<li class="first"><a class="first" href="http://www.hbs.edu/">Business</a></li>
+<li class=""><a class="" href="http://college.harvard.edu">College</a></li>
+<li class=""><a class="" href="http://www.dce.harvard.edu/">Continuing Education</a></li>
+<li class=""><a class="" href="http://www.hsdm.harvard.edu/">Dental</a></li>
+<li class=""><a class="" href="http://www.gsd.harvard.edu/">Design</a></li>
+<li class=""><a class="" href="http://www.hds.harvard.edu/">Divinity</a></li>
+<li class=""><a class="" href="http://www.gse.harvard.edu/">Education</a></li>
+<li class=""><a class="" href="http://seas.harvard.edu/">Engineering</a></li>
+<li class=""><a class="" href="http://www.fas.harvard.edu/">Faculty of Arts &amp; Sciences</a></li>
+<li class=""><a class="" href="http://www.hks.harvard.edu/">Government</a></li>
+<li class=""><a class="" href="http://www.gsas.harvard.edu/">Graduate School</a></li>
+<li class=""><a class="" href="http://www.law.harvard.edu/index.html">Law</a></li>
+<li class=""><a class="" href="http://hms.harvard.edu/">Medical</a></li>
+<li class=""><a class="" href="http://www.hsph.harvard.edu/">Public Health</a></li>
+<li class="last"><a class="last" href="http://www.radcliffe.edu/">Radcliffe Institute</a></li>
+</ul>
+</li>
+<li class="has-drop-nav">
+<a href="https://www.harvard.edu/on-campus">
+                On Campus
+              </a>
+<ul class="list--drop-nav">
+<li class="first"><a class="first" href="https://www.harvard.edu/on-campus/arts-and-humanities">Arts and Humanities</a></li>
+<li class=""><a class="" href="http://www.gocrimson.com/">Athletics</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/on-campus/commencement">Commencement</a></li>
+<li class=""><a class="" href="http://hr.harvard.edu/jobs/">Employment</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/events">Events</a></li>
+<li class=""><a class="" href="http://harvardx.harvard.edu/">HarvardX</a></li>
+<li class=""><a class="" href="http://library.harvard.edu/">Library</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/on-campus/museums">Museums</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/on-campus/research">Research</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/on-campus/science">Science</a></li>
+<li class="last"><a class="last" href="https://www.harvard.edu/on-campus/visit-harvard">Visit Harvard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="nav-group nav-group--callouts">
+<ul class="clearfix">
+<li class="nav-left-half">
+<ul class="clearfix" role="presentation">
+<li>
+<a href="http://news.harvard.edu/gazette/">
+                Gazette News
+              </a>
+</li>
+<li>
+<a href="https://www.harvard.edu/events">
+                Events
+              </a>
+</li>
+</ul>
+</li>
+<li class="nav-right-half">
+<ul class="clearfix" role="presentation">
+<li>
+<a class="" href="https://www.harvard.edu/on-campus/visit-harvard">
+                Visit
+              </a>
+</li>
+<li>
+<a href="http://alumni.harvard.edu/givenow">
+                Give
+              </a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="list-clean">
+<ul class="nav-group nav-group--top-bar">
+<li class="first"><a class="first" href="https://www.harvard.edu/faculty">Faculty</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/staff">Staff</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/students">Students</a></li>
+<li class=""><a class="" href="http://alumni.harvard.edu">Alumni</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/parents">Parents</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/on-campus/visit-harvard">Visitors</a></li>
+<li class="last"><a class="last" href="https://www.harvard.edu/media-relations">Media</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<form action="/searches/" class="search-area" id="searchArea" method="get" role="search">
+<label for="siteSearch">
+<span class="is-visually-hidden">
+      Search:
+    </span>
+</label>
+<input aria-label="search" class="input-search" id="searchSite" name="searchtext" placeholder="What can we help you find?" type="search"/>
+<button class="btn--mobile-site-search" type="button">
+<span class="is-visually-hidden">
+      Open Search
+    </span>
+</button>
+</form>
+</header>
+<!--
+
+    Main Content Area
+
+  -->
+<main class="main-base" id="mainArea" role="main">
+<!--
+
+      main content header area
+
+      page level title, breadcrumbs and additional
+      page controls should go here
+    -->
+<header class="main-base__header">
+<div class="wrapper wrapper--1-down">
+<nav class="nav-crumbs" role="navigation">
+<ol aria-label="Bread Crumbs" class="nav-crumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a href="https://www.harvard.edu/about-harvard" itemprop="item"><span itemprop="name">About Harvard</span></a>
+<meta content="1" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a href="https://www.harvard.edu/about-harvard/harvard-glance" itemprop="item"><span itemprop="name">Harvard at a Glance</span></a>
+<meta content="2" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency" itemprop="item"><span itemprop="name">History of the Presidency</span></a>
+<meta content="3" itemprop="position"/>
+</li>
+</ol>
+</nav>
+<h1 id="current_page_title"><a name="titletop"></a>
+          Charles William Eliot        </h1>
+<!--
+
+          This button controls the sub nav open/close on small screens.
+
+        -->
+<a class="btn btn--small btn--subnav" href="https://www.harvard.edu/#subNav" id="subnavBtn">
+<span aria-label="Open Sub Navigation"></span>
+</a>
+</div>
+</header>
+<div class="wrapper wrapper--1-down content">
+<div class="clearfix grid-fixed--right-side grid-fixed-side">
+<div class="fixed-side-col">
+<nav class="sub-nav sub-nav-normal" id="subNav" role="navigation">
+<div class="list-clean">
+<ul>
+<li class="first active-trail"><a class="first active-trail" href="https://www.harvard.edu/about-harvard/harvard-glance">Harvard at a Glance</a>
+<ul>
+<li class="first"><a class="first" href="https://www.harvard.edu/about-harvard/harvard-glance/about-faculty">About the Faculty</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/endowment">Endowment</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history">History</a></li>
+<li class="active-trail"><a class="active-trail" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency">History of the Presidency</a>
+<ul>
+<li class="first"><a class="first" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/abbott-lawrence-lowell">A(bbott) Lawrence Lowell</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/benjamin-wadsworth">Benjamin Wadsworth</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/charles-chauncy">Charles Chauncy</a></li>
+<li class="active-trail active"><a class="active-trail active" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/charles-william-eliot"><span class="is-visually-hidden">Current Page:</span>Charles William Eliot</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/cornelius-conway-felton">Cornelius Conway Felton</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/derek-bok">Derek Bok</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/drew-gilpin-faust">Drew Gilpin Faust</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/edward-everett">Edward Everett</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/edward-holyoke">Edward Holyoke</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/henry-dunster">Henry Dunster</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/increase-mather">Increase Mather</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/james-bryant-conant">James Bryant Conant</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/james-walker">James Walker</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/jared-sparks">Jared Sparks</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/john-leverett">John Leverett</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/john-rogers">John Rogers</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/john-thornton-kirkland">John Thornton Kirkland</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/joseph-willard">Joseph Willard</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/josiah-quincy">Josiah Quincy</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/lawrence-h-summers">Lawrence H. Summers</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/leonard-hoar">Leonard Hoar</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/nathan-marsh-pusey">Nathan Marsh Pusey</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/neil-l-rudenstine">Neil L. Rudenstine</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/samuel-langdon">Samuel Langdon</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/samuel-locke">Samuel Locke</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/samuel-webber">Samuel Webber</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/thomas-hill">Thomas Hill</a></li>
+<li class="last"><a class="last" href="https://www.harvard.edu/about-harvard/harvard-glance/history-presidency/urian-oakes">Urian Oakes</a></li>
+</ul>
+</li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/honors">Honors</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-glance/student-life">Student Life</a></li>
+<li class="last"><a class="last" href="https://www.harvard.edu/about-harvard/harvard-glance/wallpaper-and-cover-photos">Wallpaper and Cover Photos</a></li>
+</ul>
+</li>
+<li class=""><a class="" href="https://www.harvard.edu/president">Harvard's President</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvards-president-leadership">Harvard's Leadership</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/academic-experience">Academic Experience</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/administrative-offices">Administrative Offices</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/directories">Directories</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/frequently-asked-questions">FAQ</a></li>
+<li class=""><a class="" href="http://community.harvard.edu/">Harvard in the Community</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/maps-directions">Maps &amp; Directions</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/harvard-mobile-apps">Mobile Apps</a></li>
+<li class=""><a class="" href="https://www.harvard.edu/about-harvard/multimedia">Multimedia</a></li>
+<li class=""><a class="" href="http://news.harvard.edu/gazette/">News</a></li>
+<li class="last"><a class="last" href="https://www.harvard.edu/about-harvard/social-media-and-newsletter-directory">Social Media and Newsletters</a></li>
+</ul>
+</div>
+</nav>
+</div>
+<article class="w-100" id="mainContent" role="article">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/about-harvard/harvard-glance/history-presidency/charles-william-eliot" class="node node-page clearfix 11" id="node-60491" typeof="foaf:Document">
+<span class="rdf-meta element-hidden" content="Charles William Eliot" property="dc:title"></span>
+<div class="content">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h4>Term of office: 1869-1909</h4>
+<p>The presidency of Charles William Eliot (1834-1926) played out on an epic scale like no other, from his record-setting 40 years in office to his transformation of Harvard into a modern research university to his far-reaching impact on U.S. higher education.</p>
+<p>In a 105-minute inaugural address (Oct. 19, 1869), Eliot memorably enunciated his grand vision of what Harvard should be. Vigor and longevity made most of it come true. As historian Samuel Eliot Morison explains, Eliot simply “wore down and outlived all his opponents."</p>
+<p>Harvard changed in so many dimensions during the Eliot era that space permits only a sampler of major new arrivals:</p>
+<ul>
+<li>Harvard Summer School (1871)</li>
+<li>Graduate Department (1872; revamped as the Graduate School, 1890; renamed the Graduate School of Arts and Sciences, 1905)</li>
+<li>Arnold Arboretum (1872)</li>
+<li>Radcliffe College (chartered as the Society for the Collegiate Instruction of Women [a.k.a. “Harvard Annex"], 1879; chartered as Radcliffe College, 1894)</li>
+<li>Faculty of Arts and Sciences (1890)</li>
+<li>School of Landscape Architecture (ca. 1901; forerunner of the Graduate School of Design)</li>
+<li>Harvard Forest (Petersham, Mass.; 1907)</li>
+<li>School of Business Administration (1908)</li>
+</ul>
+<p>At the Medical School in Boston, the curriculum expanded to four years in 1892. Nine years later, a bachelor’s degree became an admissions prerequisite. And in 1906, the new Longwood Avenue quadrangle opened as the largest and most comprehensive medical-school complex in the U.S.</p>
+<p>For undergraduates, the Eliot years saw the end of many longstanding requirements such as compulsory chapel (1886), the undergraduate entrance requirement in Greek (1887), and the much-hated “Scale of Merit” (a nitpicking Quincy-era grading system whose last traces disappeared in 1886-87, with the introduction of letter grades).</p>
+<p>One of Eliot’s most influential reforms was the development of a system of “spontaneous diversity of choice” in which undergraduates selected most of their own courses. Choice, in turn, stimulated an open-ended curriculum. This elective system constituted a radical break with the time-honored academic practice of specifying a student’s courses according to the year of college. The Harvard experiment soon spread nationwide and changed what it meant to be “educated.” By 1894, Eliot himself had concluded that the new system was “the most generally useful piece of work which this university has ever executed.”</p>
+<p>Architecturally, the grandest legacies of the Eliot era are Memorial Hall (1870-78), Sever Hall (1880), Austin Hall (1883), Harvard Stadium (1903), and the Medical School Quadrangle (1906). Matthews (1872), Thayer (1870), and Weld (1872) halls also rose in the Yard; and the Yard’s great gate-and-fence system began to take shape with the completion of the Johnston Gate (1890). Phillips Brooks House opened its doors in 1900 as the home of undergraduate community-service activities.</p>
+<p>Having weathered many a storm, Eliot began reaping a harvest of praise around 1894. "One after the other, the greater universities of the country followed the reforms that Harvard had adopted; it was clear by the middle nineties that the Harvard of Eliot [. . .] had set new standards for higher education in America," writes Morison. “By the turn of the century he was one of the leading public figures of the country; his opinion and support were sought on every variety of public question.”</p>
+<p>Few marking Eliot’s silver anniversary could have dreamt that he would serve for another 15 years, retiring as Harvard’s first president <em>emeritus</em> on May 19, the very day of his final confirmation 40 years earlier.</p></div></div></div> </div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="fixed-right" id="article_aside" role="complementary">
+<p><img alt="Charles William Eliot" height="315" src="http://media.www.harvard.edu/content/eliot.jpg" width="210"/></p>
+<p>Charles William Eliot<br/> President of Harvard University 1869-1909</p>
+<ul>
+<li><a href="http://www.harvardmagazine.com/2001/11/eliots-elect-the-harvard.html">Eliot’s Elect: The Harvard Classics, 1910 (Harvard Magazine)</a></li>
+<li><a href="http://harvardmagazine.com/1996/07/olympian.html">The Unexpected Olympians: How Harvard Dominated the First Modern Games - In Spite of Itself (Harvard Magazine)</a></li>
+<li><a href="http://www.uuquincy.org/projects/stamps/16chaseliot.htm">Eliot postage stamp</a></li>
+<li><a href="http://www.higher-ed.org/resources/Charles_Eliot.htm">Charles William Eliot, The Elective System, 1885 (Higher Education Resource Hub</a></li>
+</ul> </aside>
+</div>
+</div>
+</main>
+<!--
+	
+			Secondary (aside) Content Area
+	
+		-->
+<aside class="aside-base" id="secondaryArea" role="complementary">
+<div class="region region-page-footer">
+<div class="block block-views" id="block-views-module-groups-block-3">
+<div class="content">
+<div class="view view-module-groups view-id-module_groups view-display-id-block_3 view-dom-id-6098d554baa6bfb1ef1af2938b8c20e8">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+<section class="card--news-signup txt-center stitle-module group - about - daily gazette sign up c-bg-crimson c-txt-white" data-moduletitle="module group - about - daily gazette sign up">
+<p class="card--news-signup__leadin wrapper wrapper--3-down">
+    Get the latest Harvard Gazette news delivered to your inbox.
+  </p>
+<form action="https://www.pages01.net/harvard/gazette" class="content-area" id="newspaper_signup_form" method="get">
+<div class="form-row display-inline-block">
+<input class="input-text input-reveal" id="newspaper_email" name="email" placeholder="your_email@email.com" type="email"/>
+<label class="label-reveal" for="newspaper_email">
+          Your Email:
+        </label>
+</div>
+<div class="form-row display-inline-block">
+<button class="btn btn--min-width btn--reverse" id="newspaper_signup_btn" type="submit">
+          Subscribe
+        </button>
+</div>
+</form>
+</section>
+<section class="stitle-module group - about - popular stories c-bg-grey c-txt-dark padding-sm" data-moduletitle="module group - about - popular stories">
+<header>
+<h2 class="txt-h1-alt txt-center">Popular Gazette Stories</h2>
+</header>
+<div class="wrapper">
+<div class="grid grid--3a">
+<div class="w-33 w-100--m">
+<div class="card c-txt-dark card--gazette">
+<div class="card__content">
+<div class="card__content__source">
+<div class="card__thumb">
+<a href="http://news.harvard.edu/gazette/story/2019/07/doctor-burnout-costs-health-care-system-4-6-billion-a-year-harvard-study-says">
+<img alt="Doctor burnout costs health care system $4.6 billion a year, Harvard study says" src="https://news.harvard.edu/wp-content/uploads/2019/07/doctorburnout.jpg?w=945"/>
+</a>
+</div>
+<h3 class="card__title">
+<a href="http://news.harvard.edu/gazette/story/2019/07/doctor-burnout-costs-health-care-system-4-6-billion-a-year-harvard-study-says">Doctor burnout costs health care system $4.6 billion a year, Harvard study says</a>
+</h3>
+<div class="card__text">Physician burnout is costing the U.S. health care system an estimated $4.6 billion annually, according to new research from an international team led by a Harvard Business School researcher.</div>
+</div>
+<div class="card__outro" max-width="550px" style="position: relative;">
+<div class="card__outro__cta-2">
+<a href="http://news.harvard.edu/gazette/story/2019/07/doctor-burnout-costs-health-care-system-4-6-billion-a-year-harvard-study-says">
+											Read more
+										</a>
+</div>
+<div class="resize-sensor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: scroll; z-index: -1; visibility: hidden;"><div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px; width: 415px; height: 23px;"></div></div><div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0; top: 0; width: 200%; height: 200%"></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="w-33 w-50--m">
+<div class="card c-txt-dark card--gazette">
+<div class="card__content">
+<div class="card__content__source">
+<div class="card__thumb">
+<a href="http://news.harvard.edu/gazette/story/2019/07/harvard-symposium-examines-the-science-of-longevity">
+<img alt="Harvard symposium examines the science of longevity" src="https://news.harvard.edu/wp-content/uploads/2019/06/matthew-bennett-78hTqvjYMS4-unsplash2500.jpg?w=945"/>
+</a>
+</div>
+<h3 class="card__title">
+<a href="http://news.harvard.edu/gazette/story/2019/07/harvard-symposium-examines-the-science-of-longevity">Harvard symposium examines the science of longevity</a>
+</h3>
+<div class="card__text">A two-day symposium organized by Professor of Medicine Steven Grinspoon of Harvard Medical School examined the scientific, nutritional, and health-related aspects of aging.</div>
+</div>
+<div class="card__outro" max-width="550px" style="position: relative;">
+<div class="card__outro__cta-2">
+<a href="http://news.harvard.edu/gazette/story/2019/07/harvard-symposium-examines-the-science-of-longevity">
+											Read more
+										</a>
+</div>
+<div class="resize-sensor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: scroll; z-index: -1; visibility: hidden;"><div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px; width: 415px; height: 23px;"></div></div><div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0; top: 0; width: 200%; height: 200%"></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="w-33 w-50--m">
+<div class="card c-txt-dark card--gazette">
+<div class="card__content">
+<div class="card__content__source">
+<div class="card__thumb">
+<a href="http://news.harvard.edu/gazette/story/2019/07/focal-point-harvard-professor-archon-fung-wants-everyone-to-vote">
+<img alt="Focal Point: Harvard Professor Archon Fung wants everyone to vote" src="https://news.harvard.edu/wp-content/uploads/2019/05/092216_Fung_007-e1557849183129.jpg?w=945"/>
+</a>
+</div>
+<h3 class="card__title">
+<a href="http://news.harvard.edu/gazette/story/2019/07/focal-point-harvard-professor-archon-fung-wants-everyone-to-vote">Focal Point: Harvard Professor Archon Fung wants everyone to vote</a>
+</h3>
+<div class="card__text">Archon Fung, the Winthrop Laflin McCormack Professor of Citizenship and Self-Government, thinks about the major changes that would take place if every person in America voted.</div>
+</div>
+<div class="card__outro" max-width="550px" style="position: relative;">
+<div class="card__outro__cta-2">
+<a href="http://news.harvard.edu/gazette/story/2019/07/focal-point-harvard-professor-archon-fung-wants-everyone-to-vote">
+											Read more
+										</a>
+</div>
+<div class="resize-sensor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: scroll; z-index: -1; visibility: hidden;"><div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px; width: 415px; height: 23px;"></div></div><div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0; top: 0; width: 200%; height: 200%"></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid--3a">
+<div class="w-33 w-100--m">
+<div class="card c-txt-dark card--gazette">
+<div class="card__content">
+<div class="card__content__source">
+<div class="card__thumb">
+<a href="http://news.harvard.edu/gazette/story/2019/06/focal-point-harvard-professor-steven-pinker-says-the-truth-lies-in-the-data">
+<img alt="Focal Point: Harvard Professor Steven Pinker says the truth lies in the data" src="https://news.harvard.edu/wp-content/uploads/2019/05/050608_Pinker_Steven_053-e1557847802932.jpg?w=945"/>
+</a>
+</div>
+<h3 class="card__title">
+<a href="http://news.harvard.edu/gazette/story/2019/06/focal-point-harvard-professor-steven-pinker-says-the-truth-lies-in-the-data">Focal Point: Harvard Professor Steven Pinker says the truth lies in the data</a>
+</h3>
+<div class="card__text">Steven Pinker, the Johnstone Family Professor of Psychology, points to a number of instances where the use of anecdotes over data creates a false narrative.</div>
+</div>
+<div class="card__outro" max-width="550px" style="position: relative;">
+<div class="card__outro__cta-2">
+<a href="http://news.harvard.edu/gazette/story/2019/06/focal-point-harvard-professor-steven-pinker-says-the-truth-lies-in-the-data">
+											Read more
+										</a>
+</div>
+<div class="resize-sensor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: scroll; z-index: -1; visibility: hidden;"><div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px; width: 415px; height: 23px;"></div></div><div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0; top: 0; width: 200%; height: 200%"></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="w-33 w-50--m">
+<div class="card c-txt-dark card--gazette">
+<div class="card__content">
+<div class="card__content__source">
+<h3 class="card__title">
+<a href="http://news.harvard.edu/gazette/story/2009/09/new-study-finds-45000-deaths-annually-linked-to-lack-of-health-coverage">New study finds 45,000 deaths annually linked to lack of health coverage</a>
+</h3>
+<div class="card__text">Nearly 45,000 annual deaths are associated with lack of health insurance, according to a new study published online today by the American Journal of Public  ...</div>
+</div>
+<div class="card__outro" max-width="550px" style="position: relative;">
+<div class="card__outro__cta-2">
+<a href="http://news.harvard.edu/gazette/story/2009/09/new-study-finds-45000-deaths-annually-linked-to-lack-of-health-coverage">
+											Read more
+										</a>
+</div>
+<div class="resize-sensor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: scroll; z-index: -1; visibility: hidden;"><div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px; width: 415px; height: 23px;"></div></div><div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0; top: 0; width: 200%; height: 200%"></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="w-33 w-50--m">
+<div class="card c-txt-dark card--gazette">
+<div class="card__content">
+<div class="card__content__source">
+<div class="card__thumb">
+<a href="http://news.harvard.edu/gazette/story/2019/07/researchers-eye-flashy-coats-of-peacock-spiders-in-pursuit-of-new-solar-products">
+<img alt="Researchers eye flashy coats of peacock spiders in pursuit of new solar products" src="https://news.harvard.edu/wp-content/uploads/2019/07/MalePeacockSpider.jpg?w=944"/>
+</a>
+</div>
+<h3 class="card__title">
+<a href="http://news.harvard.edu/gazette/story/2019/07/researchers-eye-flashy-coats-of-peacock-spiders-in-pursuit-of-new-solar-products">Researchers eye flashy coats of peacock spiders in pursuit of new solar products</a>
+</h3>
+<div class="card__text">Dakota McCoy, in collaboration with David Haig, led a group of researchers at Harvard studying the black spider and its ultrablack coat with microlenses that could lead to innovations in solar panels and sunglasses glare. </div>
+</div>
+<div class="card__outro" max-width="550px" style="position: relative;">
+<div class="card__outro__cta-2">
+<a href="http://news.harvard.edu/gazette/story/2019/07/researchers-eye-flashy-coats-of-peacock-spiders-in-pursuit-of-new-solar-products">
+											Read more
+										</a>
+</div>
+<div class="resize-sensor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: scroll; z-index: -1; visibility: hidden;"><div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px; width: 415px; height: 23px;"></div></div><div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0; top: 0; width: 200%; height: 200%"></div></div></div></div>
+</div>
+</div>
+</div>
+</div> <div class="txt-center deck__cta-area">
+<a class="btn btn--reverse" href="http://news.harvard.edu/gazette">
+        Read More
+      </a>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div> </div>
+</div>
+</div>
+</aside>
+<!--
+
+    Footer Area
+
+  -->
+<footer class="footer-base" id="footerArea" role="contentinfo">
+<div class="wrapper wrapper--1-down content-area">
+<!--
+
+  Visually hidden jump to navigation link to go at the bottom of long content areas,
+  especially those with many focusable areas.
+
+  Remove the hidden helper class to make this link visible to all users.
+
+-->
+<a class="jump-to-nav jump-to-nav--hidden" href="https://www.harvard.edu/#page">
+  Jump to Top
+</a>
+<div class="grid grid--footer">
+<div class="w-20 w-33--m">
+<h1 class="footer__heading txt-h5">
+          Website
+        </h1>
+<ul class="list-clean" display_stickynav="yes" ul_attributes="nav-group nav-group--top-bar"><li class="menu-449 first"><a href="http://www.accessibility.harvard.edu/" title="Accessibility@0">Accessibility</a></li>
+<li class="menu-683 last"><a href="https://www.harvard.edu/sitemap" title="Sitemap@0">Sitemap</a></li>
+</ul> </div>
+<div class="w-20 w-33--m">
+<h2 class="footer__heading txt-h5">
+          Get in Touch
+        </h2>
+<ul class="list-clean" display_stickynav="yes" ul_attributes="nav-group nav-group--top-bar"><li class="menu-660 first"><a href="https://www.harvard.edu/contact-harvard" title="Contact@2">Contact Harvard</a></li>
+<li class="menu-2078"><a href="https://www.harvard.edu/about-harvard/maps-directions" title="">Maps &amp; Directions</a></li>
+<li class="menu-2383"><a href="http://hr.harvard.edu/jobs" title="">Jobs</a></li>
+<li class="menu-2384 last"><a href="https://www.harvard.edu/about-harvard/social-media-and-newsletter-directory" title="">Social Media</a></li>
+</ul> </div>
+<div class="w-20 w-33--m">
+<h3 class="footer__heading txt-h5">
+          Security &amp; Brand
+        </h3>
+<ul class="list-clean" display_stickynav="yes" ul_attributes="nav-group nav-group--top-bar"><li class="menu-448 first"><a href="https://www.harvard.edu/privacy-statement" title="Privacy@0">Privacy Statement</a></li>
+<li class="menu-447"><a href="https://www.harvard.edu/copyright-issue" title="Infringement@0">Report Copyright Infringement</a></li>
+<li class="menu-861"><a href="https://www.harvard.edu/security-issue" title="Report Security Issue">Report Security Issue</a></li>
+<li class="menu-446 last"><a href="http://trademark.harvard.edu/pages/trademark-notice" title="TrademarkNotice@0">Trademark Notice</a></li>
+</ul> </div>
+<div class="w-footer-last">
+<h4 class="footer__heading txt-h5 is-visually-hidden">
+          Social Media &amp; other Application Links
+        </h4>
+<ul class="list-social-links list-clean">
+<li>
+<a class="social-link social-link--facebook" href="http://facebook.com/harvard">
+<span class="is-visually-hidden">
+                  Facebook
+                </span>
+</a>
+</li>
+<li>
+<a class="social-link social-link--twitter" href="http://twitter.com/harvard">
+<span class="is-visually-hidden">
+                  Twitter
+                </span>
+</a>
+</li>
+<li>
+<a class="social-link social-link--instagram" href="http://www.instagram.com/harvard">
+<span class="is-visually-hidden">
+                  Instagram
+                </span>
+</a>
+</li>
+<li>
+<a class="social-link social-link--youtube" href="http://youtube.com/harvard">
+<span class="is-visually-hidden">
+                  YouTube
+                </span>
+</a>
+</li>
+<li>
+<a class="social-link social-link--soundcloud" href="https://soundcloud.com/harvard">
+<span class="is-visually-hidden">
+                  SoundCloud
+                </span>
+</a>
+</li>
+<li>
+<a class="social-link social-link--linkedin" href="https://www.linkedin.com/edu/school?id=18483">
+<span class="is-visually-hidden">
+                  LinkedIn
+                </span>
+</a>
+</li>
+<li>
+<a class="social-link social-link--itunes" href="http://www.harvard.edu/itunes">
+<span class="is-visually-hidden">
+                  iTunes
+                </span>
+</a>
+</li>
+</ul>
+<p class="w-60 other-apps">
+<a href="https://www.harvard.edu/all-harvard-mobile">
+              Harvard Apps
+            </a>
+</p>
+</div>
+</div>
+<p class="footer__outro">
+      © 2019 The President and Fellows of Harvard College
+    </p>
+</div>
+</footer>
+</div>
+<!--
+
+      JavaScripts
+
+    -->
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://www.harvard.edu/sites/all/themes/hedu2015/assets/js/script.js"></script>
+<script src="https://www.harvard.edu/sites/all/themes/hedu2015/assets/js-element-queries/ResizeSensor.js"></script>
+<script src="https://www.harvard.edu/sites/all/themes/hedu2015/assets/js-element-queries/ElementQueries.js"></script>
+<script src="https://www.harvard.edu/sites/all/themes/hedu2015/assets/slick/slick.js"></script>
+<script>
+$('.grid--3a.carousel').slick( {
+    dots: false,
+    infinite: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+$('.grid--full.carousel').slick( {
+    dots: false,
+    infinite: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+		autoplay: true,
+  	autoplaySpeed: 4000,
+  });
+$('.grid--full-w-view.carousel .view .view-content').slick( {
+    dots: false,
+    infinite: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+		autoplay: true,
+  	autoplaySpeed: 4000,
+  });
+</script>
+<script type="text/javascript">
+ (function(w) {
+   w._sv = w._sv || {};
+   w._sv.trackingCode = 'FfgooJjBjzhBdGbpsXIHyvlzrdrimWab'; 
+   var s = document.createElement('script');
+   s.src = '//api.survicate.com/assets/survicate.js';
+   s.async = true;
+   var e = document.getElementsByTagName('script')[0];
+   e.parentNode.insertBefore(s, e);
+ })(window);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b4d6d73517","applicationID":"236355350","transactionName":"NAFUZEAHV0NYVkYIWA1Ld1NGD1ZeFltdBVI8FFdXVzlPWVxC","queueTime":0,"applicationTime":165,"atts":"GEZXEggdRE0=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script id="" src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","116026588849778");fbq("track","PageView");</script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=116026588849778&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+</body></html>

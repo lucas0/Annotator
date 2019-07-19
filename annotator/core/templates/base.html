@@ -49,7 +49,7 @@
         }
 	</style>
 </head>
-<body>
+<body onload="clear_cookies();">
 	<div class="base">
 		<h4 style=" margin: 0; padding: 2;">Annotator</h4>
 		<a href="{% url 'home' %}">Home</a> /
@@ -66,6 +66,14 @@
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     
 		<script>
+        function clear_cookies(){
+            var cookies = Cookies.get();
+            for(var cookie in cookies) {
+                if !(st(cookie) == 'csrftoken'){
+                    Cookies.remove(cookie);
+                }
+            }
+        }
 		function aux_func(_this){
 			let link = document.getElementById("oLink").href;
 			var elmnt = _this.contentDocument.getElementById(link);

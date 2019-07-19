@@ -23,6 +23,7 @@ html_dir = os.path.abspath(cwd+"/../../html_getter")
 
 res_header = ["page", "claim", "verdict", "tags", "date", "author", "source_list", "source_url", "value", "name"]
 op_dict = {'Yes':'1', 'No':'2', 'Invalid Input': '3', "Don't Know": '4'}
+save_dict = {'Yes':'yes', 'No':'no', 'Invalid Input': 'ii', "Don't Know": 'dk'}
 samples_path = data_dir+"/samples.csv"
 results_path = data_dir+"/results/"
 snopes_path = data_dir+"/html_snopes/"
@@ -63,6 +64,8 @@ def get_count_file(s_p):
         count_file = pd.read_csv(count_path, sep=',', encoding="latin1")
     else:
         count_file = s_p[['page','source_url']].copy()
+        count_file['src_len'] = s_p['source_list'].apply(lambda x : len(ast.literal_eval(x)))
+        count_file['count'] = 0
         count_file['yes'] = 0
         count_file['no'] = 0
         count_file['ii'] = 0
@@ -72,7 +75,8 @@ def get_count_file(s_p):
 
 def increase_page_annotation_count(page, origin, value):
     count_file = pd.read_csv(count_path, sep=',', encoding="latin1")
-    count_file.loc[(count_file['page'] == page) & (count_file['source_url'] == origin), value ]+= 1
+    count_file.loc[(count_file['page'] == page) & (count_file['source_url'] == origin),save_dict[value] ]+= 1
+    count_file.loc[(count_file['page'] == page) & (count_file['source_url'] == origin), 'count' ]+= 1
     count_file.to_csv(count_path, sep=',', index=False)
 
 def save_annotation(page, origin, value, name):
@@ -121,13 +125,17 @@ def get_least_annotated_page(name,aPage=None):
 
     #Get pages not done by current annotator
     not_done_count = (count_file[~(count_file.page.isin(after_merge.page) & count_file.source_url.isin(after_merge.source_url))]).sample(frac=1)
+    convert_dict = {'page': str, 'source_url': str, 'src_len': int, 'count': int, 'yes': int, 'no': int, 'ii': int, 'dk': int}
+    not_done_count = not_done_count.astype(convert_dict)
+    not_done_count.sort_values(by=['src_len'], axis=0 ,ascending=True, inplace=True)
+
     print(">>",aPage)
     if aPage is not None:
         remOrigins = not_done_count.loc[not_done_count['page'] == aPage]
         if len(remOrigins)==0:
             return get_least_annotated_page(name)
     else:
-        twice_annotated = (not_done_count.loc[not_done_count['count'] == 2]).sample(frac=1)
+        twice_annotated = (not_done_count.loc[not_done_count['count'] == 2])
         if len(twice_annotated) > 0:
             print("TWICE")
             yes_annotated = twice_annotated.loc[twice_annotated['yes']!=0]
@@ -136,7 +144,7 @@ def get_least_annotated_page(name,aPage=None):
             else: 
                 page = twice_annotated.iloc[0]['page']
         else:
-            once_annotated = (not_done_count.loc[not_done_count['count'] == 1]).sample(frac=1)
+            once_annotated = (not_done_count.loc[not_done_count['count'] == 1])
             if len(once_annotated) > 0:
                 print("ONCE")
                 yes_annotated = once_annotated.loc[once_annotated['yes']!=0]
@@ -146,7 +154,7 @@ def get_least_annotated_page(name,aPage=None):
                     page = once_annotated.iloc[0]['page']
             else:
                 print("OTHER")
-                index = (not_done_count['count']).sample(frac=1).idxmin(axis=0, skipna=True)
+                index = (not_done_count['count']).idxmin(axis=0, skipna=True)
                 page = not_done_count.loc[index]['page']
         remOrigins = not_done_count.loc[not_done_count['page'] == page]
 

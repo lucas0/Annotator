@@ -49,7 +49,7 @@
         }
 	</style>
 </head>
-<body onload="clear_cookies();">
+<body onload="clear_cookies()">
 	<div class="base">
 		<h4 style=" margin: 0; padding: 2;">Annotator</h4>
 		<a href="{% url 'home' %}">Home</a> /
@@ -64,35 +64,40 @@
 	</div>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script>
+    function aux_func(_this){
+        let link = document.getElementById("oLink").href;
+        var elmnt = _this.contentDocument.getElementById(link);
+        elmnt.scrollIntoView({ behavior: "smooth", block: "center"  });
+    }
+    </script>
     
-		<script>
-        function clear_cookies(){
-            var cookies = Cookies.get();
-            for(var cookie in cookies) {
-                if !(st(cookie) == 'csrftoken'){
-                    Cookies.remove(cookie);
-                }
+    <script>
+    function clear_cookies(){
+        var cookies = Cookies.get();
+        for(var cookie in cookies) {
+            if !(st(cookie) == 'csrftoken'){
+                Cookies.remove(cookie);
             }
         }
-		function aux_func(_this){
-			let link = document.getElementById("oLink").href;
-			var elmnt = _this.contentDocument.getElementById(link);
-			elmnt.scrollIntoView({ behavior: "smooth", block: "center"  });
-		}
-        $( document ).ready(function() {
-            $( "#logout", "#login" ).on("click", function(e) {
-                    e.preventDefault();
-                    var cookies = Cookies.get();
-                    //console.log(cookies);
-                    for(var cookie in cookies) {
-                        //console.log(cookie);
-                        Cookies.remove(cookie);
-                    }
-		    window.localStorage.clear();
-                    window.location.href="{% url 'logout' %}";
-                });
+    }
+    </script>
+    
+    <script>
+    $( document ).ready(function() {
+        $( "#logout", "#login" ).on("click", function(e) {
+                e.preventDefault();
+                var cookies = Cookies.get();
+                //console.log(cookies);
+                for(var cookie in cookies) {
+                    //console.log(cookie);
+                    Cookies.remove(cookie);
+                }
+        window.localStorage.clear();
+                window.location.href="{% url 'logout' %}";
             });
-		</script>
+        });
+    </script>
     <br>
 		{% block content %}
 		{% endblock %}

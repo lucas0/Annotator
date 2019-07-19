@@ -1,82 +1,891 @@
-<html class="js" lang="en-US" style="opacity: 1; visibility: visible;"><head>
-<title>Attention Required! | Cloudflare</title>
-<meta id="captcha-bypass" name="captcha-bypass"/>
+<html class="wf-opensans3a3002c4002c6002c800-n4-inactive wf-inactive wf-opensans3a3002c4002c6002c8007cbreeserif-n4-inactive" lang="en-US" style="padding-bottom: 50px;"><head><script type="text/javascript">
+
+(function() {
+	if(typeof amzn_assoc_utils==="undefined"){amzn_assoc_utils={};}if(typeof amzn_assoc_utils.parse==="undefined"){amzn_assoc_utils.parse=(function(){var d,b,a={'"':'"',"\\":"\\","/":"/",b:"\b",f:"\f",n:"\n",r:"\r",t:"\t"},m,k=function(n){throw {name:"SyntaxError",message:n,at:d,text:m};},g=function(n){if(n&&n!==b){k("Expected '"+n+"' instead of '"+b+"'");}b=m.charAt(d);d+=1;return b;},f=function(){var o,n="";if(b==="-"){n="-";g("-");}while(b>="0"&&b<="9"){n+=b;g();}if(b==="."){n+=".";while(g()&&b>="0"&&b<="9"){n+=b;}}if(b==="e"||b==="E"){n+=b;g();if(b==="-"||b==="+"){n+=b;g();}while(b>="0"&&b<="9"){n+=b;g();}}o=+n;if(!isFinite(o)){k("Bad number");}else{return o;}},h=function(){var q,p,o="",n;if(b==='"'){while(g()){if(b==='"'){g();return o;}if(b==="\\"){g();if(b==="u"){n=0;for(p=0;p<4;p+=1){q=parseInt(g(),16);if(!isFinite(q)){break;}n=n*16+q;}o+=String.fromCharCode(n);}else{if(typeof a[b]==="string"){o+=a[b];}else{break;}}}else{o+=b;}}}k("Bad string");},j=function(){while(b&&b<=" "){g();}},c=function(){switch(b){case"t":g("t");g("r");g("u");g("e");return true;case"f":g("f");g("a");g("l");g("s");g("e");return false;case"n":g("n");g("u");g("l");g("l");return null;}k("Unexpected '"+b+"'");},l,i=function(){var n=[];if(b==="["){g("[");j();if(b==="]"){g("]");return n;}while(b){n.push(l());j();if(b==="]"){g("]");return n;}g(",");j();}}k("Bad array");},e=function(){var o,n={};if(b==="{"){g("{");j();if(b==="}"){g("}");return n;}while(b){o=h();j();g(":");if(Object.hasOwnProperty.call(n,o)){k('Duplicate key "'+o+'"');}n[o]=l();j();if(b==="}"){g("}");return n;}g(",");j();}}k("Bad object");};l=function(){j();switch(b){case"{":return e();case"[":return i();case'"':return h();case"-":return f();default:return b>="0"&&b<="9"?f():c();}};return function(p,o){var n;m=p;d=0;b=" ";n=l();j();if(b){k("Syntax error");}return n;};}());}if(typeof amzn_assoc_utils.stringify==="undefined"){amzn_assoc_utils.stringify=function(b){var a="";if(typeof JSON!=="undefined"){a=JSON.stringify(b);}return a;};}if(typeof amzn_assoc_utils.addCssRules==="undefined"){amzn_assoc_utils.addCssRules=function(g,n){var h=document.createElement("style"),m,e=0,k="";h.appendChild(document.createTextNode(""));document.head.appendChild(h);m=h.sheet;for(e=0,rl=n.length;e<rl;e++){var d=1,l=n[e],b=n[e][0],f="";if(Object.prototype.toString.call(l[1][0])==="[object Array]"){l=l[1];d=0;}for(var c=l.length;d<c;d++){var a=l[d];f+=a[0]+":"+a[1]+(a[2]?" !important":"")+";\n";}if(typeof g==="string"){m.insertRule(g+"{"+b+"{"+f+"}}",m.cssRules.length);}else{m.insertRule(b+"{"+f+"}",m.cssRules.length);}}};}window.trackingUtils=function(l,c,e,o,p,h,d,r,t,n,q){var g={},j=new RegExp("/(ref=[\\w]+)/?","i"),a="assocPayloadId",i=function(u){return u&&encodeURIComponent(u).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");},m=(function(){var u=document.createElement("a");u.href=(window.location!==window.parent.location)?document.referrer:document.location;return u.protocol+"//"+u.hostname+((u.port===""||u.port==="80"||u.port==="443")?"":(":"+u.port))+(u.pathname.indexOf("/")!==0?("/"+u.pathname):u.pathname);}()),s=(function(){return i(m);}()),k=function(u,w,x,v){if(typeof x==="string"&&x!==""){if(u.search===""){u.search="?"+w+"="+x;}else{if(!u.search.match(new RegExp("[?&]"+w+"="))){u.search=u.search.replace(/\?/,"?"+w+"="+x+"&");}else{if(v){u.search=u.search.replace(new RegExp(w+"=([^&]*)"),w+"="+x);}}}}return u;},f=function(w,u,v){if(typeof v==="string"&&v!==""){if(!w.match(/\?/)){w=w+"?"+u+"="+v;}else{if(!w.match(u)){w=w.replace(/\?/,"?"+u+"="+v+"&");}}}return w;},b=function(v){var u=(typeof d!=="undefined")?d:0;if(typeof v!=="undefined"){u=v;}return u;};g.addRefUrls=function(z,A,v,u){var B=new RegExp("^http://.*(amazon|endless|myhabit|amazonwireless|javari|smallparts)\\.(com|ca|co\\.jp|de|fr|co\\.uk|cn|it|es)/.*","i"),w,y,x;for(x=0;x<z.length;x++){z[x].rel="nofollow";w=String(z[x].href);if(y=w.match(B)){z[x].href=g.addTrackingParameters(z[x],A,v,u);}}};g.addRefRefUrl=function(u){return k(u,"ref-refURL",s);};g.getRefRefUrl=function(){return s;};g.getRawRefUrl=function(){return m;};g.addSignature=function(v,u,w){return k(k(v,"sig",u),"sigts",w);};g.addLinkCode=function(v,u){return k(v,"linkCode",u);};g.addTrackingId=function(v,u){return k(v,"tag",u);};g.addLinkId=function(u,v){return k(u,"linkId",v);};g.addSubtag=function(u,v){return k(u,"ascsubtag",v);};g.addCreativeAsin=function(u,v){return k(k(u,"creativeASIN",v),"adId",v);};g.addAdType=function(v,u){return k(v,"adType",u);};g.addAdMode=function(u,v){return k(u,"adMode",v);};g.addAdFormat=function(v,u){return k(v,"adFormat",u);};g.addImpressionTimestamp=function(u,v){if(typeof v==="number"){v=v.toString();}return k(u,"impressionTimestamp",v);};g.convertToRedirectedUrl=function(u,x,v){var w=document.createElement("a");w.setAttribute("href",x);if(typeof v!=="undefined"){k(w,v,i(u.getAttribute("href")),true);}else{w.setAttribute("href",x+"/"+w.getAttribute("href"));}u.setAttribute("href",w.getAttribute("href"));return u;};g.getImpressionToken=function(){return h;};g.generateTransitId=function(){return g.getHashedImpressionToken();};g.getHashedImpressionToken=function(){var u=o.split("/");var v=u[u.length-2];return v;};g.getTransitId=function(){if(typeof assoc_session_storage!=="undefined"){var u=assoc_session_storage.get(a);return u;}return null;};g.getClickUrl=function(){return p;};g.addImpressionToken=function(v,w){var u=b(w);if(typeof h==="string"&&h!==""){k(v,"imprToken",h);if(typeof u!=="undefined"){k(v,"slotNum",u);}}return v;};g.addImpressionTokenStr=function(w,v){var u=b(v);if(typeof h==="string"&&h!==""){w=f(w,"imprToken",h);if(typeof u!=="undefined"){w=f(w,"slotNum",u);}}return w;};g.addTrackingParameters=function(A,B,z,E,x,u,y,w,v,F,D,C){return g.addSignature(g.addCreativeAsin(g.addLinkId(g.addTrackingId(g.addSubtag(g.addLinkCode(g.addRefRefUrl(g.addImpressionToken(g.addRefMarker(g.addAdType(g.addAdMode(g.addAdFormat(g.addImpressionTimestamp(A,C),D),F),v),x))),z),r),E),B),u),y,w);};g.addRefMarker=function(v,x){var w,u=false;if(typeof x==="undefined"){return v;}if(w=v.pathname.match(j)){v.pathname=v.pathname.replace(w[1],"ref="+x);}else{u=(v.pathname.charAt(v.pathname.length-1)==="/");v.pathname=v.pathname+(u?"":"/")+"ref="+x;}return v;};g.getRefMarker=function(u){var v;if(v=u.pathname.match(j)){return v[1].substr(4);}else{return undefined;}};g.getCurrentURL=function(){return(window.location!==window.parent.location)?document.referrer:document.location.href;};g.makeForesterCall=function(w){var u=undefined,v;if(typeof JSON!=="undefined"){v=JSON.stringify(w);}else{if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){v=amzn_assoc_utils.stringify(w);}else{return;}}if(typeof o==="string"){u=o+"?assoc_payload="+encodeURIComponent(v);g.generateImage(u);}};g.recordImpression=function(w,u,z,x,B){z.linkCode=w;z.trackingId=u;z.refUrl=g.getCurrentURL();if(n||!t){g.makeForesterCall(z);}else{g.addABPFlag(z,g.makeForesterCall);}if(typeof x==="undefined"||!x){var y=(new Date()).getTime();var A=(typeof B!=="undefined")?B:"";var v=e+"?l="+w+"&t="+u+"&o="+l+"&cb="+y+A;g.generateImage(v);}};g.createAssocPayload=function(y,w,v,u){y.linkCode=w;y.trackingId=v;y.refUrl=u;var x="";if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){x=amzn_assoc_utils.stringify(y);}return x;};g.recordAESImpression=function(w,u,x){if(typeof q==="string"){var z=g.createAssocPayload(x,w,u,g.getCurrentURL());var v=g.getHashedImpressionToken();var y=q+v+"/pixel?assoc_payload="+encodeURIComponent(z);g.generateImage(y);}};g.recordTransit=function(){if(!(g.getTransitId())||g.isUTMParamPresentInUrl(g.getCurrentURL())){assoc_session_storage.set(a,g.generateTransitId());}};g.isUTMParamPresentInUrl=function(v){var u=v.match(/utm_source=/i);return(u!==null);};g.addAAXClickUrls=function(v){var x,w,u;if(typeof v==="undefined"||typeof p==="undefined"){return;}for(w=0;w<v.length;w++){u=String(v[w].href);if(u.indexOf(p)<0){x=p+u;v[w].href=x;}}};g.addAAXClickUrl=function(u){if(typeof u==="undefined"||u.indexOf(p)===0){return u;}return p+u;};g.updateLinks=function(v,x){var w,u;if(typeof x!=="function"){return;}for(w=0;w<v.length;w++){u=String(v[w].href);v[w].href=x(u);}};g.elementInViewPort=function(u){var v=u.getBoundingClientRect(),w=(v.top>=0&&v.left>=0&&v.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&v.right<=(window.innerWidth||document.documentElement.clientWidth));return{posX:v.left+window.pageXOffset,posY:v.top+window.pageYOffset,inViewPort:w};};g.recordViewability=function(z,y,v,w){if(typeof o==="string"){var x=g.createViewbilityPayload(z,y,v,w);var u=o+x+"&cb="+(new Date()).getTime();g.generateImage(u);}};g.recordAESViewability=function(B,A,v,w){if(typeof q==="string"){var x=g.createViewbilityPayload(B,A,v,w);var u=g.getHashedImpressionToken();var z=encodeURIComponent(x);var y=q+u+"/pixel/"+z+"&cb="+(new Date()).getTime();g.generateImage(y);}};g.createViewbilityPayload=function(z,y,v,x){var w={};if(typeof y!=="undefined"){w.above_the_fold=y;}if(typeof v!=="undefined"){w.topPos=v;}if(typeof x!=="undefined"){w.leftPos=x;}if(typeof z!=="undefined"){if(Object.keys(w).length===0){w.viewable=true;}w.slotNum=z;}var u="";if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){u=amzn_assoc_utils.stringify({adViewability:[w]});}return u;};g.generateImage=function(u){if(typeof u!=="undefined"){(new Image()).src=u;}};g.addABPFlag=function(x,F){var z=false,y=2,w=document.body?document.body.appendChild(new Image()):new Image(),v=document.body?document.body.appendChild(new Image()):new Image(),C=false,A=false,u=Math.random()*11,E=t+"?ch=*&rn=*",D=function(H,G){if(y===0||G>1000){x.supplySideMetadata={ABPInstalled:y===0&&z};H(x);}else{setTimeout(function(){D(H,G*2);},G*2);}},B=function(){if(--y){return;}z=!C&&A;};w.style.display="none";v.style.display="none";w.onload=B;w.onerror=function(){C=true;B();};w.src=E.replace(/\*/,1).replace(/\*/,u);v.onload=B;v.onerror=function(){A=true;B();};v.src=E.replace(/\*/,2).replace(/\*/,u);D(F,250);};return g;};var assoc_session_storage=(function(){var a={};a.get=function(c){var d=null;if(typeof(window.sessionStorage)!=="undefined"){try{d=window.sessionStorage.getItem(c);}catch(b){}}return d;};a.set=function(c,d){if(typeof(window.sessionStorage)!=="undefined"){try{window.sessionStorage.setItem(c,d);}catch(b){}}};return a;}());window.elemTracker=function(b){var a={};a.trackElements=function(d,c){var f,e;if(typeof d!=="undefined"&&d.length>0&&typeof c==="function"){window.addEventListener("scroll",function(){for(f=0;f<d.length;f++){e=b.elementInViewPort(d[f]);if(e.inViewPort){c();}}},false);}};return a;};
+	var amznAutoTaggerMaker=function(h,v,B){var D={CA:"ca",CN:"cn",IN:"in",DE:"de",FR:"fr",GB:"co.uk",JP:"co.jp",US:"com"},j={CA:[],CN:[],IN:[],DE:["javari"],FR:["javari"],GB:["javari"],JP:["javari"],US:["smallparts","amazonwireless","endless","myhabit"]},F=(function(){var P=-1,O={};O.getNextSlotNum=function(){return ++P;};return O;}()),q,o,e=Math.max(document.body.scrollHeight,document.body.offsetHeight,document.documentElement.clientHeight,document.documentElement.scrollHeight,document.documentElement.offsetHeight),m=Math.max(document.body.scrollWidth,document.body.offsetWidth,document.documentElement.clientWidth,document.documentElement.scrollWidth,document.documentElement.offsetWidth),y={totalDocWidth:m,totalDocHeight:e,logType:"onetag_pageload",pageTitle:document.title},a="w50",J="w61",H="g12",C={},b=new RegExp("%3F"),w=new Object(),x=false,l="",s="",u=0,L=0,d=0,G=new RegExp("amzn.to"),r=new RegExp(h.redirectorEndPoint),E=["kdp.amazon.com"],N=[],I="assocPayloadId",c=function(P){var Q,O=false;for(Q=0;Q<E.length;Q++){if(P.match(E[Q])){O=true;break;}}return O;},p=function(O){return O.nextSibling&&O.nextSibling.tagName==="IMG"&&O.nextSibling.hasAttribute("src")&&(O.nextSibling.getAttribute("src").search(/ir-[a-z]{2}\.amazon-adsystem\.com/)>-1||O.nextSibling.getAttribute("src").search(/www\.assoc-amazon\.*/)>-1);},n=function(O){if(!O.href.match(r)){O.href=h.redirectorEndPoint+O.href;}},k=function(Y,ae){var Z=new RegExp("/(ref=[\\w]+)/?","i"),U,ad=false,P,S,T=false,X=Y.search.match(/\?tag=([^&]+)|&tag=([^&]+)|\?tag-value=([^&]+)|&tag-value=([^&]+)|\?tag_value=([^&]+)|&tag_value=([^&]+)|\?t=([^&]+)|&t=([^&]+)/),R=Y.search.match(/\?tag=|&tag=|\?tag-value=|&tag-value=|\?tag_value=|&tag_value=|\?t=|&t=/),O=Y.search.match(/(linkCode|link_code|lc)=([^&]+)/i),W=v.elementInViewPort(Y),ac={autoTagged:false,overwritten:false,geoRedirected:false,atf:W.inViewPort},Q=F.getNextSlotNum(),V={destinationURL:Y.href,slotNum:Q,atfInFirstLoad:W.inViewPort,posX:W.posX,posY:W.posY,logType:"onetag_textlink"},ab=p(Y),aa;ac.slotNum=Q;if(Y.search===""){Y.search="?imprToken="+v.getImpressionToken()+"&slotNum="+Q;}else{Y.search=Y.search.replace(/\?/,"?imprToken="+v.getImpressionToken()+"&slotNum="+Q+"&");}if(h.enableAutoTagging){ac.autoTagged=true;if(X){if(h.overwrite){for(S=1;S<9;S++){if(X[S]!=undefined){Y.search=Y.search.replace(X[S],ae);break;}}ac.overwritten=true;ad=true;}}else{if(R){Y.search=Y.search.replace(/tag=/,"tag="+ae);ad=true;}else{Y.search=Y.search.replace(/\?/,"?tag="+ae+"&");ad=true;}}}if(O&&typeof h.overridableLinkCodes[O[2]]!=="undefined"){T=true;}if(O&&!T){P=O[2];}else{P=ad?a:J;}if(O){V.oldLinkCode=O[2];Y.search=Y.search.replace(O[2],P);}else{Y.search=Y.search.replace(/\?/,"?linkCode="+P+"&");}if(ad){aa=ae;}else{if(typeof X!=="undefined"&&X instanceof Array&&X.length>=S+1&&typeof X[S]==="string"){aa=X[S];}else{aa="";}}if(C.shouldBeGeoRedirected()){ac.geoRedirected=true;n(Y);}if(Y.hasAttribute("data-amzn-asin")&&!Y.search.match("creativeASIN")){Y.search=Y.search.replace(/\?/,"?creativeASIN="+Y.getAttribute("data-amzn-asin")+"&");}if(C.shouldTrackTransit(h)){v.recordTransit();V[I]=v.getTransitId();}N.push({pos:W,slotNum:Q,linkCode:P,linkInfo:V,skipIRCall:ab,imprTag:aa});Y.href=v.addAAXClickUrl(Y.href);return ac;},A=function(O){if(O.href.match(b)){o=O.href.split(b);O.href=o[0]+"?"+decodeURIComponent(o[1]);}},t=function(P,O,S){var R,Q;for(R=0;R<P.length;R++){for(Q=0;Q<O.length;Q++){if(window.addEventListener){P[R].addEventListener(O[Q],S,false);}else{P[R].attachEvent("on"+O[Q],S);}}}},K=function(O,P){var Q=false;t([O],["touchstart"],function(){Q=false;});t([O],["touchmove"],function(){Q=true;});t([O],["click","touchend"],function(R){if(Q){return;}O.setAttribute("href",P);});t([O],["auxclick","contextmenu"],function(R){O.setAttribute("href",P);});t([O],["mouseup"],function(R){if(R.button===1||R.ctrlKey){O.setAttribute("href",P);}});},M=function(){var O="";for(i=0;i<h.itemRefs.length;i++){if(typeof h.itemRefs[i].type!=="undefined"&&h.itemRefs[i].type==="ASIN"&&typeof h.itemRefs[i].sourceLink!=="undefined"&&String(h.itemRefs[i].sourceLink).match(G)!==null&&typeof h.itemRefs[i].destinationLink!=="undefined"){w[h.itemRefs[i].sourceLink]=h.itemRefs[i].destinationLink;if(l!==""){O=",";}l=l+O+h.itemRefs[i].sourceLink;u++;}}},f=function(P,O){B.trackElements([P],function(){if(typeof O!==undefined&&O.slotNum!==undefined&&(O.viewed===undefined||!O.viewed)){v.recordViewability(O.slotNum);if(C.shouldInteractWithAES(h)){v.recordAESViewability(O.slotNum);}O.viewed=true;}});},g=function(O,P){K(O,O.getAttribute("href"));O.setAttribute("href",P);},z=function(){var Q,P,O;for(Q=0;Q<N.length;Q++){P=N[Q];O=P.pos;v.recordImpression(P.linkCode,P.imprTag,P.linkInfo,P.skipIRCall,P.slotNum);v.recordViewability(P.slotNum,O.inViewPort,O.posX,O.posY);if(C.shouldInteractWithAES(h)){v.recordAESImpression(P.linkCode,P.imprTag,P.linkInfo);v.recordAESViewability(P.slotNum,O.inViewPort,O.posX,O.posY);}}N=[];};if(h.locale!=undefined){q=h.locale;}else{q="US";}C.shouldBeGeoRedirected=function(){return h.enableGeoRedirection&&(h.region!==""&&h.region!==h.viewerCountry);};C.publisherCallBack=function(){window["amzn_assoc_client_cb_"+h.adUnitSlotNum]({type:"onload",data:{},widget:C});};C.decorateLinkElement=function(O){A(O);linkProperties=k(O,h.trackingId);f(O,linkProperties);return linkProperties;};C.shouldTrackTransit=function(O){return((typeof O.disableTransitTracking==="undefined")||!O.disableTransitTracking);};C.shouldInteractWithAES=function(O){return((typeof O.enableAESInteraction!=="undefined")&&O.enableAESInteraction);};C.tagLinks=function(af){var ah,ag,P,aa,aj,ac=[],al=0,X,Z,ai,ae,ak,O,Y,V=0,R=0,ab=0,Q=0,U=0,S=0,T,W,ad="";P=D[q];aa=j[q];aj=new RegExp("^(http|https)://(www|[\\w\\-\\.]+)?amazon\\.("+P+")/","i");if(aa){for(al=0;al<aa.length;al++){X=P;if(P=="co.jp"){X="co.jp|jp";}ac[al]=new RegExp("^(http|https)://(www\\.)?("+aa[al]+")\\.("+X+")/","i");}}Z=af.getElementsByTagName("a");if(!x){M();x=true;}for(ah=0;ah<Z.length;ah++){Y=undefined;ai=String(Z[ah].href);if(ae=ai.match(aj)&&!c(ai)){Y=C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}else{if(h.isShortLinksSupported&&(ak=ai.match(G))!==null){L++;if(s!==""){ad=",";}s=s+ad+Z[ah].href;T=w[Z[ah].href];if(typeof T!=="undefined"){d++;Z[ah].setAttribute("href",T);Y=C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}else{if(C.shouldBeGeoRedirected()){Y=C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}}}else{for(O=0;O<ac.length;O++){if(ae=ai.match(ac[O])){C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}}}}if(typeof Y!=="undefined"){if(Y.autoTagged){R++;}if(Y.overwritten){S++;}if(Y.geoRedirected){ab++;}if(Y.atf){Q++;}else{U++;}V++;}}y.numLinks=V;y.numAutoTaggedLinks=R;y.autoTaggingEnabled=h.enableAutoTagging;y.geoRedirectEnabled=h.enableGeoRedirection;y.disableTransitTracking=h.disableTransitTracking;y.numLinksATF=Q;y.numLinksBTF=U;y.shortLinksInLivePool=l;y.shortLinksInPage=s;y.shortLinksInLivePoolCount=u;y.shortLinksInPageCount=L;y.shortLinksMatchCount=d;if(C.shouldTrackTransit(h)){v.recordTransit();y[I]=v.getTransitId();}v.recordImpression(h.linkCode,h.trackingId,y);if(C.shouldInteractWithAES(h)){v.recordAESImpression(h.linkCode,h.trackingId,y);}t([window],["load"],z);};return C;};
+    var spec = {
+        trackingId : "dogfooadv-20",
+        region : "US",
+        overwrite : false,
+        enableAutoTagging : false,
+        linkCode : "w49",
+        overridableLinkCodes :  {   "am1": ""   , "am2": ""   , "am3": ""   , "as1": ""   , "as2": ""   , "as3": ""   , "as4": ""   , "li1": ""   , "li2": ""   , "li3": ""   , "ll1": ""   , "ll2": ""   },
+        enableGeoRedirection : true,
+        redirectorEndPoint : "https://assoc-redirect.amazon.com/g/r/",
+        adUnitSlotNum : "0",
+        itemRefs : [],
+        isShortLinksSupported : true,
+        viewerCountry : "IE",
+        disableTransitTracking : false,
+        enableAESInteraction : false
+    }, trackingUtils = window.trackingUtils(
+        "1",
+        "//fls-na.amazon-adsystem.com/1/associates-ads/1/OP/r/json",
+        "//ir-na.amazon-adsystem.com/e/ir",
+        "https://aax-us-east.amazon-adsystem.com/x/px/QiXm-leOAykm5pJiqXRINIsAAAFr7UBOXgEAAAFKAUHyXBc/", "https://aax-us-east.amazon-adsystem.com/x/c/QiXm-leOAykm5pJiqXRINIsAAAFr7UBOXgEAAAFKAUHyXBc/", "dveuwbAtRXZXTszLYWoEEA", undefined, undefined, undefined, true,
+        "https://assoc-na.associate-amazon.com/onetag/"
+    );
+
+    window.amznAutoTagger = amznAutoTaggerMaker(spec, trackingUtils, window.elemTracker(trackingUtils));
+    window.amznAutoTagger.tagLinks(document);
+    window.amznAutoTagger.publisherCallBack();
+}());
+
+ //# sourceURL=dynscript-0.js</script><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script>
 <meta charset="utf-8"/>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible"/>
-<meta content="noindex, nofollow" name="robots"/>
-<meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport"/>
-<link href="https://www.dogfoodadvisor.com//cdn-cgi/styles/cf.errors.css" id="cf_styles-css" media="screen,projection" rel="stylesheet" type="text/css"/>
-<style type="text/css">body{margin:0;padding:0}</style>
-<script async="" src="https://www.gstatic.com/recaptcha/api2/v1561357937155/recaptcha__en.js" type="text/javascript"></script><script src="https://www.dogfoodadvisor.com//cdn-cgi/scripts/zepto.min.js" type="text/javascript"></script>
-<script src="https://www.dogfoodadvisor.com//cdn-cgi/scripts/cf.common.js" type="text/javascript"></script>
-<script charset="utf8" src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit"></script></head>
-<body>
-<div id="cf-wrapper">
-<div class="cf-alert cf-alert-error cf-cookie-error" data-translate="enable_cookies" id="cookie-alert">Please enable cookies.</div>
-<div class="cf-error-details-wrapper" id="cf-error-details">
-<div class="cf-wrapper cf-header cf-error-overview">
-<h1 data-translate="challenge_headline">One more step</h1>
-<h2 class="cf-subheadline"><span data-translate="complete_sec_check">Please complete the security check to access</span> www.dogfoodadvisor.com</h2>
-</div>
-<div class="cf-section cf-highlight cf-captcha-container">
-<div class="cf-wrapper">
-<div class="cf-columns two">
-<div class="cf-column">
-<div class="cf-highlight-inverse cf-form-stacked">
-<form action="/cdn-cgi/l/chk_captcha" class="challenge-form" id="challenge-form" method="get">
-<input name="s" type="hidden" value="eaffed2aaf85fbf78046f7dfdac73fc97546e2f3-1562376048-1800-AdWw0hDJhthuG1yrg58ryT3bZTQFu4Lwu4UnJ3JVQB1fOI2rqbCqnUPlDKaRFgzouFMJW66oEemAEjp4KOd+p9nyZtes17pAfUwyxRVL44Pharai0yUwiBvF5M77uPdRVObNwNJlLfDn8iBjXDyNBx4K/qnfDg03v+dqj36jDFZVkixIq57LNiS7tWJyXMqoxw=="/>
-<script async="" data-ray="4f1dc220ce36646d" data-sitekey="6LfBixYUAAAAABhdHynFUIMA_sa4s-XsJvnjtgB0" data-type="normal" src="https://www.dogfoodadvisor.com//cdn-cgi/scripts/cf.challenge.js" type="text/javascript"></script>
-<div class="g-recaptcha"></div>
-<input id="id" name="id" type="hidden" value="4f1dc220ce36646d"/> <div id="recaptcha_widget"><div style="width: 304px; height: 78px;"><div><iframe frameborder="0" height="78" name="a-kfw8bh1yokb4" role="presentation" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" scrolling="no" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfBixYUAAAAABhdHynFUIMA_sa4s-XsJvnjtgB0&amp;co=aHR0cHM6Ly93d3cuZG9nZm9vZGFkdmlzb3IuY29tOjQ0Mw..&amp;hl=en&amp;v=v1561357937155&amp;size=normal&amp;cb=4nimkqp8utot" width="304"></iframe></div><textarea class="g-recaptcha-response" id="g-recaptcha-response" name="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div> <input id="recaptcha_submit" type="submit" value="Submit"/> <noscript class="cf-captcha-info" id="cf-captcha-bookmark">
-<div><div style="width: 302px">
-<div>
-<iframe frameborder="0" scrolling="no" src="https://www.google.com/recaptcha/api/fallback?k=6LfBixYUAAAAABhdHynFUIMA_sa4s-XsJvnjtgB0" style="width: 302px; height:422px; border-style: none;"></iframe>
-</div>
-<div style="width: 300px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
-<textarea class="g-recaptcha-response" id="g-recaptcha-response" name="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;"></textarea>
-<input type="submit" value="Submit"/>
-</div>
-</div></div>
-</noscript>
-</form>
-</div>
-</div>
-<div class="cf-column">
-<div class="cf-screenshot-container">
-<span class="cf-no-screenshot"></span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cf-section cf-wrapper">
-<div class="cf-columns two">
-<div class="cf-column">
-<h2 data-translate="why_captcha_headline">Why do I have to complete a CAPTCHA?</h2>
-<p data-translate="why_captcha_detail">Completing the CAPTCHA proves you are a human and gives you temporary access to the web property.</p>
-</div>
-<div class="cf-column">
-<h2 data-translate="resolve_captcha_headline">What can I do to prevent this in the future?</h2>
-<p data-translate="resolve_captcha_antivirus">If you are on a personal connection, like at home, you can run an anti-virus scan on your device to make sure it is not infected with malware.</p>
-<p data-translate="resolve_captcha_network">If you are at an office or shared network, you can ask the network administrator to run a scan across the network looking for misconfigured or infected devices.</p>
-</div>
-</div>
-</div>
-<div class="cf-error-footer cf-wrapper">
-<p>
-<span class="cf-footer-item">Cloudflare Ray ID: <strong>4f1dc220ce36646d</strong></span>
-<span class="cf-footer-separator">•</span>
-<span class="cf-footer-item"><span>Your IP</span>: 138.201.51.213</span>
-<span class="cf-footer-separator">•</span>
-<span class="cf-footer-item"><span>Performance &amp; security by</span> <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer" id="brand_link" target="_blank">Cloudflare</a></span>
-</p>
-</div>
-</div>
-</div>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Canine Carry Outs dog snacks Bacon Flavor | Dog Food Advisor</title>
+<link href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/" rel="canonical"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="Canine Carry Outs dog snacks Bacon Flavor | Dog Food Advisor" property="og:title"/>
+<meta content="Dog Food Advisor › Forums › Dog Treats › Canine Carry Outs dog snacks Bacon Flavor Viewing 25 posts - 1 through 25 (of 25 total) Author Posts May 23, 2014 at 12:38 pm #42234 Report Abuse newmomMember This treat was given to me for Charlie. It does not say where it was made, only…" property="og:description"/>
+<meta content="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/" property="og:url"/>
+<meta content="Dog Food Advisor" property="og:site_name"/>
+<meta content="https://www.facebook.com/dogfoodadvisor/" property="article:publisher"/>
+<meta content="https://www.dogfoodadvisor.com/wp-content/uploads/2019/03/default-sharing.jpg" property="og:image"/>
+<meta content="https://www.dogfoodadvisor.com/wp-content/uploads/2019/03/default-sharing.jpg" property="og:image:secure_url"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Dog Food Advisor › Forums › Dog Treats › Canine Carry Outs dog snacks Bacon Flavor Viewing 25 posts - 1 through 25 (of 25 total) Author Posts May 23, 2014 at 12:38 pm #42234 Report Abuse newmomMember This treat was given to me for Charlie. It does not say where it was made, only…" name="twitter:description"/>
+<meta content="Canine Carry Outs dog snacks Bacon Flavor | Dog Food Advisor" name="twitter:title"/>
+<meta content="@dogfoodadvisor" name="twitter:site"/>
+<meta content="https://www.dogfoodadvisor.com/wp-content/uploads/2019/03/default-sharing.jpg" name="twitter:image"/>
+<meta content="@dogfoodadvisor" name="twitter:creator"/>
+<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NPVJKKH"></script><script async="" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js" type="text/javascript"></script><script class="yoast-schema-graph yoast-schema-graph--main" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.dogfoodadvisor.com/#organization","name":"Dog Food Advisor","url":"https://www.dogfoodadvisor.com/","sameAs":["https://www.facebook.com/dogfoodadvisor/","https://twitter.com/dogfoodadvisor"],"logo":{"@type":"ImageObject","@id":"https://www.dogfoodadvisor.com/#logo","url":"https://www.dogfoodadvisor.com/wp-content/uploads/2019/03/default-sharing.jpg","width":1200,"height":630,"caption":"Dog Food Advisor"},"image":{"@id":"https://www.dogfoodadvisor.com/#logo"}},{"@type":"WebSite","@id":"https://www.dogfoodadvisor.com/#website","url":"https://www.dogfoodadvisor.com/","name":"Dog Food Advisor","publisher":{"@id":"https://www.dogfoodadvisor.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.dogfoodadvisor.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#webpage","url":"https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/","inLanguage":"en-US","name":"Canine Carry Outs dog snacks Bacon Flavor | Dog Food Advisor","isPartOf":{"@id":"https://www.dogfoodadvisor.com/#website"},"datePublished":"2014-05-23T17:38:38+00:00","dateModified":"2014-05-23T17:38:38+00:00"}]}</script>
+<link href="//www.google.com" rel="dns-prefetch"/>
+<link href="//a.opmnstr.com" rel="dns-prefetch"/>
+<link href="//ajax.googleapis.com" rel="dns-prefetch"/>
+<link href="//maxcdn.bootstrapcdn.com" rel="dns-prefetch"/>
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="https://www.dogfoodadvisor.com/feed/" rel="alternate" title="Dog Food Advisor » Feed" type="application/rss+xml"/>
+<link href="https://www.dogfoodadvisor.com/comments/feed/" rel="alternate" title="Dog Food Advisor » Comments Feed" type="application/rss+xml"/>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="https://www.dogfoodadvisor.com/wp-content/themes/dog-food-advisor-2019/style.css?ver=1562085417" id="dog-food-advisor-2019-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.dogfoodadvisor.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.dogfoodadvisor.com/wp-content/plugins/bbpress/templates/default/css/bbpress.css?ver=2.5.14-6684" id="bbp-default-css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="https://www.dogfoodadvisor.com/wp-content/plugins/dog-food-advisor-custom-search/custom-search.css?ver=5.2.2" id="custom-search-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css?ver=1.11.4" id="membermouse-jquery-css-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.dogfoodadvisor.com/wp-content/plugins/membermouse/resources/css/common/mm-main.css?ver=2.2.8" id="membermouse-main-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.dogfoodadvisor.com/wp-content/plugins/membermouse/resources/css/common/mm-buttons.css?ver=2.2.8" id="membermouse-buttons-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=5.2.2" id="membermouse-font-awesome-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.dogfoodadvisor.com/wp-content/plugins/dog-food-product-dashboard/assets/dfpd.css?ver=2.2.1" id="DogFoodProductDashboard-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C400i%2C700%2C700i&amp;subset=latin%2Clatin-ext&amp;ver=5.2.2" id="ea-fonts-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.dogfoodadvisor.com/wp-content/themes/dog-food-advisor-2019/assets/css/main.css?ver=1562085417" id="ea-style-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.dogfoodadvisor.com/wp-content/themes/dog-food-advisor-2019/assets/css/print.css?ver=1553791406" id="ea-print-css" media="print" rel="stylesheet" type="text/css"/>
+<link href="https://www.dogfoodadvisor.com/wp-content/plugins/searchwp-live-ajax-search/assets/styles/style.css?ver=1.3.1" id="searchwp-live-search-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.dogfoodadvisor.com/wp-content/tablepress-combined.min.css?ver=250" id="tablepress-default-css" media="all" rel="stylesheet" type="text/css"/>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" type="text/javascript"></script>
 <script type="text/javascript">
-  window._cf_translation = {};
-  
-  
+/* <![CDATA[ */
+var MemberMouseGlobal = {"jsIsAdmin":"","adminUrl":"https:\/\/www.dogfoodadvisor.com\/wp-admin\/","globalurl":"https:\/\/www.dogfoodadvisor.com\/wp-content\/plugins\/membermouse","checkoutProcessingPaidMessage":"Please wait while we process your order...","checkoutProcessingFreeMessage":"Please wait while we create your account...","checkoutProcessingMessageCSS":"mm-checkout-processing-message","currencyInfo":{"currency":"USD","postfixIso":false,"name":"United States Dollar","int_curr_symbol":"&#85;&#83;&#68;&#32;","currency_symbol":"$","mon_decimal_point":".","mon_thousands_sep":",","mon_grouping":"3;3","positive_sign":"","negative_sign":"","int_frac_digits":"2","frac_digits":"2","p_cs_precedes":"1","p_sep_by_space":"0","n_cs_precedes":"1","n_sep_by_space":"0","p_sign_posn":"1","n_sign_posn":"1"}};
+/* ]]> */
 </script>
-<div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe frameborder="0" name="c-kfw8bh1yokb4" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" scrolling="no" src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=v1561357937155&amp;k=6LfBixYUAAAAABhdHynFUIMA_sa4s-XsJvnjtgB0&amp;cb=f9yt6tbkzik0" style="width: 100%; height: 100%;" title="recaptcha challenge"></iframe></div></div></body></html>
+<script src="https://www.dogfoodadvisor.com/wp-content/plugins/membermouse/resources/js/global.js?ver=2.2.8" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-content/plugins/membermouse/resources/js/common/mm-common-core.js?ver=2.2.8" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-content/plugins/membermouse/resources/js/user/mm-preview.js?ver=2.2.8" type="text/javascript"></script>
+<script async="async" data-cfasync="false" id="omapi-script" src="https://a.opmnstr.com/app/js/api.min.js" type="text/javascript"></script>
+<link href="https://www.dogfoodadvisor.com/wp-json/" rel="https://api.w.org/"/>
+<link href="https://www.dogfoodadvisor.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<link href="https://www.dogfoodadvisor.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+<meta content="WordPress 5.2.2" name="generator"/>
+<link href="https://www.dogfoodadvisor.com/?p=42234" rel="shortlink"/>
+<style type="text/css">
+			.flagged-ingredient {font-weight:bold;}
+			.gray-flagged-ingredient {color:#555555;}
+			.red-flagged-ingredient {color:#cc0000;}
+			/* Fallback only used if ingredient "artificial colors" does not exist */
+			.ingredient-artificial-colors {color:#cc0000;}
+			</style>
+<meta content="cRhP3aOpvCdRE27c8VoI3tco7oUUw_32BZjsSGYLoBI" name="google-site-verification"/>
+<meta content="HF3BTnP7DXgXUuEY3DAYvCx3wWA" name="alexaVerifyID"/>
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"Awcig1awAe00wn", domain:"dogfoodadvisor.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img alt="" height="1" src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=Awcig1awAe00wn" style="display:none" width="1"/></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NPVJKKH');</script>
+<link href="https://www.dogfoodadvisor.com/wp-content/uploads/2019/03/cropped-favicon-32x32.jpg" rel="icon" sizes="32x32"/>
+<link href="https://www.dogfoodadvisor.com/wp-content/uploads/2019/03/cropped-favicon-192x192.jpg" rel="icon" sizes="192x192"/>
+<link href="https://www.dogfoodadvisor.com/wp-content/uploads/2019/03/cropped-favicon-180x180.jpg" rel="apple-touch-icon-precomposed"/>
+<meta content="https://www.dogfoodadvisor.com/wp-content/uploads/2019/03/cropped-favicon-270x270.jpg" name="msapplication-TileImage"/>
+<style type="text/css">@-webkit-keyframes bounce{0%,20%,50%,80%,to{-webkit-transform:translateY(0);transform:translateY(0)}40%{-webkit-transform:translateY(-30px);transform:translateY(-30px)}60%{-webkit-transform:translateY(-15px);transform:translateY(-15px)}}@keyframes bounce{0%,20%,50%,80%,to{-webkit-transform:translateY(0);transform:translateY(0)}40%{-webkit-transform:translateY(-30px);transform:translateY(-30px)}60%{-webkit-transform:translateY(-15px);transform:translateY(-15px)}}.om-animation-bounce{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:bounce;animation-name:bounce}@-webkit-keyframes bounceIn{0%{opacity:0;-webkit-transform:scale(.3);transform:scale(.3)}50%{opacity:1;-webkit-transform:scale(1.05);transform:scale(1.05)}70%{-webkit-transform:scale(.9);transform:scale(.9)}to{opacity:1;-webkit-transform:scale(1);transform:scale(1)}}@keyframes bounceIn{0%{opacity:0;-webkit-transform:scale(.3);transform:scale(.3)}50%{opacity:1;-webkit-transform:scale(1.05);transform:scale(1.05)}70%{-webkit-transform:scale(.9);transform:scale(.9)}to{opacity:1;-webkit-transform:scale(1);transform:scale(1)}}.om-animation-bounce-in{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:bounceIn;animation-name:bounceIn}@-webkit-keyframes bounceInDown{0%{opacity:0;-webkit-transform:translateY(-2000px);transform:translateY(-2000px)}60%{opacity:1;-webkit-transform:translateY(30px);transform:translateY(30px)}80%{-webkit-transform:translateY(-10px);transform:translateY(-10px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes bounceInDown{0%{opacity:0;-webkit-transform:translateY(-2000px);transform:translateY(-2000px)}60%{opacity:1;-webkit-transform:translateY(30px);transform:translateY(30px)}80%{-webkit-transform:translateY(-10px);transform:translateY(-10px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}.om-animation-bounce-in-down{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:bounceInDown;animation-name:bounceInDown}@-webkit-keyframes bounceInLeft{0%{opacity:0;-webkit-transform:translateX(-2000px);transform:translateX(-2000px)}60%{opacity:1;-webkit-transform:translateX(30px);transform:translateX(30px)}80%{-webkit-transform:translateX(-10px);transform:translateX(-10px)}to{-webkit-transform:translateX(0);transform:translateX(0)}}@keyframes bounceInLeft{0%{opacity:0;-webkit-transform:translateX(-2000px);transform:translateX(-2000px)}60%{opacity:1;-webkit-transform:translateX(30px);transform:translateX(30px)}80%{-webkit-transform:translateX(-10px);transform:translateX(-10px)}to{-webkit-transform:translateX(0);transform:translateX(0)}}.om-animation-bounce-in-left{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:bounceInLeft;animation-name:bounceInLeft}@-webkit-keyframes bounceInRight{0%{opacity:0;-webkit-transform:translateX(2000px);transform:translateX(2000px)}60%{opacity:1;-webkit-transform:translateX(-30px);transform:translateX(-30px)}80%{-webkit-transform:translateX(10px);transform:translateX(10px)}to{-webkit-transform:translateX(0);transform:translateX(0)}}@keyframes bounceInRight{0%{opacity:0;-webkit-transform:translateX(2000px);transform:translateX(2000px)}60%{opacity:1;-webkit-transform:translateX(-30px);transform:translateX(-30px)}80%{-webkit-transform:translateX(10px);transform:translateX(10px)}to{-webkit-transform:translateX(0);transform:translateX(0)}}.om-animation-bounce-in-right{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:bounceInRight;animation-name:bounceInRight}@-webkit-keyframes bounceInUp{0%{opacity:0;-webkit-transform:translateY(2000px);transform:translateY(2000px)}60%{opacity:1;-webkit-transform:translateY(-30px);transform:translateY(-30px)}80%{-webkit-transform:translateY(10px);transform:translateY(10px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes bounceInUp{0%{opacity:0;-webkit-transform:translateY(2000px);transform:translateY(2000px)}60%{opacity:1;-webkit-transform:translateY(-30px);transform:translateY(-30px)}80%{-webkit-transform:translateY(10px);transform:translateY(10px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}.om-animation-bounce-in-up{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:bounceInUp;animation-name:bounceInUp}@-webkit-keyframes flash{0%,50%,to{opacity:1}25%,75%{opacity:0}}@keyframes flash{0%,50%,to{opacity:1}25%,75%{opacity:0}}.om-animation-flash{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:flash;animation-name:flash}@-webkit-keyframes flip{0%{-webkit-transform:perspective(800px) translateZ(0) rotateY(0) scale(1);transform:perspective(800px) translateZ(0) rotateY(0) scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}40%{-webkit-transform:perspective(800px) translateZ(150px) rotateY(170deg) scale(1);transform:perspective(800px) translateZ(150px) rotateY(170deg) scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}50%{-webkit-transform:perspective(800px) translateZ(150px) rotateY(190deg) scale(1);transform:perspective(800px) translateZ(150px) rotateY(190deg) scale(1);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}80%{-webkit-transform:perspective(800px) translateZ(0) rotateY(1turn) scale(.95);transform:perspective(800px) translateZ(0) rotateY(1turn) scale(.95);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}to{-webkit-transform:perspective(800px) translateZ(0) rotateY(1turn) scale(1);transform:perspective(800px) translateZ(0) rotateY(1turn) scale(1);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}}@keyframes flip{0%{-webkit-transform:perspective(800px) translateZ(0) rotateY(0) scale(1);transform:perspective(800px) translateZ(0) rotateY(0) scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}40%{-webkit-transform:perspective(800px) translateZ(150px) rotateY(170deg) scale(1);transform:perspective(800px) translateZ(150px) rotateY(170deg) scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}50%{-webkit-transform:perspective(800px) translateZ(150px) rotateY(190deg) scale(1);transform:perspective(800px) translateZ(150px) rotateY(190deg) scale(1);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}80%{-webkit-transform:perspective(800px) translateZ(0) rotateY(1turn) scale(.95);transform:perspective(800px) translateZ(0) rotateY(1turn) scale(.95);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}to{-webkit-transform:perspective(800px) translateZ(0) rotateY(1turn) scale(1);transform:perspective(800px) translateZ(0) rotateY(1turn) scale(1);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}}.om-animation-flip{-webkit-animation-duration:1s;animation-duration:1s;-webkit-backface-visibility:visible;backface-visibility:visible;-webkit-animation-name:flip;animation-name:flip}@-webkit-keyframes flipInX{0%{-webkit-transform:perspective(800px) rotateX(90deg);transform:perspective(800px) rotateX(90deg);opacity:0}40%{-webkit-transform:perspective(800px) rotateX(-10deg);transform:perspective(800px) rotateX(-10deg)}70%{-webkit-transform:perspective(800px) rotateX(10deg);transform:perspective(800px) rotateX(10deg)}to{-webkit-transform:perspective(800px) rotateX(0deg);transform:perspective(800px) rotateX(0deg);opacity:1}}@keyframes flipInX{0%{-webkit-transform:perspective(800px) rotateX(90deg);transform:perspective(800px) rotateX(90deg);opacity:0}40%{-webkit-transform:perspective(800px) rotateX(-10deg);transform:perspective(800px) rotateX(-10deg)}70%{-webkit-transform:perspective(800px) rotateX(10deg);transform:perspective(800px) rotateX(10deg)}to{-webkit-transform:perspective(800px) rotateX(0deg);transform:perspective(800px) rotateX(0deg);opacity:1}}.om-animation-flip-down{-webkit-animation-duration:1s;animation-duration:1s;-webkit-backface-visibility:visible;backface-visibility:visible;-webkit-animation-name:flipInX;animation-name:flipInX}@-webkit-keyframes flipInY{0%{-webkit-transform:perspective(800px) rotateY(90deg);transform:perspective(800px) rotateY(90deg);opacity:0}40%{-webkit-transform:perspective(800px) rotateY(-10deg);transform:perspective(800px) rotateY(-10deg)}70%{-webkit-transform:perspective(800px) rotateY(10deg);transform:perspective(800px) rotateY(10deg)}to{-webkit-transform:perspective(800px) rotateY(0deg);transform:perspective(800px) rotateY(0deg);opacity:1}}@keyframes flipInY{0%{-webkit-transform:perspective(800px) rotateY(90deg);transform:perspective(800px) rotateY(90deg);opacity:0}40%{-webkit-transform:perspective(800px) rotateY(-10deg);transform:perspective(800px) rotateY(-10deg)}70%{-webkit-transform:perspective(800px) rotateY(10deg);transform:perspective(800px) rotateY(10deg)}to{-webkit-transform:perspective(800px) rotateY(0deg);transform:perspective(800px) rotateY(0deg);opacity:1}}.om-animation-flip-side{-webkit-animation-duration:1s;animation-duration:1s;-webkit-backface-visibility:visible;backface-visibility:visible;-webkit-animation-name:flipInY;animation-name:flipInY}@-webkit-keyframes lightSpeedIn{0%{-webkit-transform:translateX(100%) skewX(-30deg);transform:translateX(100%) skewX(-30deg);opacity:0}60%{-webkit-transform:translateX(-20%) skewX(30deg);transform:translateX(-20%) skewX(30deg);opacity:1}80%{-webkit-transform:translateX(0) skewX(-15deg);transform:translateX(0) skewX(-15deg);opacity:1}to{-webkit-transform:translateX(0) skewX(0deg);transform:translateX(0) skewX(0deg);opacity:1}}@keyframes lightSpeedIn{0%{-webkit-transform:translateX(100%) skewX(-30deg);transform:translateX(100%) skewX(-30deg);opacity:0}60%{-webkit-transform:translateX(-20%) skewX(30deg);transform:translateX(-20%) skewX(30deg);opacity:1}80%{-webkit-transform:translateX(0) skewX(-15deg);transform:translateX(0) skewX(-15deg);opacity:1}to{-webkit-transform:translateX(0) skewX(0deg);transform:translateX(0) skewX(0deg);opacity:1}}.om-animation-light-speed{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:lightSpeedIn;animation-name:lightSpeedIn;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}@-webkit-keyframes pulse{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(1.1);transform:scale(1.1)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes pulse{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(1.1);transform:scale(1.1)}to{-webkit-transform:scale(1);transform:scale(1)}}.om-animation-pulse{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:pulse;animation-name:pulse}@-webkit-keyframes rollIn{0%{opacity:0;-webkit-transform:translateX(-100%) rotate(-120deg);transform:translateX(-100%) rotate(-120deg)}to{opacity:1;-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg)}}@keyframes rollIn{0%{opacity:0;-webkit-transform:translateX(-100%) rotate(-120deg);transform:translateX(-100%) rotate(-120deg)}to{opacity:1;-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg)}}.om-animation-roll-in{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:rollIn;animation-name:rollIn}@-webkit-keyframes rotateIn{0%{-webkit-transform-origin:center center;transform-origin:center center;-webkit-transform:rotate(-200deg);transform:rotate(-200deg);opacity:0}to{-webkit-transform-origin:center center;transform-origin:center center;-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}@keyframes rotateIn{0%{-webkit-transform-origin:center center;transform-origin:center center;-webkit-transform:rotate(-200deg);transform:rotate(-200deg);opacity:0}to{-webkit-transform-origin:center center;transform-origin:center center;-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}.om-animation-rotate{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:rotateIn;animation-name:rotateIn}@-webkit-keyframes rotateInDownLeft{0%{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate(-90deg);transform:rotate(-90deg);opacity:0}to{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}@keyframes rotateInDownLeft{0%{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate(-90deg);transform:rotate(-90deg);opacity:0}to{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}.om-animation-rotate-down-left{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:rotateInDownLeft;animation-name:rotateInDownLeft}@-webkit-keyframes rotateInDownRight{0%{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate(90deg);transform:rotate(90deg);opacity:0}to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}@keyframes rotateInDownRight{0%{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate(90deg);transform:rotate(90deg);opacity:0}to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}.om-animation-rotate-down-right{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:rotateInDownRight;animation-name:rotateInDownRight}@-webkit-keyframes rotateInUpLeft{0%{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate(90deg);transform:rotate(90deg);opacity:0}to{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}@keyframes rotateInUpLeft{0%{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate(90deg);transform:rotate(90deg);opacity:0}to{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}.om-animation-rotate-up-left{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:rotateInUpLeft;animation-name:rotateInUpLeft}@-webkit-keyframes rotateInUpRight{0%{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate(-90deg);transform:rotate(-90deg);opacity:0}to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}@keyframes rotateInUpRight{0%{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate(-90deg);transform:rotate(-90deg);opacity:0}to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}.om-animation-rotate-up-right{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:rotateInUpRight;animation-name:rotateInUpRight}@-webkit-keyframes rubberBand{0%{-webkit-transform:scale(1);transform:scale(1)}30%{-webkit-transform:scaleX(1.25) scaleY(.75);transform:scaleX(1.25) scaleY(.75)}40%{-webkit-transform:scaleX(.75) scaleY(1.25);transform:scaleX(.75) scaleY(1.25)}60%{-webkit-transform:scaleX(1.15) scaleY(.85);transform:scaleX(1.15) scaleY(.85)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes rubberBand{0%{-webkit-transform:scale(1);transform:scale(1)}30%{-webkit-transform:scaleX(1.25) scaleY(.75);transform:scaleX(1.25) scaleY(.75)}40%{-webkit-transform:scaleX(.75) scaleY(1.25);transform:scaleX(.75) scaleY(1.25)}60%{-webkit-transform:scaleX(1.15) scaleY(.85);transform:scaleX(1.15) scaleY(.85)}to{-webkit-transform:scale(1);transform:scale(1)}}.om-animation-rubber-band{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:rubberBand;animation-name:rubberBand}@-webkit-keyframes shake{0%,to{-webkit-transform:translateX(0);transform:translateX(0)}10%,30%,50%,70%,90%{-webkit-transform:translateX(-10px);transform:translateX(-10px)}20%,40%,60%,80%{-webkit-transform:translateX(10px);transform:translateX(10px)}}@keyframes shake{0%,to{-webkit-transform:translateX(0);transform:translateX(0)}10%,30%,50%,70%,90%{-webkit-transform:translateX(-10px);transform:translateX(-10px)}20%,40%,60%,80%{-webkit-transform:translateX(10px);transform:translateX(10px)}}.om-animation-shake{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:shake;animation-name:shake}@-webkit-keyframes slideInDown{0%{opacity:0;-webkit-transform:translateY(-2000px);transform:translateY(-2000px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes slideInDown{0%{opacity:0;-webkit-transform:translateY(-2000px);transform:translateY(-2000px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}.om-animation-slide-in-down{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:slideInDown;animation-name:slideInDown}@-webkit-keyframes slideInLeft{0%{opacity:0;-webkit-transform:translateX(-2000px);transform:translateX(-2000px)}to{-webkit-transform:translateX(0);transform:translateX(0)}}@keyframes slideInLeft{0%{opacity:0;-webkit-transform:translateX(-2000px);transform:translateX(-2000px)}to{-webkit-transform:translateX(0);transform:translateX(0)}}.om-animation-slide-in-left{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:slideInLeft;animation-name:slideInLeft}@-webkit-keyframes slideInRight{0%{opacity:0;-webkit-transform:translateX(2000px);transform:translateX(2000px)}to{-webkit-transform:translateX(0);transform:translateX(0)}}@keyframes slideInRight{0%{opacity:0;-webkit-transform:translateX(2000px);transform:translateX(2000px)}to{-webkit-transform:translateX(0);transform:translateX(0)}}.om-animation-slide-in-right{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:slideInRight;animation-name:slideInRight}@-webkit-keyframes swing{20%{-webkit-transform:rotate(15deg);transform:rotate(15deg)}40%{-webkit-transform:rotate(-10deg);transform:rotate(-10deg)}60%{-webkit-transform:rotate(5deg);transform:rotate(5deg)}80%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}to{-webkit-transform:rotate(0deg);transform:rotate(0deg)}}@keyframes swing{20%{-webkit-transform:rotate(15deg);transform:rotate(15deg)}40%{-webkit-transform:rotate(-10deg);transform:rotate(-10deg)}60%{-webkit-transform:rotate(5deg);transform:rotate(5deg)}80%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}to{-webkit-transform:rotate(0deg);transform:rotate(0deg)}}.om-animation-swing{-webkit-animation-duration:1s;animation-duration:1s;-webkit-transform-origin:top center;transform-origin:top center;-webkit-animation-name:swing;animation-name:swing}@-webkit-keyframes tada{0%{-webkit-transform:scale(1);transform:scale(1)}10%,20%{-webkit-transform:scale(.9) rotate(-3deg);transform:scale(.9) rotate(-3deg)}30%,50%,70%,90%{-webkit-transform:scale(1.1) rotate(3deg);transform:scale(1.1) rotate(3deg)}40%,60%,80%{-webkit-transform:scale(1.1) rotate(-3deg);transform:scale(1.1) rotate(-3deg)}to{-webkit-transform:scale(1) rotate(0);transform:scale(1) rotate(0)}}@keyframes tada{0%{-webkit-transform:scale(1);transform:scale(1)}10%,20%{-webkit-transform:scale(.9) rotate(-3deg);transform:scale(.9) rotate(-3deg)}30%,50%,70%,90%{-webkit-transform:scale(1.1) rotate(3deg);transform:scale(1.1) rotate(3deg)}40%,60%,80%{-webkit-transform:scale(1.1) rotate(-3deg);transform:scale(1.1) rotate(-3deg)}to{-webkit-transform:scale(1) rotate(0);transform:scale(1) rotate(0)}}.om-animation-tada{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:tada;animation-name:tada}@-webkit-keyframes wobble{0%{-webkit-transform:translateX(0);transform:translateX(0)}15%{-webkit-transform:translateX(-25%) rotate(-5deg);transform:translateX(-25%) rotate(-5deg)}30%{-webkit-transform:translateX(20%) rotate(3deg);transform:translateX(20%) rotate(3deg)}45%{-webkit-transform:translateX(-15%) rotate(-3deg);transform:translateX(-15%) rotate(-3deg)}60%{-webkit-transform:translateX(10%) rotate(2deg);transform:translateX(10%) rotate(2deg)}75%{-webkit-transform:translateX(-5%) rotate(-1deg);transform:translateX(-5%) rotate(-1deg)}to{-webkit-transform:translateX(0);transform:translateX(0)}}@keyframes wobble{0%{-webkit-transform:translateX(0);transform:translateX(0)}15%{-webkit-transform:translateX(-25%) rotate(-5deg);transform:translateX(-25%) rotate(-5deg)}30%{-webkit-transform:translateX(20%) rotate(3deg);transform:translateX(20%) rotate(3deg)}45%{-webkit-transform:translateX(-15%) rotate(-3deg);transform:translateX(-15%) rotate(-3deg)}60%{-webkit-transform:translateX(10%) rotate(2deg);transform:translateX(10%) rotate(2deg)}75%{-webkit-transform:translateX(-5%) rotate(-1deg);transform:translateX(-5%) rotate(-1deg)}to{-webkit-transform:translateX(0);transform:translateX(0)}}.om-animation-wobble{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:wobble;animation-name:wobble}.om-content-lock{color:transparent!important;text-shadow:rgba(0,0,0,.5) 0 0 10px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none;filter:url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");-webkit-filter:blur(10px);-ms-filter:blur(10px);-o-filter:blur(10px);filter:blur(10px)}html.om-mobile-position,html.om-mobile-position body{position:fixed!important}html.om-ios-form,html.om-ios-form body{-webkit-transform:translateZ(0)!important;transform:translateZ(0)!important;-webkit-overflow-scrolling:touch!important;height:100%!important;overflow:auto!important}html.om-position-popup body{overflow:hidden!important}html.om-position-floating-top{transition:padding-top .5s ease!important}html.om-position-floating-bottom{transition:padding-bottom .5s ease!important}html.om-reset-dimensions{height:100%!important;width:100%!important}.om-verification-confirmation{font-family:Lato,Arial,Helvetica,sans-serif;position:fixed;border-radius:10px;bottom:20px;left:20px;padding:10px 20px;opacity:0;transition:opacity .3s ease-in;background:#85bf31;color:#fff;font-size:18px;font-weight:700;z-index:9999}</style><script async="" src="https://dogfoodadvisor.disqus.com/count.js" type="text/javascript"></script><script async="" src="https://a.opmnstr.com/app/js/legacy-api.min.js"></script><script async="" src="https://a.opmnstr.com/app/js/legacy-api.min.js"></script><style type="text/css"></style><script async="" src="//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script><script async="" src="//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C800" media="all" rel="stylesheet"/><link href="https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C800%7CBree+Serif" media="all" rel="stylesheet"/><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+<body class="topic bbpress topic-template-default single single-topic postid-42234 header-image header-full-width sidebar-content no-alert-bar"><div class="site-container"><ul class="genesis-skip-link"><li><a class="screen-reader-shortcut" href="https://www.dogfoodadvisor.com/#genesis-nav-primary"> Skip to primary navigation</a></li><li><a class="screen-reader-shortcut" href="https://www.dogfoodadvisor.com/#main-content"> Skip to content</a></li><li><a class="screen-reader-shortcut" href="https://www.dogfoodadvisor.com/#genesis-sidebar-primary"> Skip to primary sidebar</a></li></ul><header class="site-header"><div class="wrap"><button class="mobile-menu-toggle" data-sidr="sidr-mobile-menu"><svg aria-hidden="true" class="svg-icon" focusable="false" height="20" role="img" viewbox="0 0 32 32" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m0 2h32v4h-32zm0 12h32v4h-32zm0 12h32v4h-32z" fill-rule="evenodd"></path></svg><span class="screen-reader-text">Menu</span></button><div class="title-area"><p class="site-title"><a href="https://www.dogfoodadvisor.com/">Dog Food Advisor</a></p></div>
+<form action="https://www.dogfoodadvisor.com/" class="search-form" method="get" role="search">
+<label>
+<span class="screen-reader-text">Search for</span>
+<input aria-activedescendant="" aria-autocomplete="both" aria-describedby="searchwp_live_search_results_5d2a4df5660c7_instructions" aria-expanded="false" aria-owns="searchwp_live_search_results_5d2a4df5660c7" autocomplete="off" class="search-field" data-swpconfig="default" data-swpengine="default" data-swplive="true" name="s" placeholder="Search…" title="Search for" type="search" value=""/><p class="searchwp-live-search-instructions screen-reader-text" id="searchwp_live_search_results_5d2a4df5660c7_instructions">When autocomplete results are available use up and down arrows to review and enter to go to the desired page. Touch device users, explore by touch or with swipe gestures.</p>
+</label>
+<button class="search-submit" type="submit"><svg aria-hidden="true" class="svg-icon" focusable="false" height="20" role="img" viewbox="0 0 48 48" width="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M7,19.5 C7,12.597 12.597,7 19.5,7 C26.404,7 32,12.597 32,19.5 C32,26.403 26.404,32 19.5,32 C12.597,32 7,26.403 7,19.5 Z M45,42.142 L32.498,29.64 C34.685,26.841 36,23.327 36,19.5 C36,10.387 28.613,3 19.5,3 C10.387,3 3,10.387 3,19.5 C3,28.613 10.387,36 19.5,36 C23.343,36 26.869,34.675 29.674,32.473 L42.171,44.971 L45,42.142 Z" id="icon-search-a"></path></svg><span class="screen-reader-text">Submit</span></button>
+</form>
+</div></header><nav aria-label="Main" class="nav-primary nav-menu" id="genesis-nav-primary nav-menu"><div class="wrap"><ul class="menu genesis-nav-menu menu-primary" id="menu-primary"><li class="menu-item menu-item-home" id="menu-item-133261"><a href="https://www.dogfoodadvisor.com/"><span>Home</span></a></li>
+<li class="menu-item" id="menu-item-133262"><a href="https://www.dogfoodadvisor.com/best-dog-foods/"><span>Best Dog Foods</span></a></li>
+<li class="menu-item" id="menu-item-133264"><a href="https://www.dogfoodadvisor.com/dog-food-reviews/brand/"><span>Reviews A to Z</span></a></li>
+<li class="menu-item" id="menu-item-133268"><a href="https://www.dogfoodadvisor.com/frequently-asked-questions/"><span>FAQ</span></a></li>
+<li class="menu-item" id="menu-item-133270"><a href="https://www.dogfoodadvisor.com/helpful-dog-food-articles/"><span>Library</span></a></li>
+<li class="menu-item" id="menu-item-133265"><a href="https://www.dogfoodadvisor.com/dog-food-recalls/"><span>Recalls</span></a></li>
+<li class="menu-item menu-item-has-children" id="menu-item-133266"><a href="https://www.dogfoodadvisor.com/#"><span>More</span></a><span class="submenu-expand" tabindex="-1"><svg aria-hidden="true" class="svg-icon" focusable="false" height="8" role="img" viewbox="0 0 48 48" width="8" xmlns="http://www.w3.org/2000/svg"><polygon fill-rule="evenodd" points="7 14 23.971 34.971 40.941 14"></polygon></svg></span>
+<ul class="sub-menu">
+<li class="menu-item" id="menu-item-133269"><a href="https://www.dogfoodadvisor.com/dog-feeding-tips/dog-food-calculator/"><span>Dog Food Calculator</span></a></li>
+<li class="menu-item" id="menu-item-133271"><a href="https://www.dogfoodadvisor.com/recent-comments/"><span>Recent Comments</span></a></li>
+<li class="menu-item" id="menu-item-133272"><a href="https://www.dogfoodadvisor.com/forums"><span>Forums</span></a></li>
+<li class="menu-item" id="menu-item-133273"><a href="https://www.dogfoodadvisor.com/editors-choice-member-home/"><span>Editor’s Choice</span></a></li>
+<li class="menu-item" id="menu-item-133274"><a href="https://www.dogfoodadvisor.com/about/"><span>About</span></a></li>
+</ul>
+</li>
+<li class="menu-item"><a href="https://www.dogfoodadvisor.com/login">Member Login</a></li></ul></div></nav><nav class="mobile-after-header"><ul class="menu nav-menu" id="menu-mobile-after-header"><li class="menu-item menu-item-home" id="menu-item-133308"><a href="https://www.dogfoodadvisor.com/">Home</a></li>
+<li class="menu-item" id="menu-item-133309"><a href="https://www.dogfoodadvisor.com/best-dog-foods/">Best</a></li>
+<li class="menu-item" id="menu-item-133310"><a href="https://www.dogfoodadvisor.com/dog-food-reviews/brand/">Reviews</a></li>
+<li class="menu-item" id="menu-item-133311"><a href="https://www.dogfoodadvisor.com/dog-food-recalls/">Recalls</a></li>
+<li class="more menu-item" id="menu-item-133312"><a href="https://www.dogfoodadvisor.com/#">More</a></li>
+</ul></nav><div class="site-inner" id="main-content"><div class="wrap"><div class="content-area"><main class="site-main" id="genesis-content"><article class="post-42234 topic type-topic status-publish topic-tag-beware-canine-carry-out-dog-snacks entry"><header class="entry-header"><h1 class="entry-title">Canine Carry Outs dog snacks Bacon Flavor</h1>
+</header><div class="entry-content">
+<div id="bbpress-forums">
+<div class="bbp-breadcrumb"><p><a class="bbp-breadcrumb-home" href="https://www.dogfoodadvisor.com/">Dog Food Advisor</a> <span class="bbp-breadcrumb-sep">›</span> <a class="bbp-breadcrumb-root" href="https://www.dogfoodadvisor.com/forums/">Forums</a> <span class="bbp-breadcrumb-sep">›</span> <a class="bbp-breadcrumb-forum" href="https://www.dogfoodadvisor.com/forums/forum/dog-treats/">Dog Treats</a> <span class="bbp-breadcrumb-sep">›</span> <span class="bbp-breadcrumb-current">Canine Carry Outs dog snacks Bacon Flavor</span></p></div>
+<div class="bbp-pagination">
+<div class="bbp-pagination-count">
+Viewing 25 posts - 1 through 25 (of 25 total)
+</div>
+<div class="bbp-pagination-links">
+</div>
+</div>
+<ul class="forums bbp-replies" id="topic-42234-replies">
+<li class="bbp-header">
+<div class="bbp-reply-author">Author</div>
+<div class="bbp-reply-content">
+Posts
+</div>
+</li>
+<li class="bbp-body">
+<div class="bbp-reply-header" id="post-42234">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">May 23, 2014 at 12:38 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-42234">#42234</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=42234">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-1 user-id-3317 topic-author post-42234 topic type-topic status-publish topic-tag-beware-canine-carry-out-dog-snacks entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/newmom/" rel="nofollow" title="View newmom's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/3fb530432fefcebc8a449b51e80d5b80?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/3fb530432fefcebc8a449b51e80d5b80?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/newmom/" rel="nofollow" title="View newmom's profile">newmom</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>This treat was given to me for Charlie. It does not say where it was made, only distributed by DelMonte Pet products. The web site “Big Hearts Brands” gives no information as to where this product is made. Does anyone have any idea as to manufacture and safety of this product? Thanks.</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-42240">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">May 23, 2014 at 4:15 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-42240">#42240</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=42240">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="even bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-2 user-id-19087 post-42240 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/shasta220/" rel="nofollow" title="View Shasta220's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/c2d5ed526690f113c5baa936d39abcc4?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/c2d5ed526690f113c5baa936d39abcc4?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/shasta220/" rel="nofollow" title="View Shasta220's profile">Shasta220</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>I don’t know anything about the manufacturers and stuff, but the ingredients of canine carryouts are really cheap nasty ones… </p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-42248">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">May 23, 2014 at 4:57 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-42248">#42248</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=42248">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-3 user-id-120 post-42248 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/inkedmarie/" rel="nofollow" title="View InkedMarie's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/71f6375e8f13da72eae403dbf1a0106e?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/71f6375e8f13da72eae403dbf1a0106e?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/inkedmarie/" rel="nofollow" title="View InkedMarie's profile">InkedMarie</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>I wouldn’t use those either. Poor ingredients. </p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-42258">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">May 23, 2014 at 7:03 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-42258">#42258</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=42258">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="even bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-4 user-id-3317 topic-author post-42258 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/newmom/" rel="nofollow" title="View newmom's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/3fb530432fefcebc8a449b51e80d5b80?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/3fb530432fefcebc8a449b51e80d5b80?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/newmom/" rel="nofollow" title="View newmom's profile">newmom</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>Oh my goodness…I never thought of looking at the ingredients…I was concentrating on whether they were made in China and a cause for trouble. Reading the ingredients alone are an indication of trouble, no matter where they were made.<br/>
+Thanks to those who responded with the same advice, I will be more on top of things from now on. Charlie and I both are grateful.</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-42259">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">May 23, 2014 at 7:32 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-42259">#42259</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=42259">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-5 user-id-102 post-42259 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/betsy-greer-2-2/" rel="nofollow" title="View DogFoodie's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/aa1d6cfe61928eb6237700064ae94d4e?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/aa1d6cfe61928eb6237700064ae94d4e?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/betsy-greer-2-2/" rel="nofollow" title="View DogFoodie's profile">DogFoodie</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>Any time something has the word “flavor” in the name, I steer clear of it. I want beef treats, versus beef flavor treats. If it’s not beef, then what is it? If that makes sense. : )~</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-42260">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">May 23, 2014 at 8:03 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-42260">#42260</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=42260">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="even bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-6 user-id-3317 topic-author post-42260 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/newmom/" rel="nofollow" title="View newmom's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/3fb530432fefcebc8a449b51e80d5b80?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/3fb530432fefcebc8a449b51e80d5b80?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/newmom/" rel="nofollow" title="View newmom's profile">newmom</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>I surely didn’t use common sense when I queried about this. I know better, just not on top of things as I should be right now. Many thanks for the reply. </p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-42263">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">May 23, 2014 at 8:53 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-42263">#42263</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=42263">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-7 user-id-18983 post-42263 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/sue66b-2/" rel="nofollow" title="View Susan's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/2765213cd996f10f849afea8e82d1393?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/2765213cd996f10f849afea8e82d1393?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/sue66b-2/" rel="nofollow" title="View Susan's profile">Susan</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>Hi, is there a ‘contact us’ link on their home page..send them a email asking about the treats &amp; where do their ingredients come from…thats what I do when I need to know max fat% &amp; other things..</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-42264">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">May 23, 2014 at 8:57 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-42264">#42264</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=42264">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="even bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-8 user-id-19087 post-42264 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/shasta220/" rel="nofollow" title="View Shasta220's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/c2d5ed526690f113c5baa936d39abcc4?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/c2d5ed526690f113c5baa936d39abcc4?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/shasta220/" rel="nofollow" title="View Shasta220's profile">Shasta220</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>No worries! I used to make the same mistake as well – looking at the chicken ones, thinking “oh it must have lots of chicken since it looks like chicken strips!” Boy was I wrong, LOL! Now my dogs get mostly home made treats, and for training I just buy a different brand/protein source than their regular kibble (like my dogs are on beef, chicken, and lamb. So I buy fish kibble for treats). </p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-42298">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">May 24, 2014 at 5:46 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-42298">#42298</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=42298">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-9 user-id-3317 topic-author post-42298 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/newmom/" rel="nofollow" title="View newmom's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/3fb530432fefcebc8a449b51e80d5b80?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/3fb530432fefcebc8a449b51e80d5b80?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/newmom/" rel="nofollow" title="View newmom's profile">newmom</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>Thank you to all who responded, I’ve learned a lot and feel I know what to look for when buying treats. I’m not going to use the Carry Cuts even tho they were a gift to Charlie. After reading the ingredients, I see they are not anything I want him to have. The kibble idea sounds good…I’m also intrigued by the homemade treat suggestions I see on this list. I think I will give them a try. Charlie will eat anything I give him so it is up to me to be careful about what I feed him…really careful. Thanks again, everyone. I’m a lot wiser now.</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-49298">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">August 11, 2014 at 10:47 am</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-49298">#49298</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=49298">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="even bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-10 user-id-28097 post-49298 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/savvychef/" rel="nofollow" title="View Sharon T's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/4e1f79351daf3374dc94a79ba138ab81?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/4e1f79351daf3374dc94a79ba138ab81?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/savvychef/" rel="nofollow" title="View Sharon T's profile">Sharon T</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>According to this product’s ingredients listed on PetSmart.com, this dog treat includes propylene glycol as one of it’s main ingredients. DO NOT FEED THIS TO YOUR PETS: THIS IS A DEADLY INGREDIENT !!!!!</p>
+<ul class="bbp-reply-revision-log" id="bbp-reply-revision-log-49298">
+<li class="bbp-reply-revision-log-item" id="bbp-reply-revision-log-49298-item-49299">
+This reply was modified 4 years, 11 months ago by <a href="https://www.dogfoodadvisor.com/forums/users/savvychef/" title="View Sharon T's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/4e1f79351daf3374dc94a79ba138ab81?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/4e1f79351daf3374dc94a79ba138ab81?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a href="https://www.dogfoodadvisor.com/forums/users/savvychef/" title="View Sharon T's profile">Sharon T</a>.
+</li>
+</ul>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-49302">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">August 11, 2014 at 11:39 am</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-49302">#49302</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=49302">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-11 user-id-2889 post-49302 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/sidney0805/" rel="nofollow" title="View Cyndi's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/d085960e6aff31a98ec83fc63eef98e2?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/d085960e6aff31a98ec83fc63eef98e2?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/sidney0805/" rel="nofollow" title="View Cyndi's profile">Cyndi</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>I used to feed those to my doberman all the time. They were his favorite. 🙁 Now I certainly know better. Wish I would have learned all I know now back when my boy was still around. </p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-49794">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">August 20, 2014 at 9:41 am</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-49794">#49794</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=49794">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="even bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-12 user-id-28631 post-49794 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/screenprinter/" rel="nofollow" title="View Benny J's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/5f51226592ec8a61d7d58a50e904940f?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/5f51226592ec8a61d7d58a50e904940f?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/screenprinter/" rel="nofollow" title="View Benny J's profile">Benny J</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>There is not one ingredient in the product that is good for your dog. I found it at .99 cent store. You talk about junk food for your dog. It says animal digest, what in the world. That ain’t prime rib. </p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-51038">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">September 2, 2014 at 4:23 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-51038">#51038</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=51038">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-13 user-id-29453 post-51038 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/wgrafel1/" rel="nofollow" title="View Wayne G's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/123d0dfd0fda7ef51569862d006ce307?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/123d0dfd0fda7ef51569862d006ce307?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/wgrafel1/" rel="nofollow" title="View Wayne G's profile">Wayne G</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>I purchased a bag of Canine Carry Out bacon treats from WalMart 2 weeks ago. I fed my dog 3 treats late in the afternoon. By evening my friend collapsed and could not walk. I took him to the Veterinarian, they ran blood tests and said his liver was severely damaged, they suspected he had been exposed to a toxic substance. He passed away two days later.<br/>
+The veterinarian said this was the second dog that had died in the same manner both within a week of each other. I just recieved a call from him confirming that the family of the first dog that died had fed these same treats just before the dog collapsed.<br/>
+Both dogs were healthy and in the prime of their lives, both had been fed these treats and the only thing in their stomach contents were these treats.</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-51042">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">September 2, 2014 at 6:52 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-51042">#51042</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=51042">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="even bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-14 user-id-19122 post-51042 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/dchassett/" rel="nofollow" title="View Dori's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/1db7263349e14e0241b1ce9267beeecc?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/1db7263349e14e0241b1ce9267beeecc?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/dchassett/" rel="nofollow" title="View Dori's profile">Dori</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>Wayne G. All I can contribute to this thread is to say that I am so very sorry for your loss. My heart aches for you and your family.</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-51044">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">September 2, 2014 at 7:40 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-51044">#51044</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=51044">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-15 user-id-2889 post-51044 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/sidney0805/" rel="nofollow" title="View Cyndi's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/d085960e6aff31a98ec83fc63eef98e2?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/d085960e6aff31a98ec83fc63eef98e2?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/sidney0805/" rel="nofollow" title="View Cyndi's profile">Cyndi</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>Wayne G, I am so sorry for your loss too!! I am sitting here crying after reading this. As I said a few comments up, I used to feed these to my doberman, who died 3 years ago this Saturday, all the time. I still, to this day, can only guess what he died from. He went downhill over the period of 6 or 7 months though and the vet couldn’t figure out what was going on with him. I ended up having to put him down. I firmly believe it was a combination of the crap food I fed him, because I didn’t know any better, and now these treats, and vaccinations and toxic flea crap! Sorry for my rant, but stories like yours just really hit home. 🙁</p>
+<p>Again, I am so sorry for your loss! It sure the hell isn’t an easy thing to go thru, losing your beloved pet that way. 🙁 My heart aches for you and your family as well. May your boy rest in peace.</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-51046">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">September 2, 2014 at 8:36 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-51046">#51046</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=51046">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="even bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-16 user-id-102 post-51046 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/betsy-greer-2-2/" rel="nofollow" title="View DogFoodie's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/aa1d6cfe61928eb6237700064ae94d4e?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/aa1d6cfe61928eb6237700064ae94d4e?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/betsy-greer-2-2/" rel="nofollow" title="View DogFoodie's profile">DogFoodie</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>Hi Wayne G,</p>
+<p>I’m so sorry for your loss. I can only imagine how devastated you must be. </p>
+<p>Peace</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-51055">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">September 3, 2014 at 6:50 am</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-51055">#51055</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=51055">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-17 user-id-120 post-51055 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/inkedmarie/" rel="nofollow" title="View InkedMarie's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/71f6375e8f13da72eae403dbf1a0106e?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/71f6375e8f13da72eae403dbf1a0106e?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/inkedmarie/" rel="nofollow" title="View InkedMarie's profile">InkedMarie</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>I’m so sorry for your loss, Wayne. I hope things get easier for you.</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-51059">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">September 3, 2014 at 10:57 am</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-51059">#51059</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=51059">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="even bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-18 user-id-29453 post-51059 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/wgrafel1/" rel="nofollow" title="View Wayne G's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/123d0dfd0fda7ef51569862d006ce307?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/123d0dfd0fda7ef51569862d006ce307?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/wgrafel1/" rel="nofollow" title="View Wayne G's profile">Wayne G</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>Thank you all for your caring response, this has been difficult for my family and we are in the process of investigating the cause of this poisoining. An autopsy was performed and the state is still in the process of completing their examination. If the state can come back with something conclusive the vet will have the treats analyzed to detemine if they are tainted. From what I understand this will be a difficult process if the autopsy results do not identify something specific.</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-52080">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">September 16, 2014 at 12:00 am</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-52080">#52080</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=52080">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-19 user-id-30195 post-52080 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/ldwalters/" rel="nofollow" title="View Lynnette W's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/7fe157f36d0592701d002c75c4e7ff6a?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/7fe157f36d0592701d002c75c4e7ff6a?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/ldwalters/" rel="nofollow" title="View Lynnette W's profile">Lynnette W</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>This past weekend two 16 wk old German Shepard litter mates died after being given Canine Carry Out treats two days in a row. The vet suspects liver failure in both pups who were healthy until fed this poison! So very sad it continues to be sold in the US. Their names were Ryder &amp; Sampson. Ryder’s daddy (USMC on assignment) posted the following on Facebook:<br/>
+“Today my beautiful amazing wife had to do the hardest thing, she laid our baby down to his final resting point. I was not able to be there, so she did it all – carried him, said her last goodbyes to him from both her and I and finally held him for the last time. Babe you are so strong and amazing. I know Ryder is smiling down right now. I love you Ryder you were truly one of a kind.” </p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-64032">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">January 15, 2015 at 11:32 am</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-64032">#64032</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=64032">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="even bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-20 user-id-36391 post-64032 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/nicemachines/" rel="nofollow" title="View Balsey Dean D's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/cabfd94af2021686eb440119cac7a07c?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/cabfd94af2021686eb440119cac7a07c?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/nicemachines/" rel="nofollow" title="View Balsey Dean D's profile">Balsey Dean D</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>No kidding! Reading these posts here should never happen. I love my dog and after getting a few little bags of these Canine treats for Christmas for my dog, wow, still amazed. The problem is that dogs will love these treats, mine did. I won’t buy any of these treats or any treats for that matter. Petsmart is listed here selling these treats, I wanted to leave the Corporate office a message about this thread, they don’t have an email, why are they hiding? Here is their phone number though, good luck! <a href="http://www.petsmart.com/helpdeskcategory/-helpdesk_category_cmp_20121219_174730;pgid=bRZky3Uq7YZSRpWB6nh5Lmz30000ytFlsr0f;sid=Jt0s3F_-sZMp3AtJz-Zt2G30T3S1pDZXv6X1iKZm?article=cmp_20121115_172158" rel="nofollow">http://www.petsmart.com/helpdeskcategory/-helpdesk_category_cmp_20121219_174730;pgid=bRZky3Uq7YZSRpWB6nh5Lmz30000ytFlsr0f;sid=Jt0s3F_-sZMp3AtJz-Zt2G30T3S1pDZXv6X1iKZm?article=cmp_20121115_172158</a></p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-69729">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">March 31, 2015 at 12:14 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-69729">#69729</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=69729">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-21 user-id-42959 post-69729 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/pattisj/" rel="nofollow" title="View Patricia J's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/f96a875869fc15506101d3f4d8a29700?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/f96a875869fc15506101d3f4d8a29700?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/pattisj/" rel="nofollow" title="View Patricia J's profile">Patricia J</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>I also gave my dogs the Canine Carry Outs and my pure bred Golden Retriever started having seizures. But I threw them away and I hope her seizures will stop.</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-69748">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">March 31, 2015 at 8:45 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-69748">#69748</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=69748">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="even bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-22 user-id-43003 post-69748 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/furryfriend/" rel="nofollow" title="View Jackie R's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/d3677a7fa0d60d4116779d926e0cbd81?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/d3677a7fa0d60d4116779d926e0cbd81?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/furryfriend/" rel="nofollow" title="View Jackie R's profile">Jackie R</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>Has anyone had an autopsy performed on their dogs after they died to verify what they poison actually was that killed their baby? Just curios.</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-87229">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">June 13, 2016 at 10:49 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-87229">#87229</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=87229">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-23 user-id-69757 post-87229 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/dlj/" rel="nofollow" title="View Dot A's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/c9496aae2b4262320409b70eba13ccae?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/c9496aae2b4262320409b70eba13ccae?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/dlj/" rel="nofollow" title="View Dot A's profile">Dot A</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>Ok last week I purchased these treats in steak flavor…I went out for the weekend and let others feed him…I am sick now while I watch our older dog cough and gag and throw up. He is going to the Vet tomortow… I came across this older forum about these treats… why are they still producing this garbage. He will not eat another one and I am taking the rest back to walmart and insist they take them off their shelf…everyone else should do the same. Walmart can return them to the company and they will correct the ingredients or lose tons of money in walmart business. Everyone reading this should call local stores and return any you still have.pray it isnt too late for Mobley! </p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-89266">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">August 16, 2016 at 7:40 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-89266">#89266</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=89266">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="even bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-24 user-id-72429 post-89266 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/msmarty/" rel="nofollow" title="View Marty M's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/42b150fcffe1f3bfbe5e4552282c249a?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/42b150fcffe1f3bfbe5e4552282c249a?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/msmarty/" rel="nofollow" title="View Marty M's profile">Marty M</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>Thank you for this topic. I had three bags of this poison in my pantry, and after seeing “propylene glycol” mentioned as an ingredient by another poster, ran incredulously to confirm. Not only is it an ingredient, it is the 8th listed. What the heck is anti-freeze doing in something for pets?!?!?</p>
+<p>If not for this topic thread I could be amongst the other posters who have lost their beloved pets. My heart goes out to them. I have been reading these forums to better educate myself about the nutrition in pet foods, as one of my five dogs went from 17 up to 24 pounds in one year. Obviously to my husband and I, “we” are completely to blame as the Beagles, while as smart as whips, cannot reach the pantry door or figure another way in to the food (thank goodness, or we would be doomed). They, and I, thank you for the recommendation of beef trachea treats, as an alternative to the fattening Greenies.</p>
+<p>May this thread warn other pet parents, and I for one will be reading all ingredient lists with a very careful eye.</p>
+</div>
+</div>
+<div class="bbp-reply-header" id="post-89275">
+<div class="bbp-meta">
+<span class="bbp-reply-post-date">August 16, 2016 at 8:59 pm</span>
+<a class="bbp-reply-permalink" href="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/#post-89275">#89275</a>
+<a class="bbp-report-abuse" href="https://www.dogfoodadvisor.com/report-abuse?bbp_report_topic=89275">Report Abuse</a>
+<span class="bbp-admin-links"></span>
+</div>
+</div>
+<div class="odd bbp-parent-forum-10561 bbp-parent-topic-42234 bbp-reply-position-25 user-id-72429 post-89275 reply type-reply status-publish entry">
+<div class="bbp-reply-author">
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/msmarty/" rel="nofollow" title="View Marty M's profile"><img alt="" class="avatar avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/42b150fcffe1f3bfbe5e4552282c249a?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/42b150fcffe1f3bfbe5e4552282c249a?s=160&amp;d=mm&amp;r=g 2x" width="80"/></a><br/><a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/msmarty/" rel="nofollow" title="View Marty M's profile">Marty M</a><br/><div class="bbp-author-role">Member</div>
+</div>
+<div class="bbp-reply-content">
+<p>To those unaware, as I was, while both substances are antifreeze- propylene glycol is considered safe to pets and is a realtive of ethylene glycol which is pure poison for humans and pets (lost a cat to it many years ago, not pretty, neighbors were unaware). Still it,PG, is an approved additive for dog foods, but not cat food by the FDA. It’s also used in a lot of human foods. Yuck</p>
+</div>
+</div>
+</li>
+<li class="bbp-footer">
+<div class="bbp-reply-author">Author</div>
+<div class="bbp-reply-content">
+Posts
+</div>
+</li>
+</ul>
+<div class="bbp-pagination">
+<div class="bbp-pagination-count">
+Viewing 25 posts - 1 through 25 (of 25 total)
+</div>
+<div class="bbp-pagination-links">
+</div>
+</div>
+<div class="bbp-no-reply" id="no-reply-42234">
+<div class="bbp-template-notice">
+<p>You must be logged in to reply to this topic.</p>
+</div>
+</div>
+</div>
+</div><footer class="entry-footer"></footer></article></main><aside aria-label="Primary Sidebar" class="sidebar sidebar-primary widget-area" id="genesis-sidebar-primary" role="complementary"><h2 class="genesis-sidebar-title screen-reader-text">Primary Sidebar</h2><section class="widget bbp_widget_login" id="bbp_login_widget-2"><div class="widget-wrap"><h3 class="widgettitle widget-title">Sign In</h3>
+<form action="https://www.dogfoodadvisor.com/wp-login.php" class="bbp-login-form" method="post">
+<fieldset>
+<legend>Log In</legend>
+<div class="bbp-username">
+<label for="user_login">Username: </label>
+<input id="user_login" name="log" size="20" tabindex="101" type="text" value=""/>
+</div>
+<div class="bbp-password">
+<label for="user_pass">Password: </label>
+<input id="user_pass" name="pwd" size="20" tabindex="102" type="password" value=""/>
+</div>
+<div class="bbp-remember-me">
+<input id="rememberme" name="rememberme" tabindex="103" type="checkbox" value="forever"/>
+<label for="rememberme">Remember Me</label>
+</div>
+<div class="bbp-submit-wrapper">
+<button class="button submit user-submit" id="user-submit" name="user-submit" tabindex="104" type="submit">Log In</button>
+<input name="user-cookie" type="hidden" value="1"/>
+<input id="bbp_redirect_to" name="redirect_to" type="hidden" value="https://www.dogfoodadvisor.com/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/"/><input id="_wpnonce" name="_wpnonce" type="hidden" value="a226b5e3e6"/><input name="_wp_http_referer" type="hidden" value="/forums/topic/canine-carry-outs-dog-snacks-bacon-flavor/"/>
+</div>
+<div class="bbp-login-links">
+<a class="bbp-register-link" href="https://www.dogfoodadvisor.com/forum-signup/" title="Register">Register</a>
+<a class="bbp-lostpass-link" href="https://www.dogfoodadvisor.com/forgot-password/" title="Lost Password">Lost Password</a>
+</div>
+</fieldset>
+</form>
+</div></section>
+<section class="widget widget_display_search" id="bbp_search_widget-2"><div class="widget-wrap">
+<form action="https://www.dogfoodadvisor.com/forums/search/" id="bbp-search-form" method="get" role="search">
+<div>
+<label class="screen-reader-text hidden" for="bbp_search">Search for:</label>
+<input name="action" type="hidden" value="bbp-search-request"/>
+<input class="search-field" id="bbp_search" name="bbp_search" tabindex="105" type="text" value=""/>
+<button class="search-submit" id="bbp_search_submit" type="submit"><svg aria-hidden="true" class="svg-icon" focusable="false" height="16" role="img" viewbox="0 0 48 48" width="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M7,19.5 C7,12.597 12.597,7 19.5,7 C26.404,7 32,12.597 32,19.5 C32,26.403 26.404,32 19.5,32 C12.597,32 7,26.403 7,19.5 Z M45,42.142 L32.498,29.64 C34.685,26.841 36,23.327 36,19.5 C36,10.387 28.613,3 19.5,3 C10.387,3 3,10.387 3,19.5 C3,28.613 10.387,36 19.5,36 C23.343,36 26.869,34.675 29.674,32.473 L42.171,44.971 L45,42.142 Z" id="icon-search-a"></path></svg></button>
+</div>
+</form>
+</div></section>
+<section class="widget widget_text" id="text-410477653"><div class="widget-wrap"><h3 class="widgettitle widget-title">Where to Buy?</h3>
+<div class="textwidget"><ul><li><a href="https://bit.ly/2yRUw1D" rel="noopener noreferrer" target="_blank">Shop at an Online Retailer<br/>Get 30% Off + <strong>Free</strong> Shipping</a></li></ul></div>
+</div></section>
+<section class="widget widget_text" id="text-410477660"><div class="widget-wrap"><h3 class="widgettitle widget-title">Commenting Policy</h3>
+<div class="textwidget"><ul>
+<li><a href="https://www.dogfoodadvisor.com/commenting-policy/">Forum Commenting Policy<br/>Please Be Sure to Read</a></li>
+</ul>
+</div>
+</div></section>
+<section class="widget widget_display_replies" id="bbp_replies_widget-2"><div class="widget-wrap"><h3 class="widgettitle widget-title">Latest Replies</h3>
+<ul>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/jlstudent70/" rel="nofollow" title="View joanne l's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/70752cce17cd142e1d993de832bbd515?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/70752cce17cd142e1d993de832bbd515?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/jlstudent70/" rel="nofollow" title="View joanne l's profile">joanne l</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/best-dog-food-for-kidney-disease/#post-142530" title="I agree with Anon, talk to your vet, did your vet…">Best Dog Food for Kidney Disease</a> <div>2 hours, 7 minutes ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/anonymous101-2-2-2/" rel="nofollow" title="View anon101's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/fbf9e936717aa4300ecbae4a85d39258?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/fbf9e936717aa4300ecbae4a85d39258?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/anonymous101-2-2-2/" rel="nofollow" title="View anon101's profile">anon101</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/best-dog-food-for-kidney-disease/#post-142529" title="I would consult your vet.
+I think a prescription …">Best Dog Food for Kidney Disease</a> <div>3 hours, 26 minutes ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/anonymous101-2-2-2/" rel="nofollow" title="View anon101's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/fbf9e936717aa4300ecbae4a85d39258?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/fbf9e936717aa4300ecbae4a85d39258?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/anonymous101-2-2-2/" rel="nofollow" title="View anon101's profile">anon101</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/fish-bones-good-or-bad/#post-142518" title="No.
+I would not continue to feed this product.">Fish bones…good or bad?</a> <div>5 hours, 22 minutes ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/anonymous101-2-2-2/" rel="nofollow" title="View anon101's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/fbf9e936717aa4300ecbae4a85d39258?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/fbf9e936717aa4300ecbae4a85d39258?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/anonymous101-2-2-2/" rel="nofollow" title="View anon101's profile">anon101</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/fda-dcm-notice/#post-142517" title="http://skeptvet.com/Blog/2019/05/what-are-screeni…">FDA DCM notice</a> <div>5 hours, 23 minutes ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/eyeballz/" rel="nofollow" title="View Valarie I's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/5e222e114ddb9eab1676ecaecda8befb?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/5e222e114ddb9eab1676ecaecda8befb?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/eyeballz/" rel="nofollow" title="View Valarie I's profile">Valarie I</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/fish-bones-good-or-bad/#post-142516" title="I see hard white fish bones in my dogs food.  Nat…">Fish bones…good or bad?</a> <div>5 hours, 30 minutes ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/snowpyr/" rel="nofollow" title="View SnowPyr's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/2701da626731d64d11fd7b8283465778?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/2701da626731d64d11fd7b8283465778?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/snowpyr/" rel="nofollow" title="View SnowPyr's profile">SnowPyr</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/supplement-nutra-thrive/#post-142513" title="I just want to thank everyone who is contributing…">Supplement: Nutra Thrive</a> <div>7 hours, 35 minutes ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/mooreocean1/" rel="nofollow" title="View Richard M's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/8595dcc77e98a99d766ddf052a65eff2?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/8595dcc77e98a99d766ddf052a65eff2?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/mooreocean1/" rel="nofollow" title="View Richard M's profile">Richard M</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/dr-marty-pets-dog-food/page/2/#post-142511" title="Lots of posts here so I will ask this.
+For Dr. Ma…">Dr. Marty Pets Dog Food</a> <div>1 day, 1 hour ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/jlstudent70/" rel="nofollow" title="View joanne l's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/70752cce17cd142e1d993de832bbd515?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/70752cce17cd142e1d993de832bbd515?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/jlstudent70/" rel="nofollow" title="View joanne l's profile">joanne l</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/grain-free-dilemma/#post-142510" title="Jennifer, sounds like to me it is a chicken probl…">Grain-free dilemma</a> <div>1 day, 9 hours ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/jlstudent70/" rel="nofollow" title="View joanne l's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/70752cce17cd142e1d993de832bbd515?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/70752cce17cd142e1d993de832bbd515?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/jlstudent70/" rel="nofollow" title="View joanne l's profile">joanne l</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/grain-free-dilemma/#post-142498" title="If the pro plan focus was chicken, it maybe that …">Grain-free dilemma</a> <div>2 days ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/darcyb1115/" rel="nofollow" title="View malinda r's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/1e53e337f4706ee824b71338bb9c00e4?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/1e53e337f4706ee824b71338bb9c00e4?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/darcyb1115/" rel="nofollow" title="View malinda r's profile">malinda r</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/grain-free-dilemma/#post-142497" title="my dog has a sensitive stomach, and I feel this m…">Grain-free dilemma</a> <div>2 days, 2 hours ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/jlstudent70/" rel="nofollow" title="View joanne l's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/70752cce17cd142e1d993de832bbd515?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/70752cce17cd142e1d993de832bbd515?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/jlstudent70/" rel="nofollow" title="View joanne l's profile">joanne l</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/fda-names-16-brands-of-dog-food-linked-to-canine-heart-disease/#post-142495" title="Well, my thought on this is I would rather feed a…">FDA names 16 brands of dog food linked to canine heart disease</a> <div>2 days, 3 hours ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/tankerdood/" rel="nofollow" title="View TankerDood's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/83b39165af7b962546fd2d1d466073ec?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/83b39165af7b962546fd2d1d466073ec?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/tankerdood/" rel="nofollow" title="View TankerDood's profile">TankerDood</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/fda-names-16-brands-of-dog-food-linked-to-canine-heart-disease/#post-142492" title="Thanks for the replies.  I can certainly ask my v…">FDA names 16 brands of dog food linked to canine heart disease</a> <div>2 days, 7 hours ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/sue66b-2/" rel="nofollow" title="View Susan's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/2765213cd996f10f849afea8e82d1393?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/2765213cd996f10f849afea8e82d1393?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/sue66b-2/" rel="nofollow" title="View Susan's profile">Susan</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/food-too-expensived/#post-142488" title="Hi,
+can you afford to make his meals?
+I’d l…">food too expensived</a> <div>2 days, 16 hours ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/sue66b-2/" rel="nofollow" title="View Susan's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/2765213cd996f10f849afea8e82d1393?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/2765213cd996f10f849afea8e82d1393?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/sue66b-2/" rel="nofollow" title="View Susan's profile">Susan</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/best-food-for-digestion/#post-142487" title="Hi,
+Is Nature’s Variety raw?? When raw diet…">Best food for digestion</a> <div>2 days, 16 hours ago</div>
+</li>
+<li>
+<a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/cindysharon/" rel="nofollow" title="View Cindy S's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/97ba950c2968d7648fcbda4d1c5da19c?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/97ba950c2968d7648fcbda4d1c5da19c?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/cindysharon/" rel="nofollow" title="View Cindy S's profile">Cindy S</a> on <a class="bbp-reply-topic-title" href="https://www.dogfoodadvisor.com/forums/topic/best-food-for-digestion/#post-142483" title="Hasn’t been vet for that but plan on. Has h…">Best food for digestion</a> <div>2 days, 20 hours ago</div>
+</li>
+</ul>
+</div></section>
+<section class="widget widget_display_topics" id="bbp_topics_widget-2"><div class="widget-wrap"><h3 class="widgettitle widget-title">Recent Topics</h3>
+<ul>
+<li>
+<a class="bbp-forum-title" href="https://www.dogfoodadvisor.com/forums/topic/best-dog-food-for-kidney-disease/">Best Dog Food for Kidney Disease</a>
+by <span class="topic-author"><a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/vbarn/" rel="nofollow" title="View Vicki B's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/5a2a52377a76de12f562ed9989f04d3d?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/5a2a52377a76de12f562ed9989f04d3d?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/vbarn/" rel="nofollow" title="View Vicki B's profile">Vicki B</a></span>
+<div>2 hours, 7 minutes ago</div>
+</li>
+<li>
+<a class="bbp-forum-title" href="https://www.dogfoodadvisor.com/forums/topic/training-dogs/">TRAINING DOGS</a>
+by <span class="topic-author"><a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/albertora/" rel="nofollow" title="View alberto r's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/6aa83addfa41f95ec4f04f1c8a6799dd?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/6aa83addfa41f95ec4f04f1c8a6799dd?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/albertora/" rel="nofollow" title="View alberto r's profile">alberto r</a></span>
+<div>2 days, 6 hours ago</div>
+</li>
+<li>
+<a class="bbp-forum-title" href="https://www.dogfoodadvisor.com/forums/topic/fda-names-16-brands-of-dog-food-linked-to-canine-heart-disease/">FDA names 16 brands of dog food linked to canine heart disease</a>
+by <span class="topic-author"><a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/tankerdood/" rel="nofollow" title="View TankerDood's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/83b39165af7b962546fd2d1d466073ec?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/83b39165af7b962546fd2d1d466073ec?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/tankerdood/" rel="nofollow" title="View TankerDood's profile">TankerDood</a></span>
+<div>2 days, 3 hours ago</div>
+</li>
+<li>
+<a class="bbp-forum-title" href="https://www.dogfoodadvisor.com/forums/topic/grain-free-dilemma/">Grain-free dilemma</a>
+by <span class="topic-author"><a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/jroush9/" rel="nofollow" title="View Jennifer R's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/38166fea75d860ffb4469a27794527bb?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/38166fea75d860ffb4469a27794527bb?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/jroush9/" rel="nofollow" title="View Jennifer R's profile">Jennifer R</a></span>
+<div>1 day, 9 hours ago</div>
+</li>
+<li>
+<a class="bbp-forum-title" href="https://www.dogfoodadvisor.com/forums/topic/best-food-for-digestion/">Best food for digestion</a>
+by <span class="topic-author"><a class="bbp-author-avatar" href="https://www.dogfoodadvisor.com/forums/users/cindysharon/" rel="nofollow" title="View Cindy S's profile"><img alt="" class="avatar avatar-14 photo" height="14" src="https://secure.gravatar.com/avatar/97ba950c2968d7648fcbda4d1c5da19c?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/97ba950c2968d7648fcbda4d1c5da19c?s=28&amp;d=mm&amp;r=g 2x" width="14"/></a> <a class="bbp-author-name" href="https://www.dogfoodadvisor.com/forums/users/cindysharon/" rel="nofollow" title="View Cindy S's profile">Cindy S</a></span>
+<div>2 days, 16 hours ago</div>
+</li>
+</ul>
+</div></section>
+</aside></div></div></div><footer class="site-footer"><div class="wrap"><p class="footer-logo"><a href="https://www.dogfoodadvisor.com">Dog Food Advisor</a></p><nav class="nav-footer"><div class="menu-footer-container"><ul class="menu" id="menu-footer"><li class="menu-item" id="menu-item-133313"><a href="https://www.dogfoodadvisor.com/disclaimer-and-disclosure/">Disclosure</a></li>
+<li class="menu-item" id="menu-item-133314"><a href="https://www.dogfoodadvisor.com/terms-of-use/">Terms of Use</a></li>
+<li class="menu-item" id="menu-item-133315"><a href="https://www.dogfoodadvisor.com/privacy-policy/">Privacy Policy</a></li>
+<li class="menu-item" id="menu-item-133316"><a href="https://www.dogfoodadvisor.com/contact-us/">Contact Us</a></li>
+</ul></div></nav><div class="footer-protection"><img id="sl_shield_image" src="//shield.sitelock.com/shield/www.dogfoodadvisor.com" style="cursor: pointer; "/><script id="sl_shield" language="javascript" src="//shield.sitelock.com/sitelock.js"></script></div><p class="copyright">Copyright © 2019 Dog Food Advisor All Rights Reserved</p></div></footer></div><div id="mm-payment-options-dialog"></div>
+<div id="mm-payment-confirmation-dialog"></div>
+<script>
+	jQuery(document).ready(function(){
+		if(jQuery.isFunction("dialog")) {
+			jQuery("#mm-payment-options-dialog").dialog({autoOpen: false});
+			jQuery("#mm-payment-confirmation-dialog").dialog({autoOpen: false});
+		}
+	});
+</script>
+<div id="amzn-assoc-ad-84503748-d2e6-4127-85f8-de616edb3e62"></div><script async="" src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=84503748-d2e6-4127-85f8-de616edb3e62"></script><div class="sidr left sidr-left" id="sidr-mobile-menu" style="transition: left 0.2s ease 0s;"><a class="sidr-menu-close" href="https://www.dogfoodadvisor.com/#"><svg aria-hidden="true" class="svg-icon" focusable="false" height="16" role="img" viewbox="0 0 48 48" width="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="40.941 38.113 26.799 23.971 40.941 9.829 38.112 7 23.97 21.142 9.828 7 7 9.829 21.142 23.971 7 38.113 9.828 40.942 23.97 26.8 38.112 40.942"></polygon></svg></a><div class="mobile-primary"><ul class="menu" id="menu-mobile-menu"><li class="menu-item menu-item-home" id="menu-item-133289"><a href="https://www.dogfoodadvisor.com/">Home</a></li>
+<li class="menu-item menu-item-has-children" id="menu-item-133290"><a href="https://www.dogfoodadvisor.com/best-dog-foods/">Best Dog Foods</a><span class="submenu-expand" tabindex="-1"><svg aria-hidden="true" class="svg-icon" focusable="false" height="24" role="img" viewbox="0 0 48 48" width="24" xmlns="http://www.w3.org/2000/svg"><polygon fill-rule="evenodd" points="14 9.829 28.142 23.971 14 38.113 16.828 40.942 33.799 23.971 16.828 7"></polygon></svg></span>
+<ul class="sub-menu">
+<li class="menu-item" id="menu-item-134133"><a href="https://www.dogfoodadvisor.com/best-dog-foods/best-dry-dog-foods/">Best Dry Dog Foods</a></li>
+<li class="menu-item" id="menu-item-134136"><a href="https://www.dogfoodadvisor.com/best-dog-foods/best-wet-dog-foods/">Best Wet Dog Foods</a></li>
+<li class="menu-item" id="menu-item-134135"><a href="https://www.dogfoodadvisor.com/best-dog-foods/raw-dog-food/">Best Raw Dog Foods</a></li>
+<li class="menu-item" id="menu-item-134134"><a href="https://www.dogfoodadvisor.com/best-dog-foods/best-grain-free-dog-foods/">Best Grain Free Dog Foods</a></li>
+<li class="menu-item" id="menu-item-135488"><a href="https://www.dogfoodadvisor.com/best-dog-foods/best-small-breed-dog-food/">Best Small Breed Dog Foods</a></li>
+<li class="menu-item" id="menu-item-135489"><a href="https://www.dogfoodadvisor.com/best-dog-foods/large-breed/">Best Large Breed Dog Foods</a></li>
+<li class="menu-item" id="menu-item-134137"><a href="https://www.dogfoodadvisor.com/best-dog-foods/hypoallergenic-dog-foods/">Best Dog Foods for Allergies</a></li>
+<li class="menu-item" id="menu-item-134138"><a href="https://www.dogfoodadvisor.com/best-dog-foods/weight-loss-dog-foods/">Best Dog Foods for Weight Loss</a></li>
+<li class="menu-item" id="menu-item-140350"><a href="https://www.dogfoodadvisor.com/best-dog-foods/">Best Dog Foods for Specific Breeds</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children" id="menu-item-133291"><a href="https://www.dogfoodadvisor.com/best-dog-foods/best-puppy-foods/">Best Puppy Foods</a><span class="submenu-expand" tabindex="-1"><svg aria-hidden="true" class="svg-icon" focusable="false" height="24" role="img" viewbox="0 0 48 48" width="24" xmlns="http://www.w3.org/2000/svg"><polygon fill-rule="evenodd" points="14 9.829 28.142 23.971 14 38.113 16.828 40.942 33.799 23.971 16.828 7"></polygon></svg></span>
+<ul class="sub-menu">
+<li class="menu-item" id="menu-item-135491"><a href="https://www.dogfoodadvisor.com/best-dog-foods/best-puppy-foods/best-dry-puppy-foods-5-star/">Best Dry Puppy Foods</a></li>
+<li class="menu-item" id="menu-item-135492"><a href="https://www.dogfoodadvisor.com/best-dog-foods/best-puppy-foods/best-canned-puppy-foods-5-star/">Best Wet Puppy Foods</a></li>
+<li class="menu-item" id="menu-item-135490"><a href="https://www.dogfoodadvisor.com/best-dog-foods/best-large-breed-puppy-food/">Best Large Breed Puppy Foods</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children" id="menu-item-133292"><a href="https://www.dogfoodadvisor.com/dog-food-reviews/brand/">Dog Food Reviews</a><span class="submenu-expand" tabindex="-1"><svg aria-hidden="true" class="svg-icon" focusable="false" height="24" role="img" viewbox="0 0 48 48" width="24" xmlns="http://www.w3.org/2000/svg"><polygon fill-rule="evenodd" points="14 9.829 28.142 23.971 14 38.113 16.828 40.942 33.799 23.971 16.828 7"></polygon></svg></span>
+<ul class="sub-menu">
+<li class="menu-item" id="menu-item-135914"><a href="https://www.dogfoodadvisor.com/dog-food-reviews/brand/">Dog Food Reviews A to Z</a></li>
+<li class="menu-item" id="menu-item-135911"><a href="https://www.dogfoodadvisor.com/dog-food-reviews/dry/">Dry Dog Food Reviews</a></li>
+<li class="menu-item" id="menu-item-135912"><a href="https://www.dogfoodadvisor.com/dog-food-reviews/wet/">Wet Dog Food Reviews</a></li>
+<li class="menu-item" id="menu-item-135913"><a href="https://www.dogfoodadvisor.com/dog-food-reviews/raw/">Raw Dog Food Reviews</a></li>
+</ul>
+</li>
+<li class="menu-item" id="menu-item-133307"><a href="https://www.dogfoodadvisor.com/recent-updates/">New or Updated Reviews</a></li>
+<li class="menu-item" id="menu-item-133293"><a href="https://www.dogfoodadvisor.com/dog-food-recalls/">Dog Food Recalls</a></li>
+<li class="menu-item" id="menu-item-133295"><a href="https://www.dogfoodadvisor.com/dog-food-recall-alerts/">Get Free Dog Food Recall Alerts</a></li>
+<li class="divider menu-item" id="menu-item-133392"><a href="https://bit.ly/2yfYCkK">Shop for Dog Food Online<br/>Get 30% Off + Free Shipping</a></li>
+<li class="divider menu-item" id="menu-item-133296"><a href="https://www.dogfoodadvisor.com/frequently-asked-questions/">FAQs</a></li>
+<li class="menu-item" id="menu-item-133297"><a href="https://www.dogfoodadvisor.com/dog-feeding-tips/dog-food-calculator/">Dog Food Calculator</a></li>
+<li class="menu-item" id="menu-item-133298"><a href="https://www.dogfoodadvisor.com/helpful-dog-food-articles/">Library</a></li>
+<li class="menu-item" id="menu-item-133299"><a href="https://www.dogfoodadvisor.com/recent-comments/">Recent Comments</a></li>
+<li class="menu-item" id="menu-item-133300"><a href="https://www.dogfoodadvisor.com/forums">Forums</a></li>
+<li class="menu-item" id="menu-item-133301"><a href="https://www.dogfoodadvisor.com/editors-choice-member-home/">Editor’s Choice</a></li>
+<li class="menu-item" id="menu-item-133302"><a href="https://www.dogfoodadvisor.com/about/">About</a></li>
+<li class="menu-item"><a href="https://www.dogfoodadvisor.com/login">Member Login</a></li></ul></div><div class="mobile-secondary"><ul class="menu" id="menu-footer-1"><li class="menu-item"><a href="https://www.dogfoodadvisor.com/disclaimer-and-disclosure/">Disclosure</a></li>
+<li class="menu-item"><a href="https://www.dogfoodadvisor.com/terms-of-use/">Terms of Use</a></li>
+<li class="menu-item"><a href="https://www.dogfoodadvisor.com/privacy-policy/">Privacy Policy</a></li>
+<li class="menu-item"><a href="https://www.dogfoodadvisor.com/contact-us/">Contact Us</a></li>
+</ul></div><p class="copyright">Copyright © 2019 Dog Food Advisor All Rights Reserved</p></div><div id="om-hjplnjwa8llolzvc-holder"><script type="text/javascript">if(!(window.ga&&ga.create)){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','__omGaTracker');}</script></div><script>var hjplnjwa8llolzvc,hjplnjwa8llolzvc_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){hjplnjwa8llolzvc_poll(function(){if(window['om_loaded']){if(!hjplnjwa8llolzvc){hjplnjwa8llolzvc=new OptinMonsterApp();return hjplnjwa8llolzvc.init({"u":"28429.508015","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="https://a.opmnstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;hjplnjwa8llolzvc=new OptinMonsterApp();hjplnjwa8llolzvc.init({"u":"28429.508015","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script><div id="om-oa00ajdijq4aj8rhquw5-holder"><script type="text/javascript">if(!(window.ga&&ga.create)){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','__omGaTracker');}</script></div><script>var oa00ajdijq4aj8rhquw5,oa00ajdijq4aj8rhquw5_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){oa00ajdijq4aj8rhquw5_poll(function(){if(window['om_loaded']){if(!oa00ajdijq4aj8rhquw5){oa00ajdijq4aj8rhquw5=new OptinMonsterApp();return oa00ajdijq4aj8rhquw5.init({"u":"28429.728360","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="https://a.opmnstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;oa00ajdijq4aj8rhquw5=new OptinMonsterApp();oa00ajdijq4aj8rhquw5.init({"u":"28429.728360","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script> <style type="text/css">
+					.searchwp-live-search-results {
+						opacity: 0;
+						transition: opacity .25s ease-in-out;
+						-moz-transition: opacity .25s ease-in-out;
+						-webkit-transition: opacity .25s ease-in-out;
+						height: 0;
+						overflow: hidden;
+						z-index: 9999;
+						position: absolute;
+						display: none;
+					}
+
+					.searchwp-live-search-results-showing {
+						display: block;
+						opacity: 1;
+						height: auto;
+						overflow: auto;
+					}
+
+					.searchwp-live-search-no-results {
+						padding: 3em 2em 0;
+						text-align: center;
+					}
+
+					.searchwp-live-search-no-min-chars:after {
+						content: "Continue typing";
+						display: block;
+						text-align: center;
+						padding: 2em 2em 0;
+					}
+				</style>
+<script type="text/javascript">var hjplnjwa8llolzvc_shortcode = true;var oa00ajdijq4aj8rhquw5_shortcode = true;</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var socialLoginVars = {"endpointUrl":"https:\/\/www.dogfoodadvisor.com\/wp-content\/plugins\/membermouse\/endpoints\/auth.php"};
+var socialLoginVars = {"endpointUrl":"https:\/\/www.dogfoodadvisor.com\/wp-content\/plugins\/membermouse\/endpoints\/auth.php"};
+var socialLoginVars = {"endpointUrl":"https:\/\/www.dogfoodadvisor.com\/wp-content\/plugins\/membermouse\/endpoints\/auth.php"};
+var socialLoginVars = {"endpointUrl":"https:\/\/www.dogfoodadvisor.com\/wp-content\/plugins\/membermouse\/endpoints\/auth.php"};
+/* ]]> */
+</script>
+<script src="https://www.dogfoodadvisor.com/wp-content/plugins/membermouse/resources/js/common/mm-social_login.js?ver=2.2.8" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-content/plugins/membermouse/resources/js/common/jquery.blockUI.js?ver=2.2.8" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var bbpTopicJS = {"bbp_ajaxurl":"https:\/\/www.dogfoodadvisor.com\/forums\/topic\/canine-carry-outs-dog-snacks-bacon-flavor\/?bbp-ajax=true","generic_ajax_error":"Something went wrong. Refresh your browser and try again.","is_user_logged_in":"","fav_nonce":"618fbb9c1f","subs_nonce":"41a096081f"};
+/* ]]> */
+</script>
+<script src="https://www.dogfoodadvisor.com/wp-content/plugins/bbpress/templates/default/js/topic.js?ver=2.5.14-6684" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"dogfoodadvisor"};
+/* ]]> */
+</script>
+<script src="https://www.dogfoodadvisor.com/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.17" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-content/plugins/dog-food-advisor-custom-search/custom-search.js?ver=5.2.2" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/accordion.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/button.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4" type="text/javascript"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":0,"isRTL":false});});
+</script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/resizable.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/dialog.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/droppable.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/progressbar.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/selectable.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-includes/js/jquery/ui/sortable.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="https://www.google.com/jsapi?ver=0.1" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-content/plugins/dog-food-product-dashboard/assets/dfpd.js?ver=2.2.1" type="text/javascript"></script><script src="https://www.google.com/uds/?file=visualization&amp;v=1&amp;packages=corechart%2Cgauge" type="text/javascript"></script><link href="https://www.google.com/uds/api/visualization/1.0/36558b280aac4fa99ed8215e60015cff/ui+en.css" rel="stylesheet" type="text/css"/><script src="https://www.google.com/uds/api/visualization/1.0/36558b280aac4fa99ed8215e60015cff/format+en,default+en,ui+en,gauge+en,corechart+en.I.js" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-content/themes/dog-food-advisor-2019/assets/js/global-min.js?ver=1553791412" type="text/javascript"></script>
+<script src="https://www.dogfoodadvisor.com/wp-content/themes/genesis/lib/js/skip-links.min.js?ver=3.0.2" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var searchwp_live_search_params = [];
+searchwp_live_search_params = {"ajaxurl":"https:\/\/www.dogfoodadvisor.com\/wp-admin\/admin-ajax.php","config":{"default":{"engine":"default","input":{"delay":500,"min_chars":3},"results":{"position":"bottom","width":"auto","offset":{"x":0,"y":5}},"spinner":{"lines":10,"length":8,"width":4,"radius":8,"corners":1,"rotate":0,"direction":1,"color":"#000","speed":1,"trail":60,"shadow":false,"hwaccel":false,"className":"spinner","zIndex":2000000000,"top":"50%","left":"50%"}}},"msg_no_config_found":"No valid SearchWP Live Search configuration found!","aria_instructions":"When autocomplete results are available use up and down arrows to review and enter to go to the desired page. Touch device users, explore by touch or with swipe gestures."};;
+/* ]]> */
+</script>
+<script src="https://www.dogfoodadvisor.com/wp-content/plugins/searchwp-live-ajax-search/assets/javascript/build/searchwp-live-search.min.js?ver=1.3.1" type="text/javascript"></script>
+<script type="text/javascript">var omapi_localized = { ajax: 'https://www.dogfoodadvisor.com/wp-admin/admin-ajax.php?optin-monster-ajax-route=1', nonce: '58fa3e6e72', slugs: {"hjplnjwa8llolzvc":{"slug":"hjplnjwa8llolzvc","mailpoet":false},"oa00ajdijq4aj8rhquw5":{"slug":"oa00ajdijq4aj8rhquw5","mailpoet":false}} };</script>
+<script type="text/javascript">var omapi_data = {"object_id":42234,"object_type":"post","object_key":"topic","term_ids":[1485]};</script>
+<div class="searchwp-live-search-results" id="searchwp_live_search_results_5d2a4df5660c7" role="listbox" style="left: 782.5px; top: 71px; width: 400px;" tabindex="0"></div><div class="nashville-background nashville-oa00ajdijq4aj8rhquw5 nashville-optin-visible nashville-position-bottom nashville-footer nashville-canvas" id="om-oa00ajdijq4aj8rhquw5" style="background-color: rgb(255, 223, 0); position: fixed; z-index: 666666666; left: 0px; zoom: 1; width: 100%; margin: 0px; padding: 0px; bottom: 0px;"><style class="nashville-template-styles" type="text/css">html div#om-oa00ajdijq4aj8rhquw5 *,html div#om-oa00ajdijq4aj8rhquw5 *:before,html div#om-oa00ajdijq4aj8rhquw5 *:after{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}html div#om-oa00ajdijq4aj8rhquw5{background:none;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;float:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:auto;letter-spacing:normal;outline:none;position:static;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;width:auto;visibility:visible;overflow:visible;margin:0;padding:0;line-height:1;font-family:helvetica,arial,sans-serif;-webkit-box-shadow:none;-moz-box-shadow:none;-ms-box-shadow:none;-o-box-shadow:none;box-shadow:none;-webkit-appearance:none;font-style:normal}html div#om-oa00ajdijq4aj8rhquw5 .nashville-clearfix,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-clearfix,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-clearfix{clear:both}html div#om-oa00ajdijq4aj8rhquw5 .nashville-clearfix:after,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-clearfix:after,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-clearfix:after{clear:both;content:".";display:block;height:0;line-height:0;overflow:auto;visibility:hidden;zoom:1}html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-row,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-element-row,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-element-row{margin-left:auto;margin-right:auto;zoom:1;width:100%}html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-row:before,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-element-row:before,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-element-row:before,html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-row:after,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-element-row:after,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-element-row:after{display:table;content:" "}html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-row:after,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-element-row:after,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-element-row:after{clear:both}html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-row-wrap,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-element-row-wrap,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-element-row-wrap{position:relative;margin:0}html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-row-content,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-element-row-content,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-element-row-content{margin-left:auto;margin-right:auto}html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-image,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-element-image,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-element-image{position:relative}html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-image img,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-element-image img,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-element-image img{height:auto;max-width:100%;display:block}html div#om-oa00ajdijq4aj8rhquw5 .om-close,html div#om-oa00ajdijq4aj8rhquw5 .nashville-close,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-close,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-close{cursor:pointer}html div#om-oa00ajdijq4aj8rhquw5.nashville-yesno-active .om-close,html div#om-oa00ajdijq4aj8rhquw5.nashville-yesno-active .nashville-close,html div#om-oa00ajdijq4aj8rhquw5.nashville-yesno-active .nashville-yesno-close{display:none}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form label{color:#484848}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form input,html div#om-oa00ajdijq4aj8rhquw5 .nashville-form select,html div#om-oa00ajdijq4aj8rhquw5 .nashville-form textarea{background-color:#fff;width:100%;border:1px solid #ccc;font-size:16px;line-height:24px;padding:10px 6px;overflow:hidden;outline:none;margin:0;vertical-align:middle;height:32px;font-style:normal}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form textarea{height:60px}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form textarea,html div#om-oa00ajdijq4aj8rhquw5 .nashville-form input{-webkit-appearance:none;-webkit-border-radius:0}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form input[type=submit],html div#om-oa00ajdijq4aj8rhquw5 .nashville-form button,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-form button,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-form button{background:#484848;border:1px solid #484848;width:100%;color:#fff;font-size:20px;padding:12px 6px;line-height:28px;text-align:center;vertical-align:middle;cursor:pointer;margin:0;height:36px;font-style:normal}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form input[type=checkbox],html div#om-oa00ajdijq4aj8rhquw5 .nashville-form input[type=radio]{width:auto!important;outline:invert none medium;padding:0;margin:0;height:auto!important;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;display:inline}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form input[type=checkbox]{-webkit-appearance:checkbox}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form input[type=radio]{-webkit-appearance:radio}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form .nashville-button-yes,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-form .nashville-yesno-button-yes,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-form .nashville-success-button-yes{margin-bottom:15px;cursor:pointer}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form-horizontal .nashville-button-yes,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-form-horizontal .nashville-yesno-button-yes,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-form-horizontal .nashville-success-button-yes{margin-bottom:0;margin-right:2%;cursor:pointer}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form .nashville-button-no,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-form .nashville-yesno-button-no,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-form .nashville-success-button-no{background-color:#666;border-color:#666;margin-bottom:0;cursor:pointer}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form-horizontal .nashville-button-no,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-form-horizontal .nashville-yesno-button-no,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-form-horizontal .nashville-success-button-no{margin-right:0;cursor:pointer}html div#om-oa00ajdijq4aj8rhquw5 .nashville-yes-button,html div#om-oa00ajdijq4aj8rhquw5 .nashville-no-button{cursor:pointer}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form-horizontal button,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-form-horizontal button,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-form-horizontal button{width:49%!important;max-width:none!important}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form-horizontal.nashville-has-button button,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-form-horizontal.nashville-yesno-has-button button,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-form-horizontal.nashville-success-has-button button{width:50%!important;display:block;margin:0 auto}html div#om-oa00ajdijq4aj8rhquw5 .nashville-segments{margin:0 0 15px}html div#om-oa00ajdijq4aj8rhquw5 .nashville-segments-horizontal{margin:15px 0 0}html div#om-oa00ajdijq4aj8rhquw5 .nashville-segments .nashville-segments-title{font-size:16px;display:block;line-height:1}html div#om-oa00ajdijq4aj8rhquw5 .nashville-segments-horizontal .nashville-segments-title{display:inline-block;margin-right:10px}html div#om-oa00ajdijq4aj8rhquw5 .nashville-segments .nashville-segments-wrap{margin-top:5px}html div#om-oa00ajdijq4aj8rhquw5 .nashville-segments-horizontal .nashville-segments-wrap{display:inline-block;margin-top:0}html div#om-oa00ajdijq4aj8rhquw5 .nashville-segments .nashville-segment-choice{display:inline-block;margin:0 10px 6px 0;vertical-align:middle}html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-privacy-checkbox,html div#om-oa00ajdijq4aj8rhquw5 .nashville-form input.nashville-element-privacy-checkbox{vertical-align:top;display:inline;margin-right:5px;width:auto}html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-privacy-inner-content{display:inline;vertical-align:bottom}html div#om-oa00ajdijq4aj8rhquw5 .nashville-segments label{font-size:12px;margin-left:4px;vertical-align:middle;line-height:12px}html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-privacy,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-element-privacy,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-element-privacy{color:#888;font-size:12px;font-family:'Open Sans',sans-serif;text-align:center;margin-top:10px;line-height:1}html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-privacy-before,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-element-privacy-before,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-element-privacy-before{margin-top:0;margin-bottom:10px}html div#om-oa00ajdijq4aj8rhquw5 .nashville-body,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-container,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-container{position:relative;height:100%;transition:opacity .5s ease-in-out;-webkit-transition:opacity .5s ease-in-out;-moz-transition:opacity .5s ease-in-out;-o-transition:opacity .5s ease-in-out;opacity:1}html div#om-oa00ajdijq4aj8rhquw5 .nashville-transition-hidden{opacity:0!important;height:0!important;min-height:0!important;max-height:0!important;overflow:hidden!important;padding:0!important;margin:0!important;border-width:0!important;border-style:none!important;position:relative}html div#om-oa00ajdijq4aj8rhquw5 .nashville-link.link-type-button,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-link.link-type-button{display:inline-block;padding:20px;text-align:center;text-decoration:none;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;font-weight:700;font-size:18px;color:#fff;line-height:1;margin-bottom:25px;cursor:pointer}html div#om-oa00ajdijq4aj8rhquw5 .nashville-field-comments{visibility:hidden;position:absolute!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;height:1px!important;width:1px!important;margin:-1px!important;padding:0!important;border:0!important;z-index:-1!important;max-width:1px!important;min-width:1px!important}html div#om-oa00ajdijq4aj8rhquw5 .fr-text-uppercase{text-transform:uppercase}html div#om-oa00ajdijq4aj8rhquw5 .fr-view .fr-text-spaced{letter-spacing:1px}html div#om-oa00ajdijq4aj8rhquw5 .fr-text-bordered{border-top:solid 1px #222;border-bottom:solid 1px #222;padding:10px 0}html div#om-oa00ajdijq4aj8rhquw5 .fr-text-gray{color:#AAA!important}html div#om-oa00ajdijq4aj8rhquw5 ul{list-style-type:disc}html div#om-oa00ajdijq4aj8rhquw5 ol{list-style:decimal}html div#om-oa00ajdijq4aj8rhquw5 ul,html div#om-oa00ajdijq4aj8rhquw5 ol{margin:0 0 1.5em 3em}html div#om-oa00ajdijq4aj8rhquw5 .nashville-element-title *:focus{outline:none}html body.public-monster-link{background:rgba(0,0,0,.7)}html div#om-oa00ajdijq4aj8rhquw5,html div#om-oa00ajdijq4aj8rhquw5 .nashville-outer-wrap .nashville-success-container{min-height:50px}html div#om-oa00ajdijq4aj8rhquw5 .nashville-outer-wrap{background:transparent;display:none;position:relative;text-align:center;margin:0 auto}html div#om-oa00ajdijq4aj8rhquw5 .nashville-powered-by{position:absolute!important;left:10px!important;top:50%!important;margin:-12px 0 0!important;height:24px!important;width:24px!important;z-index:666666666!important}html div#om-oa00ajdijq4aj8rhquw5 .nashville-powered-by a,html div#om-oa00ajdijq4aj8rhquw5 .nashville-powered-by a img{display:block!important;width:24px!important;height:24px!important;text-decoration:none!important;text-indent:-9999px!important;position:relative!important;cursor:pointer!important;opacity:.5;color:#ddd}html div#om-oa00ajdijq4aj8rhquw5 .nashville-outer-wrap,html div#om-oa00ajdijq4aj8rhquw5 .nashville-body{margin:0 auto;min-height:50px}html div#om-oa00ajdijq4aj8rhquw5 .nashville-body{padding:10px}html div#om-oa00ajdijq4aj8rhquw5 .nashville-close{color:#353535;display:block;font-size:28px;font-weight:100;text-decoration:none!important;font-family:Verdana,Arial,sans-serif!important;margin-left:5px;vertical-align:text-top;position:absolute;top:50%;margin-top:-15px;right:7px}html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-container{min-height:300px}html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-close{font-size:32px!important;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif!important;color:#282828!important;font-weight:300!important;position:absolute!important;top:0px!important;right:10px!important;background:none!important;text-decoration:none!important;width:auto!important;height:auto!important;display:block!important;line-height:32px!important;padding:0!important;z-index:99999}html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-content{position:absolute;width:100%;height:100%}html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-element-title{font-size:21px;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;color:#282828;font-weight:300;text-align:center;margin:0 auto;padding:0 15px;position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-background{position:absolute;width:100%;height:100%}html div#om-oa00ajdijq4aj8rhquw5.nashville-full-page-takeover .nashville-success-content{width:50%!important;height:50%!important;-webkit-transform:translate(50%,50%);-ms-transform:translate(50%,50%);transform:translate(50%,50%)}@media screen and (min-width:1px) and (max-width:400px){html div#om-oa00ajdijq4aj8rhquw5 .nashville-form-horizontal button,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-form-horizontal button,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-form-horizontal button{margin-right:0;width:100%!important;max-width:100%!important}html div#om-oa00ajdijq4aj8rhquw5 .nashville-form-horizontal .nashville-button-yes,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-form-horizontal .nashville-yesno-button-yes,html div#om-oa00ajdijq4aj8rhquw5 .nashville-success-form-horizontal .nashville-success-button-yes{margin-bottom:10px}}@media (min-width:1px) and (max-width:700px){html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-form button,html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-form-horizontal.nashville-yesno-has-button button{float:none;width:100%;max-width:100%;margin-right:0}html div#om-oa00ajdijq4aj8rhquw5 .nashville-yesno-form .nashville-yesno-button-yes{margin-bottom:15px}}</style><style class="nashville-custom-styles" type="text/css">html div#om-oa00ajdijq4aj8rhquw5 .nashville-body
+{
+    padding:17px !important;
+}</style><div class="nashville-clearfix nashville-outer-wrap" id="nashville-optin" style="max-width: 1920px; max-height: 40px; display: block;"><div class="nashville-element-row nashville-element-row-global nashville-body" data-selectable="true" data-target="#builder-setting-content_bg" id="nashville-body"><a class="nashville-element-close nashville-close" style="color:#00008b;" title="Close">×</a><div class="nashville-clearfix nashville-optin-body" id="nashville-optin-body"><div class="nashville-clearfix nashville-nashville-optin-content" id="nashville-nashville-optin-content"><div class="nashville-element-form nashville-element" data-element="form" id="nashville-element-form"><div class="nashville-form" id="nashville-form"><div class="nashville-form-wrap"><div style="font-size: 16px;"><a class="om-trigger-conversion" href="https://www.dogfoodadvisor.com/dog-food-recall-alerts/"><strong>Get Free Dog Food Recall Alerts</strong></a></div></div></div></div></div></div></div></div></div><div class="nashville-background nashville-hjplnjwa8llolzvc nashville-optin-visible nashville-has-image nashville-lightbox nashville-case-study" id="om-hjplnjwa8llolzvc" style="display: none; position: fixed; z-index: 888888888; top: 0px; left: 0px; zoom: 1; width: 100%; height: 100%; margin: 0px; padding: 0px;"><style class="nashville-template-styles" type="text/css">html div#om-hjplnjwa8llolzvc *,html div#om-hjplnjwa8llolzvc *:before,html div#om-hjplnjwa8llolzvc *:after{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}html div#om-hjplnjwa8llolzvc{background:none;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;float:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:auto;letter-spacing:normal;outline:none;position:static;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;width:auto;visibility:visible;overflow:visible;margin:0;padding:0;line-height:1;font-family:helvetica,arial,sans-serif;-webkit-box-shadow:none;-moz-box-shadow:none;-ms-box-shadow:none;-o-box-shadow:none;box-shadow:none;-webkit-appearance:none;font-style:normal}html div#om-hjplnjwa8llolzvc .nashville-clearfix,html div#om-hjplnjwa8llolzvc .nashville-yesno-clearfix,html div#om-hjplnjwa8llolzvc .nashville-success-clearfix{clear:both}html div#om-hjplnjwa8llolzvc .nashville-clearfix:after,html div#om-hjplnjwa8llolzvc .nashville-yesno-clearfix:after,html div#om-hjplnjwa8llolzvc .nashville-success-clearfix:after{clear:both;content:".";display:block;height:0;line-height:0;overflow:auto;visibility:hidden;zoom:1}html div#om-hjplnjwa8llolzvc .nashville-element-row,html div#om-hjplnjwa8llolzvc .nashville-yesno-element-row,html div#om-hjplnjwa8llolzvc .nashville-success-element-row{margin-left:auto;margin-right:auto;zoom:1;width:100%}html div#om-hjplnjwa8llolzvc .nashville-element-row:before,html div#om-hjplnjwa8llolzvc .nashville-yesno-element-row:before,html div#om-hjplnjwa8llolzvc .nashville-success-element-row:before,html div#om-hjplnjwa8llolzvc .nashville-element-row:after,html div#om-hjplnjwa8llolzvc .nashville-yesno-element-row:after,html div#om-hjplnjwa8llolzvc .nashville-success-element-row:after{display:table;content:" "}html div#om-hjplnjwa8llolzvc .nashville-element-row:after,html div#om-hjplnjwa8llolzvc .nashville-yesno-element-row:after,html div#om-hjplnjwa8llolzvc .nashville-success-element-row:after{clear:both}html div#om-hjplnjwa8llolzvc .nashville-element-row-wrap,html div#om-hjplnjwa8llolzvc .nashville-yesno-element-row-wrap,html div#om-hjplnjwa8llolzvc .nashville-success-element-row-wrap{position:relative;margin:0}html div#om-hjplnjwa8llolzvc .nashville-element-row-content,html div#om-hjplnjwa8llolzvc .nashville-yesno-element-row-content,html div#om-hjplnjwa8llolzvc .nashville-success-element-row-content{margin-left:auto;margin-right:auto}html div#om-hjplnjwa8llolzvc .nashville-element-image,html div#om-hjplnjwa8llolzvc .nashville-yesno-element-image,html div#om-hjplnjwa8llolzvc .nashville-success-element-image{position:relative}html div#om-hjplnjwa8llolzvc .nashville-element-image img,html div#om-hjplnjwa8llolzvc .nashville-yesno-element-image img,html div#om-hjplnjwa8llolzvc .nashville-success-element-image img{height:auto;max-width:100%;display:block}html div#om-hjplnjwa8llolzvc .om-close,html div#om-hjplnjwa8llolzvc .nashville-close,html div#om-hjplnjwa8llolzvc .nashville-yesno-close,html div#om-hjplnjwa8llolzvc .nashville-success-close{cursor:pointer}html div#om-hjplnjwa8llolzvc.nashville-yesno-active .om-close,html div#om-hjplnjwa8llolzvc.nashville-yesno-active .nashville-close,html div#om-hjplnjwa8llolzvc.nashville-yesno-active .nashville-yesno-close{display:none}html div#om-hjplnjwa8llolzvc .nashville-form label{color:#484848}html div#om-hjplnjwa8llolzvc .nashville-form input,html div#om-hjplnjwa8llolzvc .nashville-form select,html div#om-hjplnjwa8llolzvc .nashville-form textarea{background-color:#fff;width:100%;border:1px solid #ccc;font-size:16px;line-height:24px;padding:10px 6px;overflow:hidden;outline:none;margin:0;vertical-align:middle;height:32px;font-style:normal}html div#om-hjplnjwa8llolzvc .nashville-form textarea{height:60px}html div#om-hjplnjwa8llolzvc .nashville-form textarea,html div#om-hjplnjwa8llolzvc .nashville-form input{-webkit-appearance:none;-webkit-border-radius:0}html div#om-hjplnjwa8llolzvc .nashville-form input[type=submit],html div#om-hjplnjwa8llolzvc .nashville-form button,html div#om-hjplnjwa8llolzvc .nashville-yesno-form button,html div#om-hjplnjwa8llolzvc .nashville-success-form button{background:#484848;border:1px solid #484848;width:100%;color:#fff;font-size:20px;padding:12px 6px;line-height:28px;text-align:center;vertical-align:middle;cursor:pointer;margin:0;height:36px;font-style:normal}html div#om-hjplnjwa8llolzvc .nashville-form input[type=checkbox],html div#om-hjplnjwa8llolzvc .nashville-form input[type=radio]{width:auto!important;outline:invert none medium;padding:0;margin:0;height:auto!important;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;display:inline}html div#om-hjplnjwa8llolzvc .nashville-form input[type=checkbox]{-webkit-appearance:checkbox}html div#om-hjplnjwa8llolzvc .nashville-form input[type=radio]{-webkit-appearance:radio}html div#om-hjplnjwa8llolzvc .nashville-form .nashville-button-yes,html div#om-hjplnjwa8llolzvc .nashville-yesno-form .nashville-yesno-button-yes,html div#om-hjplnjwa8llolzvc .nashville-success-form .nashville-success-button-yes{margin-bottom:15px;cursor:pointer}html div#om-hjplnjwa8llolzvc .nashville-form-horizontal .nashville-button-yes,html div#om-hjplnjwa8llolzvc .nashville-yesno-form-horizontal .nashville-yesno-button-yes,html div#om-hjplnjwa8llolzvc .nashville-success-form-horizontal .nashville-success-button-yes{margin-bottom:0;margin-right:2%;cursor:pointer}html div#om-hjplnjwa8llolzvc .nashville-form .nashville-button-no,html div#om-hjplnjwa8llolzvc .nashville-yesno-form .nashville-yesno-button-no,html div#om-hjplnjwa8llolzvc .nashville-success-form .nashville-success-button-no{background-color:#666;border-color:#666;margin-bottom:0;cursor:pointer}html div#om-hjplnjwa8llolzvc .nashville-form-horizontal .nashville-button-no,html div#om-hjplnjwa8llolzvc .nashville-yesno-form-horizontal .nashville-yesno-button-no,html div#om-hjplnjwa8llolzvc .nashville-success-form-horizontal .nashville-success-button-no{margin-right:0;cursor:pointer}html div#om-hjplnjwa8llolzvc .nashville-yes-button,html div#om-hjplnjwa8llolzvc .nashville-no-button{cursor:pointer}html div#om-hjplnjwa8llolzvc .nashville-form-horizontal button,html div#om-hjplnjwa8llolzvc .nashville-yesno-form-horizontal button,html div#om-hjplnjwa8llolzvc .nashville-success-form-horizontal button{width:49%!important;max-width:none!important}html div#om-hjplnjwa8llolzvc .nashville-form-horizontal.nashville-has-button button,html div#om-hjplnjwa8llolzvc .nashville-yesno-form-horizontal.nashville-yesno-has-button button,html div#om-hjplnjwa8llolzvc .nashville-success-form-horizontal.nashville-success-has-button button{width:50%!important;display:block;margin:0 auto}html div#om-hjplnjwa8llolzvc .nashville-segments{margin:0 0 15px}html div#om-hjplnjwa8llolzvc .nashville-segments-horizontal{margin:15px 0 0}html div#om-hjplnjwa8llolzvc .nashville-segments .nashville-segments-title{font-size:16px;display:block;line-height:1}html div#om-hjplnjwa8llolzvc .nashville-segments-horizontal .nashville-segments-title{display:inline-block;margin-right:10px}html div#om-hjplnjwa8llolzvc .nashville-segments .nashville-segments-wrap{margin-top:5px}html div#om-hjplnjwa8llolzvc .nashville-segments-horizontal .nashville-segments-wrap{display:inline-block;margin-top:0}html div#om-hjplnjwa8llolzvc .nashville-segments .nashville-segment-choice{display:inline-block;margin:0 10px 6px 0;vertical-align:middle}html div#om-hjplnjwa8llolzvc .nashville-element-privacy-checkbox,html div#om-hjplnjwa8llolzvc .nashville-form input.nashville-element-privacy-checkbox{vertical-align:top;display:inline;margin-right:5px;width:auto}html div#om-hjplnjwa8llolzvc .nashville-element-privacy-inner-content{display:inline;vertical-align:bottom}html div#om-hjplnjwa8llolzvc .nashville-segments label{font-size:12px;margin-left:4px;vertical-align:middle;line-height:12px}html div#om-hjplnjwa8llolzvc .nashville-element-privacy,html div#om-hjplnjwa8llolzvc .nashville-yesno-element-privacy,html div#om-hjplnjwa8llolzvc .nashville-success-element-privacy{color:#888;font-size:12px;font-family:'Open Sans',sans-serif;text-align:center;margin-top:10px;line-height:1}html div#om-hjplnjwa8llolzvc .nashville-element-privacy-before,html div#om-hjplnjwa8llolzvc .nashville-yesno-element-privacy-before,html div#om-hjplnjwa8llolzvc .nashville-success-element-privacy-before{margin-top:0;margin-bottom:10px}html div#om-hjplnjwa8llolzvc .nashville-body,html div#om-hjplnjwa8llolzvc .nashville-yesno-container,html div#om-hjplnjwa8llolzvc .nashville-success-container{position:relative;height:100%;transition:opacity .5s ease-in-out;-webkit-transition:opacity .5s ease-in-out;-moz-transition:opacity .5s ease-in-out;-o-transition:opacity .5s ease-in-out;opacity:1}html div#om-hjplnjwa8llolzvc .nashville-transition-hidden{opacity:0!important;height:0!important;min-height:0!important;max-height:0!important;overflow:hidden!important;padding:0!important;margin:0!important;border-width:0!important;border-style:none!important;position:relative}html div#om-hjplnjwa8llolzvc .nashville-link.link-type-button,html div#om-hjplnjwa8llolzvc .nashville-success-link.link-type-button{display:inline-block;padding:20px;text-align:center;text-decoration:none;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;font-weight:700;font-size:18px;color:#fff;line-height:1;margin-bottom:25px;cursor:pointer}html div#om-hjplnjwa8llolzvc .nashville-field-comments{visibility:hidden;position:absolute!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;height:1px!important;width:1px!important;margin:-1px!important;padding:0!important;border:0!important;z-index:-1!important;max-width:1px!important;min-width:1px!important}html div#om-hjplnjwa8llolzvc .fr-text-uppercase{text-transform:uppercase}html div#om-hjplnjwa8llolzvc .fr-view .fr-text-spaced{letter-spacing:1px}html div#om-hjplnjwa8llolzvc .fr-text-bordered{border-top:solid 1px #222;border-bottom:solid 1px #222;padding:10px 0}html div#om-hjplnjwa8llolzvc .fr-text-gray{color:#AAA!important}html div#om-hjplnjwa8llolzvc ul{list-style-type:disc}html div#om-hjplnjwa8llolzvc ol{list-style:decimal}html div#om-hjplnjwa8llolzvc ul,html div#om-hjplnjwa8llolzvc ol{margin:0 0 1.5em 3em}html div#om-hjplnjwa8llolzvc .nashville-element-title *:focus{outline:none}html div#om-hjplnjwa8llolzvc{background:rgb(0,0,0);background:rgba(0,0,0,.7);width:100%;height:100%}html div#om-hjplnjwa8llolzvc #om-lightbox-case-study-optin,html div#om-hjplnjwa8llolzvc .nashville-outer-wrap{background:#fff;display:none;position:absolute;top:50%;left:50%;min-height:175px;max-width:700px;width:100%;z-index:888888888}html div#om-hjplnjwa8llolzvc .nashville-optin-bar{margin-bottom:20px}html div#om-hjplnjwa8llolzvc .nashville-bar{float:left;width:25%;height:11px;display:block}html div#om-hjplnjwa8llolzvc .nashville-red-bar{background-color:#ef3e36}html div#om-hjplnjwa8llolzvc .nashville-green-bar{background-color:#abb92e}html div#om-hjplnjwa8llolzvc .nashville-orange-bar{background-color:#f57826}html div#om-hjplnjwa8llolzvc .nashville-blue-bar{background-color:#17b4e9}html div#om-hjplnjwa8llolzvc .nashville-close{position:absolute;top:-12px;right:-12px;text-decoration:none!important;display:block;width:35px;height:35px;background:url(https://a.opmnstr.com/app/images/close.png) no-repeat scroll 0 0;z-index:1500;text-indent:-9999px;cursor:pointer}html div#om-hjplnjwa8llolzvc .nashville-header{min-height:30px;padding:15px;width:100%}html div#om-hjplnjwa8llolzvc .nashville-element-title{font-size:32px;font-family:'Bree Serif',serif;color:#484848;width:100%;margin-bottom:15px;text-shadow:0 1px #fff;text-align:center}html div#om-hjplnjwa8llolzvc .nashville-element-tagline{font-size:24px;font-family:'Open Sans',sans-serif;line-height:1.25;color:#484848;width:100%;margin-bottom:30px;text-shadow:0 1px #fff;text-align:center}html div#om-hjplnjwa8llolzvc .nashville-content{padding:15px}html div#om-hjplnjwa8llolzvc .nashville-left{float:left;max-width:280px;width:100%;position:relative}html div#om-hjplnjwa8llolzvc .nashville-right{float:right;max-width:370px;width:100%;background-color:#dadada;margin-right:-15px;padding:20px;position:relative}html div#om-hjplnjwa8llolzvc .nashville-arrow{position:absolute;width:49px;height:56px;left:-40px;top:-40px}html div#om-hjplnjwa8llolzvc .nashville-form input,html div#om-hjplnjwa8llolzvc .nashville-form select,html div#om-hjplnjwa8llolzvc .nashville-form textarea,html div#om-hjplnjwa8llolzvc .nashville-form button{margin:0 0 15px;height:46px}html div#om-hjplnjwa8llolzvc .nashville-form textarea{height:80px}html div#om-hjplnjwa8llolzvc .nashville-form input[type=submit],html div#om-hjplnjwa8llolzvc .nashville-form button{height:54px}html div#om-hjplnjwa8llolzvc .nashville-success-container{min-height:300px}html div#om-hjplnjwa8llolzvc .nashville-success-close{font-size:32px!important;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif!important;color:#282828!important;font-weight:300!important;position:absolute!important;top:0px!important;right:10px!important;background:none!important;text-decoration:none!important;width:auto!important;height:auto!important;display:block!important;line-height:32px!important;padding:0!important;z-index:99999}html div#om-hjplnjwa8llolzvc .nashville-success-content{position:absolute;width:100%;height:100%}html div#om-hjplnjwa8llolzvc .nashville-success-element-title{font-size:21px;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;color:#282828;font-weight:300;text-align:center;margin:0 auto;padding:0 15px;position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}html div#om-hjplnjwa8llolzvc .nashville-success-background{position:absolute;width:100%;height:100%}html div#om-hjplnjwa8llolzvc.nashville-full-page-takeover .nashville-success-content{width:50%!important;height:50%!important;-webkit-transform:translate(50%,50%);-ms-transform:translate(50%,50%);transform:translate(50%,50%)}@media (min-width:1px) and (max-width:700px){html div#om-hjplnjwa8llolzvc .nashville-outer-wrap[style]{position:relative!important;width:100%!important;left:0!important}html div#om-hjplnjwa8llolzvc .nashville-form input,html div#om-hjplnjwa8llolzvc .nashville-form select,html div#om-hjplnjwa8llolzvc .nashville-form textarea,html div#om-hjplnjwa8llolzvc .nashville-form.nashville-has-email input[type=email],html div#om-hjplnjwa8llolzvc .nashville-form input[type=submit],html div#om-hjplnjwa8llolzvc .nashville-form button,html div#om-hjplnjwa8llolzvc .nashville-form-horizontal.nashville-has-button button,html div#om-hjplnjwa8llolzvc button{float:none;width:100%;max-width:100%;margin-right:0}html div#om-hjplnjwa8llolzvc .nashville-form .nashville-field-name,html div#om-hjplnjwa8llolzvc .nashville-form .nashville-field-email,html div#om-hjplnjwa8llolzvc .nashville-form .nashville-button-yes{margin-bottom:15px}}@media (min-width:1px) and (max-width:700px){html div#om-hjplnjwa8llolzvc .nashville-yesno-form button,html div#om-hjplnjwa8llolzvc .nashville-yesno-form-horizontal.nashville-yesno-has-button button{float:none;width:100%;max-width:100%;margin-right:0}html div#om-hjplnjwa8llolzvc .nashville-yesno-form .nashville-yesno-button-yes{margin-bottom:15px}}@media (min-width:1px) and (max-width:700px){html div#om-hjplnjwa8llolzvc .nashville-close{right:0}html div#om-hjplnjwa8llolzvc .nashville-left,html div#om-hjplnjwa8llolzvc .nashville-right{float:none;width:100%;max-width:100%}html div#om-hjplnjwa8llolzvc .nashville-left{margin-bottom:15px;text-align:center}}@media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min--moz-device-pixel-ratio:2),only screen and (-o-min-device-pixel-ratio:2/1),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx){html div#om-hjplnjwa8llolzvc .nashville-close{background-image:url(https://a.opmnstr.com/app/images/close@2x.png);background-size:35px 35px}}</style><style class="nashville-effects" id="nashville-template-effects" type="text/css">@-webkit-keyframes slideInDown{0%{opacity:0;-webkit-transform:translateY(-2000px);transform:translateY(-2000px)}100%{-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes slideInDown{0%{opacity:0;-webkit-transform:translateY(-2000px);-ms-transform:translateY(-2000px);transform:translateY(-2000px)}100%{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}}#om-hjplnjwa8llolzvc #nashville-optin {-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:slideInDown;animation-name:slideInDown;}</style><div class="nashville-clearfix nashville-outer-wrap" id="nashville-optin" style=""><div class="nashville-element-row nashville-element-row-global nashville-clearfix nashville-body" id="nashville-body"><a class="nashville-element-close nashville-close" style="" title="Close">×</a><div class="nashville-clearfix nashville-optin-bar" id="nashville-optin-bar"><span class="nashville-bar nashville-red-bar"></span><span class="nashville-bar nashville-green-bar"></span><span class="nashville-bar nashville-orange-bar"></span><span class="nashville-bar nashville-blue-bar"></span></div><div class="nashville-clearfix nashville-header" id="nashville-header"><div class="nashville-element-title nashville-element" data-element="title" id="nashville-element-title"><div class="nashville-element-title-wrap"><div class="nashville-element-title-content" data-editable="true" id="nashville-element-title-content">Get Free Recall Alerts</div></div></div><div class="nashville-element-tagline nashville-element" data-element="tagline" id="nashville-element-tagline"><div class="nashville-element-tagline-wrap"><div class="nashville-element-tagline-content" data-editable="true" data-save="true" id="nashville-element-tagline-content"><span style="font-size: 21px;">Get lifesaving email alerts anytime there's a dog food recall in the U.S. or Canada. You'll also get our best tips and ideas to help you feed your dog better and safer.</span></div></div></div></div><div class="nashville-clearfix nashville-content" id="nashville-content"><div class="nashville-left" id="nashville-left"><div class="nashville-element-image nashville-element" data-element="image" id="nashville-element-image-main"><div class="nashville-image" data-context="lightbox" data-image-id="main" data-theme="case-study" id="nashville-image"><img alt="0b8402c9fee01486584941-email-recall-alert.jpg" class="nashville-element-image-output" data-context="lightbox" data-image-id="main" data-theme="case-study" src="https://a.opmnstr.com/users/3be885466699/images/0b8402c9fee01486584941-email-recall-alert.jpg"/></div></div></div><div class="nashville-right" id="nashville-right"><img alt="Arrow" class="nashville-arrow" id="nashville-arrow" src="https://a.opmnstr.com/app/images/arrow.png"/><div class="nashville-element-form nashville-element" data-element="form" id="nashville-element-form"><div class="nashville-form nashville-has-email nashville-has-buttons" id="nashville-form"><div class="nashville-form-wrap"><input autocomplete="off" class="nashville-field-comments" data-selectable="true" data-target="#builder-setting-comments_value" id="nashville-field-comments" name="nashville-comments" placeholder="" style="" type="text" value=""/><input class="nashville-field-email" data-selectable="true" data-target="#builder-setting-email_value" id="nashville-field-email" name="nashville-email" placeholder="Enter your email address here..." style="color:#484848;font-family:Open Sans;" type="email" value=""/><input class="nashville-field-submit" data-selectable="true" data-target="#builder-setting-submit_value" id="nashville-field-submit" name="nashville-submit" style="color:#ffffff;background:rgba(186,9,9,1);border-color:#484848;font-family:Arial;" type="submit" value="Send Me Recall Alerts"/><div class="nashville-element-privacy nashville-element nashville-element-privacy-after" data-element="privacy" id="nashville-element-privacy"><div class="nashville-element-privacy-wrap"><div class="nashville-element-privacy-content nashville-element-privacy-after" id="nashville-element-privacy-content"><span class="nashville-element-privacy-inner-content" data-editable="true" id="nashville-element-privacy-inner-content">No spam. Unsubscribe anytime.</span></div></div></div></div><div class="nashville-yesno-wrap" style="display:none"><button class="nashville-button-yes nashville-button-yesno" data-action="form" data-selectable="true" data-target="#builder-setting-yes_value" data-type="yes" id="nashville-button-yes" name="nashville-yes" style="color:#ffffff;background:#83c11f;border-color:#83c11f;font-family:Bree Serif;opacity:;" title="Yes, I Want Access!" type="button">Yes, I Want Access!</button><button class="nashville-button-no nashville-button-yesno" data-action="close" data-selectable="true" data-target="#builder-setting-no_value" data-type="no" id="nashville-button-no" name="nashville-no" style="color:#ffffff;background:#666666;border-color:#666666;font-family:Bree Serif;opacity:;" title="No Thanks" type="button">No Thanks</button></div></div></div></div></div></div><div class="nashville-success-container nashville-transition-hidden nashville-success-theme-default" id="nashville-success-container"></div></div></div></body></html>

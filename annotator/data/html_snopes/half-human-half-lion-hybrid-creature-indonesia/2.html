@@ -18,7 +18,7 @@
 <meta content="142011022527753" property="fb:app_id"/>
 <meta content="Slate Magazine" property="og:site_name"/>
 <meta content="article" property="og:type"/>
-<link href="http://www.slate.com/articles/news_and_politics/explainer/2006/11/humanderthals.html//media/sites/slate-com/web-app-manifest.json" rel="manifest"/>
+<link href="http://www.slate.com/articles/news_and_politics/explainer/2006/11/humanderthals.html/media/sites/slate-com/web-app-manifest.json" rel="manifest"/>
 <meta content="Slate" name="apple-mobile-web-app-title"/>
 <link href="https://slate.com/media/sites/slate-com/icon.76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
 <link href="https://slate.com/media/sites/slate-com/icon.120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
@@ -40,6 +40,7 @@
     if(!window.Promise)i('promise-polyfill.min.js')
     if(!window.fetch)i('whatwg-fetch.min.js')
     if(!window.URL||!window.URLSearchParams)i('url-polyfill.min.js')
+    if(/Trident|MSIE/.test(navigator.userAgent))i('closest.js')
     }())
     </script>
 <script data-uri="slate.com/_components/fontfaceobserver/instances/fontfaceobserver@published">
@@ -97,12 +98,12 @@
 <form class="gdpr-form" data-uri="slate.com/_components/gdpr-form/instances/cjhj95nlf00033g5tr6h9uuy2@published" method="POST">
 <p>
           By clicking “Agree,” you consent
-          to Slate’s <a class="gdpr-form__link" href="/terms">Terms of Service</a>
-          and <a class="gdpr-form__link" href="/privacy">Privacy Policy</a>
+          to Slate’s <a class="gdpr-form__link" href="http://www.slate.com/terms">Terms of Service</a>
+          and <a class="gdpr-form__link" href="http://www.slate.com/privacy">Privacy Policy</a>
           and the use of technologies such as cookies by Slate and our partners
           to deliver relevant advertising on our site, in emails and across the Internet,
           to personalize content and perform site analytics.
-          Please see our <a class="gdpr-form__link" href="/privacy">Privacy Policy</a>
+          Please see our <a class="gdpr-form__link" href="http://www.slate.com/privacy">Privacy Policy</a>
           for more information about our use of data, your rights, and how to withdraw consent.
         </p>
 <button class="gdpr-form__consent">Agree</button>

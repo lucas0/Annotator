@@ -1,10 +1,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# weheartit-tl: http://ogp.me/ns/fb/weheartit-tl#"><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script async="" src="https://rules.quantcount.com/rules-p-fBh533QDgpSsR.js"></script>
 <meta charset="utf-8"/>
-<script async="" src="https://sb.scorecardresearch.com/beacon.js"></script><script async="" src="https://secure.quantserve.com/quant.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://cdn.branch.io/branch-latest.min.js"></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"5b52aba749","applicationID":"126300297","transactionName":"JQxbTEJfDg5TQxZfDgsGGl1eRBAb","queueTime":1,"applicationTime":194,"agent":""}</script>
+<script async="" src="https://sb.scorecardresearch.com/beacon.js"></script><script async="" src="https://secure.quantserve.com/quant.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://cdn.branch.io/branch-latest.min.js"></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"5b52aba749","applicationID":"126300297","transactionName":"JQxbTEJfDg5TQxZfDgsGGl1eRBAb","queueTime":2,"applicationTime":443,"agent":""}</script>
 <script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content="noindex,follow" name="robots"/>
 <title>Image about who is he in Kings by black gyal on We Heart It</title>
 <meta content="We Heart It | Get lost in what you love" name="author"/>
-<meta content="Uploaded by Simplette. Find images and videos about who is he and lightskined boy on We Heart It - the app to get lost in what you love." name="description"/>
+<meta content="Find images and videos about who is he and lightskined boy on We Heart It - the app to get lost in what you love." name="description"/>
 <meta content="who is he, lightskined boy, WHOLE SNACKS 🤤🥰, Kings, Men, DAAADDYY😛👦🏽🤤💓, Baae😍💦🔒, Papis😻👄💦, Boys ⚡️, *∘✧ pretty boys  ✧∘*" name="keywords"/>
 <meta content="yWQd1QQOfyW6rzPkONyfqW5FWN893CD28NUQk30n2Po=" name="verify-v1"/>
 <meta content="app-id=539124565, app-argument=whi://entry/234126263" name="apple-itunes-app"/>
@@ -15,7 +16,7 @@
 <meta content="photo" name="twitter:card"/>
 <meta content="@weheartit" name="twitter:site"/>
 <meta content="Image about who is he in Kings by black gyal on We Heart It" name="twitter:title"/>
-<meta content="Uploaded by Simplette. Find images and videos about who is he and lightskined boy on We Heart It - the app to get lost in what you love." name="twitter:description"/>
+<meta content="Find images and videos about who is he and lightskined boy on We Heart It - the app to get lost in what you love." name="twitter:description"/>
 <meta content="https://data.whicdn.com/images/234126263/large.jpg" name="twitter:image:src"/>
 <meta content="https://weheartit.com/entry/234126263" name="twitter:url"/>
 <meta content="539124565" name="twitter:app:id:iphone"/>
@@ -134,23 +135,23 @@
 <meta content="weheartitapp:photo" property="og:type"/>
 <meta content="https://weheartit.com/entry/234126263" property="og:url"/>
 <meta content="Image about who is he in Kings by black gyal on We Heart It" property="og:title"/>
-<meta content="Uploaded by Simplette. Find images and videos about who is he and lightskined boy on We Heart It - the app to get lost in what you love." property="og:description"/>
+<meta content="Find images and videos about who is he and lightskined boy on We Heart It - the app to get lost in what you love." property="og:description"/>
 <meta content="https://data.whicdn.com/images/234126263/large.jpg" property="og:image"/>
 <meta content="143" property="weheartitapp:hearts"/>
 <link href="https://weheartit.com/entry/234126263/android-app://com.weheartit.android/http/weheartit.com/entry/234126263" rel="alternate"/>
-<link href="https://weheartit.com//manifest.webmanifest" rel="manifest"/>
-<link href="https://assets.whicdn.com/assets/favicon-4676c8d56f824e40950e39a8700b8627.ico" rel="shortcut icon" type="image/x-icon"/>
-<link href="https://assets.whicdn.com/assets/apple-touch-icon-4bd6e00edac466491dc9b874392a3f48.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="https://assets.whicdn.com/assets/favicon-32x32-40b70396bb342a51e125666a0d505506.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="https://assets.whicdn.com/assets/favicon-16x16-b1c9367da5af0c3eeee0dfa05ccd35e3.png" rel="icon" sizes="16x16" type="image/png"/>
-<link color="#ff4477" href="https://assets.whicdn.com/assets/safari-pinned-tab-1c3cf24d79c609be294fe169d1a4ed9b.svg" rel="mask-icon"/>
+<link href="https://weheartit.com/manifest.webmanifest" rel="manifest"/>
+<link href="https://assets.whicdn.com/assets/favicon-acfe5c2d81119e375156c82cd638c2baa64f367772c1c93ca3d6e436306e53b1.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="https://assets.whicdn.com/assets/apple-touch-icon-8931e5fb1a152ab346a7e686cee68947f500005a2bcf688243f36f9185e7ac07.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="https://assets.whicdn.com/assets/favicon-32x32-b87167c22631401b1264a3255366236bb20fe668cc358a649a3aa4f8b6457b78.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://assets.whicdn.com/assets/favicon-16x16-d2cb79e1987cc80f53bcaac37c6e11025f49f39b48440070e1b392d6cd6873de.png" rel="icon" sizes="16x16" type="image/png"/>
+<link color="#ff4477" href="https://assets.whicdn.com/assets/safari-pinned-tab-22b569b09abd0360e129c661c62c48993b9ff0e1a5defcdf07a9a21f79cc3d3a.svg" rel="mask-icon"/>
 <meta content="#ff4477" name="msapplication-TileColor"/>
 <meta content="#ff4477" name="theme-color"/>
 <link href="https://chrome.google.com/webstore/detail/iblenkmcolcdonmlfknbpbgjebabcoae" rel="chrome-webstore-item"/>
 <link href="https://weheartit.com/entry/234126263" rel="canonical"/>
 <meta content="authenticity_token" name="csrf-param"/>
-<meta content="F0Ezgw8CuJEh33/b0P7jP5yx2l8Uk6XkwXY6e8yimM7s7I0FP8lJOkndDmIj7SE+kr5tqDn9UFWWRwU8mRf/lw==" name="csrf-token"/>
-<link href="https://assets.whicdn.com/assets/application-35a7241979ccfe2cc54fb546ba72dbe2.css" media="screen" rel="stylesheet"/>
+<meta content="Ne3pZxOKKYhXFZeNxyIX+L6mfkYJ6hS5uKnZ4wPZU6RicaGyR8mhNRKrPWEzndqF7AbIXyzZ8R0tA0omZklfUQ==" name="csrf-token"/>
+<link href="https://assets.whicdn.com/assets/application-5b1785f97df9da8efb140a85355d58784faaf54bbf770b80a17aade3c2cdbd42.css" media="screen" rel="stylesheet"/>
 <script type="text/javascript">// utf8 = ✓
 
 (function () {
@@ -187,7 +188,7 @@
     dev_mode : false,
     request_type : "GET",
     facebook : { appId: '200368456664008', api_version: 'v2.8', user_token : "" },
-    pink_snake_loader_path: 'https://assets.whicdn.com/assets/pink_snake_loader-65cd80c8626c287e68458c7be34c33af.gif',
+    pink_snake_loader_path: 'https://assets.whicdn.com/assets/pink_snake_loader-9e7a4ef0068a73f7d2ff7dfc834c46201d5f17f122f0e99fefbed642ce68e170.gif',
     screen_size: screenSize,
     witleeEnabled: false,
     env: "production",
@@ -195,7 +196,7 @@
   }
 }())
 </script>
-<script type="text/javascript"></script>
+<script src="https://assets.whicdn.com/assets/application-header-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -203,7 +204,7 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-20250234-13', 'auto', {
-    sampleRate: 5
+    sampleRate: 10
   });
 
 
@@ -215,44 +216,43 @@
     });
   }
 </script>
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"SocialMediaPosting","url":"https://weheartit.com/entry/234126263","datePublished":"2016-04-09T14:33:35Z","dateModified":"2019-05-14T08:59:34Z","thumbnailUrl":"https://data.whicdn.com/images/234126263/superthumb.jpg?t=1460212415","mainEntityOfPage":{"@type":"WebPage","@id":"https://weheartit.com/entry/234126263"},"image":{"@type":"ImageObject","contentUrl":"https://data.whicdn.com/images/234126263/original.jpg","width":750,"height":739},"keywords":"who is he, lightskined boy","headline":"Image about who is he in Kings by black gyal on We Heart It","articleBody":"Uploaded by Simplette. Find images and videos about who is he and lightskined boy on We Heart It - the app to get lost in what you love."}</script>
 <style type="text/css"></style></head>
 <body class="loggedout body-xs-double-navbar bg-offwhite">
-<div class="modal js-modal-container"></div>
+<div class="modal js-modal-container noskim noskimwords"></div>
 <div id="lightbox" style="display:none;">
 <div class="spinner"></div>
 </div>
-<nav class="js-navbar panel panel-navbar no-padding navbar-light" id="navbar">
+<nav class="js-navbar panel panel-navbar no-padding navbar-light noskim noskimwords" id="navbar">
 <div class="container">
 <div class="grid-flex no-wrap">
 <div class="col hide-xs hide-sm">
-<a href="/"><img alt="We Heart It" class="img-static" src="https://assets.whicdn.com/assets/weheartit-eda700cb91eb48b6054b6b4f9143038a.png" style="height: 28px"/></a>
+<a href="https://weheartit.com/"><img alt="We Heart It" class="img-static" src="https://assets.whicdn.com/assets/weheartit-7bcd1dc288b5d1ddc1144d3741722ddd6bec203b247d85a6774ed5dbfb42f6e3.png" style="height: 28px"/></a>
            
       </div>
 <div class="col hide-md hide-lg hide-xl">
-<a href="/"><img alt="We Heart It" class="img-static" src="https://assets.whicdn.com/assets/weheartit_logo_square-f987beedc1ae1073caf3827b5a107571.png" style="width:32px;margin-left:0.5em" title="We Heart It"/></a>
+<a href="https://weheartit.com/"><img alt="We Heart It" class="img-static" src="https://assets.whicdn.com/assets/weheartit_logo_square-3f849727a15abb21f66c5740d7f5106dad42f07e512a1d98be5699ad5361da10.png" style="width:32px;margin-left:0.5em" title="We Heart It"/></a>
 </div>
 <div class="col span-12">
 <div class="grid-flex text-center">
 <div class="col">
 <ul class="tabs-light no-shadow">
 <li class="">
-<a href="/dashboard">
+<a href="https://weheartit.com/dashboard">
 <i class="icon icon-home"></i>
 <span class="hide-xs hide-sm">Home</span>
 </a> </li>
 <li class="">
-<a href="/">
+<a href="https://weheartit.com/">
 <i class="icon icon-discover"></i>
 <span class="hide-xs hide-sm">Discover</span>
 </a> </li>
 <li class="">
-<a href="/articles">
+<a href="https://weheartit.com/articles">
 <i class="icon icon-article"></i>
 <span class="hide-xs hide-sm">Articles</span>
 </a> </li>
 <li class="">
-<a href="/inspirations">
+<a href="https://weheartit.com/inspirations">
 <i class="icon icon-channels"></i>
 <span class="hide-xs hide-sm hide-md">Channels</span>
 </a> </li>
@@ -268,47 +268,47 @@
 </div>
 <div class="col no-wrap text-right">
 <div class="dropdown dropdown-right"> 
-            <a class="btn btn-small bg-primary" href="/join">Join</a>
+            <a class="btn btn-small bg-primary" href="https://weheartit.com/join">Join</a>
 <div class="dropdown-menu-light panel hide-xs">
-<a class="btn btn-block btn-small bg-facebook push-down" href="/join/facebook?registration_source=facebook.header-menu" rel="nofollow">
+<a class="btn btn-block btn-small bg-facebook push-down" href="https://weheartit.com/join/facebook?registration_source=facebook.header-menu" rel="nofollow">
 <span id="navbar-facebook-join">Using Facebook</span>
-</a> <a class="btn btn-block btn-small bg-twitter push-down" href="/join/twitter?registration_source=twitter.header-menu" rel="nofollow">
+</a> <a class="btn btn-block btn-small bg-twitter push-down" href="https://weheartit.com/join/twitter?registration_source=twitter.header-menu" rel="nofollow">
 <span id="navbar-twitter-join">Using Twitter</span>
-</a> <a class="btn btn-block btn-small bg-google push-down" href="/auth/google_oauth2?registration_source=google.header-menu" rel="nofollow">
+</a> <a class="btn btn-block btn-small bg-google push-down" href="https://weheartit.com/auth/google_oauth2?registration_source=google.header-menu" rel="nofollow">
 <span id="navbar-google-join">Using Google</span>
-</a> <a class="btn btn-block btn-small" href="/join?full=1&amp;registration_source=password.header-menu">
+</a> <a class="btn btn-block btn-small" href="https://weheartit.com/join?full=1&amp;registration_source=password.header-menu">
 <span id="navbar-email-join">Using Email</span>
 </a> </div>
 </div>
 </div>
 <div class="col no-wrap text-right">
 <div class="dropdown dropdown-right"> 
-            <a class="btn btn-small text-primary" href="/login">Log in</a>  
+            <a class="btn btn-small text-primary" href="https://weheartit.com/login">Log in</a>  
             <div class="dropdown-menu-light panel hide-xs">
-<a class="btn btn-block btn-small bg-facebook push-down" href="/login/facebook" rel="nofollow">
+<a class="btn btn-block btn-small bg-facebook push-down" href="https://weheartit.com/login/facebook" rel="nofollow">
 <span id="navbar-facebook-login">Using Facebook</span>
-</a> <a class="btn btn-block btn-small bg-twitter push-down" href="/login/twitter" rel="nofollow">
+</a> <a class="btn btn-block btn-small bg-twitter push-down" href="https://weheartit.com/login/twitter" rel="nofollow">
 <span id="navbar-twitter-login">Using Twitter</span>
-</a> <a class="btn btn-block btn-small bg-google push-down google_login_link" href="/auth/google_oauth2" rel="nofollow">
+</a> <a class="btn btn-block btn-small bg-google push-down google_login_link" href="https://weheartit.com/auth/google_oauth2" rel="nofollow">
 <span id="navbar-google-login">Using Google</span>
-</a> <a class="btn btn-block btn-small email_login_link" href="/login">
+</a> <a class="btn btn-block btn-small email_login_link" href="https://weheartit.com/login">
 <span id="navbar-email-login">Using Email</span>
 </a> </div>
 </div>
 </div>
 <div class="col hide-xs">
 <div class="dropdown dropdown-right">
-<a class="btn btn-link text-gray" href="#">▾</a>
+<a class="btn btn-link text-gray" href="https://weheartit.com/#">▾</a>
 <ul class="dropdown-menu-light panel">
-<li class="text-small"><a href="/about">About We Heart It</a></li>
+<li class="text-small"><a href="https://weheartit.com/about">About We Heart It</a></li>
 <li class="dropdown-divider"></li>
-<li class="push-down"><div><a class="btn btn-small btn-block btn-wrap bg-gradient" href="/about/app">Download the App</a></div></li>
-<li><div><a class="btn btn-small btn-block btn-wrap text-primary" href="/heart-button">Heart Button</a></div></li>
+<li class="push-down"><div><a class="btn btn-small btn-block btn-wrap bg-gradient" href="https://weheartit.com/about/app">Download the App</a></div></li>
+<li><div><a class="btn btn-small btn-block btn-wrap text-primary" href="https://weheartit.com/heart-button">Heart Button</a></div></li>
 <li class="dropdown-divider"></li>
-<li class="text-small"><a href="#" onclick="$('#languages-picker').show(); return false;">Language</a></li>
-<li class="text-small"><a href="/about/terms-of-service">Terms</a></li>
-<li class="text-small"><a href="/about/privacy-policy">Privacy</a></li>
-<li class="text-small"><a href="/contact">Contact us</a></li>
+<li class="text-small"><a href="https://weheartit.com/#" onclick="$('#languages-picker').show(); return false;">Language</a></li>
+<li class="text-small"><a href="https://weheartit.com/about/terms-of-service">Terms</a></li>
+<li class="text-small"><a href="https://weheartit.com/about/privacy-policy">Privacy</a></li>
+<li class="text-small"><a href="https://weheartit.com/contact">Contact us</a></li>
 <li class="text-small"><a href="http://help.weheartit.com">Help</a></li>
 </ul>
 </div>
@@ -322,7 +322,7 @@
 <span class="closex"></span>
 <div class="unstlyed popup">
 <span><strong>connection lost:</strong></span>
-<span><a href="">try refreshing to keep hearting</a></span>
+<span><a href="https://weheartit.com/">try refreshing to keep hearting</a></span>
 </div>
 </div>
 </div>
@@ -335,36 +335,36 @@
 <ul class="list-unstyled languages popup">
 <div class="col span-4 span-xs-4">
 <ul class="list-unstyled">
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=en" rel="nofollow">English</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=de" rel="nofollow">Deutsch</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=el" rel="nofollow">Ελληνικά</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=es" rel="nofollow">Español</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=fi" rel="nofollow">Suomi</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=fr" rel="nofollow">Français</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=hu" rel="nofollow">Magyar</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=id" rel="nofollow">Bahasa Indonesia</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=en" rel="nofollow">English</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=de" rel="nofollow">Deutsch</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=el" rel="nofollow">Ελληνικά</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=es" rel="nofollow">Español</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=fi" rel="nofollow">Suomi</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=fr" rel="nofollow">Français</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=hu" rel="nofollow">Magyar</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=id" rel="nofollow">Bahasa Indonesia</a></small></li>
 </ul>
 </div>
 <div class="col span-4 span-xs-4">
 <ul class="list-unstyled">
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=it" rel="nofollow">Italiano</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=ja" rel="nofollow">日本語</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=ko" rel="nofollow">한국어</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=nb" rel="nofollow">Norsk</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=nl" rel="nofollow">Nederlands</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=pl" rel="nofollow">Polski</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=pt-br" rel="nofollow">Português (BR)</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=ro" rel="nofollow">Română</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=it" rel="nofollow">Italiano</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=ja" rel="nofollow">日本語</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=ko" rel="nofollow">한국어</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=nb" rel="nofollow">Norsk</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=nl" rel="nofollow">Nederlands</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=pl" rel="nofollow">Polski</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=pt-br" rel="nofollow">Português (BR)</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=ro" rel="nofollow">Română</a></small></li>
 </ul>
 </div>
 <div class="col span-4 span-xs-4">
 <ul class="list-unstyled">
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=ru" rel="nofollow">Русский</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=sv" rel="nofollow">Svenska</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=th" rel="nofollow">ภาษาไทย</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=tr" rel="nofollow">Türkçe</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=zh-cn" rel="nofollow">简体字</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=zh-tw" rel="nofollow">繁體字</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=ru" rel="nofollow">Русский</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=sv" rel="nofollow">Svenska</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=th" rel="nofollow">ภาษาไทย</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=tr" rel="nofollow">Türkçe</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=zh-cn" rel="nofollow">简体字</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=zh-tw" rel="nofollow">繁體字</a></small></li>
 </ul>
 </div>
 </ul>
@@ -379,37 +379,37 @@
 <br/>
 <div class="grid text-center">
 <div class="col span-4">
-<a class="js-upload-image" href="javascript:void(0);">
+<a class="js-upload-image" href="https://weheartit.com/entry/234126263/javascript:void(0);">
 <i class="icon icon-upload icon-huge icon-primary push-down"></i><br/>
           Post Image
 </a> </div>
 <div class="col span-4">
-<a href="/articles/new">
+<a href="https://weheartit.com/articles/new">
 <i class="icon icon-article icon-huge icon-primary push-down">
 <span class="btn btn-tiny bg-success position-top-right text-uppercase">new</span>
 </i><br/>
           Write an Article
 </a> </div>
 <div class="col span-4">
-<a class="js-add-from-url" href="javascript:void(0);">
+<a class="js-add-from-url" href="https://weheartit.com/entry/234126263/javascript:void(0);">
 <i class="icon icon-web icon-huge icon-primary push-down"></i><br/>
           Add From URL
 </a> </div>
 </div>
 <hr/>
 <div class="grid">
-<div class="col span-6 text-center"><small><a class="heartbutton-link text-primary" data-action="ClickedGetHeartButton" data-category="AddImage" data-label="false" data-track="event" href="/heart-button">Get the Heart Button</a></small></div>
-<div class="col span-6 text-center"><small><a class="goodies-link text-primary" data-action="ClickedAddButtonSite" data-category="AddImage" data-label="false" data-track="event" href="/settings/goodies">Add button to my site</a></small></div>
+<div class="col span-6 text-center"><small><a class="heartbutton-link text-primary" data-action="ClickedGetHeartButton" data-category="AddImage" data-label="false" data-track="event" href="https://weheartit.com/heart-button">Get the Heart Button</a></small></div>
+<div class="col span-6 text-center"><small><a class="goodies-link text-primary" data-action="ClickedAddButtonSite" data-category="AddImage" data-label="false" data-track="event" href="https://weheartit.com/settings/goodies">Add button to my site</a></small></div>
 </div>
 </div>
 </div>
 <div class="panel position-bottom-left position-fixed push-around text-center js-cookie-warning" style="left: 110px; max-width: 25em;">
 <p>
     This website uses cookies to ensure you get the best experience on our website.
-    <a class="text-underline" href="/about/privacy-policy" target="_blank">Learn more</a>
+    <a class="text-underline" href="https://weheartit.com/about/privacy-policy" target="_blank">Learn more</a>
 </p>
 <p>
-<a class="btn btn-mini btn-wide bg-primary js-cookie-warning-dismiss" href="#">
+<a class="btn btn-mini btn-wide bg-primary js-cookie-warning-dismiss" href="https://weheartit.com/#">
       Got it!
     </a>
 </p>
@@ -430,17 +430,17 @@
 <div class="panel panel-large list js-entry-panel">
 <div class="list-item list-item-small hover-parent">
 <p class="position-top-right push-around hover-element">
-<small class="text-gray-light"><abbr class="timeago" title="about 3 years ago">3 years ago</abbr></small>
+<small class="text-gray-light"><abbr class="timeago" title="over 3 years ago">3 years ago</abbr></small>
 </p>
 <br/>
 <div class="user-preview grid-flex">
 <div class="col valign-top">
-<a class="avatar-container avatar-small" href="/ClaraValentina_"><img alt="Simplette" class="avatar" src="https://data.whicdn.com/avatars/22343473/thumb.jpg?t=1552952043" title="Simplette"/><span class="avatar-badge badge-heartist"></span></a>
+<a class="avatar-container avatar-small" href="https://weheartit.com/ClaraValentina_"><img alt="Simplette" class="avatar" src="https://data.whicdn.com/avatars/22343473/thumb.jpg?t=1562754282" title="Simplette"/><span class="avatar-badge badge-heartist"></span></a>
 </div>
 <div class="col span-12">
 <span class="text-overflow-parent">
 <span class="text-overflow">
-<a class="js-blc js-blc-t-user" href="/ClaraValentina_">
+<a class="js-blc js-blc-t-user" href="https://weheartit.com/ClaraValentina_">
 <span class="text-big">Simplette</span>
 </a> <br/>
 <small>@ClaraValentina_</small>
@@ -450,23 +450,23 @@
 </span>
 </div>
 <div class="col">
-<a class="js-follow-button anonymous btn text-primary btn-small" data-collection-count="26" data-user-id="22343473" data-username="ClaraValentina_" href="javascript:void(0);" rel="nofollow">Follow</a>
+<a class="js-follow-button anonymous btn text-primary btn-small" data-collection-count="27" data-user-id="22343473" data-username="ClaraValentina_" href="https://weheartit.com/entry/234126263/javascript:void(0);" rel="nofollow">Follow</a>
 </div>
 </div>
 <br/>
 <p class="text-wrap-break"></p>
 <div class="text-small">
-<a class="entry js-blc js-blc-t-heart btn-heart btn btn-wide js-heart-button" data-entry-id="234126263" data-hearter-username="ClaraValentina_" data-tiny-thumb="https://data.whicdn.com/images/234126263/superthumb.jpg?t=1460212415" href="/entry/234126263">
+<a class="entry js-blc js-blc-t-heart btn-heart btn btn-wide js-heart-button" data-entry-id="234126263" data-hearter-username="ClaraValentina_" data-tiny-thumb="https://data.whicdn.com/images/234126263/superthumb.jpg?t=1460212415" href="https://weheartit.com/entry/234126263">
 <i class="icon icon-heart icon-primary"></i>
 </a>
     
         
-<a class="text-strong" href="/entry/234126263/hearters">
+<a class="text-strong" href="https://weheartit.com/entry/234126263/hearters">
 <span class="js-heart-count">143</span>
 <span class="hide-xs">Hearts</span>
 </a>    
         
-<a class="js-add-to-collection" data-entry-id="234126263" href="javascript:void(0)" style="display:none">
+<a class="js-add-to-collection" data-entry-id="234126263" href="https://weheartit.com/entry/234126263/javascript:void(0)" style="display:none">
 <i class="icon icon-collection icon-small"></i>
 <span class="hide-xs">Collect</span>
 </a>
@@ -475,7 +475,7 @@
         
 
 
-<a class="js-share-button" data-item-id="234126263" data-message="Had%20to%20share%20this%20%40WeHeartIt" data-type="entry" data-user-id="22343473" data-username="ClaraValentina_" href="/entry/234126263" tabindex="-1" title="Share"><i class="icon icon-share icon-small"></i><span class="hide-xs"> Share</span></a>
+<a class="js-share-button" data-item-id="234126263" data-message="Had%20to%20share%20this%20%40WeHeartIt" data-type="entry" data-user-id="22343473" data-username="ClaraValentina_" href="https://weheartit.com/entry/234126263" tabindex="-1" title="Share"><i class="icon icon-share icon-small"></i><span class="hide-xs"> Share</span></a>
 
     
         
@@ -487,8 +487,8 @@
 </div>
 <div class="cel span-sidebar span-sm-12">
 <div class="grid-flex btn-group">
-<a class="btn btn-compact col text-primary js-entry-nav-prev" href="/entry/229326460?context_type=user&amp;context_username=ClaraValentina_"><span>←</span></a>
-<a class="btn btn-compact col text-primary js-entry-nav-next" href="/entry/225700564?context_type=user&amp;context_username=ClaraValentina_"><span>→</span></a>
+<a class="btn btn-compact col text-primary js-entry-nav-prev" href="https://weheartit.com/entry/229326460?context_type=user&amp;context_username=ClaraValentina_"><span>←</span></a>
+<a class="btn btn-compact col text-primary js-entry-nav-next" href="https://weheartit.com/entry/225700564?context_type=user&amp;context_username=ClaraValentina_"><span>→</span></a>
 </div>
 <br/>
 <div class="panel list text-small">
@@ -496,10 +496,10 @@
 <p class="h5">Tagged with</p>
 <div class="js-tag-list" data-entry-id="234126263">
 <div class="btn btn-tag dropdown">
-<a href="/pictures/lightskined%20boy" title="Lightskined Boy Pictures">lightskined boy</a>
+<a href="https://weheartit.com/pictures/lightskined%20boy" title="Lightskined Boy Pictures">lightskined boy</a>
 </div>
 <div class="btn btn-tag dropdown">
-<a href="/pictures/who%20is%20he" title="Who Is He Pictures">who is he</a>
+<a href="https://weheartit.com/pictures/who%20is%20he" title="Who Is He Pictures">who is he</a>
 </div>
 </div>
 </div>
@@ -513,8 +513,8 @@
 <br/>
 <div class="col span-12">
 <div class="grid-flex">
-<h4 class="h4 col span-12">This image is in <a href="/entry/234126263/collections">52 collections</a></h4>
-<a class="col btn btn-small bg-primary right" href="/entry/234126263/collections">View all</a>
+<h4 class="h4 col span-12">This image is in <a href="https://weheartit.com/entry/234126263/collections">52 collections</a></h4>
+<a class="col btn btn-small bg-primary right" href="https://weheartit.com/entry/234126263/collections">View all</a>
 </div>
 </div>
 <div class="cel span-3 span-md-4 span-sm-4 span-xs-12">
@@ -536,7 +536,7 @@
 </span>
 </a> </div>
 <div class="col">
-<a class="btn bg-primary js-anonymous btn-small" data-collection-id="23227855" data-username="ClaraValentina_" href="javascript:void(0)" rel="nofollow">Follow</a>
+<a class="btn bg-primary js-anonymous btn-small" data-collection-id="23227855" data-username="ClaraValentina_" href="https://weheartit.com/entry/234126263/javascript:void(0)" rel="nofollow">Follow</a>
 </div>
 </div>
 </div>
@@ -559,7 +559,7 @@
 </span>
 </a> </div>
 <div class="col">
-<a class="btn bg-primary js-anonymous btn-small" data-collection-id="131239130" data-username="ashleyschavez09" href="javascript:void(0)" rel="nofollow">Follow</a>
+<a class="btn bg-primary js-anonymous btn-small" data-collection-id="131239130" data-username="ashleyschavez09" href="https://weheartit.com/entry/234126263/javascript:void(0)" rel="nofollow">Follow</a>
 </div>
 </div>
 </div>
@@ -583,7 +583,7 @@
 </span>
 </a> </div>
 <div class="col">
-<a class="btn bg-primary js-anonymous btn-small" data-collection-id="123328859" data-username="brianaatkins590" href="javascript:void(0)" rel="nofollow">Follow</a>
+<a class="btn bg-primary js-anonymous btn-small" data-collection-id="123328859" data-username="brianaatkins590" href="https://weheartit.com/entry/234126263/javascript:void(0)" rel="nofollow">Follow</a>
 </div>
 </div>
 </div>
@@ -607,7 +607,7 @@
 </span>
 </a> </div>
 <div class="col">
-<a class="btn bg-primary js-anonymous btn-small" data-collection-id="116339362" data-username="psdejj" href="javascript:void(0)" rel="nofollow">Follow</a>
+<a class="btn bg-primary js-anonymous btn-small" data-collection-id="116339362" data-username="psdejj" href="https://weheartit.com/entry/234126263/javascript:void(0)" rel="nofollow">Follow</a>
 </div>
 </div>
 </div>
@@ -618,7 +618,7 @@
 <h4 class="h4">You might like these too</h4>
 </div>
 <div class="cel span-12 js-entry-similar">
-<img alt="Ajax loader big" class="img-static" src="https://assets.whicdn.com/assets/ajax-loader-big-eaad3b946af2a2057a73470010e1dd17.gif"/>
+<img alt="Ajax loader big" class="img-static" src="https://assets.whicdn.com/assets/ajax-loader-big-f8c1bb3db38dcd17540aea9cbd79422192958ecc1b5c18873941b63f99678924.gif"/>
 <br/><br/><br/><br/>
 </div>
 </div>
@@ -645,7 +645,7 @@
 <span class="close"></span>
 </div>
 <div class="text-small text-center position-fixed position-bottom push-around hidden js-pagination-counter" style="opacity:0.95; width: auto; right: 0; left: auto;">
-<a class="btn btn-block text-primary hidden js-pagination-scroll-top" href="/entry/234126263">Scroll to Top</a>
+<a class="btn btn-block text-primary hidden js-pagination-scroll-top" href="https://weheartit.com/entry/234126263">Scroll to Top</a>
 <form class="panel js-pagination-counter-form push-up hide-xs">
 <span>Page</span>
 <input class="btn-mini text-center js-pagination-counter-current" style="width:4em" type="text" value="1"/>
@@ -663,20 +663,20 @@
 </div>
 <div id="follow-button-dialog" style="display: none;">
 <div class="modal-heavy unfollow">
-<p><a class="btn btn-block text-primary follow-user" href="javascript:void(0);" style="display: none;">Follow user</a></p>
-<p><a class="btn btn-block text-danger-dark unfollow-user" href="javascript:void(0);">Unfollow user</a></p>
-<p><a class="btn btn-block text-danger-dark unfollow-collection" href="javascript:void(0);">Unfollow collections</a></p>
-<p><a class="btn btn-block cancel" href="javascript:void(0);">Cancel</a></p>
+<p><a class="btn btn-block text-primary follow-user" href="https://weheartit.com/entry/234126263/javascript:void(0);" style="display: none;">Follow user</a></p>
+<p><a class="btn btn-block text-danger-dark unfollow-user" href="https://weheartit.com/entry/234126263/javascript:void(0);">Unfollow user</a></p>
+<p><a class="btn btn-block text-danger-dark unfollow-collection" href="https://weheartit.com/entry/234126263/javascript:void(0);">Unfollow collections</a></p>
+<p><a class="btn btn-block cancel" href="https://weheartit.com/entry/234126263/javascript:void(0);">Cancel</a></p>
 </div>
 <div class="modal-heavy refresh" style="display: none;">
 <div class="description"><p>You have now unfollowed <br/><span class="name"></span></p></div>
-<p><a class="btn btn-block continue" href="javascript:void(0);">OK</a></p>
-<p><a class="btn btn-block" href="/dashboard">Refresh</a></p>
+<p><a class="btn btn-block continue" href="https://weheartit.com/entry/234126263/javascript:void(0);">OK</a></p>
+<p><a class="btn btn-block" href="https://weheartit.com/dashboard">Refresh</a></p>
 </div>
 <div class="modal-heavy collections" style="display: none;">
 <div class="description small"></div>
-<p><a class="btn btn-block text-danger-dark unfollow-all-collections" href="javascript:void(0);">Unfollow all</a></p>
-<p><a class="btn btn-block cancel" href="javascript:void(0);">Cancel</a></p>
+<p><a class="btn btn-block text-danger-dark unfollow-all-collections" href="https://weheartit.com/entry/234126263/javascript:void(0);">Unfollow all</a></p>
+<p><a class="btn btn-block cancel" href="https://weheartit.com/entry/234126263/javascript:void(0);">Cancel</a></p>
 </div>
 <div class="modal-heavy confirm" style="display: none;">
 <div class="title title-collection"><p>Unfollow collection</p></div>
@@ -685,17 +685,17 @@
 <div class="description description-collection"><p>Are you sure you want to unfollow the collection "<span class="collection-name"></span>" by <span class="name"></span> (@<span class="username"></span>)?</p></div>
 <div class="description description-collections"><p>Are you sure you want to unfollow all collections for this entry by <span class="name"></span> (@<span class="username"></span>)?</p></div>
 <div class="description description-user"><p>Are you sure you want to unfollow all hearts and collections from <span class="name"></span> (@<span class="username"></span>)?</p></div>
-<p><a class="btn btn-block cancel" href="javascript:void(0);">Cancel</a></p>
-<p><a class="btn btn-block confirm" href="javascript:void(0);">Unfollow</a></p>
+<p><a class="btn btn-block cancel" href="https://weheartit.com/entry/234126263/javascript:void(0);">Cancel</a></p>
+<p><a class="btn btn-block confirm" href="https://weheartit.com/entry/234126263/javascript:void(0);">Unfollow</a></p>
 </div>
 </div>
-<footer class="panel panel-bar no-padding bg-offwhite overflow-hidden push-up-2em">
+<footer class="panel panel-bar no-padding bg-offwhite overflow-hidden push-up-2em noskim noskimwords">
 <div class="container text-center-xs push-up-2em">
 <div class="grid-responsive">
 <div class="col span-2 span-xs-12">
 <div class="text-center">
-<a data-action="Footer" data-category="AppPromo" data-label="https://weheartit.com/entry/234126263" data-track="event" href="/about/app">
-<img alt="Weheartit logo square" class="img-static" src="https://assets.whicdn.com/assets/weheartit_logo_square-f987beedc1ae1073caf3827b5a107571.png"/> <br/><br/>
+<a data-action="Footer" data-category="AppPromo" data-label="https://weheartit.com/entry/234126263" data-track="event" href="https://weheartit.com/about/app">
+<img alt="Weheartit logo square" class="img-static" src="https://assets.whicdn.com/assets/weheartit_logo_square-3f849727a15abb21f66c5740d7f5106dad42f07e512a1d98be5699ad5361da10.png"/> <br/><br/>
 <small>Download our app for iOS and Android!</small>
 </a> </div>
 </div>
@@ -704,18 +704,19 @@
 <div class="grid">
 <div class="col span-6 span-xs-12">
 <ul class="list-unstyled">
-<li><small><a href="/about">About the site</a></small></li>
+<li><small><a href="https://weheartit.com/about">About the site</a></small></li>
 <li><small><a href="http://help.weheartit.com/">Need help? Read this</a></small></li>
-<li><small><a href="/bookmarklet">Get the Heart Button</a></small></li>
-<li><small><a href="/contact">Contact the Support Team</a></small></li>
+<li><small><a href="https://weheartit.com/bookmarklet">Get the Heart Button</a></small></li>
+<li><small><a href="https://weheartit.com/contact">Contact the Support Team</a></small></li>
 </ul>
 </div>
 <div class="col span-6 span-xs-12">
 <ul class="list-unstyled">
-<li><small><a href="/about/terms-of-service">Terms of Service</a></small></li>
-<li><small><a href="/about/privacy-policy">Privacy Policy</a></small></li>
-<li><small><a href="/about/ca-privacy">California Privacy Rights</a></small></li>
-<li><small><a href="/contact/copyright">Claim Copyright</a></small></li>
+<li><small><a href="https://weheartit.com/about/terms-of-service">Terms of Service</a></small></li>
+<li><small><a href="https://weheartit.com/about/privacy-policy">Privacy Policy</a></small></li>
+<li><small><a href="https://weheartit.com/about/ca-privacy">California Privacy Rights</a></small></li>
+<li><small><a href="https://weheartit.com/about/monetized-links">Links monetized by Skimlinks</a></small></li>
+<li><small><a href="https://weheartit.com/contact/copyright">Claim Copyright</a></small></li>
 </ul>
 </div>
 <div class="cel span-12">
@@ -725,43 +726,43 @@
 </div>
 <div class="col span-4 span-xs-12">
 <div class="show-xs">
-<a class="btn btn-small text-muted" href="#" onclick="$('#languages-picker').show(); return false;">Language</a>
+<a class="btn btn-small text-muted" href="https://weheartit.com/#" onclick="$('#languages-picker').show(); return false;">Language</a>
 </div>
 <div class="hide-xs">
 <p class="h5">Languages:</p>
 <div class="grid">
 <div class="col span-4 span-xs-4">
 <ul class="list-unstyled">
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=en" rel="nofollow">English</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=de" rel="nofollow">Deutsch</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=el" rel="nofollow">Ελληνικά</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=es" rel="nofollow">Español</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=fi" rel="nofollow">Suomi</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=fr" rel="nofollow">Français</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=hu" rel="nofollow">Magyar</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=id" rel="nofollow">Bahasa Indonesia</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=en" rel="nofollow">English</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=de" rel="nofollow">Deutsch</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=el" rel="nofollow">Ελληνικά</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=es" rel="nofollow">Español</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=fi" rel="nofollow">Suomi</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=fr" rel="nofollow">Français</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=hu" rel="nofollow">Magyar</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=id" rel="nofollow">Bahasa Indonesia</a></small></li>
 </ul>
 </div>
 <div class="col span-4 span-xs-4">
 <ul class="list-unstyled">
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=it" rel="nofollow">Italiano</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=ja" rel="nofollow">日本語</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=ko" rel="nofollow">한국어</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=nb" rel="nofollow">Norsk</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=nl" rel="nofollow">Nederlands</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=pl" rel="nofollow">Polski</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=pt-br" rel="nofollow">Português (BR)</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=ro" rel="nofollow">Română</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=it" rel="nofollow">Italiano</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=ja" rel="nofollow">日本語</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=ko" rel="nofollow">한국어</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=nb" rel="nofollow">Norsk</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=nl" rel="nofollow">Nederlands</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=pl" rel="nofollow">Polski</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=pt-br" rel="nofollow">Português (BR)</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=ro" rel="nofollow">Română</a></small></li>
 </ul>
 </div>
 <div class="col span-4 span-xs-4">
 <ul class="list-unstyled">
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=ru" rel="nofollow">Русский</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=sv" rel="nofollow">Svenska</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=th" rel="nofollow">ภาษาไทย</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=tr" rel="nofollow">Türkçe</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=zh-cn" rel="nofollow">简体字</a></small></li>
-<li class="push-down-xs"><small><a data-method="put" href="/settings/locale?locale=zh-tw" rel="nofollow">繁體字</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=ru" rel="nofollow">Русский</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=sv" rel="nofollow">Svenska</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=th" rel="nofollow">ภาษาไทย</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=tr" rel="nofollow">Türkçe</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=zh-cn" rel="nofollow">简体字</a></small></li>
+<li class="push-down-xs"><small><a data-method="put" href="https://weheartit.com/entry/234126263/settings/locale?locale=zh-tw" rel="nofollow">繁體字</a></small></li>
 </ul>
 </div>
 </div>
@@ -769,7 +770,7 @@
 </div>
 <div class="col span-1 span-xs-12 hide-xs">
 <br class="show-xs"/><br class="show-xs"/><br class="show-xs"/>
-<img alt="Pink heart" class="img-static" src="https://assets.whicdn.com/assets/pink_heart-509a6694a26c66f6b384c0c612d93089.png"/>
+<img alt="Pink heart" class="img-static" src="https://assets.whicdn.com/assets/pink_heart-c5ef333f3ec0e55b8499d882c73c7ae2b99b0e24514310908c316faa50f0c842.png"/>
 </div>
 </div>
 </div>
@@ -777,8 +778,8 @@
 </footer>
 <div id="fb-root" style="display:none"></div>
 <div style="width:0;height:0;overflow:hidden">
-<img src="https://assets.whicdn.com/assets/ajax-heart-gray-eb5e1184f0d47fdfb2d3b356cd330891.gif"/>
-<img src="https://assets.whicdn.com/assets/ajax-heart-white-7e4e16fdaf6eeb18aa4c293cd6e02235.gif"/>
+<img src="https://assets.whicdn.com/assets/ajax-heart-gray-65c2a9c251ef70bad698c2330bd8d28c70284684ab1f034f336478fdee0e1f7d.gif"/>
+<img src="https://assets.whicdn.com/assets/ajax-heart-white-fda8a547384de31097feeb795bb1ee9bc135ad7bb4725f3d858fefc6c83e3586.gif"/>
 </div>
 <script type="text/javascript">
 var _qevents = _qevents || [];
@@ -801,8 +802,11 @@ _qevents.push({
 <img alt="Quantcast" border="0" height="1" src="//pixel.quantserve.com/pixel/p-45nh8QKbsf2Xk.gif" width="1"/>
 </div>
 </noscript>
-<script src="https://assets.whicdn.com/assets/application-35c4decbb7fa35f37b633ca9ad50b7ab.js"></script>
-<script src="https://assets.whicdn.com/assets/i18n/en-c25c5524851bed8c030c9c6904091fdc.js"></script>
+<script>
+  $.getScript("https://s.skimresources.com/js/28678X866187.skimlinks.js")
+</script>
+<script src="https://assets.whicdn.com/assets/application-43fc8ba01c03873fc1761afcfc94123982133e759b25181a19cf9953424bce3a.js"></script>
+<script src="https://assets.whicdn.com/assets/i18n/en-1840edf8eb529080d981634881540ae45420a08a7055bae962edb2b387eae3d3.js"></script>
 <script type="text/javascript">
   I18n.defaultLocale = "en";
   I18n.locale = "en";
@@ -811,7 +815,7 @@ _qevents.push({
 <script>
 var WeHeartIt = require('/modules/whi')
 new WeHeartIt({
-  views : ["floating_window", "entry/landing", "entry/entry_group", "entry/share_buttons", "entry/youtube_autoplay", "entry/tag_form", "entry/entry", "entry/create_entry_set", "entry/add_to_collection", "entry/report_button", "entry/entry_ftue", "widgets", "new_account/new_confirmation", "onboarding_inspirations", "valentines_remix", "user_set", "file_preview", "add_favorite_keyword", "modals/add_to_collection_modal", "modals/create_new_collection_modal", "modals/collections_modal", "heart_button_container", "interstitial", "share_modal", "follow_button", "toggle_element", "click_out", "collaborate", "navbar/topbar_touches", "navbar/notifications", "navbar/navbar", "doubleclick_ads", "sidebar", "modal", "article_draft", "postcard", "cookie_warning", "dashboard/box_contacts", "dashboard/userFilter", "registration/join_tracker", "registration/registration", "registration/testimonials", "registration/email_signup", "registration/login", "catalog/vimeo_thumbs", "catalog/catalog", "branchio", "inbox", "dummy_ads", "block_warning", "text_preview", "user_account/facebook_timeline", "user_account/edit_notices", "user_account/find_friends", "user_account/link_account", "user_account/email_suggestion", "follow_collection_button", "reactions", "facepile_box", "activation", "article_preview", "dropdown", "static/facebook_timeline", "static/download_heart_button", "static/postcards_gallery", "static/postcards", "static/app", "static/popular", "static/left_share_buttons", "static/contact", "actions/add_image", "actions/new_entry_form_sign_in", "actions/too_many_tags", "actions/new_entry_form", "actions/heart_success", "postcard_button", "facebook_widget", "banner_join", "heart_button", "prompts/app_promo_ad", "user_profile/profile", "inspirations/inspirations", "email_bounced"],
+  views : ["heart_button_container", "heart_button", "entry/entry_ftue", "entry/landing", "entry/youtube_autoplay", "entry/share_buttons", "entry/tag_form", "entry/add_to_collection", "entry/entry_group", "entry/report_button", "entry/create_entry_set", "entry/entry", "article_draft", "navbar/notifications", "navbar/topbar_touches", "navbar/navbar", "cookie_warning", "valentines_remix", "inspirations/inspirations", "new_account/new_confirmation", "share_modal", "floating_window", "email_bounced", "catalog/catalog", "catalog/vimeo_thumbs", "prompts/app_promo_ad", "registration/login", "registration/email_signup", "registration/join_tracker", "registration/testimonials", "registration/registration", "dummy_ads", "file_preview", "static/popular", "static/download_heart_button", "static/postcards_gallery", "static/left_share_buttons", "static/facebook_timeline", "static/postcards", "static/app", "static/contact", "dropdown", "actions/new_entry_form_sign_in", "actions/too_many_tags", "actions/add_image", "actions/heart_success", "actions/new_entry_form", "follow_button", "toggle_element", "reactions", "follow_collection_button", "postcard", "onboarding_inspirations", "activation", "modals/create_new_collection_modal", "modals/add_to_collection_modal", "modals/collections_modal", "branchio", "banner_join", "user_account/email_suggestion", "user_account/facebook_timeline", "user_account/edit_notices", "user_account/link_account", "user_account/find_friends", "text_preview", "collaborate", "block_warning", "widgets", "inbox", "dashboard/userFilter", "dashboard/box_contacts", "click_out", "facepile_box", "user_set", "add_favorite_keyword", "user_profile/profile", "facebook_widget", "interstitial", "article_preview", "modal", "sidebar", "doubleclick_ads", "postcard_button"],
   modules : [
     'notifications',
     'search',
@@ -879,4 +883,4 @@ jQuery.ajax({url: '//platform.twitter.com/widgets.js', dataType: 'script', cache
 }});
 //]]>
 </script>
-<iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/widget_iframe.d753e00c3e838c1b2558149bd3f6ecb8.html?origin=https%3A%2F%2Fweheartit.com" style="display: none;" title="Twitter settings iframe"></iframe></body></html>
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/widget_iframe.ed954039b4da87657c2de914fe37d022.html?origin=https%3A%2F%2Fweheartit.com" style="display: none;" title="Twitter settings iframe"></iframe></body></html>

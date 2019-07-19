@@ -1,6 +1,6 @@
 <html class="fonts-active js" dir="ltr" lang="en" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "><head>
-<meta charset="utf-8"/><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script src="https://js-agent.newrelic.com/nr-1123.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-37923362-1"></script>
+<meta charset="utf-8"/>
+<script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-37923362-1"></script>
 <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("config", "UA-37923362-1", {"groups":"default","anonymize_ip":true});gtag("config", "UA-24934301-1", {"groups":"default","anonymize_ip":true});</script>
 <meta content="Roosevelt Warm Springs | Georgia Vocational Rehabilitation Agency" name="title"/>
 <meta content="summary" name="twitter:card"/>
@@ -58,20 +58,19 @@
         }
     ]
 }</script>
-<link href="https://gvs.georgia.gov//favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<link href="https://gvs.georgia.gov/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
 <link href="https://gvs.georgia.gov/roosevelt-warm-springs-0" rel="revision"/>
 <title>Roosevelt Warm Springs | Georgia Vocational Rehabilitation Agency</title>
-<link href="https://gvs.georgia.gov//apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="https://gvs.georgia.gov//favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="https://gvs.georgia.gov//favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="https://gvs.georgia.gov/roosevelt-warm-springs-0//site.webmanifest" rel="manifest"/>
-<link color="#5bbad5" href="https://gvs.georgia.gov//safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="https://gvs.georgia.gov/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="https://gvs.georgia.gov/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://gvs.georgia.gov/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link color="#5bbad5" href="https://gvs.georgia.gov/safari-pinned-tab.svg" rel="mask-icon"/>
 <meta content="#ffc40d" name="msapplication-TileColor"/>
 <meta content="#ffffff" name="theme-color"/>
-<link as="font" crossorigin="" href="https://gvs.georgia.gov//themes/custom/ga_forest/assets/fonts/proxima-nova/3786F2_0_0.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="https://gvs.georgia.gov//themes/custom/ga_forest/assets/fonts/proxima-nova/3786F2_1_0.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="https://gvs.georgia.gov//themes/custom/ga_forest/assets/fonts/source-serif-pro/var/SourceSerifVariable-Roman.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="https://gvs.georgia.gov//themes/custom/ga_forest/assets/fonts/source-serif-pro/var/SourceSerifVariable-Italic.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="https://gvs.georgia.gov/themes/custom/ga_forest/assets/fonts/proxima-nova/3786F2_0_0.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="https://gvs.georgia.gov/themes/custom/ga_forest/assets/fonts/proxima-nova/3786F2_1_0.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="https://gvs.georgia.gov/themes/custom/ga_forest/assets/fonts/source-serif-pro/var/SourceSerifVariable-Roman.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="https://gvs.georgia.gov/themes/custom/ga_forest/assets/fonts/source-serif-pro/var/SourceSerifVariable-Italic.woff2" rel="preload" type="font/woff2"/>
 <style type="text/css">
       @charset "UTF-8";
 /* Import the variables */
@@ -238,9 +237,9 @@
   font-stretch: normal;
   src: url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/var/SourceSerifVariable-Italic.woff2") format("woff2-variations"); }
 /*# sourceMappingURL=fonts.css.map */    </style>
-<link href="https://gvs.georgia.gov//sites/gvs.georgia.gov/files/css/css_w-DtrjqrQ4_PtbBQ-VRW_mq01hP_MkVgsQkIJxS46zc.css?ptq391" media="all" rel="stylesheet"/>
+<link href="https://gvs.georgia.gov/sites/gvs.georgia.gov/files/css/css_w-DtrjqrQ4_PtbBQ-VRW_mq01hP_MkVgsQkIJxS46zc.css?puguyq" media="all" rel="stylesheet"/>
 <link href="//cloud.typenetwork.com/projects/2738/fontface.css" media="all" rel="stylesheet"/>
-<link href="https://gvs.georgia.gov//sites/gvs.georgia.gov/files/css/css_FN4xVYpjdfP27HKyToMFstnRfbU34MN5uJRxQ9WT1cU.css?ptq391" media="all" rel="stylesheet"/>
+<link href="https://gvs.georgia.gov/sites/gvs.georgia.gov/files/css/css_kAiPOoThXrrqv3PY0F-QMw5ucX8IYBc_DVBovRRKZJU.css?puguyq" media="all" rel="stylesheet"/>
 <script>
       "use strict";(function(doc){var docEl=doc.documentElement,rootClasses=docEl.classList,activateFonts=function activateFonts(){rootClasses.add("fonts-active");rootClasses.remove("fonts-inactive")},fallbackLoader="/themes/custom/ga_forest/dist/js/ga-font-loader-fallback.min.js";rootClasses.add("fonts-inactive");// Check session storage to see if fonts are loaded.
 if(sessionStorage.gaFontsLoaded){activateFonts()}// Use CSS Font Loading API if available.
@@ -253,7 +252,7 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 <![endif]-->
 </head>
 <body class="mq-breakpoints--hide path-node page-node-type-landing-page u-palette--simple-statehouse">
-<a class="visually-hidden focusable skip-link" href="#main-content">
+<a class="visually-hidden focusable skip-link" href="https://gvs.georgia.gov/#main-content">
       Skip to main content
     </a>
 <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
@@ -264,23 +263,23 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 <div class="header-top-hat__inner">
 <div class="header-official-site">
 <div class="header-official-site__description">
-<img alt="Georgia State Flag" class="header-official-site__description-image" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/flag/ga-flag.svg"/>
+<img alt="Georgia State Flag" class="header-official-site__description-image" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/flag/ga-flag.svg"/>
 <p class="header-official-site__description-text">
       An official website of the State of Georgia government.
-      <a class="header-official-site__link" href="#">
-<span class="header-official-site__link-text">Here’s how you know</span><img class="header-official-site__link-image" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/arrows/short-down/arrow-short-down--white.svg"/>
+      <a class="header-official-site__link" href="https://gvs.georgia.gov/#">
+<span class="header-official-site__link-text">Here’s how you know</span><img class="header-official-site__link-image" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/arrows/short-down/arrow-short-down--white.svg"/>
 </a>
 </p>
 </div>
 </div>
 <div class="header-utility-wide">
-<a class="notranslate google-translator-switch header-utility-wide__language-selector" href="#" id="block-googletranslator">
-<img class="header-utility-wide__language-selector-image" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/monoline/language/monoline-language--white.svg"/>
+<a class="notranslate google-translator-switch header-utility-wide__language-selector" href="https://gvs.georgia.gov/#" id="block-googletranslator">
+<img class="header-utility-wide__language-selector-image" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/monoline/language/monoline-language--white.svg"/>
 <span class="header-utility-wide__language-selector-text">Language: English</span>
 </a>
 <a class="header-utility-wide__agency-selector" href="https://georgia.gov/agency-list">
-<img class="header-utility-wide__agency-selector-image header-utility-wide__agency-selector-image--mobile" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/monoline/list/monoline-list--black.svg"/>
-<img class="header-utility-wide__agency-selector-image header-utility-wide__agency-selector-image--desktop" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/monoline/list/monoline-list--white.svg"/>
+<img class="header-utility-wide__agency-selector-image header-utility-wide__agency-selector-image--mobile" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/monoline/list/monoline-list--black.svg"/>
+<img class="header-utility-wide__agency-selector-image header-utility-wide__agency-selector-image--desktop" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/monoline/list/monoline-list--white.svg"/>
 <span class="header-utility-wide__agency-selector-text">Agency A-Z</span>
 </a></div> </div>
 <div aria-hidden="true" class="header-official-site__information">
@@ -297,25 +296,25 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 <div class="header-branding-bar" data-swatch-role="header-branding" data-swatch-text-type="light-text" data-swatch-type="global">
 <div class="header-branding-bar__inner">
 <div class="header-branding-lockup">
-<a class="header-branding-lockup__link" href="/" title="Georgia Vocational Rehabilitation Agency">
+<a class="header-branding-lockup__link" href="https://gvs.georgia.gov/" title="Georgia Vocational Rehabilitation Agency">
 <span class="header-branding-lockup__logo header-branding-lockup__logo--agency header-branding-lockup__logo--gvs">
-<img alt="" class="header-branding-lockup__logo-image" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/logo/ga-logo--gold.svg"/>
+<img alt="" class="header-branding-lockup__logo-image" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/logo/ga-logo--gold.svg"/>
 </span>
 <span class="header-branding-lockup__wordmark header-branding-lockup__wordmark--agency header-branding-lockup__wordmark--gvs">
-<img alt="Georgia Vocational Rehabilitation Agency" class="header-branding-lockup__wordmark-image header-branding-lockup__wordmark-image--light" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--white.svg"/>
-<img alt="Georgia Vocational Rehabilitation Agency" class="header-branding-lockup__wordmark-image header-branding-lockup__wordmark-image--light-active" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--gold.svg"/>
-<img alt="Georgia Vocational Rehabilitation Agency" class="header-branding-lockup__wordmark-image header-branding-lockup__wordmark-image--dark" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--black.svg"/>
-<img alt="Georgia Vocational Rehabilitation Agency" class="header-branding-lockup__wordmark-image header-branding-lockup__wordmark-image--dark-active" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--red.svg"/>
+<img alt="Georgia Vocational Rehabilitation Agency" class="header-branding-lockup__wordmark-image header-branding-lockup__wordmark-image--light" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--white.svg"/>
+<img alt="Georgia Vocational Rehabilitation Agency" class="header-branding-lockup__wordmark-image header-branding-lockup__wordmark-image--light-active" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--gold.svg"/>
+<img alt="Georgia Vocational Rehabilitation Agency" class="header-branding-lockup__wordmark-image header-branding-lockup__wordmark-image--dark" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--black.svg"/>
+<img alt="Georgia Vocational Rehabilitation Agency" class="header-branding-lockup__wordmark-image header-branding-lockup__wordmark-image--dark-active" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--red.svg"/>
 </span>
 </a>
 </div>
 <div class="header-search-trigger">
 <button class="header-search-trigger__button header-search-trigger__button--open">
 <span class="header-search-trigger__button-icon">
-<img alt="" class="header-search-trigger__button-image header-search-trigger__button-image--light" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/interaction/search/search--white.svg"/>
-<img alt="" class="header-search-trigger__button-image header-search-trigger__button-image--dark" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/interaction/search/search--black.svg"/>
-<img alt="" class="header-search-trigger__button-image header-search-trigger__button-image--light-active" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/interaction/search/search--gold.svg"/>
-<img alt="" class="header-search-trigger__button-image header-search-trigger__button-image--dark-active" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/interaction/search/search--red.svg"/>
+<img alt="" class="header-search-trigger__button-image header-search-trigger__button-image--light" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/interaction/search/search--white.svg"/>
+<img alt="" class="header-search-trigger__button-image header-search-trigger__button-image--dark" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/interaction/search/search--black.svg"/>
+<img alt="" class="header-search-trigger__button-image header-search-trigger__button-image--light-active" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/interaction/search/search--gold.svg"/>
+<img alt="" class="header-search-trigger__button-image header-search-trigger__button-image--dark-active" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/interaction/search/search--red.svg"/>
 </span>
 <span class="header-search-trigger__button-text">Search</span>
 </button>
@@ -358,14 +357,14 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 <div class="header-search-form__popular-choice">
 <h3 class="header-search-form__popular-choice-header">Popular searches</h3>
 <ul class="header-search-form__popular-choice-list-items">
-<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="#">Mission Statement</a></li>
-<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="#">Organization of the office</a></li>
-<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="#">History</a></li>
-<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="#">Meeting Requests</a></li>
-<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="#">Key Staff</a></li>
-<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="#">Duties of the Office</a></li>
-<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="#">Event Requests</a></li>
-<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="#">Contact</a></li>
+<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="https://gvs.georgia.gov/#">Mission Statement</a></li>
+<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="https://gvs.georgia.gov/#">Organization of the office</a></li>
+<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="https://gvs.georgia.gov/#">History</a></li>
+<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="https://gvs.georgia.gov/#">Meeting Requests</a></li>
+<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="https://gvs.georgia.gov/#">Key Staff</a></li>
+<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="https://gvs.georgia.gov/#">Duties of the Office</a></li>
+<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="https://gvs.georgia.gov/#">Event Requests</a></li>
+<li class="header-search-form__popular-choice-list-item"><a class="header-search-form__popular-choice-link" href="https://gvs.georgia.gov/#">Contact</a></li>
 </ul>
 </div>
 </div>
@@ -376,70 +375,70 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 <nav class="header-site-nav" role="navigation">
 <ul class="header-site-nav__menu-item-list header-site-nav__menu-item-list--level-0">
 <li aria-haspopup="true" class="header-site-nav__menu-item header-site-nav__menu-item--level-0 header-site-nav__menu-item--has-dropdown">
-<a class="header-site-nav__menu-item-link" href="/about-us">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/about-us">
 <span class="header-site-nav__menu-item-link-text">
             About Us
           </span>
 </a>
 <ul class="header-site-nav__menu-item-list header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--medium">
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/message-our-executive-director">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/message-our-executive-director">
 <span class="header-site-nav__menu-item-link-text">
             Message From Our Executive Director
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/vision-and-mission">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/vision-and-mission">
 <span class="header-site-nav__menu-item-link-text">
             Vision and Mission
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/gvrs-board-member-bios">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/gvrs-board-member-bios">
 <span class="header-site-nav__menu-item-link-text">
             GVRS Board
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/gvra-leadership">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/gvra-leadership">
 <span class="header-site-nav__menu-item-link-text">
             GVRA Leadership
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/descriptions-gvra-administrative-offices">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/descriptions-gvra-administrative-offices">
 <span class="header-site-nav__menu-item-link-text">
             Administrative Office Descriptions
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/office-human-resources">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/office-human-resources">
 <span class="header-site-nav__menu-item-link-text">
             Human Resources
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/organizational-structure">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/organizational-structure">
 <span class="header-site-nav__menu-item-link-text">
             Organizational Charts
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/georgia-state-rehabilitation-council">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/georgia-state-rehabilitation-council">
 <span class="header-site-nav__menu-item-link-text">
             State Rehabilitation Council
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/employment-first-council-member-bios">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/employment-first-council-member-bios">
 <span class="header-site-nav__menu-item-link-text">
             EFC Member Bios
           </span>
@@ -455,14 +454,14 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 </ul>
 </li>
 <li aria-haspopup="true" class="header-site-nav__menu-item header-site-nav__menu-item--level-0 header-site-nav__menu-item--has-dropdown">
-<a class="header-site-nav__menu-item-link" href="/find-location">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/find-location">
 <span class="header-site-nav__menu-item-link-text">
             Find an Office
           </span>
 </a>
 <ul class="header-site-nav__menu-item-list header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--narrow">
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/locations">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/locations">
 <span class="header-site-nav__menu-item-link-text">
             Text Only Location List
           </span>
@@ -471,70 +470,70 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 </ul>
 </li>
 <li aria-haspopup="true" class="header-site-nav__menu-item header-site-nav__menu-item--level-0 header-site-nav__menu-item--has-dropdown">
-<a class="header-site-nav__menu-item-link" href="/resources">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/resources">
 <span class="header-site-nav__menu-item-link-text">
             Resources
           </span>
 </a>
 <ul class="header-site-nav__menu-item-list header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--medium">
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/benefits">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/benefits">
 <span class="header-site-nav__menu-item-link-text">
             Benefits
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/employment-practices">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/employment-practices">
 <span class="header-site-nav__menu-item-link-text">
             Employment Practices
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/federal-related">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/federal-related">
 <span class="header-site-nav__menu-item-link-text">
             Federal Related
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/georgia-related">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/georgia-related">
 <span class="header-site-nav__menu-item-link-text">
             Georgia Related
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/other-resources">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/other-resources">
 <span class="header-site-nav__menu-item-link-text">
             Other Resources
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/special-populations">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/special-populations">
 <span class="header-site-nav__menu-item-link-text">
             Special Populations
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/transition-school-work">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/transition-school-work">
 <span class="header-site-nav__menu-item-link-text">
             Transition from School to Work
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/resources/gvra-resources">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/resources/gvra-resources">
 <span class="header-site-nav__menu-item-link-text">
             GVRA Resources
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/marketing-resources">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/marketing-resources">
 <span class="header-site-nav__menu-item-link-text">
             GVRA Marketing Resources
           </span>
@@ -543,21 +542,21 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 </ul>
 </li>
 <li aria-haspopup="true" class="header-site-nav__menu-item header-site-nav__menu-item--level-0 header-site-nav__menu-item--has-dropdown">
-<a class="header-site-nav__menu-item-link" href="/vocational-rehabilitation-can-work-you">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/vocational-rehabilitation-can-work-you">
 <span class="header-site-nav__menu-item-link-text">
             Job Seekers
           </span>
 </a>
 <ul class="header-site-nav__menu-item-list header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--narrow">
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/success-stories">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/success-stories">
 <span class="header-site-nav__menu-item-link-text">
             Success Stories
           </span>
 </a>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/sensory-populations">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/sensory-populations">
 <span class="header-site-nav__menu-item-link-text">
             Sensory Populations
           </span>
@@ -566,21 +565,21 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 </ul>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-0">
-<a class="header-site-nav__menu-item-link" href="/businesses">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/businesses">
 <span class="header-site-nav__menu-item-link-text">
             Employers
           </span>
 </a>
 </li>
 <li aria-haspopup="true" class="header-site-nav__menu-item header-site-nav__menu-item--level-0 header-site-nav__menu-item--has-dropdown">
-<a class="header-site-nav__menu-item-link" href="/provider-relations">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/provider-relations">
 <span class="header-site-nav__menu-item-link-text">
             Providers
           </span>
 </a>
 <ul class="header-site-nav__menu-item-list header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--narrow">
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-1">
-<a class="header-site-nav__menu-item-link" href="/provider-relations/gvra-outsourcing-services-manual">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/roosevelt-warm-springs-0/provider-relations/gvra-outsourcing-services-manual">
 <span class="header-site-nav__menu-item-link-text">
             GVRA Outsourcing Service Manual
           </span>
@@ -589,7 +588,7 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 </ul>
 </li>
 <li class="header-site-nav__menu-item header-site-nav__menu-item--level-0">
-<a class="header-site-nav__menu-item-link" href="/contact-us">
+<a class="header-site-nav__menu-item-link" href="https://gvs.georgia.gov/contact-us">
 <span class="header-site-nav__menu-item-link-text">
             Contact Us
           </span>
@@ -631,15 +630,15 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 <div class="footer-top__inner">
 <div class="footer-brand">
 <div class="footer-branding-lockup">
-<a class="footer-branding-lockup__link" href="/" title="Georgia Vocational Rehabilitation Agency">
+<a class="footer-branding-lockup__link" href="https://gvs.georgia.gov/" title="Georgia Vocational Rehabilitation Agency">
 <span class="footer-branding-lockup__logo footer-branding-lockup__logo--agency footer-branding-lockup__logo--gvs">
-<img alt="" class="footer-branding-lockup__logo-image" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/logo/ga-logo--gold.svg"/>
+<img alt="" class="footer-branding-lockup__logo-image" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/logo/ga-logo--gold.svg"/>
 </span>
 <span class="footer-branding-lockup__wordmark footer-branding-lockup__wordmark--agency footer-branding-lockup__wordmark--gvs">
-<img alt="Georgia Vocational Rehabilitation Agency" class="footer-branding-lockup__wordmark-image footer-branding-lockup__wordmark-image--light" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--white.svg"/>
-<img alt="Georgia Vocational Rehabilitation Agency" class="footer-branding-lockup__wordmark-image footer-branding-lockup__wordmark-image--light-active" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--gold.svg"/>
-<img alt="Georgia Vocational Rehabilitation Agency" class="footer-branding-lockup__wordmark-image footer-branding-lockup__wordmark-image--dark" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--black.svg"/>
-<img alt="Georgia Vocational Rehabilitation Agency" class="footer-branding-lockup__wordmark-image footer-branding-lockup__wordmark-image--dark-active" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--red.svg"/>
+<img alt="Georgia Vocational Rehabilitation Agency" class="footer-branding-lockup__wordmark-image footer-branding-lockup__wordmark-image--light" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--white.svg"/>
+<img alt="Georgia Vocational Rehabilitation Agency" class="footer-branding-lockup__wordmark-image footer-branding-lockup__wordmark-image--light-active" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--gold.svg"/>
+<img alt="Georgia Vocational Rehabilitation Agency" class="footer-branding-lockup__wordmark-image footer-branding-lockup__wordmark-image--dark" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--black.svg"/>
+<img alt="Georgia Vocational Rehabilitation Agency" class="footer-branding-lockup__wordmark-image footer-branding-lockup__wordmark-image--dark-active" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/wordmarks/gvs/gvs-wordmark--red.svg"/>
 </span>
 </a>
 </div>
@@ -658,25 +657,25 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 <ul class="footer-contact-info__list">
 <li class="footer-contact-info__item">
 <div class="footer-contact-info__icon-wrapper">
-<img class="footer-contact-info__icon" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/monoline/phone/monoline-phone--white.svg"/>
+<img class="footer-contact-info__icon" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/monoline/phone/monoline-phone--white.svg"/>
 </div>
 <div class="footer-contact-info__wrapper">
 <div class="footer-contact-info__title">Call Us</div>
 <div class="footer-contact-info__phone">
-<div class="footer-contact-info__phone-number"><strong>Primary:</strong> <a href="tel:+1-404-232-1998">(404) 232-1998</a></div>
+<div class="footer-contact-info__phone-number"><strong>Primary:</strong> <a href="https://gvs.georgia.gov/roosevelt-warm-springs-0/tel:+1-404-232-1998">(404) 232-1998</a></div>
 </div>
 <div class="footer-contact-info__phone">
-<div class="footer-contact-info__phone-number"><strong>Toll Free:</strong> <a href="tel:+1-844-367-4872">(844) 367-4872</a></div>
+<div class="footer-contact-info__phone-number"><strong>Toll Free:</strong> <a href="https://gvs.georgia.gov/roosevelt-warm-springs-0/tel:+1-844-367-4872">(844) 367-4872</a></div>
 </div>
 </div>
 </li>
 <li class="footer-contact-info__item">
 <div class="footer-contact-info__icon-wrapper">
-<img class="footer-contact-info__icon" src="https://gvs.georgia.gov//themes/custom/ga_forest/assets/images/icons/monoline/chat/monoline-chat--white.svg"/>
+<img class="footer-contact-info__icon" src="https://gvs.georgia.gov/themes/custom/ga_forest/assets/images/icons/monoline/chat/monoline-chat--white.svg"/>
 </div>
 <div class="footer-contact-info__wrapper">
 <div class="footer-contact-info__title"><strong>Online Contact Form</strong><br/></div>
-<div class="footer-contact-info__link"><a href="/contact-us">Email Us</a></div>
+<div class="footer-contact-info__link"><a href="https://gvs.georgia.gov/contact-us">Email Us</a></div>
 </div>
 </li>
 </ul>
@@ -711,7 +710,7 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 <h3 class="footer-link-group__title">About Us</h3>
 <ul class="footer-link-group__list">
 <li class="footer-link-group__list-item">
-<a class="footer-link-group__list-item-link" href="/find-location">
+<a class="footer-link-group__list-item-link" href="https://gvs.georgia.gov/find-location">
           Find an Office
         </a>
 </li>
@@ -726,12 +725,12 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 <h3 class="footer-link-group__title">Quick Links</h3>
 <ul class="footer-link-group__list">
 <li class="footer-link-group__list-item">
-<a class="footer-link-group__list-item-link" href="/businesses">
+<a class="footer-link-group__list-item-link" href="https://gvs.georgia.gov/businesses">
           For Businesses
         </a>
 </li>
 <li class="footer-link-group__list-item">
-<a class="footer-link-group__list-item-link" href="/resources">
+<a class="footer-link-group__list-item-link" href="https://gvs.georgia.gov/resources">
           Resources
         </a>
 </li>
@@ -758,9 +757,8 @@ else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement(
 </div>
 </div>
 <script data-drupal-selector="drupal-settings-json" type="application/json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1236","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"core\/html5shiv,ga_forest\/global,ga_forest\/palette-simple-statehouse,ga_layouts\/twocol_66_33,ga_media_download\/document_link,ga_search\/analytics,google_translator\/disclaimer,search_api_federated_solr\/search_form_autocomplete,system\/base","theme":"ga_forest","theme_token":null},"ajaxTrustedUrl":{"\/search":true},"google_analytics":{"account":"UA-37923362-1","trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"searchApiFederatedSolr":{"block":{"autocomplete":{"isEnabled":1,"proxyIsDisabled":1,"directUrl":"\/search-api-federated-solr-block-form-autocomplete\/exposed-filter?title=[val]\u0026search_term=[val]\u0026_format=json","use_search_app_creds":0,"mode":"result","url":"\/search-api-federated-solr-block-form-autocomplete\/exposed-filter?title=[val]\u0026search_term=[val]\u0026_format=json"}}},"googleTranslatorDisclaimer":{"jquerySelector":".google-translator-switch","disclaimer":"\u003Ch2\u003EAutomatic translation disclaimer\u003C\/h2\u003E\r\n\u003Cp\u003EThe State of Georgia provides automatic translation for georgia.gov into seven languages, courtesy of Google Translate. Please remember, though, that the English language version is considered the most accurate. In the event of a disagreement or discrepancy between the translation and the original English version of this web site or any notice or disclaimer, the original version will prevail.\u003C\/p\u003E","acceptText":"Accept","dontAcceptText":"Do Not Accept","element":"\u003Cspan id=\u0022google_translator_element\u0022\u003E\u003C\/span\u003E\n\u003Cscript src=\u0022\/\/translate.google.com\/translate_a\/element.js?cb=Drupal.behaviors.googleTranslatorElement.init\u0022\u003E\u003C\/script\u003E\n"},"googleTranslatorElement":{"id":"google_translator_element","languages":"zh-CN,ht,ko,pt,ru,es,vi","displayMode":"SIMPLE"},"user":{"uid":0,"permissionsHash":"f8c19f3fc66ae652a977d372768f80fa141852fde4c30001fda3d6caa322947d"}}</script>
-<script src="https://gvs.georgia.gov//sites/gvs.georgia.gov/files/js/js_e_uydOnxWsetc5TvqCgadyLmLmvCd_99YaIkI8hlkZM.js"></script>
+<script src="https://gvs.georgia.gov/sites/gvs.georgia.gov/files/js/js_e_uydOnxWsetc5TvqCgadyLmLmvCd_99YaIkI8hlkZM.js"></script>
 <script src="//cdn.jsdelivr.net/npm/css-vars-ponyfill@1"></script>
-<script src="https://gvs.georgia.gov//sites/gvs.georgia.gov/files/js/js_X8hTWsMiagEKAsp9ATV9lVX3jXl5DuNYmeQnVE0YdiI.js"></script>
+<script src="https://gvs.georgia.gov/sites/gvs.georgia.gov/files/js/js_9wCceygvJPOwtdKj_Ok7_AB4eekDVINqkNut5GQfo6Y.js"></script>
 <script async="" defer="" src="//hello.myfonts.net/count/3786f2" type="text/javascript"></script>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5360c08ecf","applicationID":"99788511,308637395","transactionName":"NQFQMhAADBZRUBFYCwxLcwUWCA0LH3cXRBQDCG4lDRMHOX1WC0Q4JgFUBxcNFihVXRB9DQwPZhQHBC8EXloVRAgDEF0UEUxcAlVdAEMFFgF7CAYEGiReVzZeFhY=","queueTime":0,"applicationTime":356,"atts":"GUZTRFgaHxg=","errorBeacon":"bam.nr-data.net","agent":""}</script>
 <div aria-busy="false" aria-live="polite" class="visually-hidden" id="drupal-live-announce"></div></body></html>

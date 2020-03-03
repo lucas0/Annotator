@@ -9,19 +9,19 @@
 			<div class="container-fluid container-main no-gutters text-center p-0">
                 <div class="row no-gutters form-row">
                     <div class="offset-md-3 col-md-6">
-                        <form id="myForm" method="post" action="" style="background-color: antiquewhite; margin: 0; padding: 0;">
+                        <form id="myForm" method="post" action="" style="background-color: #900C3F; margin: 0; padding: 0;">
                             {% csrf_token %}
                             <table align="center" style="width: 100%;" border="1" style="background-color: antiquewhite; margin: 0; padding: 0;">
                                 <tr>
-                                    <td colspan="3"><p>{{claim}}</p></td>
+                                    <td colspan="3" style="color: #FFC300;"><p>{{claim}}</p></td>
                                 </tr>
                                 <tr>
-                                    <td rowspan="2"><h3>Is this an <i>origin</i> for the <i>claim?</i></h3></td>
+                                    <td rowspan="2" style="color: #FFC300;"><h3>Is this an <i>origin</i> for the <i>claim?</i></h3></td>
                                     <td><input type="submit" id="1" name="op" value="Yes" ></td>
                                     <td><input type="submit" id="2" name="op" value="No" ></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="submit" id="3" name="op" value="Invalid Input" ></td>
+                                    <td><input type="submit" id="3" name="op" value="Invalid Content" ></td>
                                     <td><input type="submit" id="4" name="op" value="Don't Know"></td>
                                 </tr>
                             </table>
@@ -47,6 +47,7 @@
                 <div class="row no-gutters">
                     <div class="offset-md-3 col-md-6">
                         <p><b>Annotated Origins: {{a_done}} / {{a_total}} for this page and {{t_done}} in total</b></p>
+                        <p><b>Twice Annotated Origins: {{left2}} / Once Annotated Origins: {{left1}}</b></p>
                     </div>
                 </div>
             </div>

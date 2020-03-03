@@ -1,0 +1,196 @@
+<html><head><script src="https://js-agent.newrelic.com/nr-1153.min.js"></script><script type="text/javascript">var abp;</script><script src="http://literallyunbelievable.org/px.js?ch=1" type="text/javascript"></script><script src="http://literallyunbelievable.org/px.js?ch=2" type="text/javascript"></script><script type="text/javascript">function handleABPDetect(){try{var imglog = document.createElement("img");imglog.style.height="0px";imglog.style.width="0px";imglog.src="http://literallyunbelievable.org/sk-logabpstatus.php?a=SmVNZnd3cXpwS2pGaXlBQkJGMmYwQlkxR1RJYW5hYnFXaCtQZzllY2gxWGtPbWhvb3Z4U0hRSUJvS01XYzdGL0xqUEZYU2pSZmY0a093RjFrWjFiL3phWTFaUlZxaUhncWx3OWRybE56L0E9&b="+abp;document.body.appendChild(imglog);}catch(err){}}</script><meta content="a='13017' b='15045' c='literallyunbelievable.org' d='taxo_cat'" name="tids"/><title>Literallyunbelievable.org</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"6bc175e1c8",applicationID:"453419858"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+<style type="text/css">
+
+@font-face {font-family: "ubuntu-r";src: url("http://i2.cdn-image.com/__media__/fonts/ubuntu-r/ubuntu-r.eot");src: url("http://i2.cdn-image.com/__media__/fonts/ubuntu-r/ubuntu-r.eot?#iefix") format("embedded-opentype"),url("http://i2.cdn-image.com/__media__/fonts/ubuntu-r/ubuntu-r.woff") format("woff"),url("http://i2.cdn-image.com/__media__/fonts/ubuntu-r/ubuntu-r.woff2") format("woff2"),url("http://i2.cdn-image.com/__media__/fonts/ubuntu-r/ubuntu-r.ttf") format("truetype"),url("http://i2.cdn-image.com/__media__/fonts/ubuntu-r/ubuntu-r.otf") format("opentype"),url("http://i2.cdn-image.com/__media__/fonts/ubuntu-r/ubuntu-r.svg#ubuntu-r") format("svg");font-weight: normal;font-style: normal;}
+@font-face {font-family: "ubuntu-b";src: url("http://i2.cdn-image.com/__media__/fonts/ubuntu-b/ubuntu-b.eot");src: url("http://i2.cdn-image.com/__media__/fonts/ubuntu-b/ubuntu-b.eot?#iefix") format("embedded-opentype"),url("http://i2.cdn-image.com/__media__/fonts/ubuntu-b/ubuntu-b.woff") format("woff"),url("http://i2.cdn-image.com/__media__/fonts/ubuntu-b/ubuntu-b.woff2") format("woff2"),url("http://i2.cdn-image.com/__media__/fonts/ubuntu-b/ubuntu-b.ttf") format("truetype"),url("http://i2.cdn-image.com/__media__/fonts/ubuntu-b/ubuntu-b.otf") format("opentype"),url("http://i2.cdn-image.com/__media__/fonts/ubuntu-b/ubuntu-b.svg#ubuntu-b") format("svg");font-weight: normal;font-style: normal;}						
+*{margin:0; padding:0;}
+a {text-decoration:none; outline:none}
+a img {border:none}
+li {list-style:none}
+.clear {clear:both; overflow:hidden; line-height:0; font-size:0; height:0}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear: both;height:0}
+* html .clearfix{zoom:1}
+*:first-child+html .clearfix{zoom:1}
+a{text-decoration:none}
+input{outline:none}
+
+body{-webkit-text-size-adjust:100%;font-size:14px;font-family:
+  ubuntu-r 
+,Helvetica,sans-serif;height: 100%;background: url(http://i3.cdn-image.com/__media__/pics/12471/bodybg.png) repeat center center #1f252e;}
+.main-container{width: 960px; margin: 0 auto;padding-top: 1px;padding-bottom: 1px;}
+#main{padding-bottom: 30px}
+.header .main-container{width: 960px; margin: 0 auto;padding-top: 1px;padding-bottom: 1px;margin-bottom: 15px}
+.popular-searches{padding: 40px 25px 5px;background: url(http://i1.cdn-image.com/__media__/pics/12471/kwbg.jpg) no-repeat center center;background-size: cover}
+.popular-searches ul.first{  list-style: none;width: 380px;margin:0 auto;}
+.popular-searches ul.last, .related-searches ul.last{ border-bottom:0}
+#lastUL{margin: 0}
+.popular-searches ul.first li{  margin-bottom: 10px;-webkit-text-size-adjust: 100%;color: #ffffff;text-align: left;word-wrap: break-word; background:#232a33 url(http://i2.cdn-image.com/__media__/pics/12471/libg.png) repeat-y left top; background-size: 41px;}
+.popular-searches ul.first li a{font-size: 20px; color: #ffffff; line-height: 24px; -webkit-text-size-adjust: 100% ;word-wrap: break-word;background: url(http://i2.cdn-image.com/__media__/pics/12471/arrow.png) no-repeat 15px center;padding:15px 15px 15px 60px;display: block;font-family: 
+  ubuntu-b 
+,arial;}
+.popular-searches ul.first li:hover{background:#22528a url(http://i1.cdn-image.com/__media__/pics/12471/libgh.png) repeat-y left top; background-size: 41px;}
+.popular-searches ul.first li:hover a{color: #ffffff;text-decoration: none;}
+.border-wrap{padding: 10px;border:1px dashed #636363;margin-bottom: 100px}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #3A3A3A inset !important;
+}
+.website{float: left;max-width: 50%;}
+.website a{word-wrap: break-word;font-size: 24px;color: #ffffff;font-family: Arial, Helvetica, sans-serif; display:block;background:url(http://i1.cdn-image.com/__media__/pics/12471/logo.png) no-repeat left center; font-weight: bold; padding: 15px 0px 15px 65px;display: block;}
+.website img{float: left;padding-right: 12px}
+.logo{float: right;padding-top: 12px}
+.header{margin: 0px 0 0px 0;background-color: #161d27;padding: 20px 0;}
+
+.footer {text-align:center; color:#ccc; width:100%; padding:40px 0 0}
+.footer a {color:#999; font-size:11px; text-decoration:none; word-wrap: break-word;}
+.footer a:hover {text-decoration:underline; color:#333}
+
+.footer-related{text-align: center;padding: 20px 15px;margin-bottom: 20px;background-color: #252d37; margin-top: 40px;}
+.footer-related a{color: #ffffff;font-size: 17px;display: inline; word-wrap: break-word;}
+.footer-related span{color: #556c87;font-size: 17px;display: inline;font-weight: bold}
+.footer-related li{display: inline;padding-right: 28px; word-wrap: break-word;}
+
+div.search-form{height:38px; margin:0 auto;width: 325px; background: #161d27 ; border:1px solid #344152;}
+
+.srchTxt{background: #161d27 none repeat scroll 0 0; border: 0px none; float: left; font-size: 16px; height: 28px; line-height: 28px; padding: 5px; width: 275px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;color: #ffffff}
+
+.srchBtn {background: #22528a url(http://i3.cdn-image.com/__media__/pics/12471/search-icon.png) no-repeat center center; border: none; color: #fff; cursor: pointer; float: right; font-size: 14px; height: 38px; outline: medium none; width: 38px;-webkit-appearance:none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;text-transform: uppercase;}
+
+.custom-msg {
+    text-align: center;background-color: #fff;
+}
+
+div#optOutLink{ padding-top: 30px}
+.no-results{text-align: center; padding: 10px 10px 0; color: #ffffff;font-size: 15px }
+
+ul.privacy {padding: 0 0 20px;text-align:right; }
+ul.privacy li {font-size: 12px; color: #535353; padding: 5px 5px}
+ul.privacy li a {font-size: 12px; color: #ffffff; text-transform: capitalize}
+ul.privacy li a:hover{text-decoration: underline}
+
+.privacy{text-align: right;padding-bottom: 10px; width: 100%;}
+.privacy a{color:#333333;text-align: center;font-size: 11px}
+.privacy a:hover{text-decoration: underline}
+
+/*@-ms-viewport { width: 320px}*/
+
+@media only screen and (max-width:1350px) {
+.popular-searches{padding: 45px 25px 5px}
+}
+
+@media only screen and (max-width:990px) {
+.popular-searches li a{font-size: 18px}
+.footer-related a{font-size: 17px !important}
+.main-container{width: 90%!important;padding-bottom: 30px}
+.popular-searches li {margin-bottom: 0px;margin-top: 15px}
+div.search-form{width: 300px}
+    .srchTxt{width: 250px;font-size: 16px;line-height: 20px}
+    .website .domain{font-size: 23px;padding-top: 19px}
+    .footer-related li{padding-right: 15px}
+}
+
+@media only screen and (max-width:776px) {
+    #main{width: 90%!important;margin: 0px auto;padding-bottom: 0px;}
+    .website{width: 45%;}
+    .website .domain{font-size: 22px;padding-top: 18px}
+    /*.popular-searches ul{ width: 240px; margin:0px auto;}*/
+    .border-wrap{margin-bottom: 40px}
+    .popular-searches{padding:10px }
+}
+
+@media only screen and (max-width:767px) {
+    .website{margin:0 auto;float: none;width:280px;font-size: 25px}
+    div.search-form{margin:0 auto;}
+    .logo{float: none;}
+    .header .main-container{margin-bottom: 0}
+    .footer-related li{width: 100%;padding-bottom: 5px; display: block;}
+    .website .domain{font-size: 22px;padding-top: 7px}
+    .website img{width: 40px}
+    .popular-searches li a{background-size: 20px; padding-left: 0px;}
+    .popular-searches ul.first{width:95%;}
+    .bottom{width: 95% !important; margin: 0 auto}
+    .privacy{margin-top:15px}
+    ul.privacy{text-align: center;}
+}
+
+
+@media only screen and (max-width:480px) {
+    div.search-form{width: 250px}
+    .website{max-width: 95%;}
+    .srchTxt{width: 200px;font-size: 16px;line-height: 20px}    
+}
+
+.content-container{background: none !important}
+.main-container{border:none !important;height: auto !important}
+.header{border:none !important;height: auto !important}
+.dynamic-content{padding: 0 !important}
+
+
+#trademark-footer {padding: 15px 0; text-align: center; font-size: 12px; background-color:#232a33;margin-bottom: 20px}
+/*.footerwrap {width: 960px; margin: 0px auto; }*/
+/*.foottxt {width: 580px; margin: 0 auto; float: left; text-align: left; }*/
+.trademark-foottxt a {color: #ffffff; font-size: 13px; line-height: 28px; }
+.trademark-foottxt a:hover{text-decoration: underline;}
+
+@media only screen and (max-width:768px) {
+    #trademark-footer{padding:5px 0;}
+}
+</style>
+<!--[if lte IE 8]>
+   <style type="text/css">
+    .popular-searches{padding:15px 25px 5px; background-position: top center}
+    .popular-searches {margin-bottom:50px;}
+    .footer-related{margin-top: 10px;}
+    div.search-form{margin-right:0px}
+    .footer-related li{display: inline; word-wrap: break-word;}
+    a{word-wrap: break-word;}
+    </style>
+<![endif]-->
+<script language="JavaScript" src="http://i2.cdn-image.com/__media__/js/min.js?v2.2" type="text/javascript"></script>
+</head>
+<body onbeforeunload="" onload="shpp('ld');" onunload=""><div id="divSponAds" style="visibility:hidden;display:none;"><form action="" id="frmSponsAds" method="get" name="frmSponsAds" target="_blank"><input id="params" name="params" type="hidden"/></form></div> <div class="custom-msg">This domain name expired on 2019-12-05 00:27:08 <br/><a href="http://literallyunbelievable.org/">Click here</a> to renew it.</div>
+<div class="clearfix header">
+<div class="main-container">
+<div class="website clearfix"><a href="http://literallyunbelievable.org/Literallyunbelievable.org" target="_blank">Literallyunbelievable.org</a></div>
+<div class="logo">
+<div class="search-form clearfix">
+<form action="http://literallyunbelievable.org/display.cfm" id="searchform1" method="get" name="searchform1" onsubmit="showPop=0;" target="_top">
+<input class="srchTxt" name="s" onclick="this.value='';" type="text"/>
+<input class="srchBtn" type="submit" value=""/>
+<input name="gsp" type="hidden" value="Wm1jbzc3bGlBR3N1MnY2eEhreUdZU0hrVU1QUVhlZytLODVOczQ3eWxIbEhXUW1lazJlNWg3SEhObmFWeDRCNUE2cU9Nc2taVks4VFAwaWphb05qM3U5Qjg1ZnJyMWd0MkpPbm1kTUwrckpBS0FWUHNiR2I1YWpQSldRbE5SUktQVjNhWUFvOVl3WWsvSDJRa2Q0eGdJMy85d1VpQXBIcnVYK1orN1FVdzVHZDdsK01wWjhjanJ4VGhKV3JmNzVEc211OVRCYys5cHlEdUNyNWNmMFgrY1gvYXV2YjUyVzZCL1cyNDhXcktqR0h2Y1B1MERJTnZvbCsrcjZOZnNreTVvQm1KYlVNeDhSSCtkaExVQWJzR2J1UVRsUnp0R1FVNmoxaGxiL2w2dzJ1VTR4S08zRkhaZWNoeVNtaGZHUHNpdDVnQzdRVkZWaHZLaThNUEFFczlVRFZvZGtUZmJXSmhLVjVxLzBvMUNBNVk3RlVVVy9KSFlIS2Nqc1pzcmV3aTFGTTdyam9KWG1DN2tkNkFrclgvdz09"/></form>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container" id="main">
+<div class="popular-searches clearfix">
+<ul class="clearfix first">
+<li><a href="http://literallyunbelievable.org/Funny_Articles.cfm?fp=fgfYKJDEY1PLKIp%2FiuGFXqsZTENsE37%2FXHZ1CndmDbTqhglV7VofcsdgKNzH%2BPId5QoIhs6aspZNmxSkjagbbDS2ZDw3Exk2Rfn6vHASDhsGJTgq3mr79tbH3AJC6%2FFmJahgf7gabsAZ8r1fP3sV4VwjHLD7cm9kA08xaqclByjVYf8zDBsaQ2Q4coagQHpXBequPJLmLa9QY3Q6GJM7jD7s3fyWK5PNooo8RtCLNUA%3D&amp;maxads=0&amp;kld=1061&amp;prvtof=rMXvTjMka3y8siu8chpBd3UOFwAMOD4ECtbWUfC54uE%3D&amp;&amp;&amp;kt=246&amp;&amp;kbc=3617&amp;ki=11889087&amp;ktd=256&amp;kld=1061&amp;kp=1&amp;bd=1%231080%231920%231%230" id="dk1" name="dk1" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" onmouseout="changeStatus('');return true;" onmouseover="changeStatus('Funny Articles');return true;" target="_top" title="Funny Articles">Funny Articles</a></li>
+<li><a href="http://literallyunbelievable.org/Entertainment_Articles.cfm?fp=fgfYKJDEY1PLKIp%2FiuGFXqsZTENsE37%2FXHZ1CndmDbTqhglV7VofcsdgKNzH%2BPId5QoIhs6aspZNmxSkjagbbDS2ZDw3Exk2Rfn6vHASDhsGJTgq3mr79tbH3AJC6%2FFmJahgf7gabsAZ8r1fP3sV4VwjHLD7cm9kA08xaqclByjVYf8zDBsaQ2Q4coagQHpXBequPJLmLa9QY3Q6GJM7jD7s3fyWK5PNooo8RtCLNUA%3D&amp;maxads=0&amp;kld=1061&amp;prvtof=rMXvTjMka3y8siu8chpBd3UOFwAMOD4ECtbWUfC54uE%3D&amp;&amp;&amp;kt=246&amp;&amp;kbc=3617&amp;ki=9855539&amp;ktd=256&amp;kld=1061&amp;kp=2&amp;bd=1%231080%231920%231%230" id="dk2" name="dk2" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" onmouseout="changeStatus('');return true;" onmouseover="changeStatus('Entertainment Articles');return true;" target="_top" title="Entertainment Articles">Entertainment Articles</a></li>
+<li><a href="http://literallyunbelievable.org/Interesting_Articles.cfm?fp=fgfYKJDEY1PLKIp%2FiuGFXqsZTENsE37%2FXHZ1CndmDbTqhglV7VofcsdgKNzH%2BPId5QoIhs6aspZNmxSkjagbbDS2ZDw3Exk2Rfn6vHASDhsGJTgq3mr79tbH3AJC6%2FFmJahgf7gabsAZ8r1fP3sV4VwjHLD7cm9kA08xaqclByjVYf8zDBsaQ2Q4coagQHpXBequPJLmLa9QY3Q6GJM7jD7s3fyWK5PNooo8RtCLNUA%3D&amp;maxads=0&amp;kld=1061&amp;prvtof=rMXvTjMka3y8siu8chpBd3UOFwAMOD4ECtbWUfC54uE%3D&amp;&amp;&amp;kt=246&amp;&amp;kbc=3617&amp;ki=15211333&amp;ktd=256&amp;kld=1061&amp;kp=3&amp;bd=1%231080%231920%231%230" id="dk3" name="dk3" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" onmouseout="changeStatus('');return true;" onmouseover="changeStatus('Interesting Articles');return true;" target="_top" title="Interesting Articles">Interesting Articles</a></li>
+<li><a href="http://literallyunbelievable.org/Advertising_on_Facebook.cfm?fp=fgfYKJDEY1PLKIp%2FiuGFXqsZTENsE37%2FXHZ1CndmDbTqhglV7VofcsdgKNzH%2BPId5QoIhs6aspZNmxSkjagbbDS2ZDw3Exk2Rfn6vHASDhsGJTgq3mr79tbH3AJC6%2FFmJahgf7gabsAZ8r1fP3sV4VwjHLD7cm9kA08xaqclByjVYf8zDBsaQ2Q4coagQHpXBequPJLmLa9QY3Q6GJM7jD7s3fyWK5PNooo8RtCLNUA%3D&amp;maxads=0&amp;kld=1061&amp;prvtof=rMXvTjMka3y8siu8chpBd3UOFwAMOD4ECtbWUfC54uE%3D&amp;&amp;&amp;kt=271&amp;&amp;kbc=54199&amp;ki=81437028&amp;ktd=256&amp;kld=1061&amp;kp=4&amp;bd=1%231080%231920%231%230" id="dk4" name="dk4" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" onmouseout="changeStatus('');return true;" onmouseover="changeStatus('Advertising on Facebook');return true;" target="_top" title="Advertising on Facebook">Advertising on Facebook</a></li>
+<li><a href="http://literallyunbelievable.org/Funny_Signs.cfm?fp=fgfYKJDEY1PLKIp%2FiuGFXqsZTENsE37%2FXHZ1CndmDbTqhglV7VofcsdgKNzH%2BPId5QoIhs6aspZNmxSkjagbbDS2ZDw3Exk2Rfn6vHASDhsGJTgq3mr79tbH3AJC6%2FFmJahgf7gabsAZ8r1fP3sV4VwjHLD7cm9kA08xaqclByjVYf8zDBsaQ2Q4coagQHpXBequPJLmLa9QY3Q6GJM7jD7s3fyWK5PNooo8RtCLNUA%3D&amp;maxads=0&amp;kld=1061&amp;prvtof=rMXvTjMka3y8siu8chpBd3UOFwAMOD4ECtbWUfC54uE%3D&amp;&amp;&amp;kt=251&amp;&amp;kbc=literallyunbelievable.org&amp;ki=11894547&amp;ktd=512&amp;kld=1061&amp;kp=5&amp;bd=1%231080%231920%231%230" id="dk5" name="dk5" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" onmouseout="changeStatus('');return true;" onmouseover="changeStatus('Funny Signs');return true;" target="_top" title="Funny Signs">Funny Signs</a></li>
+<li><a href="http://literallyunbelievable.org/Friendship_Stories.cfm?fp=fgfYKJDEY1PLKIp%2FiuGFXqsZTENsE37%2FXHZ1CndmDbTqhglV7VofcsdgKNzH%2BPId5QoIhs6aspZNmxSkjagbbDS2ZDw3Exk2Rfn6vHASDhsGJTgq3mr79tbH3AJC6%2FFmJahgf7gabsAZ8r1fP3sV4VwjHLD7cm9kA08xaqclByjVYf8zDBsaQ2Q4coagQHpXBequPJLmLa9QY3Q6GJM7jD7s3fyWK5PNooo8RtCLNUA%3D&amp;maxads=0&amp;kld=1061&amp;prvtof=rMXvTjMka3y8siu8chpBd3UOFwAMOD4ECtbWUfC54uE%3D&amp;&amp;&amp;kt=251&amp;&amp;kbc=literallyunbelievable.org&amp;ki=11765118&amp;ktd=512&amp;kld=1061&amp;kp=6&amp;bd=1%231080%231920%231%230" id="dk6" name="dk6" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" onmouseout="changeStatus('');return true;" onmouseover="changeStatus('Friendship Stories');return true;" target="_top" title="Friendship Stories">Friendship Stories</a></li>
+<li><a href="http://literallyunbelievable.org/Latest_Stories.cfm?fp=fgfYKJDEY1PLKIp%2FiuGFXqsZTENsE37%2FXHZ1CndmDbTqhglV7VofcsdgKNzH%2BPId5QoIhs6aspZNmxSkjagbbDS2ZDw3Exk2Rfn6vHASDhsGJTgq3mr79tbH3AJC6%2FFmJahgf7gabsAZ8r1fP3sV4VwjHLD7cm9kA08xaqclByjVYf8zDBsaQ2Q4coagQHpXBequPJLmLa9QY3Q6GJM7jD7s3fyWK5PNooo8RtCLNUA%3D&amp;maxads=0&amp;kld=1061&amp;prvtof=rMXvTjMka3y8siu8chpBd3UOFwAMOD4ECtbWUfC54uE%3D&amp;&amp;&amp;kt=246&amp;&amp;kbc=3617&amp;ki=17129409&amp;ktd=256&amp;kld=1061&amp;kp=7&amp;bd=1%231080%231920%231%230" id="dk7" name="dk7" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" onmouseout="changeStatus('');return true;" onmouseover="changeStatus('Latest Stories');return true;" target="_top" title="Latest Stories">Latest Stories</a></li>
+</ul>
+<div class="footer-related clearfix">
+<ul class="clearfix bottom">
+<li><span>Related links: </span></li>
+<li><a href="http://literallyunbelievable.org/Funny_Articles.cfm?fp=fgfYKJDEY1PLKIp%2FiuGFXqsZTENsE37%2FXHZ1CndmDbTqhglV7VofcsdgKNzH%2BPId5QoIhs6aspZNmxSkjagbbDS2ZDw3Exk2Rfn6vHASDhsGJTgq3mr79tbH3AJC6%2FFmJahgf7gabsAZ8r1fP3sV4VwjHLD7cm9kA08xaqclByjVYf8zDBsaQ2Q4coagQHpXBequPJLmLa9QY3Q6GJM7jD7s3fyWK5PNooo8RtCLNUA%3D&amp;maxads=0&amp;kld=1061&amp;prvtof=rMXvTjMka3y8siu8chpBd3UOFwAMOD4ECtbWUfC54uE%3D&amp;&amp;&amp;kt=246&amp;&amp;kbc=3617&amp;ki=11889087&amp;ktd=256&amp;kld=1061&amp;kp=1&amp;bd=1%231080%231920%231%230" id="dk1" name="dk1" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" onmouseout="changeStatus('');return true;" onmouseover="changeStatus('Funny Articles');return true;" target="_top" title="Funny Articles">Funny Articles</a></li>
+<li><a href="http://literallyunbelievable.org/Entertainment_Articles.cfm?fp=fgfYKJDEY1PLKIp%2FiuGFXqsZTENsE37%2FXHZ1CndmDbTqhglV7VofcsdgKNzH%2BPId5QoIhs6aspZNmxSkjagbbDS2ZDw3Exk2Rfn6vHASDhsGJTgq3mr79tbH3AJC6%2FFmJahgf7gabsAZ8r1fP3sV4VwjHLD7cm9kA08xaqclByjVYf8zDBsaQ2Q4coagQHpXBequPJLmLa9QY3Q6GJM7jD7s3fyWK5PNooo8RtCLNUA%3D&amp;maxads=0&amp;kld=1061&amp;prvtof=rMXvTjMka3y8siu8chpBd3UOFwAMOD4ECtbWUfC54uE%3D&amp;&amp;&amp;kt=246&amp;&amp;kbc=3617&amp;ki=9855539&amp;ktd=256&amp;kld=1061&amp;kp=2&amp;bd=1%231080%231920%231%230" id="dk2" name="dk2" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" onmouseout="changeStatus('');return true;" onmouseover="changeStatus('Entertainment Articles');return true;" target="_top" title="Entertainment Articles">Entertainment Articles</a></li>
+<li><a href="http://literallyunbelievable.org/Interesting_Articles.cfm?fp=fgfYKJDEY1PLKIp%2FiuGFXqsZTENsE37%2FXHZ1CndmDbTqhglV7VofcsdgKNzH%2BPId5QoIhs6aspZNmxSkjagbbDS2ZDw3Exk2Rfn6vHASDhsGJTgq3mr79tbH3AJC6%2FFmJahgf7gabsAZ8r1fP3sV4VwjHLD7cm9kA08xaqclByjVYf8zDBsaQ2Q4coagQHpXBequPJLmLa9QY3Q6GJM7jD7s3fyWK5PNooo8RtCLNUA%3D&amp;maxads=0&amp;kld=1061&amp;prvtof=rMXvTjMka3y8siu8chpBd3UOFwAMOD4ECtbWUfC54uE%3D&amp;&amp;&amp;kt=246&amp;&amp;kbc=3617&amp;ki=15211333&amp;ktd=256&amp;kld=1061&amp;kp=3&amp;bd=1%231080%231920%231%230" id="dk3" name="dk3" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" onmouseout="changeStatus('');return true;" onmouseover="changeStatus('Interesting Articles');return true;" target="_top" title="Interesting Articles">Interesting Articles</a></li>
+</ul>
+</div>
+</div>
+<ul class="privacy clearfix">
+</ul>
+</div>
+<script language="javascript" type="text/javascript">
+try{handleABPDetect();}catch(err){}
+</script><img src="http://literallyunbelievable.org/sk-logabpstatus.php?a=SmVNZnd3cXpwS2pGaXlBQkJGMmYwQlkxR1RJYW5hYnFXaCtQZzllY2gxWGtPbWhvb3Z4U0hRSUJvS01XYzdGL0xqUEZYU2pSZmY0a093RjFrWjFiL3phWTFaUlZxaUhncWx3OWRybE56L0E9&amp;b=false" style="height: 0px; width: 0px;"/>
+<div style="display:none;visibility:hidden;"></div><script type="text/javascript">if(relplaceAllALinks) relplaceAllALinks(/(\/trf|\.cfm)\?/);</script><script language="javascript" type="text/javascript"> var __pp = {"ld":null};  atevt();  </script><style type="text/css"> .btmMsgLang {font-size: 13px;padding: 12px 0;width: 50%; margin: 0 auto;line-height: 16px;color: #999;text-shadow: 0 1px 1px #fff;
+    font-family: arial;text-align: center;}</style>
+<p class="btmMsgLang"> Die hier angezeigten Sponsored Listings werden von dritter Seite automatisch generiert und stehen weder mit dem Domaininhaber noch mit dem Dienstanbieter in irgendeiner Beziehung. Sollten markenrechtliche Probleme auftreten, wenden Sie sich bitte direkt an den Domaininhaber, welcher aus dem Whois ersichtlich wird.  </p> <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6bc175e1c8","applicationID":"453419858","transactionName":"blxaMRFVWEFSUENfWVcWbRcKG19cV1ZPGEZRSQ==","queueTime":0,"applicationTime":423,"atts":"QhtZR1lPS08=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+</body></html>

@@ -1,0 +1,1769 @@
+<html class="no-touchevents" lang="en" style="" xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><script async="" src="https://www.google-analytics.com/plugins/ua/ec.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/plugins/ua/linkid.js" type="text/javascript"></script><script async="" src="https://connect.facebook.net/signals/plugins/inferredEvents.js?v=2.9.4"></script><script async="" src="https://connect.facebook.net/signals/config/911141315612435?v=2.9.4&amp;r=stable"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="//bat.bing.com/bat.js" type="text/javascript"></script><script async="" src="https://sjs.bizographics.com/insight.min.js" type="text/javascript"></script><script async="" src="//www.googleadservices.com/pagead/conversion_async.js" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="//www.googleadservices.com/pagead/conversion_async.js" type="text/javascript"></script><script async="" src="//www.googleadservices.com/pagead/conversion_async.js" type="text/javascript"></script><script id="twitter-wjs" src="//platform.twitter.com/widgets.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-K9WL6D"></script><script async="" crossorigin="anonymous" src="https://connect.facebook.net/en_US/all.js?hash=bf8ddb4cc7ae51e2528f07582076fad7&amp;ua=modern_es6"></script><script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+<script src="http://www.kennedy-center.org/scripts/kc-lib.js?v=20190822"></script>
+<script src="http://www.kennedy-center.org/scripts/api/apiCalls.js?v=20180216"></script>
+<script src="http://www.kennedy-center.org/scripts/jquery.validate.min.js?v=20190429"></script>
+<script src="http://www.kennedy-center.org/scripts/jwplayer.js?v=20170511"></script>
+<script src="http://www.kennedy-center.org/scripts/jquery.validate.unobtrusive.min.js?v=20190429"></script>
+<script src="http://www.kennedy-center.org/scripts/jquery.hoverIntent.minified.js?v=20170511"></script>
+<script src="http://www.kennedy-center.org/scripts/dist/manifest.bundle.js?v=20180321"></script>
+<script src="http://www.kennedy-center.org/scripts/dist/vendor.bundle.js?v=20180321"></script>
+<script src="http://www.kennedy-center.org/scripts/dist/kc.bundle.js?v=20180321"></script>
+<script>
+        
+        $(function () {
+            KC.apiRoot = 'https://api.kennedy-center.org';
+            KC.Utils.logger.config({
+                level: 'info',
+                logPath: '/api/logging',
+                logRoot: KC.apiRoot
+            });
+        });
+    </script>
+<script>jwplayer.key = "aWySJs/4Yq9p2moNEsD85Cux6jODY8HGaoYvfggDvgI=";</script>
+<script type="text/javascript">
+
+        $(document).ready(function () {
+            !function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "twitter-wjs");
+
+
+
+            // DELETE IF YOU DO NOT USE INTRO ANIMATION
+            /* $("button").click(function () {
+            $("div.video-splash").addClass("splash-hide");
+            $("div#container").css("opacity", "1.0");
+            });
+            */
+
+            // THIS IS REQUIRED TO MAKE BUTTONS WORK IN SYOS AND NOT CONFLICT WITH BOOTSTRAP
+            var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+            $.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
+
+        });
+    </script>
+<script src="//connect.facebook.net/en_US/all.js" type="text/javascript"></script>
+<script type="text/javascript">
+        function initFacebook() {
+            FB.init({
+                appId: '69896852256', // App ID
+                status: true, // check login status
+                cookie: true, // enable cookies to allow the server to access the session
+                xfbml: true,  // parse XFBML
+                oauth: true
+            });
+        };
+
+
+    </script>
+<link href="http://www.kennedy-center.org/scripts/bootstrap-toggle/bootstrap-toggle.min.css" rel="stylesheet"/>
+<script src="http://www.kennedy-center.org/scripts/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" rel="stylesheet"/>
+<link href="http://www.kennedy-center.org/scripts/jQuery/dialog/jquery-kctheme.css?v=20180118" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"/>
+<link href="https://use.typekit.net/dvu4uoo.css" rel="stylesheet"/>
+<link href="http://www.kennedy-center.org/stylesheets/winstyles-net.css?v=20181010" rel="stylesheet"/>
+<link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="http://www.kennedy-center.org/stylesheets/default-theme.css?v=20181106" rel="stylesheet"/>
+<link href="http://www.kennedy-center.org/stylesheets/build/style.min.css?v=20190914" rel="stylesheet"/>
+<link href="http://www.kennedy-center.org/fonts/fontello/css/settings.css?v=20170511" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet"/>
+<script src="http://www.kennedy-center.org/Scripts/cstraight/hoverintent.js?v=20170511" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" type="text/javascript"></script>
+<script src="http://www.kennedy-center.org/Scripts/cstraight/headroom.js?v=20170511" type="text/javascript"></script>
+<script src="http://www.kennedy-center.org/Scripts/cstraight/scripts.js?v=20171228" type="text/javascript"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.js" type="text/javascript"></script>
+<script src="http://www.kennedy-center.org/Scripts/cstraight/modernizr.js?v=20170511" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.13/moment-timezone-with-data-2012-2022.min.js"></script>
+<style>
+        .event-snippet.long .time {
+            min-width:50px;
+        }
+        .event-snippet.long h4 {
+            padding-top:2px;
+        }
+    </style>
+<script src="http://www.kennedy-center.org/scripts/jQuery/image-slider/jquery.bxslider.min.js" type="text/javascript"></script>
+<link href="http://www.kennedy-center.org/scripts/jQuery/image-slider/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.kennedy-center.org/scripts/jQuery/image-slider-thumb/css/lightSlider.css" rel="stylesheet" type="text/css"/>
+<script src="http://www.kennedy-center.org/scripts/jQuery/image-slider-thumb/js/jquery.lightSlider.min.js" type="text/javascript"></script>
+<script src="http://www.kennedy-center.org/Scripts/controllers/Handlebars-helpers.js?v=20190807" type="text/javascript"></script>
+<script src="http://www.kennedy-center.org/Scripts/controllers/home-page.js?v=20171116" type="text/javascript"></script>
+<script src="http://www.kennedy-center.org/Scripts/api/apiCalls.js?v=20171116" type="text/javascript"></script>
+<script type="text/javascript">
+
+var filter = 'KC';
+
+
+        $(document).ready(function () {
+
+            /* Main Banner Slider  */
+            $('.bxslider').bxSlider({
+                auto: true,
+                // auto:false, // Set to false there is only 1 slide, set to true with multiple slides
+                captions: false,
+                speed: 1300,
+                pause: 8000
+            });
+
+
+            /* New and Noteworthy Slider  */
+            $('#imageGallery').lightSlider({
+                gallery: true,
+                item: 1,
+                thumbItem: 9,
+                pause: 11000,
+                loop: true,
+                auto: true,
+                speed: 1000,
+                slideMargin: 0,
+                controls: false,
+                //currentPagerPosition: 'left',
+
+            });
+
+            /* Randomize featured video  */
+
+
+
+            /**** For video splash - Currently not on the page **/
+            /*
+            setTimeout(function () {
+                $(".video-splash").fadeOut('slow');
+            }, 5000);
+    
+    
+    
+            setTimeout(function () {
+                $(".fade-in").fadeIn('slow');
+            }, 1000 );
+    
+            */
+
+            var api = 'https://api.kennedy-center.org';
+
+            apiCallsModule.init(api);
+            homePageModule.init(new Date('9/20/2019 9:06:33 PM'), 'https://api.kennedy-center.org');
+            hbModule.init('False');
+    });
+
+</script>
+<script type="text/javascript">
+
+        var featuredEventsBtn = $("<a>").addClass("featured-events-btn").attr("href", "#").html("Back to Viewing Featured Events >").on("click", function (e) { showFeaturedEvents(); return false; });
+
+        function transitionIn(el) {
+            $(el).addClass("current_events events_start").removeClass("hidden").prependTo("#events-container");
+            if (!$(el).is("#featured-events")) {
+                $(el).prepend($("<a>").addClass("featured-events-btn").attr("href", "#").html("Back to Viewing Featured Events >").on("click", function (e) { showFeaturedEvents(); return false; }));
+            }
+            window.getComputedStyle($(".events_start").get(0)).left;
+            $(".events_start").removeClass("events_start");
+            if (typeof (useJSTransitions) != "undefined" && useJSTransitions) {
+                $(".current_events").slideDown();
+            }
+
+            $(".events_end").addClass("hidden");
+        }
+
+        function transitionOut() {
+            // clean up old hidden dates
+            if ($("#featured-events").hasClass("events_end")) {
+                $("#featured-events").removeClass("events_end").addClass("hidden").insertAfter("#events-container");
+            }
+            $(".events_end").remove();
+
+            // start ending animation immediately
+            $("#events-container").children(":last-child").removeClass("current_events").addClass("events_end");
+        }
+
+        function showFeaturedEvents() {
+            transitionOut();
+            transitionIn($("#featured-events"));
+        }
+
+        function gotEventsResult(data) {
+            // start animation with pause
+
+            transitionIn($(data));
+
+        }
+
+        var onSelectDate = function (dateText, inst) {
+            transitionOut();
+
+            dateText = dateText.split("/");
+
+            $.get('/calendar/_day?byear=' + dateText[2] + '&bmonth=' + dateText[0] + '&bday=' + dateText[1] + '&filter=' + filter, gotEventsResult)
+                .fail(function (e) { transitionIn($("<div />").html("<p>An error occured while loading performances</p>").prepend(featuredEventsBtn)); });
+
+        };
+
+        function initCal() {
+            $("#calendar1").datepicker({ defaultDate: null, onSelect: onSelectDate });
+        }
+
+        $(document).ready(initCal);
+
+
+</script>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="IE=edge" http-equiv="X-UA-Compatible"/> <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>
+	 The John F. Kennedy Center for the Performing Arts 
+</title><style type="text/css">.fancybox-margin{margin-right:15px;}</style><script type="application/ld+json">[{"@context":"http://schema.org","@type":"VideoObject","name":"Music and the Voice: Brain Mechanisms of Vocal Mastery and Creativity | Sound Health","description":"What can the brain of an artist tell us about the nature of creativity? Join renowned neuroscientist Dr. Charles Limb in a conversation with acclaimed bass Soloman Howard, Freestyle Love Supreme's Chris “Shockwave” Sullivan, and Grammy Award-winning bassist/vocalist Esperanza Spaulding on the fascinating new science of musical creativity. Dr. Limb presents the results of fMRI scans relating to musicality, improvisation, and brain function. \n\nLearn more about the Kennedy Center's work with NIH and the NEA through Sound Health:\nhttps://cms.kennedy-center.org/series/sound-health-home/sound-health\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/FoDbMf28Xtk/maxresdefault.jpg","dateCreated":"2019-09-20T20:48:17.000Z","dateModified":"2019-09-20T20:48:17.000Z","uploadDate":"2019-09-20T20:48:17.000Z","duration":"P4060S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AFoDbMf28Xtk","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Celebrating Indigenous Cultures at the REACH | The Kennedy Center","description":"Watch highlights from the REACH festival's celebration of indigenous cultures, and come join us!\n\nThe REACH opening festival presents two vibrant weeks of performances and activities celebrating the new expansion of our campus. These innovative indoor and outdoor spaces put YOU at the center of the art—where you can chart your own course and connect what moves you.\n\nEvery day of the festival offers something for everyone, with daily spotlights on special themes or art forms sprinkled throughout. No matter when you visit, you’ll find plenty of unique performances, interactive activities, insightful conversations, and other events that speak to your interests and pique your curiosity. Explore everything from classical, jazz, and electronica music to comedy, dance, theater, film, Hip Hop, indigenous cultures, and family fun!\n\nDiscover how the Kennedy Center is forging new ways for artists from near and far, community groups, and YOU to come together to create and share joyous and meaningful moments, learn from each other, and win hearts and minds through the power of the arts. See you at the REACH!\n\nMore about the festival:\nhttps://cms.kennedy-center.org/festivals/reach/overview\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/CWASJcVNsVs/maxresdefault.jpg","dateCreated":"2019-09-20T15:48:48.000Z","dateModified":"2019-09-20T15:48:48.000Z","uploadDate":"2019-09-20T15:48:48.000Z","duration":"P60S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3ACWASJcVNsVs","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Renée Fleming, Angélique Kidjo, and Jason Moran in Concert​ | LIVE from The Kennedy Center","description":"Live from the #KenCenREACH: Revel in the diverse musical influences of Angélique Kidjo as she joins Renée Fleming and Jason Moran in concert, alongside music director Mark G. Meadows and his house band, Mark G. Meadows & The Movement.\n\nPart of the REACH Opening Festival:\nhttps://cms.kennedy-center.org/festivals/reach/schedule\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/fdeFCvtwI9I/maxresdefault.jpg","dateCreated":"2019-09-13T20:12:26.000Z","dateModified":"2019-09-13T20:12:26.000Z","uploadDate":"2019-09-13T20:12:26.000Z","duration":"P5589S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AfdeFCvtwI9I","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Welcome to the REACH | The Kennedy Center","description":"Join Rose Kennedy Schlossberg, John F. Kennedy's granddaughter, in this exploration of The REACH -- the Kennedy Center's transformative new expansion.\n\n“If art is to nourish the roots of our culture, society must set the artist free to follow his vision wherever it takes him.”—John F. Kennedy\n\nJohn F. Kennedy’s vision was to set the artist free. Free to reach beyond hallowed halls and sacred walls into creative open spaces where audiences can reach back and connect with the art and the artist who created it.\n\nThat’s why we created the REACH.\n\nThe REACH is a living theater where diverse art forms collide to break down the boundaries between audience and art. It is an immersive learning center, a public incubator, and a set of dynamic, collaborative spaces where art happens so close audiences can reach out and touch it.\n\nEnvisioned as a complement to, and extension of, the Kennedy Center’s mission, the REACH is an open stage for differing ideas and divergent cultures, delivering on a vision for what a 21st century arts center should be—inclusive, accessible, and interactive.\n\nRegular activities within the REACH will include club-style performances, a Learning Lab that welcomes students and visitors to explore hands-on arts experiences, and social events, as well as festivals, outdoor films, art installations, youth programs, and exhibitions. \n\nThe REACH opens to the public on September 7, 2019, with a two-week-long celebration that features free campus-wide activities, indoor and outdoor performances and events, and extensive opportunities for the public to explore Washington’s newest cultural destination. \n\nMore info: https://reach.kennedy-center.org/about/\n\nJoin us for the REACH Opening Festival - September 7-22, 2019.\nhttps://cms.kennedy-center.org/festivals/reach/\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/qE4m1KwQOZI/maxresdefault.jpg","dateCreated":"2019-09-07T13:37:46.000Z","dateModified":"2019-09-07T13:37:46.000Z","uploadDate":"2019-09-07T13:37:46.000Z","duration":"P257S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AqE4m1KwQOZI","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"REACH Opening Weekend!","description":"Watch highlights from the opening weekend of the REACH festival, and come join us!\n\nThe REACH opening festival presents two vibrant weeks of performances and activities celebrating the new expansion of our campus. These innovative indoor and outdoor spaces put YOU at the center of the art—where you can chart your own course and connect what moves you.\n\nEvery day of the festival offers something for everyone, with daily spotlights on special themes or art forms sprinkled throughout. No matter when you visit, you’ll find plenty of unique performances, interactive activities, insightful conversations, and other events that speak to your interests and pique your curiosity. Explore everything from classical, jazz, and electronica music to comedy, dance, theater, film, Hip Hop, indigenous cultures, and family fun!\n\nDiscover how the Kennedy Center is forging new ways for artists from near and far, community groups, and YOU to come together to create and share joyous and meaningful moments, learn from each other, and win hearts and minds through the power of the arts. See you at the REACH!\n\nMore about the festival:\nhttps://cms.kennedy-center.org/festivals/reach/overview\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/Ob8vWbjVUYE/maxresdefault.jpg","dateCreated":"2019-09-11T20:26:51.000Z","dateModified":"2019-09-11T20:26:51.000Z","uploadDate":"2019-09-11T20:26:51.000Z","duration":"P56S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AOb8vWbjVUYE","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Sing For Hope Piano at the REACH | The Kennedy Center","description":"Go behind the scenes with artist Jordann Wine as she paints the Kennedy Center's new Sing For Hope piano, commissioned for the REACH.\n\nSing for Hope Pianos places artist-designed pianos throughout parks and public spaces for anyone and everyone to play. \nhttps://www.singforhope.org/\n\nFind out more about the REACH:\nhttps://reach.kennedy-center.org/\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/KpL5c9cE1Is/maxresdefault.jpg","dateCreated":"2019-09-07T13:45:44.000Z","dateModified":"2019-09-07T13:45:44.000Z","uploadDate":"2019-09-07T13:45:44.000Z","duration":"P186S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AKpL5c9cE1Is","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Joel Shapiro's \"Blue\" at the REACH | The Kennedy Center","description":"The Kennedy Center introduces Joel Shapiro's \"Blue\".\n\nJoel Shapiro’s sculptures explode with the exuberance of youth. Their simple rectangles are assembled like stick figures that magically come alive.\n\nBlue is poised in mid-kick, turning the surrounding landscape into a giant stage as it prepares to pirouette across the grass.\n\nShapiro spent two years in India in the Peace Corps, where he was inspired by the integration of art and culture. His sculptures are installed in scores of cities around the world. They achieve the goal set centuries ago by Egyptian and Greek sculptors—to endow base materials with movement and spirit of life.\n\nBlue is located by the Video Wall at the REACH.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/Y2SQxMN8hE8/maxresdefault.jpg","dateCreated":"2019-09-07T13:37:46.000Z","dateModified":"2019-09-07T13:37:46.000Z","uploadDate":"2019-09-07T13:37:46.000Z","duration":"P61S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AY2SQxMN8hE8","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"The REACH Opening Festival | The Kennedy Center Expansion","description":"Join us for the REACH Opening Festival - September 7-22, 2019. \n\nFor more information, please visit: https://reach.kennedy-center.org/\n\n“If art is to nourish the roots of our culture, society must set the artist free to follow his vision wherever it takes him.”—John F. Kennedy\n\nJohn F. Kennedy’s vision was to set the artist free. Free to reach beyond hallowed halls and sacred walls into creative open spaces where audiences can reach back and connect with the art and the artist who created it.\n\nThat’s why we created the REACH.\n\nThe REACH is a living theater where diverse art forms collide to break down the boundaries between audience and art. It is an immersive learning center, a public incubator, and a set of dynamic, collaborative spaces where art happens so close audiences can reach out and touch it.\n\nEnvisioned as a complement to, and extension of, the Kennedy Center’s mission, the REACH is an open stage for differing ideas and divergent cultures, delivering on a vision for what a 21st century arts center should be—inclusive, accessible, and interactive.\n\nRegular activities within the REACH will include club-style performances, a Learning Lab that welcomes students and visitors to explore hands-on arts experiences, and social events, as well as festivals, outdoor films, art installations, youth programs, and exhibitions.\n\nThe REACH will open to the public on September 7, 2019, with a weeklong celebration that features free campus-wide activities, indoor and outdoor performances and events, and extensive opportunities for the public to explore Washington’s newest cultural destination. \n\nDesign highlights include:\n\n- Three soaring pavilions featuring floor-to-ceiling windows.\n- Eleven highly flexible spaces which will be used for the creation of art, performances, events, classes, and more.\n- An outdoor stage and video wall, which will host concerts and film screenings.\n- A “green roof” and 130,000 square feet of landscaping and gardens, including a 35-tree ginkgo grove, walking paths, and lawns.\n- A casual arts café that invites socializing and “dwell time” outside of regular performance activities.\n- A connection—by way of a new pedestrian bridge spanning Rock Creek and Potomac Parkway—to the National Mall and other presidential memorials. \n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/Qtqcmxdx2ig/maxresdefault.jpg","dateCreated":"2019-09-06T17:15:26.000Z","dateModified":"2019-09-06T17:15:26.000Z","uploadDate":"2019-09-06T17:15:26.000Z","duration":"P30S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AQtqcmxdx2ig","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"5 Ways to Enjoy the REACH at The Kennedy Center","description":"The Kennedy Center is growing!\n\nFor more information, please visit: https://reach.kennedy-center.org/\n\n“If art is to nourish the roots of our culture, society must set the artist free to follow his vision wherever it takes him.”—John F. Kennedy\n\nJohn F. Kennedy’s vision was to set the artist free. Free to reach beyond hallowed halls and sacred walls into creative open spaces where audiences can reach back and connect with the art and the artist who created it.\n\nThat’s why we created the REACH.\n\nThe REACH is a living theater where diverse art forms collide to break down the boundaries between audience and art. It is an immersive learning center, a public incubator, and a set of dynamic, collaborative spaces where art happens so close audiences can reach out and touch it.\n\nEnvisioned as a complement to, and extension of, the Kennedy Center’s mission, the REACH is an open stage for differing ideas and divergent cultures, delivering on a vision for what a 21st century arts center should be—inclusive, accessible, and interactive.\n\nRegular activities within the REACH will include club-style performances, a Learning Lab that welcomes students and visitors to explore hands-on arts experiences, and social events, as well as festivals, outdoor films, art installations, youth programs, and exhibitions.\n\nThe REACH will open to the public on September 7, 2019, with a weeklong celebration that features free campus-wide activities, indoor and outdoor performances and events, and extensive opportunities for the public to explore Washington’s newest cultural destination. \n\nDesign highlights include:\n\n- Three soaring pavilions featuring floor-to-ceiling windows.\n- Eleven highly flexible spaces which will be used for the creation of art, performances, events, classes, and more.\n- An outdoor stage and video wall, which will host concerts and film screenings.\n- A “green roof” and 130,000 square feet of landscaping and gardens, including a 35-tree ginkgo grove, walking paths, and lawns.\n- A casual arts café that invites socializing and “dwell time” outside of regular performance activities.\n- A connection—by way of a new pedestrian bridge spanning Rock Creek and Potomac Parkway—to the National Mall and other presidential memorials. \n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/w6JbqlsvS2c/maxresdefault.jpg","dateCreated":"2019-03-04T13:36:03.000Z","dateModified":"2019-03-04T13:36:03.000Z","uploadDate":"2019-03-04T13:36:03.000Z","duration":"P43S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3Aw6JbqlsvS2c","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"National Dance Day 2019 - Kennedy Center Staff @ The REACH!","description":"Kick up your heels and put on your dancing shoes! It’s time for National Dance Day! Now September 21 – the festivities will be at the Kennedy Center’s new campus space, the REACH. \n\n#DanceMadeMeDoIt #NationalDanceDay2019. \n\nFREE! Reservations for timed passes will be required for entry.  Reservations are available here: https://cms.kennedy-center.org/festivals/reach/\n\nDon't miss our annual full day of activities celebrating the art of dance.\n\nFor more information on the REACH Opening Festival, please visit: https://cms.kennedy-center.org/festivals/reach/overview\n\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/gpNfErY4dfs/maxresdefault.jpg","dateCreated":"2019-08-12T16:37:03.000Z","dateModified":"2019-08-12T16:37:03.000Z","uploadDate":"2019-08-12T16:37:03.000Z","duration":"P178S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AgpNfErY4dfs","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Sound Health: Inside Opera Singer Soloman Howard's Brain | The Kennedy Center","description":"Hear more from Dr. Charles Limb and Opera singer Soloman Howard on September 12 at 7pm in Studio K. \n\nPart of the REACH opening festival: \nhttps://cms.kennedy-center.org/festivals/reach/overview\n\nSound Health is an initiative to expand our understanding of the connections between music and wellness: How music is processed by our brain, how it might impact our development, and how in some cases it might be used as a medical intervention for patients with a variety of conditions.\n\nLaunched in 2016 under the leadership of Renée Fleming and Dr. Francis Collins, Sound Health is a partnership between the Kennedy Center and National Institutes of Health, in association with the National Endowment for the Arts. In its role as the largest funder of biomedical research in the world, the NIH is supporting studies that explore these key questions. And in its role as the nation’s performing arts center, the Kennedy Center seeks to provide a platform for artists, researchers, neuroscientists, and music therapists to bring this fascinating work to a broader public.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/ZDtNXTQFqVY/maxresdefault.jpg","dateCreated":"2019-09-12T16:52:35.000Z","dateModified":"2019-09-12T16:52:35.000Z","uploadDate":"2019-09-12T16:52:35.000Z","duration":"P84S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AZDtNXTQFqVY","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Michael Giacchino's \"Advent\" | NSO Pops Celebrates Apollo 11: A 50th Anniversary","description":"The National Symphony Orchestra performs Advent, a new NSO-commission by Oscar-winning composer Michael Giacchino (Star Wars: Rogue One, Up)—played to the minute Neil Armstrong stepped foot on the moon 50 years before. \n\nComposed by Michael Giacchino\nPerformed by the National Symphony Orchestra\nwith Shannon Jennings, soprano\nand recharj, Tibetan singing bowls\nConducted by Emil de Cou\n\nIn collaboration with NASA, the NSO celebrates 50 years since the 1969 moon landing with a momentous concert event hosted by Mythbusters's Adam Savage. Emil de Cou conducts this special program with appearances and performances by Meredith Vieira, Pharrell Williams, LeVar Burton, Natasha Bedingfield, Mark Armstrong, and others.\n\nSubscribe to The Kennedy Center: http://bit.ly/2gNFrtb\n\n#advent #michaelgiacchino #nasa","thumbnailUrl":"https://i.ytimg.com/vi/JL3SOQP--ao/maxresdefault.jpg","dateCreated":"2019-08-24T16:32:48.000Z","dateModified":"2019-08-24T16:32:48.000Z","uploadDate":"2019-08-24T16:32:48.000Z","duration":"P633S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AJL3SOQP--ao","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Brad Paisley - \"American Flag on the Moon\" | A Kennedy Center Digital Stage Original","description":"Brad Paisley performs his original song in tribute to the 50th Anniversary of the Apollo 11 moon landing. \n\n\"American Flag on the Moon\"\nWritten and performed by Brad Paisley\n\nPremiered during NSO Pops:\nApollo 11: A 50th Anniversary\nOne Small Step, One Giant Leap\nJuly 20th, 2019\n\nIn collaboration with NASA.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb\n\nSubscribe to Brad Paisley! http://smarturl.it/BPYoutubeSubscribe\n\n#bradpaisley #kennedycenter #NASA","thumbnailUrl":"https://i.ytimg.com/vi/vEdY_KiUmMI/maxresdefault.jpg","dateCreated":"2019-08-05T16:02:57.000Z","dateModified":"2019-08-05T16:02:57.000Z","uploadDate":"2019-08-05T16:02:57.000Z","duration":"P227S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AvEdY_KiUmMI","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"\"Fly Me to the Moon\" – Natasha Bedingfield and the NSO | LIVE at The Kennedy Center","description":"Natasha Bedingfield performs \"Fly Me to the Moon\" with the National Symphony Orchestra LIVE at The Kennedy Center.\n\nIn collaboration with NASA, the NSO celebrates 50 years since the 1969 moon landing with a momentous concert event hosted by Mythbusters's Adam Savage. Emil de Cou conducts this special program with appearances and performances by Natasha Bedingfield, Meredith Vieira, Pharrell Williams, LeVar Burton, Mark Armstrong, and others. \n\n\"Fly Me to the Moon\"\nPerformed by Natasha Bedingfield\nand the National Symphony Orchestra\nWritten by Bart Howard\nConducted by Emil de Cou\n\nSubscribe to The Kennedy Center: http://bit.ly/2gNFrtb\n\nSubscribe to Natasha Bedingfield: https://bit.ly/2sUVCXi\n\n#natashabedingfield #nasa #flymetothemoon","thumbnailUrl":"https://i.ytimg.com/vi/yYScaRAlaV8/maxresdefault.jpg","dateCreated":"2019-07-22T20:56:58.000Z","dateModified":"2019-07-22T20:56:58.000Z","uploadDate":"2019-07-22T20:56:58.000Z","duration":"P196S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AyYScaRAlaV8","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Maz Jobrani: Just Iranian-American | A Kennedy Center Digital Stage Original","description":"Comedian Maz Jobrani sits down with Washington Post reporter Jason Rezaian for a kebab dinner in Washington D.C. during his recent visit to The Kennedy Center. Featuring excerpts from Maz's performance in the Concert Hall, Maz talks with Jason about his childhood, his comedic origins, and their shared experiences as Iranian-Americans.\n\nSpecial thanks to Jason Rezaian and the Washington Post. \n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb\n\n#mazjobrani #comedy #digitalstage","thumbnailUrl":"https://i.ytimg.com/vi/ftNsUDw6mec/maxresdefault.jpg","dateCreated":"2019-07-17T13:33:12.000Z","dateModified":"2019-07-17T13:33:12.000Z","uploadDate":"2019-07-17T13:33:12.000Z","duration":"P764S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AftNsUDw6mec","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"NASA 60th Anniversary Film - Saint-Saëns \"Organ Symphony\"  | The Kennedy Center","description":"In this special film created for NASA’s 60th anniversary, watch Saint-Saëns's “Organ Symphony” come to life with a riveting performance by the National Symphony Orchestra, featuring a treasure trove of film footage from NASA’s archives. #NASA60th\n\nNASA 60th Anniversary Film\nFilm produced by Duncan Copp\nEdited by Christy Hanna\nFootage courtesy of NASA\nMusic: Saint-Saëns \"Organ Symphony\" \n\nPart of: \"NSO Pops: Space, the Next Frontier\"\nJune 1, 2018\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/ZWF61uenz60/maxresdefault.jpg","dateCreated":"2018-10-02T12:50:42.000Z","dateModified":"2018-10-02T12:50:42.000Z","uploadDate":"2018-10-02T12:50:42.000Z","duration":"P354S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AZWF61uenz60","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"President John F. Kennedy Speech to Congress On Space Exploration","description":"President John F. Kennedy requests that Congress approves funding for the goal of landing a man on the moon and returning him safely to earth.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/8ygoE2YiHCs/sddefault.jpg","dateCreated":"2019-07-20T18:12:56.000Z","dateModified":"2019-07-20T18:12:56.000Z","uploadDate":"2019-07-20T18:12:56.000Z","duration":"P105S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3A8ygoE2YiHCs","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Bon Iver & TU Dance - \"Come Through\" | LIVE at The Kennedy Center","description":"Bon Iver and TU Dance perform \"Come Through\" LIVE at The Kennedy Center as part of DIRECT CURRENT, filmed live in the Kennedy Center's Concert Hall on March 25, 2019.\n\nThe Kennedy Center's DIRECT CURRENT celebration kicked off with Bon Iver & TU Dance’s Come Through, a cohesive, cross-genre performance between two artistic powerhouses. This evening-length collaboration featured new music from Justin Vernon, of two-time Grammy Award®–winning indie folk band Bon Iver, and new choreography from TU Dance, a diverse nine-member company founded by Toni Pierce-Sands and Uri Sands and known for works that combine the language of modern dance and classical ballet with African-based and urban vernacular movements. Come Through was commissioned by the Saint Paul Chamber Orchestra’s Liquid Music Series. \n\n\"Come Through\"\nPerformed by Bon Iver and TU Dance \nTU Dance Artistic Directors, Toni Pierce-Sands and Uri Sands \nMusic by Justin Vernon \nChoreography by Uri Sands \n\n#DirectCurrent #BonIver #TUDance #ComeThrough\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/CL3xv72k_H0/maxresdefault.jpg","dateCreated":"2019-06-28T19:23:46.000Z","dateModified":"2019-06-28T19:23:46.000Z","uploadDate":"2019-06-28T19:23:46.000Z","duration":"P189S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3ACL3xv72k_H0","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Samson - Regina Spektor with the National Symphony Orchestra | LIVE at The Kennedy Center","description":"Regina Spektor performs \"Samson\" with the National Symphony Orchestra LIVE at The Kennedy Center.\n\nThis performance was part of the National Symphony Orchestra event: DECLASSIFIED: Ben Folds Presents Regina Spektor & Caleb Teicher. Filmed live in the Kennedy Center's Concert Hall on November 2, 2018.\n\nIn the concert series, NSO Artistic Advisor Ben Folds breaks down barriers between music genres. Folds selects the artists to showcase both classical and modern music arranged specifically for the NSO. \n\nSamson\nPerformed by Regina Spektor and the National Symphony Orchestra\nWritten by Regina Spektor\nConducted by James Gaffigan\nOrchestration by Rob Moose\n\nSubscribe to The Kennedy Center: http://bit.ly/2gNFrtb\n\nSubscribe to Regina Spektor: https://bit.ly/2FMUoHp\n\n#reginaspektor #declassified #samson","thumbnailUrl":"https://i.ytimg.com/vi/NfCZCsQZzRo/maxresdefault.jpg","dateCreated":"2019-06-21T20:07:42.000Z","dateModified":"2019-06-21T20:07:42.000Z","uploadDate":"2019-06-21T20:07:42.000Z","duration":"P218S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3ANfCZCsQZzRo","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Full Concert: National Symphony Orchestra Plays Rhapsody on a Theme of Paganini","description":"Gianandrea Noseda, conductor\nFrancesco Piemontesi, piano\n\nRespighi: Ancient Airs and Dances – Suite No. 2\nRachmaninoff: Rhapsody on a Theme of Paganini\nCasella: Symphony No. 2\n\nMusic Director Gianandrea Noseda continues the Kennedy Center’s spring celebration of his home country! In his NSO debut, superb Swiss-Italian pianist Francesco Piemontesi lends his depth, intensity, and sincerity to Rhapsody on a Theme of Paganini, Rachmaninoff’s well-loved homage to extraordinary Italian violinist Niccolò Paganini. The program also features Respighi’s charming “Ancient Airs and Dances” and Casella’s Symphony No. 2—one of Noseda’s favorite symphonies of all time.\nPresented in collaboration with the Embassy of Italy and the Italian Institute of Culture.","thumbnailUrl":"https://i.ytimg.com/vi/DPaY5miOK10/maxresdefault.jpg","dateCreated":"2019-05-31T14:20:03.000Z","dateModified":"2019-05-31T14:20:03.000Z","uploadDate":"2019-05-31T14:20:03.000Z","duration":"P7790S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3ADPaY5miOK10","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Queen Latifah at the Kennedy Center - Simply Beautiful","description":"Grammy®- and Golden Globe®–winning artist Queen Latifah is a musician; television and film actress; a label president; an author; and an entrepreneur. From her groundbreaking 1989 debut All Hail the Queen, which set the visual and contextual standard for female rappers, to her bold foray into R&B, Latifah is considered one of Hip Hop’s pioneer feminists. She has earned four Grammy® nominations as well as a Grammy Award® for Best Solo Rap Performance in 1994. Latifah became the first Hip Hop artist to be crowned with a star on the Hollywood Walk of Fame, and makes her Kennedy Center performance debut in this program.\n\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/P9Q8BsP13xM/maxresdefault.jpg","dateCreated":"2019-04-23T14:06:01.000Z","dateModified":"2019-04-23T14:06:01.000Z","uploadDate":"2019-04-23T14:06:01.000Z","duration":"P38S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AP9Q8BsP13xM","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Loveology - Regina Spektor with the National Symphony Orchestra | LIVE at The Kennedy Center","description":"Regina Spektor performs \"Loveology\" with the National Symphony Orchestra LIVE at The Kennedy Center.\n\nThis performance was part of the National Symphony Orchestra event: DECLASSIFIED: Ben Folds Presents Regina Spektor & Caleb Teicher. Filmed live in the Kennedy Center's Concert Hall on November 2, 2018.\n\nBen Folds curates and hosts this unique “part concert, part party” event that defies the traditional classical music presentation by shining a spotlight on great live music performed by the NSO and special guests in a laid-back and relaxed setting.\n\nSubscribe to The Kennedy Center: http://bit.ly/2gNFrtb\n\nSubscribe to Regina Spektor: https://bit.ly/2FMUoHp\n\n#reginaspektor #declassified #loveology","thumbnailUrl":"https://i.ytimg.com/vi/2U_I073jZu0/maxresdefault.jpg","dateCreated":"2019-03-07T15:51:15.000Z","dateModified":"2019-03-07T15:51:15.000Z","uploadDate":"2019-03-07T15:51:15.000Z","duration":"P300S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3A2U_I073jZu0","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Mason Bates: Art of War | A Kennedy Center Digital Stage Original","description":"\"Art of War\" is a powerful new symphony that explores the drama of human conflict from the perspectives of soldiers, weaponry, and human loss. \n\nAnimating a three-movement symphonic structure are original field recordings of weapons tests; elements of American and Iraqi folk music; and the printing presses of the US Treasury.\n\nThis new work by Kennedy Center Composer-in-Residence Mason Bates was performed by the National Symphony Orchestra and conducted by NSO Music Director Gianandrea Noseda. It premiered December, 2018, in the Kennedy Center's Concert Hall.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/1JO2kifpG8I/maxresdefault.jpg","dateCreated":"2019-04-01T18:24:42.000Z","dateModified":"2019-04-01T18:24:42.000Z","uploadDate":"2019-04-01T18:24:42.000Z","duration":"P364S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3A1JO2kifpG8I","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Audra McDonald and Brian Stokes Mitchell re-unite to sing \"Wheels of a Dream\" from Ragtime","description":"Twenty years after they first performed the roles, Broadway stars Audra McDonald and Brian Stokes Mitchell re-unite to sing \"Wheels of a Dream\" from Ragtime LIVE at the Kennedy Center.\n\n\"Let Freedom Ring!,\" part of the free daily performance series on the Kennedy Center's Millennium Stage, features Tony®, Emmy®, and Grammy®–winning artist Audra McDonald and Two- time Tony®-winning artist Brian Stokes Mitchell and the Let Freedom Ring Choir led by Music Director Rev. Nolan Williams Jr.\n\nIn collaboration with Georgetown University. January 21, 2019.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/iRRNaAfe3p4/maxresdefault.jpg","dateCreated":"2019-01-25T18:22:58.000Z","dateModified":"2019-01-25T18:22:58.000Z","uploadDate":"2019-01-25T18:22:58.000Z","duration":"P220S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AiRRNaAfe3p4","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Geri Lewis: 50 Years of Friendship at the Kennedy Center","description":"Geri Lewis has given tours of the Kennedy Center since 1968, 3 years before Leonard Bernstein's MASS marked its inauguration. \n\nWatch as she talks about her adventures—50 years and counting—as a Friend of the Kennedy Center.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/Vp4bDxvRac8/maxresdefault.jpg","dateCreated":"2018-12-13T16:13:05.000Z","dateModified":"2018-12-13T16:13:05.000Z","uploadDate":"2018-12-13T16:13:05.000Z","duration":"P268S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AVp4bDxvRac8","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Dear Theodosia - Regina Spektor & Ben Folds with the NSO | LIVE at The Kennedy Center","description":"Regina Spektor and Ben Folds perform \"Dear Theodosia\" from the #HamiltonMixtape with the National Symphony Orchestra. \n\n#Hamilton was created by 2018 Kennedy Center Honorees Lin-Manuel Miranda, Thomas Kail, Alex Lacamoire , and Andy Blankenbuehler. They will receive a special #KCHonors for their groundbreaking work. Tune in for the full broadcast Dec. 26 on CBS: tkc.co/Honors.\n\nThis performance was part of the National Symphony Orchestra event: DECLASSIFIED: Ben Folds Presents Regina Spektor & Caleb Teicher, and took place November 2, 2018.\n\nBen Folds curates and hosts this unique “part concert, part party” event that defies the traditional classical music presentation by shining a spotlight on great live music performed by the NSO and special guests in a laid-back and relaxed setting.\n\nSubscribe to The Kennedy Center: http://bit.ly/2gNFrtb\nSubscribe to Regina Spektor: https://bit.ly/2FMUoHp","thumbnailUrl":"https://i.ytimg.com/vi/KIlJEPY8hZ8/maxresdefault.jpg","dateCreated":"2018-11-30T15:32:50.000Z","dateModified":"2018-11-30T15:32:50.000Z","uploadDate":"2018-11-30T15:32:50.000Z","duration":"P186S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AKIlJEPY8hZ8","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Im/perfection - Dance worlds collide in the story of DEMO by Damian Woetzel","description":"The Kennedy Center presents an inside look at the making of DEMO by Damian Woetzel in this Digital Stage Original mini-documentary. Explore the concept of artistic im/perfection with a cast of world class ballerinas, hip-hop dancers, modern dancers, and musicians led by Woetzel, the newly appointed President of Juilliard. \n\nDamian Woetzel, a former principal dancer with New York City Ballet, modern choreographer Pam Tanowitz, and others bring a sold-out performance from the rehearsal room to the stage in just two days. The supremely talented cast of characters includes Lil Buck (Memphis jooker), Patricia Delgado (former Miami City Ballet principal dancer), and Caroline Shaw (Pulitzer Prize winner), with music by Philip Glass and Brooklyn Rider. \n\nWatch Lil Buck perform to Philip Glass in \"Orbit\":\nhttps://youtu.be/6MqxEtT8xAg\n\nWatch the world premiere of Pam Tanowitz's \"Blueprint\":\nhttps://youtu.be/Cywqym7s-SE\n\nWatch DEMO's finale, \"Ascending Bird\":\nhttps://youtu.be/SxzvacDspBo\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/1UEA4Am1TnY/maxresdefault.jpg","dateCreated":"2018-10-28T18:55:43.000Z","dateModified":"2018-10-28T18:55:43.000Z","uploadDate":"2018-10-28T18:55:43.000Z","duration":"P983S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3A1UEA4Am1TnY","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Julia Louis-Dreyfus Acceptance Speech | 2018 Mark Twain Prize","description":"An outstanding lineup of entertainers gathered in the Kennedy Center Concert Hall to salute Julia Louis-Dreyfus, recipient of the 21st annual Mark Twain Prize for American Humor on October 21, 2018. The Prize, which is named to honor one of the world's greatest humorists, was presented at a gala performance featuring some of the biggest names in comedy. The event was taped by WETA Washington, D.C. and aired nationally on PBS on November 19, 2018 at 9:00 p.m. ET. Capital One is the Presenting Sponsor of Comedy at the Kennedy Center.\n\nUnder the direction of the creative team from Done + Dusted, the Kennedy Center’s new producing partner for the Twain Prize, the cast features many of Louis-Dreyfus’s admirers, friends, and collaborators, including Stephen Colbert, Bryan Cranston, Tina Fey, Ilana Glazer, Tony Hale, Abbi Jacobson, Jack Johnson, Keegan-Michael Key, Lisa Kudrow, Kumail Nanjiani, and Jerry Seinfeld.\n\nJulia Louis-Dreyfus earned worldwide acclaim for her portrayal of Elaine Benes in the hit NBC series \"Seinfeld,\" and as Christine Campbell in the CBS hit comedy \"The New Adventures of Old Christine.\" She currently stars in, and executive produces, the HBO series \"Veep,\" which will soon begin its seventh season.\n\nBetween all shows combined, she has received eleven Emmy awards (six consecutively for \"Veep\") with twenty-four nominations, a Golden Globe award, nine Screen Actors Guild awards which makes her the most decorated actor in the history of the SAG awards, three Television Critics Association awards, five American Comedy Awards, a Peabody Award, and the Charlie Chaplin Britannia Award for Excellence in Comedy. She has broken the record for the most Emmy's won by a single performer, as well as the most consecutive wins for a single role (\"Veep\").\n\n#TwainPrize #PBSTwain\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/Nfe2MoPDdkM/maxresdefault.jpg","dateCreated":"2018-11-29T23:57:45.000Z","dateModified":"2018-11-29T23:57:45.000Z","uploadDate":"2018-11-29T23:57:45.000Z","duration":"P776S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3ANfe2MoPDdkM","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Celebrating 40 Years of The Kennedy Center Honors","description":"Throughout its 40-year history, the Kennedy Center Honors has redefined America's perception of its artistic legacy and reinvented the way this nation rewards its artists. The Honors have been compared to a knighthood in Britain, or the French Legion of Honor--the quintessential reward for a lifetime's endeavor. At the same time, the annual addition of new names to the roster of Honors recipients charts the international standard of excellence set by America's artists, as well as the aesthetic inspiration provided by artists of other nations who have achieved prominence on these shores.\n\nThe annual Honors gala is an evening without categories, without disappointments, and without competition. And the Honors telecast, aired during the week between Christmas and New Year's, is a perennial Emmy nominee. It serves for millions of American arts lovers as the year's crowning event, paying tribute to our nation's preeminent artists with performances by the great stars of today who have followed in their footsteps. The complete list of guest performers is kept secret until the show is in progress, keeping both the Honorees and the nation on the edge of their seats. \n\nThe Kennedy Center Honors \nExclusive Sponsor\nCBS\n \nThe Kennedy Center Honors Gala \nExclusive Underwriter\nBoeing\n \nOfficial Airline of \nThe Kennedy Center Honors\nDelta\n \nGround Transportation Provider of \nThe Kennedy Center Honors\nGeneral Motors\n \nThe Kennedy Center Founding Producer is George Stevens, Jr.\n \nHallmark Cards, Inc. has graciously provided design and print services for the Kennedy Center Honors.\n \nKennedy Center Honors logo design by Andrea Liss of HH Design.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb\n\n#KCHonors #KennedyCenter #CBS","thumbnailUrl":"https://i.ytimg.com/vi/UIur6eBdr4w/maxresdefault.jpg","dateCreated":"2018-11-29T23:58:17.000Z","dateModified":"2018-11-29T23:58:17.000Z","uploadDate":"2018-11-29T23:58:17.000Z","duration":"P227S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AUIur6eBdr4w","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Broad City's Abbi & Ilana - Elaine Dance Tribute for Julia Louis-Dreyfus | 2018 Mark Twain Prize","description":"Abbi & Ilana from Broad City give a hilarious Elaine Dance Tribute for Julia Louis-Dreyfus during the 21st Annual Mark Twain Prize for American Humor at The Kennedy Center.\n\nAn outstanding lineup of entertainers gathered in the Kennedy Center Concert Hall to salute Julia Louis-Dreyfus, recipient of the 21st annual Mark Twain Prize for American Humor on October 21, 2018. The Prize, which is named to honor one of the world's greatest humorists, was presented at a gala performance featuring some of the biggest names in comedy. The event was taped by WETA Washington, D.C. and aired nationally on PBS on November 19, 2018 at 9:00 p.m. ET.\n\nUnder the direction of the creative team from Done + Dusted, the Kennedy Center’s new producing partner for the Twain Prize, the cast features many of Louis-Dreyfus’s admirers, friends, and collaborators, including Stephen Colbert, Bryan Cranston, Tina Fey, Ilana Glazer, Tony Hale, Abbi Jacobson, Jack Johnson, Keegan-Michael Key, Lisa Kudrow, Kumail Nanjiani, and Jerry Seinfeld.\n\nJulia Louis-Dreyfus earned worldwide acclaim for her portrayal of Elaine Benes in the hit NBC series \"Seinfeld,\" and as Christine Campbell in the CBS hit comedy \"The New Adventures of Old Christine.\" She currently stars in, and executive produces, the HBO series \"Veep,\" which will soon begin its seventh season.\n\nBetween all shows combined, she has received eleven Emmy awards (six consecutively for \"Veep\") with twenty-four nominations, a Golden Globe award, nine Screen Actors Guild awards which makes her the most decorated actor in the history of the SAG awards, three Television Critics Association awards, five American Comedy Awards, a Peabody Award, and the Charlie Chaplin Britannia Award for Excellence in Comedy. She has broken the record for the most Emmy's won by a single performer, as well as the most consecutive wins for a single role (\"Veep\").\n\n#TwainPrize #PBSTwain \n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/42Q4Lr7edNQ/maxresdefault.jpg","dateCreated":"2018-11-18T13:48:46.000Z","dateModified":"2018-11-18T13:48:46.000Z","uploadDate":"2018-11-18T13:48:46.000Z","duration":"P262S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3A42Q4Lr7edNQ","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Ben Folds Presents: \"Nocturne\" by Jon Batiste, featuring dancer Caleb Teicher","description":"Musician and bandleader for \"The Late Show with Stephen Colbert\" Jon Batiste performs \"Nocturne\" with the National Symphony Orchestra, featuring critically-acclaimed dancer, choreographer, and director Caleb Teicher. \n\nBen Folds curates and hosts this unique “part concert, part party” event that defies the traditional classical music presentation by shining a spotlight on great live music performed by the NSO and special guests in a laid-back and relaxed setting.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/lmglYQyumlw/maxresdefault.jpg","dateCreated":"2018-11-02T15:28:27.000Z","dateModified":"2018-11-02T15:28:27.000Z","uploadDate":"2018-11-02T15:28:27.000Z","duration":"P274S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AlmglYQyumlw","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Ben Folds Presents: \"Can't Let Go, Juno\" by Kishi Bashi | DECLASSIFIED","description":"Kishi Bashi performs his sensational hit \"Can't Let Go, Juno\" with the National Symphony Orchestra, as arranged by Sam Hyken. \n\nBen Folds curates and hosts this unique “part concert, part party” event that defies the traditional classical music presentation by shining a spotlight on great live music performed by the NSO and special guests in a laid-back and relaxed setting.\n\nConducted by Jacomo Bairos, the evening features musician and bandleader for The Late Show with Stephen Colbert Jon Batiste, plus multi-instrumentalist, singer, and songwriter Kishi Bashi (of Montreal, Jupiter One) and composer Joachim Horsley, who has recently arranged music for Michael Bublé, John Legend, and Ben Folds. As with all DECLASSIFIED concerts, you can even bring special drinks purchased at our Intermission Bars into the Concert Hall! The program will be conducted by Jacomo Barios.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/P7ZcWAbcFRg/maxresdefault.jpg","dateCreated":"2018-10-25T16:18:58.000Z","dateModified":"2018-10-25T16:18:58.000Z","uploadDate":"2018-10-25T16:18:58.000Z","duration":"P287S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AP7ZcWAbcFRg","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"will.i.am & NSO Pops - \"Reach for the Stars\" | LIVE at The Kennedy Center","description":"Founding member of the Black Eyed Peas and the first artist to send a song to Mars, will.i.am conducts \"Reach for the Stars\" with the National Symphony Orchestra LIVE at The Kennedy Center during a concert to celebrate NASA's 60th anniversary.\n\nPart of: \"NSO Pops: Space, the Next Frontier\"\nFeaturing will.i.am, Clifton Ross III, and School Without Walls Concert Choir\n\nThe NSO in collaboration with the National Aeronautics and Space Administration (NASA) celebrated NASA’s 60th anniversary on June 1, 2018. The NSO performed music inspired by space—both fact and fiction—ranging from the theme to 2001: A Space Odyssey—Strauss’s Also Sprach Zarathustra—to music from Carl Sagan’s Golden Record and more.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/s_gPy_ybgrw/maxresdefault.jpg","dateCreated":"2018-10-18T17:39:32.000Z","dateModified":"2018-10-18T17:39:32.000Z","uploadDate":"2018-10-18T17:39:32.000Z","duration":"P298S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3As_gPy_ybgrw","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Sting - The Rising (Bruce Springsteen Tribute) - 2009 Kennedy Center Honors","description":"Sting performs \"The Rising\" for 2009 Honoree Bruce Springsteen, who wrote the song in 2002 in reaction to the September 11, 2001 attacks on New York City. \n\nThe Kennedy Center Honors is an annual honor given to those in the performing arts for their lifetime of contributions to American culture. \n\nMore info: https://bit.ly/28QVn6q\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb\n\n#KCHonors #Sting #BruceSpringsteen #KennedyCenter#CBS","thumbnailUrl":"https://i.ytimg.com/vi/tmWYg4W9CaY/maxresdefault.jpg","dateCreated":"2018-09-23T14:51:45.000Z","dateModified":"2018-09-23T14:51:45.000Z","uploadDate":"2018-09-23T14:51:45.000Z","duration":"P231S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AtmWYg4W9CaY","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Ray Charles - Birth of the Blues (Sammy Davis Jr. Tribute) - 1987 Kennedy Center Honors","description":"Ray Charles, an Honoree himself from the previous year, performs Birth of the Blues as a tribute to 1987 Honoree Sammy Davis Jr. -- or as Ray calls him, \"Mr. Wonderful.\" This all-out rendition of \"Birth of the Blues\" is accompanied by big band and orchestra pieces, and builds up to a big finish.\n\nThe Kennedy Center Honors is an annual honor given to those in the performing arts for their lifetime of contributions to American culture.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb\n\n#KCHonors #RayCharles #SammyDavisJr #KennedyCenter #CBS","thumbnailUrl":"https://i.ytimg.com/vi/nI3yyZ_dFEw/maxresdefault.jpg","dateCreated":"2018-09-23T14:50:51.000Z","dateModified":"2018-09-23T14:50:51.000Z","uploadDate":"2018-09-23T14:50:51.000Z","duration":"P221S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AnI3yyZ_dFEw","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Ben Folds Presents: \"Philosophize In It! Chemicalize With It!\" by Kishi Bashi | DECLASSIFIED","description":"Kishi Bashi performs his sensational hit \"Philosophize In It! Chemicalize With It!\" with the National Symphony Orchestra, as arranged by Sam Hyken. \n\nBen Folds curates and hosts DECLASSIFIED, a unique “part concert, part party” event that defies the traditional classical music presentation by shining a spotlight on great live music performed by the NSO and special guests in a laid-back and relaxed setting.\n\nConducted by Jacomo Bairos, the evening featured musician and bandleader for The Late Show with Stephen Colbert Jon Batiste, plus multi-instrumentalist, singer, and songwriter Kishi Bashi (of Montreal, Jupiter One) and composer Joachim Horsley, who has recently arranged music for Michael Bublé, John Legend, and Ben Folds.\n\nMixed by Mat Leffler-Schulman / Mobtown Studios\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/ZycZ4DgQJh4/maxresdefault.jpg","dateCreated":"2018-09-06T13:59:04.000Z","dateModified":"2018-09-06T13:59:04.000Z","uploadDate":"2018-09-06T13:59:04.000Z","duration":"P232S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AZycZ4DgQJh4","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Ben Folds Presents: \"Don't Stop\" by Jon Batiste | DECLASSIFIED at The Kennedy Center","description":"Musician and bandleader for \"The Late Show with Stephen Colbert\" Jon Batiste performs his soulful ballad \"Don't Stop\" with the National Symphony Orchestra, as arranged by Sam Hyken. \n\nBen Folds curates and hosts DECLASSIFIED, a unique “part concert, part party” event that defies the traditional classical music presentation by shining a spotlight on great live music performed by the NSO and special guests in a laid-back and relaxed setting.\n\nConducted by Jacomo Bairos, the evening featured musician and bandleader for The Late Show with Stephen Colbert Jon Batiste, plus multi-instrumentalist, singer, and songwriter Kishi Bashi (of Montreal, Jupiter One) and composer Joachim Horsley, who has recently arranged music for Michael Bublé, John Legend, and Ben Folds.\n\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/FIntPMYpnfU/maxresdefault.jpg","dateCreated":"2018-09-06T13:57:15.000Z","dateModified":"2018-09-06T13:57:15.000Z","uploadDate":"2018-09-06T13:57:15.000Z","duration":"P245S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AFIntPMYpnfU","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Ben Folds Composes a Song LIVE for Orchestra In Only 10 Minutes","description":"NSO Artistic Advisor Ben Folds composes a piece live with the National Symphony Orchestra and conductor Edwin Outwater during Sound Health in Concert: Music and the Mind, an initiative spearheaded by Artistic Advisor At Large, Renée Fleming, presented by The Kennedy Center and National Institutes of Health. Introduced by Dr. Charles Limb.","thumbnailUrl":"https://i.ytimg.com/vi/BytUY_AwTUs/maxresdefault.jpg","dateCreated":"2018-09-12T20:16:05.000Z","dateModified":"2018-09-12T20:16:05.000Z","uploadDate":"2018-09-12T20:16:05.000Z","duration":"P821S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3ABytUY_AwTUs","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"John Legend - \"Ordinary People\" | LIVE at The Kennedy Center","description":"Musician, singer, and philanthropist John Legend performs his hit \"Ordinary People\" LIVE at The Kennedy Center.\n\nPart of \"YouTube OnStage Live from The Kennedy Center,\" May 28, 2014. Watch the full concert here: https://youtu.be/2iGLJE0tUng\n\nProduced by: Sunset Lane Entertainment, TrickySquid@mOcean, Obscura\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/EMYpRhAN3rE/maxresdefault.jpg","dateCreated":"2018-09-11T21:10:10.000Z","dateModified":"2018-09-11T21:10:10.000Z","uploadDate":"2018-09-11T21:10:10.000Z","duration":"P332S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AEMYpRhAN3rE","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Company Danzante - \"I Am the Movement\" | LIVE at The Kennedy Center","description":"In light of the various social and cultural movements that are presently empowering women to speak out, unite, and demand equality and justice, this work-in-progress explores individual identity, vulnerability, and strength within the collective voice.. \n\nI Am the Movement (Excerpt, Work-in-Progress)\n\nChoreography by Katherine Horrigan and Arturo Garcia in collaboration with the dancers\nMusic by Ludovico Einaudi, Ten Walls, Nils Frahm\nPerformed by Grace Ball, Elizabeth Burr, Megan Caputo,\nOlivia Jordan, Erin Fitzgerald Rochow, Darian Saenz, Susie Wopat, and Mikayla Mckee\n\nCompany Danzante, one of Arlington’s premier contemporary dance companies, returns to Millennium Stage with works by five outstanding contemporary choreographers: Marcus Willis, Shaun Boyle, Karen Reedy, Katherine Horrigan, and Arturo Garcia. This family-friendly performance blends emotional beauty with athletic power to captivate the mind, stimulate the senses, and uplift the soul.\n\nPart of Millennium Stage at The Kennedy Center, February 7, 2018.\n\nWatch the full performance: \nhttps://youtu.be/Wbje6qPF9-I\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/cbrd85ds8cs/maxresdefault.jpg","dateCreated":"2018-08-27T16:23:00.000Z","dateModified":"2018-08-27T16:23:00.000Z","uploadDate":"2018-08-27T16:23:00.000Z","duration":"P730S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3Acbrd85ds8cs","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"India Arie - \"There's Hope\"  | LIVE at The Kennedy Center (2010)","description":"India Arie performs \"It Doesn't Cost A Thing To Smile\" LIVE at The Kennedy Center during the annual \"Let Freedom Ring\" celebration to honor the legacy of Dr. Martin Luther King Jr., on January 18, 2010.\n\nThe Kennedy Center and Georgetown University celebrate the legacy of Dr. Martin Luther King Jr. with a musical tribute featuring two-time Grammy Award–winning, platinum-selling singer-songrwriter India.Arie, remarks by President Barack Obama, the Let Freedom Ring Choir with Music Director Rev. Nolan Williams Jr., and Mistress of Ceremonies Andrea Roane.\n\nWatch the full concert:\nhttps://youtu.be/GrId-t1rdJA\n\nPart of Millennium Stage at the Kennedy Center, January 18, 2010.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb\n\n#indiaarie #obama #MLK #kennedycenter #millenniumstage","thumbnailUrl":"https://i.ytimg.com/vi/YDLHwFiTW1Q/maxresdefault.jpg","dateCreated":"2018-08-23T18:09:22.000Z","dateModified":"2018-08-23T18:09:22.000Z","uploadDate":"2018-08-23T18:09:22.000Z","duration":"P366S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AYDLHwFiTW1Q","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"A Kennedy Center Tribute to Aretha Franklin (1942-2018)","description":"Remembering the Queen of Soul. \n\nThe Kennedy Center pays tribute to a consummate artist and our dear friend, Aretha Franklin, with remarks by Arthur Mitchell & Patti LaBelle.\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb\n\n#arethafranklin #aretha #kennedycenter #tribute","thumbnailUrl":"https://i.ytimg.com/vi/pcFfjqjbvf0/maxresdefault.jpg","dateCreated":"2018-08-16T22:01:39.000Z","dateModified":"2018-08-16T22:01:39.000Z","uploadDate":"2018-08-16T22:01:39.000Z","duration":"P143S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3ApcFfjqjbvf0","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Aretha Franklin - \"Chain of Fools\" | LIVE at The Kennedy Center (2009)","description":"Aretha Franklin performs \"Chain of Fools\" LIVE at The Kennedy Center during the annual \"Let Freedom Ring\" celebration to honor the legacy of Dr. Martin Luther King Jr., on January 1, 2009.\n\nPart of Millennium Stage at The Kennedy Center. In collaboration with Georgetown University.\n\nWatch the full concert:\nhttps://youtu.be/tPovh9PEAU8\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/fvRbwNXoNNE/maxresdefault.jpg","dateCreated":"2018-08-09T15:26:19.000Z","dateModified":"2018-08-09T15:26:19.000Z","uploadDate":"2018-08-09T15:26:19.000Z","duration":"P209S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AfvRbwNXoNNE","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Mandy Harvey Performs \"Over the Rainbow\"","description":"\"America's Got Talent\" Golden Buzzer winner Mandy Harvey sings \"Over the Rainbow.\"\n\nMandy, who lost her hearing at age 18, gave a concert on July 25, 2013, in celebration of the 23rd anniversary of the Americans with Disabilities Act and National Council on Independent Living Conference. Watch the whole performance here:\nhttps://youtu.be/LbSMZVz85-s\n\nMandy is also the 2011 VSA International Young Soloists Competition winner.","thumbnailUrl":"https://i.ytimg.com/vi/UgyHwxgGOKA/maxresdefault.jpg","dateCreated":"2018-07-19T15:38:15.000Z","dateModified":"2018-07-19T15:38:15.000Z","uploadDate":"2018-07-19T15:38:15.000Z","duration":"P361S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AUgyHwxgGOKA","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Tank and the Bangas - \"The Brady's\" | LIVE at The Kennedy Center","description":"Tank and the Bangas perform their hit \"The Brady's.\"\n\nThe 2014 New Orleans Off-beat Emerging Artist of the Year, Tank and the Bangas, has wowed audiences with its blend of energetic soul, hip-hop, R&B, and spoken word.\n\nPart of Millennium Stage at The Kennedy Center, January 13, 2016.\n\nWatch the full performance: \nhttps://youtu.be/DDZbCLZ56IE\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/CWcnPDkUhoY/maxresdefault.jpg","dateCreated":"2018-06-14T15:14:05.000Z","dateModified":"2018-06-14T15:14:05.000Z","uploadDate":"2018-06-14T15:14:05.000Z","duration":"P318S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3ACWcnPDkUhoY","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Chihuly: Sand and Fire (A Kennedy Center Digital Stage Original)","description":"In the fall of 2017, the Kennedy Center announced the re-opening of the Terrace Theater, which included a brand new chandelier created by renown artist Dale Chihuly specifically for the space. Titled \"Amber Icicle and Split Leaf Chandelier\" the work was commissioned by the Center with support from JoAnn McGrath and the Highland Street Foundation. The original design brings together in a chandelier for the first time two of Chihuly's nature-inspired forms, icicles and split leaves, in an amber and garnet work of art. \n\nFor more information and to view listings of Terrace Theater performances, please visit: http://www.kennedy-center.org/\n\nSubscribe to The Kennedy Center! http://bit.ly/2gNFrtb","thumbnailUrl":"https://i.ytimg.com/vi/aiBeFmbopCA/maxresdefault.jpg","dateCreated":"2017-12-30T16:06:00.000Z","dateModified":"2017-12-30T16:06:00.000Z","uploadDate":"2017-12-30T16:06:00.000Z","duration":"P210S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AaiBeFmbopCA","keywords":""},{"@context":"http://schema.org","@type":"VideoObject","name":"Ben Folds: Photographer, Musician, Storyteller | A Digital Stage Original","description":"A Kennedy Center Digital Stage Original exploring Ben Fold's connection between photography, music and all art in general. \n\nSubscribe to our channel! https://www.youtube.com/user/TheKennedyCenter\n\nBen Folds is widely regarded as one of the major music influencers of our generation.\n\nFor over ten years he’s shared the stage with some of the world’s greatest symphony orchestras, performing his pop hits and critically acclaimed concerto for Piano and Orchestra. He was recently named as the first-ever Artistic Advisor to the National Symphony Orchestra at the Kennedy Center where he will bring pop artists together with the nation's orchestra to collaborate on new music.\n\nThroughout his career, Folds has created an enormous body of genre-bending music that includes pop albums with Ben Folds Five, multiple solo albums, and collaborative records with artists from Sara Bareilles and Regina Spektor, to William Shatner.\n\nFolds continues to perform with symphonies and also cross country solo touring reminiscent of his earliest years, delivering a high energy rock performance using the intimacy of just a piano.\n\nAn avid photographer, Folds is a member of the distinguished Sony Artisans of Imagery, and earlier this year completed an assignment as a photo editor for National Geographic. And he’s an outspoken advocate for music education and music therapy as a member of Americans For The Arts, and as a member of the Board of Directors of the Nashville Symphony.","thumbnailUrl":"https://i.ytimg.com/vi/Wq8fG447Ls4/maxresdefault.jpg","dateCreated":"2017-12-17T16:15:18.000Z","dateModified":"2017-12-17T16:15:18.000Z","uploadDate":"2017-12-17T16:15:18.000Z","duration":"P314S","contentUrl":null,"embedUrl":"https://www.kennedy-center.org/home/index?videoId=youtube%3AWq8fG447Ls4","keywords":""}]</script><script src="https://www.googleadservices.com/pagead/conversion/971933007/?random=1569028012701&amp;cv=9&amp;fst=1569028012701&amp;num=1&amp;value=0&amp;label=RT3iCNGa2V8Qz4q6zwM&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=120&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;gtm=2wg9b0&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.kennedy-center.org%2Fhome%2Findex&amp;tiba=The%20John%20F.%20Kennedy%20Center%20for%20the%20Performing%20Arts&amp;bttype=purchase&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://www.googleadservices.com/pagead/conversion/988685176/?random=1569028012712&amp;cv=9&amp;fst=1569028012712&amp;num=1&amp;value=0&amp;label=X4hECJGAimAQ-Ma41wM&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=120&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;gtm=2wg9b0&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.kennedy-center.org%2Fhome%2Findex&amp;tiba=The%20John%20F.%20Kennedy%20Center%20for%20the%20Performing%20Arts&amp;bttype=purchase&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://www.googleadservices.com/pagead/conversion/872620604/?random=1569028012719&amp;cv=9&amp;fst=1569028012719&amp;num=1&amp;value=0&amp;label=qZ2oCMqqymoQvMSMoAM&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=120&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;gtm=2wg9b0&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.kennedy-center.org%2Fhome%2Findex&amp;tiba=The%20John%20F.%20Kennedy%20Center%20for%20the%20Performing%20Arts&amp;bttype=purchase&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://www.googleadservices.com/pagead/conversion/872622815/?random=1569028012727&amp;cv=9&amp;fst=1569028012727&amp;num=1&amp;value=0&amp;label=hF0gCIOOsWoQ39WMoAM&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=120&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;gtm=2wg9b0&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.kennedy-center.org%2Fhome%2Findex&amp;tiba=The%20John%20F.%20Kennedy%20Center%20for%20the%20Performing%20Arts&amp;bttype=purchase&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/986682028/?random=1569028012756&amp;cv=9&amp;fst=1569028012756&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=120&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;gtm=2wg9b0&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.kennedy-center.org%2Fhome%2Findex&amp;tiba=The%20John%20F.%20Kennedy%20Center%20for%20the%20Performing%20Arts&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/971933007/?random=1569028012770&amp;cv=9&amp;fst=1569028012770&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=376635471&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=120&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;gtm=2wg9b0&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.kennedy-center.org%2Fhome%2Findex&amp;tiba=The%20John%20F.%20Kennedy%20Center%20for%20the%20Performing%20Arts&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+<body class="kc headroom headroom--top headroom--not-bottom">
+<nav id="accessibility">
+<a href="http://www.kennedy-center.org/#all-content" title="[Skip the navigation bar to go to the start of the content.]">skip navigation</a> | 
+	<a href="http://www.kennedy-center.org/pages/accessibility" title="[Accessibility.]">accessibility</a>
+</nav>
+<div class="no-scroll">
+<script src="http://www.kennedy-center.org/scripts/jquery.cookie.js" type="text/javascript"></script>
+<div class="header-search-form mobile">
+<label class="sr-only" for="q1">
+                Search:
+            </label>
+<input class="header-search mobile" id="q1" name="q1" onkeyup="searchKeyUp(event, this.value)" placeholder="Search" type="text"/>
+<a class="header-close-search mobile" href="http://www.kennedy-center.org/#"><span class="sr-only">close</span></a>
+</div>
+<div class="header cf" data-offset="40">
+<div class="inner">
+<a class="header-branding" href="http://www.kennedy-center.org/">
+<img alt="The Kennedy Center" class="header-branding-logo-mobile" src="https://www.kennedy-center.org/images/logos/logo-kc.svg"/>
+<img alt="The Kennedy Center" class="header-branding-logo" src="https://www.kennedy-center.org/images/logos/logo-kc-main.svg"/>
+</a>
+<div class="header-utilities cf">
+<div class="header-utility-links-mobile hide-md cf">
+<div class="split">
+<a href="http://www.kennedy-center.org/pages/visitor/tourism">
+<img alt="" src="https://www.kennedy-center.org/images/icons/icon-marker.svg"/> Visit</a>
+</div>
+<div class="split">
+<a href="http://www.kennedy-center.org/calendar/index">
+<img alt="" class="header-branding-logo-mobile" src="https://www.kennedy-center.org/images/icons/icon-ticket.svg"/>
+                                 Events</a>
+</div>
+<div class="split multi">
+<a class="toggle-search" href="http://www.kennedy-center.org/#" title="search">
+<span class="glyphicon glyphicon-search"><span class="sr-only">search</span></span>
+</a>
+<a class="toggle-nav" href="http://www.kennedy-center.org/#"><span class="sr-only">menu</span>
+<div class="nav-triangle"></div>
+</a>
+</div>
+</div>
+<ul class="header-logos visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+<li class="nso"><a class="" data-company="nso" href="http://www.kennedy-center.org/nso">
+<span>National Symphony Orchestra</span></a></li>
+<li class="wno"><a class="" data-company="wno" href="http://www.kennedy-center.org/wno">
+<span>Washington National Opera</span></a></li>
+</ul>
+<div class="header-utility-links visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+<div class="header-utility-links-shop"><a class="toggle-search" href="http://www.kennedy-center.org/#">
+<span class="glyphicon glyphicon-search"><span class="sr-only hidden-md hidden-lg">Search</span></span> <span class="hidden-xs hidden-sm">Search</span></a>
+<a class="hidden-xs hidden-sm" href="https://shop.kennedy-center.org/" target="_blank">Gift Shop</a>
+<a href="http://www.kennedy-center.org/cart"><i class="fas fa-shopping-cart"><span class="sr-only hidden-lg hidden-md">cart</span></i><span class="hidden-xs hidden-sm">Cart</span></a>
+</div>
+<div class="header-utility-links-account">
+<a href="http://www.kennedy-center.org/account/login">
+<i class="fas fa-user"> <span class="sr-only hidden-lg hidden-md">Log In</span></i>
+<span class="hidden-xs hidden-sm">Log In</span></a>
+</div>
+</div>
+</div>
+<div class="header-nav-container">
+<div class="nav-track main cf" data-nav-scope="main">
+<div class="pane depth-0" data-nav-depth="0">
+<div class="header-nav main" data-nav-id="main">
+<div class="scroll" style="max-height: 995px;">
+<ul>
+<li class="hide-md"><a href="https://www.kennedy-center.org/account/login"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-person.svg"/> Log in</a></li>
+<li class="hide-md"><a href="https://www.kennedy-center.org/calendar/index">Events &amp; Tickets</a></li>
+<li class="explore-link"> <a data-nav-child="explore" href="http://www.kennedy-center.org/#">Explore</a>
+<div class="mega-menu"> <big class="mega-menu-title">Explore</big>
+<div class="row">
+<div class="col-xs-6 col-md-4 col-lg-3"> <b class="mega-menu-list-title"> Genres</b>
+<ul class="col-xs-6">
+<li> <a href="https://www.kennedy-center.org/calendar/genre/BAL">Ballet</a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/CHA">Chamber Music </a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/CLA">Classical Music</a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/COM">Comedy </a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/DAN">Dance</a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/LSR">Discussions/Spoken Word</a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/series/HHC">Hip Hop<span class="sr-only"> Culture</span></a> </li>
+</ul>
+<ul class="col-xs-6">
+<li> <a href="https://www.kennedy-center.org/calendar/genre/JAZ">Jazz</a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/OPR">Opera </a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/POP">Popular/World Music </a> </li>
+<li> <a href="https://www.kennedy-center.org/festivals">Series/Festivals </a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/THT">Theater </a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/VOC">Vocal Concerts</a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/FAM">Young Audiences</a> </li>
+</ul>
+</div>
+<div class="col-xs-4 col-md-5 col-lg-6"> <b class="mega-menu-list-title">Special Features</b>
+<section class="features">
+<ul class="row">
+<li class="col-xs-12 col-md-6 pull-left"><a class="mega-menu-image-link hidden-sm" href="https://www.kennedy-center.org/pages/specialevents/honors"><img alt="Honors" src="//kcwebsiteprod.s3.amazonaws.com/images/default-source/special-features/etahonors.jpg"/></a> <a href="https://www.kennedy-center.org/pages/specialevents/honors">Kennedy Center Honors</a></li>
+<li class="col-xs-12 col-md-6 pull-left"><a class="mega-menu-image-link hidden-sm" href="https://www.kennedy-center.org/pages/specialevents/marktwain"><img alt="Dave Chappelle wins Mark Twain Prize" src="//kcwebsiteprod.s3.amazonaws.com/images/default-source/special-features/etamarktwainprize.jpg"/></a> <a href="https://www.kennedy-center.org/pages/specialevents/marktwain">Mark Twain Prize </a></li>
+<li class="col-xs-12 hidden-sm">
+<p class="YELL">More Special Features: </p>
+</li>
+<li class="col-xs-12 col-md-6 pull-left"><a href="https://cms.kennedy-center.org/series/sound-health-home/sound-health">Sound Health</a></li>
+<li class="col-xs-12 col-md-6 pull-left"><a href="https://cms.kennedy-center.org/festivals/human-journey/">The Human Journey</a></li>
+</ul>
+</section>
+</div>
+<div class="col-xs-2 col-md-3 col-lg-3 mega-artist"> <b class="mega-menu-list-title"><span class="text-nowrap">The REACH</span></b> <a class="mega-menu-image-link hidden-sm" href="http://reach.kennedy-center.org/"> <img alt="REACH" src="//kcwebsiteprod.s3.amazonaws.com/images/default-source/special-features/reach.jpg"/></a>
+<ul>
+<li><a href="http://reach.kennedy-center.org/">Take a Virtual Tour</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="watch-link"> <a data-nav-child="watch-and-listen" href="http://www.kennedy-center.org/#">Video</a>
+<div class="mega-menu"> <big class="mega-menu-title">Video</big>
+<div class="row">
+<div class="col-xs-3"> <a class="mega-menu-image-link" href="https://digitalstage.kennedy-center.org/"> <img alt="Watch on Digital Stage" class="digital-stage" src="https://www.kennedy-center.org/images/template/menu/DS_kcnav_image.jpg"/></a>
+<ul>
+<li><a href="https://digitalstage.kennedy-center.org/"><span class="sr-only">Digital Stage:</span> Watch World Class Performances</a></li>
+</ul>
+</div>
+<div class="col-xs-3"> <a class="mega-menu-image-link" href="https://www.kennedy-center.org/video/live "> <img alt="Live Broadcasts" src="https://www.kennedy-center.org/images/cstraight/etaBroadcastThumb.jpg"/></a>
+<ul>
+<li><a href="https://www.kennedy-center.org/video/live ">Live Streaming</a></li>
+</ul>
+</div>
+<div class="col-xs-3"> <a class="mega-menu-image-link" href="https://www.kennedy-center.org/Video/recentVideos"> <img alt="watch and listen" src="https://www.kennedy-center.org/images/cstraight/etaVideosThumb.jpg"/></a>
+<ul>
+<li><a href="https://www.kennedy-center.org/Video/recentVideos">Preview Our Events</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="education-link"> <a data-nav-child="education" href="http://www.kennedy-center.org/#">Education</a>
+<div class="mega-menu">
+<big class="mega-menu-title">Education</big>
+<div class="row">
+<div class="col-xs-3">
+<a class="mega-menu-image-link" href="https://education.kennedy-center.org/education/#Performances">
+<img alt="Events and Performances" src="https://www.kennedy-center.org/images/cstraight/EduEventsThumb.jpg"/></a>
+<ul>
+<li><a href="https://education.kennedy-center.org/education/#Performances">Performances &amp; Events</a></li>
+</ul>
+</div>
+<div class="col-xs-3">
+<a class="mega-menu-image-link" href="https://education.kennedy-center.org/education/#Schools">
+<img alt="Schools" src="https://www.kennedy-center.org/images/cstraight/EduSchoolsThumb.jpg"/></a>
+<ul>
+<li><a href="https://education.kennedy-center.org/education/#Schools">Arts &amp; Schools</a></li>
+</ul>
+</div>
+<div class="col-xs-3">
+<a class="mega-menu-image-link" href="//artsedge.kennedy-center.org/">
+<img alt="The Kennedy Center: ArtsEdge" src="https://www.kennedy-center.org/images/cstraight/EduArtsEdgeThumb.jpg"/></a>
+<ul>
+<li><a href="//artsedge.kennedy-center.org/">ArtsEdge</a></li>
+</ul>
+</div>
+<div class="col-xs-3">
+<a class="mega-menu-image-link" href="https://cms.kennedy-center.org/education/mo-willems-at-the-kennedy-center">
+<img alt="Mo Willems as Kennedy Center Education Artist-in-Residence" src="//kcwebsiteprod.s3.amazonaws.com/images/default-source/special-features/mokc_370x140.jpg?sfvrsn=3ba5d92_2"/></a>
+<ul>
+<li><a href="https://cms.kennedy-center.org/education/mo-willems-at-the-kennedy-center">Mo Willems: Artist-in-Residence</a></li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-3">
+<a class="mega-menu-image-link" href="https://education.kennedy-center.org/education/#Career">
+<img alt="Career Development" src="https://www.kennedy-center.org/images/cstraight/EduCareerThumb.jpg"/></a>
+<ul>
+<li><a href="https://education.kennedy-center.org/education/#Career">Career Development</a></li>
+</ul>
+</div>
+<div class="col-xs-3">
+<a class="mega-menu-image-link" href="https://education.kennedy-center.org/education/#Access">
+<img alt="VSA" src="https://www.kennedy-center.org/images/cstraight/menu-learn-vsa.jpg"/></a>
+<ul>
+<li><a href="https://education.kennedy-center.org/education/#Access">VSA and Accessibility</a></li>
+</ul>
+</div>
+<div class="col-xs-3">
+<a class="mega-menu-image-link" href="https://cms.kennedy-center.org/education/turnaroundarts">
+<img alt="Turnaround Arts" src="https://www.kennedy-center.org/images/menu/TurnAroundArtsThumb.jpg"/></a>
+<ul>
+<li><a href="https://cms.kennedy-center.org/education/turnaroundarts">Turnaround Arts</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="about-link"> <a data-nav-child="about" href="http://www.kennedy-center.org/#">About</a>
+<div class="mega-menu"> <big class="mega-menu-title clearfix">About </big>
+<ul class="mega-menu-list">
+<li><a href="https://www.kennedy-center.org/calendar/programs/">Programs</a></li>
+<li><a href="https://www.kennedy-center.org/pages/about/history">History</a></li>
+<li><a href="https://reach.kennedy-center.org" target="_blank">The REACH Expansion</a></li>
+<li><a href="https://www.kennedy-center.org/pages/about/ourpeople">Leadership</a></li>
+<li><a href="https://cms.kennedy-center.org/public-relations/press-releases">Public Relations</a></li>
+</ul>
+<ul class="mega-menu-list">
+<li><a href="https://chp.tbe.taleo.net/chp01/ats/careers/v2/jobSearch?act=redirectCwsV2&amp;cws=38&amp;org=THEKENNC" target="_blank">Employment</a></li>
+<li><a href="https://cms.kennedy-center.org/career/">Internships and Fellowships</a></li>
+<li><a href="https://www.kennedy-center.org/pages/support/volunteers/">Volunteers</a></li>
+<li><a href="https://www.kennedy-center.org/pages/about/constituents">Artistic Constituents</a></li>
+<li><a href="https://www.kennedy-center.org/pages/about/annualreport">Annual Report</a></li>
+</ul>
+<div class="mega-menu-companies"> <a class="mega-menu-company" href="https://www.kennedy-center.org/nso"> <img alt="National Symphony Orchestra" src="https://www.kennedy-center.org/images/logos/logo-nso-main.svg"/> </a> <a class="mega-menu-company" href="https://www.kennedy-center.org/wno"> <img alt="Washington National Opera" src="https://www.kennedy-center.org/images/logos/logo-wno-main.svg"/> </a> </div>
+</div>
+</li>
+<li class="support-link"> <a data-nav-child="support" href="http://www.kennedy-center.org/#">Support</a>
+<div class="mega-menu">
+<big class="mega-menu-title">Support</big>
+<div class="clearfix padding-top-30">
+<div class="col-xs-3 col-lg-2 padding-left-0">
+<b class="mega-menu-list-title">How you can support the Kennedy Center</b>
+<p>Help us continue to provide the outstanding performances you've come to expect!</p>
+<a class="btn btn-dark" href="https://cms.kennedy-center.org/support/"><span class="hidden-sm">Support</span> Overview</a>
+</div>
+<div class="col-xs-6">
+<b class="mega-menu-list-title">Give Now!</b>
+<div class="row">
+<div class="col-xs-6 col-lg-4"> <a class="mega-menu-image-link" href="https://cms.kennedy-center.org/support/membership"><img alt="Membership" src="https://cms.kennedy-center.org/images/default-source/support/assets/membership-menu.jpg"/> </a>
+<ul>
+<li><a href="https://cms.kennedy-center.org/support/membership">Membership</a></li>
+</ul>
+</div>
+<div class="col-xs-6 col-lg-4"> <a class="mega-menu-image-link" href="https://cms.kennedy-center.org/support/nationalpatrons"><img alt="National Patrons" src="https://cms.kennedy-center.org/images/default-source/support/assets/national-patrons-menu.jpg"/> </a>
+<ul>
+<li><a href="https://cms.kennedy-center.org/support/nationalpatrons">National Patrons</a></li>
+</ul>
+</div>
+<div class="clearlf hidden-lg margin-bottom-20"></div>
+<div class="col-xs-6 col-lg-4"> <a class="mega-menu-image-link" href="https://cms.kennedy-center.org/support/reach-support"><img alt="Support the REACH" src="https://cms.kennedy-center.org/images/default-source/support/assets/reach-support-menu.jpg"/> </a>
+<ul>
+<li><a href="https://cms.kennedy-center.org/support/reach-support">Make a REACH gift</a></li>
+</ul>
+</div>
+</div></div>
+<div class="col-xs-3">
+<ul class="mega-menu-list margin-top">
+<li class="">
+<p class="YELL">More Ways to Give: </p>
+</li>
+<li><a href="https://www.kennedy-center.org/Membership/CorpHome/">Corporate Support</a></li>
+<li><a href="https://kennedycenter.plannedgiving.org/" target="_blank">Charitable Estate Planning</a></li>
+<li><a href="https://www.kennedy-center.org/pages/support/volunteers/">Volunteering</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="visit-link"> <a data-nav-child="visit" href="http://www.kennedy-center.org/#">Visit</a>
+<div class="mega-menu"> <big class="mega-menu-title">Visit</big>
+<div class="row">
+<div class="col-xs-3"> <b class="mega-menu-list-title">Plan Your Trip</b> <a class="mega-menu-image-link" href="https://www.kennedy-center.org/pages/visitor/directions"> <img alt="Map" src="https://www.kennedy-center.org/images/cstraight/menu-visit-map.png"/></a>
+<ul>
+<li><a href="https://www.kennedy-center.org/pages/visitor/directions">Directions and Parking</a></li>
+<li><a href="https://www.kennedy-center.org/pages/visitor/tours">Guided Tours</a></li>
+<li><a href="https://www.kennedy-center.org/pages/visitor/hotels">Hotels</a></li>
+<li><a href="https://www.kennedy-center.org/pages/accessibility/">Accessibility</a></li>
+</ul>
+</div>
+<div class="col-xs-3"> <b class="mega-menu-list-title">Dine</b> <a class="mega-menu-image-link" href="https://www.kennedy-center.org/pages/restaurants/"> <img alt="Rooftop Terrace" src="https://www.kennedy-center.org/images/cstraight/menu-visit-dine.jpg"/></a>
+<ul>
+<li><a href="https://www.kennedy-center.org/pages/restaurants/">Roof Terrace Restaurant</a></li>
+<li><a href="https://www.kennedy-center.org/pages/restaurants/group">KC Café</a></li>
+</ul>
+</div>
+<div class="col-xs-3"> <b class="mega-menu-list-title">Gift Shop</b> <a class="mega-menu-image-link" href="https://shop.kennedy-center.org/" target="_blank"> <img alt="Jewelry" src="https://www.kennedy-center.org/images/cstraight/menu-visit-giftshop.png"/></a>
+<ul>
+<li><a href="https://shop.kennedy-center.org/" target="_blank">Shop Now</a></li>
+</ul>
+</div>
+<div class="col-xs-3"> <b class="mega-menu-list-title">The Venues</b> <a class="mega-menu-image-link" href="https://www.kennedy-center.org/pages/virtualtour/"> <img alt="Theater" src="https://www.kennedy-center.org/images/cstraight/menu-visit-venue.png"/></a>
+<ul>
+<li><a href="https://www.kennedy-center.org/pages/virtualtour/">Virtual Tour &amp; Seating Charts</a></li>
+<li><a href="https://www.kennedy-center.org/rental">Private Event Planning</a></li>
+<li><a href="https://www.kennedy-center.org/pages/theaterrental/">Theater Rental</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="hide-md"><a href="https://shop.kennedy-center.org/" target="_blank">Gift Shop</a></li>
+<li class="hide-md"><a href="https://www.kennedy-center.org/cart">Cart</a></li>
+<li class="hide-md"><a href="https://www.kennedy-center.org/contact">Contact</a></li>
+<li class="events-link hide-sm"><a href="https://www.kennedy-center.org/calendar/index"> <img alt="ticket icon" class="icon-img" src="https://www.kennedy-center.org/images/icons/icon-ticket.svg"/> Events &amp; Tickets</a></li>
+<li class="hide-md logo-item"><a data-company="nso" href="https://www.kennedy-center.org/nso"> National Symphony Orchestra</a></li>
+<li class="hide-md logo-item"><a data-company="wno" href="https://www.kennedy-center.org/wno"> Washington National Opera</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pane depth-1" data-nav-depth="1">
+<div class="header-nav" data-nav-id="login">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a> Log In </div>
+<div class="scroll">
+<ul>
+<li><a href="http://www.kennedy-center.org/account/login">Log In</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="explore">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Explore </div>
+<div class="scroll">
+<ul>
+<li><a data-nav-child="genres" href="http://www.kennedy-center.org/#">Genres</a></li>
+<li><a data-nav-child="special-features" href="http://www.kennedy-center.org/#">Special Features</a></li>
+<li><a href="http://reach.kennedy-center.org/">Take The REACH Virtual Tour</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="visit">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Visit </div>
+<div class="scroll">
+<ul>
+<li><a data-nav-child="plan-your-trip" href="http://www.kennedy-center.org/#">Plan Your Trip</a></li>
+<li><a data-nav-child="dine" href="http://www.kennedy-center.org/#">Dine</a></li>
+<li><a href="https://shop.kennedy-center.org/" target="_blank">Gift Shop</a></li>
+<li><a data-nav-child="venues" href="http://www.kennedy-center.org/#">The Venues</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="watch-and-listen">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Video </div>
+<div class="scroll">
+<ul>
+<li><a href="https://digitalstage.kennedy-center.org/">Digital Stage: Watch World Class Performances</a></li>
+<li><a href="https://www.kennedy-center.org/video/live ">Live Streaming</a></li>
+<li><a href="https://www.kennedy-center.org/Video/recentVideos">Preview Our Events</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="education">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Education </div>
+<div class="scroll">
+<ul>
+<li><a href="https://education.kennedy-center.org/education/#Performances">Performances &amp; Events</a></li>
+<li><a href="https://education.kennedy-center.org/education/#Schools">Arts &amp; Schools</a></li>
+<li><a href="//artsedge.kennedy-center.org/">ArtsEdge</a></li>
+<li><a href="https://cms.kennedy-center.org/education/mo-willems-at-the-kennedy-center">Mo Willems: Artist-in-Residence</a></li>
+<li><a href="https://education.kennedy-center.org/education/#Career">Career Development</a></li>
+<li><a href="https://education.kennedy-center.org/education/#Access">VSA and Accessibility</a></li>
+<li><a href="https://cms.kennedy-center.org/education/turnaroundarts">Turnaround Arts </a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="about">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>About </div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/calendar/programs">Programs</a></li>
+<li><a href="https://www.kennedy-center.org/pages/about/history">History</a></li>
+<li><a href="https://education.kennedy-center.org/education">Education</a></li>
+<li><a href="https://reach.kennedy-center.org" target="_blank">The REACH Expansion</a></li>
+<li><a href="https://www.kennedy-center.org/pages/about/ourpeople">Leadership</a></li>
+<li><a href="https://chp.tbe.taleo.net/chp01/ats/careers/v2/jobSearch?act=redirectCwsV2&amp;cws=38&amp;org=THEKENNC" target="_blank">Employment</a></li>
+<li><a href="https://cms.kennedy-center.org/career/">Internships and Fellowships</a></li>
+<li><a href="https://www.kennedy-center.org/pages/support/volunteers">Volunteers</a></li>
+<li><a href="https://www.kennedy-center.org/pages/about/constituents">Artistic Constituents</a></li>
+<li><a href="https://cms.kennedy-center.org/public-relations/press-releases">Public Relations</a></li>
+<li><a href="https://www.kennedy-center.org/pages/about/annualreport">Annual Report</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="support">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Support </div>
+<div class="scroll">
+<ul>
+<li><a href="https://cms.kennedy-center.org/support/">Support Overview</a></li>
+<li><a href="https://cms.kennedy-center.org/support/membership">Membership</a></li>
+<li><a href="https://cms.kennedy-center.org/support/nationalpatrons">National Patrons</a></li>
+<li><a href="https://cms.kennedy-center.org/support/reach-support">Make a REACH gift</a></li>
+<li><a href="https://www.kennedy-center.org/Membership/CorpHome/">Corporate Support</a></li>
+<li><a href="https://kennedycenter.plannedgiving.org/" target="_blank">Charitable Estate Planning</a></li>
+<li><a href="https://www.kennedy-center.org/pages/support/volunteers/">Volunteering</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pane depth-2" data-nav-depth="2">
+<div class="header-nav" data-nav-id="genres">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Genres </div>
+<div class="scroll">
+<ul>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/BAL">Ballet</a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/CHA">Chamber Music </a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/CLA">Classical Music</a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/COM">Comedy </a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/DAN">Dance</a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/LSR">Discussions/Spoken Word</a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/series/HHC">Hip Hop<span class="sr-only"> Culture</span></a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/JAZ">Jazz</a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/OPR">Opera </a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/POP">Popular/World Music </a> </li>
+<li> <a href="https://www.kennedy-center.org/festivals">Series/Festivals </a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/THT">Theater </a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/VOC">Vocal Concerts</a> </li>
+<li> <a href="https://www.kennedy-center.org/calendar/genre/FAM">Young Audiences</a> </li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="special-features">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Special Features </div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/pages/specialevents/honors">Kennedy Center Honors</a></li>
+<li><a href="https://www.kennedy-center.org/pages/specialevents/marktwain">Mark Twain Prize</a></li>
+<li><a href="http://www.kennedy-center.org/artist/">Artist</a></li>
+<li><a href="https://cms.kennedy-center.org/series/sound-health-home/">Sound Health</a></li>
+<li><a href="https://cms.kennedy-center.org/festivals/human-journey/">The Human Journey</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="edu-programs">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Programs </div>
+<div class="scroll">
+<ul>
+<li><a href="https://education.kennedy-center.org/education/#Schools">Arts and Schools </a></li>
+<li><a href="https://education.kennedy-center.org/education/#Performances">Performances and Events</a></li>
+<li><a href="https://education.kennedy-center.org/education/#Career">Career Development</a></li>
+<li><a href="https://education.kennedy-center.org/education/#Access">VSA and Accessibility</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="plan-your-trip">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Plan Your Trip </div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/pages/visitor/directions">Directions and Parking</a></li>
+<li><a href="https://www.kennedy-center.org/pages/visitor/tours">Guided Tours</a></li>
+<li><a href="https://www.kennedy-center.org/pages/visitor/hotels">Hotels</a></li>
+<li><a href="https://www.kennedy-center.org/pages/accessibility">Accessibility</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="dine">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Dine </div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/pages/restaurants">Roof Terrace Restaurant</a></li>
+<li><a href="https://www.kennedy-center.org/pages/restaurants/group">KC Café</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="venues">
+<div class="nav-title"> <a class="header-nav-back" href="http://www.kennedy-center.org/#"> <img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>The Venues </div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/pages/virtualtour">Virtual Tour &amp; Seating Charts</a></li>
+<li><a href="https://www.kennedy-center.org/rental">Private Event Planning</a></li>
+<li><a href="https://www.kennedy-center.org/pages/theaterrental">Theater Rental</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="nav-track company cf" data-nav-scope="company">
+<div class="pane depth-0" data-nav-depth="0">
+<div class="header-nav company page-nav nso">
+<div class="nav-title">
+                National Symphony Orchestra <span class="caret"></span>
+</div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/nso/schedule">Season &amp; Programs</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/ShowMusicians/3">Musicians</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/History">History</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Admin">Administration</a></li>
+<li>
+<a data-nav-child="CommunityPrograms" href="https://www.kennedy-center.org/NSO/MTM/Community?loc=IN">Community Programs</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Community?loc=IN">NSO In Your Neighborhood</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Community?loc=SH">Sound Health</a></li>
+</ul>
+</li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Tour">Tours &amp; Residencies</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Video/0">Watch &amp; Listen</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/GetInvolved">Get Involved</a></li>
+<li>
+<a data-nav-child="Governance" href="https://www.kennedy-center.org/NSO/MTM/Governance">Governance</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Governance?loc=BOD">Board of Directors</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Governance?loc=NTT">National Trustees</a></li>
+</ul>
+</li>
+<li><a href="//nso-blog.kennedycenterblogs.org/">Blog</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Auditions">Auditions</a></li>
+<li class="overflow-links hide-sm">
+<a data-nav-child="nso-more" href="http://www.kennedy-center.org/#">More <span class="sr-only">navigation</span><span class="caret"></span></a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/nso/schedule">Season &amp; Programs</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/ShowMusicians/3">Musicians</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/History">History</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Admin">Administration</a></li>
+<li>
+<a data-nav-child="CommunityPrograms" href="http://www.kennedy-center.org/#">Community Programs</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Community?loc=IN">NSO In Your Neighborhood</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Community?loc=SH">Sound Health</a></li>
+</ul>
+</li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Tour">Tours &amp; Residencies</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Video/0">Watch &amp; Listen</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/GetInvolved">Get Involved</a></li>
+<li>
+<a data-nav-child="Governance" href="http://www.kennedy-center.org/#">Governance</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Governance?loc=BOD">Board of Directors</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Governance?loc=NTT">National Trustees</a></li>
+</ul>
+</li>
+<li><a href="//nso-blog.kennedycenterblogs.org/">Blog</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Auditions">Auditions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="header-nav company page-nav wno">
+<div class="nav-title">
+                Washington National Opera <span class="caret"></span>
+</div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/WNO/MTO/Season">Seasons &amp; Programs</a></li>
+<li>
+<a data-nav-child="History" href="https://www.kennedy-center.org/wno/mto/History">History</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/wno/mto/Company">Company Description</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/History">History</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/PastProd">Past Productions</a></li>
+</ul>
+</li>
+<li>
+<a data-nav-child="Administration" href="https://www.kennedy-center.org/wno/MTO/ArtDir">Administration</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/wno/mto/GenDir">General Director</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/ArtDir">Artistic Director</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/MusDir">Principal Conductor</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Board">Trustees </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Admin">Administration</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Orchestra">Orchestra</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Choristers">Chorus</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/wcwno">Women's Committee</a></li>
+<li><a href="https://www.kennedy-center.org/bravo">Bravo</a></li>
+</ul>
+</li>
+<li>
+<a data-nav-child="YoungArtistsProgram" href="https://www.kennedy-center.org/WNO/MTO/YAPProgram">Domingo-Cafritz Young Artist Program</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/wno/mto/YAPProgram">The Program</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Current">Current Young Artists </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/YAPPerformances">Upcoming Performances </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Teachers">Master Teachers </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Auditions">Audition Information </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Former">Former Young Artists </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Contact">Contact Us</a></li>
+</ul>
+</li>
+<li>
+<a data-nav-child="Rentals" href="https://www.kennedy-center.org/WNO/MTO/ProdRent">Rentals (Productions, Sets, Costumes)</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/wno/mto/ProdRent">Production Rentals</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/CostumeRent">Costume Rentals</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/SetRent">Set Rentals</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/RoomRent">Room Rentals</a></li>
+</ul>
+</li>
+<li><a href="https://www.kennedy-center.org/WNO/MTO/Video/0">Watch &amp; Listen</a></li>
+<li>
+<a data-nav-child="AmericanOperaInitiative" href="https://www.kennedy-center.org/WNO/MTO/AOIInfo">American Opera Initiative</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/wno/mto/AOIInfo">Program Information</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/AOIPast">Past Commissions</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/AOIApply">Apply</a></li>
+</ul>
+</li>
+<li><a href="https://www.kennedy-center.org/WNO/MTO/Opportunities">Opportunities</a></li>
+<li><a href="//wno-blog.kennedycenterblogs.org/">Blog</a></li>
+<li class="overflow-links hide-sm">
+<a data-nav-child="wno-more" href="http://www.kennedy-center.org/#">More <span class="sr-only">navigation</span><span class="caret"></span></a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/WNO/MTO/Season">Seasons &amp; Programs</a></li>
+<li>
+<a href="https://www.kennedy-center.org/wno/mto/History">History</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/wno/mto/Company">Company Description</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/History">History</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/PastProd">Past Productions</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.kennedy-center.org/wno/MTO/ArtDir">Administration</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/wno/mto/ArtDir">Artistic Director</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/MusDir">Principal Conductor</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Board">Trustees </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Admin">Administration</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Orchestra">Orchestra</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Choristers">Chorus</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/wcwno">Women's Committee</a></li>
+<li><a href="https://www.kennedy-center.org/bravo">Bravo</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.kennedy-center.org/WNO/MTO/YAPProgram">Domingo-Cafritz Young Artist Program</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/wno/mto/YAPProgram">The Program</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Current">Current Young Artists </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/YAPPerformances">Upcoming Performances </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Teachers">Master Teachers </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Auditions">Audition Information </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Former">Former Young Artists </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Contact">Contact Us</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.kennedy-center.org/WNO/MTO/ProdRent">Rentals (Productions, Sets, Costumes)</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/wno/mto/ProdRent">Production Rentals</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/CostumeRent">Costume Rentals</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/SetRent">Set Rentals</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/RoomRent">Room Rentals</a></li>
+</ul>
+</li>
+<li><a href="https://www.kennedy-center.org/WNO/MTO/Video/0">Watch &amp; Listen</a></li>
+<li>
+<a href="https://www.kennedy-center.org/WNO/MTO/AOIInfo">American Opera Initiative</a>
+<ul class="company-subnav">
+<li><a href="https://www.kennedy-center.org/wno/mto/AOIInfo">Program Information</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/AOIPast">Past Commissions</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/AOIApply">Apply</a></li>
+</ul>
+</li>
+<li><a href="https://www.kennedy-center.org/WNO/MTO/Opportunities">Opportunities</a></li>
+<li><a href="//wno-blog.kennedycenterblogs.org/">Blog</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="header-nav company page-nav sfb">
+</div>
+</div>
+<div class="pane depth-1 hide-md" data-nav-depth="1">
+<div class="header-nav" data-nav-id="CommunityPrograms">
+<div class="nav-title">
+<a class="header-nav-back" href="http://www.kennedy-center.org/#">
+<img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Community Programs
+            </div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Community?loc=IN">NSO In Your Neighborhood</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Community?loc=SH">Sound Health</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="Governance">
+<div class="nav-title">
+<a class="header-nav-back" href="http://www.kennedy-center.org/#">
+<img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Governance
+            </div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Governance?loc=BOD">Board of Directors</a></li>
+<li><a href="https://www.kennedy-center.org/NSO/MTM/Governance?loc=NTT">National Trustees</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="History">
+<div class="nav-title">
+<a class="header-nav-back" href="http://www.kennedy-center.org/#">
+<img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>History
+            </div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/wno/mto/Company">Company Description</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/History">History</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/PastProd">Past Productions</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="Administration">
+<div class="nav-title">
+<a class="header-nav-back" href="http://www.kennedy-center.org/#">
+<img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Administration
+            </div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/wno/mto/ArtDir">Artistic Director</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/MusDir">Principal Conductor </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Board">Trustees </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Admin">Administration</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Orchestra">Orchestra</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Choristers">Chorus</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/wcwno">Women's Committee</a></li>
+<li><a href="https://www.kennedy-center.org/bravo">Bravo</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="YoungArtistsProgram">
+<div class="nav-title">
+<a class="header-nav-back" href="http://www.kennedy-center.org/#">
+<img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Young Artist Program
+            </div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/wno/mto/YAPProgram">The Program</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Current">Current Young Artists </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/YAPPerformances">Upcoming Performances </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Teachers">Master Teachers </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Auditions">Audition Information </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Former">Former Young Artists </a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/Contact">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="Rentals">
+<div class="nav-title">
+<a class="header-nav-back" href="http://www.kennedy-center.org/#">
+<img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>Rentals
+            </div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/wno/mto/ProdRent">Production Rentals</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/CostumeRent">Costume Rentals</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/SetRent">Set Rentals</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/RoomRent">Room Rentals</a></li>
+</ul>
+</div>
+</div>
+<div class="header-nav" data-nav-id="AmericanOperaInitiative">
+<div class="nav-title">
+<a class="header-nav-back" href="http://www.kennedy-center.org/#">
+<img alt="" src="https://www.kennedy-center.org/images/cstraight/icons/icon-arrow-left-white.svg"/>Back</a>American Opera Initiative
+            </div>
+<div class="scroll">
+<ul>
+<li><a href="https://www.kennedy-center.org/wno/mto/AOIInfo">Program Information</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/AOIPast">Past Commissions</a></li>
+<li><a href="https://www.kennedy-center.org/wno/mto/AOIApply">Apply</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<section class="module parallax parallax-1">
+<div class="container">
+</div>
+</section>
+<div class="col-xxlg-12" id="container">
+<div id="all-content">
+<div class="home-page view-featured">
+<h1 class="accessibility">The John F. Kennedy Center for the Performing Arts</h1>
+<div id="image-feature">
+<div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 569px;"><ul class="bxslider" style="width: 615%; position: relative; transition-duration: 1.3s; transform: translate3d(-4240px, 0px, 0px);"><li class="bx-clone" style="float: left; list-style: none; position: relative; width: 1400px;"><a href="https://www.kennedy-center.org/calendar/event/ZURRA"><img alt="Portraits of Courage" src="https://kcwebsiteprod.s3.amazonaws.com/images/default-source/homepage-banners/kc/2019-2020/portraitsofcourage_banner-ad-1600x650.jpg?sfvrsn=a95c5892_2" title="Portraits of Courage"/></a></li>
+<li style="float: left; list-style: none; position: relative; width: 1400px;"><a href="http://cms.kennedy-center.org/festivals/reach"><img alt="The REACH Opening Festival" src="https://kcwebsiteprod.s3.amazonaws.com/images/default-source/homepage-banners/kc/2019-2020/reachopening_passes_banner-ad-1600x650.jpg?sfvrsn=67b45892_2" title="The REACH Opening Festival"/></a></li>
+<li style="float: left; list-style: none; position: relative; width: 1400px;"><a href="https://www.kennedy-center.org/calendar/event/TTTSP"><img alt="What the Constitution Means to Me" src="https://kcwebsiteprod.s3.amazonaws.com/images/default-source/homepage-banners/kc/2019-2020/1920_theater-wcmm_banner-ad-1600x650.jpg?sfvrsn=efbc5892_2" title="What the Constitution Means to Me"/></a></li>
+<li style="float: left; list-style: none; position: relative; width: 1400px;"><a href="https://www.kennedy-center.org/calendar/event/TTTSF"><img alt="Cats" src="https://kcwebsiteprod.s3.amazonaws.com/images/default-source/homepage-banners/kc/2019-2020/1920_theater-cats_banner-ad-1600x650.jpg?sfvrsn=e3bc5892_2" title="Cats"/></a></li>
+<li style="float: left; list-style: none; position: relative; width: 1400px;"><a href="https://www.kennedy-center.org/calendar/event/ZURRA"><img alt="Portraits of Courage" src="https://kcwebsiteprod.s3.amazonaws.com/images/default-source/homepage-banners/kc/2019-2020/portraitsofcourage_banner-ad-1600x650.jpg?sfvrsn=a95c5892_2" title="Portraits of Courage"/></a></li>
+<li class="bx-clone" style="float: left; list-style: none; position: relative; width: 1400px;"><a href="http://cms.kennedy-center.org/festivals/reach"><img alt="The REACH Opening Festival" src="https://kcwebsiteprod.s3.amazonaws.com/images/default-source/homepage-banners/kc/2019-2020/reachopening_passes_banner-ad-1600x650.jpg?sfvrsn=67b45892_2" title="The REACH Opening Festival"/></a></li></ul></div><div class="bx-controls bx-has-pager bx-has-controls-direction"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a class="bx-pager-link" data-slide-index="0" href="http://www.kennedy-center.org/">1</a></div><div class="bx-pager-item"><a class="bx-pager-link" data-slide-index="1" href="http://www.kennedy-center.org/">2</a></div><div class="bx-pager-item"><a class="bx-pager-link active" data-slide-index="2" href="http://www.kennedy-center.org/">3</a></div><div class="bx-pager-item"><a class="bx-pager-link" data-slide-index="3" href="http://www.kennedy-center.org/">4</a></div></div><div class="bx-controls-direction"><a class="bx-prev" href="http://www.kennedy-center.org/">Prev</a><a class="bx-next" href="http://www.kennedy-center.org/">Next</a></div></div></div>
+</div>
+<h2 class="sr-only">Find a Performance</h2>
+<div class="view-controls mobile hide-md cf nav nav-tabs margin-top" role="tablist">
+<a class="set-view active" data-view="featured" href="http://www.kennedy-center.org/#" role="tab">Featured events</a>
+<a class="set-view" data-view="upcoming" href="http://www.kennedy-center.org/#" role="tab">Upcoming Events</a>
+</div>
+<div class="stripe home-events">
+<div class="row">
+<div class="col-xs-12 home-featured-events">
+<h2 class="hide-sm">Featured Events</h2>
+<div class="mini-cta">
+<a href="http://www.kennedy-center.org/calendar/index">
+<span>Event Calendar</span>
+<i class="icon icon-calendar"></i>
+</a>
+</div>
+<hr class="hide-sm"/>
+<div class="row">
+<div class="col-xs-12">
+<div class="featured-event">
+<div class="featured-event-image-wrap">
+<a class="featured-event-image" href="http://www.kennedy-center.org/calendar/event/TTTSF" style="background-image: url(https://kcwebsiteprod.s3.amazonaws.com/images/default-source/event-images/theater/19-20/tttsf_480.jpg?sfvrsn=90385a92_2);"></a>
+</div>
+<div class="no-wrap">
+<h3 class="featured-event-title"><a href="http://www.kennedy-center.org/calendar/event/TTTSF"><em>Cats</em></a></h3>
+<span class="featured-event-date">
+<span class="day">
+                                        Tuesday, September 17, 2019 - Sunday, October 6, 2019
+
+                                    </span></span>
+<a class="btn btn-default featured-event-tickets strong" href="http://www.kennedy-center.org/calendar/event/TTTSF#tickets">Tickets</a>
+</div>
+</div>
+<div class="featured-event">
+<div class="featured-event-image-wrap">
+<a class="featured-event-image" href="http://www.kennedy-center.org/calendar/event/HTRGR" style="background-image: url(https://kcwebsiteprod.s3.amazonaws.com/images/default-source/event-images/hip-hop/2019-2020-season/htrgr_480_v3.jpg?sfvrsn=d7ea5892_2);"></a>
+</div>
+<div class="no-wrap">
+<h3 class="featured-event-title"><a href="http://www.kennedy-center.org/calendar/event/HTRGR">Robert Glasper with special guest Yasiin Bey<br/>
+A Black Radio Production</a></h3>
+<span class="featured-event-date">
+<span class="day">
+                                        Thursday, September 26, 2019 - Sunday, September 29, 2019
+
+                                    </span></span>
+<a class="btn btn-default featured-event-tickets strong" href="http://www.kennedy-center.org/calendar/event/HTRGR#tickets">Tickets</a>
+</div>
+</div>
+<div class="featured-event">
+<div class="featured-event-image-wrap">
+<a class="featured-event-image" href="http://www.kennedy-center.org/calendar/event/XUCCI" style="background-image: url(https://kcwebsiteprod.s3.amazonaws.com/images/default-source/event-images/comedy/1920/xucci_480.jpg?sfvrsn=c7885b92_2);"></a>
+</div>
+<div class="no-wrap">
+<h3 class="featured-event-title"><a href="http://www.kennedy-center.org/calendar/event/XUCCI">The Improvised Shakespeare Company</a></h3>
+<span class="featured-event-date">
+<span class="day">
+                                        Tuesday, October 1, 2019 - Sunday, October 6, 2019
+
+                                    </span></span>
+<a class="btn btn-default featured-event-tickets strong" href="http://www.kennedy-center.org/calendar/event/XUCCI#tickets">Tickets</a>
+</div>
+</div>
+<div class="featured-event">
+<div class="featured-event-image-wrap">
+<a class="featured-event-image" href="http://www.kennedy-center.org/calendar/event/NTSOP" style="background-image: url(https://kcwebsiteprod.s3.amazonaws.com/images/default-source/event-images/nso/19-20/ntsop_480.jpg?sfvrsn=20035d92_2);"></a>
+</div>
+<div class="no-wrap">
+<h3 class="featured-event-title"><a href="http://www.kennedy-center.org/calendar/event/NTSOP">National Symphony Orchestra: Season Opening Gala Concert<br/>
+Noseda leads a jazz-inspired evening with Yuja Wang</a></h3>
+<span class="featured-event-date">
+<span class="day">
+                                        Saturday, September 28, 2019 7:00 PM
+
+                                    </span></span>
+<a class="btn btn-default featured-event-tickets strong" href="http://www.kennedy-center.org/calendar/event/NTSOP#tickets">Tickets</a>
+</div>
+</div>
+<div class="featured-event">
+<div class="featured-event-image-wrap">
+<a class="featured-event-image" href="http://www.kennedy-center.org/calendar/event/DUDSC" style="background-image: url(https://kcwebsiteprod.s3.amazonaws.com/images/default-source/event-images/dance/19-20-season/merce-cunningham/dudsc_480.jpg?sfvrsn=53eb5d92_2);"></a>
+</div>
+<div class="no-wrap">
+<h3 class="featured-event-title"><a href="http://www.kennedy-center.org/calendar/event/DUDSC">Merce Cunningham at 100</a></h3>
+<span class="featured-event-date">
+<span class="day">
+                                        Thursday, October 3, 2019 - Saturday, October 5, 2019
+
+                                    </span></span>
+<a class="btn btn-default featured-event-tickets strong" href="http://www.kennedy-center.org/calendar/event/DUDSC#tickets">Tickets</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-lg-5 col-md-5 home-upcoming-events">
+<div class="row">
+<div class="col-xs-12">
+<h2 class="hide-sm">Upcoming Events</h2>
+<div class="mini-cta viewThisWeekDiv">
+<a class="view-this-week" href="http://www.kennedy-center.org/#">
+<span>View This Week</span>
+<i class="icon icon-calendar"></i>
+</a>
+</div>
+<hr class="hide-sm"/>
+<div class="scroll" style="height: 725px;">
+<div id="upcoming-events-container">
+<div class="inner">
+<span class="full-date">Friday, September 20</span>
+<div class="event-snippet long">
+<span class="time">10:00am</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/XTROF">The REACH Opening Festival </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">1:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/XTROF">The REACH Opening Festival </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">5:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/XTROF">The REACH Opening Festival </a> </h4>
+<div class="callout">
+<span class="event-showing sold-out">Sold Out</span>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">6:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/video/performance/70891">Millennium Stage: Comedy at the Kennedy Center: Inside Jokes with Reese Waters with Special Guest Patton Oswalt </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">7:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTTSF"><em>Cats</em> </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">8:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/NTPSJ">NSO Pops: Maxwell: A Night at the Symphony </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">8:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTMAD"><em>Shear Madness</em> </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">8:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTTSP"><em>What the Constitution Means to Me</em> </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<span class="full-date">Saturday, September 21</span>
+<div class="event-snippet long">
+<span class="time">10:00am</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/XTROF">The REACH Opening Festival </a> </h4>
+<div class="callout">
+<span class="event-showing sold-out">Sold Out</span>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">1:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTTSF"><em>Cats</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/69222?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">1:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/XTROF">The REACH Opening Festival </a> </h4>
+<div class="callout">
+<span class="event-showing sold-out">Sold Out</span>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">2:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTTSP"><em>What the Constitution Means to Me</em> </a> </h4>
+<div class="callout">
+<span class="event-showing sold-out">Sold Out</span>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">5:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/NTPSJ">NSO Pops: Maxwell: A Night at the Symphony </a> </h4>
+<div class="callout">
+<span class="event-showing sold-out">Sold Out</span>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">5:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/XTROF">The REACH Opening Festival </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/PriceZones?perfNo=70760&amp;mos=17">Reserve</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">6:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTMAD"><em>Shear Madness</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/68559?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">6:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/video/performance/70892">Millennium Stage: National Dance Day: DC Dance History Interactive Lecture &amp; Performance </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">7:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTTSF"><em>Cats</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/69223?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">8:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTTSP"><em>What the Constitution Means to Me</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/70595?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">9:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTMAD"><em>Shear Madness</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/68560?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<span class="full-date">Sunday, September 22</span>
+<div class="event-snippet long">
+<span class="time">10:00am</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/XTROF">The REACH Opening Festival </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/PriceZones?perfNo=70761&amp;mos=17">Reserve</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">1:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTTSF"><em>Cats</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/69224?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">1:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/XTROF">The REACH Opening Festival </a> </h4>
+<div class="callout">
+<span class="event-showing sold-out">Sold Out</span>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">2:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/RTXBZ">National Peace Corps Association and the Kennedy Center present the documentary premiere of <em>A Towering Task: The Story of the Peace Corps</em> </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">2:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTTSP"><em>What the Constitution Means to Me</em> </a> </h4>
+<div class="callout">
+<span class="event-showing sold-out">Sold Out</span>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">3:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTMAD"><em>Shear Madness</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/68561?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">5:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/XTROF">The REACH Opening Festival </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/PriceZones?perfNo=70763&amp;mos=17">Reserve</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">6:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/video/performance/70893">Millennium Stage: Junior Marvin's DC Lovers Rock </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">7:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTMAD"><em>Shear Madness</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/68562?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">7:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTTSF"><em>Cats</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/69225?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<span class="full-date">Monday, September 23</span>
+<div class="event-snippet long">
+<span class="time">6:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/video/performance/70875">Millennium Stage: The U.S. Army Band "Pershing's Own" Saxophone Quartet </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<span class="full-date">Tuesday, September 24</span>
+<div class="event-snippet long">
+<span class="time">6:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/video/performance/70865">Millennium Stage: YIDDISH TANGO FROM WARSAW </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">7:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTTSF"><em>Cats</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/69226?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">8:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTMAD"><em>Shear Madness</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/68563?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<span class="full-date">Wednesday, September 25</span>
+<div class="event-snippet long">
+<span class="time">6:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/video/performance/70866">Millennium Stage: Toko Telo </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">7:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTTSF"><em>Cats</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/69227?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">8:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTMAD"><em>Shear Madness</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/68564?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<span class="full-date">Thursday, September 26</span>
+<div class="event-snippet long">
+<span class="time">6:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/video/performance/70876">Millennium Stage: La Mojarra Electrica </a> </h4>
+<div class="callout">
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">7:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/HTRGR">Robert Glasper with special guest Yasiin Bey<br/>
+A Black Radio Production </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/PriceZones?perfNo=70836&amp;mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">7:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTTSF"><em>Cats</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/69228?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">7:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/XTARH">Renée Fleming <em>VOICES</em>: Rhiannon Giddens with Francesco Turrisi </a> </h4>
+<div class="callout">
+<span class="event-showing sold-out">Sold Out</span>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">8:00pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/TTMAD"><em>Shear Madness</em> </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/SYOS/68565?mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="event-snippet long">
+<span class="time">9:30pm</span>
+<div class="no-wrap">
+<h4>
+<a class="title" href="http://www.kennedy-center.org/calendar/event/HTRGR">Robert Glasper with special guest Yasiin Bey<br/>
+A Black Radio Production </a> </h4>
+<div class="callout">
+<a class="btn btn-default buy-tickets" href="http://www.kennedy-center.org/Seating/PriceZones?perfNo=70837&amp;mos=17">Tickets</a>
+</div>
+</div>
+</div>
+<div class="load-more-home-events">
+<a class="load-more" href="http://www.kennedy-center.org/#">Load More Events</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="stripe callout blue tall member-cta">
+<div class="inner">
+<h3 class="callout-title">Get Exclusive Events <br class="break"/>&amp; Early-Access Tickets</h3>
+<p class="callout-text">
+<strong>Become a Kennedy Center Member to get premium benefits not available to the general public.</strong>
+<span class="long-description">Your Kennedy Center Membership will keep you connected to the most exciting and anticipated theatrical, musical, dance, opera, and performance events in Washington with Members-only benefits that are truly outstanding, including the opportunity to purchase tickets before the general public through our Members-Only Ticket Priority benefit.</span> <a class="hidden-xs" href="http://www.kennedy-center.org/membership/">Learn More</a>
+</p>
+<div class="btn-wrap">
+<a class="btn btn-ghost" href="https://cms.kennedy-center.org/support/membership">Become a Member</a>
+</div>
+</div>
+</div>
+<div class="stripe home-ms" id="ms-block">
+<h2 class="accessibility">More to Explore</h2>
+<div class="clearfix">
+<h3 class="ms-banner">
+<a href="http://www.kennedy-center.org/video/upcoming"><img alt="Millennium Stage" class="ms-logo" src="https://www.kennedy-center.org/images/logos/logo-mstage.svg"/></a>
+<small class="hidden-md hidden-lg">Free live performances every day</small><small class="hidden-sm hidden-xs">Free Performances Daily at 6 PM ET - 7 Days a Week - 365 Days a Year</small>
+</h3>
+<div class="row">
+<div class="col-sm-6 ms-today">
+<h4 class="h5 ms-day pad">Next Free Show</h4>
+<a class="ms-preview" href="http://www.kennedy-center.org/video/upcoming#70892">
+<img alt="" class="ms-img" src="//i3.ytimg.com/vi/sIL43LPyyQI/maxresdefault.jpg"/>
+<div class="event-tile-text">
+<h5 class="h3 event-tile-title">National Dance Day: DC Dance History Interactive Lecture &amp; Performance</h5>
+<span class="event-tile-date">Free show in person or online at 6:00 PM</span> </div>
+</a>
+<p class="mini-cta pad">
+<a href="http://www.kennedy-center.org/video/upcoming"> <span>View Upcoming Schedule</span> <i class="icon icon-details"></i> </a>
+</p>
+</div>
+<div class="col-sm-6 ms-yesterday">
+<h4 class="h5 ms-day pad">Watch the Latest Show</h4>
+<a class="ms-preview" href="http://www.kennedy-center.org/video/index/M70891">
+<img alt="" class="ms-img" src="//i3.ytimg.com/vi/SnErDsWYbh8/maxresdefault.jpg"/>
+<div class="event-tile-text one-line">
+<div class="play-icon small">
+<div class="play-icon-inner"></div>
+</div>
+<h5 class="h3 event-tile-title">
+                    Comedy at the Kennedy Center: Inside Jokes with Reese Waters with Special Guest Patton Oswalt
+                </h5>
+</div>
+<div class="play-icon large">
+<div class="play-icon-inner"></div>
+</div>
+</a>
+<p class="mini-cta pad"> <a href="http://www.kennedy-center.org/index.cfm/video/recentbroadcasts"> <span>Browse Performance Archive</span> <i class="icon icon-cabinet"></i> </a> </p>
+</div>
+</div>
+</div>
+</div>
+<div class="stripe mini home-watch-listen cf padding-bottom-10">
+<hr/>
+<h3 class="ms-banner"><a href="https://digitalstage.kennedy-center.org"><img alt="Digital Stage" class="ms-logo ds-logo" src="https://www.kennedy-center.org/images/logos/logo-digitalstage.svg"/></a>
+<small>Extraordinary performing arts video on demand </small>
+</h3>
+</div>
+<div class="stripe mini flush home-watch-listen cf">
+<div data-experience="59c2c43f87ab07000f431854" style="overflow: auto;"><iframe allowfullscreen="" style="width: 100%; border: none; transition: height 0.1s linear 0s; display: block; height: 198px;"></iframe></div>
+<script src="https://players.brightcove.net/5219833351001/experience_59c2c43f87ab07000f431854/live.js"></script>
+<p class="mini-cta"> <a href="https://digitalstage.kennedy-center.org"><span>Explore More Digital Stage Videos</span> <i class="icon icon-video-camera"></i></a></p>
+</div>
+<div class="stripe mini flush home-noteworthy cf">
+<hr/><h2 class="pad">New &amp; Noteworthy</h2>
+<div class="mini-gallery">
+<div class="mini-gallery-deck cf">
+<button class="mini-gallery-choice active" data-note="1" style="background-image:url(https://kcwebsiteprod.s3.amazonaws.com/images/default-source/new-and-noteworthy/newsfeature_portraitsofcourage_620x420.jpg?sfvrsn=e0425892_2);"><span class="sr-only"><em>Portraits of Courage </em>Art Exhibit Tab</span></button>
+<button class="mini-gallery-choice" data-note="2" style="background-image:url(https://kcwebsiteprod.s3.amazonaws.com/images/default-source/new-and-noteworthy/newsfeature_mtpcast_620x420.jpg?sfvrsn=d8425892_2);"><span class="sr-only">All-Star Lineup Announced for Mark Twain Prize Saluting Dave Chappelle Tab</span></button>
+<button class="mini-gallery-choice" data-note="3" style="background-image:url(https://kcwebsiteprod.s3.amazonaws.com/images/default-source/new-and-noteworthy/newsfeature_kcnewssepoct19620x420.jpg?sfvrsn=a0ba5892_2);"><span class="sr-only"><em>Kennedy Center News</em> Now Online Tab</span></button>
+</div>
+<div class="mini-gallery-frame" style="background-image:url(https://kcwebsiteprod.s3.amazonaws.com/images/default-source/new-and-noteworthy/newsfeature_portraitsofcourage_620x420.jpg?sfvrsn=e0425892_2)"></div>
+</div>
+<div class="pad">
+<div class="noteworthy-text active" data-note="1">
+<h3><a href="https://www.kennedy-center.org/calendar/event/ZURRA"><em>Portraits of Courage </em>Art Exhibit</a></h3>
+<p><em>Portraits of Courage: </em>A Commander in Chief’s Tribute to America’s Warriors is a collection of portraits by President George W. Bush on loan from the Ambassador and Mrs. George L. Arygros Collection of Presidential Art at the George W. Bush Presidential Center, a non-profit organization whose Military Service Initiative is focused on helping post-9/11 veterans and their families. The exhibit will be on view Oct. 7-Nov. 15 in Studio K at the REACH. FREE, timed-entry tickets are required. Timed-entry tickets will be available beginning Sep. 3.</p>
+<a class="btn btn-default strong" href="https://www.kennedy-center.org/calendar/event/ZURRA"><span class="sr-only"><em>Portraits of Courage </em>Art Exhibit: </span>Learn More</a>
+</div>
+<div class="noteworthy-text" data-note="2">
+<h3><a href="https://www.kennedy-center.org/pages/specialevents/marktwain">All-Star Lineup Announced for Mark Twain Prize Saluting Dave Chappelle</a></h3>
+<p>An outstanding lineup of entertainers including Bradley Cooper, Tiffany Haddish, Kevin Hart, Trevor Noah, Jon Stewart, John Legend, and Chrissy Teigen will gather in the Kennedy Center Concert Hall to salute Dave Chappelle, recipient of the 22nd annual Mark Twain Prize for American Humor on October 27, 2019. The Prize, which is named to honor one of the world’s greatest humorists, will be given at a gala performance featuring some of the biggest names in comedy. The program will be broadcast on PBS stations on January 6, 2020. Sponsorship packages for the Mark Twain Prize gala performance are <a href="https://www.kennedy-center.org/pages/support/mtp" target="_blank">on sale now</a>. On-sale and ticketing information for this event will be available at a later date,</p>
+<a class="btn btn-default strong" href="https://www.kennedy-center.org/pages/specialevents/marktwain"><span class="sr-only">All-Star Lineup Announced for Mark Twain Prize Saluting Dave Chappelle: </span>Learn More</a>
+</div>
+<div class="noteworthy-text" data-note="3">
+<h3><a href="http://viewer.zmags.com/publication/ccdef13d"><em>Kennedy Center News</em> Now Online</a></h3>
+<p><em>Kennedy Center News</em> is now available to read online! The September-October issue features a special guide to the 16-day REACH Opening Festival; Broadway blockbusters like <em>Cats</em>, <em>What the Constitution Means to Me</em>, and the return of the Broadway Center Stage series with <em>Footloose</em>; Mariinsky Ballet with <em>Paquita</em>; the National Symphony Orchestra's Season Opening Concert with Yuja Wang; Washington National Opera's production of Verdi's <em>Otello</em>; comedy from Marc Maron and David Sedaris; jazz, chamber music, young audience performances, and much more!</p>
+<a class="btn btn-default strong" href="http://viewer.zmags.com/publication/ccdef13d"><span class="sr-only"><em>Kennedy Center News</em> Now Online: </span>Learn More</a>
+</div>
+</div>
+</div>
+<div class="container-fluid new-footer">
+<div class="row contribute-img-kids">
+<div class="col-xs-12 col-sm-7 contribute">
+<div class="contribute-banner col-xs-12 col-sm-12 col-md-7 col-lg-9">
+<h2>Support the Arts in America</h2>
+                    The Kennedy Center is a non-profit institution, and your tax-deductible gift helps expand our arts and education offerings throughout the country.
+                </div>
+<a class="btn btn-danger donate" href="https://cms.kennedy-center.org/support/nationalpatrons" type="button">Donate Today</a> </div>
+</div>
+</div>
+<style>
+    .contribute-img-kids,
+    .img-contribute-kids {
+        color: white;
+        background-color: #8C0000;
+        background-image: url("/images/template/bg-kennedy-handshake.jpg");
+        background-position: 100% 45%;
+        background-repeat: no-repeat;
+    }
+
+    </style>
+</div>
+<script id="upcoming-events-hbt" type="text/x-handlebars-template">
+
+        <div class="inner">
+            {{#each .}}
+                
+                
+                <span class="full-date">{{formattedDate}}</span>
+            
+                {{#each performances}}    
+                    <div class="event-snippet long">
+                        <span class="time">{{formattedPerfTime}}</span>
+                        <div class="no-wrap">
+                            <h4>
+                                {{#renderPerfLink .}}
+                                {{/renderPerfLink}}
+                            </h4>
+                            <div class="callout">
+
+                                {{#render_ticket_button . 'homepage'}}
+                                {{/render_ticket_button}}
+
+                                {{#renderExclusiveLinks .}}
+                                {{/renderExclusiveLinks}}
+
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+
+            {{/each}}
+
+
+            <div class="load-more-home-events">
+                <a class="load-more" href="#">Load More Events</a>
+            </div>
+
+        </div>
+
+
+    </script>
+</div>
+</div>
+<div class="footer">
+<div class="inner cf">
+<div class="footer-connect">
+<div class="text-left">
+<h2>Connect</h2>
+<div class="footer-social-links">
+<a class="circle-icon facebook" href="//www.facebook.com/KennedyCenter "><span class="sr-only">facebook</span></a>
+<a class="circle-icon twitter" href="//twitter.com/KenCen"><span class="sr-only">twitter</span></a>
+<a class="circle-icon youtube" href="//www.youtube.com/user/TheKennedyCenter"><span class="sr-only">youtube</span></a>
+<a class="circle-icon instagram" href="//instagram.com/kennedycenter"><span class="sr-only">instagram</span></a>
+<a class="circle-icon medium" href="//medium.com/the-kennedy-center"><span class="sr-only">medium</span></a>
+</div>
+</div>
+</div>
+<div class="footer-visit">
+<div class="text-left">
+<h2>Visit</h2>
+<i class="icon icon-marker visit-marker hidden-xs"></i>
+<div class="no-wrap">
+<p>
+                                The John F. Kennedy Center for the Performing Arts
+                                    <br/>
+                                    2700 F Street, NW Washington, DC 20566
+                            </p>
+<p><a href="http://www.kennedy-center.org/pages/visitor/directions">Directions to the Kennedy Center</a></p>
+<p>Building opens daily at 10 a.m.
+                            </p>
+</div>
+</div>
+</div>
+<div class="footer-contact">
+<div class="text-left">
+<h2>Contact Us</h2>
+<p>
+                            Tickets &amp; Information: (202) 467-4600
+                            <br/>
+                            Toll-Free: (800) 444-1324
+                            
+                        </p>
+<p>
+                            Box Office Hours:
+                            <br/>
+                            Mon.-Sat., 10 a.m.-9 p.m.,<br/>
+                            Sun. and Holidays, noon-9 p.m
+                        </p>
+<p><a href="http://www.kennedy-center.org/contact">More ways to contact us</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="footer footer-bottom"> <div class="inner cf">
+<ul class="footer-utility-links">
+<li><a href="http://www.kennedy-center.org/pages/accessibility/">Accessibility</a></li>
+<li><a href="http://www.kennedy-center.org/pages/legal/privacy">Privacy Statement</a></li>
+<li><a href="http://www.kennedy-center.org/pages/legal/terms">Terms and Conditions</a></li>
+</ul>
+<span class="footer-copyright">Copyright 1990-2019. All rights reserved.</span>
+</div>
+</div>
+</div>
+<script type="text/javascript">initFacebook();</script>
+<div class="fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe allow="encrypted-media" allowfullscreen="true" allowtransparency="true" aria-hidden="true" frameborder="0" id="fb_xdm_frame_https" name="fb_xdm_frame_https" scrolling="no" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=44#channel=f5b0b34be3678&amp;origin=https%3A%2F%2Fwww.kennedy-center.org" style="border: none;" tabindex="-1" title="Facebook Cross Domain Communication Frame"></iframe></div><div></div></div></div>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><div><div data-reactroot="" style="position: fixed; left: 0px; right: 0px; top: 0px; bottom: auto; width: auto; height: 0px; border: none; max-height: 100%; transition: opacity 200ms linear 0s, padding 0.2s ease 0s; overflow: auto; background: rgba(0, 0, 0, 0.5); opacity: 0; padding: 40px; text-align: center; visibility: hidden; z-index: 10000;"><div style="display: inline-block; height: 100%; vertical-align: middle;"></div><div style="display: inline-block; width: 100%; vertical-align: middle; max-width: 1200px; position: relative;"><svg aria-label="Close" style="position: absolute; right: -36px; top: -36px; display: inline-block; height: 32px; width: 32px; cursor: pointer; transition: right 0.2s ease 0s;" tabindex="-1" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g><ellipse cx="50" cy="50" fill="#ddd" rx="50" ry="50"></ellipse><line stroke="#666" stroke-width="10" x1="75" x2="25" y1="75" y2="25"></line><line stroke="#666" stroke-width="10" x1="75" x2="25" y1="25" y2="75"></line></g></svg><iframe allowfullscreen="" style="height: 0px; width: 100%; border: none; background: white; transition: height 200ms linear 0s; vertical-align: middle;"></iframe></div></div></div>
+<noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-K9WL6D" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<script>    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({ 'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K9WL6D');</script>
+<script type="text/javascript">
+
+
+        function searchKeyUp(e, value) {
+
+            if (e.keyCode === 13) {
+                var goto = '/search/?q=' + encodeURIComponent(value);
+                window.location = goto;
+            }
+        }
+    </script>
+<iframe height="0" src="//4533197.fls.doubleclick.net/activityi;src=4533197;type=count0;cat=pagev0;ord=8660194495576;gtm=2wg9b0;auiddc=1818657155.1569028007;~oref=https%3A%2F%2Fwww.kennedy-center.org%2Fhome%2Findex?" style="display: none; visibility: hidden;" width="0"></iframe><iframe height="0" src="//4533197.fls.doubleclick.net/activityi;src=4533197;type=count0;cat=sitev0;ord=1;num=2174784297433;gtm=2wg9b0;auiddc=1818657155.1569028007;~oref=https%3A%2F%2Fwww.kennedy-center.org%2Fhome%2Findex?" style="display: none; visibility: hidden;" width="0"></iframe><iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/widget_iframe.d6364fae9340b0be5f13818370141fd0.html?origin=https%3A%2F%2Fwww.kennedy-center.org" style="display: none;" title="Twitter settings iframe"></iframe><script id="" type="text/javascript">var eventType="copy";document.addEventListener?document.addEventListener(eventType,google_tag_manager["GTM-K9WL6D"].macro(2),!1):document.attachEvent&&document.attachEvent("on"+eventType,google_tag_manager["GTM-K9WL6D"].macro(3));</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","911141315612435");fbq("track","PageView");</script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=911141315612435&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+<script id="" type="text/javascript">fbq("track","ViewContent",{pagePath:"\/home\/index",pageHostname:"www.kennedy-center.org"});</script>
+<noscript>
+<img height="1" src="https://www.facebook.com/tr?id=911141315612435&amp;ev=ViewContent&amp;cd[pagePath]=%2Fhome%2Findex&amp;cd[pageHostname]=www.kennedy-center.org&amp;noscript=1" style="display:none" width="1"/></noscript> <div id="ttdUniversalPixelTag5241a972d3dc45cf8b0ce3097183d59e" style="display:none">
+<script id="" src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+<script id="" type="text/javascript">(function(a){"function"===typeof TTDUniversalPixelApi&&(a=new TTDUniversalPixelApi,a.init("xmhy6uq",["s7emzp8"],"https://insight.adsrvr.org/track/up","ttdUniversalPixelTag5241a972d3dc45cf8b0ce3097183d59e"))})(this);</script>
+</div> <script id="" src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script><div id="batBeacon0.2480962769279753" style="width:0px; height:0px; display:none; visibility:hidden;"><img alt="" height="0" id="batBeacon0.2716924322768546" src="https://bat.bing.com/action/0?ti=25064697&amp;Ver=2&amp;mid=c5a0573f-c298-3d38-5bef-bb3963c13597&amp;pi=0&amp;lg=en-US&amp;sw=1920&amp;sh=1080&amp;sc=24&amp;tl=The%20John%20F.%20Kennedy%20Center%20for%20the%20Performing%20Arts&amp;p=https%3A%2F%2Fwww.kennedy-center.org%2Fhome%2Findex&amp;r=&amp;lt=9814&amp;evt=pageLoad&amp;msclkid=N&amp;rn=463310" style="width:0px; height:0px; display:none; visibility:hidden;" width="0"/></div>
+<script id="" type="text/javascript">ttd_dom_ready(function(){if("function"===typeof TTDUniversalPixelApi){var a=new TTDUniversalPixelApi;a.init("xmhy6uq",["9i9koh9"],"https://insight.adsrvr.org/track/up")}});</script><script src="https://px.ads.linkedin.com/collect/?time=1569028018412&amp;pid=490612&amp;url=https%3A%2F%2Fwww.kennedy-center.org%2Fhome%2Findex&amp;fmt=js&amp;s=1" type="text/javascript"></script><iframe src="https://bid.g.doubleclick.net/xbbe/pixel?d=KAE" style="display: none;"></iframe><iframe allowtransparency="true" height="0" id="universal_pixel" src="https://insight.adsrvr.org/track/up?adv=xmhy6uq&amp;ref=https%3A%2F%2Fwww.kennedy-center.org%2Fhome%2Findex&amp;upid=s7emzp8&amp;upv=1.1.0" style="display:none;" title="TTD Universal Pixel" width="0"></iframe><iframe allowtransparency="true" height="0" id="universal_pixel" src="https://insight.adsrvr.org/track/up?adv=xmhy6uq&amp;ref=https%3A%2F%2Fwww.kennedy-center.org%2Fhome%2Findex&amp;upid=9i9koh9&amp;upv=1.1.0" style="display:none;" title="TTD Universal Pixel" width="0"></iframe></body></html>

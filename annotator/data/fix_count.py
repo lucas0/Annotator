@@ -8,7 +8,6 @@ samples_filename = cwd+"/samples.csv"
 results_path = cwd+"/results/"
 
 samples = pd.read_csv(samples_filename, sep='\t')
-count = pd.read_csv(count_filename)
 new_count = []
 new_header = ['page', 'source_url', 'src_len', 'count', 'yes','no','ii','dk']
 
@@ -28,14 +27,14 @@ def get_count(source, page):
             if v == 4:
                 dk += 1
 
-    return yes, no, ii, dk
+    return yes, no, ii, dk, (yes+no+ii+dk)
 
-for i,e in count.iterrows():
-    e_in_samples = samples.loc[samples.source_url==e.source_url].loc[samples.page == e.page].iloc[0]
-    src_len = len(ast.literal_eval(e_in_samples.source_list))
-    yes, no, ii, dk = get_count(e.source_url, e.page)
-    print(yes, no, ii, dk)
-    entry = [e.page,e.source_url, src_len, e.count, yes, no, ii, dk]
+for i,e in samples.iterrows():
+    entry = [e.page, e.source_url]
+    src_len = len(ast.literal_eval(e.source_list))
+    yes, no, ii, dk, count = get_count(e.source_url, e.page)
+    entry = entry+[src_len,count,yes,no,ii,dk]
+    print(i)
     new_count.append(entry)
 
 new_count_df = pd.DataFrame(new_count)

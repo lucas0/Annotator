@@ -38,7 +38,7 @@
         }
 		iframe{
 			width:100%;
-			border: 2px solid #f056ff;
+			border: 2px solid #900C3F;
 			border-radius:3px;
 		}
         .signup_form{
@@ -53,6 +53,7 @@
 	<div class="base">
 		<h4 style=" margin: 0; padding: 2;">Annotator</h4>
 		<a href="{% url 'home' %}">Home</a> /
+		<a href="{% url 'guidelines' %}">Guidelines</a> /
 		{% if user.is_authenticated %}
 		<a href="{% url 'logout' %}" id="logout">Log Out</a>
 		You are logged in as <strong>{{user.username}}</strong>

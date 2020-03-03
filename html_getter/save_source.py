@@ -60,6 +60,7 @@ def logError(row, url, message):
 def get_html(row,url):
     try:
         browser = webdriver.Chrome(chrome_options=chrome_options, executable_path=chrome_driver)
+        #browser = webdriver.Chrome(chrome_options=chrome_options, executable_path=chrome_driver)
         browser.header_overrides = {'User-Agent': 'Custom user agent', 'ORG_UNIT':'IT'}
         browser.get(url)
         st = [req.response.status_code for req in browser.requests if req.response][0]
@@ -92,10 +93,12 @@ is_first = not (os.path.exists(error_path))
 
 #Used to check whether or not this will be the first write to samples_html.csv
 for idx, e in samples.iterrows():
-    if idx < 6000:
-        continue
     print("\n|> ROW: ",idx,"/",num_samples)
     a_dir_name = html_path+e.page.strip("/").split("/")[-1]+"/"
+    #next two lines if you want the html_getter to focus on a specific page
+    #if '/var/www/Annotator/annotator/data/html_snopes/michelle-wolf-hulu-special/' not in a_dir_name:
+    #    continue
+    print(a_dir_name)
 
     if not os.path.exists(a_dir_name):
         os.makedirs(a_dir_name)

@@ -1,0 +1,87 @@
+>>lucas | Wed 19 Feb, 13:11:31<->Wed 19 Feb, 13:13:14 | total time:1.72 mins | 
+ | Avg. Speed: 0.86 Min/Ann | Conformity: 0.25 | #Ann:2
+
+>>lucas | Wed 19 Feb, 13:39:46<->Wed 19 Feb, 13:39:46 | total time:0.00 mins | 
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.75 | #Ann:1
+
+>>lucas | Wed 19 Feb, 14:18:27<->Wed 19 Feb, 14:19:38 | total time:1.18 mins | 
+ | Avg. Speed: 0.59 Min/Ann | Conformity: 0.25 | #Ann:2
+
+>>lucas | Wed 19 Feb, 17:52:40<->Wed 19 Feb, 18:03:46 | total time:11.10 mins | 
+ | Avg. Speed: 0.53 Min/Ann | Conformity: 0.20 | #Ann:21
+
+>>lucas | Sun 23 Feb, 20:30:57<->Sun 23 Feb, 20:33:05 | total time:2.13 mins | 
+ | Avg. Speed: 0.27 Min/Ann | Conformity: 0.38 | #Ann:8
+
+>>lucas | Mon 24 Feb, 16:31:05<->Mon 24 Feb, 16:59:08 | total time:28.05 mins | 
+ | Avg. Speed: 0.90 Min/Ann | Conformity: 0.46 | #Ann:31
+
+>>lucas | Mon 24 Feb, 17:33:18<->Mon 24 Feb, 17:56:02 | total time:22.73 mins | 
+ | Avg. Speed: 1.08 Min/Ann | Conformity: 0.61 | #Ann:21
+
+>>lucas | Wed 26 Feb, 16:54:49<->Wed 26 Feb, 17:05:32 | total time:10.72 mins | 
+ | Avg. Speed: 0.71 Min/Ann | Conformity: 0.55 | #Ann:15
+
+>>lucas | Wed 26 Feb, 17:32:49<->Wed 26 Feb, 18:02:58 | total time:30.15 mins | 
+ | Avg. Speed: 0.64 Min/Ann | Conformity: 0.54 | #Ann:47
+
+>>lucas | Thu 27 Feb, 12:53:17<->Thu 27 Feb, 12:55:48 | total time:2.52 mins | 
+ | Avg. Speed: 0.50 Min/Ann | Conformity: 0.55 | #Ann:5
+
+>>lucas | Thu 27 Feb, 17:26:42<->Thu 27 Feb, 17:28:32 | total time:1.83 mins | 
+ | Avg. Speed: 0.46 Min/Ann | Conformity: 0.75 | #Ann:4
+
+>>lucas | Sun 01 Mar, 18:07:49<->Sun 01 Mar, 18:13:05 | total time:5.27 mins | 
+ | Avg. Speed: 0.28 Min/Ann | Conformity: 0.70 | #Ann:19
+
+>>lucas | Mon 02 Mar, 14:42:41<->Mon 02 Mar, 14:45:14 | total time:2.55 mins | 
+ | Avg. Speed: 0.42 Min/Ann | Conformity: 0.42 | #Ann:6
+
+>>lucas | Mon 02 Mar, 15:19:15<->Mon 02 Mar, 15:25:11 | total time:5.93 mins | 
+ | Avg. Speed: 0.54 Min/Ann | Conformity: 0.39 | #Ann:11
+
+>>lucas | Tue 03 Mar, 15:13:50<->Tue 03 Mar, 15:13:50 | total time:0.00 mins | 
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.75 | #Ann:1
+
+>>lucas | Tue 03 Mar, 15:44:58<->Tue 03 Mar, 15:51:40 | total time:6.70 mins | 
+ | Avg. Speed: 0.84 Min/Ann | Conformity: 0.63 | #Ann:8
+
+>>lucas | Tue 03 Mar, 16:27:25<->Tue 03 Mar, 16:28:40 | total time:1.25 mins | 
+ | Avg. Speed: 0.18 Min/Ann | Conformity: 0.75 | #Ann:7
+
+>>lucas | Tue 03 Mar, 17:01:58<->Tue 03 Mar, 17:07:59 | total time:6.02 mins | 
+ | Avg. Speed: 1.20 Min/Ann | Conformity: 0.55 | #Ann:5
+
+>>nell | Wed 19 Feb, 14:07:29<->Wed 19 Feb, 15:13:08 | total time:65.65 mins | 
+ | Avg. Speed: 1.46 Min/Ann | Conformity: 0.02 | #Ann:45
+
+>>nell | Wed 19 Feb, 15:39:52<->Wed 19 Feb, 17:00:07 | total time:80.25 mins | 
+ | Avg. Speed: 1.22 Min/Ann | Conformity: 0.06 | #Ann:66
+
+>>nell | Fri 21 Feb, 08:35:55<->Fri 21 Feb, 11:00:59 | total time:145.07 mins | 
+ | Avg. Speed: 2.17 Min/Ann | Conformity: 0.25 | #Ann:67
+
+>>nell | Wed 26 Feb, 18:44:01<->Wed 26 Feb, 20:24:53 | total time:100.87 mins | 
+ | Avg. Speed: 1.90 Min/Ann | Conformity: 0.55 | #Ann:53
+
+>>loredana | Wed 19 Feb, 14:08:47<->Wed 19 Feb, 15:13:06 | total time:64.32 mins | 
+ | Avg. Speed: 1.21 Min/Ann | Conformity: 0.11 | #Ann:53
+
+>>loredana | Wed 19 Feb, 15:37:11<->Wed 19 Feb, 16:59:26 | total time:82.25 mins | 
+ | Avg. Speed: 0.91 Min/Ann | Conformity: 0.02 | #Ann:90
+
+>>utku | Wed 19 Feb, 15:46:10<->Wed 19 Feb, 17:03:46 | total time:77.60 mins | 
+ | Avg. Speed: 0.74 Min/Ann | Conformity: 0.01 | #Ann:105
+
+>>utku | Wed 19 Feb, 17:18:57<->Wed 19 Feb, 18:40:52 | total time:81.92 mins | 
+ | Avg. Speed: 0.59 Min/Ann | Conformity: 0.06 | #Ann:139
+
+>>utku | Fri 21 Feb, 08:02:32<->Fri 21 Feb, 11:00:06 | total time:177.57 mins | 
+ | Avg. Speed: 0.59 Min/Ann | Conformity: 0.03 | #Ann:302
+
+>>utku | Tue 25 Feb, 20:36:23<->Tue 25 Feb, 22:06:58 | total time:90.58 mins | 
+ | Avg. Speed: 0.54 Min/Ann | Conformity: 0.03 | #Ann:168
+
+>>utku | Sun 01 Mar, 12:50:49<->Sun 01 Mar, 14:27:48 | total time:96.98 mins | 
+ | Avg. Speed: 0.48 Min/Ann | Conformity: 0.05 | #Ann:201
+

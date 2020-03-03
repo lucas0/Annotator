@@ -14,7 +14,7 @@ constantly==15.1.0
 cryptography==2.1.4
 decorator==4.4.0
 distro-info===0.18ubuntu0.18.04.1
-Django==2.2.3
+Django==2.2.10
 Flask==1.0.3
 Flask-SQLAlchemy==2.4.0
 ftfy==5.6

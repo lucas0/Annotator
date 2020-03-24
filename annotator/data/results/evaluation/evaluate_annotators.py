@@ -1,3 +1,4 @@
+import math
 import pandas as pd
 import re
 import os,sys
@@ -84,6 +85,7 @@ for name,df in individual:
 
 #generate stats per session
 msgs = []
+times = {'utku': 180, 'loredana': 180, 'nell':0, 'lucas':0}
 for name in individual_sessions.keys():
     for session in individual_sessions[name]:
         first_datetime = datetime.datetime.strptime(session[0]["date"],"%a %d %b, %H:%M:%S").replace(year=2020)
@@ -93,6 +95,7 @@ for name in individual_sessions.keys():
         fdt = first_datetime.strftime("%a %d %b, %H:%M:%S")
         ldt = last_datetime.strftime("%a %d %b, %H:%M:%S")
         min_per_ann = delta_min / len(session)
+        times[name] += delta_min
         session = pd.DataFrame(session)
 
         #change str for int in session value
@@ -109,6 +112,9 @@ for name in individual_sessions.keys():
 with open("sessionlog.txt", "w+") as f:
     for msg in msgs:
         f.write(msg+"\n\n")
+    f.write("\n\nTOTAL TIMES\n\n")
+    for key,value in times.items():
+        f.write(key+": "+str(math.floor(value/60))+":"+str(value%60)+"\n")
 
 #writes individual_conformities.txt
 conformities = sorted(conformities,key=lambda x: x[1])

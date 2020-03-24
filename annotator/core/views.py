@@ -217,6 +217,7 @@ def get_least_annotated_page(name,aPage=None):
 
     left2 = len(twice_annotated)
     left1 = len(once_annotated)
+    print(">>SELECTED PAGE",a_page, o_page)
     return a_page, o_page, a_html, str(o_html), src_lst, a_done, a_total, total_done, claim_text, left2, left1
 
 # VIEWS

@@ -2,7 +2,7 @@
 
 Annotator used to construct the Veritas Dataset
 
-Served on veritas-annotator.datascienceinstitute.ie
+Served on [veritas-annotator.datascienceinstitute.ie](veritas-annotator.datascienceinstitute.ie "Veritas Annotator")
 
 ## Start service in port 5000
 

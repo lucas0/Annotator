@@ -1,4 +1,8 @@
-#Commands
+# Veritas Annotator 
+
+Annotator used to construct the Veritas Dataset
+
+Served on veritas-annotator.datascienceinstitute.ie
 
 ## Start service in port 5000
 

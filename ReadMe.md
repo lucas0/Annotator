@@ -1,4 +1,12 @@
-#Commands
+# Veritas Annotator 
+
+Annotator used to construct the Veritas Dataset
+
+Served on [veritas-annotator.datascienceinstitute.ie](veritas-annotator.datascienceinstitute.ie "Veritas Annotator")
+
+Instructions for annotating can be found under [Guidelines](veritas-annotator.datascienceinstitute.ie/guidelines "Annotator Guidelines")
+
+# Instructions for setting up the Annotator service
 
 ## Start service in port 5000
 

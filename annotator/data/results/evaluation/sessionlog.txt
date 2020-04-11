@@ -1,218 +1,426 @@
 >>lucas | Wed 19 Feb, 13:11:31<->Wed 19 Feb, 13:13:14 | total time:1.72 mins | 
- | Avg. Speed: 0.86 Min/Ann | Conformity: 0.24 | #Ann:2
+ | Avg. Speed: 0.86 Min/Ann | Conformity: 0.22 | #Ann:2
 
 >>lucas | Wed 19 Feb, 13:39:46<->Wed 19 Feb, 13:39:46 | total time:0.00 mins | 
- | Avg. Speed: 0.00 Min/Ann | Conformity: 0.76 | #Ann:1
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.78 | #Ann:1
 
 >>lucas | Wed 19 Feb, 14:18:27<->Wed 19 Feb, 14:19:38 | total time:1.18 mins | 
- | Avg. Speed: 0.59 Min/Ann | Conformity: 0.24 | #Ann:2
+ | Avg. Speed: 0.59 Min/Ann | Conformity: 0.22 | #Ann:2
 
 >>lucas | Wed 19 Feb, 17:52:40<->Wed 19 Feb, 18:03:46 | total time:11.10 mins | 
- | Avg. Speed: 0.53 Min/Ann | Conformity: 0.20 | #Ann:21
+ | Avg. Speed: 0.53 Min/Ann | Conformity: 0.17 | #Ann:21
 
 >>lucas | Sun 23 Feb, 20:30:57<->Sun 23 Feb, 20:33:05 | total time:2.13 mins | 
- | Avg. Speed: 0.27 Min/Ann | Conformity: 0.38 | #Ann:8
+ | Avg. Speed: 0.27 Min/Ann | Conformity: 0.40 | #Ann:8
 
 >>lucas | Mon 24 Feb, 16:31:05<->Mon 24 Feb, 16:59:08 | total time:28.05 mins | 
- | Avg. Speed: 0.90 Min/Ann | Conformity: 0.46 | #Ann:31
+ | Avg. Speed: 0.90 Min/Ann | Conformity: 0.49 | #Ann:31
 
 >>lucas | Mon 24 Feb, 17:33:18<->Mon 24 Feb, 17:56:02 | total time:22.73 mins | 
- | Avg. Speed: 1.08 Min/Ann | Conformity: 0.61 | #Ann:21
+ | Avg. Speed: 1.08 Min/Ann | Conformity: 0.63 | #Ann:21
 
 >>lucas | Wed 26 Feb, 16:54:49<->Wed 26 Feb, 17:05:32 | total time:10.72 mins | 
- | Avg. Speed: 0.71 Min/Ann | Conformity: 0.56 | #Ann:15
+ | Avg. Speed: 0.71 Min/Ann | Conformity: 0.58 | #Ann:15
 
 >>lucas | Wed 26 Feb, 17:32:49<->Wed 26 Feb, 18:02:58 | total time:30.15 mins | 
- | Avg. Speed: 0.64 Min/Ann | Conformity: 0.54 | #Ann:47
+ | Avg. Speed: 0.64 Min/Ann | Conformity: 0.56 | #Ann:47
 
 >>lucas | Thu 27 Feb, 12:53:17<->Thu 27 Feb, 12:55:48 | total time:2.52 mins | 
- | Avg. Speed: 0.50 Min/Ann | Conformity: 0.56 | #Ann:5
+ | Avg. Speed: 0.50 Min/Ann | Conformity: 0.58 | #Ann:5
 
 >>lucas | Thu 27 Feb, 17:26:42<->Thu 27 Feb, 17:28:32 | total time:1.83 mins | 
- | Avg. Speed: 0.46 Min/Ann | Conformity: 0.76 | #Ann:4
+ | Avg. Speed: 0.46 Min/Ann | Conformity: 0.78 | #Ann:4
 
 >>lucas | Sun 01 Mar, 18:07:49<->Sun 01 Mar, 18:13:05 | total time:5.27 mins | 
- | Avg. Speed: 0.28 Min/Ann | Conformity: 0.70 | #Ann:19
+ | Avg. Speed: 0.28 Min/Ann | Conformity: 0.72 | #Ann:19
 
 >>lucas | Mon 02 Mar, 14:42:41<->Mon 02 Mar, 14:45:14 | total time:2.55 mins | 
- | Avg. Speed: 0.42 Min/Ann | Conformity: 0.42 | #Ann:6
+ | Avg. Speed: 0.42 Min/Ann | Conformity: 0.44 | #Ann:6
 
 >>lucas | Mon 02 Mar, 15:19:15<->Mon 02 Mar, 15:25:11 | total time:5.93 mins | 
- | Avg. Speed: 0.54 Min/Ann | Conformity: 0.39 | #Ann:11
+ | Avg. Speed: 0.54 Min/Ann | Conformity: 0.41 | #Ann:11
 
 >>lucas | Tue 03 Mar, 15:13:50<->Tue 03 Mar, 15:13:50 | total time:0.00 mins | 
- | Avg. Speed: 0.00 Min/Ann | Conformity: 0.76 | #Ann:1
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.78 | #Ann:1
 
 >>lucas | Tue 03 Mar, 15:44:58<->Tue 03 Mar, 15:51:40 | total time:6.70 mins | 
- | Avg. Speed: 0.84 Min/Ann | Conformity: 0.63 | #Ann:8
+ | Avg. Speed: 0.84 Min/Ann | Conformity: 0.65 | #Ann:8
 
 >>lucas | Tue 03 Mar, 16:27:25<->Tue 03 Mar, 16:28:40 | total time:1.25 mins | 
- | Avg. Speed: 0.18 Min/Ann | Conformity: 0.76 | #Ann:7
+ | Avg. Speed: 0.18 Min/Ann | Conformity: 0.78 | #Ann:7
 
 >>lucas | Tue 03 Mar, 17:01:58<->Tue 03 Mar, 17:14:50 | total time:12.87 mins | 
- | Avg. Speed: 1.61 Min/Ann | Conformity: 0.38 | #Ann:8
+ | Avg. Speed: 1.61 Min/Ann | Conformity: 0.40 | #Ann:8
 
 >>lucas | Tue 03 Mar, 18:13:14<->Tue 03 Mar, 18:13:14 | total time:0.00 mins | 
- | Avg. Speed: 0.00 Min/Ann | Conformity: 0.76 | #Ann:1
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.78 | #Ann:1
 
 >>lucas | Wed 04 Mar, 10:46:42<->Wed 04 Mar, 10:46:51 | total time:0.15 mins | 
- | Avg. Speed: 0.07 Min/Ann | Conformity: 0.76 | #Ann:2
+ | Avg. Speed: 0.07 Min/Ann | Conformity: 0.78 | #Ann:2
 
 >>lucas | Wed 04 Mar, 11:04:08<->Wed 04 Mar, 11:04:47 | total time:0.65 mins | 
- | Avg. Speed: 0.33 Min/Ann | Conformity: 0.76 | #Ann:2
+ | Avg. Speed: 0.33 Min/Ann | Conformity: 0.78 | #Ann:2
 
 >>lucas | Wed 04 Mar, 11:24:20<->Wed 04 Mar, 11:24:20 | total time:0.00 mins | 
- | Avg. Speed: 0.00 Min/Ann | Conformity: 0.24 | #Ann:1
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.22 | #Ann:1
 
 >>lucas | Wed 04 Mar, 12:01:37<->Wed 04 Mar, 12:16:15 | total time:14.63 mins | 
  | Avg. Speed: 0.86 Min/Ann | Conformity: 0.01 | #Ann:17
 
 >>lucas | Wed 04 Mar, 13:01:02<->Wed 04 Mar, 13:01:55 | total time:0.88 mins | 
- | Avg. Speed: 0.22 Min/Ann | Conformity: 0.01 | #Ann:4
+ | Avg. Speed: 0.22 Min/Ann | Conformity: 0.03 | #Ann:4
 
 >>lucas | Wed 04 Mar, 13:54:12<->Wed 04 Mar, 13:54:12 | total time:0.00 mins | 
- | Avg. Speed: 0.00 Min/Ann | Conformity: 0.24 | #Ann:1
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.22 | #Ann:1
 
 >>lucas | Wed 04 Mar, 14:39:21<->Wed 04 Mar, 14:52:40 | total time:13.32 mins | 
- | Avg. Speed: 1.02 Min/Ann | Conformity: 0.24 | #Ann:13
+ | Avg. Speed: 1.02 Min/Ann | Conformity: 0.22 | #Ann:13
 
 >>lucas | Wed 04 Mar, 17:13:31<->Wed 04 Mar, 17:13:31 | total time:0.00 mins | 
- | Avg. Speed: 0.00 Min/Ann | Conformity: 0.24 | #Ann:1
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.22 | #Ann:1
 
 >>lucas | Wed 04 Mar, 17:28:26<->Wed 04 Mar, 17:50:08 | total time:21.70 mins | 
- | Avg. Speed: 0.47 Min/Ann | Conformity: 0.20 | #Ann:46
+ | Avg. Speed: 0.47 Min/Ann | Conformity: 0.18 | #Ann:46
 
 >>lucas | Wed 04 Mar, 18:27:19<->Wed 04 Mar, 18:29:57 | total time:2.63 mins | 
- | Avg. Speed: 0.29 Min/Ann | Conformity: 0.24 | #Ann:9
+ | Avg. Speed: 0.29 Min/Ann | Conformity: 0.22 | #Ann:9
 
 >>lucas | Wed 04 Mar, 18:50:29<->Wed 04 Mar, 19:00:47 | total time:10.30 mins | 
- | Avg. Speed: 0.64 Min/Ann | Conformity: 0.12 | #Ann:16
+ | Avg. Speed: 0.64 Min/Ann | Conformity: 0.10 | #Ann:16
 
 >>lucas | Thu 05 Mar, 14:44:05<->Thu 05 Mar, 14:44:19 | total time:0.23 mins | 
- | Avg. Speed: 0.06 Min/Ann | Conformity: 0.24 | #Ann:4
+ | Avg. Speed: 0.06 Min/Ann | Conformity: 0.22 | #Ann:4
 
 >>lucas | Fri 06 Mar, 13:49:47<->Fri 06 Mar, 14:57:33 | total time:67.77 mins | 
- | Avg. Speed: 0.42 Min/Ann | Conformity: 0.18 | #Ann:161
+ | Avg. Speed: 0.42 Min/Ann | Conformity: 0.16 | #Ann:161
 
 >>lucas | Fri 06 Mar, 15:21:54<->Fri 06 Mar, 15:23:28 | total time:1.57 mins | 
- | Avg. Speed: 0.22 Min/Ann | Conformity: 0.24 | #Ann:7
+ | Avg. Speed: 0.22 Min/Ann | Conformity: 0.22 | #Ann:7
 
 >>lucas | Fri 06 Mar, 16:21:45<->Fri 06 Mar, 16:29:50 | total time:8.08 mins | 
- | Avg. Speed: 0.51 Min/Ann | Conformity: 0.06 | #Ann:16
+ | Avg. Speed: 0.51 Min/Ann | Conformity: 0.04 | #Ann:16
 
 >>lucas | Sun 08 Mar, 14:02:30<->Sun 08 Mar, 14:02:30 | total time:0.00 mins | 
- | Avg. Speed: 0.00 Min/Ann | Conformity: 0.76 | #Ann:1
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.78 | #Ann:1
 
 >>lucas | Tue 10 Mar, 15:44:57<->Tue 10 Mar, 16:15:47 | total time:30.83 mins | 
- | Avg. Speed: 0.55 Min/Ann | Conformity: 0.42 | #Ann:56
+ | Avg. Speed: 0.55 Min/Ann | Conformity: 0.44 | #Ann:56
 
 >>lucas | Tue 10 Mar, 17:02:16<->Tue 10 Mar, 17:08:19 | total time:6.05 mins | 
- | Avg. Speed: 0.76 Min/Ann | Conformity: 0.24 | #Ann:8
+ | Avg. Speed: 0.76 Min/Ann | Conformity: 0.22 | #Ann:8
 
 >>lucas | Tue 10 Mar, 17:20:35<->Tue 10 Mar, 17:28:05 | total time:7.50 mins | 
- | Avg. Speed: 1.07 Min/Ann | Conformity: 0.24 | #Ann:7
+ | Avg. Speed: 1.07 Min/Ann | Conformity: 0.22 | #Ann:7
 
 >>lucas | Tue 10 Mar, 17:41:29<->Tue 10 Mar, 17:43:58 | total time:2.48 mins | 
- | Avg. Speed: 0.31 Min/Ann | Conformity: 0.12 | #Ann:8
+ | Avg. Speed: 0.31 Min/Ann | Conformity: 0.10 | #Ann:8
 
 >>lucas | Tue 10 Mar, 17:55:58<->Tue 10 Mar, 18:04:38 | total time:8.67 mins | 
- | Avg. Speed: 0.29 Min/Ann | Conformity: 0.11 | #Ann:30
+ | Avg. Speed: 0.29 Min/Ann | Conformity: 0.09 | #Ann:30
 
 >>lucas | Wed 11 Mar, 14:44:48<->Wed 11 Mar, 14:47:12 | total time:2.40 mins | 
- | Avg. Speed: 0.30 Min/Ann | Conformity: 0.12 | #Ann:8
+ | Avg. Speed: 0.30 Min/Ann | Conformity: 0.10 | #Ann:8
 
 >>lucas | Wed 11 Mar, 15:08:23<->Wed 11 Mar, 15:08:23 | total time:0.00 mins | 
- | Avg. Speed: 0.00 Min/Ann | Conformity: 0.24 | #Ann:1
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.22 | #Ann:1
 
 >>lucas | Wed 11 Mar, 15:32:03<->Wed 11 Mar, 15:36:20 | total time:4.28 mins | 
- | Avg. Speed: 0.48 Min/Ann | Conformity: 0.13 | #Ann:9
+ | Avg. Speed: 0.48 Min/Ann | Conformity: 0.11 | #Ann:9
 
 >>lucas | Wed 11 Mar, 18:49:43<->Wed 11 Mar, 19:17:45 | total time:28.03 mins | 
- | Avg. Speed: 0.49 Min/Ann | Conformity: 0.10 | #Ann:57
+ | Avg. Speed: 0.49 Min/Ann | Conformity: 0.08 | #Ann:57
 
 >>lucas | Mon 16 Mar, 17:07:42<->Mon 16 Mar, 17:10:21 | total time:2.65 mins | 
- | Avg. Speed: 0.24 Min/Ann | Conformity: 0.30 | #Ann:11
+ | Avg. Speed: 0.24 Min/Ann | Conformity: 0.32 | #Ann:11
 
 >>lucas | Mon 16 Mar, 17:21:51<->Mon 16 Mar, 17:33:47 | total time:11.93 mins | 
- | Avg. Speed: 1.33 Min/Ann | Conformity: 0.64 | #Ann:9
+ | Avg. Speed: 1.33 Min/Ann | Conformity: 0.67 | #Ann:9
 
 >>lucas | Mon 16 Mar, 18:33:42<->Mon 16 Mar, 19:00:20 | total time:26.63 mins | 
- | Avg. Speed: 0.86 Min/Ann | Conformity: 0.43 | #Ann:31
+ | Avg. Speed: 0.86 Min/Ann | Conformity: 0.45 | #Ann:31
 
 >>lucas | Mon 16 Mar, 19:20:38<->Mon 16 Mar, 19:42:49 | total time:22.18 mins | 
- | Avg. Speed: 0.89 Min/Ann | Conformity: 0.16 | #Ann:25
+ | Avg. Speed: 0.89 Min/Ann | Conformity: 0.18 | #Ann:25
 
 >>lucas | Mon 16 Mar, 20:27:15<->Mon 16 Mar, 20:44:38 | total time:17.38 mins | 
- | Avg. Speed: 0.76 Min/Ann | Conformity: 0.11 | #Ann:23
+ | Avg. Speed: 0.76 Min/Ann | Conformity: 0.09 | #Ann:23
 
 >>lucas | Mon 16 Mar, 20:54:46<->Mon 16 Mar, 21:01:22 | total time:6.60 mins | 
- | Avg. Speed: 0.51 Min/Ann | Conformity: 0.06 | #Ann:13
+ | Avg. Speed: 0.51 Min/Ann | Conformity: 0.09 | #Ann:13
 
 >>lucas | Wed 18 Mar, 19:32:28<->Wed 18 Mar, 19:32:28 | total time:0.00 mins | 
- | Avg. Speed: 0.00 Min/Ann | Conformity: 0.24 | #Ann:1
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.22 | #Ann:1
+
+>>lucas | Wed 18 Mar, 19:46:00<->Wed 18 Mar, 19:49:46 | total time:3.77 mins | 
+ | Avg. Speed: 0.63 Min/Ann | Conformity: 0.06 | #Ann:6
+
+>>lucas | Wed 18 Mar, 20:10:14<->Wed 18 Mar, 20:25:16 | total time:15.03 mins | 
+ | Avg. Speed: 0.48 Min/Ann | Conformity: 0.19 | #Ann:31
+
+>>lucas | Wed 18 Mar, 21:21:40<->Wed 18 Mar, 21:23:06 | total time:1.43 mins | 
+ | Avg. Speed: 0.36 Min/Ann | Conformity: 0.28 | #Ann:4
+
+>>lucas | Thu 19 Mar, 18:53:24<->Thu 19 Mar, 18:59:06 | total time:5.70 mins | 
+ | Avg. Speed: 0.57 Min/Ann | Conformity: 0.18 | #Ann:10
+
+>>lucas | Thu 19 Mar, 22:26:09<->Thu 19 Mar, 22:43:04 | total time:16.92 mins | 
+ | Avg. Speed: 1.30 Min/Ann | Conformity: 0.55 | #Ann:13
+
+>>lucas | Thu 19 Mar, 23:00:25<->Thu 19 Mar, 23:10:02 | total time:9.62 mins | 
+ | Avg. Speed: 0.69 Min/Ann | Conformity: 0.42 | #Ann:14
+
+>>lucas | Fri 20 Mar, 03:04:52<->Fri 20 Mar, 04:25:44 | total time:80.87 mins | 
+ | Avg. Speed: 0.70 Min/Ann | Conformity: 0.09 | #Ann:116
+
+>>lucas | Fri 20 Mar, 17:58:11<->Fri 20 Mar, 18:05:57 | total time:7.77 mins | 
+ | Avg. Speed: 0.35 Min/Ann | Conformity: 0.18 | #Ann:22
+
+>>lucas | Fri 20 Mar, 18:28:03<->Fri 20 Mar, 19:32:16 | total time:64.22 mins | 
+ | Avg. Speed: 0.43 Min/Ann | Conformity: 0.15 | #Ann:148
+
+>>lucas | Sat 21 Mar, 16:26:16<->Sat 21 Mar, 16:52:00 | total time:25.73 mins | 
+ | Avg. Speed: 0.61 Min/Ann | Conformity: 0.20 | #Ann:42
+
+>>lucas | Sat 21 Mar, 18:19:20<->Sat 21 Mar, 18:22:04 | total time:2.73 mins | 
+ | Avg. Speed: 0.91 Min/Ann | Conformity: 0.22 | #Ann:3
+
+>>lucas | Mon 23 Mar, 02:37:26<->Mon 23 Mar, 02:57:36 | total time:20.17 mins | 
+ | Avg. Speed: 0.49 Min/Ann | Conformity: 0.34 | #Ann:41
+
+>>lucas | Mon 23 Mar, 05:04:49<->Mon 23 Mar, 06:09:21 | total time:64.53 mins | 
+ | Avg. Speed: 1.04 Min/Ann | Conformity: 0.07 | #Ann:62
+
+>>lucas | Mon 23 Mar, 06:24:05<->Mon 23 Mar, 06:33:17 | total time:9.20 mins | 
+ | Avg. Speed: 0.77 Min/Ann | Conformity: 0.14 | #Ann:12
+
+>>lucas | Tue 24 Mar, 02:40:33<->Tue 24 Mar, 02:40:41 | total time:0.13 mins | 
+ | Avg. Speed: 0.07 Min/Ann | Conformity: 0.22 | #Ann:2
+
+>>lucas | Tue 24 Mar, 02:55:31<->Tue 24 Mar, 03:31:56 | total time:36.42 mins | 
+ | Avg. Speed: 0.69 Min/Ann | Conformity: 0.18 | #Ann:53
+
+>>lucas | Tue 24 Mar, 03:46:04<->Tue 24 Mar, 03:53:05 | total time:7.02 mins | 
+ | Avg. Speed: 0.29 Min/Ann | Conformity: 0.18 | #Ann:24
+
+>>lucas | Tue 24 Mar, 06:05:19<->Tue 24 Mar, 06:23:18 | total time:17.98 mins | 
+ | Avg. Speed: 0.26 Min/Ann | Conformity: 0.13 | #Ann:68
+
+>>lucas | Wed 25 Mar, 01:31:07<->Wed 25 Mar, 01:44:00 | total time:12.88 mins | 
+ | Avg. Speed: 0.35 Min/Ann | Conformity: 0.14 | #Ann:37
+
+>>lucas | Wed 25 Mar, 02:02:09<->Wed 25 Mar, 02:54:57 | total time:52.80 mins | 
+ | Avg. Speed: 0.46 Min/Ann | Conformity: 0.14 | #Ann:114
+
+>>lucas | Wed 25 Mar, 18:20:02<->Wed 25 Mar, 18:33:33 | total time:13.52 mins | 
+ | Avg. Speed: 0.75 Min/Ann | Conformity: 0.06 | #Ann:18
+
+>>lucas | Thu 26 Mar, 00:13:01<->Thu 26 Mar, 00:26:52 | total time:13.85 mins | 
+ | Avg. Speed: 0.46 Min/Ann | Conformity: 0.02 | #Ann:30
+
+>>lucas | Thu 26 Mar, 00:39:59<->Thu 26 Mar, 00:43:55 | total time:3.93 mins | 
+ | Avg. Speed: 0.30 Min/Ann | Conformity: 0.07 | #Ann:13
+
+>>lucas | Thu 26 Mar, 04:14:37<->Thu 26 Mar, 04:15:14 | total time:0.62 mins | 
+ | Avg. Speed: 0.21 Min/Ann | Conformity: 0.22 | #Ann:3
+
+>>lucas | Thu 26 Mar, 15:06:29<->Thu 26 Mar, 15:07:43 | total time:1.23 mins | 
+ | Avg. Speed: 0.31 Min/Ann | Conformity: 0.28 | #Ann:4
+
+>>lucas | Thu 26 Mar, 22:58:00<->Thu 26 Mar, 23:09:09 | total time:11.15 mins | 
+ | Avg. Speed: 0.80 Min/Ann | Conformity: 0.21 | #Ann:14
+
+>>lucas | Fri 27 Mar, 05:33:46<->Fri 27 Mar, 05:45:39 | total time:11.88 mins | 
+ | Avg. Speed: 0.42 Min/Ann | Conformity: 0.13 | #Ann:28
+
+>>lucas | Fri 27 Mar, 05:55:57<->Fri 27 Mar, 06:15:34 | total time:19.62 mins | 
+ | Avg. Speed: 0.33 Min/Ann | Conformity: 0.12 | #Ann:59
+
+>>lucas | Fri 27 Mar, 06:36:18<->Fri 27 Mar, 06:36:18 | total time:0.00 mins | 
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.22 | #Ann:1
+
+>>lucas | Wed 08 Apr, 20:54:58<->Wed 08 Apr, 20:55:37 | total time:0.65 mins | 
+ | Avg. Speed: 0.16 Min/Ann | Conformity: 0.53 | #Ann:4
+
+>>lucas | Wed 08 Apr, 21:22:00<->Wed 08 Apr, 21:25:29 | total time:3.48 mins | 
+ | Avg. Speed: 0.58 Min/Ann | Conformity: 0.11 | #Ann:6
+
+>>lucas | Thu 09 Apr, 15:25:56<->Thu 09 Apr, 15:25:56 | total time:0.00 mins | 
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.78 | #Ann:1
 
 >>nell | Wed 19 Feb, 14:07:29<->Wed 19 Feb, 15:13:08 | total time:65.65 mins | 
- | Avg. Speed: 1.46 Min/Ann | Conformity: 0.02 | #Ann:45
+ | Avg. Speed: 1.46 Min/Ann | Conformity: 0.00 | #Ann:45
 
 >>nell | Wed 19 Feb, 15:39:52<->Wed 19 Feb, 17:00:07 | total time:80.25 mins | 
- | Avg. Speed: 1.22 Min/Ann | Conformity: 0.06 | #Ann:66
+ | Avg. Speed: 1.22 Min/Ann | Conformity: 0.08 | #Ann:66
 
 >>nell | Fri 21 Feb, 08:35:55<->Fri 21 Feb, 11:00:59 | total time:145.07 mins | 
- | Avg. Speed: 2.17 Min/Ann | Conformity: 0.25 | #Ann:67
+ | Avg. Speed: 2.17 Min/Ann | Conformity: 0.27 | #Ann:67
 
 >>nell | Wed 26 Feb, 18:44:01<->Wed 26 Feb, 20:24:53 | total time:100.87 mins | 
- | Avg. Speed: 1.90 Min/Ann | Conformity: 0.55 | #Ann:53
+ | Avg. Speed: 1.90 Min/Ann | Conformity: 0.57 | #Ann:53
 
 >>nell | Wed 11 Mar, 10:03:59<->Wed 11 Mar, 11:12:54 | total time:68.92 mins | 
- | Avg. Speed: 1.50 Min/Ann | Conformity: 0.45 | #Ann:46
+ | Avg. Speed: 1.50 Min/Ann | Conformity: 0.47 | #Ann:46
 
 >>nell | Sun 15 Mar, 18:32:29<->Sun 15 Mar, 20:01:14 | total time:88.75 mins | 
- | Avg. Speed: 1.29 Min/Ann | Conformity: 0.14 | #Ann:69
+ | Avg. Speed: 1.29 Min/Ann | Conformity: 0.12 | #Ann:69
 
->>nell | Wed 18 Mar, 19:06:11<->Wed 18 Mar, 19:31:53 | total time:25.70 mins | 
- | Avg. Speed: 1.61 Min/Ann | Conformity: 0.07 | #Ann:16
+>>nell | Wed 18 Mar, 19:06:11<->Wed 18 Mar, 21:00:14 | total time:114.05 mins | 
+ | Avg. Speed: 0.99 Min/Ann | Conformity: 0.14 | #Ann:115
+
+>>nell | Fri 20 Mar, 09:35:23<->Fri 20 Mar, 09:49:21 | total time:13.97 mins | 
+ | Avg. Speed: 1.55 Min/Ann | Conformity: 0.00 | #Ann:9
+
+>>nell | Fri 20 Mar, 10:02:11<->Fri 20 Mar, 10:04:02 | total time:1.85 mins | 
+ | Avg. Speed: 0.93 Min/Ann | Conformity: 0.28 | #Ann:2
+
+>>nell | Fri 20 Mar, 10:16:31<->Fri 20 Mar, 10:16:43 | total time:0.20 mins | 
+ | Avg. Speed: 0.10 Min/Ann | Conformity: 0.22 | #Ann:2
+
+>>nell | Fri 20 Mar, 11:40:00<->Fri 20 Mar, 11:40:00 | total time:0.00 mins | 
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.22 | #Ann:1
+
+>>nell | Tue 24 Mar, 08:41:12<->Tue 24 Mar, 08:41:12 | total time:0.00 mins | 
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.22 | #Ann:1
+
+>>nell | Thu 26 Mar, 20:05:56<->Thu 26 Mar, 21:30:05 | total time:84.15 mins | 
+ | Avg. Speed: 1.14 Min/Ann | Conformity: 0.33 | #Ann:74
+
+>>nell | Fri 27 Mar, 16:53:21<->Fri 27 Mar, 18:23:55 | total time:90.57 mins | 
+ | Avg. Speed: 0.69 Min/Ann | Conformity: 0.12 | #Ann:131
+
+>>nell | Tue 31 Mar, 18:32:04<->Tue 31 Mar, 19:30:58 | total time:58.90 mins | 
+ | Avg. Speed: 0.63 Min/Ann | Conformity: 0.21 | #Ann:93
+
+>>nell | Tue 31 Mar, 19:44:31<->Tue 31 Mar, 20:43:05 | total time:58.57 mins | 
+ | Avg. Speed: 0.71 Min/Ann | Conformity: 0.17 | #Ann:83
+
+>>nell | Wed 01 Apr, 20:07:36<->Wed 01 Apr, 21:09:34 | total time:61.97 mins | 
+ | Avg. Speed: 1.19 Min/Ann | Conformity: 0.20 | #Ann:52
+
+>>nell | Thu 02 Apr, 18:04:51<->Thu 02 Apr, 20:33:04 | total time:148.22 mins | 
+ | Avg. Speed: 1.34 Min/Ann | Conformity: 0.16 | #Ann:111
+
+>>nell | Fri 03 Apr, 08:04:32<->Fri 03 Apr, 09:32:42 | total time:88.17 mins | 
+ | Avg. Speed: 1.26 Min/Ann | Conformity: 0.19 | #Ann:70
+
+>>nell | Sun 05 Apr, 14:05:29<->Sun 05 Apr, 15:31:55 | total time:86.43 mins | 
+ | Avg. Speed: 1.29 Min/Ann | Conformity: 0.12 | #Ann:67
+
+>>nell | Mon 06 Apr, 14:12:29<->Mon 06 Apr, 15:10:09 | total time:57.67 mins | 
+ | Avg. Speed: 1.52 Min/Ann | Conformity: 0.01 | #Ann:38
+
+>>nell | Mon 06 Apr, 15:32:53<->Mon 06 Apr, 16:30:09 | total time:57.27 mins | 
+ | Avg. Speed: 1.08 Min/Ann | Conformity: 0.05 | #Ann:53
+
+>>nell | Tue 07 Apr, 13:31:42<->Tue 07 Apr, 14:31:30 | total time:59.80 mins | 
+ | Avg. Speed: 1.66 Min/Ann | Conformity: 0.06 | #Ann:36
+
+>>nell | Tue 07 Apr, 20:01:40<->Tue 07 Apr, 21:01:23 | total time:59.72 mins | 
+ | Avg. Speed: 1.07 Min/Ann | Conformity: 0.01 | #Ann:56
+
+>>nell | Wed 08 Apr, 07:54:47<->Wed 08 Apr, 08:57:52 | total time:63.08 mins | 
+ | Avg. Speed: 1.70 Min/Ann | Conformity: 0.17 | #Ann:37
+
+>>nell | Thu 09 Apr, 10:48:43<->Thu 09 Apr, 11:44:32 | total time:55.82 mins | 
+ | Avg. Speed: 1.47 Min/Ann | Conformity: 0.15 | #Ann:38
+
+>>nell | Thu 09 Apr, 14:05:02<->Thu 09 Apr, 15:32:34 | total time:87.53 mins | 
+ | Avg. Speed: 1.29 Min/Ann | Conformity: 0.06 | #Ann:68
 
 >>loredana | Wed 19 Feb, 14:08:47<->Wed 19 Feb, 15:13:06 | total time:64.32 mins | 
- | Avg. Speed: 1.21 Min/Ann | Conformity: 0.11 | #Ann:53
+ | Avg. Speed: 1.21 Min/Ann | Conformity: 0.09 | #Ann:53
 
 >>loredana | Wed 19 Feb, 15:37:11<->Wed 19 Feb, 16:59:26 | total time:82.25 mins | 
- | Avg. Speed: 0.91 Min/Ann | Conformity: 0.02 | #Ann:90
+ | Avg. Speed: 0.91 Min/Ann | Conformity: 0.00 | #Ann:90
 
 >>loredana | Wed 11 Mar, 09:10:04<->Wed 11 Mar, 12:12:30 | total time:182.43 mins | 
- | Avg. Speed: 0.91 Min/Ann | Conformity: 0.21 | #Ann:200
+ | Avg. Speed: 0.91 Min/Ann | Conformity: 0.23 | #Ann:200
 
 >>loredana | Sun 15 Mar, 18:32:23<->Sun 15 Mar, 20:01:12 | total time:88.82 mins | 
- | Avg. Speed: 0.66 Min/Ann | Conformity: 0.19 | #Ann:135
+ | Avg. Speed: 0.66 Min/Ann | Conformity: 0.16 | #Ann:135
+
+>>loredana | Fri 27 Mar, 15:53:15<->Fri 27 Mar, 17:22:53 | total time:89.63 mins | 
+ | Avg. Speed: 0.81 Min/Ann | Conformity: 0.36 | #Ann:110
+
+>>loredana | Sat 28 Mar, 16:13:54<->Sat 28 Mar, 17:44:31 | total time:90.62 mins | 
+ | Avg. Speed: 0.76 Min/Ann | Conformity: 0.11 | #Ann:120
+
+>>loredana | Thu 02 Apr, 15:32:35<->Thu 02 Apr, 17:02:16 | total time:89.68 mins | 
+ | Avg. Speed: 0.81 Min/Ann | Conformity: 0.14 | #Ann:111
+
+>>loredana | Thu 02 Apr, 20:05:10<->Thu 02 Apr, 21:35:32 | total time:90.37 mins | 
+ | Avg. Speed: 0.71 Min/Ann | Conformity: 0.13 | #Ann:127
+
+>>loredana | Fri 03 Apr, 14:16:49<->Fri 03 Apr, 14:47:54 | total time:31.08 mins | 
+ | Avg. Speed: 0.68 Min/Ann | Conformity: 0.22 | #Ann:46
+
+>>loredana | Wed 08 Apr, 13:24:18<->Wed 08 Apr, 14:23:50 | total time:59.53 mins | 
+ | Avg. Speed: 0.70 Min/Ann | Conformity: 0.11 | #Ann:85
+
+>>loredana | Wed 08 Apr, 16:44:55<->Wed 08 Apr, 18:36:00 | total time:111.08 mins | 
+ | Avg. Speed: 0.54 Min/Ann | Conformity: 0.15 | #Ann:205
+
+>>loredana | Wed 08 Apr, 22:05:57<->Wed 08 Apr, 22:05:57 | total time:0.00 mins | 
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.22 | #Ann:1
+
+>>loredana | Thu 09 Apr, 08:24:18<->Thu 09 Apr, 08:24:18 | total time:0.00 mins | 
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.78 | #Ann:1
+
+>>loredana | Thu 09 Apr, 08:45:45<->Thu 09 Apr, 09:28:06 | total time:42.35 mins | 
+ | Avg. Speed: 0.62 Min/Ann | Conformity: 0.05 | #Ann:68
+
+>>loredana | Thu 09 Apr, 10:04:01<->Thu 09 Apr, 10:49:42 | total time:45.68 mins | 
+ | Avg. Speed: 0.61 Min/Ann | Conformity: 0.06 | #Ann:75
 
 >>utku | Wed 19 Feb, 15:46:10<->Wed 19 Feb, 17:03:46 | total time:77.60 mins | 
- | Avg. Speed: 0.74 Min/Ann | Conformity: 0.01 | #Ann:105
+ | Avg. Speed: 0.74 Min/Ann | Conformity: 0.03 | #Ann:105
 
 >>utku | Wed 19 Feb, 17:18:57<->Wed 19 Feb, 18:40:52 | total time:81.92 mins | 
- | Avg. Speed: 0.59 Min/Ann | Conformity: 0.06 | #Ann:139
+ | Avg. Speed: 0.59 Min/Ann | Conformity: 0.04 | #Ann:139
 
 >>utku | Fri 21 Feb, 08:02:32<->Fri 21 Feb, 11:00:06 | total time:177.57 mins | 
- | Avg. Speed: 0.59 Min/Ann | Conformity: 0.03 | #Ann:302
+ | Avg. Speed: 0.59 Min/Ann | Conformity: 0.06 | #Ann:302
 
 >>utku | Tue 25 Feb, 20:36:23<->Tue 25 Feb, 22:06:58 | total time:90.58 mins | 
- | Avg. Speed: 0.54 Min/Ann | Conformity: 0.03 | #Ann:168
+ | Avg. Speed: 0.54 Min/Ann | Conformity: 0.05 | #Ann:168
 
 >>utku | Sun 01 Mar, 12:50:49<->Sun 01 Mar, 14:27:48 | total time:96.98 mins | 
- | Avg. Speed: 0.48 Min/Ann | Conformity: 0.05 | #Ann:201
+ | Avg. Speed: 0.48 Min/Ann | Conformity: 0.03 | #Ann:201
 
 >>utku | Sat 07 Mar, 14:01:21<->Sat 07 Mar, 15:31:45 | total time:90.40 mins | 
- | Avg. Speed: 0.59 Min/Ann | Conformity: 0.00 | #Ann:153
+ | Avg. Speed: 0.59 Min/Ann | Conformity: 0.03 | #Ann:153
 
 >>utku | Fri 13 Mar, 13:52:31<->Fri 13 Mar, 15:22:20 | total time:89.82 mins | 
- | Avg. Speed: 0.64 Min/Ann | Conformity: 0.07 | #Ann:140
+ | Avg. Speed: 0.64 Min/Ann | Conformity: 0.05 | #Ann:140
 
 >>utku | Sat 14 Mar, 19:17:39<->Sat 14 Mar, 20:46:41 | total time:89.03 mins | 
- | Avg. Speed: 0.57 Min/Ann | Conformity: 0.06 | #Ann:157
+ | Avg. Speed: 0.57 Min/Ann | Conformity: 0.04 | #Ann:157
+
+>>utku | Thu 19 Mar, 11:27:43<->Thu 19 Mar, 13:00:46 | total time:93.05 mins | 
+ | Avg. Speed: 0.68 Min/Ann | Conformity: 0.01 | #Ann:136
+
+>>utku | Sun 22 Mar, 12:09:31<->Sun 22 Mar, 13:30:27 | total time:80.93 mins | 
+ | Avg. Speed: 0.42 Min/Ann | Conformity: 0.08 | #Ann:192
+
+>>utku | Wed 25 Mar, 14:56:17<->Wed 25 Mar, 15:02:33 | total time:6.27 mins | 
+ | Avg. Speed: 1.57 Min/Ann | Conformity: 0.22 | #Ann:4
+
+>>utku | Thu 26 Mar, 14:31:28<->Thu 26 Mar, 16:01:47 | total time:90.32 mins | 
+ | Avg. Speed: 0.53 Min/Ann | Conformity: 0.06 | #Ann:169
+
+>>utku | Sat 28 Mar, 16:10:14<->Sat 28 Mar, 16:20:34 | total time:10.33 mins | 
+ | Avg. Speed: 0.47 Min/Ann | Conformity: 0.04 | #Ann:22
+
+>>erosaugustus | Sat 04 Apr, 19:42:09<->Sat 04 Apr, 19:42:09 | total time:0.00 mins | 
+ | Avg. Speed: 0.00 Min/Ann | Conformity: 0.22 | #Ann:1
 
 
 
 TOTAL TIMES
 
-utku: 16:13.900000000000091
-loredana: 9:57.816666666666606
-nell: 9:35.200000000000045
-lucas: 7:46.25
+lucas: 16:41.09999999999991
+nell: 29:57.41666666666674
+loredana: 20:47.84999999999991
+utku: 20:54.799999999999955
+erosaugustus: 0:0.0

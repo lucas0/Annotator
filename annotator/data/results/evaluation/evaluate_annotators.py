@@ -39,6 +39,9 @@ concat = []
 #for each annotator
 individual = []
 individual_sessions = {name.lower():[] for name in timedf.name.unique()}
+times = {e:0 for e in individual_sessions.keys()}
+times['utku'] = 180
+times['loredana'] = 180
 for res in os.listdir(res_path):
     res_filename = res_path+"/"+res
     if ".csv" in res_filename:
@@ -80,12 +83,12 @@ for name,df in individual:
     #if name in ['nell','loredana','lucas','utku']:
     #if name in ['utku']:
     #print(name, conformity(df,concat, True))
-    conformities.append((name,conformity(df,concat,True)))
-    #distribution(df,concat)
+    conformities.append((name,conformity(df,concat,True),len(df)))
+    #if name == "utku":
+        #distribution(df,concat)
 
 #generate stats per session
 msgs = []
-times = {'utku': 180, 'loredana': 180, 'nell':0, 'lucas':0}
 for name in individual_sessions.keys():
     for session in individual_sessions[name]:
         first_datetime = datetime.datetime.strptime(session[0]["date"],"%a %d %b, %H:%M:%S").replace(year=2020)
@@ -119,8 +122,8 @@ with open("sessionlog.txt", "w+") as f:
 #writes individual_conformities.txt
 conformities = sorted(conformities,key=lambda x: x[1])
 with open("individual_conformities.txt", "w+") as f:
-    for name,score in conformities:
-        f.write(name+str(score)+"\n")
+    for name,score,num in conformities:
+        f.write(str(num)+" | "+name+" "+str(score)+"\n")
 
 #frame = pd.concat(concat, axis=0)
 #print(frame.groupby('value').page.count())

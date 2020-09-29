@@ -33,7 +33,7 @@ if needed to log, change "ExecStart=" line on service file to include --logto <p
 
 uWSGI socket file: /var/www/Annotator/annotator.sock
 
-## If you use this code, please cite the following publication:
+## If you use this code, please cite the [following publication](https://www.aclweb.org/anthology/D19-6614/):
 
     @inproceedings{azevedo2019veritas,
       title={Veritas annotator: Discovering the origin of a rumour},

@@ -32,4 +32,3 @@ uWSGI service file: /etc/systemd/system/uwsgi.service
 if needed to log, change "ExecStart=" line on service file to include --logto <path_to_logfile>
 
 uWSGI socket file: /var/www/Annotator/annotator.sock
-

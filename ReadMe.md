@@ -2,7 +2,7 @@
 
 Annotator used to construct the Veritas Dataset
 
-Served on veritas-annotator.datascienceinstitute.ie
+Served on [veritas-annotator.datascienceinstitute.ie](veritas-annotator.datascienceinstitute.ie "Veritas Annotator")
 
 Instructions for annotating can be found under [Guidelines](veritas-annotator.datascienceinstitute.ie/guidelines "Annotator Guidelines")
 
@@ -32,3 +32,13 @@ uWSGI service file: /etc/systemd/system/uwsgi.service
 if needed to log, change "ExecStart=" line on service file to include --logto <path_to_logfile>
 
 uWSGI socket file: /var/www/Annotator/annotator.sock
+
+## If you use this code, please cite the [following publication](https://www.aclweb.org/anthology/D19-6614/):
+
+    @inproceedings{azevedo2019veritas,
+      title={Veritas annotator: Discovering the origin of a rumour},
+      author={Azevedo, Lucas and Moustafa, Mohamed},
+      booktitle={Proceedings of the Second Workshop on Fact Extraction and VERification (FEVER)},
+      year={2019},
+      organization={Association for Computational Linguistics (ACL)}
+    }
